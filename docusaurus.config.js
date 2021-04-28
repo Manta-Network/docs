@@ -2,7 +2,7 @@
 module.exports = {
   title: 'Manta Network Technical Resources',
   tagline: 'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
-  url: 'https://docs.manta.network',
+  url: 'https://docs.pelagosmanta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -13,7 +13,7 @@ module.exports = {
     navbar: {
       title: 'Manta Network',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Manta Network Logo',
         src: 'img/logo.svg',
       },
       items: [
