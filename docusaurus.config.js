@@ -2,7 +2,7 @@
 module.exports = {
   title: 'Manta Network Technical Resources',
   tagline: 'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
-  url: 'https://docs.pelagosmanta.network',
+  url: 'https://docs.manta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
