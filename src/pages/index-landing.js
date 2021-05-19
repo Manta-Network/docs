@@ -1,3 +1,4 @@
+// rename this file to index.js if a landing page is required
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
