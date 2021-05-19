@@ -5,27 +5,27 @@ module.exports = {
   url: 'https://docs.manta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'Manta-Network', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'Manta-Network', // github org name.
+  projectName: 'docs', // repo name.
   themeConfig: {
     navbar: {
-      title: 'Manta Network',
+      title: 'Manta Network Documentation',
       logo: {
         alt: 'Manta Network Logo',
         src: 'img/manta.png',
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
+          href: 'https://manta.network',
+          label: 'manta.network',
           position: 'left',
-          label: 'Tutorial',
+          label: 'manta.network',
         },
         {
           href: 'https://github.com/Manta-Network/docs',
-          label: 'Repository',
+          label: 'documentation repository',
           position: 'right',
         },
       ],
