@@ -14,7 +14,7 @@ module.exports = {
       title: 'Manta Network',
       logo: {
         alt: 'Manta Network Logo',
-        src: 'img/logo.svg',
+        src: 'img/manta.png',
       },
       items: [
         {
@@ -37,25 +37,21 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Introduction',
               to: '/docs/intro',
             },
+            {
+              label: 'Running Manta',
+              to: '/docs/running-manta/get-manta',
+            }
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/mantanetwork',
             },
           ],
         },
@@ -64,7 +60,7 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Manta-Network',
             },
           ],
         },
