@@ -40,8 +40,11 @@ ${para_chain_binary} \
   sudo chmod 777 ${para_chain_binary}
 ```
 
-TODO: Explain all the arguments.
-
 Check https://telemetry.manta.systems/#list/Calamari-Parachain%20Development to see if your node is in the list.
 If you want to explore with the Polkadot.js front-end, replace this string ``wss://${node_name}`` with one of the node names in the network.
 With that you can connect to it and try to communicate with the block chain with extrinsics, or explore it with the block explorer.
+
+Take note that the ``--chain`` argument is constant ``calamari-dev``, it must match the one we used to launch the network in the first place.
+Take note that the ``--parachain-id`` argument is a constant ``7777``, which is ther id we used when we registered it on the relay chain.
+Take note that there are two ``--bootnodes`` constant arguments, one for the parachain node and one for the relay chain node.
+Take note of the ``--validator`` argument. It can be changed to ``--collator`` to become a collator or removed in order to become a full node.
