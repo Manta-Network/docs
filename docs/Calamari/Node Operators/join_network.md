@@ -8,17 +8,17 @@ Specifically our test-net ----> https://telemetry.manta.systems/#/Calamari-Parac
 
 ## As a validator
 
+#### specific to this node
+  - ``my_node_name=my-awesome-manta-node``
+  - ``my_node_port=30333``
+  - ``my_node_ws_port=9944``
+  - ``my_db_path=/path/to/my/db``
+
+#### common for all nodes, you should have those files from the previous section
+  - ``relay_chain_spec_file=/full/path/to/rococo.json``
+  - ``para_chain_binary=/full/path/to/calamari-pc``
+
 ```bash
-
-# specific to this node
-my_node_name=my-awesome-manta-node
-my_node_port=30333
-my_node_ws_port=9944
-my_db_path=/path/to/my/db
-
-# common for all nodes, you should have those files from the previous section
-relay_chain_spec_file=/full/path/to/rococo.json
-para_chain_binary=/full/path/to/calamari-pc
 
 ${para_chain_binary} \
   --validator \
@@ -34,11 +34,10 @@ ${para_chain_binary} \
   -- \
   --bootnodes /dns/alice.rococo.mock.manta.systems/tcp/30333/p2p/12D3KooWJMcEQUbxq2CE1qoCqHCWxqjBfnpfeBCyqqrHBABJKbVr \
   --chain ${relay_chain_spec_file}
-
+```
   If it does not launch, give it extra permissions with:
   
-  sudo chmod 777 ${para_chain_binary}
-```
+  ``sudo chmod 777 ${para_chain_binary}``
 
 Check https://telemetry.manta.systems/#list/Calamari-Parachain%20Development to see if your node is in the list.
 If you want to explore with the Polkadot.js front-end, replace this string ``wss://${node_name}`` with one of the node names in the network.
