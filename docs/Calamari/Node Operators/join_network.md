@@ -40,9 +40,5 @@ ${para_chain_binary} \
   sudo chmod 777 ${para_chain_binary}
 ```
 Check https://telemetry.manta.systems/#list/Calamari-Parachain%20Development to see if your node is in the list.
-
-TODO: Screenshot
-
-If you want to explore with the Polkadot.js front-end, take one of the node names from https://telemetry.manta.systems/#list/Calamari-Parachain%20Development and input them here -> wss://${node_name} to connect to one of the existing nodes.
-
-TODO: Screenshot
+If you want to explore with the Polkadot.js front-end, replace this string ``wss://${node_name}`` with one of the node names in the network.
+With that you can connect to it and try to communicate with the block chain with extrinsics, or explore it with the block explorer.
