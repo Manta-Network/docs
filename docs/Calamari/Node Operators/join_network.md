@@ -16,7 +16,7 @@ my_node_port=30333
 my_node_ws_port=9944
 my_db_path=/path/to/my/db
 
-# common for all nodes
+# common for all nodes, you should have those files from the previous section
 relay_chain_spec_file=/full/path/to/rococo.json
 para_chain_binary=/full/path/to/calamari-pc
 
@@ -39,6 +39,9 @@ ${para_chain_binary} \
   
   sudo chmod 777 ${para_chain_binary}
 ```
+
+TODO: Explain all the arguments.
+
 Check https://telemetry.manta.systems/#list/Calamari-Parachain%20Development to see if your node is in the list.
 If you want to explore with the Polkadot.js front-end, replace this string ``wss://${node_name}`` with one of the node names in the network.
 With that you can connect to it and try to communicate with the block chain with extrinsics, or explore it with the block explorer.

@@ -44,11 +44,26 @@ cd ${local_manta_repo_path}
 cargo build --verbose --release --features=calamari
 
 # the built binary will be at: ${local_manta_repo_path}/target/release/manta
+
+If you want to generate the relay chain chain-spec you will first need the Polkadot binary:
+
+cargo install \
+  --git https://github.com/paritytech/polkadot \
+  --branch release-v0.9.8 \
+  --release \
+  --verbose \
+  --locked \
+  --force
+
+Then you will ned to run this command to generate the file:
+
+./target/release/polkadot build-spec --chain rococo-local --disable-default-bootnode --raw > rococo.json
+
 ```
 
 ### Option 2: Use a Binary Release
 
 1. Get the binary ---> https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/calamari-pc
-2. Get the relay chain spec file ----> https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/rococo.json
+2. Get the relay chain chain-spec file ----> https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/rococo.json
 
 Take note of the locations of these files, you will need them in the next section.
