@@ -12,8 +12,6 @@ Use this option if you are comfortable working with Cargo and Rust source code a
 
 The following instructions are for latest Ubuntu distribution.
 
-1.1:
-
 ```bash
 # install build deps
 sudo apt-get update
@@ -33,22 +31,11 @@ cargo install \
 # the built binary will be at: ${local_manta_repo_path}/target/release/manta
 ```
 
-OR
-
-1.1:
-
-```bash
-# clone the repository
-git clone -b manta-pc https://github.com/Manta-Network/Manta.git ${local_manta_repo_path}
-
-# build calamari parachain node
-cd ${local_manta_repo_path}
-cargo build --verbose --release --features=calamari
-
-# the built binary will be at: ${local_manta_repo_path}/target/release/manta
+In case you are experiencing problems with the rust version use the following toolchain:
 ```
-
-1.2:
+  stable-x86_64-unknown-linux-gnu
+  rustc 1.53.0 (53cb7b09b 2021-06-17)
+```
 
 If you want to generate the relay chain chain-spec you will first need the Polkadot binary:
 
@@ -62,8 +49,6 @@ cargo install \
   --force
 ```
 
-1.3:
-
 Then you will ned to run this command to generate the file:
 
 ```bash
@@ -73,12 +58,6 @@ Then you will ned to run this command to generate the file:
   --raw 
   > rococo.json
 ```
-
-1.4:
-
-In case you are experiencing problems with the rust version use the following toolchain:
-    1. stable-x86_64-unknown-linux-gnu
-    2. rustc 1.53.0 (53cb7b09b 2021-06-17)
 
 ### Option 2: Use a Binary Release
 
