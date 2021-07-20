@@ -10,6 +10,7 @@ sidebar_position: 2
 
 Use this option if you are comfortable working with Cargo and Rust source code and have time or a fast multi-core processor for compiling.
 
+The following instructions are for latest Ubuntu distribution.
 
 ```bash
 # install build deps
@@ -23,8 +24,8 @@ rustup toolchain install nightly
 rustup toolchain install stable
 rustup default stable
 rustup target add wasm32-unknown-unknown --toolchain nightly
-
-TODO: Only update Rust to the version we use. Also what OS are we using.
+rustup update
+command -v wasm-gc || cargo +nightly install --git https://github.com/alexcrichton/wasm-gc --force
 
 cargo install \
   --git https://github.com/Manta-Network/Manta \
@@ -60,6 +61,10 @@ Then you will ned to run this command to generate the file:
 ./target/release/polkadot build-spec --chain rococo-local --disable-default-bootnode --raw > rococo.json
 
 ```
+
+In case you are experiencing problems with the rust version use the following toolchain:
+    1. stable-x86_64-unknown-linux-gnu
+    2. rustc 1.53.0 (53cb7b09b 2021-06-17)
 
 ### Option 2: Use a Binary Release
 
