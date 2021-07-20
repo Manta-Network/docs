@@ -17,15 +17,8 @@ The following instructions are for latest Ubuntu distribution.
 sudo apt-get update
 sudo apt-get -y install build-essential clang curl git libssl-dev make pkg-config
 
-# install rust toolchain
-curl -s https://sh.rustup.rs -sSf | sh -s -- -y
-source ~/.cargo/env
-rustup toolchain install nightly
-rustup toolchain install stable
-rustup default stable
-rustup target add wasm32-unknown-unknown --toolchain nightly
-rustup update
-command -v wasm-gc || cargo +nightly install --git https://github.com/alexcrichton/wasm-gc --force
+# follow steps in the following link to install the rust toolchain
+https://substrate.dev/docs/en/knowledgebase/getting-started/
 
 cargo install \
   --git https://github.com/Manta-Network/Manta \
