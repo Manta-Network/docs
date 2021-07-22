@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Join the network
 
-Specifically our test-net ----> https://telemetry.manta.systems/#/Calamari-Parachain%20Development
+Specifically the Calamari development test-net ----> https://telemetry.manta.systems/#/Calamari-Parachain%20Development
 
 ## As a collator
 
