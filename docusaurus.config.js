@@ -46,7 +46,7 @@ module.exports = {
             },
             {
               label: 'Running Calamari',
-              to: '/docs/calamari/node-operators/introduction',
+              to: '/docs/calamari/introduction',
             }
           ],
         },
