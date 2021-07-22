@@ -77,9 +77,10 @@ cargo install \
   --features calamari \
   --verbose \
   --locked \
-  --force
+  --force \
+  --root ${path_to_bin_folder}
 
-# the built binary will be at: ${local_manta_repo_path}/target/release/manta
+# the built binary will be at: ${path_to_bin_folder}
 ```
 
 
