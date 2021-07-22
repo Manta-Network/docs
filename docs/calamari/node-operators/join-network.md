@@ -37,7 +37,7 @@ ${para_chain_binary} \
 ```
   If it does not launch, give it extra permissions with:
   
-  ``sudo chmod 777 ${para_chain_binary}``
+  ``sudo chmod +x ${para_chain_binary}``
 
 Check https://telemetry.manta.systems/#list/Calamari-Parachain%20Development to see if your node is in the list.
 If you want to explore with the Polkadot.js front-end, replace this string ``wss://${node_name}`` with one of the node names in the network.
