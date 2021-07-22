@@ -6,6 +6,8 @@ sidebar_position: 2
 
 ## Choose your installation variant
 
+With it you will be able to join the Calamari dev network https://telemetry.manta.systems/#/Calamari-Parachain%20Development
+
 ### Option 1: Build From Source
 
 Use this option if you are comfortable working with Cargo and Rust source code and have time or a fast multi-core processor for compiling.
