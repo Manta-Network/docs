@@ -43,6 +43,10 @@ module.exports = {
             {
               label: 'Running Manta',
               to: '/docs/running-manta/get-manta',
+            },
+            {
+              label: 'Running Calamari',
+              to: '/docs/calamari/node-operators/introduction',
             }
           ],
         },
@@ -53,6 +57,14 @@ module.exports = {
               label: 'Twitter',
               href: 'https://twitter.com/mantanetwork',
             },
+            {
+              label: 'Telegram',
+              href: 'https://t.me/mantanetworkofficial',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/MnaM4mqq',
+            },
           ],
         },
         {
@@ -61,6 +73,10 @@ module.exports = {
             {
               label: 'GitHub',
               href: 'https://github.com/Manta-Network',
+            },
+            {
+              label: 'Email',
+              href: 'mailto:contact@manta.network',
             },
           ],
         },

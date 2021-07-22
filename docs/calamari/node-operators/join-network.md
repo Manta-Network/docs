@@ -45,6 +45,6 @@ With that you can connect to it and try to communicate with the block chain with
 
 Take note of the following:
 - The ``--chain`` argument is constant ``calamari-dev``, it must match the one we used to launch the network in the first place.
-- The ``--parachain-id`` argument is a constant ``7777``, which is ther id we used when we registered it on the relay chain.
+- The ``--parachain-id`` argument is a constant ``7777``, which is the id we used when we registered it on the relay chain.
 - There are two ``--bootnodes`` constant arguments, one for the parachain node and one for the relay chain node.
 - The ``--validator`` argument. It can be changed to ``--collator`` to become a collator or removed in order to become a full node.
