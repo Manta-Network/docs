@@ -40,3 +40,7 @@ You can start contributing now. Enter your contribution amount in the first inpu
 ![contribution](crowdloan.assets/contribution.png)
 
 After the contribution process finishes (Under the `Claim your KMA` button, you can see a small line to show your contribution processing), you should see your rewards and contribution details.
+=======
+
+## How to join ours ?
+
