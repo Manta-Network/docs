@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # Join the network
 
-Specifically our test-net ----> https://telemetry.manta.systems/#/Calamari-Parachain%20Development
+Specifically the Calamari development test-net ----> https://telemetry.manta.systems/#/Calamari-Parachain%20Development
 
-## As a validator
+## As a collator
 
 #### specific to this node
   - ``my_node_name=my-awesome-manta-node``
@@ -21,7 +21,7 @@ Specifically our test-net ----> https://telemetry.manta.systems/#/Calamari-Parac
 ```bash
 
 ${para_chain_binary} \
-  --validator \
+  --collator \
   --name ${my_node_name} \
   --base-path ${my_db_path} \
   --chain calamari-dev \
@@ -37,7 +37,7 @@ ${para_chain_binary} \
 ```
   If it does not launch, give it extra permissions with:
   
-  ``sudo chmod 777 ${para_chain_binary}``
+  ``sudo chmod +x ${para_chain_binary}``
 
 Check https://telemetry.manta.systems/#list/Calamari-Parachain%20Development to see if your node is in the list.
 If you want to explore with the Polkadot.js front-end, replace this string ``wss://${node_name}`` with one of the node names in the network.
@@ -45,6 +45,6 @@ With that you can connect to it and try to communicate with the block chain with
 
 Take note of the following:
 - The ``--chain`` argument is constant ``calamari-dev``, it must match the one we used to launch the network in the first place.
-- The ``--parachain-id`` argument is a constant ``7777``, which is ther id we used when we registered it on the relay chain.
+- The ``--parachain-id`` argument is a constant ``7777``, which is the id we used when we registered it on the relay chain.
 - There are two ``--bootnodes`` constant arguments, one for the parachain node and one for the relay chain node.
-- The ``--validator`` argument. It can be changed to ``--collator`` to become a collator or removed in order to become a full node.
+- The ``--collator`` argument. It can be changed to ``--validator`` to become a validator or removed in order to become a full node.
