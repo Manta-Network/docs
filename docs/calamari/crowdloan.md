@@ -5,6 +5,7 @@ sidebar_position: 4
 # Crowdloan
 
 ## What is it ?
+
 All Kusama parachains compete for the chance to launch a blockchain on Kusama by participating in a parachain slot auction. A parachain slot auction is when teams bid in an auction for the chance to win a slot to launch a blockchain on Kusama for security and interoperability. To help the team raise funds to participate in the auction, Kusama allows teams to launch a `crowdloan` in the community.
 
 
@@ -39,3 +40,7 @@ You can start contributing now. Enter your contribution amount in the first inpu
 ![contribution](crowdloan.assets/contribution.png)
 
 After the contribution process finishes (Under the `Claim your KMA` button, you can see a small line to show your contribution processing), you should see your rewards and contribution details.
+=======
+
+## How to join ours ?
+
