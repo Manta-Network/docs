@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Specifically the Calamari development test-net ----> https://telemetry.manta.systems/#/Calamari-Parachain%20Development
 
-## As a collator
+## As a full node
 
 #### specific to this node
   - ``my_node_name=my-awesome-manta-node``
@@ -21,7 +21,6 @@ Specifically the Calamari development test-net ----> https://telemetry.manta.sys
 ```bash
 
 ${para_chain_binary} \
-  --collator \
   --name ${my_node_name} \
   --base-path ${my_db_path} \
   --chain calamari-dev \
@@ -47,4 +46,5 @@ Take note of the following:
 - The ``--chain`` argument is constant ``calamari-dev``, it must match the one we used to launch the network in the first place.
 - The ``--parachain-id`` argument is a constant ``7777``, which is the id we used when we registered it on the relay chain.
 - There are two ``--bootnodes`` constant arguments, one for the parachain node and one for the relay chain node.
-- The ``--collator`` argument. It can be changed to ``--validator`` to become a validator or removed in order to become a full node.
+
+#### Stay tuned for updates about joining the network as a Collator, as well as the incentives associated with that.
