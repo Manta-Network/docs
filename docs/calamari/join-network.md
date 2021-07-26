@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Join the network
 
-Specifically the Calamari development test-net ----> https://telemetry.manta.systems/#/Calamari-Parachain%20Development
+Specifically the Calamari development [testnet](https://telemetry.manta.systems/#/Calamari-Parachain%20Development)
 
 ## As a full node
 
@@ -38,7 +38,7 @@ ${para_chain_binary} \
   
   ``sudo chmod +x ${para_chain_binary}``
 
-Check https://telemetry.manta.systems/#list/Calamari-Parachain%20Development to see if your node is in the list.
+Check [here](https://telemetry.manta.systems/#list/Calamari-Parachain%20Development) to see if your node is in the list.
 If you want to explore with the Polkadot.js front-end, replace this string ``wss://${node_name}`` with one of the node names in the network.
 With that you can connect to it and try to communicate with the block chain with extrinsics, or explore it with the block explorer.
 
