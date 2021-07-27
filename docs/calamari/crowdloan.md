@@ -11,7 +11,13 @@ Kusama is a network of blockchains that share consensus mechanisms for security 
 
 In a crowdloan, community contributers will lock up their own KSM or DOT until the end of a lease so a parachain team can bootstrap their parachain auction. (KSM are used for Kusama slots, and DOT for Polkadot slots). Teams can reward their contributors however they see fit, and can structure their crowdloan in various ways, hosting it either natively on Kusama (Polkadot) or on a 3rd-party platform. 
 
-## How to join the Manta Crowdloan ?
+## Details about Calamari Crowdloan
+
+Calamari Network intends to begin its Parachain Loan Offering in conjunction with the start of the sixth Kusama parachain auction. The exact date marking the commencement of the sixth auction is unclear at the time of writing; the fifth auction is finishing up now, and will end on Friday, July 23, 2021. After that auction completes, there will be a review period before beginning the second batch of auctions (auctions 6 through 10). At the moment, the duration of the review period is unclear.
+
+Anyone who participate in our Calamari PLO will reward you with $KMA, which is Calamari’s native token. Calamari crowdloan contributors will receive 10,000 KMAs per 1 KSM contributed as rewards for their contribution to the crowdloan by default. The fixed ratio guarantees that rewards for KSM contributors won’t change with the amount of KSM Calamari raised. This makes it fair for all participants, regardless of the when they enter. Also we are offering early bonuses to the first 1,000 contributors on our crowdloan. For more infomation, please go and see it: https://mantanetwork.medium.com/the-calamari-crowdloan-on-kusama-74a3cb2a2a4b.
+
+## How to join the Calamari Crowdloan ?
 
 ### **Install polkadot.js/extension.**
 
