@@ -15,21 +15,20 @@ In a crowdloan, community contributers will lock up their own KSM or DOT until t
 
 Calamari Network intends to begin its Parachain Loan Offering in conjunction with the start of the sixth Kusama parachain auction. The exact date marking the commencement of the sixth auction is unclear at the time of writing; the fifth auction is finishing up now, and will end on Friday, July 23, 2021. After that auction completes, there will be a review period before beginning the second batch of auctions (auctions 6 through 10). At the moment, the duration of the review period is unclear.
 
-Anyone who participate in our Calamari PLO will reward you with $KMA, which is Calamari’s native token. Calamari crowdloan contributors will receive 10,000 KMAs per 1 KSM contributed as rewards for their contribution to the crowdloan by default. The fixed ratio guarantees that rewards for KSM contributors won’t change with the amount of KSM Calamari raised. This makes it fair for all participants, regardless of the when they enter. Also we are offering early bonuses to the first 1,000 contributors on our crowdloan. For more infomation, please go and see it: https://mantanetwork.medium.com/the-calamari-crowdloan-on-kusama-74a3cb2a2a4b.
+Anyone who participates in our Calamari PLO will be rewarded with $KMA, Calamari’s native token. Contributors will receive 10,000 KMAs per 1 KSM contributed. The fixed ratio guarantees that rewards for KSM contributors won’t change with the amount of KSM Calamari raised. This makes it fair for all participants, regardless of the when they enter. Also we are offering early bonuses to the first 1,000 contributors on our crowdloan. For more infomation, please read: https://mantanetwork.medium.com/the-calamari-crowdloan-on-kusama-74a3cb2a2a4b.
 
 ## How to join the Calamari Crowdloan ?
 
 ### **Install polkadot.js/extension.**
 
-Using the polkadot.js/extension you can login in our crowdloan system easily. If you haven't already installed it, go to https://polkadot.js.org/extension/ and add this extension to your browser. The website also describes how to add an account to this extension.
+Using the polkadot.js/extension you can login into our crowdloan system easily. If you haven't already installed it, go to https://polkadot.js.org/extension/ and add the extension to your browser, and then add an account to the extension.
 
 You will see your accounts show up like this: ![PJS-EX](crowdloan.assets/PJS-EX.png)
 
 ### **Open our crowdloan page and login your account**
 
-After you've set up your poilkadot.js/extension, go to the crowdloan page: https://crowdloan.calamari.manta.systems. The first time you open this page, you'll need to allow our crowdloan system to connect with the polladot.js/extension. Once it's connected to your account, you'll see:
-
-If you ready you can see it: ![PJS-EX](crowdloan.assets/PJS-EX.png)
+After you've set up your polkadot.js/extension, go to the crowdloan page: https://crowdloan.calamari.manta.systems. The first time you open this page, you'll need to allow our crowdloan system to connect with the polladot.js/extension. Once it's connected to your account, you'll see:
+![PJS-EX](crowdloan.assets/PJS-EX.png)
 
 
 ### **Claim your contribution**
