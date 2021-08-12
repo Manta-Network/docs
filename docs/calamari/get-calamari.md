@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Choose your installation variant
 
-With it you will be able to join the Calamari dev network https://telemetry.manta.systems/#/Calamari-Parachain%20Development
+With it you will be able to join the Calamari dev [network](https://telemetry.manta.systems/#/Calamari-Parachain%20Development)
 
 ### Option 1: Build From Source
 
@@ -111,7 +111,7 @@ Then you will ned to run this command to generate the file:
 
 ### Option 2: Use a Binary Release
 
-1. Get the binary ---> https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/calamari-pc
-2. Get the relay chain chain-spec file ----> https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/rococo.json
+1. Get the [binary](https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/calamari-pc)
+2. Get the relay chain chain-spec [file](https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/rococo.json)
 
 Take note of the locations of these files, you will need them in the next section.
