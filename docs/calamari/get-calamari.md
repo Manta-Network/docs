@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Choose your installation variant
 
-With it you will be able to join the Calamari dev [testnet](https://telemetry.manta.systems/#/Calamari-Parachain%20Development)
+With it you will be able to join the Calamari dev [network](https://telemetry.manta.systems/#/Calamari-Parachain%20Development)
 
 ### Option 1: Build From Source
 
