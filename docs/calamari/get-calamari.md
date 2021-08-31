@@ -92,7 +92,7 @@ If you want to generate the relay chain chain-spec you will first need the Polka
 ```
 cargo install \
   --git https://github.com/paritytech/polkadot \
-  --branch release-v0.9.8 \
+  --branch release-v0.9.9 \
   --release \
   --verbose \
   --locked \
@@ -103,15 +103,16 @@ Then you will ned to run this command to generate the file:
 
 ```bash
 ./target/release/polkadot build-spec \
-  --chain rococo-local
+  # TODO: not sure if this is the correct value
+  --chain westend-testnet
   --disable-default-bootnode
   --raw 
-  > rococo.json
+  > westend.json
 ```
 
 ### Option 2: Use a Binary Release
-
+    # TODO: need actual binary
 1. Get the [binary](https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/calamari-pc)
-2. Get the relay chain chain-spec [file](https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/rococo.json)
+2. Get the relay chain chain-spec [file](https://github.com/paritytech/polkadot/blob/master/node/service/res/westend.json)
 
 Take note of the locations of these files, you will need them in the next section.
