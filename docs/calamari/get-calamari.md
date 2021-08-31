@@ -112,7 +112,7 @@ Then you will ned to run this command to generate the file:
 
 ### Option 2: Use a Binary Release
     # TODO: need actual binary
-1. Get the [binary](https://github.com/Manta-Network/Manta/releases/download/v3.0.0-b63b2d2/calamari-pc)
+1. Get the [binary](https://github.com/Manta-Network/Manta/releases/download/v3.0.1-dd09840/calamari-pc)
 2. Get the relay chain chain-spec [file](https://github.com/paritytech/polkadot/blob/master/node/service/res/westend.json)
 
 Take note of the locations of these files, you will need them in the next section.

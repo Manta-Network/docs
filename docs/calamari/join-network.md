@@ -31,8 +31,7 @@ ${para_chain_binary} \
   --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0' \
   --bootnodes /ip4/127.0.0.1/tcp/31201/p2p/12D3KooWRa2oYs5uFiD43VZiq4618d4VJivRdJCS7h5W6TQHgLpx \
   -- \
-  # TODO: what is the bootnode for the relay chain
-  --bootnodes /dns/alice.rococo.mock.manta.systems/tcp/30333/p2p/12D3KooWJMcEQUbxq2CE1qoCqHCWxqjBfnpfeBCyqqrHBABJKbVr \
+  --bootnodes /dns/1.westend.paritytech.net/tcp/30333/p2p/12D3KooWPVPzs42GvRBShdUMtFsk4SvnByrSdWqb6aeAAHvLMSLS \
   --chain ${relay_chain_spec_file}
 ```
   If it does not launch, give it extra permissions with:
