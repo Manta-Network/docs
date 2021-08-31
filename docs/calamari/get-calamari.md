@@ -87,13 +87,14 @@ cargo install \
 
 
 
-If you want to generate the relay chain chain-spec you will first need the Polkadot binary:
+If you want to generate the relay chain chain-spec you will first need the Polkadot binary.
+For the ``-rev`` argument, you should typically use the latest commit from Polkadot's [releases](https://github.com/paritytech/polkadot/releases)
+Currently using the commit associated with tag ``v0.9.9-rc3``:
 
 ```
 cargo install \
   --git https://github.com/paritytech/polkadot \
-  --branch release-v0.9.9 \
-  --release \
+  --rev e3901b89ce09f2f646a0c1f23cbe48224071e880 \
   --verbose \
   --locked \
   --force
@@ -103,15 +104,13 @@ Then you will ned to run this command to generate the file:
 
 ```bash
 ./target/release/polkadot build-spec \
-  # TODO: not sure if this is the correct value
-  --chain westend-testnet
+  --chain westend
   --disable-default-bootnode
   --raw 
   > westend.json
 ```
 
 ### Option 2: Use a Binary Release
-    # TODO: need actual binary
 1. Get the [binary](https://github.com/Manta-Network/Manta/releases/download/v3.0.1-dd09840/calamari-pc)
 2. Get the relay chain chain-spec [file](https://github.com/paritytech/polkadot/blob/master/node/service/res/westend.json)
 
