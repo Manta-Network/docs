@@ -23,7 +23,7 @@ Specifically, the Calamari [testnet](https://telemetry.manta.systems/#list/Calam
 ${para_chain_binary} \
   --name ${my_node_name} \
   --base-path ${my_db_path} \
-  --chain calamari-dev \
+  --chain calamari-testnet \
   --parachain-id 2093 \
   --port ${my_node_port} \
   --ws-port ${my_node_ws_port} \
