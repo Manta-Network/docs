@@ -1,7 +1,8 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Manta Network Technical Resources',
-  tagline: 'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
+  tagline:
+    'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
   url: 'https://docs.manta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -38,7 +39,7 @@ module.exports = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/intro',
+              to: '/docs/Introduction',
             },
             {
               label: 'Running Manta',
@@ -47,7 +48,7 @@ module.exports = {
             {
               label: 'Running Calamari',
               to: '/docs/calamari/introduction',
-            }
+            },
           ],
         },
         {
@@ -90,8 +91,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/Manta-Network/docs/edit/main/',
+          editUrl: 'https://github.com/Manta-Network/docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
