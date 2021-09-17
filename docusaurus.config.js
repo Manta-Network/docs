@@ -12,7 +12,7 @@ module.exports = {
   projectName: 'docs', // repo name.
   themeConfig: {
     navbar: {
-      title: 'Manta Network Documentation',
+      title: 'Manta Network Docs',
       logo: {
         alt: 'Manta Network Logo',
         src: 'img/manta.png',
@@ -42,11 +42,11 @@ module.exports = {
               to: '/docs/Introduction',
             },
             {
-              label: 'Running Manta',
-              to: '/docs/running-manta/get-manta',
+              label: 'Manta Overview',
+              to: '/docs/manta-overview/technology',
             },
             {
-              label: 'Running Calamari',
+              label: 'Calamari Overview',
               to: '/docs/calamari/introduction',
             },
           ],
