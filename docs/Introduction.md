@@ -20,17 +20,17 @@ The Manta Network mainly consists of two protocols: **the decentralized private 
 
 ## Products
 
-#### The Decentralized Anonymous Payment (DAP)
+### The Decentralized Anonymous Payment (DAP)
 
 DAP protocol is based on zk-SNARK. It allows users to swap Polkadot and its Parachain tokens with corresponding private tokens, pay with privacy tokens, and redeem base coins from private tokens.
 
-#### The Decentralized Anonymous Exchange (DAX)
+### The Decentralized Anonymous Exchange (DAX)
 
 DAX protocol is based on AMM and zk-SNARK. Users can anonymously trade private versions of tokens on the platform between each other. The price formation method of the decentralized private token exchange protocol is consistent with the mainstream AMM. The revenue model of Manta tokens is based on the rebate and redeem of swap usage fees and transaction fees. In the future, the team will also develop products like synthetic asset stable coins based on Manta.
 
 We also plan to integrate Manta products into decentralized private lending protocols. Decentralized private lending is a decentralized non-custodial lending platform where users can deposit anonymously and borrow private coins on the platform. Decentralized private synthetic asset protocols and other DeFi services are included in the future roadmap.
 
-#### Problems solved and application scenarios in Web3 by Manta
+## Problems solved and application scenarios in Web3 by Manta
 
 Although the current distributed ledger has brought a new payment model without the participation of third-party financial institutions, most records of the current cryptocurrency transactions are publicly available due to the transparency of blockchain technology. Public transactions can be viewed by competitors or third-party organizations, which affects business interests. At an individual level, public transactions can be taken advantage of by advertisers and criminals.
 
@@ -66,5 +66,5 @@ To learn more about Manta Network, please follow and join us on our community so
 
 - [Telegram](https://t.me/mantanetworkofficial)
 - [Twitter](https://twitter.com/mantanetwork)
-- [Medium](https://mantanetwork.medium.com)
+- [Blog](https://mantanetwork.medium.com)
 - [Discord](https://discord.com/invite/n4QFj4n5vg)
