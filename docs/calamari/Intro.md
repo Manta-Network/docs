@@ -58,7 +58,7 @@ The next 500 contributors receive an extra 5% bonus Calamari. For example, if Ge
 
 ![Bonuses](/img/bonuses.png)
 
-### Referral Bonus
+## Referral Bonus
 
 As an added bonus, Calamari crowdloan contributors can also refer their friends and colleagues to participate in the Calamari crowdloan. Both the referrer and their referred counterparts receive a 2.5% bonus each, or 5% bonus in total split between the two.
 
