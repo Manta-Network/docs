@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+id: Intro
+title: Intro
 ---
 
 Calamari, Manta Network’s canary-net (the canary-net is an early, highly experimental version of Manta Network, where all new features will be released and tested first), is the plug-and-play privacy-preservation parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps.
@@ -76,3 +78,7 @@ In early period, Calamari parachain will provide two products:
 - **MariSwap:** a private AMM-based DEX. MariSwap offers users the capability of swaps between parachain assets while preserving the privacy of the user addresses. It also provides never-before-seen features in the industry such as private liquidity pools.
 
 Calamari will meet Kusama user's needs for on-chain privacy, anti-surveilance, and ensuring that private tokens are decetralized and interoperable. Calamari is currently a shell-chain.
+
+---
+
+To learn more about Manta Network, please follow us on [Telegram](https://t.me/mantanetwork), [Twitter](https://twitter.com/mantanetwork) and [Medium](https://mantanetwork.medium.com) to get the latest news.
