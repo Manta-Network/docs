@@ -6,21 +6,21 @@ sidebar_position: 4
 
 ## What is a Crowdloan ?
 
-Kusama is a network of blockchains that share consensus mechanisms for security and interoperability. Blockchains on the Kusama network are called parachains, and teams can win a spot for their blockchain by bidding in a parachain slot auction. Kusama allows teams to raise money for auctions through crowdloans from the community.
+Kusama is a network of blockchains that share consensus mechanisms for security and interoperability. Kusama allows teams to raise money for auctions through crowdloans from the community. Blockchains on the Kusama network are called parachains, and teams can win a spot for their blockchain by bidding in a parachain slot auction.
 
-In a crowdloan, community contributers will lock up their own KSM or DOT until the end of a lease so a parachain team can bootstrap their parachain auction. (KSM are used for Kusama slots, and DOT for Polkadot slots). Teams can reward their contributors however they see fit, and can structure their crowdloan in various ways, hosting it either natively on Kusama (Polkadot) or on a 3rd-party platform.
+In a crowdloan, community contributors will lock up their own KSM or DOT until the end of a lease so a parachain team can bootstrap their parachain auction. (KSM are used for Kusama slots and DOT for Polkadot slots). Teams can reward their contributors however they see fit and structure their crowdloan in various ways, hosting it natively on Kusama (Polkadot) or a 3rd-party platform.
 
 ## Details about Calamari Crowdloan
 
-Calamari Network intends to begin its Parachain Loan Offering in conjunction with the start of the sixth Kusama parachain auction. The exact date marking the commencement of the sixth auction is unclear at the time of writing; the fifth auction is finishing up now, and will end on Friday, July 23, 2021. After that auction completes, there will be a review period before beginning the second batch of auctions (auctions 6 through 10). At the moment, the duration of the review period is unclear.
+Calamari Network intends to begin its Parachain Loan Offering in conjunction with the start of the sixth Kusama parachain auction. The exact date marking the commencement of the sixth auction is unclear at the time of writing; the fifth auction is finishing up now and will end on Friday, July 23, 2021. After that auction completes, there will be a review period before beginning the second batch of auctions (auctions 6 through 10). At the moment, the duration of the review period is unclear.
 
-Anyone who participates in our Calamari PLO will be rewarded with $KMA, Calamari’s native token. Contributors will receive 10,000 KMAs per 1 KSM contributed. The fixed ratio guarantees that rewards for KSM contributors won’t change with the amount of KSM Calamari raised. This makes it fair for all participants, regardless of the when they enter. Also we are offering early bonuses to the first 1,000 contributors on our crowdloan. For more infomation, please read: [The Calamari Crowdloan on Kusama](https://mantanetwork.medium.com/the-calamari-crowdloan-on-kusama-74a3cb2a2a4b).
+Anyone who participates in our Calamari PLO will be rewarded with $KMA, Calamari's native token. Contributors will receive 10,000 KMAs per 1 KSM contributed. The fixed ratio guarantees that rewards for KSM contributors won't change with the amount of KSM Calamari raised. This makes it fair for all participants, regardless of when they enter. Also, we are offering early bonuses to the first 1,000 contributors on our crowdloan. For more information, please read: [The Calamari Crowdloan on Kusama](https://mantanetwork.medium.com/the-calamari-crowdloan-on-kusama-74a3cb2a2a4b).
 
-## How to join the Calamari Crowdloan ?
+## How to join the Calamari Crowdloan?
 
 ### **Install polkadot.js/extension.**
 
-Using the polkadot.js/extension you can login into our crowdloan system easily. If you haven't already installed it, go to https://polkadot.js.org/extension/ and add the extension to your browser, and then add an account to the extension.
+You are using the polkadot.js/extension. You can log in to our crowdloan system easily. If you haven't already installed it, go to https://polkadot.js.org/extension/ and add the extension to your browser, and then add an account to the extension.
 
 You will see your accounts show up like this: ![PJS-EX](crowdloan.assets/PJS-EX.png)
 
@@ -31,7 +31,7 @@ After you've set up your polkadot.js/extension, go to the crowdloan page: https:
 
 ### **Claim your contribution**
 
-You can start contributing now. Enter your contribution amount in the first input box, and the referral code you got from our Manta community (e.g. from discord, element chat room or twitter). Click `Claim your KMA` and accept this operator in your extension.
+You can start contributing now. Enter your contribution amount in the first input box and the referral code you got from our Manta community (e.g., discord, element chat room, or Twitter). Click `Claim your KMA` and accept this operator in your extension.
 
 ![contribution](crowdloan.assets/contribution.png)
 
