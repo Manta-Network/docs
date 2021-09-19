@@ -4,9 +4,9 @@ title: Manta’s Architectural Design Choices
 id: Technology
 ---
 
-With the Ethereum 1.0 main net launch in 2015, blockchain entered into a new, Turing-complete chapter. Fast-forward to now, and we are experiencing a tremendous level of adoption for on-chain applications, especially regarding decentralized finance (DeFi). While existing decentralized projects and applications are proving the need and demonstrating a market for DeFi, we believe that adoption is only beginning.
+With the Ethereum 1.0 main net launch in 2015, blockchain entered into a new, Turing-complete chapter. Fast-forward to now, and we are experiencing a tremendous level of adoption for on-chain applications, especially regarding decentralized finance (DeFi). While existing decentralized projects and applications prove the need and demonstrate a market for DeFi, we believe that adoption is only beginning.
 
-To take DeFi to the next level, we need to address the existing issues: the lack of privacy, speed, and interoperability. By introducing a top-tier product that addresses these problems, Manta intends to expand DeFi into a larger market with better conveniences and privacy provisions.
+To take DeFi to the next level, we need to address the existing issues: the lack of privacy, speed, and interoperability. Manta intends to expand DeFi into a larger market with better conveniences and privacy provisions by introducing a top-tier product that addresses these problems.
 
 ![Polkadot](/img/polkadot.jpg)
 
@@ -18,25 +18,28 @@ To address those issues in the most efficient manner possible, we are excited to
 
 ![Choosing Polkadot](/img/choosing_polkadot.png)
 
-2. Second, to provide the best user experience possible with our privacy-preserving decentralized exchange (DEX) and transacting, we require a fast consensus. We want to achieve trustlessness through decentralization; as a result, we are building a layer-1 (L1) solution, which will reap the benefits of a fast consensus protocol. Polkadot’s GRANDPA consensus is one of the fastest consensus protocols available.
+2. Second, we require a fast consensus to provide the best user experience possible with our privacy-preserving decentralized exchange (DEX) and transacting. We want to achieve trustlessness through decentralization; as a result, we are building a layer-1 (L1) solution, which will reap the benefits of a fast consensus protocol. Polkadot’s GRANDPA consensus is one of the quickest consensus protocols available.
 
 3. Last but certainly not least, we need interoperability. Leveraging Polkadot’s parachain architecture brings that interoperability to Manta. As a result, we can support any parachain assets that will leverage our interface. This brings tremendous opportunity to grow the Manta ecosystem.
 
 ## Our Decision to Build an L1 Solution
 
-As mentioned previously, rather than building an L2 solution, we will be releasing an ecosystem that is L1. We decided on this for three reasons: it can be fully decentralized, we have more front-running resilience, and Manta will be DeFi ready.
+As mentioned previously, rather than building an L2 solution, we will be releasing an ecosystem that is L1. We decided on this for three reasons:
+It can be fully decentralized.
+We have more front-running resilience.
+Manta will be DeFi ready.
 
-1. By building as an L1, Manta is fully decentralized by construction; thus, it is trustless. Users can have full confidence in the security and privacy of their transactions.
+1. By building as an L1, Manta is fully decentralized by construction; thus, it is trustless. Users can have complete confidence in the security and privacy of their transactions.
 
 ![L1](/img/L1.png)
 
-2. While an L2 solution may not be malicious, there are many front-running opportunities that exist by taking advantage of the underlying blockchain design. Manta’s decentralized design, paired with privacy built into L1, provides front-running resilience.
+2. While an L2 solution may not be malicious, many front-running opportunities exist by taking advantage of the underlying blockchain design. Manta’s decentralized design, paired with privacy built into L1, provides front-running resilience.
 
 3. Finally, Manta will be DeFi-ready. We provide cryptographically secure schemes for both anonymous payment and anonymous exchange. While L2 solutions may support private payments, it is currently unclear how on-chain anonymous exchanges will be supported in a scalable manner.
 
 ---
 
-2020 was a great year for blockchain and DeFi. We are excited to bring Manta into the picture in 2021, an L1 solution that brings privacy, interoperability, and fast transacting — all focused on delivering an improved on-chain experience that offers levels of privacy that cannot be found on centralized solutions.
+2020 was a great year for blockchain and DeFi. We are excited to bring Manta into the picture in 2021, an L1 solution that brings privacy, interoperability, and fast transacting — all focused on delivering an improved on-chain experience that offers levels of privacy that cannot find on centralized solutions.
 
 ---
 

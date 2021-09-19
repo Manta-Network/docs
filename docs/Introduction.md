@@ -8,11 +8,11 @@ Manta is a set of easy-to-use and secure (open source and auditable code) protoc
 
 ## Our Mission
 
-We at Manta Network believe that DeFi, for now, has its most value in permissionless and anti-surveillance while current services in DeFi have their deficiency in privacy, scalability, usability and liquidity. **Under the current landscape, only when a stable coin that fully supports anonymity and cross-chain interoperability and the relevant DeFi protocol being created can the tremendous value of DeFi be released and deployed, and it is at this point that DeFi will have the chance to overtake the traditional financial industry. That's the reason why we build Manta Network.**
+We at Manta Network believe that DeFi, for now, has its most value in permissionless and anti-surveillance. In contrast, current services in DeFi have their deficiency in privacy, scalability, usability, and liquidity. **Under the current landscape, only when a stable coin that fully supports anonymity and cross-chain interoperability and the relevant DeFi protocol being created can the tremendous value of DeFi be released and deployed, and it is at this point that DeFi will have the chance to overtake the traditional financial industry. That's the reason why we build Manta Network.**
 
 ## Manta Network Overview
 
-Manta’s underlying logic is to mint private coins/tokens with stable coins and other base tokens on the contract at a minting value ratio of 1:1. Apart from that, a decentralized private swap platform can support the exchange of these privacy tokens.
+Manta's underlying logic is to mint private coins/tokens with stable coins and other base tokens on the contract at a minting value ratio of 1:1. Apart from that, a decentralized private swap platform can support the exchange of these privacy tokens.
 
 ![Manta Overview](/img/manta_overview.png)
 
@@ -34,11 +34,11 @@ We also plan to integrate Manta products into decentralized private lending prot
 
 Although the current distributed ledger has brought a new payment model without the participation of third-party financial institutions, most records of the current cryptocurrency transactions are publicly available due to the transparency of blockchain technology. Public transactions can be viewed by competitors or third-party organizations, which affects business interests. At an individual level, public transactions can be taken advantage of by advertisers and criminals.
 
-Although anonymous cryptocurrencies such as ZCash exist, the status quo has two major problems. High price volatility is the first problem, which affects practical use. The lack of scalability is the second problem, which limits use to only simple payments. The exchange of anonymous coins and other cryptocurrencies, including other anonymous coins, is still unsolved — that still relies on centralized exchanges and OTC.
+Although anonymous cryptocurrencies such as ZCash exist, the status quo has two significant problems. High price volatility is the first problem, which affects practical use. The lack of scalability is the second problem, which limits use to only simple payments. The exchange of anonymous coins and other cryptocurrencies, including other anonymous coins, is still unsolved — that still relies on centralized exchanges and OTC.
 
-Manta Network addresses the above two pain points. First, **the decentralized anonymous payment protocol** based on **zk-SNARK** supports the exchange of Polkadot and Substrate Parachain assets to their corresponding private pairs. In this way, users can use popular assets like stable coins, renBTC, etc., while simultaneously benefiting from the anonymity of privacy coins.
+Manta Network addresses the above two pain points. First, **the decentralized anonymous payment protocol** based on **zk-SNARK** supports Polkadot and Substrate Parachain assets to their corresponding private pairs. In this way, users can use popular assets like stable coins, renBTC, etc., while simultaneously benefiting from the anonymity of privacy coins.
 
-Second, **a decentralized anonymous exchange protocol** based on **AMM** and **zk-SNARK** can realize decentralized transactions between private coins, which is similar to Uniswap and Curve, and ensure transaction addresses’ **privacy**. Our product is the only platform that can meet user privacy needs, boast anti-surveillance, and ensure private tokens’ stability and interoperability. Also, compared to the centralized dark pool, the decentralized version is more credible and secure, as it reduces single points of failure.
+Second, **a decentralized anonymous exchange protocol** based on **AMM** and **zk-SNARK** can realize decentralized transactions between private coins, which is similar to Uniswap and Curve, and ensure transaction addresses' **privacy**. Our product is the only platform that can meet user privacy needs, boast anti-surveillance, and ensure private tokens' stability and interoperability. Also, compared to the centralized dark pool, the decentralized version is more credible and secure, as it reduces single points of failure.
 
 If you want to learn more, read our article: [An Introduction of Manta Network](https://mantanetwork.medium.com/an-introduction-of-manta-network-cd2dddf827cb).
 
@@ -46,17 +46,17 @@ If you want to learn more, read our article: [An Introduction of Manta Network](
 
 ### About Calamari
 
-Calamari, Manta Network’s canary-net (the canary-net is an early, highly experimental version of Manta Network, where all new features will be released and tested first), is the plug-and-play privacy-preservation parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps. As part of its own suite of products, Calamari Network offers:
+Calamari, Manta Network's canary-net (the canary-net is an early, highly experimental version of Manta Network, where all new features will be released and tested first), is the plug-and-play privacy-preservation parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps. As part of its suite of products, Calamari Network offers:
 
 ### MariPay
 
-Its token-agnostic private payment service. MariPay supports the private transfer of Kusama and its Parachain assets, including major crypto assets supported on Kusama. Users can transact popular assets like stablecoins and wrapped BTC while simultaneously reaping the benefits of on-chain privacy through ZKP.
+Its token-agnostic private payment service. MariPay supports the private transfer of Kusama and its Parachain assets, including major crypto assets supported on Kusama. Users can transact popular purchases like stablecoins and wrapped BTC while simultaneously reaping the benefits of on-chain privacy through ZKP.
 
 ### MariSwap
 
-Its private **AMM-based** based DEX. MariSwap offers users the capability of swaps between parachain assets while preserving the privacy of the user addresses. It also provides never-before-seen features in the industry such as private liquidity pools.
+It's private **AMM-based** based DEX. MariSwap offers users the capability of swaps between parachain assets while preserving the privacy of the user addresses. It also provides never-before-seen features in the industry, such as private liquidity pools.
 
-Calamari will be the only platform on Kusama that can meet user on-chain privacy needs, boost anti-surveillance, and ensure private tokens’ decentralization and interoperability.
+Calamari will be the only platform on Kusama that can meet user on-chain privacy needs, boost anti-surveillance, and ensure private tokens' decentralization and interoperability.
 
 If you want to learn more, read our article: [Calamari Introduction](/docs/calamari/introduction)
 
