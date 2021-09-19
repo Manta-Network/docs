@@ -20,11 +20,11 @@ The Manta Network mainly consists of two protocols: **the decentralized private 
 
 ## Products
 
-### The Decentralized Anonymous Payment (DAP)
+### MantaPay: Privacy Preserving Multi-Asset Decentralized Payment
 
-DAP protocol is based on zk-SNARK. It allows users to swap Polkadot and its Parachain tokens with corresponding private tokens, pay with privacy tokens, and redeem base coins from private tokens.
+Is based on zk-SNARK. It allows users to swap Polkadot and its Parachain tokens with corresponding private tokens, pay with privacy tokens, and redeem base coins from private tokens.
 
-### The Decentralized Anonymous Exchange (DAX)
+### MantaSwap: Privacy Preserving Decentralized Exchange
 
 DAX protocol is based on AMM and zk-SNARK. Users can anonymously trade private versions of tokens on the platform between each other. The price formation method of the decentralized private token exchange protocol is consistent with the mainstream AMM. The revenue model of Manta tokens is based on the rebate and redeem of swap usage fees and transaction fees. In the future, the team will also develop products like synthetic asset stable coins based on Manta.
 
@@ -46,7 +46,7 @@ If you want to learn more, read our article: [An Introduction of Manta Network](
 
 ### About Calamari
 
-Calamari, Manta Network's canary-net (the canary-net is an early, highly experimental version of Manta Network, where all new features will be released and tested first), is the plug-and-play privacy-preservation parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps. As part of its suite of products, Calamari Network offers:
+Calamari, Manta Network's canary net, is the plug-and-play privacy-preservation parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps. As part of its suite of products, Calamari Network offers:
 
 ### MariPay
 
