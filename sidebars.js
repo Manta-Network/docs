@@ -32,15 +32,15 @@ module.exports = {
       label: 'Manta Overview',
       items: ['manta/Intro', 'manta/Technology', 'manta/Whats-Next-For-Defi'],
     },
-    // {
-    //   type: 'category',
-    //   // id: 'manta-overview/Intro',
-    //   label: 'Calamari Overview',
-    //   items: [
-    //     'calamari/Intro',
-    //     'calamari/Technology',
-    //     'calamari/Whats-Next-For-Defi',
-    //   ],
-    // },
+    {
+      type: 'category',
+      // id: 'manta-overview/Intro',
+      label: 'Calamari Overview',
+      items: [
+        'calamari/Intro',
+        'calamari/Crowdloan',
+        'calamari/Calamari-Network-Roadmap',
+      ],
+    },
   ],
 };

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+title: Calamari Network Roadmap
 ---
 
 # Calamari Network Roadmap
