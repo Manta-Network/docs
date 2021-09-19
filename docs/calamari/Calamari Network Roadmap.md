@@ -45,3 +45,7 @@ These are all tasks that must be accomplished in order to successfully launch th
 As a next step, we are going to participate in the Kusama Network parachain auctions. Starting on slot 6, we intend to go for our first parachain.
 
 Furthermore, we have some very exciting news to reveal to the community in the upcoming weeks alongside the Calamari Network PLO. While we can’t reveal the information just yet, you can be the first to know by signing up for our Calamari Crowdloan newsletter.
+
+---
+
+To learn more about Manta Network, please follow us on [Telegram](https://t.me/mantanetwork), [Twitter](https://twitter.com/mantanetwork) and [Medium](https://mantanetwork.medium.com) to get the latest news.

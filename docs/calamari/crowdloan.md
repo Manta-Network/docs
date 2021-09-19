@@ -36,3 +36,7 @@ You can start contributing now. Enter your contribution amount in the first inpu
 ![contribution](crowdloan.assets/contribution.png)
 
 After the contribution process finishes (Under the `Claim your KMA` button, you can see a small line to show your contribution processing), you should see your rewards and contribution details.
+
+---
+
+To learn more about Manta Network, please follow us on [Telegram](https://t.me/mantanetwork), [Twitter](https://twitter.com/mantanetwork) and [Medium](https://mantanetwork.medium.com) to get the latest news.
