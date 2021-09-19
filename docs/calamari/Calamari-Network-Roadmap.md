@@ -23,7 +23,7 @@ Within the Calamari Network Roadmap, we focus and execute three main categories:
 
 ## The Kusama Parachain Auction
 
-The first major category we are very mindful of is the Kusama Parachain Auction. It outlines all of the tasks that must be complete before and immediately after winning a parachain auction. We intend to begin our PLO once slot auction 6 begins. We have already released our Calamari PLO strategy. We will need to publish the chain genesis with the auction, and the ultimate goal is to win a parachain slot.
+The first major category we are very mindful of is the Kusama Parachain Auction. We have already released our Calamari PLO strategy. It outlines all of the tasks that must be complete before and immediately after winning a parachain auction. We intend to begin our PLO once slot auction 6 begins. We will need to publish the chain genesis with the auction, and the ultimate goal is to win a parachain slot.
 
 ## On-Chain Governance
 
