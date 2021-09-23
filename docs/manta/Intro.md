@@ -10,7 +10,11 @@ Manta’s founding team comprises many US cryptocurrency veterans, professors, a
 
 Compared with traditional finance, decentralized finance (DeFi) is more valuable since it is permissionless and anti-surveillance. Current DeFi services still have critical problems regarding privacy (transparent address and information traceability), scalability (limited by transaction fees and transaction speed), ease of use, and liquidity. Constrained by the consensus of the underlying public chain, all current decentralized exchanges can leak the addresses of users participating in transactions. Research shows that currently, user addresses can only provide pseudo-anonymity rather than real user privacy. Commercial competitors or malicious Internet users can use transaction graph analysis to match user identities with addresses. Furthermore, since blockchain information is immutable, the cost of user privacy leakage is immeasurable.
 
-Although the emergence of anonymous coins has solved the above problems to a certain extent, current anonymous coins, such as Zcash, are subject to scalability issues, thus challenging to leverage for a DeFi service ecosystem. Users can use ZCash for digital payments, but not for a private token exchange. Also, the high volatility of a single anonymous coin makes it difficult for users to store their assets. Therefore, only when the existing major digital assets such as stable coins and WBT are anonymized with exchange protocols that support robust cross-chain interoperability and related DeFi service agreements, can the underlying value of DeFi be recognized. For more information, please refer to the article: [“Why does DeFi need Manta?”](/manta/Whats-Next-For-DeFi.md)
+Although the emergence of anonymous coins has solved the above problems to a certain extent, current anonymous coins, such as Zcash, are subject to scalability issues, thus challenging to leverage for a DeFi service ecosystem.
+
+Users can use ZCash for digital payments, but not for a private token exchange. Also, the high volatility of a single anonymous coin makes it difficult for users to store their assets.
+
+Therefore, only when the existing major digital assets such as stable coins and WBT are anonymized with exchange protocols that support robust cross-chain interoperability. Related DeFi service agreements can show the underlying value of DeFi to be recognized. For more information, please refer to the article: [“Why does DeFi need Manta?”](/manta/Whats-Next-For-DeFi.md)
 
 ## How can Manta realize private DeFi?
 
@@ -48,7 +52,7 @@ Currently, Manta is the only private DeFi product that is compatible with mainst
 
 ### Manta token:
 
-Manta token, namely $MANTA, is the first deflationary utility token where rebate rewards, redemption, and token burns are generated from actual privacy-preserving network usage and growth in DeFi. The total amount of $MANTA tokens is 1,000,000,000. Its main source of income is the fee collected from users for minting private coins, redeeming base coins from private coins (0.1%), and the private coin payment fee and exchange fee between different private coins (0.3% — variable). These continuous incomes will bring $MANTA tokens a discount value, redemption value, governance value, and extended value. The coming article will explain these values ​​specifically.
+Manta token, namely $MANTA, is the first deflationary utility token where rebate rewards, redemption, and token burns are generated from actual privacy-preserving network usage and growth in DeFi. The total amount of $MANTA tokens is 10,000,000,000. Its main source of income is the fee collected from users for minting private coins, redeeming base coins from private coins (0.1%), and the private coin payment fee and exchange fee between different private coins (0.3% — variable). These continuous incomes will bring $MANTA tokens a discount value, redemption value, governance value, and extended value. The coming article will explain these values ​​specifically.
 
 ### Conclusion and prospects:
 

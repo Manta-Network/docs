@@ -11,7 +11,8 @@ Calamari, Manta Network's canary net, is the plug-and-play privacy-preservation 
 | Kusama Parachain Auction         | On-Chain Governance                                    | General Calamari Tasks                      |
 | -------------------------------- | ------------------------------------------------------ | ------------------------------------------- |
 | Release Calamari PLO Strategy ✅ | Community Governance Forum                             | Calamari Web Front-End Release              |
-| Publish Chain Genesis 🚧         | Technical Council Formation                            | Calamari Chain Launch 🚧                    |
+| Publish Chain Genesis 🚧         | Technical Committee Formation 🚧                       | Calamari Chain Launch 🚧                    |
+|                                  | Technical Council 🚧                                   |
 | Kusama Parachain Auction ✅      | Runtime upgrade (Remove Sudo / Add Governance Pallets) | MariPay Testnet (Testnet V2)                |
 | Win a Parachain Slot ✅          | KMA Token Launch 🚧                                    | Zero-Knowledge Proof Circuit Audit          |
 |                                  |                                                        | Community Trusted Setup for MariPay         |
