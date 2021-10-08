@@ -40,6 +40,7 @@ module.exports = {
         'calamari/Intro',
         'calamari/Crowdloan',
         'calamari/Calamari-Network-Roadmap',
+        'calamari/Calamari-Parachain-Auction',
       ],
     },
   ],
