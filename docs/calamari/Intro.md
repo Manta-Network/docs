@@ -39,13 +39,7 @@ There is no team allocation; furthermore, there are no private rounds or private
 
 On September 15, 2021, at 9:00 GMT, we secured parachain slot 7 after weeks of hard work from both the team and the community. Not only that, but we also broke the record for most contributors to a Kusama parachain auction — over 16,000 contributors to a single project!
 
-Read more about Calamari winning the Parachain Auction here!
-
-As we laid out in our [PLO strategy](https://mantanetwork.medium.com/the-calamari-crowdloan-on-kusama-74a3cb2a2a4b), our rewards are unlocked in 1 billion intervals depends on the parachain slot. With a total of 3 billion in rewards, the first 1 billion were unlocked at the beginning of our parachain bid starting on August 29. At a ratio of 1 KSM to 10,000 KMA, that implied that rewards were exhausted after 100k in contributions. The second billion in rewards were unlocked when parachain slot auction 7 began. We quickly filled those rewards as well.
-
-![Rewarding the Community](/img/rewarding_the_community.png)
-
-The third and final tranche of rewards were not supposed to be unlocked unless we headed into slot auction 8. But we have continued to receive overwhelming support from the community even after the 2 billion in rewards were exhausted. Therefore, on September 8, we published our official stance on additional participants: we will be honoring their contributions and they will be rewarded as well. This meant that, while the rewards for tranche 3 were not officially unlocked, we would be using the necessary rewards from that tranche to reward contributors who contributed over the 200k KSM mark.
+Read more about Calamari winning the Parachain Auction [here](Calamari-Parachain-Auction)!
 
 ### Receiving Rewards
 
