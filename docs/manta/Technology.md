@@ -35,7 +35,7 @@ Manta will be DeFi ready.
 
 2. While an L2 solution may not be malicious, many front-running opportunities exist by taking advantage of the underlying blockchain design. Manta’s decentralized design, paired with privacy built into L1, provides front-running resilience.
 
-3. Finally, Manta will be DeFi-ready. We provide cryptographically secure schemes for both anonymous payment and anonymous exchange. While L2 solutions may support private payments, it is currently unclear how on-chain anonymous exchanges will be supported in a scalable manner.
+3. Finally, Manta will be DeFi-ready. We provide cryptographically secure schemes for both privacy-preserving payment and exchange. While L2 solutions may support private payments, it is currently unclear how on-chain privacy-preserving exchanges will be supported in a scalable manner.
 
 ---
 
