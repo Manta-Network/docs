@@ -20,19 +20,39 @@ module.exports = {
       items: [
         {
           href: 'https://manta.network',
-          label: 'manta.network',
+          label: 'Manta Network Home',
           position: 'left',
-          label: 'manta.network',
         },
         {
-          href: 'https://github.com/Manta-Network/docs',
-          label: 'documentation repository',
+          href: 'https://github.com/Manta-Network',
+          label: 'GitHub',
+          position: 'left',
+        },
+        {
+          href: 'https://docs.manta.network/docs/intro/',
+          label: 'Docs',
+          position: 'left',
+        },
+        {
+          href: 'https://manta.network',
+          label: 'Manta Network Home',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/Manta-Network',
+          label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://docs.manta.network/docs/intro/',
+          label: 'Docs',
           position: 'right',
         },
       ],
     },
     footer: {
       style: 'dark',
+
       links: [
         {
           title: 'Docs',
@@ -43,11 +63,11 @@ module.exports = {
             },
             {
               label: 'Manta Overview',
-              to: '/docs/manta-overview/technology',
+              to: '/docs/manta/Intro',
             },
             {
               label: 'Calamari Overview',
-              to: '/docs/calamari/introduction',
+              to: '/docs/calamari/Intro',
             },
           ],
         },
