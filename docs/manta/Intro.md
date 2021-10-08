@@ -10,9 +10,9 @@ Manta’s founding team comprises many US cryptocurrency veterans, professors, a
 
 Compared with traditional finance, decentralized finance (DeFi) is more valuable since it is permissionless and anti-surveillance. Current DeFi services still have critical problems regarding privacy (transparent address and information traceability), scalability (limited by transaction fees and transaction speed), ease of use, and liquidity. Constrained by the consensus of the underlying public chain, all current decentralized exchanges can leak the addresses of users participating in transactions. Research shows that currently, user addresses can only provide pseudo-anonymity rather than real user privacy. Commercial competitors or malicious Internet users can use transaction graph analysis to match user identities with addresses. Furthermore, since blockchain information is immutable, the cost of user privacy leakage is immeasurable.
 
-Although the emergence of anonymous coins has solved the above problems to a certain extent, current anonymous coins, such as Zcash, are subject to scalability issues, thus challenging to leverage for a DeFi service ecosystem.
+Although the emergence of privacy-preserving coins has solved the above problems to a certain extent, current privacy-preserving coins, such as Zcash, are subject to scalability issues, thus challenging to leverage for a DeFi service ecosystem.
 
-Users can use ZCash for digital payments, but not for a private token exchange. Also, the high volatility of a single anonymous coin makes it difficult for users to store their assets.
+Users can use ZCash for digital payments, but not for a private token exchange. Also, the high volatility of a single privacy-preserving coin makes it difficult for users to store their assets.
 
 Therefore, only when the existing major digital assets such as stable coins and WBT are anonymized with exchange protocols that support robust cross-chain interoperability. Related DeFi service agreements can show the underlying value of DeFi to be recognized. For more information, please refer to the article: [“Why does DeFi need Manta?”](/manta/Whats-Next-For-DeFi.md)
 
@@ -24,9 +24,9 @@ Manta’s underlying logic is to mint private coins/tokens with stable coins and
 
 The Manta Network mainly consists of two protocols: the decentralized private payment protocol and the decentralized private token exchange protocol.
 
-**The Decentralized Anonymous Payment (DAP)** protocol is based on zk-SNARK. It allows users to swap Polkadot and its Parachain tokens with corresponding private tokens, pay with privacy tokens, and redeem base coins from private tokens.
+**The Decentralized Privacy-Preserving Payment (DAP)** protocol is based on zk-SNARK. It allows users to swap Polkadot and its Parachain tokens with corresponding private tokens, pay with privacy tokens, and redeem base coins from private tokens.
 
-**The Decentralized Anonymous Exchange (DAX)** protocol is based on AMM and zk-SNARK. Users can anonymously trade private versions of tokens on the platform between each other. The price formation method of the decentralized private token exchange protocol is consistent with the mainstream AMM. The revenue model of Manta tokens is based on the rebate and redeem of swap usage fees and transaction fees. In the future, the team will also develop products like synthetic asset stable coins based on Manta.
+**The Decentralized Privacy-Preserving Exchange (DAX)** protocol is based on AMM and zk-SNARK. Users can anonymously trade private versions of tokens on the platform between each other. The price formation method of the decentralized private token exchange protocol is consistent with the mainstream AMM. The revenue model of Manta tokens is based on the rebate and redeem of swap usage fees and transaction fees. In the future, the team will also develop products like synthetic asset stable coins based on Manta.
 
 We also plan to integrate Manta products into decentralized private lending protocols. Decentralized private lending is a decentralized non-custodial lending platform where users can deposit anonymously and borrow private coins on the platform. Decentralized private synthetic asset protocols and other DeFi services are included in the future roadmap.
 
@@ -34,11 +34,11 @@ We also plan to integrate Manta products into decentralized private lending prot
 
 Although the current distributed ledger has brought a new payment model without the participation of third-party financial institutions, most records of the current cryptocurrency transactions are publicly available due to the transparency of blockchain technology. Public transactions can be viewed by competitors or third-party organizations, which affects business interests. At an individual level, public transactions can be taken advantage of by advertisers and criminals.
 
-Although anonymous cryptocurrencies such as ZCash exist, the status quo has two major problems. High price volatility is the first problem, which affects practical use. The lack of scalability is the second problem, which limits use to only simple payments. The exchange of anonymous coins and other cryptocurrencies, including other anonymous coins, is still unsolved — that still relies on centralized exchanges and OTC.
+Although privacy-preserving cryptocurrencies such as ZCash exist, the status quo has two major problems. High price volatility is the first problem, which affects practical use. The lack of scalability is the second problem, which limits use to only simple payments. The exchange of privacy-preserving coins and other cryptocurrencies, including other privacy-preserving coins, is still unsolved — that still relies on centralized exchanges and OTC.
 
-Manta Network addresses the above two pain points. First, the decentralized anonymous payment protocol based on zk-SNARK supports the exchange of Polkadot and Substrate Parachain assets to their corresponding private pairs. In this way, users can use popular assets like stable coins, renBTC, etc., while simultaneously benefiting from the anonymity of privacy coins.
+Manta Network addresses the above two pain points. First, the decentralized privacy-preserving payment protocol based on zk-SNARK supports the exchange of Polkadot and Substrate Parachain assets to their corresponding private pairs. In this way, users can use popular assets like stable coins, renBTC, etc., while simultaneously benefiting from the anonymity of privacy coins.
 
-Second, a decentralized anonymous exchange protocol based on AMM and zk-SNARK can realize decentralized transactions between private coins, which is similar to Uniswap and Curve, and ensure transaction addresses’ privacy. Our product is the only platform that can meet user privacy needs, boast anti-surveillance, and ensure private tokens’ stability and interoperability. Also, compared to the centralized dark pool, the decentralized version is more credible and secure, as it reduces single points of failure.
+Second, a decentralized privacy-preserving exchange protocol based on AMM and zk-SNARK can realize decentralized transactions between private coins, which is similar to Uniswap and Curve, and ensure transaction addresses’ privacy. Our product is the only platform that can meet user privacy needs, boast anti-surveillance, and ensure private tokens’ stability and interoperability. Also, compared to the centralized dark pool, the decentralized version is more credible and secure, as it reduces single points of failure.
 
 ## What’s unique about Manta technology?
 
