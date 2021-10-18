@@ -2,19 +2,10 @@
 sidebar_position: 1
 ---
 
-Manta is a set of easy-to-use and secure (open source and auditable code) protocols based on Substrate frameworks. It uses zk-SNARK to provide complete end-to-end anonymity, high throughput, and high cross-chain interoperability (it supports Polkadot and its parachain mainstream cryptocurrencies and stable coins). It includes a **decentralized privacy payment protocol**, a **decentralized privacy token exchange protocol**, and a **decentralized privacy lending and synthetic asset protocol** to be developed in the future.
-
-Manta’s founding team comprises many US cryptocurrency veterans, professors, and scholars whose experience includes Harvard, MIT, Algorand, and other institutions.
-
-## Why the crypto world needs Manta?
-
-Compared with traditional finance, decentralized finance (DeFi) is more valuable since it is permissionless and anti-surveillance. Current DeFi services still have critical problems regarding privacy (transparent address and information traceability), scalability (limited by transaction fees and transaction speed), ease of use, and liquidity. Constrained by the consensus of the underlying public chain, all current decentralized exchanges can leak the addresses of users participating in transactions. Research shows that currently, user addresses can only provide pseudo-anonymity rather than real user privacy. Commercial competitors or malicious Internet users can use transaction graph analysis to match user identities with addresses. Furthermore, since blockchain information is immutable, the cost of user privacy leakage is immeasurable.
-
-Although the emergence of privacy-preserving coins has solved the above problems to a certain extent, current privacy-preserving coins, such as Zcash, are subject to scalability issues, thus challenging to leverage for a DeFi service ecosystem.
-
-Users can use ZCash for digital payments, but not for a private token exchange. Also, the high volatility of a single privacy-preserving coin makes it difficult for users to store their assets.
-
-Therefore, only when the existing major digital assets such as stable coins and WBT are anonymized with exchange protocols that support robust cross-chain interoperability. Related DeFi service agreements can show the underlying value of DeFi to be recognized. For more information, please refer to the article: [“Why does DeFi need Manta?”](/manta/Whats-Next-For-DeFi.md)
+Manta is the leading on-chain privacy platform for Polkadot and more. 
+We are building a better Web 3.0 with privacy guarantee from the first principle: 
+applying cutting-edge cryptographic constructions such as zkSNARKs to make blockchain application including DeFi 
+has end to end privacy guarantee and at the same time interoperable, easy to use, high performance and auditable.
 
 ## How can Manta realize private DeFi?
 
@@ -24,9 +15,9 @@ Manta’s underlying logic is to mint private coins/tokens with stable coins and
 
 The Manta Network mainly consists of two protocols: the decentralized private payment protocol and the decentralized private token exchange protocol.
 
-**The Decentralized Privacy-Preserving Payment (DAP)** protocol is based on zk-SNARK. It allows users to swap Polkadot and its Parachain tokens with corresponding private tokens, pay with privacy tokens, and redeem base coins from private tokens.
+**The Decentralized Privacy-Preserving Payment (MantaPay)** protocol is based on zk-SNARK. It allows users to swap Polkadot and its Parachain tokens with corresponding private tokens, pay with privacy tokens, and redeem base coins from private tokens.
 
-**The Decentralized Privacy-Preserving Exchange (DAX)** protocol is based on AMM and zk-SNARK. Users can anonymously trade private versions of tokens on the platform between each other. The price formation method of the decentralized private token exchange protocol is consistent with the mainstream AMM. The revenue model of Manta tokens is based on the rebate and redeem of swap usage fees and transaction fees. In the future, the team will also develop products like synthetic asset stable coins based on Manta.
+**The Decentralized Privacy-Preserving Exchange (MantaSwap))** protocol is based on AMM and zk-SNARK. Users can anonymously trade private versions of tokens on the platform between each other. The price formation method of the decentralized private token exchange protocol is consistent with the mainstream AMM. The revenue model of Manta tokens is based on the rebate and redeem of swap usage fees and transaction fees. In the future, the team will also develop products like synthetic asset stable coins based on Manta.
 
 We also plan to integrate Manta products into decentralized private lending protocols. Decentralized private lending is a decentralized non-custodial lending platform where users can deposit anonymously and borrow private coins on the platform. Decentralized private synthetic asset protocols and other DeFi services are included in the future roadmap.
 
