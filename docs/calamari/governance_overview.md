@@ -11,15 +11,14 @@ currently available, and will be updated as features are released._
 Welcome to our Governance docs! Here you'll find a high level overview of
 how token holders make decisions about how the Calamari system is updated.
 As a decentralized system, it's crucial that the Manta Network core development 
-can't implement or remove any features without community consent. For an 
-overview of the currenlty approved roadmap of feature development, see here: 
-[TODO: link]
+can't implement or remove any features without community consent. The roadmap 
+of planned feature development lives [here](https://squadgame.manta.network/event-details). 
 
-If you're looking for a more technical deep dive into the Governance protocols,
-please see the Governance Deep Dive doc. TODO: hyperlink
+Calamari is build on Polkadot, so we use the governance system proposed and used 
+by Polkadot. The [Polkadot docs](https://wiki.polkadot.network/docs/learn-governance) 
+are a fantastic resource if you're looking for a deeper dive into how Calamari governance works.
 
 ## Intro
-
 At a high level, changes to Calamari follow three steps:
 - **Launch Period:** Token holders submit proposals that turn into referendums.
 - **Voting Period:** Token holders vote on referendums.
@@ -27,16 +26,16 @@ At a high level, changes to Calamari follow three steps:
 
 There are three key actors in this system:
 - **Public token holders:** This is you!
-- **The Council:** Tepresent passive token holders.
-- **Technical Committee:** Selected to handle emergencies.
+- **The Council:** Represents passive token holders.
+- **Technical Committee:** Handles emergencies.
 
 ## Launch Period
 Changes to the Calamari system start out as a **proposal**. Token holders 
-or the Council submit the [preimage hash of a proposal](TODO: link to deep dive) to the proposal queue. 
-Other token holders can then second the proposal with their stake, and at 
-the end of a Launch Period the proposal with the most backing stake is promoted
-to a **referendum**. We only promote one proposal at a time to avoid the 
-situation where two opposing proposals pass simultaneously.
+or the Council submit the [preimage hash of a proposal](https://wiki.polkadot.network/docs/maintain-guides-democracy#proposing-an-action) 
+to the proposal queue. Other token holders can then second the proposal with 
+their stake, and at the end of a Launch Period the proposal with the most 
+backing stake is promoted to a **referendum**. We only promote one proposal 
+at a time to avoid the situation where two opposing proposals pass simultaneously.
 
 Right now, only the council can submit new proposals. The method they use 
 is called `democracy.externalProposeDefault`, and it will be available to
@@ -45,13 +44,18 @@ all token holders in upcoming releases.
 
 ## Voting Period
 All token holders get to vote aye or nay on referendums. The percent of ayes required
-for a referrendum to pass changes based on turnout. If there's low turnout, the 
+for a referrendum to pass changes based on turnout. The method `democracy.externalProposeDefault`
+has a "negative turnout bias", meaning if there's low turnout, the 
 threshold to pass is lower, and as turnout increases, the threshold increases. 
 For example, if the turnout is 25%, then 34% ayes are needed to pass. But if the 
 turnout is 100%, then 51% of ayes are needed (a simple majority). 
 
-This approach to voting is called "Adaptive Quorum Biasing". The idea behind it is
-... TODO
+This approach to voting is called [Adaptive Quorum Biasing](https://wiki.polkadot.network/docs/learn-governance#adaptive-quorum-biasing). 
+The idea behind it is to anticipate that voter turnout in practice is
+never going to be 100%, and that different proposals will have varying levels of 
+contientiousness and trustworthiness. For example, we assume that a proposal 
+submittes by the Council is more trust worthy than a proposal from any public 
+token holder, so we want to apply a negative turnout bias to the vote.
 
 ## Enactment Period
 Once a referendum passes, it is automatically implemented by the chain according to 
@@ -68,15 +72,20 @@ The Council can cancel a referendum during the voting period. TODO: any other
 of these sorts of actions that the council can do?
 
 Clearly the Council and the Technical Committe have a lot of influence over
-what proposals and referrendums get passed! The idea here is that ... TODO
+what proposals and referrendums get passed! The Council offsets the usual low 
+voter turnout in democratic systems, and is expected to submit proposals for 
+regular operations and maintenance of the system. The Technical Committe exists
+to handle emergency situations where fast technical updates are needed.
 
 ## How To: Vote on a Referendum
 TODO: include screenshots
 
-## How To: ...
-TODO: any other features available to public token holders
-
-## Questions:
-TODO: What is Conviction Voting? Is it in play with this update?
+## More Resources
+If you'd like to learn more about governance in the Polkadot ecosystem, these links 
+are a great place to start:
+- [Polkadot docs](https://wiki.polkadot.network/docs/learn-governance) 
+- [Polkadot blog on governance systems](https://polkadot.network/blog/polkadot-governance/)
+- [Polkadot blog on the governance of the Kusama rollout](https://polkadot.network/blog/kusama-rollout-and-governance/)
+- [Polkadot wiki "Participate in Democracy"](https://wiki.polkadot.network/docs/maintain-guides-democracy)
 
 
