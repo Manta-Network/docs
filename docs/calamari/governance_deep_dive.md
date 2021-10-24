@@ -1,0 +1,130 @@
+---
+sidebar_position: 3
+title: Governance Deep Dive
+---
+
+This doc is a more technical dive into how governance of Calamari operates.
+Calamari is build on Polkadot and Substrate, the governance system is 
+directly inspired by what Polkadot uses. The main difference is that 
+our Council manages its own membership, and we don't have all of the 
+features released yet. 
+
+## Concepts to know
+If you're reading this doc we're assuming you know what an 
+[extrinsics](https://docs.substrate.io/v3/concepts/extrinsics/) is, and that 
+you're generally familiar with 
+[how Substrate runtimes work](https://docs.substrate.io/v3/concepts/runtime/).
+
+## System Actors
+There are three kinds of actors that can participate in the governance 
+of Calamari: public token holders, the Council, and the Technical Committee.
+They all have different permissions on what extrinsics they can submit
+to the chain.
+
+**Public token holders** are anyone who owns a Calamari token. They can use 
+their stake to second proposals that are trying to become referendums, and 
+vote on referendums proportional to the amount of stake they have.
+
+**The Council** represents passive token holders and exists because democratic
+systems usually have issues with low voter turnout. Their resopnsibility 
+is to submit common sense proposals for the regular development and 
+maintenance of the system. In our case the Council is also responsible for 
+bootstrapping the Manta Network and is thus made up of members of the Manta 
+Core Development Team. The Council manages the membership of the Technical 
+Committee.
+
+TODO: how many council members? 
+
+**The Technical Committee**: is responsible for handling emergencies. They
+have the ability to fast track all three periods, and how much the periods 
+are shortened depends on how many committee members believe the action is necessary. 
+Unanimous agreement is required for instantaneous changes. There are // TODO: 
+how many technical committee members? who are also part of the Manta Core 
+Development Team.
+
+## Launch Phase
+The process of submitting a proposal starts out by getting the preimage hash
+of the proposal, in order to verify that it doesn't change at any point during
+the process. 
+
+There are two ways to submit a proposal, and the launch periods alternate 
+between the two methods.
+
+### 1. Public token holder proposals
+Public token holders can submit a preimage hash using the 
+`democracy.externalProposeDefault()` extrinsic. These proposals all go 
+into the `public proposal queue`. Then stakeholders can second proposals,
+and the proposal with the most stake backing it at the end of the period
+is promoted to a referendum.
+
+### 1. Council motions
+The council can create "council motions" also called "external proposals".
+They can submit the preimage hash using three methods,
+* `democracy.externalPropose()`
+* `democracy.externalProposeMajority()`
+* `democracy.externalProposeDefault()`,  
+
+which have differences in voting thresholds that we'll cover in the Voting Phase. 
+The council votes on the proposal internally, with one vote per council member, 
+and if it passes the proposal moves to the `external propose queue` where it 
+waits to the end of the period and automatically is promoted to a referendum.
+
+We only promote one proposal at a time to avoid the situation where two opposing 
+proposals pass simultaneously. 
+
+During this period the Technical Committee has the ability to cancel any proposal
+and fast track proposals made using the `democracy.externalPropose()` or 
+`democracy.externalProposeDefault()` extrinsics.
+
+## Voting Phase
+At the start of the Voting Period a referendum has been tabled either from the
+external proposal queue or the public proposal queue. Now token holders have 
+the opportunity to vote on the referendum with an `aye` to pass or `nay` to 
+reject.
+
+The percent of ayes needed for a referendum to pass depends on the extrinsic 
+used to submit the proposal, and varies based on voter turnout using a method 
+called **Adaptive Quorum Biasing**. The idea is to anticipate that in practice
+voter turnout is not 100%, and that different proposals will have varying 
+levels of contentiousness and trustworthiness.
+
+If a **positive turnout bias** is applied, then a super-majority threshold is
+required to _pass_ at low levels of turnout, and the threshold decreases as 
+turnout increases. On the other hand applying a **negative turnout bias** means
+that a super majority is needed to _reject_ at low levels of turnout, and the 
+threshold increases as turnout increases. In all cases these biasings work out
+so that if 51% of the total stake votes in one direction (a simple majority), 
+then that choice is executed.
+
+Now let's look at the different biases that are applied to the different extrinsics:
+
+
+| Extrinsic                 | Vote Bias             | Low turnout behavior          |
+| ------------------------- | --------------------- | ----------------------------- |
+| `externalPropose`         | no bias               | always simple 50% +1          |
+| public proposal           | positive turnout bias | threshold to pass starts high |
+| `externalProposeMajority` | positive turnout bias | threshold to pass starts high |
+| `externalProposeDefault`  | negative turnout bias | threshold to pass starts low  |
+
+Let's consider an example of an external proposal generated by `democracy.externalProposeDefault()`.
+Consulting the table above we see that this extrinsic has a negative turnout bias applied. 
+In other words, the threshold for passing starts low and increases as turnout increases. 
+For example at 25% turnout it needs 34% ayes to pass, at 75% turnout it needs 46% ayes to pass. 
+As turnout increases it becomes harder to pass approaching simple-majority of 50% + 1 of the turnout.
+
+During the Voting Period the Technical Committee can fast-track external proposals created using 
+the `democracy.externalPropose()` or `democracy.externalProposeDefault()` extrinsics. 
+The Council also has the ability to cancel a referendum.
+
+## Enactment Phase
+Once a referendum passes the chain automatically implements the referendum code 
+using the `pallet_scheduler`. There's a delay before the implementation starts so that
+stake holders can prepare for the change. // TODO: specify the amount of time. 
+
+As with the previous periods, the Technical Committee can fast-track the delay on 
+external proposals created using the `democracy.externalPropose()` or 
+`democracy.externalProposeDefault()`.
+
+## The Treasury
+// TODO
+
