@@ -6,8 +6,11 @@ title: Governance Deep Dive
 This doc is a more technical dive into how governance of Calamari operates.
 Calamari is build on Polkadot and Substrate, the governance system is 
 directly inspired by what Polkadot uses. The main difference is that 
-our Council manages its own membership, and we don't have all of the 
-features released yet. 
+our Council manages its own membership.
+
+_Note: not everything documented here is released yet. Check our 
+[roadmap](https://emphasized-seed-161.notion.site/3b1b61e0aee8484396d674f4653e0813?v=451a4ad2105d4f9cb35fb74680359c1d)
+for the up to date status of features._
 
 ## Concepts to know
 If you're reading this doc we're assuming you know what an 
@@ -57,17 +60,17 @@ into the `public proposal queue`. Then stakeholders can second proposals,
 and the proposal with the most stake backing it at the end of the period
 is promoted to a referendum.
 
-### 1. Council motions
+### 2. Council motions
 The council can create "council motions" also called "external proposals".
 They can submit the preimage hash using three methods,
 * `democracy.externalPropose()`
 * `democracy.externalProposeMajority()`
 * `democracy.externalProposeDefault()`,  
 
-which have differences in voting thresholds that we'll cover in the Voting Phase. 
-The council votes on the proposal internally, with one vote per council member, 
-and if it passes the proposal moves to the `external propose queue` where it 
-waits to the end of the period and automatically is promoted to a referendum.
+which have differences in voting thresholds that we'll cover in the Voting Phase 
+section below. The council votes on the proposal internally, with one vote per 
+council member, and if it passes the proposal moves to the `external propose queue` 
+where it waits to the end of the period and automatically is promoted to a referendum.
 
 We only promote one proposal at a time to avoid the situation where two opposing 
 proposals pass simultaneously. 
@@ -126,5 +129,32 @@ external proposals created using the `democracy.externalPropose()` or
 `democracy.externalProposeDefault()`.
 
 ## The Treasury
-// TODO
+The Treasury is a reserve of tokens that is controlled by the Council. The funds in
+the treasury are collected through 
+1. Transaction fees
+2. Democracy slashing
+3. Treasury slashing. 
 
+// TODO: describe
+* what is democracy / treasury slashing
+* what is the treasury used for
+
+## API Reference
+The naming of functions here follows the Substrate invocation method, `[pallet].[extrinsic]`.
+
+| Extrinsic                                         | Who can invoke                |
+| ------------------------------------------------- | ----------------------------- |
+| `democracy.propose(preImageHash)`                 | Public Token Holders          |
+| `democracy.externalPropose(preImageHash)`         | Council                       |
+| `democracy.externalProposeDefault(preImageHash)`  | Council                       |
+| `democracy.externalProposeMajority(preImageHash)` | Council                       |
+| `democracy.emergencyCancel(index)`                | Technical Committee           |
+| `democracy.fastTrack(proposalHash)`               | Technical Committee           |
+| `democracy.vetoExternal(proposalHash)`            | Technical Committee           |
+| `democracy.cancelProposal(index)`                 | Technical Committee           |
+| `treasury.approveSpend(index)`                    | Council                       |
+| `treasury.rejectSpend(index)`                     | Council                       |
+| `treasury.proposeSpend()`                         | Treasury                      |
+| `councilMembership.add()`                         | Council                       |
+| `councilMembership.remove()`                      | Council                       |
+| `councilMembership.swap()`                        | Council                       |

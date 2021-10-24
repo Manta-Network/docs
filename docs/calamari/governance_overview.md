@@ -12,7 +12,7 @@ Welcome to our Governance docs! Here you'll find a high level overview of
 how token holders make decisions about how the Calamari system is updated.
 As a decentralized system, it's crucial that the Manta Network core development 
 can't implement or remove any features without community consent. The roadmap 
-of planned feature development lives [here](https://squadgame.manta.network/event-details). 
+of planned feature development lives [here](https://emphasized-seed-161.notion.site/3b1b61e0aee8484396d674f4653e0813?v=451a4ad2105d4f9cb35fb74680359c1d). 
 
 The [Calamari Governance Deep Dive doc](./governance_deep_dive)
 is a great resource if you're looking for more of the technical details about 
