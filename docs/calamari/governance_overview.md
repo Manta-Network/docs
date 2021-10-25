@@ -44,7 +44,7 @@ all token holders in upcoming releases.
 
 ## 2) Voting Period
 All token holders get to vote aye or nay on referendums. The percent of ayes required
-for a referrendum to pass changes based on turnout. The method `democracy.externalProposeDefault`
+for a referendum to pass changes based on turnout. The method `democracy.externalProposeDefault`
 has a "negative turnout bias", meaning if there's low turnout, the 
 threshold to pass is lower, and as turnout increases, the threshold increases. 
 For example, if the turnout is 25%, then 34% ayes are needed to pass. But if the 
@@ -53,8 +53,8 @@ turnout is 100%, then 51% of ayes are needed (a simple majority).
 This approach to voting is called [Adaptive Quorum Biasing](https://wiki.polkadot.network/docs/learn-governance#adaptive-quorum-biasing). 
 The idea behind it is to anticipate that voter turnout in practice is
 never going to be 100%, and that different proposals will have varying levels of 
-contientiousness and trustworthiness. For example, we assume that a proposal 
-submittes by the Council is more trust worthy than a proposal from any public 
+contentiousness and trustworthiness. For example, we assume that a proposal 
+submitted by the Council is more trust worthy than a proposal from any public 
 token holder, so we want to apply a negative turnout bias to the vote.
 
 ## 3) Enactment Period
@@ -69,16 +69,16 @@ on how many committee members believe the action is necessary, with unanimous
 agreement required for instantaneous changes. Similarly, the Council can cancel 
 a referendum during the voting period.
 
-Clearly the Council and the Technical Committe have a lot of influence over
-what proposals and referrendums get passed! The Council offsets the usual low 
+Clearly the Council and the Technical Committee have a lot of influence over
+what proposals and referendums get passed! The Council offsets the usual low 
 voter turnout in democratic systems, and is expected to submit proposals for 
-regular operations and maintenance of the system. The Technical Committe exists
+regular operations and maintenance of the system. The Technical Committee exists
 to handle emergency situations where fast technical updates are needed.
 
 ## How To: Vote on a Referendum
 The actions you can take as a public token holder can all be executed by connecting 
 to a Calamari node using the [Polkadot.JS apps interface](https://polkadot.js.org/apps/).
-Polkadot has a lot of [nice vidoe tutorials](https://wiki.polkadot.network/docs/learn-video-tutorials#getting-started) 
+Polkadot has a lot of [nice video tutorials](https://wiki.polkadot.network/docs/learn-video-tutorials#getting-started) 
 on how to use the Apps UI.
 
 Screenshots coming soon!
