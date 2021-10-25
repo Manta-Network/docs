@@ -29,20 +29,19 @@ their stake to second proposals that are trying to become referendums, and
 vote on referendums proportional to the amount of stake they have.
 
 **The Council** represents passive token holders and exists because democratic
-systems usually have issues with low voter turnout. Their resopnsibility 
-is to submit common sense proposals for the regular development and 
-maintenance of the system. In our case the Council is also responsible for 
-bootstrapping the Manta Network and is thus made up of members of the Manta 
-Core Development Team. The Council manages the membership of the Technical 
-Committee.
+systems usually have issues with low voter turnout. There are three council
+members, and their responsibility is to submit common sense proposals for the
+regular development and maintenance of the system. In our case the Council is
+also responsible for bootstrapping the Manta Network and is thus made up of
+members of the Manta Core Development Team. The Council manages the membership
+of the Technical Committee.
 
-TODO: how many council members? 
 
 **The Technical Committee**: is responsible for handling emergencies. They
 have the ability to fast track all three periods, and how much the periods 
 are shortened depends on how many committee members believe the action is necessary. 
-Unanimous agreement is required for instantaneous changes. There are // TODO: 
-how many technical committee members? who are also part of the Manta Core 
+Unanimous agreement is required for instantaneous changes. There are three
+technical committee members, and they are also part of the Manta Core
 Development Team.
 
 ## Launch Phase
@@ -122,22 +121,26 @@ The Council also has the ability to cancel a referendum.
 ## Enactment Phase
 Once a referendum passes the chain automatically implements the referendum code 
 using the `pallet_scheduler`. There's a delay before the implementation starts so that
-stake holders can prepare for the change. // TODO: specify the amount of time. 
+stake holders can prepare for the change.
 
 As with the previous periods, the Technical Committee can fast-track the delay on 
 external proposals created using the `democracy.externalPropose()` or 
 `democracy.externalProposeDefault()`.
 
 ## The Treasury
-The Treasury is a reserve of tokens that is controlled by the Council. The funds in
-the treasury are collected through 
-1. Transaction fees
-2. Democracy slashing
-3. Treasury slashing. 
+The Treasury is a reserve of tokens that is controlled by the Council and 
+used to fund community projects. The goal of the is to have a source of funds 
+that can incentivize projects in the network. Anyone can submit a treasury 
+spend proposal with a 1% deposit of the total spend amount, and the proposal 
+will be approved or denied by the council. 
 
-// TODO: describe
-* what is democracy / treasury slashing
-* what is the treasury used for
+The funds in the treasury are collected through:
+1. **Transaction fees** - 100% of on-chain transaction fees are transferred to the Treasury.
+2. **Treasury slashing** - when a treasury spend proposal doesn't pass, the 
+deposit amount (1% of the total proposed amount) is "slashed", which means
+that it is transferred to the Treasury. 
+3. **Democracy slashing** - when any democracy proposal is canceled the
+preimage deposit fee is transferred to the Treasury instead of being returned.
 
 ## API Reference
 The naming of functions here follows the Substrate invocation method, `[pallet].[extrinsic]`.
