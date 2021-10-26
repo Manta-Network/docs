@@ -4,10 +4,9 @@ id: Intro
 title: Intro
 ---
 
-Calamari, Manta Network's canary net, is the on-chain privacy platform for Kusama Eco-system. 
-Using zkSNARK and many cutting-edge cryptography techniques, Calamari make privacy inter-operable, easy to use, high-performance 
+Calamari, Manta Network's canary net, is the on-chain privacy platform for Kusama Eco-system.
+Using zkSNARK and many cutting-edge cryptography techniques, Calamari make privacy inter-operable, easy to use, high-performance
 and auditable.
-
 
 ## About Calamari Token ($KMA)
 
@@ -27,7 +26,6 @@ On September 15, 2021, at 9:00 GMT, we secured parachain slot 7 after weeks of h
 
 Read more about Calamari winning the Parachain Auction [here](Calamari-Parachain-Auction)!
 
-
 ## The Calamari Parachain
 
 Calamari is Manta Network's canary-net, an early, highly experimental version of Manta Network, where all new features will be released and tested first. Calamari is the plug-and-play privacy-preservation parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps.
@@ -38,17 +36,15 @@ In the early period, Calamari parachain will provide two products:
 
 **MariSwap:** a private AMM-based DEX. MariSwap offers users the capability of swaps between parachain assets while preserving the privacy of the user addresses. It also provides never-before-seen features in the industry, such as private liquidity pools.
 
-
 ## Calamari Roadmap
 
 | Kusama Parachain Auction         | On-Chain Governance                                    | General Calamari Tasks                      |
 | -------------------------------- | ------------------------------------------------------ | ------------------------------------------- |
-| Release Calamari PLO Strategy ✅ | Community Governance Forum                             | Calamari Web Front-End Release              |
-| Publish Chain Genesis 🚧         | Technical Committee Formation 🚧                       | Calamari Chain Launch 🚧                    |
-|                                  | Technical Council 🚧                                   |
-| Kusama Parachain Auction ✅      | Runtime upgrade (Remove Sudo / Add Governance Pallets) | MariPay Testnet (Testnet V2)                |
-| Win a Parachain Slot ✅          | KMA Token Launch 🚧                                    | Zero-Knowledge Proof Circuit Audit          |
-|                                  |                                                        | Community Trusted Setup for MariPay         |
+| Release Calamari PLO Strategy ✅ | Community Governance Forum 🚧                          | Calamari Web Front-End Release              |
+| Publish Chain Genesis ✅         | Technical Committee Formation 🚧                       | Calamari Chain Launch 🚧                    |
+| Kusama Parachain Auction ✅      | Technical Council 🚧                                   | MariPay Testnet (Testnet V2)                |
+| Win a Parachain Slot ✅          | Runtime upgrade (Remove Sudo / Add Governance Pallets) | Zero-Knowledge Proof Circuit Audit          |
+|                                  | KMA Token Launch 🚧                                    | Community Trusted Setup for MariPay         |
 |                                  |                                                        | Self Audit Tool                             |
 |                                  |                                                        | Community Collator Program                  |
 |                                  |                                                        | MariPay Launch (supporting private KMA)     |
