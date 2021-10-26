@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-Manta is the leading on-chain privacy platform for Polkadot and more. 
-We are building a better Web 3.0 with privacy guarantee from the first principle: 
-applying cutting-edge cryptographic constructions such as zkSNARKs to make blockchain application including DeFi 
+Manta is the leading on-chain privacy platform for Polkadot and more.
+We are building a better Web 3.0 with privacy guarantee from the first principle:
+applying cutting-edge cryptographic constructions such as zkSNARKs to make blockchain application including DeFi
 has end to end privacy guarantee and at the same time interoperable, easy to use, high performance and auditable.
 
 ## How can Manta realize private DeFi?
@@ -35,7 +35,7 @@ Second, a decentralized privacy-preserving exchange protocol based on AMM and zk
 
 We designed a decentralized private payment and exchange protocol based on zk-SNARK, and proved security via cryptography. At present, we are the only decentralized private payment and exchange-based entirely on cryptographic assumptions. Unlike with existing decentralized exchanges such as Uniswap and Curve, Manta is compatible with Parachain tokens (including stable coins) and is end-to-end privacy secured. Compared with TEE-based private trading products, Manta has indisputably more robust security in today’s environment, where security hardware has been repeatedly exposed to vulnerabilities and attacks. Compared with public chains such as Findora, which also applies zero-knowledge proofs, Manta can support many cross-chain assets in Polkadot’s ecosystem and reduce repetitive work in consensus layer ecological development.
 
-Among the current DeFi products, we are the only decentralized trading platform that uses zk-SNARK for privacy enhancement. zk-SNARK can already be used to support complete end-to-end anonymity — the sender can verify to the prover the legitimacy of the transaction without disclosing the transaction amount, address, or other details. Manta fully preserves user and transaction anonymity. The agreement is open source and auditable, which can also reduce the cost of trust and ensure the system’s security. Please refer to the following table for technical comparison (bold means better):
+Among the current DeFi products, we are the only decentralized trading platform that uses zk-SNARK for privacy enhancement. zk-SNARK can already be used to support complete end-to-end anonymity — the sender can verify to the prover the legitimacy of the transaction without disclosing the transaction amount, address, or other details. Manta fully preserves user and transaction anonymity. The agreement is open-source and auditable, which can also reduce the cost of trust and ensure the system’s security. Please refer to the following table for technical comparison (bold means better):
 
 ![Tech-comparison](/img/tech_comparison.png)
 
@@ -43,7 +43,7 @@ Currently, Manta is the only private DeFi product that is compatible with mainst
 
 ### Manta token:
 
-Manta token, namely $MANTA, is the first deflationary utility token where rebate rewards, redemption, and token burns are generated from actual privacy-preserving network usage and growth in DeFi. The total amount of $MANTA tokens is 10,000,000,000. Its main source of income is the fee collected from users for minting private coins, redeeming base coins from private coins (0.1%), and the private coin payment fee and exchange fee between different private coins (0.3% — variable). These continuous incomes will bring $MANTA tokens a discount value, redemption value, governance value, and extended value. The coming article will explain these values ​​specifically.
+Manta token, namely $MANTA, is the first deflationary utility token where rebate rewards, redemption, and token burns are generated from actual privacy-preserving network usage and growth in DeFi. The total amount of $MANTA tokens is 10,000,000,000. Its main source of income is the fee collected from users for minting private coins, redeeming base coins from private coins (0.1%), and the private coin payment fee and exchange fee between different private coins (0.3% — variable). These continuous incomes will bring $MANTA tokens a discount value, redemption value, governance value, and extended value.
 
 ### Conclusion and prospects:
 
