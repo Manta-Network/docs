@@ -4,7 +4,7 @@ sidebar_position: 1
 
 Welcome! 👋
 
-Manta is a set of easy-to-use and secure (open source and auditable code) protocols based on Substrate frameworks. It uses zk-SNARK to provide complete end-to-end anonymity, high throughput, and high cross-chain interoperability (it supports Polkadot and its parachain mainstream cryptocurrencies and stable coins).
+Manta is a set of protocols built on Substrate that provide anonymous cross-chain interoperability for all Polkadot parachain cryptocurrencies and stable coins. The protocols use zkSNARKS to create end-to-end privacy, and the code is open-source and auditable.
 
 ## Our Mission
 
@@ -64,7 +64,3 @@ Follow and join our community social platforms!
 - [Twitter](https://twitter.com/mantanetwork)
 - [Blog](https://mantanetwork.medium.com)
 - [Discord](https://discord.com/invite/n4QFj4n5vg)
-
----
-
-To learn more about Manta Network, please follow us on [Telegram](https://t.me/mantanetwork), [Twitter](https://twitter.com/mantanetwork) and [Medium](https://mantanetwork.medium.com) to get the latest news.
