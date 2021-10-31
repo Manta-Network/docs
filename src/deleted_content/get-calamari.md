@@ -25,7 +25,9 @@ sudo apt-get -y install build-essential clang curl git libssl-dev make pkg-confi
 ```
 
 #### **macOS**
+
 If you are on x86 Intel system, use it:
+
 ```bash
 # install Homebrew first
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -47,7 +49,9 @@ brew install -s gcc
 brew install -s llvm
 brew install protobuf
 ```
+
 #### **2. Set up Rust Evironment**
+
 Then you need to set up your rust toolchain. In case you are experiencing problems with the rust version use the following toolchain:
 
 ```
@@ -56,6 +60,7 @@ rustc 1.55.0-nightly (a435b49e8 2021-06-28)
 ```
 
 Use `rustup` to help you manage your toolchain. First of all, install it:
+
 ```bash
 # Install
 curl https://sh.rustup.rs -sSf | sh
@@ -63,15 +68,19 @@ curl https://sh.rustup.rs -sSf | sh
 source ~/.cargo/env
 ```
 
-Then use `rustup` to install stable and nightly toolchain. 
+Then use `rustup` to install stable and nightly toolchain.
+
 ```bash
 rustup default stable
 rustup update
 rustup update nightly-2021-06-28 # Here we suggest you to specify the nightly version
 rustup target add wasm32-unknown-unknown --toolchain nightly-2021-06-28
 ```
+
 #### **3. Build the Calamari**
+
 You can use the following commands to build our Calamari chain from Github:
+
 ```bash
 cargo install \
   --git https://github.com/Manta-Network/Manta \
@@ -84,8 +93,6 @@ cargo install \
 
 # the built binary will be at: ${path_to_bin_folder}
 ```
-
-
 
 If you want to generate the relay chain chain-spec you will first need the Polkadot binary:
 
@@ -105,7 +112,7 @@ Then you will ned to run this command to generate the file:
 ./target/release/polkadot build-spec \
   --chain rococo-local
   --disable-default-bootnode
-  --raw 
+  --raw
   > rococo.json
 ```
 

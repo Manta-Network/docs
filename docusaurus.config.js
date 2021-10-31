@@ -1,7 +1,8 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Manta Network Technical Resources',
-  tagline: 'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
+  tagline:
+    'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
   url: 'https://docs.manta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -11,7 +12,7 @@ module.exports = {
   projectName: 'docs', // repo name.
   themeConfig: {
     navbar: {
-      title: 'Manta Network Documentation',
+      title: 'Manta Network Docs',
       logo: {
         alt: 'Manta Network Logo',
         src: 'img/manta.png',
@@ -19,35 +20,55 @@ module.exports = {
       items: [
         {
           href: 'https://manta.network',
-          label: 'manta.network',
+          label: 'Manta Network Home',
           position: 'left',
-          label: 'manta.network',
         },
         {
-          href: 'https://github.com/Manta-Network/docs',
-          label: 'documentation repository',
+          href: 'https://github.com/Manta-Network',
+          label: 'GitHub',
+          position: 'left',
+        },
+        {
+          href: 'https://docs.manta.network/docs/intro/',
+          label: 'Docs',
+          position: 'left',
+        },
+        {
+          href: 'https://manta.network',
+          label: 'Manta Network Home',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/Manta-Network',
+          label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://docs.manta.network/docs/intro/',
+          label: 'Docs',
           position: 'right',
         },
       ],
     },
     footer: {
       style: 'dark',
+
       links: [
         {
           title: 'Docs',
           items: [
             {
               label: 'Introduction',
-              to: '/docs/intro',
+              to: '/docs/Introduction',
             },
             {
-              label: 'Running Manta',
-              to: '/docs/running-manta/get-manta',
+              label: 'Manta Overview',
+              to: '/docs/manta/Overview',
             },
             {
-              label: 'Running Calamari',
-              to: '/docs/calamari/introduction',
-            }
+              label: 'Calamari Overview',
+              to: '/docs/calamari/Overview',
+            },
           ],
         },
         {
@@ -90,8 +111,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/Manta-Network/docs/edit/main/',
+          editUrl: 'https://github.com/Manta-Network/docs/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
