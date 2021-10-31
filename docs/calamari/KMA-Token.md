@@ -12,8 +12,8 @@ We list the basic fact about the Calamari token here:
 |----------------------|----------------------|----------------------------------------------|
 | Token Name           | `Calamari`           |                                              |
 | Token Symbol         | `KMA`                |                                              |
-| Total Supply         | 10,000,000,000 KMA   |    10 B KMA                                   |
-| Decimal              | 12                   |  1KMA = 1,000,000,000,000 basic unit          |
+| Total Supply         | 10,000,000,000 KMA   |    10 Billion KMA                            |
+| Decimal              | 12                   |  1 KMA = 1,000,000,000,000 basic units       |
 | Existential Deposit  | 0.1 KMA              |  minimal balance to keep the account alive   |
 
 ## Existential Deposit
