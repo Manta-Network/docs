@@ -8,23 +8,6 @@ Calamari, Manta Network's canary net, is the on-chain privacy platform for Kusam
 Using zkSNARK and many cutting-edge cryptography techniques, Calamari make privacy inter-operable, easy to use, high-performance
 and auditable.
 
-## About Calamari Token ($KMA)
-
-The Initial Distribution of KMA is up to 10 billion tokens. $KMA is the first community-driven deflationary utility token where rebate rewards, redemption rewards, and token burns are generated from the Calamari privacy-preserving network usage. There will be no new token generation unless KMAs for the crowdloan are consumed.
-The Calamari token ($KMA) is a utility token that rewards token holders with a rebate and redeems mechanism on MariPay and MariSwap usage fees. $KMA has a burn function for redemption. Moreover, $KMA also has governance and other extended functions.
-
-## Calamari Token Distribution
-
-KMA will be distributed in a community-driven method. The majority portion of KMA tokens will be owned by community members.
-There is no team allocation; furthermore, there are no private rounds or private investors. The token's distribution will be a fair launch and favorable to early participants.
-
-![Calamari Supply](/img/calamari-supply.png)
-
-## Calamari Crownloan
-
-On September 15, 2021, at 9:00 GMT, we secured parachain slot 7 after weeks of hard work from both the team and the community. Not only that, but we also broke the record for most contributors to a Kusama parachain auction — over 16,000 contributors to a single project!
-
-Read more about Calamari winning the Parachain Auction [here](Calamari-Parachain-Auction)!
 
 ## The Calamari Parachain
 
