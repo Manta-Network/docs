@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-title: Manta’s Architectural
+title: Manta Architecture
 id: Technology
 ---
 
-TBD
+
 
