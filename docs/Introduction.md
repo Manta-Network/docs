@@ -4,15 +4,15 @@ sidebar_position: 1
 
 Welcome! 👋
 
-Manta is a set of protocols built on Substrate that provide anonymous cross-chain interoperability for all Polkadot parachain cryptocurrencies and stable coins. The protocols use zkSNARKS to create end-to-end privacy, and the code is open-source and auditable.
+Manta is the leading on-chain privacy platform for Polkadot and more.
+We are building a better Web 3.0 with privacy guarantee from the first principle:
+applying cutting-edge cryptographic constructions such as zkSNARKs to make blockchain application including DeFi
+has end to end privacy guarantee and at the same time interoperable, easy to use, high performance and auditable.
 
-## Our Mission
+Manta plans to offer two networks:
 
-We at Manta Network believe that Decentralized Finance (DeFi) is most valuable because it is permissionless and anti-surveillance. But current services in DeFi do not deliver on privacy, scalability, usability, and liquidity. **We believe that the creation of a stable coin that fully supports anonymity and cross-chain interoperability will give DeFi the chance to overtake the traditional financial industry. That's why we're building Manta Network.**
-
-## Manta Network Overview
-
-TBD
+- [Calamari Network](https://calamari.network/): Manta's canary network. Calamari  is running as a Kusama Parachain.
+- [Manta Network](https://manta.network/): Manta's mainnet. Manta will be joining the first batch of Polkadot parachain auction!
 
 ## Community
 

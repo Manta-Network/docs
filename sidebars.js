@@ -17,19 +17,20 @@ module.exports = {
     {
       type: 'category',
       // id: 'manta-overview/Intro',
-      label: 'Manta Overview',
-      items: ['manta/Intro', 'manta/Technology'],
+      label: 'Manta',
+      items: ['manta/Overview'],
     },
     {
       type: 'category',
       // id: 'manta-overview/Intro',
-      label: 'Calamari Overview',
+      label: 'Calamari',
       items: [
-        'calamari/Intro',
+        'calamari/Overview',
         'calamari/KMA',
         'calamari/MariPay',
         'calamari/MariSwap',
         'calamari/Governance',
+        'calamari/API'
       ],
     },
   ],
