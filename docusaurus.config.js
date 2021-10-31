@@ -63,11 +63,11 @@ module.exports = {
             },
             {
               label: 'Manta Overview',
-              to: '/docs/manta/Intro',
+              to: '/docs/manta/Overview',
             },
             {
               label: 'Calamari Overview',
-              to: '/docs/calamari/Intro',
+              to: '/docs/calamari/Overview',
             },
           ],
         },
