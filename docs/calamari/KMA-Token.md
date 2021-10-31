@@ -12,8 +12,8 @@ We list the basic fact about the Calamari token here:
 |----------------------|----------------------|----------------------------------------------|
 | Token Name           | `Calamari`           |                                              |
 | Token Symbol         | `KMA`                |                                              |
-| Total Supply         | 10,000,000,000 KMA   |    10B KMA                                   |
-| Decimal              | 12                   |  1KMA = 1000,000,000,000 basic unit          |
+| Total Supply         | 10,000,000,000 KMA   |    10 B KMA                                   |
+| Decimal              | 12                   |  1KMA = 1,000,000,000,000 basic unit          |
 | Existential Deposit  | 0.1 KMA              |  minimal balance to keep the account alive   |
 
 ## Existential Deposit
@@ -23,7 +23,7 @@ The **Existential Deposit** is the minimal amount that a user need to hold in or
 ## Calamari Token Utility
 
 As Calamari's native currency, `KMA` has following major utilities:
-- Existential Deposit. As Calamari's native currency, each single account need to keep a minimal amount of  {\kma} as existential deposit.
+- Existential Deposit. As Calamari's native currency, each single account need to keep a minimal amount of KMA as existential deposit.
 - Extrinsic Fee Payment. KMA is used to pay the fee for every extrinsic, and as a mechanism to prevent DDoS attack to Calamari.
 - Commission Fee. Commission fee for private payment/private swap.
 - On-Chain Governance: KMA holders can use the token to join the on-chain governance, voting for the governance proposal.  
