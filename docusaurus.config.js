@@ -32,22 +32,7 @@ module.exports = {
           href: 'https://docs.manta.network/docs/intro/',
           label: 'Docs',
           position: 'left',
-        },
-        {
-          href: 'https://manta.network',
-          label: 'Manta Network Home',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/Manta-Network',
-          label: 'GitHub',
-          position: 'right',
-        },
-        {
-          href: 'https://docs.manta.network/docs/intro/',
-          label: 'Docs',
-          position: 'right',
-        },
+        }
       ],
     },
     footer: {
