@@ -20,7 +20,7 @@ module.exports = {
       items: [
         {
           href: 'https://manta.network',
-          label: 'Manta Network Home',
+          label: 'Manta Network',
           position: 'left',
         },
         {

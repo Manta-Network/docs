@@ -1,10 +1,8 @@
 ---
 sidebar_position: 6
 id: API
-title: Calamari API
+title: 🛠  Calamari API
 ---
-
-# Calamari API
 
 ## Full Nodes
 

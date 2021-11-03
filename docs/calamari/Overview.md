@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 id: Overview
-title: Overview
+title: 📝  Overview
 ---
 
 Calamari, Manta Network's canary net, is the on-chain privacy platform for Kusama Eco-system.
