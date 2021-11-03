@@ -27,11 +27,6 @@ module.exports = {
           href: 'https://github.com/Manta-Network',
           label: 'GitHub',
           position: 'left',
-        },
-        {
-          href: 'https://docs.manta.network/docs/intro/',
-          label: 'Docs',
-          position: 'left',
         }
       ],
     },
