@@ -1,10 +1,8 @@
 ---
 sidebar_position: 2
 id: KMA
-title: KMA Token
+title: 🐙  Calamari Token (KMA)
 ---
-
-# Calamari Token (KMA)
 
 We list the basic fact about the Calamari token here:
 

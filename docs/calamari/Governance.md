@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Governance Overview
+title: 🎙  Governance Overview
 ---
 
 

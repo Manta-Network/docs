@@ -27,10 +27,11 @@ module.exports = {
       items: [
         'calamari/Overview',
         'calamari/KMA',
-        'calamari/MariPay',
-        'calamari/MariSwap',
+        //'calamari/MariPay',
+        //'calamari/MariSwap',
         'calamari/Governance',
-        'calamari/API'
+        'calamari/API',
+        'calamari/RunNode'
       ],
     },
   ],
