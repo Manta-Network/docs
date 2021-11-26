@@ -1,20 +1,19 @@
 ---
 sidebar_position: 7
-id: crowdloan
+id: CrowdloanClaim
 title: 🪙 Crowdloan Token Claim
 ---
 
 We list the basic fact about the Calamari token here:
 
-| *Vesting Schedule*   |  *Date*          |
-|----------------------|------------------|
-| Initial Release      | 
-| 1st Vesting
-| 2nd Vesting
-| 3rd Vesting
-| 4th Vesting
-| 5th Vesting
-| 6th Vesting
+| *Vesting Schedule*   |  *Date*/Unix time   |
+|----------------------|---------------------|
+| Initial Release      |                     |
+| 2nd Vesting          |                     |
+| 3rd Vesting          |                     |
+| 4th Vesting          |                     |
+| 5th Vesting          |                     |
+| 6th Vesting          |                     | 
 
 ## You Receive Locked Full Amount
 
