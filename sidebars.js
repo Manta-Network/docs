@@ -31,7 +31,8 @@ module.exports = {
         //'calamari/MariSwap',
         'calamari/Governance',
         'calamari/API',
-        'calamari/RunNode'
+        'calamari/RunNode',
+        'calamari/CrowdloanClaim' 
       ],
     },
   ],
