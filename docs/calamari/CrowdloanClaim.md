@@ -6,14 +6,14 @@ title: 🪙 Crowdloan Token Claim
 
 We list the basic fact about the Calamari token here:
 
-| *Vesting Schedule*   |  *Date*/Unix time   |
-|----------------------|---------------------|
-| Initial Release      |                     |
-| 2nd Vesting          |                     |
-| 3rd Vesting          |                     |
-| 4th Vesting          |                     |
-| 5th Vesting          |                     |
-| 6th Vesting          |                     | 
+| *Vesting Schedule*        |  *Date and Time (GMT)*   |
+|---------------------------|--------------------------|
+| Initial Release (45%)     |  Nov 28 2021 08:00:00    |
+| 2nd Vesting (11%)         |  Jan 05 2022 00:00:00    |
+| 3rd Vesting (11%)         |  Mar 02 2022 00:00:00    |
+| 4th Vesting (11%)         |  Apr 27 2022 00:00:00    |
+| 5th Vesting (11%)         |  Jun 22 2022 00:00:00    |
+| 6th Vesting (11%)         |  Aug 17 2022 00:00:00    | 
 
 ## You Receive Locked Full Amount
 
@@ -31,3 +31,7 @@ As tokens become unlocked, they will be available for claiming on [Polkadot JS](
 6. Click **Submit Transaction**
 7. Sign and submit the transaction
 8. Your vested tokens are unlocked!
+
+## If You Contributed Through a Centralized Exchange
+
+If you contributed through a centralized exchange, you do not need to take any extra steps. The centralized exchange will do the vesting claim on your behalf, and distribute it directly to your exchange wallet.
