@@ -1,23 +1,17 @@
----
-sidebar_position: 1
-id: Overview
-title: 📝  Overview
----
+# 📝 Overview
 
-Calamari, Manta Network's canary net, is the on-chain privacy platform for Kusama Eco-system.
-Using zkSNARK and many cutting-edge cryptography techniques, Calamari make privacy inter-operable, easy to use, high-performance
-and auditable.
-
+Calamari, Manta Network's canary net, is the on-chain privacy platform for Kusama Ecosystem.
+Using zkSNARK and other cutting-edge cryptography techniques, Calamari is making privacy inter-operable, easy to use, highly-performant and auditable.
 
 ## The Calamari Parachain
 
-Calamari is Manta Network's canary-net, an early, highly experimental version of Manta Network, where all new features will be released and tested first. Calamari is the plug-and-play privacy-preservation parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps.
+Calamari is Manta Network's canary-net, an early, highly experimental version of Manta Network, where all new features will be released and tested first. Calamari is the plug-and-play privacy-preserving parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps.
 
 In the early period, Calamari parachain will provide two products:
 
-**MariPay:** a token-agnostic private payment service. MariPay supports the private transfer of Kusama and its Parachain assets, including significant crypto assets supported on Kusama. Users can transact popular assets like stablecoins and wrapped BTC while simultaneously benefiting from on-chain privacy through ZKP.
+**MariPay**: a token-agnostic private payment service. MariPay supports the private transfer of Kusama and its Parachain assets, including significant crypto assets supported on Kusama. Users can transact popular assets like stablecoins and wrapped BTC while simultaneously benefiting from on-chain privacy through ZKP.
 
-**MariSwap:** a private AMM-based DEX. MariSwap offers users the capability of swaps between parachain assets while preserving the privacy of the user addresses. It also provides never-before-seen features in the industry, such as private liquidity pools.
+**MariSwap**: a private AMM-based DEX. MariSwap offers users the capability of swaps between parachain assets while preserving the privacy of the user. It also provides never-before-seen features in the industry, such as private liquidity pools.
 
 ## Calamari Roadmap
 
