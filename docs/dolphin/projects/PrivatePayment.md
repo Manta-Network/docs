@@ -103,11 +103,13 @@ The first place that `Alice` and `Bob` use _shared secrets_ is to share _encrypt
 
 ### Encryption
 
-
+![Encryption](private-payment/encryption.png)
+![Encryption (Full)](private-payment/encryption-full.png)
 
 ### Decryption
 
-
+![Decryption](private-payment/decryption.png)
+![Decryption (Full)](private-payment/decryption-full.png)
 
 ## UTXOs and Void Numbers
 
