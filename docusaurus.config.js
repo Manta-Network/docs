@@ -1,8 +1,11 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+
+const math = require('remark-math');
+const katex = require('rehype-katex');
+
 module.exports = {
   title: 'Manta Network Technical Resources',
-  tagline:
-    'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
+  tagline: 'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
   url: 'https://docs.manta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -32,7 +35,6 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-
       links: [
         {
           title: 'Docs',
@@ -82,7 +84,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Manta Network. Built with Docusaurus.`,
+      copyright: `Copyright © 2019-${new Date().getFullYear()} Manta Network. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -91,6 +93,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           editUrl: 'https://github.com/Manta-Network/docs/edit/main/',
         },
         theme: {
@@ -98,5 +102,12 @@ module.exports = {
         },
       },
     ],
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
+      integrity: 'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
+      crossorigin: 'anonymous',
+    },
   ],
 };
