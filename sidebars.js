@@ -24,7 +24,7 @@ module.exports = {
         'calamari/Overview',
         'calamari/KMA',
         'calamari/Governance',
-        'calamari/API',
+        'calamari/Api',
         'calamari/CrowdloanClaim' 
       ],
     },
