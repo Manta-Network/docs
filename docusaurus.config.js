@@ -14,6 +14,9 @@ module.exports = {
   organizationName: 'Manta-Network', // github org name.
   projectName: 'docs', // repo name.
   themeConfig: {
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'Manta Network Docs',
       logo: {
