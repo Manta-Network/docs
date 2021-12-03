@@ -6,9 +6,9 @@ Manta is all about bringing privacy to the wider blockchain space, and an import
 
 We recently posted a tech talk that explains the protocol in some detail:
 
-[![Tech Talk #1](private-payment/tech-talk-1-thumbnail.jpg)](https://www.youtube.com/watch?v=qmRChiIDl2A)
+[![Tech Talk #1](./private-payment/tech-talk-1-thumbnail.jpg)](https://www.youtube.com/watch?v=qmRChiIDl2A)
 
-You can follow along with [this video](https://www.youtube.com/watch?v=qmRChiIDl2A), [download the slides](private-payment/tech-talk-1-slides.pdf), and/or keep reading below to get an overview and some technical details about how _Private Payment_ works.
+You can follow along with [this video](https://www.youtube.com/watch?v=qmRChiIDl2A), [download the slides](./private-payment/tech-talk-1-slides.pdf), and/or keep reading below to get an overview and some technical details about how _Private Payment_ works.
 
 Currently, the formal specification for _Private Payment_ is still closed source, but stay tuned for its public release in the near future!
 
@@ -34,10 +34,10 @@ We will first describe a simplified version of the protocol, following two imagi
 1. [Send and Receive](#send-and-receive)
 2. [Shared Secrets](#shared-secrets)
 3. [Encrypt and Decrypt](#encrypt-and-decrypt)
-4. [UTXOs and Void Numbers](#utxos-and-void-numbers)
+4. [Ownership Certificates](#ownership-certificates)
 5. [Zero-Knowledge Transfer Proof](#zero-knowledge-transfer-proof)
 
-This discussion is not entirely self-contained but we will attempt to explain cryptographic protocols only as black boxes by their interfaces and security guarantees. Further reading on each of the subjects below is not discouraged.
+This discussion is not entirely self-contained but we will attempt to explain cryptographic protocols only as black boxes by their interfaces and security guarantees. Further reading on each of the subjects below is encouraged.
 
 ### Participants (in detail)
 
@@ -53,7 +53,7 @@ For `Alice` to send her assets to `Bob`, she communicates with the `Ledger` as a
 
 `Alice` begins by constructing a special number called $\textsf{SK}_\textsf{E}$, the _ephemeral secret key_, which she will use to represent this unique transfer. She constructs it by taking `Bob`'s _pubic key_, $\textsf{PK}_\textsf{B}$, some public data from the `Ledger`, and some randomness:
 
-![Send Protocol](private-payment/send-protocol.png)
+![Send Protocol](./private-payment/send-protocol.png)
 
 This is built using a _commitment scheme_ which commits to $\Lambda$ (the ledger checkpoint), and $\textsf{PK}_\textsf{B}$ using $\tau$ as the randomness (A.K.A blinder, or trapdoor):
 
@@ -63,25 +63,25 @@ $$
 
 This ephemeral key is only used once. `Alice` will have to prove later that she constructed $\textsf{SK}_\textsf{E}$ properly, called _opening_ the commitment. The commitment is _binding_ which means that `Alice` will not be able to change her mind and find another public key or ledger checkpoint to construct the same ephemeral key. The trapdoor $\tau$ gives us the _hiding_ property which means that even if someone knows $\Lambda$ and $\textsf{PK}_\textsf{B}$ they won't be able to predict what $\textsf{SK}_\textsf{E}$ is without knowing $\tau$.
 
-`Alice` now uses the ephemeral key, $\textsf{SK}_\textsf{E}$, her own secret key $\textsf{SK}_\textsf{A}$, and the asset that she received from the `Ledger` earlier, to build a _shielded asset_. We will see as we go along how exactly the shielded asset is built.
+`Alice` now uses the ephemeral key, $\textsf{SK}_\textsf{E}$, her own secret key $\textsf{SK}_\textsf{A}$, and the asset that she received from the `Ledger` earlier, to build a _private asset_. We will see as we go along how exactly the private asset is built.
 
 ### Receive
 
-Once `Alice` finishes her communication with the `Ledger` and the `Ledger` accepts her shielded asset, it will store that shielded asset forever, waiting for someone to claim it. `Bob` wishes to claim it so he goes to the `Ledger` and asks for all of the newest shielded assets since his last query. The `Ledger` will send them to `Bob` and he will use his secret key $\textsf{SK}_\textsf{B}$ to scan through the shielded assets to find the ones he now owns. 
+Once `Alice` finishes her communication with the `Ledger` and the `Ledger` accepts her private asset, it will store that private asset forever, waiting for someone to claim it. `Bob` wishes to claim it, so he goes to the `Ledger` and asks for all of the newest private assets since his last query. The `Ledger` will send them to `Bob` and he will use his secret key $\textsf{SK}_\textsf{B}$ to scan through the private assets to find the ones he now owns. 
 
-![Receive Protocol](private-payment/receive-protocol.png)
+![Receive Protocol](./private-payment/receive-protocol.png)
 
-The secret key that `Bob` is using for this scanning process must be the one that _derived_ the public key $\textsf{PK}_\textsf{B}$ which `Alice` used to build the shielded asset. This _key derivation_ must be irreversible so that no one can discover (in a reasonable amount of time) what $\textsf{SK}_\textsf{B}$ is just from the knowledge of $\textsf{PK}_\textsf{B}$.
+The secret key that `Bob` is using for this scanning process must be the one that _derived_ the public key $\textsf{PK}_\textsf{B}$ which `Alice` used to build the private asset. This _key derivation_ must be irreversible so that no one can discover (in a reasonable amount of time) what $\textsf{SK}_\textsf{B}$ is just from the knowledge of $\textsf{PK}_\textsf{B}$.
 
-**NOTE**: Because the `Ledger` will be around for a long time, `Bob` can wait as long as he likes to receive the new shielded assets.
+**NOTE**: Because the `Ledger` will be around for a long time, `Bob` can wait as long as he likes to receive the new private assets.
 
 ## Shared Secrets
 
 But how will `Bob` be able to claim is new assets? How will he be able to spend them in the future?
 
-One of the most important cryptographic tools that we can take advantage of here is the _shared secret_. Essentially, we want to find a way to take some information and wrap it up so that only two people have access to it. Getting someone to share a secret with themselves is easy, they just don't tell anyone. But how do we tell someone else our secrets so that only one other person ever knows what it is?
+One of the most important cryptographic tools that we can take advantage of here is the _shared secret_. Essentially, we want to find a way to take some information and wrap it up so that only two people have access to it. Getting someone to share a secret with themselves is easy, they just don't tell anyone. But how do we tell someone else our secrets so that only the two of you ever know what it is?
 
-One of the most common ways to do this is with the _Diffie-Hellman Key Exchange_ protocol. In this protocol, we take an operation that we assume is impossible (in a reasonable amount of time) to reverse, let's call it $\textsf{bind}$, and a public constant $G$ that everyone agrees on. We choose $\textsf{bind}$ and $G$ so that it has the following property:
+One of the most common ways to do this is with the _Diffie-Hellman Key Exchange_ protocol. In this protocol, we take an operation that we assume is impossible to reverse (in a reasonable amount of time), let's call it $\textsf{bind}$, and a public constant $G$ that everyone agrees on. We choose $\textsf{bind}$ and $G$ so that it has the following property:
 
 $$
 \textsf{bind}(y, \textsf{bind}(x, G)) = \textsf{bind}(x, \textsf{bind}(y, G))
@@ -99,50 +99,100 @@ So if you share your public key $X$ with someone and get their public key $Y$, t
 
 ## Encrypt and Decrypt
 
-The first place that `Alice` and `Bob` use _shared secrets_ is to share _encryption/decryption_ keys.
+The first place that `Alice` and `Bob` use _shared secrets_ is to share _encryption_ keys. These keys are used to send the asset value that we want to transfer in a secret message from `Alice` to `Bob`. This is called the _in-band secret distribution_.
 
 ### Encryption
 
 For `Alice` to send the asset value to `Bob`, she uses a _hybrid public-key encryption scheme_ to _encrypt_ the asset. She does this by taking `Bob`'s public key $\textsf{PK}_\textsf{B}$ and the _ephemeral secret key_ for this particular transaction $\textsf{SK}_\textsf{E}$ and performing a Diffie-Hellman Key Exchange (in this case using elliptic curves to define the $\textsf{bind}$ function), to compute a shared encryption key $K$. 
 
-<!-- ![Encryption](private-payment/encryption.png) -->
-![Encryption (Full)](private-payment/encryption-full.png)
+<!-- ![Encryption](./private-payment/encryption.png) -->
+![Encryption (Full)](./private-payment/encryption-full.png)
 
-`Alice` then uses the _Blake2s_ key derivation function to produce another key $K^*$ which will be the right size for the standard _AES-GCM_ encryption scheme with message authentication. `Alice` encrypts the asset with $K^*$ and appends the derived public ephemeral key $\textsf{PK}_\textsf{E}$ to the ciphertext message. This forms part of the shielded asset that `Alice` sends to the `Ledger`.
+`Alice` then uses the _Blake2s_ key derivation function to produce another key $K^*$ which will be the right size for the standard _AES-GCM_ encryption scheme with message authentication. `Alice` encrypts the asset with $K^*$ and appends the derived public ephemeral key $\textsf{PK}_\textsf{E}$ to the ciphertext message. This forms part of the private asset that `Alice` sends to the `Ledger`.
 
 ### Decryption
 
-`Bob` will then download the new shielded assets from the `Ledger`, and to see if any of the new assets are his to spend, he will try to encrypt them by building the same shared secrets `Alice` used for encryption.
+`Bob` will then download the new private assets from the `Ledger`, and to see if any of the new assets are his to spend, he will try to decrypt them by building the same shared secrets `Alice` used for encryption.
 
-<!-- ![Decryption](private-payment/decryption.png) -->
-![Decryption (Full)](private-payment/decryption-full.png)
+<!-- ![Decryption](./private-payment/decryption.png) -->
+![Decryption (Full)](./private-payment/decryption-full.png)
 
-In this case, `Bob` uses his secret key, $\textsf{SK}_\textsf{B}$, and the public ephemeral key attached to the shielded asset, $\textsf{PK}_\textsf{E}$, to build the Diffie-Hellman shared secret, $K$, then using the same _Blake2s_ function to derive $K^*$, and then performing _AES-GCM_ decryption. The decryption will check that the message authentication can be reconstructed properly and if the key $K^*$ was different than the one used to build the message, it will fail, and `Bob` will know the asset is not his. If the encryption succeeded, then `Bob` will store the shielded asset on his local computer to spend later.
+In this case, `Bob` uses his secret key, $\textsf{SK}_\textsf{B}$, and the public ephemeral key attached to the private asset, $\textsf{PK}_\textsf{E}$, to build the Diffie-Hellman shared secret, $K$, then using the same _Blake2s_ function to derive $K^*$, and then performing _AES-GCM_ decryption. The decryption will check that the message authentication can be reconstructed properly and if the key $K^*$ was different than the one used to build the message, it will fail, and `Bob` will know the asset is not his. If the encryption succeeded, then `Bob` will store the private asset on his local computer to spend later.
 
-## UTXOs and Void Numbers
+## Ownership Certificates
 
 Now we know how `Alice` can communicate to `Bob` the amount of value she has sent to him. But still, the `Ledger` must only accept asset transfers which can provably transfer the _future spending power_ from the sender to the receiver, all the while, preserving the privacy of all parties involved. Just because `Alice` sends `Bob` an encrypted asset does not mean she cannot send it again, or send it to someone else. We need a way to keep track of who owns what and be able to take away that power once someone spends an asset.
 
 To satisfy this constraint, `Alice` will generate two kinds of certificates, _UTXOs_ and _void numbers_.
 
-### Unspent Transaction Output
-
-A _UTXO_ or Unspent Transation Output, is a certificate for the future spending of one of the receivers of a transaction. It is used in public ledger protocols in the following way:
+A _UTXO_ or _Unspent Transation Output_, is a certificate for the future spending of one of the receivers of a transaction. It is used in some public ledger protocols in the following way:
 
 1. Prove that `Alice` owns one of the current UTXOs
 2. Drop `Alice`'s UTXO from the `Ledger`
 3. Create a new UTXO for `Bob`
 
-In this way, the current set of UTXOs represents all of the users which have some amount of assets and how much they all own. Unfortunately, all three of the above steps reveal all parties involved, but fortunately, zero-knowledge proofs can take care of all three of these problems.
+In this way, the current set of UTXOs represents all of the users which have some amount of assets and how much they all own. For `Alice` to spend her asset, she needs to present a certificate $\textsf{CM}_\textsf{A}$ which represents that `Alice` was a receiver in a past transaction. She will need to prove that the `Ledger` has seen this UTXO before.
 
-### Void Numbers
+![Ownership Certificates](./private-payment/utxo-explanation.png)
 
+To transfer the asset to `Bob`, `Alice` generates a new UTXO, called $\textsf{CM}_\textsf{B}$, on `Bob`'s behalf. `Alice` will also need to revoke her old UTXO somehow. She does this by generating a _void number_, $\textsf{VN}_\textsf{A}$, which is tied to her $\textsf{CM}_\textsf{A}$ in such a way that:
 
+1. The same $\textsf{CM}_\textsf{A}$ will always generate the same $\textsf{VN}_\textsf{A}$.
+2. Different $\textsf{CM}$ generate different $\textsf{VN}$.
+3. No one can tell which $\textsf{CM}_\textsf{A}$ the $\textsf{VN}_\textsf{A}$ belongs to.
+4. Only `Alice` can construct $\textsf{VN}_\textsf{A}$.
+
+Let's see how $\textsf{CM}$ and $\textsf{VN}$ are constructed.
+
+### Receiver Certificates
+
+In order for `Alice` to create $\textsf{CM}_\textsf{B}$ on `Bob`'s behalf, she computes another shared secret, called $\textsf{T}_\textsf{B}$, the trapdoor, to the UTXO commitment $\textsf{CM}_\textsf{B}$.
+
+![Receiver UTXO](./private-payment/utxo-construction.png)
+
+The commitment consists of the asset amount that `Alice` wants to transfer and the shared trapdoor. The trapdoor is the random part of the commitment that ensures the _hiding_ property. The _binding_ property of the commitment ensures that `Alice` can't put some fake information into the commitment and then `Bob` ends up with some assets he can't spend.
+
+### Sender Certificates
+
+For `Alice` to generate her void number certificate, she takes the trapdoor, $\textsf{T}_\textsf{A}$ that was used to build her $\textsf{CM}_\textsf{A}$, and commits to her secret key $\textsf{SK}_\textsf{A}$.
+
+![Sender UTXO and Void Number](./private-payment/void-number-construction.png)
+
+The void number $\textsf{VN}_\textsf{A}$ is tied to the commitment because it uses the same trapdoor, and only `Alice` can perform this computation because $\textsf{SK}_\textsf{A}$ is only known to her.
+
+In order to prove that her UTXO is already on the `Ledger`, `Alice` can create a _Merkle-Proof_, $\pi_\textsf{A}$, attesting to this fact.
 
 ## Zero-Knowledge Transfer Proof
 
+But `Alice` has done all of these computations in secret, involving a lot of secret information which would compromise her account if she shared with anyone. How can the `Ledger` trust that she did this computation fairly?
 
+`Alice` can take advantage of zkSNARKs, _zero-knowledge Succinct Non-interactive Arguments of Knowledge_ to do the computation entirely on her own machine. zkSNARKs work like this:
+
+1. `Alice` and the `Ledger` agree in public on some algorithm to check (ex: some computer program to execute or the protocol above). They agree on which variables in the algorithm are secret and which are public.
+2. `Alice` performs the computation of that algorithm on her own machine with her own chosen secret input and public input. 
+3. Using the output of the computation, `Alice` builds a proof $\pi$ that the computation was done correctly (because of succinctness, this is a very small file compared to the size of the algorithm)
+4. `Alice` sends $\pi$ to the `Ledger` and it can check quickly if the computation that produced this file was in-fact the agreed-upon algorithm in which case he accepts or rejects.
+
+![ZKP Details](./private-payment/zkp-details.png)
+
+`Alice` can use zkSNARKs to compute all the different objects in the _Private Payment Protocol_ above. When she does this, she gains the following privacy guarantees:
+
+1. **Private Sender**: Because $\textsf{CM}_\textsf{A}$ and $\pi_\textsf{A}$ are secret, the `Ledger` won't know which UTXO belongs to `Alice`, just that it is in fact one of the ones stored on the `Ledger`.
+2. **Private Receiver**: Because the construction of $\textsf{SK}_\textsf{E}$ is secret, no one knows that it comes from $\textsf{PK}_\textsf{B}$.
+3. **Private Asset**: Because $\textsf{SK}_\textsf{E}$, $\textsf{PK}_\textsf{B}$, and the asset amount are secret, no one can decrypt the encrypted asset except `Bob`.
+
+So we have successfully built a Private Payment Protocol!
 
 ## Generalized N-to-M Transfer Protocol
+
+In general, we need more than just a 1-to-1 transfer to be able to have usable money. For example, if `Alice` sends `Bob` five units and he wants to send `Carol` three units, he cannot use a 1-to-1 because he can't subdivide his assets. To do this, we generalize the above protocol to an $N$-to-$M$ protocol.
+
+![Generalized Protocol](./private-payment/generalized-protocol.png)
+
+We can repeat the construction for each individual _sender_ and _receiver_ and so `Bob` can send his asset to `Carol` by sending three units to her and sending two back to himself. Because the entire protocol is private, no one except `Bob` knows that he has done this.
+
+## There's More
+
+There are some more details that you have to get right to build a real Private Payment scheme, like private wallets, fee proxies, and more. Right now these ideas are still brewing, but there's some cool stuff coming soon, so stay tuned!
 
 
