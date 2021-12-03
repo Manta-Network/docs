@@ -99,25 +99,41 @@ So if you share your public key $X$ with someone and get their public key $Y$, t
 
 ## Encrypt and Decrypt
 
-The first place that `Alice` and `Bob` use _shared secrets_ is to share _encryption_ keys. Encryption is the act of hiding some information (_plaintext_) using a secret _key_ so that later it can be _decrypted_ using the same secret key to produce the original plaintext.
+The first place that `Alice` and `Bob` use _shared secrets_ is to share _encryption/decryption_ keys.
 
 ### Encryption
 
-![Encryption](private-payment/encryption.png)
+For `Alice` to send the asset value to `Bob`, she uses a _hybrid public-key encryption scheme_ to _encrypt_ the asset. She does this by taking `Bob`'s public key $\textsf{PK}_\textsf{B}$ and the _ephemeral secret key_ for this particular transaction $\textsf{SK}_\textsf{E}$ and performing a Diffie-Hellman Key Exchange (in this case using elliptic curves to define the $\textsf{bind}$ function), to compute a shared encryption key $K$. 
+
+<!-- ![Encryption](private-payment/encryption.png) -->
 ![Encryption (Full)](private-payment/encryption-full.png)
+
+`Alice` then uses the _Blake2s_ key derivation function to produce another key $K^*$ which will be the right size for the standard _AES-GCM_ encryption scheme with message authentication. `Alice` encrypts the asset with $K^*$ and appends the derived public ephemeral key $\textsf{PK}_\textsf{E}$ to the ciphertext message. This forms part of the shielded asset that `Alice` sends to the `Ledger`.
 
 ### Decryption
 
-![Decryption](private-payment/decryption.png)
+`Bob` will then download the new shielded assets from the `Ledger`, and to see if any of the new assets are his to spend, he will try to encrypt them by building the same shared secrets `Alice` used for encryption.
+
+<!-- ![Decryption](private-payment/decryption.png) -->
 ![Decryption (Full)](private-payment/decryption-full.png)
+
+In this case, `Bob` uses his secret key, $\textsf{SK}_\textsf{B}$, and the public ephemeral key attached to the shielded asset, $\textsf{PK}_\textsf{E}$, to build the Diffie-Hellman shared secret, $K$, then using the same _Blake2s_ function to derive $K^*$, and then performing _AES-GCM_ decryption. The decryption will check that the message authentication can be reconstructed properly and if the key $K^*$ was different than the one used to build the message, it will fail, and `Bob` will know the asset is not his. If the encryption succeeded, then `Bob` will store the shielded asset on his local computer to spend later.
 
 ## UTXOs and Void Numbers
 
+Now we know how `Alice` can communicate to `Bob` the amount of value she has sent to him. But still, the `Ledger` must only accept asset transfers which can provably transfer the _future spending power_ from the sender to the receiver, all the while, preserving the privacy of all parties involved. Just because `Alice` sends `Bob` an encrypted asset does not mean she cannot send it again, or send it to someone else. We need a way to keep track of who owns what and be able to take away that power once someone spends an asset.
 
+To satisfy this constraint, `Alice` will generate two kinds of certificates, _UTXOs_ and _void numbers_.
 
-### UTXOs
+### Unspent Transaction Output
 
+A _UTXO_ or Unspent Transation Output, is a certificate for the future spending of one of the receivers of a transaction. It is used in public ledger protocols in the following way:
 
+1. Prove that `Alice` owns one of the current UTXOs
+2. Drop `Alice`'s UTXO from the `Ledger`
+3. Create a new UTXO for `Bob`
+
+In this way, the current set of UTXOs represents all of the users which have some amount of assets and how much they all own. Unfortunately, all three of the above steps reveal all parties involved, but fortunately, zero-knowledge proofs can take care of all three of these problems.
 
 ### Void Numbers
 
