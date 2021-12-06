@@ -9,7 +9,7 @@ Dolphin, as well as [Calamari](../calamari/Overview.md), form the test-bed for t
 | Experiment                 | Status (Active/Removed/Design) |
 |:--------------------------:|:------------------------------:|
 | [Pay](DolphinPay.md)   | Active                         |
-| [Swap](projects/PrivateExchange.md) | Design                         |
+| [Swap](PrivateExchange.md) | Design                         |
 
 See those experiment pages for more information. 
 
