@@ -33,15 +33,9 @@ module.exports = {
       label: 'Dolphin',
       items: [
         'dolphin/Overview',
-        {
-          type: 'category',
-          label: 'Projects',
-          items: [
-            'dolphin/projects/Experiments',
-            'dolphin/projects/PrivatePayment',
-            'dolphin/projects/PrivateExchange',
-          ],
-        },
+        'dolphin/DolphinPay',
+        'dolphin/PrivatePayment',
+        'dolphin/PrivateExchange',
       ],
     },
     {
