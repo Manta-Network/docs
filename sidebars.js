@@ -10,29 +10,40 @@
  */
 
 module.exports = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
-
   docs: [
     'Introduction',
     {
       type: 'category',
-      // id: 'manta-overview/Intro',
       label: 'Manta',
       items: ['manta/Overview'],
     },
     {
       type: 'category',
-      // id: 'manta-overview/Intro',
       label: 'Calamari',
       items: [
         'calamari/Overview',
         'calamari/KMA',
-        //'calamari/MariPay',
-        //'calamari/MariSwap',
         'calamari/Governance',
-        'calamari/API',
-        //'calamari/RunNode',
+        'calamari/api',
         'calamari/CrowdloanClaim' 
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Dolphin',
+      items: [
+        'dolphin/Overview',
+        'dolphin/DolphinPay',
+        'dolphin/PrivatePayment',
+        'dolphin/PrivateExchange',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Signer',
+      items: [
+        'signer/Overview',
+        'signer/HowToUseIt',
       ],
     },
   ],
