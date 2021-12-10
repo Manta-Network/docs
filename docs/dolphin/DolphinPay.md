@@ -59,10 +59,14 @@ DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecos
 
    _Dolphin (Boto) uses a one-time shielded address. This is a one-time address for your private tokens. For privacy and security, the address is longer than a typical generic Polkadot/Manta address. In the next version of the testnet, we will switch to reusable shielded addresses._
 
-4. How can I recover private tokens if I forgot my *Signer* password?
+4. Do I need to keep my one time shielded address confidential? Can someone know my one time shielded address track my transactions?
+
+    _One time shielded address is not *confidential*. Under the hood, MantaPay protocol uses UTXO model and the input and the output of a transfer transaction is shielded by zero-knowledge proofs. As a result, someone know your one time shielded address cannot track your any transactions._
+
+5. How can I recover private tokens if I forgot my *Signer* password?
 
    _We will add recover feature to the *Signer* soon._
 
-5. How does private payment work?
+6. How does private payment work?
 
    _[Find out more.](PrivatePayment.md)_
