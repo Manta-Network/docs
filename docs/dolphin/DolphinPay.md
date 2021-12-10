@@ -11,7 +11,7 @@ DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecos
    * Ubuntu/Debian: in testing phase, to be released
    * Windows: in testing phase, to be released
 
-   For macOS, you might need to go to `System Preferences -> Security & Privacy -> General` to run the *Signer* (we are working to get the app approved by Apple, but it takes time).
+    For macOS, you might need to go to `System Preferences -> Security & Privacy -> General` to run the *Signer* (we are working to get the app approved by Apple, but it takes time).
 
    ![signer-security](./private-payment/allow-signer.png)
 
