@@ -183,6 +183,13 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
 4. Now stop your current running container for security reason, remove two params.
 
+    Stop your current container and delete it.
+    ```bash
+    docker stop your_container_name
+    docker rm your_container_name
+    ```
+
+    Start a container again without `--rpc-methods=unsafe` and `--unsafe-rpc-external`.
     ```bash
     docker run \
     -it \
@@ -217,7 +224,7 @@ Download the latets snapshot of calamari mainnet.
 
 #### Native
 
-Specify `snapshot_path` whihc is the snapshot path.
+Specify `snapshot_path` which is the snapshot path.
 
     ```bash
     manta --base-path snapshot_path \
@@ -232,7 +239,7 @@ Specify `snapshot_path` whihc is the snapshot path.
 
 #### Docker
 
-Specify `snapshot_path` whihc is the snapshot path.
+Specify `snapshot_path` which is the snapshot path.
 
     ```bash
     docker run \
