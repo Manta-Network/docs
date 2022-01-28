@@ -9,7 +9,8 @@
     ```jsx
     cpu:8 cores
     memory: 32 GB of ram
-    disk space: 100 GB of disk space
+    disk space: 500 GB of disk space
+    bandwidth: 100 Mbps
     recommended region: EU or US
     ```
     
@@ -26,7 +27,11 @@
     - A calamari collator utilizes up to 27gb of ram on a 32gb system.
     - A calamari collator utilizes up to 25% of cpu on a 24 core system.
     - A reliable internet connection as well as power supply which should remain uninterrupted to keep local machine **permanently online.**
-2. Bonding requirement: `400_000`KMA (To be changed) at least. Make sure your account has more than `400_000`KMA in your free balance. 
+
+2. Bonding requirement: `400_000`KMA at least. Make sure your account has more than `400_000`KMA in your free balance.
+
+    You can check candidacy bond on calamari mainnet.
+    ![Candidacy Bond](images/candidacy-bond.png)
 
 ## Deployment
 
@@ -125,7 +130,7 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
     Both params should be the same.
 
-7. Fill the collator application form (link TBD). If approved, Calamari council will submit a motion to promote you as a candidate.
+7. Fill the [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform) form. If approved, Calamari council will submit a motion to promote you as a candidate.
 > Tips: Candidate doesn’t mean your node is collator. For example, if current candidates spots is 3, and some other candidates occupy all spots, you’re the 4th, you have to wait until there’s a node is unregistered or more collator spots are open by council.
 
 8. After ~2 sessions(about `6` to `12` hours) pass, you will see blocks produced from your collator. 
@@ -220,7 +225,7 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
 Download the latets snapshot of calamari mainnet.
 
-`Snapshot link`: todo!()
+`Snapshot Link`: [calamari-kusama.tgz](https://calamari-kusama.s3.eu-central-1.amazonaws.com/calamari-kusama.tgz)
 
 #### Native
 
@@ -277,8 +282,6 @@ Propose a motion like this, `collatorSelection` → `removeCollator`.
 
 If you have any problem on running node, just contact manta team.
 
-```
-discord: todo!()
-email: todo!()
-github issue: 'https://github.com/Manta-Network/Manta/issues'
-```
+- Discord: [Collator Program](https://discord.com/channels/795390654628102165/936300292536942592)
+- Email: [Manta Devops Team](mailto:ops@manta.network)
+- Github: [Manta Repo](https://github.com/Manta-Network/Manta/issues/new)
