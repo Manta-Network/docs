@@ -4,7 +4,7 @@
 
 1. Hardware Requirement
 
-    a. If running on your own machine, hardware requirement, internet bandwidth
+    a. If running on your own machine, hardware requirement, internet bandwidth (we prefer collators with private node for better decentralization).
     
     ```jsx
     cpu:8 cores
@@ -14,7 +14,7 @@
     recommended region: EU or US
     ```
     
-    b. If running on AWS, instance type and the location guide
+    b. If running on AWS/Azure/GCP (or other cloud provider), please use an instance type with similar configuration to the following:
     
     ```jsx
     AWS instance: Ubuntu 20.04 (ami-id = ami-04505e74c0741db8d)
