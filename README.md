@@ -32,7 +32,7 @@ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
-### Translation
+## Translation
 
 For the translation, we're using the [Translate plugin data](https://docusaurus.io/docs/i18n/tutorial#translate-plugin-data)  
 
