@@ -34,6 +34,8 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### Translation
 
+For the translation, we're using the [Translate plugin data](https://docusaurus.io/docs/i18n/tutorial#translate-plugin-data)  
+
 Commands
 
 Run the Italian version
@@ -42,7 +44,7 @@ Run the Italian version
 yarn run start -- --locale it
 ```
 
-Translate the markdown under **i18n/it** for the italian lang. 
+Translate the markdown under **i18n/it** for the italian language.
 
 #### Add other languanges
 
