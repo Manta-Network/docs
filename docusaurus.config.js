@@ -33,6 +33,10 @@ module.exports = {
           href: 'https://github.com/Manta-Network',
           label: 'GitHub',
           position: 'left',
+        },
+        {
+          type: "localeDropdown",
+          position: "left"
         }
       ],
     },
@@ -113,4 +117,16 @@ module.exports = {
       crossorigin: 'anonymous',
     },
   ],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'it'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      it: {
+        label: 'Italiano',
+      }
+    }
+  }
 };

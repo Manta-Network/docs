@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Manta Network Documenti",
+    "description": "The title in the navbar"
+  },
+  "item.label.Manta Network": {
+    "message": "Manta Network",
+    "description": "Navbar item with label Manta Network"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
