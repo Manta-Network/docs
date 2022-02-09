@@ -9,7 +9,7 @@
     ```jsx
     cpu:8 cores
     memory: 32 GB of ram
-    disk space: 500 GB of disk space
+    disk space: 240 GB of disk space dedicated to the blockchain basepath
     bandwidth: 100 Mbps
     recommended region: EU or US
     ```
@@ -17,21 +17,23 @@
     b. If running on AWS/Azure/GCP (or other cloud provider), please use an instance type with similar configuration to the following:
     
     ```jsx
-    AWS instance: Ubuntu 20.04 (ami-id = ami-04505e74c0741db8d)
+    AWS instance: Ubuntu 20.04 (use the latest ubuntu server ami from canonical)
     disk space: r5ad.xlarge
-    recommended region: ca-central, eu-west, eu-central, eu-north, us-east
+    recommended region: EU or US
     ```
     
     NOTE: 
     
     - A calamari collator utilizes up to 27gb of ram on a 32gb system.
     - A calamari collator utilizes up to 25% of cpu on a 24 core system.
-    - A reliable internet connection as well as power supply which should remain uninterrupted to keep local machine **permanently online.**
+    - A reliable internet connection as well as uninterruptible power supply which should keep the machine and network **permanently online**.
 
 2. Bonding requirement: `400_000`KMA at least. Make sure your account has more than `400_000`KMA in your free balance.
 
     You can check candidacy bond on calamari mainnet.
     ![Candidacy Bond](images/candidacy-bond.png)
+
+3. Please fill this form [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform).
 
 ## Deployment
 
@@ -63,10 +65,12 @@ We recommend run on Ubuntu **`20.04 LTS`** :
     --port 30333 \
     --rpc-port 9933 \
     --rpc-methods=Unsafe \
-    --force-authoring \
     --collator \
-    -- \
-    --chain kusama.json
+    --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc \
+        /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt \
+        /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWMHdpUCCS9j8hvNLTV8PeqJ16KaVEjb5PVdYgAQUFUcCG \
+        /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu \
+        /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci
     ```
 
     Ensure you can see a line of log like this:
@@ -91,16 +95,19 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
     The `result` is the session keys.
 
-4. Once you get the session keys, you should restart the node and disable RPC port for security.
+4. Once you get the session keys, press `ctrl + c` to stop current node, and then restart the node and disable RPC port for security.
 
     ```bash
     manta --base-path your_db_path \
     --name your_collator_name \
     --chain calamari-genesis.json \
-    --port 30333
+    --port 30333 \
     --collator \
-    -- \
-    --chain kusama.json
+    --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc \
+        /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt \
+        /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWMHdpUCCS9j8hvNLTV8PeqJ16KaVEjb5PVdYgAQUFUcCG \
+        /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu \
+        /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci
     ```
 
     Ensure you can see a line of log like this:
@@ -130,7 +137,7 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
     Both params should be the same.
 
-7. Fill the [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform) form. If approved, Calamari council will submit a motion to promote you as a candidate.
+7. Ensure you have filled the form [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform). If approved, Calamari council will submit a motion to promote you as a candidate.
 > Tips: Candidate doesn’t mean your node is collator. For example, if current candidates spots is 3, and some other candidates occupy all spots, you’re the 4th, you have to wait until there’s a node is unregistered or more collator spots are open by council.
 
 8. After ~2 sessions(about `6` to `12` hours) pass, you will see blocks produced from your collator. 
@@ -194,7 +201,7 @@ We recommend run on Ubuntu **`20.04 LTS`** :
     docker rm your_container_name
     ```
 
-    Start a container again without `--rpc-methods=unsafe` and `--unsafe-rpc-external`.
+    Start a container again without params `--rpc-methods=unsafe` and `--unsafe-rpc-external`.
     ```bash
     docker run \
     -it \
@@ -227,40 +234,51 @@ Download the latets snapshot of calamari mainnet.
 
 `Snapshot Link`: [calamari-kusama.tgz](https://calamari-kusama.s3.eu-central-1.amazonaws.com/calamari-kusama.tgz)
 
+#### Extraction
+
+```bash
+tar -xvzf /path/to/calamari-kusama.tgz
+```
+
+There will be db folder under current path.
+
 #### Native
 
 Specify `snapshot_path` which is the snapshot path.
 
-    ```bash
-    manta --base-path snapshot_path \
-    --name your_collator_name \
-    --chain calamari-genesis.json \
-    --ws-port 9944 \
-    --port 30333
-    --collator \
-    -- \
-    --chain kusama.json
-    ```
+```bash
+manta --base-path snapshot_path \
+--name your_collator_name \
+--chain calamari-genesis.json \
+--ws-port 9944 \
+--port 30333 \
+--collator \
+--bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc \
+    /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt \
+    /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWMHdpUCCS9j8hvNLTV8PeqJ16KaVEjb5PVdYgAQUFUcCG \
+    /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu \
+    /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci
+```
 
 #### Docker
 
 Specify `snapshot_path` which is the snapshot path.
 
-    ```bash
-    docker run \
-    -it \
-    -p 9933:9933 \
-    -p 30333:30333 \
-    -v snapshot_path:/container_path \
-    mantanetwork/calamari:latest \
-    --base-path /container_path/data \
-    --keystore-path /container_path/keystore \
-    --name your_collator_name \
-    --rpc-cors all \
-    --collator \
-    --rpc-methods=unsafe \
-    --unsafe-rpc-external
-    ```
+```bash
+docker run \
+-it \
+-p 9933:9933 \
+-p 30333:30333 \
+-v snapshot_path:/container_path \
+mantanetwork/calamari:latest \
+--base-path /container_path/data \
+--keystore-path /container_path/keystore \
+--name your_collator_name \
+--rpc-cors all \
+--collator \
+--rpc-methods=unsafe \
+--unsafe-rpc-external
+```
 
 ## How to leave
 
