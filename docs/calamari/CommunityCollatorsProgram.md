@@ -30,7 +30,7 @@
 
 2. Bonding requirement: `400_000`KMA at least. Make sure your account has more than `400_000`KMA in your free balance.
 
-    You can check candidacy bond on calamari mainnet.
+    You can check candidacy bond on [calamari mainnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffalafel.calamari.systems%2F#/chainstate).
     ![Candidacy Bond](images/candidacy-bond.png)
 
 3. Please fill this form [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform).
