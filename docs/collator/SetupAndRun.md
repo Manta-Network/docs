@@ -1,53 +1,16 @@
-# 🧩  Community Collators Program
+#  🚄 Setup and run a Calamari collator
 
-## Requirements
-
-1. Hardware Requirement
-
-    a. If running on your own machine, hardware requirement, internet bandwidth (we prefer collators with private node for better decentralization).
-    
-    ```jsx
-    cpu:8 cores
-    memory: 32 GB of ram
-    disk space: 240 GB of disk space dedicated to the blockchain basepath
-    bandwidth: 100 Mbps
-    recommended region: EU or US
-    ```
-    
-    b. If running on AWS/Azure/GCP (or other cloud provider), please use an instance type with similar configuration to the following:
-    
-    ```jsx
-    AWS instance: Ubuntu 20.04 (use the latest ubuntu server ami from canonical)
-    disk space: r5ad.xlarge
-    recommended region: EU or US
-    ```
-    
-    NOTE: 
-    
-    - A calamari collator utilizes up to 27gb of ram on a 32gb system.
-    - A calamari collator utilizes up to 25% of cpu on a 24 core system.
-    - A reliable internet connection as well as uninterruptible power supply which should keep the machine and network **permanently online**.
-
-2. Bonding requirement: `400_000`KMA at least. Make sure your account has more than `400_000`KMA in your free balance.
-
-    You can check candidacy bond on [calamari mainnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffalafel.calamari.systems%2F#/chainstate).
-    ![Candidacy Bond](images/candidacy-bond.png)
-
-3. Please fill this form [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform).
-
-## Deployment
-
-### Tips:
+## Tips:
 
 1. The node can be deployed by native binary or docker, it depends on your preference.
     - [Native](#deploy-a-collator-on-ubuntu-using-native-binary)
     - [Docker](#deploy-a-collator-on-ubuntu-using-docker)
-2. We provide a recent snapshot which can shorten the time on catching up calamari mainnet.
+2. We provide a recent snapshot which can shorten the time on catching up calamari mainnet at the cost of trusting the snapshot data.
 
-### Deploy a collator on Ubuntu using native binary
+## Deploy a collator on Ubuntu using native binary
 
 We recommend run on Ubuntu **`20.04 LTS`** :
-1. Get latest manta binary from manta repo: [https://github.com/Manta-Network/Manta/releases](https://github.com/Manta-Network/Manta/releases)
+1. Get latest manta binary from manta repo: [https://github.com/Manta-Network/Manta/releases](https://github.com/Manta-Network/Manta/releases) or simply from [Calamari's Debian Repo](https://deb.manta.systems/)
     
 - Get calamari genesis file: [https://github.com/Manta-Network/Manta/blob/manta/genesis/calamari-genesis.json](https://github.com/Manta-Network/Manta/blob/manta/genesis/calamari-genesis.json)
 - Get relaychain(kusama) genesis: [https://github.com/paritytech/polkadot/blob/master/node/service/res/kusama.json](https://github.com/paritytech/polkadot/blob/master/node/service/res/kusama.json)
@@ -144,7 +107,7 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
     ![block-production](images/block-production.png)
 
-### Deploy a collator on Ubuntu using docker
+## Deploy a collator on Ubuntu using docker
 
 1. Get latest calamari image.
 
@@ -226,80 +189,42 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
 5. Follow the `step-6` from [Native](#deploy-a-collator-on-ubuntu-using-native-binary) to bind your session keys.
 
-### Start a collator from a snapshot
+## Start a collator from a snapshot (Optional)
 
-#### Download Snapshot
+Syncing a parachain database in the recommended way, by running a parachain node, can take a very long time because both the parachain and relay-chain databases need to be synced over the peer-to-peer, decentralized network. it is not uncommon for a full kusama relay-chain sync to require between one and two weeks to complete.
 
-Download the latets snapshot of calamari mainnet.
+To sync your node quickly, you may be able to use snapshots provided by manta and hosted on amazon s3.
 
-`Snapshot Link`: [calamari-kusama.tgz](https://calamari-kusama.s3.eu-central-1.amazonaws.com/calamari-kusama.tgz)
+The shell commands below assume (if you installed manta from the [ubuntu (.deb)](https://deb.manta.systems/) or [fedora (.rpm)](https://rpm.manta.systems/) package repositories, then this is the case):
 
-#### Extraction
+* the basepath is in the default location: `/var/lib/substrate`
+* the basepath is owned by the manta user
+* the download of the blockchain database archive is piped through tar for extraction in order to reduce the amount of disk space that would be required to hold both the archive (.tar.gz) file and the extracted database files.
 
+#### Sync calamari blockchain database
+
+1. delete calamari blockchain database folder
 ```bash
-tar -xvzf /path/to/calamari-kusama.tgz
+sudo -H -u manta rm -rf /var/lib/substrate/chains/calamari/db/full
 ```
-
-There will be db folder under current path.
-
-#### Native
-
-Specify `snapshot_path` which is the snapshot path.
-
+2. create calamari blockchain database folder
 ```bash
-manta --base-path snapshot_path \
---name your_collator_name \
---chain calamari-genesis.json \
---ws-port 9944 \
---port 30333 \
---collator \
---bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc \
-    /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt \
-    /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWMHdpUCCS9j8hvNLTV8PeqJ16KaVEjb5PVdYgAQUFUcCG \
-    /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu \
-    /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci
+sudo -H -u manta mkdir -p /var/lib/substrate/chains/calamari/db/full
 ```
-
-#### Docker
-
-Specify `snapshot_path` which is the snapshot path.
-
+3. download and extract calamari blockchain database folder
 ```bash
-docker run \
--it \
--p 9933:9933 \
--p 30333:30333 \
--v snapshot_path:/container_path \
-mantanetwork/calamari:latest \
---base-path /container_path/data \
---keystore-path /container_path/keystore \
---name your_collator_name \
---rpc-cors all \
---collator \
---rpc-methods=unsafe \
---unsafe-rpc-external
+curl https://calamari-kusama.s3.amazonaws.com/calamari.tar.gz | sudo -H -u manta tar -xzC /var/lib/substrate/chains/calamari/db/full
+sync kusama blockchain database
 ```
-
-## How to leave
-
-### Unregister collator by yourself
-
-This is pretty easy, just submit this extrinsic. `collatorSelection` → `leaveintent`.
-
-![unregister](images/leave-by-yourself.png)
-
-### Governance(Council)
-
-If your collator is underperformed, manta governance will propose a proposal to remove your collator from the collator set, but your reserved KMA will be returned.
-
-Propose a motion like this, `collatorSelection` → `removeCollator`.
-
-![unregister](images/leave-by-council.png)
-
-## Contact Manta Team
-
-If you have any problem on running node, just contact manta team.
-
-- Discord: [Collator Program](https://discord.com/channels/795390654628102165/936300292536942592)
-- Email: [Manta Devops Team](mailto:ops@manta.network)
-- Github: [Manta Repo](https://github.com/Manta-Network/Manta/issues/new)
+4. delete kusama blockchain database folder
+```
+sudo -H -u manta rm -rf /var/lib/substrate/polkadot/chains/ksmcc3/db/full
+```
+5. create kusama blockchain database folder
+```bash
+sudo -H -u manta mkdir -p /var/lib/substrate/polkadot/chains/ksmcc3/db/full
+```
+6. download and extract kusama blockchain database folder
+```bash
+curl https://calamari-kusama.s3.amazonaws.com/kusama.tar.gz | sudo -H -u manta tar 
+```

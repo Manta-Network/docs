@@ -19,14 +19,15 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Calamari',
+      label: 'Calamari (Manta\'s Canary Network)',
+      collapsible: true,
+      collapsed: false,
       items: [
         'calamari/Overview',
         'calamari/KMA',
         'calamari/Governance',
         'calamari/api',
         'calamari/CrowdloanClaim',
-        'calamari/CommunityCollatorsProgram',
       ],
     },
     {
@@ -47,5 +48,17 @@ module.exports = {
         'signer/HowToUseIt',
       ],
     },
+    {
+      type: 'category',
+      label: 'Collators',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'collator/CommunityCollatorProgram',
+        'collator/HowToApply',
+        'collator/SetupAndRun',
+        'collator/HowToLeave',
+      ]
+    }
   ],
 };
