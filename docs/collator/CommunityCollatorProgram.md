@@ -1,4 +1,4 @@
-# 🧩  Community Collators Program
+# 🧩  Community Collator Program
 
 We would like to invite you to join the community collator program, in order to make Manta/Calamari more decentralized and more secure. Currently, Calamari collators program's application is open.
 
