@@ -2,20 +2,28 @@
 
 ## Requirements
 
-1. Hardware Requirement
+1. Networking Requirements
 
-    a. If running on your own machine, hardware requirement, internet bandwidth (we prefer collators with private node for better decentralization).
+    ```jsx
+    internet-accessible ports: 30333 30334
+    bandwidth: 100 Mbit/s or higher
+    uptime: 100%
+    ```
+
+2. Node Requirements
+
+    a. Private Node Hardware (Preferred)
     
     ```jsx
     cpu:8 cores
     memory: 32 GB of ram
     disk space: 240 GB of disk space dedicated to the blockchain basepath
-    bandwidth: 100 Mbps
     recommended region: EU or US
     ```
     
-    b. If running on AWS/Azure/GCP (or other cloud provider), please use an instance type with similar configuration to the following:
+    b. Cloud Node (AWS/Azure/GCP etc.)
     
+    Please use an instance type with similar configuration to the following:
     ```jsx
     AWS instance: Ubuntu 20.04 (use the latest ubuntu server ami from canonical)
     disk space: r5ad.xlarge
@@ -28,12 +36,12 @@
     - A calamari collator utilizes up to 25% of cpu on a 24 core system.
     - A reliable internet connection as well as uninterruptible power supply which should keep the machine and network **permanently online**.
 
-2. Bonding requirement: `400_000`KMA at least. Make sure your account has more than `400_000`KMA in your free balance.
+3. Bonding requirement: `400_000`KMA at least. Make sure your account has more than `400_000`KMA in your free balance.
 
     You can check candidacy bond on [calamari mainnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffalafel.calamari.systems%2F#/chainstate).
     ![Candidacy Bond](images/candidacy-bond.png)
 
-3. Please fill this form [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform).
+4. Please fill this form [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform).
 
 ## Deployment
 
@@ -230,7 +238,7 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
 #### Download Snapshot
 
-Download the latets snapshot of calamari mainnet.
+Download the latest snapshot of calamari mainnet.
 
 `Snapshot Link`: [calamari-kusama.tgz](https://calamari-kusama.s3.eu-central-1.amazonaws.com/calamari-kusama.tgz)
 
