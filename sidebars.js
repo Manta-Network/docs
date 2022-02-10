@@ -33,6 +33,8 @@ module.exports = {
     {
       type: 'category',
       label: 'Dolphin',
+      collapsible: true,
+      collapsed: false,
       items: [
         'dolphin/Overview',
         'dolphin/DolphinPay',
