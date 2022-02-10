@@ -193,7 +193,11 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
 Syncing a parachain database in the recommended way, by running a parachain node, can take a very long time because both the parachain and relay-chain databases need to be synced over the peer-to-peer, decentralized network. it is not uncommon for a full kusama relay-chain sync to require between one and two weeks to complete.
 
+<<<<<<< HEAD:docs/collator/SetupAndRun.md
 To sync your node quickly, you may be able to use snapshots provided by manta and hosted on amazon s3.
+=======
+Download the latest snapshot of calamari mainnet.
+>>>>>>> origin/jamie/collator-program:docs/calamari/CommunityCollatorsProgram.md
 
 The shell commands below assume (if you installed manta from the [ubuntu (.deb)](https://deb.manta.systems/) or [fedora (.rpm)](https://rpm.manta.systems/) package repositories, then this is the case):
 
