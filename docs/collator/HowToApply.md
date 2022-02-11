@@ -4,21 +4,21 @@
 
 a. If running on your own machine, hardware requirement, internet bandwidth (we prefer collators with private node for better decentralization).
     
-    ```jsx
+```jsx
     cpu:8 cores
     memory: 32 GB of ram
     disk space: 500 GB of disk space dedicated to the blockchain basepath
     bandwidth: 100 Mbps+
     internet-accessible ports: 30333 30334
-    ```
+```
     
 b. If running on AWS/Azure/GCP (or other cloud provider), please use an instance type with similar configuration to the following:
     
-    ```jsx
+```jsx
     AWS instance: Ubuntu 20.04 (use the latest ubuntu server ami from canonical)
     disk space: r5ad.xlarge
     recommended region: EU or US
-    ```
+```
     
 Note: 
 - A calamari collator utilizes up to 27gb of ram on a 32gb system.
