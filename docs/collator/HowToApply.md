@@ -16,8 +16,7 @@ b. If running on AWS/Azure/GCP (or other cloud provider), please use an instance
     
 ```jsx
     AWS instance: Ubuntu 20.04 (use the latest ubuntu server ami from canonical)
-    disk space: r5ad.xlarge
-    recommended region: EU or US
+    recommended instance type: r5ad.xlarge
 ```
     
 Note: 
