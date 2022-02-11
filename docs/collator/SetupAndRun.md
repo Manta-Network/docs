@@ -17,8 +17,7 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
 2. Start a collator by the following command with RPC port enabled. Please specify `your_db_path`.
 
-    > If you want to start collator with snapshot, download snapshot from [here](#download-snapshot),
-    > follow this [section](#native) to deploy node with snapshot.
+    > If you want to start collator with snapshot, follow this [section](#start-a-collator-from-a-snapshot-optional) to deploy node with snapshot.
 
     ```bash
     manta --base-path your_db_path \    
@@ -117,8 +116,7 @@ We recommend run on Ubuntu **`20.04 LTS`** :
 
 2. Start a container. All your data will be save to `host_path`.
 
-    > If you want to start collator with snapshot, download snapshot from [here](#download-snapshot),
-    > follow this [section](#docker) to deploy node with snapshot.
+    > If you want to start collator with snapshot, follow `step-3` of the [section](#start-a-collator-from-a-snapshot-optional) to get and extract latest snapshot, and specify `container_path` as the db path that points to the snapshot.
     ```bash
     docker run \
     -it \
