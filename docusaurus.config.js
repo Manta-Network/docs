@@ -21,7 +21,7 @@ module.exports = {
       title: 'Manta Network Docs',
       logo: {
         alt: 'Manta Network Logo',
-        src: 'img/manta2.png',
+        src: 'img/manta-256x256.png',
       },
       items: [
         {
