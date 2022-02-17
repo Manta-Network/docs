@@ -6,7 +6,7 @@ DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecos
 
 ## Try Dolphin (version Boto)
 
-1. [Download *Signer*](https://github.com/Manta-Network/manta-signer/releases/latest), an native app to turbo-charge zero-knowledge proof generation.
+1. [Download *Signer*](https://github.com/Manta-Network/manta-signer/releases/latest), a native app to turbo-charge zero-knowledge proof generation.
    * macOS
    * Ubuntu/Debian
    * Windows
