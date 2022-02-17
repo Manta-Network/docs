@@ -2,56 +2,59 @@
 
 DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecosystem assets. Below is the overview of DolphinPay:
 
-![overview](./private-payment/DolphinPay.svg)
+![overview](assets/DolphinPay.svg)
 
 ## Try Dolphin (version Boto)
 
-1. Download *Signer*, an native app to turbo-charge zero-knowledge proof generation.
-   * [macOS](https://github.com/Manta-Network/manta-signer/releases/download/0.4.1/Manta.Signer_0.4.1_x64-macOS.dmg)
-   * Ubuntu/Debian: in testing phase, to be released
-   * Windows: in testing phase, to be released
+1. Download _Signer_, an native app to turbo-charge zero-knowledge proof generation.
 
-    For macOS, you might need to go to `System Preferences -> Security & Privacy -> General` to run the *Signer* (we are working to get the app approved by Apple, but it takes time).
+   - [macOS](https://github.com/Manta-Network/manta-signer/releases/download/0.4.1/Manta.Signer_0.4.1_x64-macOS.dmg)
+   - Ubuntu/Debian: in testing phase, to be released
+   - Windows: in testing phase, to be released
 
-   ![signer-security](./private-payment/allow-signer.png)
+   For macOS, you might need to go to `System Preferences -> Security & Privacy -> General` to run the _Signer_ (we are working to get the app approved by Apple, but it takes time).
 
-   When you first open *Signer*, it will ask you to create a password and to memorize a 12-word mnemonic.
+   ![signer-security](assets/allow-signer.png)
+
+   When you first open _Signer_, it will ask you to create a password and to memorize a 12-word mnemonic.
 
 2. Get Testnet Tokens:
-   * Join [Manta&Calamari's Discord](https://t.co/5BacMMLSCW)
-   * Go to the `#dolphin-faucet` channel
-   * Type `/gimme` and you will see a faucet options prompt:
 
-   ![faucet](./private-payment/faucet.png)
+   - Join [Manta&Calamari's Discord](https://t.co/5BacMMLSCW)
+   - Go to the `#dolphin-faucet` channel
+   - Type `/gimme` and you will see a faucet options prompt:
 
-   * You should first claim `DOL`, since you need `DOL` to pay gas fees. Then, you can claim your favorite testnet tokens like `BTC`, `ETH`, `DOT`, etc.
+   ![faucet](assets/faucet.png)
+
+   - You should first claim `DOL`, since you need `DOL` to pay gas fees. Then, you can claim your favorite testnet tokens like `BTC`, `ETH`, `DOT`, etc.
 
 3. Go to [Dolphin App](https://app.dolphin.manta.network/), try these hot baked Dolphin (version Boto) features:
-   * Convert public tokens to private:
 
-   ![to-private](./private-payment/to-private.png)
+   - Convert public tokens to private:
 
-   * You can see your private token balance by switching to `private` option:
+   ![to-private](assets/to-private.png)
 
-   ![private-transfer](./private-payment/private-transfer.png)
+   - You can see your private token balance by switching to `private` option:
 
-   * Send private tokens: private tokens are attached to a `One-Time Shielded Address`, which means before sending tokens to your friend, you need to get their one time shielded address through some secure communication channel, such as Signal or Telegram.
+   ![private-transfer](assets/private-transfer.png)
 
-   * To receive private tokens, get your own `One-Time Shielded Address` by going to `private -> receive -> new address`:
+   - Send private tokens: private tokens are attached to a `One-Time Shielded Address`, which means before sending tokens to your friend, you need to get their one time shielded address through some secure communication channel, such as Signal or Telegram.
 
-   ![shielded-address](./private-payment/shielded-address.png)
+   - To receive private tokens, get your own `One-Time Shielded Address` by going to `private -> receive -> new address`:
 
-   * Convert private tokens to public tokens:
+   ![shielded-address](assets/shielded-address.png)
 
-   ![to-public](./private-payment/to-public.png)
+   - Convert private tokens to public tokens:
+
+   ![to-public](assets/to-public.png)
 
 ## FAQ
 
-1. Why do I need a *Signer*? Can I trust it?
+1. Why do I need a _Signer_? Can I trust it?
 
    _*Signer* serves two purposes: first is to protect your spending secrets, and second is to use native code to build zero-knowledge proofs. The *Signer* runs locally and will never share your secrets. The *Signer* is [fully open source software](https://github.com/Manta-Network/manta-signer) and will be audited for security._
 
-2. Is the private token in *Signer* secure?
+2. Is the private token in _Signer_ secure?
 
    _All the secrets used to spend private tokens is stored locally in your computer and encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard). *Signer* will never send your secrets online._
 
@@ -61,9 +64,9 @@ DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecos
 
 4. Do I need to keep my one time shielded address confidential? Can someone know my one time shielded address track my transactions?
 
-    _One time shielded address is not *confidential*. Under the hood, MantaPay protocol uses UTXO model and the input and the output of a transfer transaction is shielded by zero-knowledge proofs. As a result, someone know your one time shielded address cannot track your any transactions._
+   _One time shielded address is not *confidential*. Under the hood, MantaPay protocol uses UTXO model and the input and the output of a transfer transaction is shielded by zero-knowledge proofs. As a result, someone know your one time shielded address cannot track your any transactions._
 
-5. How can I recover private tokens if I forgot my *Signer* password?
+5. How can I recover private tokens if I forgot my _Signer_ password?
 
    _We will add recover feature to the *Signer* soon._
 
