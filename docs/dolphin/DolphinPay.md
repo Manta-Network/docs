@@ -2,7 +2,7 @@
 
 DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecosystem assets. Below is the overview of DolphinPay:
 
-![overview](assets/DolphinPay.svg)
+![overview](/img/DolphinPay.svg)
 
 ## Try Dolphin (version Boto)
 
@@ -14,7 +14,7 @@ DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecos
 
    For macOS, you might need to go to `System Preferences -> Security & Privacy -> General` to run the _Signer_ (we are working to get the app approved by Apple, but it takes time).
 
-   ![signer-security](assets/allow-signer.png)
+   ![signer-security](/img/allow-signer.png)
 
    When you first open _Signer_, it will ask you to create a password and to memorize a 12-word mnemonic.
 
@@ -24,7 +24,7 @@ DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecos
    - Go to the `#dolphin-faucet` channel
    - Type `/gimme` and you will see a faucet options prompt:
 
-   ![faucet](assets/faucet.png)
+   ![faucet](/img/faucet.png)
 
    - You should first claim `DOL`, since you need `DOL` to pay gas fees. Then, you can claim your favorite testnet tokens like `BTC`, `ETH`, `DOT`, etc.
 
@@ -32,21 +32,21 @@ DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecos
 
    - Convert public tokens to private:
 
-   ![to-private](assets/to-private.png)
+   ![to-private](/img/to-private.png)
 
    - You can see your private token balance by switching to `private` option:
 
-   ![private-transfer](assets/private-transfer.png)
+   ![private-transfer](/img/private-transfer.png)
 
    - Send private tokens: private tokens are attached to a `One-Time Shielded Address`, which means before sending tokens to your friend, you need to get their one time shielded address through some secure communication channel, such as Signal or Telegram.
 
    - To receive private tokens, get your own `One-Time Shielded Address` by going to `private -> receive -> new address`:
 
-   ![shielded-address](assets/shielded-address.png)
+   ![shielded-address](/img/shielded-address.png)
 
    - Convert private tokens to public tokens:
 
-   ![to-public](assets/to-public.png)
+   ![to-public](/img/to-public.png)
 
 ## FAQ
 
