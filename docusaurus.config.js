@@ -9,7 +9,7 @@ module.exports = {
     'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
   url: 'https://docs.manta.network',
   baseUrl: '/',
-  trailingSlash: false,
+  trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
