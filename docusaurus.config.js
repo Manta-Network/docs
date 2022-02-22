@@ -7,7 +7,7 @@ module.exports = {
   title: 'Manta Network Technical Resources',
   tagline:
     'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
-  url: 'https://manta-docs.vercel.app',
+  url: 'https://docs.manta.network',
   baseUrl: '/',
   trailingSlash: true,
   onBrokenLinks: 'throw',
@@ -23,7 +23,7 @@ module.exports = {
       title: 'Manta Network Docs',
       logo: {
         alt: 'Manta Network Logo',
-        src: 'img/manta-256x256.png',
+        src: '/img/manta-256x256.png',
       },
       items: [
         {
