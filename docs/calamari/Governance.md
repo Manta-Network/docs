@@ -83,7 +83,7 @@ The actions you can take as a public token holder can all be executed by connect
 to a Calamari node using the [Polkadot.JS apps interface](https://polkadot.js.org/apps/).
 You can find our tutorial on how to vote in a referendum below:
 
-[![](https://img.youtube.com/vi/0MN9TbRlvhk/0.jpg)](https://www.youtube.com/watch?v=0MN9TbRlvhk))
+[![](https://img.youtube.com/vi/0MN9TbRlvhk/0.jpg)](https://www.youtube.com/watch?v=0MN9TbRlvhk)
 
 
 ## More Resources
