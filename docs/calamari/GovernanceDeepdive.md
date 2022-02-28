@@ -150,20 +150,22 @@ preimage deposit fee is transferred to the Treasury instead of being returned.
 
 The naming of functions here follows the Substrate invocation method, `[pallet].[extrinsic]`.
 
-| Extrinsic                                         | Who can invoke       |
-|---------------------------------------------------|----------------------|
-| `democracy.propose(preImageHash)`                 | Public Token Holders |
-| `democracy.externalPropose(preImageHash)`         | Council              |
-| `democracy.externalProposeDefault(preImageHash)`  | Council              |
-| `democracy.externalProposeMajority(preImageHash)` | Council              |
-| `democracy.emergencyCancel(index)`                | Technical Committee  |
-| `democracy.fastTrack(proposalHash)`               | Technical Committee  |
-| `democracy.vetoExternal(proposalHash)`            | Technical Committee  |
-| `democracy.cancelProposal(index)`                 | Technical Committee  |
-| `treasury.approveSpend(index)`                    | Council              |
-| `treasury.rejectSpend(index)`                     | Council              |
-| `treasury.proposeSpend()`                         | Treasury             |
-| `councilMembership.add()`                         | Council              |
-| `councilMembership.remove()`                      | Council              |
-| `councilMembership.swap()`                        | Council              |
+| Extrinsic                                         | Who can invoke       | Unfiltered*      	  |
+|---------------------------------------------------|----------------------|----------------------|
+| `democracy.notePreimage(call)`                 	| Public Token Holders |  Yes				  |
+| `democracy.propose(preImageHash)`                 | Public Token Holders |  No				  |
+| `democracy.externalPropose(preImageHash)`         | Council              |  No				  |
+| `democracy.externalProposeDefault(preImageHash)`  | Council              |  Yes				  |
+| `democracy.externalProposeMajority(preImageHash)` | Council              |  No				  |
+| `democracy.emergencyCancel(index)`                | Technical Committee  |  Yes				  |
+| `democracy.fastTrack(proposalHash)`               | Technical Committee  |  Yes				  |
+| `democracy.vetoExternal(proposalHash)`            | Technical Committee  |  Yes				  |
+| `democracy.cancelProposal(index)`                 | Technical Committee  |  Yes				  |
+| `treasury.approveSpend(index)`                    | Council              |  No				  |
+| `treasury.rejectSpend(index)`                     | Council              |  No				  |
+| `treasury.proposeSpend()`                         | Treasury             |  No				  |
+| `councilMembership.add()`                         | Council              |  Yes				  |
+| `councilMembership.remove()`                      | Council              |  Yes				  |
+| `councilMembership.swap()`                        | Council              |  Yes				  |
 
+* In order to reduce the system's complexity during the initial rollout, some extrinsics are filtered out, and will be enabled in future updates.
