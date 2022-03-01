@@ -81,10 +81,10 @@ to handle emergency situations where fast technical updates are needed.
 
 The actions you can take as a public token holder can all be executed by connecting 
 to a Calamari node using the [Polkadot.JS apps interface](https://polkadot.js.org/apps/).
-Polkadot has a lot of [nice video tutorials](https://wiki.polkadot.network/docs/learn-video-tutorials#getting-started) 
-on how to use the Apps UI.
+You can find our tutorial on how to vote in a referendum below:
 
-Screenshots coming soon!
+[![](https://img.youtube.com/vi/0MN9TbRlvhk/0.jpg)](https://www.youtube.com/watch?v=0MN9TbRlvhk)
+
 
 ## More Resources
 
@@ -92,7 +92,8 @@ If you'd like to learn more about governance in the Polkadot ecosystem, these li
 are a great place to start:
 
 - [Calamari Governance Deep Dive](GovernanceDeepdive.md)
-- [Polkadot docs](https://wiki.polkadot.network/docs/learn-governance) 
+- [Polkadot docs](https://wiki.polkadot.network/docs/learn-governance)
+- [Polkadot video tutorials](https://wiki.polkadot.network/docs/learn-video-tutorials#getting-started) 
 - [Polkadot blog on governance systems](https://polkadot.network/blog/polkadot-governance/)
 - [Polkadot blog on the governance of the Kusama rollout](https://polkadot.network/blog/kusama-rollout-and-governance/)
 - [Polkadot wiki "Participate in Democracy"](https://wiki.polkadot.network/docs/maintain-guides-democracy)
