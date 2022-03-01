@@ -1,10 +1,12 @@
 # 🛠  Calamari API
 
+API end points to connect to Calamari:
+
 ## Full Nodes
 
-- provided by Manta: `falafel.calamari.systems`
-- provided by third party: `calamari.api.onfinality.io`
+- provided by Manta: `wss://ws.calamari.systems`
+- provided by third party: `wss://calamari.api.onfinality.io`
 
-## Asset API
+## Asset API (Javascript)
 
 - KMA: `api.query.system.account(AccountId)`
