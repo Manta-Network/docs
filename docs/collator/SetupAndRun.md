@@ -292,7 +292,7 @@ set up ssl port forwarding
     listen 443 ssl;
     gzip off;
     location / {
-      proxy_pass http://192.168.0.196:9615;
+      proxy_pass http://127.0.0.1:9615;
       proxy_http_version 1.1;
       proxy_set_header X-Real-IP $remote_addr;
       proxy_set_header Host $host;
@@ -311,7 +311,7 @@ set up ssl port forwarding
     listen 443 ssl;
     gzip off;
     location / {
-      proxy_pass http://192.168.0.196:9616;
+      proxy_pass http://127.0.0.1:9616;
       proxy_http_version 1.1;
       proxy_set_header X-Real-IP $remote_addr;
       proxy_set_header Host $host;
