@@ -281,8 +281,8 @@ set up ssl port forwarding
     --dns-cloudflare \
     -dns-cloudflare-credentials .cloudflare-credentials \
     -d bob.example.com \
-    -d calamari.metrics.hostname.example.com \
-    -d kusama.metrics.hostname.example.com
+    -d calamari.metrics.bob.example.com \
+    -d kusama.metrics.bob.example.com
   ```
 
 - configure nginx `/etc/sites-enabled/example.com.conf`
