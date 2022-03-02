@@ -262,6 +262,70 @@ several ports are required to be accessible from outside of the node host in ord
 
 you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports 9615 and 9616 facilitate this, so these ports should be accessible both from your own prometheus/alertmanager server (which you should configure to alert you) and manta's [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (which is monitored by manta devops).
 
+it is good practice to serve your metrics over ssl (so that their authenticity can be validated). an easy way to accomplish this is to install certbot and nginx and configure a reverse proxy listening on port 443 and proxying requests to the metrics ports.
+
+the example below assumes:
+- you administer the domain **example.com**
+- its dns is managed by cloudflare
+- your nodes hostname is **bob**
+- your calamari node uses default ports
+- your internet gateway (router) port forwards 443/ssl traffic arriving on the routers wan interface to your collator node
+
+set up ssl port forwarding
+
+- request a cert
+  ```bash
+  #!/bin/bash
+  
+  sudo certbot certonly \
+    --dns-cloudflare \
+    -dns-cloudflare-credentials .cloudflare-credentials \
+    -d bob.example.com \
+    -d calamari.metrics.hostname.example.com \
+    -d kusama.metrics.hostname.example.com
+  ```
+
+- configure nginx `/etc/sites-enabled/example.com.conf`
+  ```
+  server {
+    server_name calamari.metrics.bob.example.com;
+    listen 443 ssl;
+    gzip off;
+    location / {
+      proxy_pass http://192.168.0.196:9615;
+      proxy_http_version 1.1;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+    }
+    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+  }
+
+  server {
+    server_name kusama.metrics.bob.example.com;
+    listen 443 ssl;
+    gzip off;
+    location / {
+      proxy_pass http://192.168.0.196:9616;
+      proxy_http_version 1.1;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+    }
+    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+  }
+  ```
+
 <Tabs groupId="os">
 <TabItem value="fedora" label="fedora">
 
