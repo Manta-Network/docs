@@ -119,13 +119,13 @@ module.exports = {
   ],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'it'],
+    locales: ['en', 'cn'],
     localeConfigs: {
       en: {
         label: 'English',
       },
-      it: {
-        label: 'Italiano',
+      cn: {
+        label: 'Chinese',
       }
     }
   }
