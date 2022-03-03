@@ -5,7 +5,8 @@ const katex = require('rehype-katex');
 
 module.exports = {
   title: 'Manta Network Technical Resources',
-  tagline: 'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
+  tagline:
+    'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
   url: 'https://docs.manta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -113,7 +114,8 @@ module.exports = {
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
-      integrity: 'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
+      integrity:
+        'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
       crossorigin: 'anonymous',
     },
   ],

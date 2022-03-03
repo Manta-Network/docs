@@ -13,14 +13,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: install dependencies
+      - name: install
         run: yarn install
+      - name: build
+        run: yarn build
       - name: deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_USER: gh-actions
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "${GIT_USER}"
-          echo "machine github.com login ${GIT_USER} password ${GITHUB_TOKEN}" > ~/.netrc
-          yarn deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
