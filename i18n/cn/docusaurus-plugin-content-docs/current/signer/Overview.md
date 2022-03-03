@@ -1,7 +1,7 @@
-# 📝 Overview
+# 📝 概览
 
-The **Signer** is a _secret manager_ and _zero-knowledge proof generator_ for use with the [Manta](../manta/Overview.md), [Calamari](../calamari/Overview.md), and [Dolphin](../dolphin/Overview.md) networks.
+ ****Signer**** 是 [Manta](../manta/Overview.md)、[Calamari](../calamari/Overview.md) 和 [Dolphin](../dolphin/Overview.md) 的*_零知识证明生成器_*和*_隐私管理工具_*。
 
-The Manta protocols are privacy-first protocols, and zero-knowledge proofs are integral to the design and functionality of these protocols. The secrets that _only you_ know about represent your identity on the blockchain. The **Signer** will be the computational extention of those secrets, being able to construct proofs based on them. Then, you can send those proofs to the blockchain to update the ledger with the changes _only you_ can make to it.
+Manta 的协议坚持隐私至上，零知识证明是设计协议和产品功能时不可或缺的一部分——在区块链上，你自己的隐私 *_只有你自己_* 知道。 ****Signer**** 是你这些隐私的计算延伸，并在其上构建证明。于是，你可以将这些证明发送至区块链上来根据 *_你自己_* 的状态更新账本。
 
-To get a **Signer** download the [latest release](https://github.com/Manta-Network/manta-signer/releases/latest).
+下载最新版本****Signer**** (https://github.com/Manta-Network/manta-signer/releases/latest)。

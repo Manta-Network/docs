@@ -1,198 +1,219 @@
-# 🤿 Private Payment
+# 🤿 隐私支付
 
-Manta is all about bringing privacy to the wider blockchain space, and an important part of making privacy practical to use is the construction of simple and powerful privacy primitives. The first and most powerful primitive we are building is _Private Payment_, more specifcally, a _multi-asset decentralized anonymous payment protocol_.
+Manta 的愿景是为更广泛的区块链行业带来隐私保护，而让隐私变成现实中的应用一个很重要的部分就是构建简单实用的产品。我们早期构建的两个产品之一是 *_隐私支付_* 更具体地讲, *_一个多资产去中心化匿名支付协议_。*
 
-## How Does It Work?
+## 工作原理
 
-We recently posted a tech talk that explains the protocol in some detail:
+我们近期发布了一期详细介绍隐私支付协议的视频:
 
 [![Tech Talk #1](./private-payment/tech-talk-1-thumbnail.jpg)](https://www.youtube.com/watch?v=qmRChiIDl2A)
 
-You can follow along with [this video](https://www.youtube.com/watch?v=qmRChiIDl2A), [download the slides](./private-payment/tech-talk-1-slides.pdf), and/or keep reading below to get an overview and some technical details about how _Private Payment_ works.
+你可以点击观看 [视频](https://www.youtube.com/watch?v=qmRChiIDl2A), [下载ppt](./private-payment/tech-talk-1-slides.pdf), 或者继续阅读接下来的内容，了解更多关于 *_隐私支付_* 的工作原理。
 
-Currently, the formal specification for _Private Payment_ is still closed source, but stay tuned for its public release in the near future!
+目前， *_隐私支付_* 的 formal specification 尚未开源, 敬请期待我们在不久未来的发布!
 
-## Public Ledgers
+## 公共帐本
 
-Most decentralized systems of digital money use what are called _public ledgers_ to keep track of the flow of money. Public ledgers store the current state of every participant's balances, and whenever someone tries to spend from their account, the blockchain will come to consensus on whether this transaction is valid and updates the state. However, to validate a transaction the public ledger needs to know which sender and receiver are participating, and what amount is being transfered. We would like to find a way to avoid this and preserve the privacy of all parties involved in transactions and keep amounts private as well.
+大多数加密货币的去中心化系统使用 *_公共账本_* 来追踪资产的去向。 公共账本存储每位用户余额的当前状态，一旦他们想要花费账户的余额，区块链会就这笔转账是否有效达成共识，继而更新账户状态。然而，想要验证公共账本上的一笔交易需要知道发送者和接受者以及转账的金额信息。我们希望找到一种方式来避免这种信息泄露，保护交易参与者的信息，并隐藏金额。 
 
-## Properties of a Decentralized Anonymous Payment Protocol
+## 去中心化匿名支付协议的特性
 
-When designing a _private ledger_, we want the following two properties to hold:
+在设计一个 *_隐私账本_的时候，我们希望它可以具有以下特征：*
 
-1. A transaction cannot modify the total supply of an asset. Only the ownership, the _exclusive_ right to spend the asset in the future, can change.
-2. Reading the ledger cannot reveal any information about a transaction or existing user balances
+1. 一笔交易不能改变一种资产的总供应量。只有未来能够花费资产的 *_所有权_*会改变*。*
 
-These two properties seem to be at odds with each other since we want to verify that the total supply remains fixed but we must do so without learning what the underlying transaction is!
+2. 账本读取不会泄漏交易或者现有用户的任何信息。
 
-Fortunately, some new cryptographic protocols can save the day, namely zkSNARKs, _zero-knowledge Succinct Non-interactive ARguments of Knowledge_. We will see later which role they play in privatizing the payment protocol.
+这两种特性看似互相矛盾，一方面我们希望验证某种资产总量保持不变，另一方面我们又不希望获取到交易的具体信息。
 
-## Overview
+幸运的是，一些密码学协议找到了解决办法—— zkSNARKs, *_简洁非交互式零知识证明_*. 我们之后会看到它们在隐私支付协议中起到了什么样的作用。
 
-We will first describe a simplified version of the protocol, following two imaginary participants `Alice` and `Bob`, and we want to find a way to have `Alice` send an asset to `Bob` using a private `Ledger`. We will describe the protocol in the following steps:
+## 概览
 
-1. [Send and Receive](#send-and-receive)
-2. [Shared Secrets](#shared-secrets)
-3. [Encrypt and Decrypt](#encrypt-and-decrypt)
-4. [Ownership Certificates](#ownership-certificates)
-5. [Zero-Knowledge Transfer Proof](#zero-knowledge-transfer-proof)
+我们会先描述一个相对简化的协议版本，假设有两个任务`Alice` 和 `Bob`, 我们希望能找到一种方法让`Alice` 用一个隐私 `账本`发送资产给 `Bob` 。我们会按照接下来的几个步骤来进行演示：
 
-This discussion is not entirely self-contained but we will attempt to explain cryptographic protocols only as black boxes by their interfaces and security guarantees. Further reading on each of the subjects below is encouraged.
+1. [发送和接收](#send-and-receive)
 
-### Participants (in detail)
+2. [共享密钥](#shared-secrets)
 
-- `Alice` (_sender_): a participant that already has access to some assets and is guaranteed by the `Ledger` the ability to spen them.
-- `Bob` (_receiver_): a participant that can be uniquely identified by other _senders_ and will be guaranteed the ability to spend received assets in the future.
-- `Ledger`: represents all public information (the _state_) and the network of validators (_blockchain_) which come to consensus on the private transfer of ownership of assets between _senders_ and _receivers_.
+3. [加密和解密](#encrypt-and-decrypt)
 
-## Send and Receive
+4. [所有权证书](#ownership-certificates)
 
-For `Alice` to send her assets to `Bob`, she communicates with the `Ledger` as an intermediary. The `Ledger` operates _asynchronously_ and is distributed across the internet, and so, many computers can access the `Ledger` and send and receive messages to and from the network. `Alice` will send a transfer message to the `Ledger` and if accepted, it will be used to update the state of the `Ledger`, and the changes are propagated to all of the network. `Bob` will query the network, asking for new updates to the state. If there is a new `Ledger` state, he will download it and analyze it to see if he has received any new assets. Here are those two protocols in detail: 
+5. [零知识转账证明](#zero-knowledge-transfer-proof)
 
-### Send
+这个讨论并没有完整独立地描述整个协议，我们将尝试通过黑盒的方式来解释一些密码学的协议的接口和安全性保障。建议大家对以下的每个话题都进行更深入的了解。
 
-`Alice` begins by constructing a special number called $\textsf{SK}_\textsf{E}$, the _ephemeral secret key_, which she will use to represent this unique transfer. She constructs it by taking `Bob`'s _pubic key_, $\textsf{PK}_\textsf{B}$, some public data from the `Ledger`, and some randomness:
+### 参与者 (详细)
+
+- `Alice` (*_发送者_*): 已经获得了某种资产的所有权， 由 `账本` 保证她可以花费。
+- `Bob` (*_接收者_*): 可以被其他 *_发送者_识别，*未来可以花费所接受到的资产 。
+- `账本: 代表所有公开信息 ( *_状态_*) 和验证者网络 (*_区块链_*) ，验证者可以就 *_发送者_和* *_接收者_*之间发生的隐私转账中的所有权转移达成共识*。*
+
+## 发送和接收
+
+当`Alice` 想要转账给 `Bob`, 她使用 `账本` 作为中介。`账本` 进行 *_异步处理_* 并被传播于整个网络。因此，很多计算机都可以获取 `账本`，并向整个网络发送信息或者从整个网络获取信息。 `Alice`会向`账本`发送一条转账信息，如果被接收，将在 `账本`中更新状态, 变动会向全网进行广播。 `Bob` 会向网络请求最新的状态。如果有新的`账本`状态，他将下载并分析是否收到了新的资产，以下为两个协议的详情:
+
+### 发送
+
+`Alice` 一开始需要构建一个特殊的数字叫作$\textsf{SK}_\textsf{E}$, *_临时密钥_*, 可以用来代表本次独有的转账。这个是通过 `Bob`的 *_公钥_*, $\textsf{PK}_\textsf{B}$, 以及`账本` 中一部分公开数据，还有一些随机数来构建的:
 
 ![Send Protocol](./private-payment/send-protocol.png)
 
-This is built using a _commitment scheme_ which commits to $\Lambda$ (the ledger checkpoint), and $\textsf{PK}_\textsf{B}$ using $\tau$ as the randomness (A.K.A blinder, or trapdoor):
+*_承诺方案（commitment scheme）_ 通过* $\textsf{PK}_\textsf{B}$ 将 $\tau$ 作为其随机数（A.K.A blinder，trapdoor）确保 $\Lambda$（账本检查点）隐私安全：
 
 $$
+
 \textsf{SK}_\textsf{E} := \textsf{COM}(\Lambda || \textsf{PK}_\textsf{B}, \tau)
+
 $$
 
-This ephemeral key is only used once. `Alice` will have to prove later that she constructed $\textsf{SK}_\textsf{E}$ properly, called _opening_ the commitment. The commitment is _binding_ which means that `Alice` will not be able to change her mind and find another public key or ledger checkpoint to construct the same ephemeral key. The trapdoor $\tau$ gives us the _hiding_ property which means that even if someone knows $\Lambda$ and $\textsf{PK}_\textsf{B}$ they won't be able to predict what $\textsf{SK}_\textsf{E}$ is without knowing $\tau$.
+临时密钥只会用一次。 `Alice` 之后需要证明她正确地构建了$\textsf{SK}_\textsf{E}$, 也叫 *_开启_* 了承诺。承诺被*_绑定_意味着* `Alice` 不能改变主意，找到另外一个公钥或账本检查点来构建同样的临时密钥。Trapdoor $\tau$ 给予我们 *_可隐藏_*的特性，即便有人知道 $\Lambda$ 和 $\textsf{PK}_\textsf{B}$ ，他们也不能在不知道$\tau$的情况下预测 $\textsf{SK}_\textsf{E}$ 是什么。
 
-`Alice` now uses the ephemeral key, $\textsf{SK}_\textsf{E}$, her own secret key $\textsf{SK}_\textsf{A}$, and the asset that she received from the `Ledger` earlier, to build a _private asset_. We will see as we go along how exactly the private asset is built.
+`Alice` 现在使用临时密钥 $\textsf{SK}_\textsf{E}$, 她自己的密钥 $\textsf{SK}_\textsf{A}$, 以及之前她从`账本` 所收到的资产，来构建一笔*_隐私资产_。*我们接下来来看下隐私资产具体是如何构造的。 
 
-### Receive
+### 接收
 
-Once `Alice` finishes her communication with the `Ledger` and the `Ledger` accepts her private asset, it will store that private asset forever, waiting for someone to claim it. `Bob` wishes to claim it, so he goes to the `Ledger` and asks for all of the newest private assets since his last query. The `Ledger` will send them to `Bob` and he will use his secret key $\textsf{SK}_\textsf{B}$ to scan through the private assets to find the ones he now owns. 
+一旦`Alice` 完成了与`账本` 之间的通讯，`账本`接受了她的隐私资产，将会永久地储存隐私资产，并等待有人来领取。`Bob` 希望来领取，于是他向 `账本` 请求了所有最新的隐私资产。`账本` 将这些信息发送给`Bob` ，他可以用他的密钥 $\textsf{SK}_\textsf{B}$ 来对隐私资产进行扫描，找到属于他的那笔。
 
 ![Receive Protocol](./private-payment/receive-protocol.png)
 
-The secret key that `Bob` is using for this scanning process must be the one that _derived_ the public key $\textsf{PK}_\textsf{B}$ which `Alice` used to build the private asset. This _key derivation_ must be irreversible so that no one can discover (in a reasonable amount of time) what $\textsf{SK}_\textsf{B}$ is just from the knowledge of $\textsf{PK}_\textsf{B}$.
+ `Bob` 在扫描过程中使用的密钥必须是从`Alice`构建隐私资产所用的公钥$\textsf{PK}_\textsf{B}$所*_派生出来的_。* 这个 *_密钥派生_* 的过程必须是不可逆的，这样就没人可以发现 $\textsf{SK}_\textsf{B}$ 是来自于 $\textsf{PK}_\textsf{B}$的知识。
 
-**NOTE**: Because the `Ledger` will be around for a long time, `Bob` can wait as long as he likes to receive the new private assets.
+- ***请注意***: 因为 `账本` 会存在相当长的一段时间，`Bob` 可以等到任何想要领取的时候操作。
 
-## Shared Secrets
+## 共享密钥
 
-But how will `Bob` be able to claim is new assets? How will he be able to spend them in the future?
+可 `Bob`怎么领取他的新资产？未来他如何花费这些资产？
 
-One of the most important cryptographic tools that we can take advantage of here is the _shared secret_. Essentially, we want to find a way to take some information and wrap it up so that only two people have access to it. Getting someone to share a secret with themselves is easy, they just don't tell anyone. But how do we tell someone else our secrets so that only the two of you ever know what it is?
+我们可以用到的一个很重要的密码学工具是 *_共享密钥_。*本质上，我们向要找到一种方法来将信息包裹起来，只有两个人有解开的方法。 让某个人保守秘密是很容易的，只要他们不告诉其他人就可以了。但是如何才能将机密告诉另外一个人，而且只有你们两个人知道呢？
 
-One of the most common ways to do this is with the _Diffie-Hellman Key Exchange_ protocol. In this protocol, we take an operation that we assume is impossible to reverse (in a reasonable amount of time), let's call it $\textsf{bind}$, and a public constant $G$ that everyone agrees on. We choose $\textsf{bind}$ and $G$ so that it has the following property:
+最常见的方法之一是使用 _*Diffie-Hellman Key Exchange*_ 协议。 在这个协议中，我们采取了一个假设不可能逆转的操作（在有效时间内），我们称之为 $\textsf{bind}$，以及一个所有人都同意的公共常量 $G$。 我们令 $\textsf{bind}$ 和 $G$ 具有以下属性：
 
 $$
+
 \textsf{bind}(y, \textsf{bind}(x, G)) = \textsf{bind}(x, \textsf{bind}(y, G))
-$$
-
-Let's call $x$ and $y$ secret keys and call $X := \textsf{bind}(x, G)$ and $Y := \textsf{bind}(y, G)$ public keys. Since $\textsf{bind}$ is irreversible, we can leave $X$ and $Y$ out in the open for anyone to see, or even if we want to be discrete we can still send $X$ or $Y$ to only a particular person, but we don't have to worry that someone can reverse engineer our keys if they get their hands on it.
-
-Because the $\textsf{bind}$ function has the property above, we actually have our shared secret:
 
 $$
+
+我们通过$x$ 和 $y$ 密钥并调用 $X := \textsf{bind}(x, G)$ 和 $Y := \textsf{bind}(y, G)$ 方法生成公钥。 由于 $\textsf{bind}$ 是不可逆的，我们可以将公钥 $X$ 和 $Y$ 公开提供给任何人，或者即使我们想要加密，我们仍然可以发送 $X$ 或 $Y$ 给特定的人，且不必担心有人可以对我们的密钥进行逆向工程。
+
+因为 $\textsf{bind}$ 函数具有上述属性，所以信息加密方法为：
+
+$$
+
 S := \textsf{bind}(y, X) = \textsf{bind}(x, Y)
+
 $$
 
-So if you share your public key $X$ with someone and get their public key $Y$, then you both can compute the shared secret, $S$. In the rest of the protocol, `Alice` and `Bob` will share several secrets on their way to performing a successful transfer.
+因此，如果您与某人共享您的公钥 $X$ 并获得他们的公钥 $Y$，那么你们俩都可以进行传输加密 $S$。 通过以上方法，`Alice` 和 `Bob`成功传输了几条加密信息。
 
-## Encrypt and Decrypt
+## 加密和解密
 
-The first place that `Alice` and `Bob` use _shared secrets_ is to share _encryption_ keys. These keys are used to send the asset value that we want to transfer in a secret message from `Alice` to `Bob`. This is called the _in-band secret distribution_.
+`Alice` 和 `Bob`使用 *_共享密钥* *_*加密方式的第一个步是共享 *_加密*公钥 *_*。 这些密钥用于将我们想要在秘密消息中传输的资产价值从`Alice` 发送给`Bob`。 这称为*_线上传递_*。
 
-### Encryption
+### 加密
 
-For `Alice` to send the asset value to `Bob`, she uses a _hybrid public-key encryption scheme_ to _encrypt_ the asset. She does this by taking `Bob`'s public key $\textsf{PK}_\textsf{B}$ and the _ephemeral secret key_ for this particular transaction $\textsf{SK}_\textsf{E}$ and performing a Diffie-Hellman Key Exchange (in this case using elliptic curves to define the $\textsf{bind}$ function), to compute a shared encryption key $K$. 
+为了让`Alice`将资产发送给`Bob`，她使用_*混合公钥加密方案*_来_*加密*_资产。 她通过获取`Bob`的公钥 $\textsf{PK}*\textsf{B}$* 和此特定交易 *$\textsf{SK}*\textsf{E}$ 的*_临时密钥_* 并执行 Diffie-Hellman 交换（在这种情况下使用椭圆曲线定义 $\textsf{bind}$ 函数），以计算共享加密密钥 $K$。
 
-<!-- ![Encryption](./private-payment/encryption.png) -->
+*<!-- ![Encryption](./private-payment/encryption.png) -->*
+
 ![Encryption (Full)](./private-payment/encryption-full.png)
 
-`Alice` then uses the _Blake2s_ key derivation function to produce another key $K^*$ which will be the right size for the standard _AES-GCM_ encryption scheme with message authentication. `Alice` encrypts the asset with $K^*$ and appends the derived public ephemeral key $\textsf{PK}_\textsf{E}$ to the ciphertext message. This forms part of the private asset that `Alice` sends to the `Ledger`.
+`Alice`然后使用 *_Blake2s_*密钥派生函数生成另一个密钥 $K^*$，*这是标准*_AES-GCM_*具有消息身份验证的加密方案的正确方式*。* `Alice`使用 *$K^*$ 加密资产，并将派生的公共临时密钥 $\textsf{PK}_\textsf{E}$ 附加到密文消息中。 这一步骤构成了`Alice`发送给`账本`的完整私有资产。
 
-### Decryption
+### 解密
 
-`Bob` will then download the new private assets from the `Ledger`, and to see if any of the new assets are his to spend, he will try to decrypt them by building the same shared secrets `Alice` used for encryption.
+收到加密资产后，`Bob`将从`账本`下载发给他的私有资产，并查看是否有任何新资产是他可以使用的，他将尝试通过`Alice`的公钥来解密它们。
 
-<!-- ![Decryption](./private-payment/decryption.png) -->
+*<!-- ![Decryption](./private-payment/decryption.png) -->*
+
 ![Decryption (Full)](./private-payment/decryption-full.png)
 
-In this case, `Bob` uses his secret key, $\textsf{SK}_\textsf{B}$, and the public ephemeral key attached to the private asset, $\textsf{PK}_\textsf{E}$, to build the Diffie-Hellman shared secret, $K$, then using the same _Blake2s_ function to derive $K^*$, and then performing _AES-GCM_ decryption. The decryption will check that the message authentication can be reconstructed properly and if the key $K^*$ was different than the one used to build the message, it will fail, and `Bob` will know the asset is not his. If the encryption succeeded, then `Bob` will store the private asset on his local computer to spend later.
+在这种情况下，`Bob`使用他的密钥 $\textsf{SK}*\textsf{B}$* 和附加到私有资产的公共临时密钥 $\textsf{PK}\textsf{E}$ ，构建 Diffie-Hellman 共享密钥 $K$，然后使用相同的 *_Blake2s_* 函数推导出 $K^*$，然后执行 _AES-GCM_解密。* 解密将检查消息身份验证是否可以正确重建，如果密钥 $K^$ 与用于构建消息的密钥不同，它将失败，并且`Bob`将知道资产不是他的。 如果加密成功，那么 `Bob`会获得私有资产。
 
-## Ownership Certificates
+## 确权
 
-Now we know how `Alice` can communicate to `Bob` the amount of value she has sent to him. But still, the `Ledger` must only accept asset transfers which can provably transfer the _future spending power_ from the sender to the receiver, all the while, preserving the privacy of all parties involved. Just because `Alice` sends `Bob` an encrypted asset does not mean she cannot send it again, or send it to someone else. We need a way to keep track of who owns what and be able to take away that power once someone spends an asset.
+现在我们知道`Alice`如何向`Bob`发送资产了。 但是，`账本`必须只接受可以证明发送的资产是*_未来可消费的_* ，同时保护所有相关方的隐私。 如果仅是`Alice`向`Bob`发送加密资产并不意味着她不能再次发送它，或者将它发送给其他人。 我们需要一种方法来跟踪谁拥有什么，并能够在有人花费资产后夺走这种权力。
 
-To satisfy this constraint, `Alice` will generate two kinds of certificates, _UTXOs_ and _void numbers_.
+为了满足这个约束， `Alice` 会生成两种证书，*_UTXOs_* 和 *_void numbers_。*
 
-A _UTXO_ or _Unspent Transation Output_, is a certificate for the future spending of one of the receivers of a transaction. It is used in some public ledger protocols in the following way:
+*_UTXO_*或 *_Unspent Transation Output_*是接收者未来可以花费的证书。 它以下列方式在公共账本协议中使用：
 
-1. Prove that `Alice` owns one of the current UTXOs
-2. Drop `Alice`'s UTXO from the `Ledger`
-3. Create a new UTXO for `Bob`
+1.证明`Alice` 拥有当前UTXO
 
-In this way, the current set of UTXOs represents all of the users which have some amount of assets and how much they all own. For `Alice` to spend her asset, she needs to present a certificate $\textsf{CM}_\textsf{A}$ which represents that `Alice` was a receiver in a past transaction. She will need to prove that the `Ledger` has seen this UTXO before.
+2.从`账本`中删除`Alice`的UTXO
+
+3.为`Bob`创建一个新的UTXO
+
+通过这种方式，当前的 UTXO 集合代表了所有拥有一定数量资产以及他们的用户。 为了让`Alice` 花费她的资产，她需要出示一个证明$\textsf{CM}_\textsf{A}$，它代表`Alice` 是过去交易的接收者。 她需要证明 `账本` 以前见过这个 UTXO。
 
 ![Ownership Certificates](./private-payment/utxo-explanation.png)
 
-To transfer the asset to `Bob`, `Alice` generates a new UTXO, called $\textsf{CM}_\textsf{B}$, on `Bob`'s behalf. `Alice` will also need to revoke her old UTXO somehow. She does this by generating a _void number_, $\textsf{VN}_\textsf{A}$, which is tied to her $\textsf{CM}_\textsf{A}$ in such a way that:
+要将资产转移给`Bob`，`Alice` 会为`Bob` 生成一个名为 $\textsf{CM}*\textsf{B}$* 的新 UTXO*。* `Alice`需要以某种方式撤销她的旧 UTXO*。* 她通过生成一个  *_void number_* $\textsf{VN}\textsf{A}$ 来做到这一点，这与她的 $\textsf{CM}_\textsf{A}$ 相关联，其方式如下：
 
-1. The same $\textsf{CM}_\textsf{A}$ will always generate the same $\textsf{VN}_\textsf{A}$.
-2. Different $\textsf{CM}$ generate different $\textsf{VN}$.
-3. No one can tell which $\textsf{CM}_\textsf{A}$ the $\textsf{VN}_\textsf{A}$ belongs to.
-4. Only `Alice` can construct $\textsf{VN}_\textsf{A}$.
+1.相同的 $\textsf{CM}*\textsf{A}$* 将始终生成相同的 *$\textsf{VN}*\textsf{A}$。
 
-Let's see how $\textsf{CM}$ and $\textsf{VN}$ are constructed.
+2.不同的$\textsf{CM}$生成不同的$\textsf{VN}$。
 
-### Receiver Certificates
+3.没有人知道 $\textsf{VN}*\*textsf{A}$ 属于哪一个 $\textsf{CM}\textsf{A}$。
 
-In order for `Alice` to create $\textsf{CM}_\textsf{B}$ on `Bob`'s behalf, she computes another shared secret, called $\textsf{T}_\textsf{B}$, the trapdoor, to the UTXO commitment $\textsf{CM}_\textsf{B}$.
+4.只有`Alice`可以构造$\textsf{VN}_\textsf{A}$。
+
+让我们看看 $\textsf{CM}$ 和 $\textsf{VN}$ 是如何构造的。
+
+### 接收证书
+
+为了让`Alice` 能够以`Bob`的名义创建 $\textsf{CM}\textsf{B}$*，*她需要计算了另一个共享密钥，称为 $\textsf{T}\textsf{B}$ trapdoor， 并到 UTXO 发布 $\textsf{CM}_\textsf{B}$承诺证明。
 
 ![Receiver UTXO](./private-payment/utxo-construction.png)
 
-The commitment consists of the asset amount that `Alice` wants to transfer and the shared trapdoor. The trapdoor is the random part of the commitment that ensures the _hiding_ property. The _binding_ property of the commitment ensures that `Alice` can't put some fake information into the commitment and then `Bob` ends up with some assets he can't spend.
+承诺是由`Alice`想要转移的资产数量和trapdoor组成。 trapdoor是保证*_隐藏_*属性的随机部分。 承诺的*_binding_*  属性确保`Alice`不能将一些虚假信息放入承诺中，防止`Bob`最终得到一些他无法花费的资产。
 
-### Sender Certificates
+### 发送方证明
 
-For `Alice` to generate her void number certificate, she takes the trapdoor, $\textsf{T}_\textsf{A}$ that was used to build her $\textsf{CM}_\textsf{A}$, and commits to her secret key $\textsf{SK}_\textsf{A}$.
+为让`Alice`生成她的void number证明，需使用她的trapdoor $\textsf{T}\textsf{A}$构建$\textsf{CM}\textsf{A}$ ，并提交她的密钥 $\textsf{SK}_\textsf{A}$。
 
 ![Sender UTXO and Void Number](./private-payment/void-number-construction.png)
 
-The void number $\textsf{VN}_\textsf{A}$ is tied to the commitment because it uses the same trapdoor, and only `Alice` can perform this computation because $\textsf{SK}_\textsf{A}$ is only known to her.
+$\textsf{VN}\textsf{A}$ 之所以与void number证明相关，因为它使用相同的 trapdoor，并且只有 `Alice`可以执行此计算，因为 $\textsf{SK}\textsf{A} $只有她知道。
 
-In order to prove that her UTXO is already on the `Ledger`, `Alice` can create a _Merkle-Proof_, $\pi_\textsf{A}$, attesting to this fact.
+为了证明她的 UTXO 已经在`账本`上，`Alice` 可以创建一个*_Merkle-Proof_*，$\pi_\textsf{A}$，证明这一事实。
 
-## Zero-Knowledge Transfer Proof
+## 零知识转账证明 
 
-But `Alice` has done all of these computations in secret, involving a lot of secret information which would compromise her account if she shared with anyone. How can the `Ledger` trust that she did this computation fairly?
+但Alice` 已经秘密完成了所有这些计算，并涉及大量秘密信息，如果她与任何人分享，这些信息将危及她的账户。 `账本`怎么能相信她诚实地进行这个计算呢？
 
-`Alice` can take advantage of zkSNARKs, _zero-knowledge Succinct Non-interactive Arguments of Knowledge_ to do the computation entirely on her own machine. zkSNARKs work like this:
+`Alice` 可以利用 zkSNARKs，*_简洁非交互式零知识证明_*在自己的机器上进行完全的运算，zkSNARKs 的工作原理如下：
 
-1. `Alice` and the `Ledger` agree in public on some algorithm to check (ex: some computer program to execute or the protocol above). They agree on which variables in the algorithm are secret and which are public.
-2. `Alice` performs the computation of that algorithm on her own machine with her own chosen secret input and public input. 
-3. Using the output of the computation, `Alice` builds a proof $\pi$ that the computation was done correctly (because of succinctness, this is a very small file compared to the size of the algorithm)
-4. `Alice` sends $\pi$ to the `Ledger` and it can check quickly if the computation that produced this file was in-fact the agreed-upon algorithm in which case he accepts or rejects.
+1. `Alice` 和 `账本` 就验证的某种算法公开达成共识，他们共同决定算法中哪些变量是机密的，哪些是可以公开的。
+
+2. `Alice`在自己的机器上，用自己选择的机密和公开输入进行算法运算。
+
+3. 使用运算的输出，`Alice` 构建了一个可以证明运算是正确的$\pi$(因为简洁性，相比于算法大小，这只是一个很小的文件）
+
+4. `Alice`将 $\pi$ 发送给 `账本` ， `账本`可以快速验证是否产生文件的运算就是之前两人达成共识的算法，以决定是否要接受还是拒绝。
 
 ![ZKP Details](./private-payment/zkp-details.png)
 
-`Alice` can use zkSNARKs to compute all the different objects in the _Private Payment Protocol_ above. When she does this, she gains the following privacy guarantees:
+`Alice` 可以使用 zkSNARKs 来运算以上 *_隐私支付协议_*中不同的 objects。当她在做这些的时候，通过可以获得以下的隐私保证：
 
-1. **Private Sender**: Because $\textsf{CM}_\textsf{A}$ and $\pi_\textsf{A}$ are secret, the `Ledger` won't know which UTXO belongs to `Alice`, just that it is in fact one of the ones stored on the `Ledger`.
-2. **Private Receiver**: Because the construction of $\textsf{SK}_\textsf{E}$ is secret, no one knows that it comes from $\textsf{PK}_\textsf{B}$.
-3. **Private Asset**: Because $\textsf{SK}_\textsf{E}$, $\textsf{PK}_\textsf{B}$, and the asset amount are secret, no one can decrypt the encrypted asset except `Bob`.
+1. ****隐私发送者****: 因为 $\textsf{CM}_\textsf{A}$ 和 $\pi_\textsf{A}$ 是机密的, `账本` 并不知道哪个 UTXO 属于 `Alice`, 知道的只是储存于 `账本`之中的其中一个。
 
-So we have successfully built a Private Payment Protocol!
+2. ****隐私接收者****: 因为 $\textsf{SK}_\textsf{E}$ 的构建属于机密, 没有人知道它来自 $\textsf{PK}_\textsf{B}$。
 
-## Generalized N-to-M Transfer Protocol
+3. ****隐私资产****: 因为 $\textsf{SK}_\textsf{E}$, $\textsf{PK}_\textsf{B}$, 和资产金额都是机密，除了`Bob` 外，没有人可以对加密的资产进行解密。
 
-In general, we need more than just a 1-to-1 transfer to be able to have usable money. For example, if `Alice` sends `Bob` five units and he wants to send `Carol` three units, he cannot use a 1-to-1 because he can't subdivide his assets. To do this, we generalize the above protocol to an $N$-to-$M$ protocol.
+这样，我们就成功地构建了一个隐私支付协议！
+
+## 通用的 N-to-M 转账协议
+
+一般来说, 如果想要拥有可用的钱，我们需要的不仅仅是一个1对1的转账，比如，如果 `Alice` 向 `Bob` 转了5个（代币），而`Bob`想向`Carol` 转3个, 他不能使用1对1，因为并不能分割资产。想要解决这一问题，我们将以上的协议类推到一个$N$-to-$M$协议。
 
 ![Generalized Protocol](./private-payment/generalized-protocol.png)
 
-We can repeat the construction for each individual _sender_ and _receiver_ and so `Bob` can send his asset to `Carol` by sending three units to her and sending two back to himself. Because the entire protocol is private, no one except `Bob` knows that he has done this.
+我们可以为每个 *_发送者_* and *_接收者_* 重复这一构建，这样 `Bob` 就可以将他的3个（代币）发送给 `Carol` 并将2个发给自己。因为整个协议是隐私的，除了`Bob` ，没有人知道他是这样做的。
 
-## There's More
+## 了解更多
 
-There are some more details that you have to get right to build a real Private Payment scheme, like private wallets, fee proxies, and more. Right now these ideas are still brewing, but there's some cool stuff coming soon, so stay tuned!
-
-
+想要构建一个真正的隐私支付体系，你还需要了解更多的细节，比如隐私钱包、费用代理等等。目前，这些想法还在构想中，但是很快会有一些很酷的东西，敬请期待！

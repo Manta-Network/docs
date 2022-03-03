@@ -1,17 +1,14 @@
-# 📝 Overview
+# 📝 概览
 
-The Dolphin testnet is where we build new and experimental protocols before they are safe to use on [Calamari](../calamari/Overview.md) or [Manta](../manta/Overview.md). Expect things to break and change often when using the testnet.
+Dolphin 是 Manta Network 和 先行网 Calamari Network 的测试网，在新产品正式上线 [Calamari](../calamari/Overview.md) 和 [Manta](../manta/Overview.md)前，首先得到检验。测试网产品可能会经常有变更。
 
-## 🧪 Current Testnet Features
+## 🧪 测试网当前功能
 
-Dolphin, as well as [Calamari](../calamari/Overview.md), form the test-bed for the Manta ecosystem, operating at different levels of security, stability, and incentives. Dolphin is the most experimental of these test networks and features a number of different experimental features that are studied and thoroughly tested before being added to the Calamari and/or Manta networks.
+Dolphin 和 [Calamari](../calamari/Overview.md), 都是 Manta 生态系统的测试网络, 但在安全性、稳定性和激励方面都有所不同。Dolphin 是高度实验性的测试网络，产品在经过充分研究和测试后将上线 Calamari 或 Manta 网络。
 
-| Experiment                 | Status (Active/Removed/Design) |
+| 实验产品                | 状态 (活跃/删除/设计中) |
 |:--------------------------:|:------------------------------:|
-| [Pay](DolphinPay.md)   | Active                         |
-| [Swap](PrivateExchange.md) | Design                         |
+| [Pay](DolphinPay.md)   | 活跃                         |
+| [Swap](PrivateExchange.md) | 设计中                         |
 
-See those experiment pages for more information. 
-
-To use the Dolphin testnet and experiment with these new features, [install a **Signer** instance](../signer/Overview.md).
-
+想体验 Dolphin 测试网的各种新功能， [需要下载 **Signer** ](../signer/Overview.md).

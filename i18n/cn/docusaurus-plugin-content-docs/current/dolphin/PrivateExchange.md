@@ -1,3 +1,3 @@
-# 💱 Private Exchange
+# 💱 隐私交易
 
-The _Private Exchange_ protocol is currently in its design phase; more details coming soon. Check out [other experiments](Overview.md) in the meantime.
+_隐私交易_ 协议目前仍在设计阶段；更多细节会很快发布，您可以点击  [其它实验产品](Overview.md) 查看。

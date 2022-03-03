@@ -1,33 +1,47 @@
-# 🐙 Calamari Token (KMA)
+# 🎟  众贷奖励代币****解锁****
 
-We list the basic facts about the Calamari token here:
+以下为`KMA`众贷奖励解锁时间表
 
-| Property            | Value              | Remark                                    |
-|---------------------|--------------------|-------------------------------------------|
-| Token Name          | `Calamari`         |                                           |
-| Token Symbol        | `KMA`              |                                           |
-| Total Supply        | 10,000,000,000 KMA | 10 Billion KMA                            |
-| Decimal             | 12                 | 1 KMA = 1,000,000,000,000 basic units     |
-| Existential Deposit | 0.1 KMA            | minimal balance to keep the account alive |
+| 解锁时间表      | 日期和时间 (UTC+8)  |
 
-## Existential Deposit
+|-----------------------|----------------------|
 
-The **Existential Deposit** is the minimal amount that a user needs to hold in order to keep the account active. For example, if Bob creates an account with zero balance, by default, the account will not appear in the ledger state. Now, if Alice sends Bob no less than `0.1 KMA`, then Bob's balance will be added to `pallet_balances` as part of ledger state. However, if Alice tried to send Bob less than `0.1 KMA`, the transaction would be rejected since if ledger the accepted the transaction, Bob will have a `KMA` balance less than `0.1`, which will violate the *existential deposit* requirement. Similarly, Alice cannot transfer out her balance such that she has less than `0.1 KMA` left. She can either choose to leave more than `0.1 KMA` or send all the remaining balances and remove the account from the ledger state. 
+| 初始解锁 (45%) | 2021 年 11 月 28 日 16:00:00 |
 
-## Calamari Token Utility
+| 第2次解锁 (11%)     | 2022 年 1 月 5 日 08:00:00 |
 
-As Calamari's native currency, `KMA` has following major utilities:
+| 第3次解锁 (11%)     | 2022 年 3 月 2 日 08:00:00 |
 
-- Existential Deposit. As Calamari's native currency, each single account need to keep a minimal amount of `KMA` as existential deposit.
-- Extrinsic Fee Payment. `KMA` is used to pay the fee for every extrinsic, and as a mechanism to prevent DDoS attacks on Calamari.
-- Commission Fee. Commission fee for private payment/private swap.
-- On-Chain Governance: `KMA` holders can use the token to join the on-chain governance, voting for governance proposals.
+| 第4次解锁  (11%)     | 2022 年 4 月 27 日 08:00:00 |
 
-## Calamari Token Distribution
+| 第5次解锁  (11%)     | 2022 年 6 月 22 日 08:00:00 |
 
-`KMA` follows a community-driven distribution philosophy. The majority portion of `KMA` tokens will be owned by community members.
+| 第6次解锁  (11%)     | 2022 年 8 月 17 日 08:00:00 
 
-![Calamari Supply](/img/calamari-supply.png)
+## 查看全部锁定奖励
 
-There is no team allocation; furthermore, there are no private rounds or private investors. The first community distribution is
-via rewards for community members who contribute to Calamari's first Kusama Crowdloan.
+参与 Calmari 的众贷奖励已全部发送至您的众贷参与地址中，这些代币最初为全部锁定状态，并将按照上面的时间表进行分配解锁，解锁开始后您将可通过 Polkadot JS 进行领取。
+
+## 通过 Polkadot JS 解锁
+
+随着代币解锁，它们将可在 [Polkadot JS](https://polkadot.js.org)上领取。
+
+1. 转到`Developer`标签页
+
+2. 点击 `Extrinsics`
+
+3. 在`Extrinsics`下，请确保在`using the selected account`中选择了正确的账户
+
+4. 在 `submit the following extrinsic`中选择左边的 `calamariVesting` 
+
+5. 在 `submit the following extrinsic`中选择右边的`Vest` 
+
+6. 点击 `Submit Transaction`
+
+7. 签名并提交交易
+
+8. 你的代币已成功解锁！
+
+## 如果你是通过中心化交易所参与
+
+如果您通过中心化交易所参与 Calamari 众贷，则无需采取任何额外步骤。中心化交易所将代表您进行奖励领取，并直接分发到您的交易所钱包。
