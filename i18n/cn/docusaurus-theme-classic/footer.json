@@ -8,11 +8,11 @@
     "description": "The title of the footer links column with title=Community in the footer"
   },
   "link.title.More": {
-    "message": "More",
+    "message": "更多的",
     "description": "The title of the footer links column with title=More in the footer"
   },
   "link.item.label.Introduction": {
-    "message": "Introduction",
+    "message": "介绍",
     "description": "The label of footer link with label=Introduction linking to /docs/Introduction"
   },
   "link.item.label.Manta Overview": {
@@ -44,7 +44,7 @@
     "description": "The label of footer link with label=Email linking to mailto:contact@manta.network"
   },
   "copyright": {
-    "message": "Copyright © 2019-2022 Manta Network. Built with Docusaurus.",
+    "message": "版权 © 2019-2022 Manta Network.",
     "description": "The footer copyright"
   }
 }
