@@ -10,6 +10,10 @@ We list the basic facts about the Calamari token here:
 | Decimal             | 12                 | 1 KMA = 1,000,000,000,000 basic units     |
 | Existential Deposit | 0.1 KMA            | minimal balance to keep the account alive |
 
+## KMA Treasury
+
+`KMA` token has a governance controlled treasury, which controls the KMA token supply for public good. The `KMA` treasury address is `dmwQify37xfGt1wDhAi8zfvovsAkdK3aD4iqW8dn8nfrsAYsX`.
+
 ## Existential Deposit
 
 The **Existential Deposit** is the minimal amount that a user needs to hold in order to keep the account active. For example, if Bob creates an account with zero balance, by default, the account will not appear in the ledger state. Now, if Alice sends Bob no less than `0.1 KMA`, then Bob's balance will be added to `pallet_balances` as part of ledger state. However, if Alice tried to send Bob less than `0.1 KMA`, the transaction would be rejected since if ledger the accepted the transaction, Bob will have a `KMA` balance less than `0.1`, which will violate the *existential deposit* requirement. Similarly, Alice cannot transfer out her balance such that she has less than `0.1 KMA` left. She can either choose to leave more than `0.1 KMA` or send all the remaining balances and remove the account from the ledger state. 
