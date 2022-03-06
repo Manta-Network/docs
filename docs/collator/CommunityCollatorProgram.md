@@ -1,6 +1,6 @@
 # 🧩  Community Collator Program
 
-Dilligent blockchain node maintainers ar invited to join the community collator program, in order to make Manta/Calamari more decentralized and more secure. The Calamari Collator Program is currently accepting applications from node maintainers who wish to run a Calamari collator node.
+Dilligent blockchain node maintainers are invited to join the community collator program, in order to make Manta/Calamari more decentralized and more secure. The Calamari Collator Program is currently accepting applications from node maintainers who wish to run a Calamari collator node.
 
 ## Collator runner incentives
 
