@@ -285,7 +285,7 @@ set up ssl port forwarding
     -d kusama.metrics.bob.example.com
   ```
 
-- configure nginx `/etc/sites-enabled/example.com.conf`
+- configure nginx `/etc/nginx/sites-enabled/example.com.conf`
   ```
   server {
     server_name calamari.metrics.bob.example.com;
