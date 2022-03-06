@@ -319,8 +319,8 @@ set up ssl port forwarding
       proxy_set_header Upgrade $http_upgrade;
       proxy_set_header Connection "upgrade";
     }
-    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/bob.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/bob.example.com/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
   }
