@@ -270,6 +270,8 @@ the example below assumes:
 - your nodes hostname is **bob**
 - your calamari node uses default ports
 - your internet gateway (router) port forwards 443/ssl traffic arriving on the routers wan interface to your collator node
+- you have certbot installed, ideally as a snap ([instructions](https://certbot.eff.org/instructions))
+- you have version 2.3.1 or later of [certbot-dns-cloudflare](https://certbot-dns-cloudflare.readthedocs.io/en/stable/) installed ([instructions](https://snapcraft.io/certbot-dns-cloudflare))
 
 set up ssl port forwarding
 
@@ -279,7 +281,7 @@ set up ssl port forwarding
   
   sudo certbot certonly \
     --dns-cloudflare \
-    -dns-cloudflare-credentials .cloudflare-credentials \
+    --dns-cloudflare-credentials .cloudflare-credentials \
     -d bob.example.com \
     -d calamari.metrics.bob.example.com \
     -d kusama.metrics.bob.example.com
