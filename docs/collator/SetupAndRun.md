@@ -266,26 +266,54 @@ it is good practice to serve your metrics over ssl (so that their authenticity c
 
 the example below assumes:
 - you administer the domain **example.com**
-- its dns is managed by cloudflare
+- its dns is managed by cloudflare or route53
 - your nodes hostname is **bob**
 - your calamari node uses default ports
 - your internet gateway (router) port forwards 443/ssl traffic arriving on the routers wan interface to your collator node
-- you have certbot installed, ideally as a snap ([instructions](https://certbot.eff.org/instructions))
-- you have version 2.3.1 or later of [certbot-dns-cloudflare](https://certbot-dns-cloudflare.readthedocs.io/en/stable/) installed ([instructions](https://snapcraft.io/certbot-dns-cloudflare))
+- you have certbot installed
 
 set up ssl port forwarding
 
 - request a cert
-  ```bash
-  #!/bin/bash
-  
-  sudo certbot certonly \
-    --dns-cloudflare \
-    --dns-cloudflare-credentials .cloudflare-credentials \
-    -d bob.example.com \
-    -d calamari.metrics.bob.example.com \
-    -d kusama.metrics.bob.example.com
-  ```
+
+  <Tabs groupId="certbot">
+  <TabItem value="cloudflare" label="fedora">
+
+    ```bash
+    #!/bin/bash
+
+    sudo apt-get install \
+      certbot \
+      python3-certbot-dns-cloudflare
+    
+    sudo certbot certonly \
+      --dns-cloudflare \
+      --dns-cloudflare-credentials .cloudflare-credentials \
+      -d bob.example.com \
+      -d calamari.metrics.bob.example.com \
+      -d kusama.metrics.bob.example.com
+    ```
+
+  </TabItem>
+  <TabItem value="route53" label="fedora">
+
+    ```bash
+    #!/bin/bash
+
+    sudo apt-get install \
+      certbot \
+      python3-certbot-dns-route53
+    
+    sudo certbot certonly \
+      --dns-route53 \
+      --dns-route53-propagation-seconds 30 \
+      -d bob.example.com \
+      -d calamari.metrics.bob.example.com \
+      -d kusama.metrics.bob.example.com
+    ```
+
+  </TabItem>
+  </Tabs>
 
 - configure nginx `/etc/nginx/sites-enabled/example.com.conf`
   ```
