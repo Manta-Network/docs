@@ -279,10 +279,6 @@ set up ssl port forwarding
   <Tabs groupId="os">
   <TabItem value="fedora" label="fedora">
   
-  edit the calamari service unit file to include collation parameters in the `ExecStart` command.
-  
-  `/usr/lib/systemd/system/calamari.service`
-  
   ```bash
   #!/bin/bash
   
@@ -294,10 +290,6 @@ set up ssl port forwarding
   
   </TabItem>
   <TabItem value="ubuntu" label="ubuntu">
-  
-  edit the calamari service unit file to include collation parameters in the `ExecStart` command.
-  
-  `/usr/lib/systemd/system/calamari.service`
   
   ```bash
   #!/bin/bash
