@@ -277,7 +277,43 @@ set up ssl port forwarding
 - request a cert
 
   <Tabs groupId="certbot">
-  <TabItem value="cloudflare" label="cloudflare">
+  <TabItem value="fedora-cloudflare" label="fedora/cloudflare">
+
+    ```bash
+    #!/bin/bash
+
+    sudo dnf install \
+      certbot \
+      python3-certbot-dns-cloudflare
+    
+    sudo certbot certonly \
+      --dns-cloudflare \
+      --dns-cloudflare-credentials .cloudflare-credentials \
+      -d bob.example.com \
+      -d calamari.metrics.bob.example.com \
+      -d kusama.metrics.bob.example.com
+    ```
+
+  </TabItem>
+  <TabItem value="fedora-route53" label="fedora/route53">
+
+    ```bash
+    #!/bin/bash
+
+    sudo dnf install \
+      certbot \
+      python3-certbot-dns-route53
+    
+    sudo certbot certonly \
+      --dns-route53 \
+      --dns-route53-propagation-seconds 30 \
+      -d bob.example.com \
+      -d calamari.metrics.bob.example.com \
+      -d kusama.metrics.bob.example.com
+    ```
+
+  </TabItem>
+  <TabItem value="ubuntu-cloudflare" label="ubuntu/cloudflare">
 
     ```bash
     #!/bin/bash
@@ -295,7 +331,7 @@ set up ssl port forwarding
     ```
 
   </TabItem>
-  <TabItem value="route53" label="route53">
+  <TabItem value="ubuntu-route53" label="ubuntu/route53">
 
     ```bash
     #!/bin/bash
