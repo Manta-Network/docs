@@ -274,17 +274,50 @@ the example below assumes:
 
 set up ssl port forwarding
 
-- request a cert
+- install certbot and a dns validation plugin (note: cloudflare and route53 examples below, google python3-certbot-dns-${your_dns_provider} for other examples)
+
+  <Tabs groupId="os">
+  <TabItem value="fedora" label="fedora">
+  
+  edit the calamari service unit file to include collation parameters in the `ExecStart` command.
+  
+  `/usr/lib/systemd/system/calamari.service`
+  
+  ```bash
+  #!/bin/bash
+  
+  sudo dnf install \
+    certbot \
+    python3-certbot-dns-cloudflare \
+    python3-certbot-dns-route53
+  ```
+  
+  </TabItem>
+  <TabItem value="ubuntu" label="ubuntu">
+  
+  edit the calamari service unit file to include collation parameters in the `ExecStart` command.
+  
+  `/usr/lib/systemd/system/calamari.service`
+  
+  ```bash
+  #!/bin/bash
+  
+  sudo apt-get install \
+    certbot \
+    python3-certbot-dns-cloudflare \
+    python3-certbot-dns-route53
+  ```
+  
+  </TabItem>
+  </Tabs>
+
+- request a cert using a dns plugin so that certbot is able to automatically renew the cert near the expiry date. manually requested certs must be manually updated to keep ssl certs valid, so they should be avoided.
 
   <Tabs groupId="certbot">
-  <TabItem value="fedora-cloudflare" label="fedora/cloudflare">
+  <TabItem value="cloudflare" label="cloudflare">
 
     ```bash
     #!/bin/bash
-
-    sudo dnf install \
-      certbot \
-      python3-certbot-dns-cloudflare
     
     sudo certbot certonly \
       --dns-cloudflare \
@@ -295,50 +328,10 @@ set up ssl port forwarding
     ```
 
   </TabItem>
-  <TabItem value="fedora-route53" label="fedora/route53">
+  <TabItem value="route53" label="route53">
 
     ```bash
     #!/bin/bash
-
-    sudo dnf install \
-      certbot \
-      python3-certbot-dns-route53
-    
-    sudo certbot certonly \
-      --dns-route53 \
-      --dns-route53-propagation-seconds 30 \
-      -d bob.example.com \
-      -d calamari.metrics.bob.example.com \
-      -d kusama.metrics.bob.example.com
-    ```
-
-  </TabItem>
-  <TabItem value="ubuntu-cloudflare" label="ubuntu/cloudflare">
-
-    ```bash
-    #!/bin/bash
-
-    sudo apt-get install \
-      certbot \
-      python3-certbot-dns-cloudflare
-    
-    sudo certbot certonly \
-      --dns-cloudflare \
-      --dns-cloudflare-credentials .cloudflare-credentials \
-      -d bob.example.com \
-      -d calamari.metrics.bob.example.com \
-      -d kusama.metrics.bob.example.com
-    ```
-
-  </TabItem>
-  <TabItem value="ubuntu-route53" label="ubuntu/route53">
-
-    ```bash
-    #!/bin/bash
-
-    sudo apt-get install \
-      certbot \
-      python3-certbot-dns-route53
     
     sudo certbot certonly \
       --dns-route53 \
