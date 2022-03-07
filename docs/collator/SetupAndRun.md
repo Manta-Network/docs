@@ -277,7 +277,7 @@ set up ssl port forwarding
 - request a cert
 
   <Tabs groupId="certbot">
-  <TabItem value="cloudflare" label="fedora">
+  <TabItem value="cloudflare" label="cloudflare">
 
     ```bash
     #!/bin/bash
@@ -295,7 +295,7 @@ set up ssl port forwarding
     ```
 
   </TabItem>
-  <TabItem value="route53" label="fedora">
+  <TabItem value="route53" label="route53">
 
     ```bash
     #!/bin/bash
