@@ -274,7 +274,7 @@ the example below assumes:
 
 set up ssl port forwarding
 
-- install certbot and a dns validation plugin (note: cloudflare and route53 examples below, google python3-certbot-dns-${your_dns_provider} for other examples)
+- install certbot and a dns validation plugin (note: cloudflare and route53 examples below, google `python3-certbot-dns-${your_dns_provider}` for other examples)
 
   <Tabs groupId="os">
   <TabItem value="fedora" label="fedora">
