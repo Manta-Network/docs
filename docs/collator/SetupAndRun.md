@@ -253,15 +253,17 @@ two sets of parameters are supplied to the substrate node binary (calamari), sep
   - `--prometheus-port`: relay-chain metrics port. calamari-embedded-kusama default is 9616. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
   - `--prometheus-external`: if you are not reverse proxying metrics over ssl, you may need to set this parameter to tell the embedded metrics server to listen on the *all ips* socket (`0.0.0.0:9616`) rather than *localhost only* (`127.0.0.1:9616`)
 
-### firewall configuration
+### expose node metrics for monitoring
+you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports 9615 and 9616 facilitate this, so these ports should be accessible both from your own prometheus/alertmanager server (which you should configure to alert you) and manta's [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (which is monitored by manta devops).
+
+#### firewall configuration
 several ports are required to be accessible from outside of the node host in order for the collator to function well. for simplicity, the settings documented below use the default ports, however feel free to use alternative ports as required by your infrastructure and network topology.
 - **31333**: default calamari peer-to-peer port
 - **31334**: default (embedded-relay) kusama peer-to-peer port
 - **9615**: default calamari metrics port
 - **9616**: default (embedded-relay) kusama metrics port
 
-you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports 9615 and 9616 facilitate this, so these ports should be accessible both from your own prometheus/alertmanager server (which you should configure to alert you) and manta's [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (which is monitored by manta devops).
-
+#### reverse proxy metrics over ssl with letsencrypt and nginx
 it is good practice to serve your metrics over ssl (so that their authenticity can be validated). an easy way to accomplish this is to install certbot and nginx and configure a reverse proxy listening on port 443 and proxying requests to the metrics ports.
 
 the example below assumes:
@@ -272,9 +274,9 @@ the example below assumes:
 - your internet gateway (router) port forwards 443/ssl traffic arriving on the routers wan interface to your collator node
 - you have certbot installed
 
-set up ssl port forwarding
+note: cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_provider}` for other examples
 
-- install certbot and a dns validation plugin (note: cloudflare and route53 examples below, google `python3-certbot-dns-${your_dns_provider}` for other examples)
+- install certbot and a dns validation plugin
 
   <Tabs groupId="os">
   <TabItem value="fedora" label="fedora">
@@ -336,7 +338,7 @@ set up ssl port forwarding
   </TabItem>
   </Tabs>
 
-- configure nginx `/etc/nginx/sites-enabled/example.com.conf`
+- configure nginx `/etc/nginx/sites-enabled/example.com.conf` to reverse proxy dns subdomains to local metrics ports.
   ```
   server {
     server_name calamari.metrics.bob.example.com;
