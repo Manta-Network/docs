@@ -254,7 +254,7 @@ two sets of parameters are supplied to the substrate node binary (calamari), sep
   - `--prometheus-external`: if you are not reverse proxying metrics over ssl, you may need to set this parameter to tell the embedded metrics server to listen on the *all ips* socket (`0.0.0.0:9616`) rather than *localhost only* (`127.0.0.1:9616`)
 
 ### expose node metrics for monitoring
-you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports 9615 and 9616 facilitate this, so these ports should be accessible both from your own prometheus/alertmanager server (which you should configure to alert you) and manta's [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (which is monitored by manta devops).
+you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports `9615` and `9616` facilitate this, so these ports should be accessible both from your own prometheus/alertmanager server (which you should configure to alert you, using alertmanager) and manta's [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (which is monitored by manta devops).
 
 #### firewall configuration
 several ports are required to be accessible from outside of the node host in order for the collator to function well. for simplicity, the settings documented below use the default ports, however feel free to use alternative ports as required by your infrastructure and network topology.
@@ -264,7 +264,14 @@ several ports are required to be accessible from outside of the node host in ord
 - **9616**: default (embedded-relay) kusama metrics port
 
 #### reverse proxy metrics over ssl with letsencrypt and nginx
-it is good practice to serve your metrics over ssl (so that their authenticity can be validated). an easy way to accomplish this is to install certbot and nginx and configure a reverse proxy listening on port 443 and proxying requests to the metrics ports.
+it is good practice to serve your metrics over:
+
+- **ssl**, so that their authenticity and provenance can be verified
+- **dns**, so that changes to your ip address don't require a pulse server update
+
+it also makes it much easier for an alert observer to work out which collators are performing well (or poorly) when they are looking at domain names like `calamari.awesome-host.awesome-collators.com` versus ip addresses and port combinations like `123.123.123.123:987` which may not make it obvious wich collator is being observed and wether the metric in question refers to the relay-chain or parachain.
+
+an easy way to accomplish this is to install certbot and nginx and configure a reverse proxy listening on port 443 and which proxies ssl requests to the local metrics ports.
 
 the example below assumes:
 - you administer the domain **example.com**
