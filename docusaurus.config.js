@@ -127,7 +127,7 @@ module.exports = {
         label: 'English',
       },
       cn: {
-        label: 'Chinese',
+        label: '中文',
       }
     }
   }
