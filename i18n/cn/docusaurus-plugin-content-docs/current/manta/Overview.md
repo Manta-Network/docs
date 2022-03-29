@@ -1,4 +1,3 @@
-# Overview
+# 概览
 
-Manta is the leading on-chain privacy platform for Polkadot and beyond. We are building a better Web 3.0 with privacy guarantees from first principles: applying cutting-edge cryptographic constructions such as zkSNARKs to build blockchain applications, including DeFi, with end-to-end privacy guarantees and at the same time interoperable, easy to use, high performance and auditable tools.
-
+Manta Network 致力于通过隐私保护构建一个更好的 Web3 世界。Manta 的产品设计从第一性原理出发，通过 zkSNARK 等领先的密码学架构为区块链用户提供端对端的隐私保护。在保障隐私的同时，Manta 兼具互操作性、便捷性、高性能以及可审计性，允许用户进行任意平行链资产间的隐私转账和交易。Manta 的愿景是为整个区块链世界提供更便捷的隐私保护服务。

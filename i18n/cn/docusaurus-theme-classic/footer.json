@@ -16,11 +16,11 @@
     "description": "The label of footer link with label=Introduction linking to /docs/Introduction"
   },
   "link.item.label.Manta Overview": {
-    "message": "Manta Overview",
+    "message": "Manta 概览",
     "description": "The label of footer link with label=Manta Overview linking to /docs/manta/Overview"
   },
   "link.item.label.Calamari Overview": {
-    "message": "Calamari Overview",
+    "message": "Calamari 概览",
     "description": "The label of footer link with label=Calamari Overview linking to /docs/calamari/Overview"
   },
   "link.item.label.Twitter": {
