@@ -85,7 +85,7 @@ get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
   # intall jq on ubuntu
   sudo apt install jq
 
-  # or on federa
+  # or on fedora
   sudo dnf install jq
 
   # get the latest version of binary
