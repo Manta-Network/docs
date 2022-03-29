@@ -16,11 +16,11 @@
 ## 通过 Polkadot JS 解锁
 
 随着代币解锁，它们将可在 [Polkadot JS](https://polkadot.js.org)上领取。
-1. 转到`Developer`标签页
+1. 转到 `Developer` 标签页
 2. 点击 `Extrinsics`
-3. 在`Extrinsics`下，请确保在`using the selected account`中选择了正确的账户
-4. 在 `submit the following extrinsic`中选择左边的 `calamariVesting` 
-5. 在 `submit the following extrinsic`中选择右边的`Vest` 
+3. 在 `Extrinsics` 下，请确保在 `using the selected account` 中选择了正确的账户
+4. 在 `submit the following extrinsic` 中选择左边的 `calamariVesting` 
+5. 在 `submit the following extrinsic` 中选择右边的`Vest` 
 6. 点击 `Submit Transaction`
 7. 签名并提交交易
 8. 你的代币已成功解锁！
