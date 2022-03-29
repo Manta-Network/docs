@@ -82,7 +82,14 @@ get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
   ```bash
   #!/bin/bash
 
-  manta_version=3.1.4
+  # intall jq on ubuntu
+  sudo apt install jq
+
+  # or on federa
+  sudo dnf install jq
+
+  # get the latest version of binary
+  manta_version=$(curl -s https://api.github.com/repos/Manta-Network/Manta/releases/latest | jq -r .tag_name | cut -c 2-)
 
   # binary
   sudo curl -Lo /usr/local/bin/manta https://github.com/Manta-Network/Manta/releases/download/v${manta_version}/manta
