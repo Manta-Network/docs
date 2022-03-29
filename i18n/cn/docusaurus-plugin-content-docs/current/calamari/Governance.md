@@ -2,7 +2,7 @@
 _注意: Calamari 刚刚开始推行治理，因此许多计划中的功能尚不可用。本文档描述了当前可用的内容，并将随着功能的发布进行持续更新。 _
 欢迎阅读我们的治理文档！您将在这里找到关于代币持有者如何参与决定 Calamari 未来的介绍。
 作为去中心化系统，Manta Network团队不会在未经社区同意的情况下实现或删除任何功能，这一点至关重要。计划功能开发的路线图如下 [这里](https://emphasized-seed-161.notion.site/3b1b61e0aee8484396d674f4653e0813?v=451a4ad2105d4f9cb35fb74680359c1d)
-如果您正在寻找有关 Calamari 治理工作的更多技术细节，请看这里 [Calamari Governance Deep Dive doc](GovernanceDeepdive.md)
+如果您正在寻找有关 Calamari 治理工作的更多技术细节，请看这里 [深入探讨治理模式](GovernanceDeepdive.md)
 ## 介绍
 顶层设计上，Calamari 变更遵循三个步骤：
 *启动期*: 代币持有者提交的提案会变成全民投票。
