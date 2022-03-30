@@ -63,9 +63,7 @@ Manta 的愿景是为更广泛的区块链行业带来隐私保护，而让隐�
 *_承诺方案（commitment scheme）_ 通过* $\textsf{PK}_\textsf{B}$ 将 $\tau$ 作为其随机数（A.K.A blinder，trapdoor）确保 $\Lambda$（账本检查点）隐私安全：
 
 $$
-
 \textsf{SK}_\textsf{E} := \textsf{COM}(\Lambda || \textsf{PK}_\textsf{B}, \tau)
-
 $$
 
 临时密钥只会用一次。 `Alice` 之后需要证明她正确地构建了$\textsf{SK}_\textsf{E}$, 也叫 *_开启_* 了承诺。承诺被*_绑定_意味着* `Alice` 不能改变主意，找到另外一个公钥或账本检查点来构建同样的临时密钥。Trapdoor $\tau$ 给予我们 *_可隐藏_*的特性，即便有人知道 $\Lambda$ 和 $\textsf{PK}_\textsf{B}$ ，他们也不能在不知道$\tau$的情况下预测 $\textsf{SK}_\textsf{E}$ 是什么。
@@ -91,9 +89,7 @@ $$
 最常见的方法之一是使用 _*Diffie-Hellman Key Exchange*_ 协议。 在这个协议中，我们采取了一个假设不可能逆转的操作（在有效时间内），我们称之为 $\textsf{bind}$，以及一个所有人都同意的公共常量 $G$。 我们令 $\textsf{bind}$ 和 $G$ 具有以下属性：
 
 $$
-
 \textsf{bind}(y, \textsf{bind}(x, G)) = \textsf{bind}(x, \textsf{bind}(y, G))
-
 $$
 
 我们通过$x$ 和 $y$ 密钥并调用 $X := \textsf{bind}(x, G)$ 和 $Y := \textsf{bind}(y, G)$ 方法生成公钥。 由于 $\textsf{bind}$ 是不可逆的，我们可以将公钥 $X$ 和 $Y$ 公开提供给任何人，或者即使我们想要加密，我们仍然可以发送 $X$ 或 $Y$ 给特定的人，且不必担心有人可以对我们的密钥进行逆向工程。
@@ -101,9 +97,7 @@ $$
 因为 $\textsf{bind}$ 函数具有上述属性，所以信息加密方法为：
 
 $$
-
 S := \textsf{bind}(y, X) = \textsf{bind}(x, Y)
-
 $$
 
 因此，如果您与某人共享您的公钥 $X$ 并获得他们的公钥 $Y$，那么你们俩都可以进行传输加密 $S$。 通过以上方法，`Alice` 和 `Bob`成功传输了几条加密信息。

@@ -1,5 +1,5 @@
 
-#  👩🏼‍💻 如何申请运行 Calamari 收集人节点？
+#  👩🏼‍💻 如何申请运行 Calamari 节点？
 
 ## 达到硬件和基础设施的要求
 
@@ -39,4 +39,4 @@ c. Azure/GCP 或其他云/数据中心提供商
 
 ## 填写申请表
 
-请填写[collator 申请表格](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform).
+请填写[节点申请表格](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform).

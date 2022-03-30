@@ -2,7 +2,7 @@ import Tabs from '@theme/Tabs';
 
 import TabItem from '@theme/TabItem';
 
-# 🚄 安装并运行 Calamari 收集人节点
+# 🚄 安装并运行 Calamari 节点
 
 ## 安装
 
@@ -250,7 +250,7 @@ ExecStart=/usr/local/bin/calamari \
 </TabItem>
 </Tabs>
 
-### 收集人节点配置特殊参数
+### 节点配置特殊参数
 
 Calamari 节点配置文件支持两组由双破折号 (`—`) 分隔的参数。 第一组为平行链节点参数。 第二组为中继链节点参数。
 
@@ -269,7 +269,7 @@ Calamari 节点配置文件支持两组由双破折号 (`—`) 分隔的参数�
 
 ### 防火墙配置
 
-为保证 Collator 节点正常运行，需要从外部访问以下几个端口。 为便于配置，配置文件使用以下默认端口，但您可以根据实际情况需要随意使用替代端口。
+为保证节点正常运行，需要从外部访问以下几个端口。 为便于配置，配置文件使用以下默认端口，但您可以根据实际情况需要随意使用替代端口。
 
 - **31333**: 默认calamari p2p端口
 - **31334**: 默认（中继）kusama p2p端口
@@ -586,12 +586,12 @@ sudo firewall-cmd --reload
 </TabItem>
 </Tabs>
 
-## 收集人 session 密钥
+## 节点 session 密钥
 
-收集人节点需要两个帐户/密钥。
+节点需要两个帐户/密钥。
 
-- ***collator 账户***: 持有 400,000 KMA 的收集人节点绑定账户。节点所收取的交易费将被存入该账户。 节点运行时绑定的KMA将被锁定。 此帐户密钥要仔细保管，不要存放在于收集人节点服务器中。
-- ***aura session 密钥***: 这是Collator节点用于创建区块的一次性帐户。 它绑定到收集人帐户。 最好的做法是定期更换会话密钥，每个密钥最多使用一次。 当调用 author_insertKey 或 author_rotateKeys rpc 方法时，substrate 将此帐户的密钥存储在收集人节点的文件系统（`/var/lib/substrate/chains/calamari/keystore`）上的平行链密钥库中。
+- ***节点账户***: 持有 400,000 KMA 的节点绑定账户。节点所收取的交易费将被存入该账户。 节点运行时绑定的KMA将被锁定。 此帐户密钥要仔细保管，不要存放在于节点服务器中。
+- ***aura session 密钥***: 这是Collator节点用于创建区块的一次性帐户。 它绑定到节点帐户。 最好的做法是定期更换会话密钥，每个密钥最多使用一次。 当调用 author_insertKey 或 author_rotateKeys rpc 方法时，substrate 将此帐户的密钥存储在节点的文件系统（`/var/lib/substrate/chains/calamari/keystore`）上的平行链密钥库中。
 
 :::note
 插入和替换方法均使用不安全的 RPC调用来设置节点会话密钥。如果服务正在运行，则必须停止服务，然后使用`--rpc-methods=unsafe`参数设置。调用成功后，不要忘记将设置更改回`safe`，因为允许不安全的 rpc 调用会导致暴露的 rpc 端口的节点很容易地让任何人更改其会话密钥，从而导致交易费用被支付到预期之外的地方。
@@ -692,10 +692,10 @@ rpc 调用的输出应如下所示（`result`属性包含 aura 会话帐户公�
 </TabItem>
 </Tabs>
 
-### 将收集人帐户绑定到 aura session 密钥
+### 将节点帐户绑定到 aura session 密钥
 
 :::note
-如果收集人节点日志不包含`[Relaychain] 💤 Idle`和`[Parachain] 💤 Idle`消息，您的节点需要继续同步。不要绑定一个未完全同步的收集人帐户到 aura 会话密钥。这样做会导致收集人节点被系统拒绝接入。
+如果节点日志不包含`[Relaychain] 💤 Idle`和`[Parachain] 💤 Idle`消息，您的节点需要继续同步。不要绑定一个未完全同步的节点帐户到 aura 会话密钥。这样做会导致节点被系统拒绝接入。
 :::
 
 使用 polkadot.js进行账户绑定。
@@ -728,7 +728,7 @@ rpc 调用的输出应如下所示（`result`属性包含 aura 会话帐户公�
 2022-03-01 17:18:55 [Relaychain] 💤 Idle (49 peers), best: #11619808 (0x24a5…ad58), finalized #11619804 (0xa362…2df4), ⬇ 478.0kiB/s ⬆ 520.5kiB/s
 ```
 
-如果收集人节点日志不包含`[Relaychain] 💤 Idle`和`[Parachain] 💤 Idle`消息，您的节点需要继续同步。不要绑定一个未完全同步的Collator帐户到 aura 会话密钥。这样做会导致收集人节点被系统拒绝接入。
+如果节点日志不包含`[Relaychain] 💤 Idle`和`[Parachain] 💤 Idle`消息，您的节点需要继续同步。不要绑定一个未完全同步的Collator帐户到 aura 会话密钥。这样做会导致节点被系统拒绝接入。
 
 最佳的同步方式是持续运行您的节点，直到空闲消息出现在您的日志中。这样做可能需要长达 2 周的时间，但它也会为您提供您正在同步的区块链的完美、经过加密验证和完整的历史记录。
 
@@ -763,9 +763,10 @@ sudo -H -u manta bash -c 'basename $(ls /var/lib/substrate/polkadot/chains/ksmcc
 
 ## 等待
 
-确保已完成[收集人申请](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform)填写。如果获得批准，Calamari 理事会将提交一项提议，将您提升为候选人
+确保已完成[节点申请](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform)填写。如果获得批准，Calamari 理事会将提交一项提议，将您提升为候选人
 
 :::note
-候选人并不意味着您是收集人节点。例如，如果有 3 个候选名额，而其他候选人占据所有名额，而您在第 4 名，则必须等到某个节点注销或理事会增加收集人节点名额。
+候选人并不意味着您是节点。例如，如果有 3 个候选名额，而其他候选人占据所有名额，而您在第 4 名，则必须等到某个节点注销或理事会增加
+    节点名额。
 :::
-如果顺利成为收集人节点，在候选议案通过后`12`到`24`几小时，您将在浏览器中看到收集人节点开始生成块 [explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/explorer).。
+如果顺利成为节点，在候选议案通过后`12`到`24`几小时，您将在浏览器中看到节点开始生成块 [explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/explorer).。

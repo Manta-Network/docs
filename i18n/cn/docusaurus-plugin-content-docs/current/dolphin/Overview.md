@@ -1,6 +1,6 @@
 # 📝 概览
 
-Dolphin 是 Manta Network 和 先行网 Calamari Network 的测试网，在新产品正式上线 [Calamari](../calamari/Overview.md) 和 [Manta](../manta/Overview.md)前，首先得到检验。测试网产品可能会经常有变更。
+Dolphin 是 Manta Network 和 先行网 Calamari Network 的测试网，在新产品正式上线 [Calamari](../calamari/Overview.md) 和 [Manta](../manta/Overview.md) 前，首先得到检验。测试网产品可能会经常有变更。
 
 ## 🧪 测试网当前功能
 

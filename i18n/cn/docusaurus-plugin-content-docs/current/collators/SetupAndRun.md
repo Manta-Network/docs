@@ -45,7 +45,7 @@ manta .rpm 包含：
 
   ```bash
   #!/bin/bash
-
+  
   sudo dnf install manta
   ```
 
@@ -75,7 +75,7 @@ manta .rpm 包含：
 
     ```bash
     #!/bin/bash
-
+    
     sudo apt install manta
     ```
 
@@ -110,7 +110,7 @@ manta .rpm 包含：
 
     ```bash
     #!/bin/bash
-
+    
     sudo groupadd --system manta
     sudo useradd \
         --system \
@@ -328,7 +328,7 @@ cloudflare 和 route53 示例如下。谷歌`python3-certbot-dns-${your_dns_prov
         include /etc/letsencrypt/options-ssl-nginx.conf;
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
     }
-
+    
     server {
         server_name kusama.metrics.bob.example.com;
         listen 443 ssl;
@@ -390,7 +390,7 @@ sudo firewall-cmd --reload
 </TabItem>
 </Tabs>
 
-## Running
+## 运行
 
 
 
@@ -426,7 +426,7 @@ sudo firewall-cmd --reload
 
      ```bash
     👤 Role: AUTHORITY
-    ```
+     ```
 
 </TabItem>
 <TabItem value="fedora" label="fedora">
@@ -475,7 +475,7 @@ sudo firewall-cmd --reload
 
     ```bash
     #!/bin/bash
-
+    
     sudo -H -u manta bash -c '/usr/bin/calamari --chain /usr/share/substrate/calamari.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
     ```
 
@@ -528,7 +528,7 @@ sudo firewall-cmd --reload
 
     ```bash
     #!/bin/bash
-
+    
     sudo -H -u manta bash -c '/usr/bin/calamari --chain /usr/share/substrate/calamari.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
     ```
 
@@ -579,7 +579,7 @@ sudo firewall-cmd --reload
 
     ```bash
     #!/bin/bash
-
+    
     sudo -H -u manta bash -c '/usr/local/bin/calamari --chain /usr/share/substrate/calamari.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
     ```
 
@@ -666,7 +666,7 @@ sudo firewall-cmd --reload
 
     ```bash
     #!/bin/bash
-
+    
     rm ./aura.json ./payload.json
     ```
 
@@ -677,16 +677,16 @@ sudo firewall-cmd --reload
 
     ```bash
     #!/bin/bash
-
+    
     curl -H 'Content-Type: application/json' --data '{ "jsonrpc":"2.0", "method":"author_rotateKeys", "id":1 }' http://localhost:9933
     ```
 
 rpc 调用的输出应如下所示（`result`属性包含 aura 会话帐户公钥的十六进制表示*）*：
 
     ```json
-
+    
     {"jsonrpc":"2.0","result":"0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb50e6aeb15951288c562f61","id":1}
-
+    
     ```
 
 </TabItem>
