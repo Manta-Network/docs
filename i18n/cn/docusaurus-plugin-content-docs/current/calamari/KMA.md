@@ -1,4 +1,4 @@
-# 🐙 Calamari 代币 (KMA)
+# 🐙 Calamari 代币 KMA
 
 我们将关于 Calamari 代币的一些基本特性列于下表：
 
