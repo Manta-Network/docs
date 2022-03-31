@@ -288,7 +288,9 @@ the example below assumes:
 - your internet gateway (router) port forwards 443/ssl traffic arriving on the routers wan interface to your collator node
 - you have certbot installed
 
-note: cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_provider}` for other examples
+:::note
+cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_provider}` for other examples
+:::
 
 - install certbot and a dns validation plugin
 
