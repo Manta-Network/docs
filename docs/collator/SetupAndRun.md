@@ -82,7 +82,14 @@ get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
   ```bash
   #!/bin/bash
 
-  manta_version=3.1.4
+  # intall jq on ubuntu
+  sudo apt install jq
+
+  # or on fedora
+  sudo dnf install jq
+
+  # get the latest version of binary
+  manta_version=$(curl -s https://api.github.com/repos/Manta-Network/Manta/releases/latest | jq -r .tag_name | cut -c 2-)
 
   # binary
   sudo curl -Lo /usr/local/bin/manta https://github.com/Manta-Network/Manta/releases/download/v${manta_version}/manta
@@ -253,39 +260,99 @@ two sets of parameters are supplied to the substrate node binary (calamari), sep
   - `--prometheus-port`: relay-chain metrics port. calamari-embedded-kusama default is 9616. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
   - `--prometheus-external`: if you are not reverse proxying metrics over ssl, you may need to set this parameter to tell the embedded metrics server to listen on the *all ips* socket (`0.0.0.0:9616`) rather than *localhost only* (`127.0.0.1:9616`)
 
-### firewall configuration
+### expose node metrics for monitoring
+you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports `9615` and `9616` facilitate this, so these ports (or port `443`, if ssl proxied) should be accessible both from your own prometheus/alertmanager server (which you should configure to alert you, using alertmanager) and manta's [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (which is monitored by manta devops).
+
+#### firewall configuration
 several ports are required to be accessible from outside of the node host in order for the collator to function well. for simplicity, the settings documented below use the default ports, however feel free to use alternative ports as required by your infrastructure and network topology.
 - **31333**: default calamari peer-to-peer port
 - **31334**: default (embedded-relay) kusama peer-to-peer port
 - **9615**: default calamari metrics port
 - **9616**: default (embedded-relay) kusama metrics port
 
-you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports 9615 and 9616 facilitate this, so these ports should be accessible both from your own prometheus/alertmanager server (which you should configure to alert you) and manta's [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (which is monitored by manta devops).
+#### reverse proxy metrics over ssl with letsencrypt and nginx
+it is good practice to serve your metrics over:
 
-it is good practice to serve your metrics over ssl (so that their authenticity can be validated). an easy way to accomplish this is to install certbot and nginx and configure a reverse proxy listening on port 443 and proxying requests to the metrics ports.
+- **ssl**, so that their authenticity and provenance can be verified
+- **dns**, so that changes to your ip address don't require a pulse server update
+
+it also makes it much easier for an alert observer to work out which collators are performing well (or poorly) when they are looking at domain names like `calamari.awesome-host.awesome-collators.com` versus ip addresses and port combinations like `123.123.123.123:987` which may not make it obvious wich collator is being observed and wether the metric in question refers to the relay-chain or parachain.
+
+an easy way to accomplish this is to install certbot and nginx and configure a reverse proxy listening on port 443 and which proxies ssl requests to the local metrics ports.
 
 the example below assumes:
 - you administer the domain **example.com**
-- its dns is managed by cloudflare
+- its dns is managed by cloudflare or route53
 - your nodes hostname is **bob**
 - your calamari node uses default ports
 - your internet gateway (router) port forwards 443/ssl traffic arriving on the routers wan interface to your collator node
+- you have certbot installed
 
-set up ssl port forwarding
+note: cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_provider}` for other examples
 
-- request a cert
+- install certbot and a dns validation plugin
+
+  <Tabs groupId="os">
+  <TabItem value="fedora" label="fedora">
+  
   ```bash
   #!/bin/bash
   
-  sudo certbot certonly \
-    --dns-cloudflare \
-    -dns-cloudflare-credentials .cloudflare-credentials \
-    -d bob.example.com \
-    -d calamari.metrics.bob.example.com \
-    -d kusama.metrics.bob.example.com
+  sudo dnf install \
+    certbot \
+    python3-certbot-dns-cloudflare \
+    python3-certbot-dns-route53
   ```
+  
+  </TabItem>
+  <TabItem value="ubuntu" label="ubuntu">
+  
+  ```bash
+  #!/bin/bash
+  
+  sudo apt-get install \
+    certbot \
+    python3-certbot-dns-cloudflare \
+    python3-certbot-dns-route53
+  ```
+  
+  </TabItem>
+  </Tabs>
 
-- configure nginx `/etc/sites-enabled/example.com.conf`
+- request a cert using a dns plugin so that certbot is able to automatically renew the cert near the expiry date. manually requested certs must be manually updated to keep ssl certs valid, so they should be avoided.
+
+  <Tabs groupId="certbot">
+  <TabItem value="cloudflare" label="cloudflare">
+
+    ```bash
+    #!/bin/bash
+    
+    sudo certbot certonly \
+      --dns-cloudflare \
+      --dns-cloudflare-credentials .cloudflare-credentials \
+      -d bob.example.com \
+      -d calamari.metrics.bob.example.com \
+      -d kusama.metrics.bob.example.com
+    ```
+
+  </TabItem>
+  <TabItem value="route53" label="route53">
+
+    ```bash
+    #!/bin/bash
+    
+    sudo certbot certonly \
+      --dns-route53 \
+      --dns-route53-propagation-seconds 30 \
+      -d bob.example.com \
+      -d calamari.metrics.bob.example.com \
+      -d kusama.metrics.bob.example.com
+    ```
+
+  </TabItem>
+  </Tabs>
+
+- configure nginx `/etc/nginx/sites-enabled/example.com.conf` to reverse proxy dns subdomains to local metrics ports.
   ```
   server {
     server_name calamari.metrics.bob.example.com;
@@ -319,8 +386,8 @@ set up ssl port forwarding
       proxy_set_header Upgrade $http_upgrade;
       proxy_set_header Connection "upgrade";
     }
-    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/bob.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/bob.example.com/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
   }
