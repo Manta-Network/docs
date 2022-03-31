@@ -309,14 +309,14 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
   </TabItem>
   <TabItem value="ubuntu" label="ubuntu">
   
-  ```bash
-  #!/bin/bash
-  
-  sudo apt-get install \
-    certbot \
-    python3-certbot-dns-cloudflare \
-    python3-certbot-dns-route53
-  ```
+    ```bash
+    #!/bin/bash
+    
+    sudo apt-get install \
+      certbot \
+      python3-certbot-dns-cloudflare \
+      python3-certbot-dns-route53
+    ```
   
   </TabItem>
   </Tabs>

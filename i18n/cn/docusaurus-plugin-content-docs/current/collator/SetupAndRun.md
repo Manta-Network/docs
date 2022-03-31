@@ -265,75 +265,79 @@ Calamari 节点配置文件支持两组由双破折号 (`—`) 分隔的参数�
     - `--prometheus-port`: 中继链指标端口。 calamari-embedded-kusama 默认为 9616。manta 指标监控服务器`18.156.192.254`（按子网配置为`18.156.192.254/32`）需可访问此端口
     - `--prometheus-external`: 如果指标端口不通过 ssl 反向代理，您可能需要设置此参数来告诉指标服务器侦听 *all ips* 套接字 (`0.0.0.0:9616`) 而不是 *localhost only* (`127.0 .0.1:9616`)
 
+### expose node metrics for monitoring
+使用 [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node) 上描述的技术监控您的 Collator 节点。端口 `9615` 和 `9616` 上公开的指标有助于实现这一点，这些端口应可访问 prometheus/alertmanager 服务器（alertmanager 配置提醒服务）和 manta  `18.156.192.254` 监控服务器[pulse server](https://pulse.pelagos.systems)。
+
 ### 防火墙配置
-为保证节点正常运行，需要从外部访问以下几个端口。 为便于配置，配置文件使用以下默认端口，但您可以根据实际情况需要随意使用替代端口。
+为保证节点正常运行，需要从外部访问主机的以下几个端口。 为了简化配置，文档里使用以下端口为默认端口，但您也可以根据实际需求来更改端口。
 
-- **31333**: 默认calamari p2p端口
-- **31334**: 默认（中继）kusama p2p端口
-- **9615**: 默认 calamari prometheus端口
-- **9616**: 默认（中继）kusama prometheus端口
+- ***31333***: 默认calamari p2p端口
+- ***31334***: 默认（中继）kusama p2p端口
+- ***9615***: 默认 calamari prometheus端口
+- ***9616***: 默认（中继）kusama prometheus端口
 
-使用 [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node) 上描述的技术监控您的 Collator 节点。端口 `9615` 和 `9616` 上公开的指标有助于实现这一点，这些端口应可访问 prometheus/alertmanager 服务器（alertmanager 配置提醒服务）和 manta  18.156.192.254 监控服务器[pulse server](https://pulse.pelagos.systems)。
+#### 通过ssl，letsencrypt 和 nginx反向代理获取主机的metrics
+下面是一个最佳实践获取你的节点的metrics：
 
-建议为指标配置SSL代理（以校验数据的真实性）。一个简单的方法是安装 certbot 和 nginx 并配置一个反向代理监听端口 443 并将 ssl 请求代理到本地指标端口。
+- ***ssl*，** 此方式下，metrics的可靠性和来源都能够被验证。
+- ***dns*，**即使你的节点的机器的IP地址变动了，也不会需要触发服务器更新。
 
-示例：
+当提供的是域名，比如像 `calamari.awesome-host.awesome-collators.com` ，这样我们的监控系统更加容易地获取节点的运行情况。但如果使用的是IP，比如`123.123.123.123:987`， 这样可能会不太容易区分是哪一个节点被监听，也可能不知道监听的是中继链或者是平行链。
 
-- install certbot and a dns validation plugin
-- 主域名 **example.com**
-- dns 由 cloudflare 或 route53 管理
-- 您的节点主机名是**bob**
-- 您的 calamari 节点使用默认端口
-- 网关（路由器）将到达 wan 接口的 443/ssl 流量转发到您的Collator节点
-- 已经安装了 certbot
+一个比较简单的办法就是安装 certbot和 nginx到你的主机上，并配置443端口为反向代理监听端口，这个端口会代理ssl请求到本地的metric端口。
+
+下面列举一个简单的例子：
+
+- 你是域名 ***example.com*** 的管理员。
+- 这个域名被 cloudfare或者route53管理。
+- 你的节点主机名叫 ***bob*。**
+- 你所跑的calamari节点都使用了默认的端口。
+- 你的路由网关转发 443/ssl 网络请求到你的collator节点。
+- 你的主机安装了 certbot。
 
 :::note
-cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_provider}` for other examples
+cloudfare和route53的例子如下。但你也可以google `python3-certbot-dns-${your_dns_provider}`，得到其他的例子。
 :::
 
-- install certbot and a dns validation plugin
+- 安装 certbot 和一个dns验证插件
 
   <Tabs groupId="os">
   <TabItem value="fedora" label="fedora">
-
+    
   ```bash
   #!/bin/bash
-
   sudo dnf install \
   certbot \
   python3-certbot-dns-cloudflare \
   python3-certbot-dns-route53
   ```
-
   </TabItem>
   <TabItem value="ubuntu" label="ubuntu">
-  
+
   ```bash
   #!/bin/bash
-  
   sudo apt-get install \
     certbot \
     python3-certbot-dns-cloudflare \
     python3-certbot-dns-route53
   ```
-  
+
   </TabItem>
   </Tabs>
 
-- request a cert using a dns plugin so that certbot is able to automatically renew the cert near the expiry date. manually requested certs must be manually updated to keep ssl certs valid, so they should be avoided.
+- 通过dns的插件请求一个证书，这样certbot能够自动地更新证书当证书要过期时。但是手动地请求证书，也必须要手动地更新证书来保证ssl证书是有效的。
 
   <Tabs groupId="certbot">
   <TabItem value="cloudflare" label="cloudflare">
 
     ```bash
     #!/bin/bash
-    
     sudo certbot certonly \
-      --dns-cloudflare \
-      --dns-cloudflare-credentials .cloudflare-credentials \
-      -d bob.example.com \
-      -d calamari.metrics.bob.example.com \
-      -d kusama.metrics.bob.example.com
+        --dns-cloudflare \
+        --dns-cloudflare-credentials .cloudflare-credentials \
+        -d bob.example.com \
+        -d calamari.metrics.bob.example.com \
+        -d kusama.metrics.bob.example.com
     ```
 
   </TabItem>
@@ -341,13 +345,12 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
 
     ```bash
     #!/bin/bash
-    
     sudo certbot certonly \
-      --dns-route53 \
-      --dns-route53-propagation-seconds 30 \
-      -d bob.example.com \
-      -d calamari.metrics.bob.example.com \
-      -d kusama.metrics.bob.example.com
+        --dns-route53 \
+        --dns-route53-propagation-seconds 30 \
+        -d bob.example.com \
+        -d calamari.metrics.bob.example.com \
+        -d kusama.metrics.bob.example.com
     ```
 
   </TabItem>
