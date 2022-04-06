@@ -265,7 +265,7 @@ Calamari 节点配置文件支持两组由双破折号 (`—`) 分隔的参数�
     - `--prometheus-port`: 中继链指标端口。 calamari-embedded-kusama 默认为 9616。manta 指标监控服务器`18.156.192.254`（按子网配置为`18.156.192.254/32`）需可访问此端口
     - `--prometheus-external`: 如果指标端口不通过 ssl 反向代理，您可能需要设置此参数来告诉指标服务器侦听 *all ips* 套接字 (`0.0.0.0:9616`) 而不是 *localhost only* (`127.0 .0.1:9616`)
 
-### expose node metrics for monitoring
+### 开放节点 metrics 监控
 使用 [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node) 上描述的技术监控您的 Collator 节点。端口 `9615` 和 `9616` 上公开的指标有助于实现这一点，这些端口应可访问 prometheus/alertmanager 服务器（alertmanager 配置提醒服务）和 manta  `18.156.192.254` 监控服务器[pulse server](https://pulse.pelagos.systems)。
 
 ### 防火墙配置
