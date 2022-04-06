@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Manta": {
+    "message": "Manta",
+    "description": "The label for category Manta in sidebar docs"
+  },
+  "sidebar.docs.category.Calamari (Manta's Canary Network)": {
+    "message": "Calamari (Manta 先行网)",
+    "description": "The label for category Calamari in sidebar docs"
+  },
+  "sidebar.docs.category.Dolphin": {
+    "message": "Dolphin",
+    "description": "The label for category Dolphin in sidebar docs"
+  },
+  "sidebar.docs.category.Signer": {
+    "message": "Signer",
+    "description": "The label for category Signer in sidebar docs"
+  },
+  "sidebar.docs.category.Collators": {
+    "message": "Collator 节点",
+    "description": "The label for category Collator in sidebar docs"
+  }
+}
