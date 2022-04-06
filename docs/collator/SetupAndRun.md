@@ -288,7 +288,9 @@ the example below assumes:
 - your internet gateway (router) port forwards 443/ssl traffic arriving on the routers wan interface to your collator node
 - you have certbot installed
 
-note: cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_provider}` for other examples
+:::note
+cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_provider}` for other examples
+:::
 
 - install certbot and a dns validation plugin
 
@@ -307,14 +309,14 @@ note: cloudflare and route53 examples follow. google `python3-certbot-dns-${your
   </TabItem>
   <TabItem value="ubuntu" label="ubuntu">
   
-  ```bash
-  #!/bin/bash
-  
-  sudo apt-get install \
-    certbot \
-    python3-certbot-dns-cloudflare \
-    python3-certbot-dns-route53
-  ```
+    ```bash
+    #!/bin/bash
+    
+    sudo apt-get install \
+      certbot \
+      python3-certbot-dns-cloudflare \
+      python3-certbot-dns-route53
+    ```
   
   </TabItem>
   </Tabs>
@@ -632,7 +634,9 @@ to collate, two accounts/keys are required at any given time.
 - **collator account**: this is the account that holds the collator bond of 400,000 KMA. it is also the account that the collator's share of transaction fees will be deposited into. the bond cannot be spent while the account is collating. the keys for this account should be protected carefully and should never exist on the filesystem of the collator node.
 - **aura session key**: this is a disposable account used by the collator node to author blocks. it is bound to the collator account. it is good practice to rotate the session key on a regular basis and up to once per session. substrate stores the keys for this account in the parachain keystore on the filesystem of the collator node (`/var/lib/substrate/chains/calamari/keystore`) when either of the author_insertKey or author_rotateKeys rpc methods are called.
 
-note: both of the following methods (insert, rotate) use an unsafe rpc call to set the node session key. you must stop the service if it is running, then run the node with the `--rpc-methods=unsafe` parameter setting in order for the calls to succeed. don't forget to change the setting back to `safe` afterwards as a node that allows unsafe rpc calls and has an exposed rpc port can easily have its session keys changed by anyone, reulting in transaction fees being paid out somewhere other than where they are intended.
+:::note
+both of the following methods (insert, rotate) use an unsafe rpc call to set the node session key. you must stop the service if it is running, then run the node with the `--rpc-methods=unsafe` parameter setting in order for the calls to succeed. don't forget to change the setting back to `safe` afterwards as a node that allows unsafe rpc calls and has an exposed rpc port can easily have its session keys changed by anyone, reulting in transaction fees being paid out somewhere other than where they are intended.
+:::
 
 <Tabs groupId="keys">
 <TabItem value="insert" label="insert">
@@ -728,7 +732,9 @@ the output from the rpc call should look like this (the `result` property contai
 
 ### bind the collator account to the aura session key
 
-note: if your collator node logs do not contain both `[Relaychain] 💤 Idle` and `[Parachain] 💤 Idle` messages, your node is still syncing. **do not bind** a collator account to an aura session key for a node whose sync is incomplete. doing so will result in ejection of your collator.
+:::note
+if your collator node logs do not contain both `[Relaychain] 💤 Idle` and `[Parachain] 💤 Idle` messages, your node is still syncing. **do not bind** a collator account to an aura session key for a node whose sync is incomplete. doing so will result in ejection of your collator.
+:::
 
 account binding is accomplished on-chain. the simplest way to do this, is with polkadot.js.
 
@@ -797,6 +803,8 @@ sudo -H -u manta bash -c 'basename $(ls /var/lib/substrate/polkadot/chains/ksmcc
 
 Ensure you have completed the [collator application](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform) form. If approved, Calamari council will submit a motion to promote you as a candidate.
 
-Note: Candidate doesn’t mean your node is collator. For example, if there are 3 candidate places, and other candidates occupy all places, whilst you’re in 4th position, you have to wait until a node is unregistered or new collator places are opened by the council.
+:::note
+Candidate doesn’t mean your node is collator. For example, if there are 3 candidate places, and other candidates occupy all places, whilst you’re in 4th position, you have to wait until a node is unregistered or new collator places are opened by the council.
+:::
 
 If your collator gets a place, two sessions (`12` to `24` hours) after the candidacy motion passes, you will see blocks produced by your collator in the [explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/explorer).
