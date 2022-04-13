@@ -61,6 +61,15 @@ module.exports = {
         'collator/SetupAndRun',
         'collator/HowToLeave',
       ]
+    },
+    {
+      type: 'category',
+      label: 'Learn About Zero-Knowledge Proofs',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'education/ZkpChallenge',
+      ]
     }
   ],
 };
