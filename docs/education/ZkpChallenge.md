@@ -7,7 +7,19 @@ See `https://www.rust-lang.org/tools/install`
 
 ## Get Some Background
 
-We put together a presentation that gives some background to ZK proofs.  It's aimed towards an audience that is totally new to the field, so if you've got some experience then skip around a bit to the parts that matter to you.  Follow this link to the video on our youtube channel.
+We put together a presentation that gives some background to ZK proofs.  It's aimed towards an audience that is totally new to the field, so if you've got some experience then skip around a bit to the parts that matter to you.  Follow this link to the [video](https://drive.google.com/file/d/1mwLsnU_1mNWUV7f7jYAwcJDet7aQETaD/view?usp=sharing) and use these timestamps to navigate:
+
+What’s a SNARK? 0:00 - 3:45
+
+ABC Proof 3:45 - 5:00
+
+Polynomial Interpolation 5:00 - 7:50
+
+Arithmetization 7:50 - 18:21
+
+Polynomial Commitment 18:21 - 23:39
+
+Prove/Verify 23:39 - end
 
 ## Write Your Solution
 
