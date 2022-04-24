@@ -1,39 +1,76 @@
 # 🐬 DolphinPay
 
-DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecosystem assets. Below is the overview of DolphinPay:
+DolphinPay allows users to send many tokens privately, even if those tokens are not natively private. Users can easily turn public tokens into private tokens, send private tokens in secret, and then convert private tokens back to public tokens.
 
 ![overview](./private-payment/DolphinPay.svg)
 
-## Try Dolphin (version Boto)
+# Try DolphinPay Testnet (version Spinner)
+## Setup
 
-1. [Download *Signer*](https://github.com/Manta-Network/manta-signer/releases/latest), a native app to turbo-charge zero-knowledge proof generation.
+### 1. Setup polkadot.js
+
+[Download *polkadot.js* browser wallet](https://polkadot.js.org/extension/), open the extension, and create a new account:
+   ![new-polkadot-js-account](./private-payment/new-polkadot-js-account.png)
+
+<br>
+
+### 2. Get Testnet Tokens
+
+   Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#dolphin-faucet` channel, and type `/gimme`. You should see a faucet options prompt:
+
+   ![faucet](./private-payment/faucet.png)
+
+   You should first claim `DOL`, since you need `DOL` to pay gas fees. Then, you can claim your favorite testnet tokens like `KSM`, `ROC`, `kBTC`, etc.
+<br>
+<br>
+### 3. [Install *Signer*](https://github.com/Manta-Network/manta-signer/releases/latest)
+
+Signer is a native app to turbo-charge zero-knowledge proof generation. Signer is available for:
    * macOS
    * Ubuntu/Debian
    * Windows
 
-    For macOS, you might need to go to `System Preferences -> Security & Privacy -> General` to run the *Signer* (we are working to get the app approved by Apple, but it takes time).
+   When you first open Signer, follow the prompts to create a new account:
+   ![signer-init](./private-payment/signer-init.png)
 
-   ![signer-security](./private-payment/allow-signer.png)
+<br>
 
-   When you first open *Signer*, it will ask you to create a password and to memorize a 12-word mnemonic.
+### 4. Lower shields if you are using Brave browser
+   Brave's shields prevent Dolphin web app from communicating with Signer, so navigate to [Dolphin App](https://app.dolphin.manta.network/) and turn them off:
+   ![brave-shields](./private-payment/brave-shields.png)
 
-2. Get Testnet Tokens:
-   * Join [Manta&Calamari's Discord](https://t.co/5BacMMLSCW)
-   * Go to the `#dolphin-faucet` channel
-   * Type `/gimme` and you will see a faucet options prompt:
 
-   ![faucet](./private-payment/faucet.png)
+## Transacting
 
-   * You should first claim `DOL`, since you need `DOL` to pay gas fees. Then, you can claim your favorite testnet tokens like `BTC`, `ETH`, `DOT`, etc.
+Now let's send some private payments :)
 
-3. Go to [Dolphin App](https://app.dolphin.manta.network/), try these hot baked Dolphin (version Boto) features:
-   * Convert public tokens to private:
+1. Run Signer
+
+   If Signer is not already running, open signer and enter your password to log in:
+   ![signer-login](./private-payment/signer-login.png)
+
+   Go to [Dolphin App](https://app.dolphin.manta.network/). You should see that signer is connected in the top right corner of the screen:
+   ![signer-connected](./private-payment/signer-connected.png)
+
+
+
+2. Convert some public tokens to private tokens
+
+   Select the public address you are sending from, the token you are sending, and the amount you want to send. Press "To Private" to submit:
 
    ![to-private](./private-payment/to-private.png)
 
-   * You can see your private token balance by switching to `private` option:
+3. Send some private tokens to a private address
 
    ![private-transfer](./private-payment/private-transfer.png)
+
+4. Convert some private tokens to public tokens
+
+   ![to-public](./private-payment/to-public.png)
+
+
+   * You can see your private token balance by switching to `private` option:
+
 
    * Send private tokens: private tokens are attached to a `One-Time Shielded Address`, which means before sending tokens to your friend, you need to get their one time shielded address through some secure communication channel, such as Signal or Telegram.
 
@@ -43,7 +80,15 @@ DolphinPay enables BYOT (Bring your own token) private payment for Polkadot ecos
 
    * Convert private tokens to public tokens:
 
-   ![to-public](./private-payment/to-public.png)
+## Troubleshooting
+- Check that polkadot.js browser extension is installed, and has permission to connect to the Dolphin web app.
+- Check that the latest version of signer is installed, running, and logged in.
+- Check that that your shields are down if you are using Brave browser.
+- Check that you have some public DOL in order to pay fees.
+- Check that you are connected to a node.
+- Check that you are sending to the correct address type.
+
+If all these checks pass and you still can't send transactions
 
 ## FAQ
 
