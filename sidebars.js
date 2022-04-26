@@ -28,6 +28,7 @@ module.exports = {
         'calamari/Governance',
         'calamari/api',
         'calamari/CrowdloanClaim',
+        'calamari/XcmOnboarding',
       ],
     },
     {
