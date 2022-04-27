@@ -26,7 +26,7 @@
 - For that you can download the latest manta binary from the Releases page.
 - Then use polkadot-launch to launch a `calamari-local` or `calamari-dev` network for testing.
 - You will also need to launch a `rococo-local` relay chain using the latest release of Polkadot.
-- Here's a reference polkadot-launch config for [calamari-dev](#Example-Polkadot-Launch-Config).
+- Here's a reference polkadot-launch config for [calamari-dev](XcmOnboarding#example-polkadot-launch-config).
 - Please let us know if there's a specific branch of your codebase that we should test with.
 
 ## XCM Integration on Rococo
@@ -62,11 +62,12 @@ Sovereign Account Address on other Parachains (Generic): 0x7369626c2408000000000
 Sovereign Account Address on Dolphin: 0x7369626c24080000000000000000000000000000
 ```
 
-- Once you’ve got your `Sovereign Account`’s address, please fund it using the Rococo faucet. Otherwise you won’t be able to create the HRMP channel as the transaction will fail due to insufficient fees. Let us know if you need additional funds.
+- Once you’ve got your `Sovereign Account`’s address, please fund it using the [Rococo faucet](https://wiki.polkadot.network/docs/build-pdk#obtaining-roc). Otherwise you won’t be able to create the HRMP channel as the transaction will fail due to insufficient fees. Let us know if you need additional funds.
 
 ## Create HRMP Channel with Dolphin
+### Get the Relay Encoded Call Data to Open HRMP Channel.
 
-- Get the Relay Encoded Call Data to Open HRMP Channel. Once your parachain is onboard, you need to create the HRMP channel between your Parachain and Dolphin.
+- Once your parachain is onboard, you need to create the HRMP channel between your Parachain and Dolphin.
 - The first step is to get an encoded call data from the relay chain. The extrinsic contains the target parachain ID, max number of messages, and max message size, described in the next bullet.
 - In PolkadotJS app, switch to the Rococo network. Go to Developer -> [Javascript section](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/js). Run the following code, note to replace the demo recipient para id with your own:
 
@@ -92,11 +93,12 @@ console.log(tx.toHex());
     3. The destination has to be the relay chain, for dest (V1) set:
     `{ parents:1, interior: Here }`
     4. For the message (V2), you’ll be adding 4 items (described before):
-    a. `WithdrawAsset { id: Concrete { parents: 0, interior: Here}, Fungible: 1000000000000 }`
-    b. `BuyExecution { id: Concrete: {parents: 0, interior: Here}, Fungible: 1000000000000, weightLimit: Unlimited }`
-    c. `Transact { originType: Native, requireWeightAtMost: 1000000000, call: XcmDoubleEncoded: { encoded: RelayEncodedCallData } }`**Note:** you need to provide the encoded call data obtained before
-    d. `RefundSurplus`
-    e. `DepositAsset: { assets: Wild { Wild: All }, maxAssets: 1, beneficiary: { parents: 0, interior: X1 { X1: AccountId32 { network: Any, id: SovereignAccountonRelay } } } }`
+        1. WithdrawAsset { id: Concrete { parents: 0, interior: Here}, Fungible: 1000000000000 }
+        2. BuyExecution { id: Concrete: {parents: 0, interior: Here}, Fungible: 1000000000000, weightLimit: Unlimited }
+        3. Transact { originType: Native, requireWeightAtMost: 1000000000, call: XcmDoubleEncoded: { encoded: RelayEncodedCallData } }
+            Note: you need to provide the encoded call data obtained before
+        4. RefundSurplus
+        5. DepositAsset: { assets: Wild { Wild: All }, maxAssets: 1, beneficiary: { parents: 0, interior: X1 { X1: AccountId32 { network: Any, id: SovereignAccountonRelay } } } }
     
     **Note:** The values used above are for reference to be used in this testing environment, do not use these values in production!
     
@@ -112,8 +114,7 @@ Here's an example of the fully formed extrinsic:
 ## Accepting HRMP Channel with Calamari
 
 - Channels are one way. This means that if you open a channel with Dolphin, it will allow you only to send tokens from your parachain to Dolphin. There needs to be a channel that Dolphin will request to send back tokens, and you need to accept.
-- Once your parachain is onboard, we will request to open a channel, which you need to accept.
-- The process of accepting the channel is similar to the one of opening, meaning that you have to construct an encoded call data in the relay chain, and then get it executed via an XCM from your parachain.
+- The process of accepting the channel is similar to the one for opening, meaning that you have to construct an encoded call data in the relay chain, and then get it executed via an XCM from your parachain.
 
 ### Get the Relay Encoded Call Data to Accept HRMP Channel
 
@@ -130,10 +131,12 @@ console.log(tx.toHex());
 
 ### Send XCM to Relay Chain
 
-- The steps are the same as before (when making the request to open a channel). The main difference is in the Transact item, where you need to provide the encoded call data calculated above. This XCM message needs to be sent from the root account (either SUDO or via governance):
-`Transact { originType: Native, requireWeightAtMost: 1000000000, call: XcmDoubleEncoded: { encoded: RelayEncodedCallData } }`
+- The steps are the same as before (when making the request to open a channel). The main difference is in the `Transact` item, where you need to provide the encoded call data calculated above. This XCM message needs to be sent from the root account (either SUDO or via governance):
+```
+Transact { originType: Native, requireWeightAtMost: 1000000000, call: XcmDoubleEncoded: { encoded: RelayEncodedCallData } }
+```
     
-    **Note**: The values used above are for reference to be used in this testing environment, do not use these values in production!
+**Note**: The values used above are for reference to be used in this testing environment, do not use these values in production!
     
 ## Assets Registrations
 
