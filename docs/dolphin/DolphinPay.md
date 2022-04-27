@@ -1,4 +1,4 @@
-# 🐬 DolphinPay Testnet (version Spinner)
+# 🐬 DolphinPay Tutorial
 
 DolphinPay allows users to send many tokens privately, even if those tokens are not natively private. Users can easily turn public tokens into private tokens, send or receive private tokens in secret, and convert private tokens back to public tokens.
 
