@@ -57,7 +57,7 @@ We support two ways of submitting proof hashes:
 1. Submit a remark transaction in Polkadot
    * open the web app for polakdot
    * go to `Developer` -> `Extrinsics`, choose `system`, `remark`
-     ![polkaot submission](.resources/../resources/polakdot-submit.png)
+     ![polkaot submission](./resources/polakdot-submit.png)
    * put the hash to the remark field (need to add `0x`)
    * submit the extrinsic to Polkadot blockchain, remember the extrinsic id 
    

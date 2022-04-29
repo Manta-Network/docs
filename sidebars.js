@@ -11,11 +11,23 @@
 
 module.exports = {
   docs: [
-    'Introduction',
+    {
+      type: 'doc',
+      label: 'What is Manta?',
+      id:'Introduction',
+    },
     {
       type: 'category',
-      label: 'Manta',
-      items: ['manta/Overview'],
+      label: 'Concepts',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'concepts/ZKP',
+        'concepts/PrivatePayment',
+        'concepts/ShieldedAddress',
+        'concepts/ViewingKey',
+        'concepts/Governance',
+      ],    
     },
     {
       type: 'category',
