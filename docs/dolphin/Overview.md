@@ -13,5 +13,5 @@ Dolphin, as well as [Calamari](../calamari/Overview.md), form the test-bed for t
 
 See those experiment pages for more information. 
 
-To use the Dolphin testnet and experiment with these new features, [install a **Signer** instance](../signer/Overview.md).
+To use the Dolphin testnet and experiment with these new features, [install a **Signer** instance](../guides/MantaSigner.md).
 

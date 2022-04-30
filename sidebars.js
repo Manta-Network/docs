@@ -26,6 +26,7 @@ module.exports = {
         'concepts/PrivatePayment',
         'concepts/ShieldedAddress',
         'concepts/ViewingKey',
+        'concepts/Signer',
         'concepts/Governance',
       ],    
     },
@@ -40,12 +41,11 @@ module.exports = {
         'calamari/Governance',
         'calamari/api',
         'calamari/CrowdloanClaim',
-        'calamari/XcmOnboarding',
       ],
     },
     {
       type: 'category',
-      label: 'Dolphin',
+      label: 'Dolphin Testnet',
       collapsible: true,
       collapsed: false,
       items: [
@@ -57,11 +57,13 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Signer',
+      label: 'Guides',
+      collapsible: true,
+      collapsed: true,
       items: [
-        'signer/Overview',
-        'signer/HowToUseIt',
-      ],
+        'guides/XcmOnboarding',
+        'guides/MantaSigner'
+      ]
     },
     {
       type: 'category',
