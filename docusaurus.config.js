@@ -22,7 +22,7 @@ module.exports = {
       title: 'Manta Network Docs',
       logo: {
         alt: 'Manta Network Logo',
-        src: 'img/manta-256x256.png',
+        src: 'img/manta2.png',
       },
       items: [
         {
@@ -35,6 +35,10 @@ module.exports = {
           label: 'GitHub',
           position: 'left',
         },
+        {
+          type: "localeDropdown",
+          position: "left"
+        }
       ],
     },
     footer: {
@@ -116,4 +120,16 @@ module.exports = {
     },
   ],
   plugins: [require.resolve('@cmfcmf/docusaurus-search-local')],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'cn'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      cn: {
+        label: '中文',
+      }
+    }
+  }
 };
