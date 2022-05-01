@@ -63,7 +63,6 @@ module.exports = {
       items: [
         'guides/DolphinPay',
         'guides/XcmOnboarding',
-        'guides/MantaSigner'
       ]
     },
     {

@@ -1,6 +1,6 @@
 # Manta Signer
 
-The **Signer** is a _secret manager_ and _zero-knowledge proof generator_ for use with the Manta, [Calamari](../calamari/Overview.md), and Dolphin Testnet. 
+The **Signer** is a _secret manager_ and _zero-knowledge proof generator_ for use with the Manta, Calamari, and Dolphin Testnet. 
 
 ## Why do you need Signer?
 
