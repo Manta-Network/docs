@@ -28,6 +28,7 @@ module.exports = {
         'calamari/Governance',
         'calamari/api',
         'calamari/CrowdloanClaim',
+        'calamari/XcmOnboarding',
       ],
     },
     {
@@ -60,6 +61,15 @@ module.exports = {
         'collator/HowToApply',
         'collator/SetupAndRun',
         'collator/HowToLeave',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Learn About Zero-Knowledge Proofs',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'education/ZkpChallenge',
       ]
     }
   ],
