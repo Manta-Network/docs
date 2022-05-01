@@ -45,31 +45,9 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Dolphin Testnet',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'dolphin/Overview',
-        'dolphin/DolphinPay',
-        'dolphin/PrivatePayment',
-        'dolphin/PrivateExchange',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Guides',
-      collapsible: true,
-      collapsed: true,
-      items: [
-        'guides/XcmOnboarding',
-        'guides/MantaSigner'
-      ]
-    },
-    {
-      type: 'category',
       label: 'Collators',
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
         'collator/CommunityCollatorProgram',
         'collator/HowToApply',
@@ -79,11 +57,24 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Learn About Zero-Knowledge Proofs',
+      label: 'Guides',
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
-        'education/ZkpChallenge',
+        'guides/DolphinPay',
+        'guides/XcmOnboarding',
+        'guides/MantaSigner'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Learn More About Manta',
+      collapsible: true,
+      collapsed: true,
+      items: [
+        'learn/PrivatePayment',
+        'learn/MantaPaySpec',
+        'learn/ZkpChallenge',        
       ]
     }
   ],
