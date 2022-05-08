@@ -119,6 +119,7 @@ module.exports = {
       crossorigin: 'anonymous',
     },
   ],
+  plugins: [require.resolve('@cmfcmf/docusaurus-search-local')],
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'cn'],
