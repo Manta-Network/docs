@@ -32,6 +32,12 @@ c. Azure/GCP or other cloud/datacenter provider
 
 `400_000` (four hundred thousand) KMA will be bonded and is not transferable whilst collating. Ensure the same account always has a small *free* balance above the bonded amount to account for transaction fees of the registration process. This should normally be covered by leaving a free balance of 20 KMA available. In practice, the fees are much smaller, but not zero.
 
+:::caution
+A **free** balance of `400_000` KMA must be maintained at all times during the application process. Special care should be taken with participation in voting to prevent locking any part of the candidacy bond.
+
+When voting, the *vote value* should be for an amount less than the free account balance, minus the candidacy bond. for example: a collator account with a free balance of `400_100` KMA, should set the *vote value* to an amount less than `100` KMA to prevent locking any portion of the collator bond, which would cause a `collatorselection(NewDesiredCandidates)` call to fail with a `LiquidityRestrictions` exception.
+:::
+
 You can always check the current candidacy bond amount on [calamari](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/chainstate) &gt; collatorSelection &gt; candidacyBond(): u128.
 ![Candidacy Bond](/img/collator-program/candidacy-bond.png)
 
