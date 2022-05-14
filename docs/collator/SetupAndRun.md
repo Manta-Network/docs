@@ -12,8 +12,22 @@ import TabItem from '@theme/TabItem';
 
   ```bash
   #!/bin/bash
-
+  
+  #Depending on your setup, here are some steps to get started
+  
+  #Upgrade to latest version
+  sudo apt update && sudo apt upgrade -y
+  
+  #Install docker
+  sudo apt install docker.io
+  
+  #Add current user to docker
+  sudo usermod -aG docker $USER
+  
+  #Pull the calamari image
   docker pull mantanetwork/calamari:latest
+  
+  
   ```
 </TabItem>
 <TabItem value="fedora" label="fedora">
@@ -265,11 +279,26 @@ you should monitor your own collator using the techniques described on the [polk
 
 #### firewall configuration
 several ports are required to be accessible from outside of the node host in order for the collator to function well. for simplicity, the settings documented below use the default ports, however feel free to use alternative ports as required by your infrastructure and network topology.
+
+<Tabs groupId="firewallports">
+<TabItem value="docker" label="docker">
+  
+- **30333**: default calamari peer-to-peer port
+- **30334**: default (embedded-relay) kusama peer-to-peer port
+- **9615**: default calamari metrics port
+- **9616**: default (embedded-relay) kusama metrics port
+  
+</TabItem>
+<TabItem value="linux" label="linux">
+  
 - **31333**: default calamari peer-to-peer port
 - **31334**: default (embedded-relay) kusama peer-to-peer port
 - **9615**: default calamari metrics port
 - **9616**: default (embedded-relay) kusama metrics port
-
+  
+</TabItem>
+</Tabs>
+  
 #### reverse proxy metrics over ssl with letsencrypt and nginx
 it is good practice to serve your metrics over:
 
@@ -443,10 +472,14 @@ sudo firewall-cmd --reload
 - start your docker node
 
   ```bash
+  #Non production sample
   docker run \
     -it \
     -p 9933:9933 \
     -p 30333:30333 \
+    -p 30334:30334 \
+    -p 9615:9615 \
+    -p 9516:9516 \
     -v host_path:/container_path \
     --name your_container_name \
     mantanetwork/calamari:latest \
@@ -457,6 +490,25 @@ sudo firewall-cmd --reload
     --collator \
     --rpc-methods=unsafe \
     --unsafe-rpc-external
+  
+  #Production sample
+  docker run \
+    -it \
+    -p 9933:9933 \
+    -p 30333:30333 \
+    -p 30334:30334 \
+    -v host_path:/container_path \
+    --restart=unless-stopped \
+    --name your_container_name \
+    mantanetwork/calamari:latest \
+    --base-path /container_path/data \
+    --keystore-path /container_path/keystore \
+    --name your_collator_name \
+    --rpc-cors all \
+    --collator \
+    --rpc-methods=safe \
+    -- \
+    --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'
   ```
 
   Examples of these name and paths:
@@ -465,6 +517,17 @@ sudo firewall-cmd --reload
 
   `your_collator_name` => `Community-Collator-1`
 
+  You may want to consider the following:
+  - if using http (not configured for ssl with certbot) for metrics, add ports
+  `-p 9615:9615 -p 9616:9616`
+  - add auto restart to ensure start on system boot or reboot
+  `--restart=unless-stopped`
+  - remove unsafe-rpb-external when you are ready for production
+  - change rpc-methods to safe when ready for production
+  `--rpc-methods=safe`
+  - additional Kusama configuration. at the end of your command stack, add -- to designate Kusama configuration, then add telemetry-url
+  `-- --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'`
+  
   Ensure you can see a line of log like this:
 
   ```bash
