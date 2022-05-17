@@ -6,11 +6,11 @@ MantaPay allows users to privatize public assets to private, transfer private as
     <img alt="DolphinPay Overview" src="/img/guides/DolphinPay.svg" width="70%"/>
 </div>
 
-Note: Public assets and private assets have different addresses (public addresses vs shielded addresses). There is no relationship between a public address and a shielded address. 
+Note: Public assets and private assets have different addresses (public addresses vs shielded addresses). There is no relationship between a public address and a shielded address.
 
 ## Setup Testnet Accounts
 
-### Install a Polkadot.JS Browser Extension and Create a Public Address 
+### Install a Polkadot.JS Browser Extension and Create a Public Address
 
 Currently, Dolphin Testnet V2 supports Polakdot.JS browser extension wallet to manage public assets.
 
@@ -102,6 +102,11 @@ Now let's send some private payments :)
    </div>
 
    Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
+<br/>
+
+   <div style={{textAlign: 'center'}}>
+    <img alt="private-transfer-approve" src="/img/guides/private-transfer-approve.png" width="50%"/>
+   </div>
 
    Finally, polkadot.js will prompt you to approve the transfer and then publish it to the Dolphin blockchain.
 <br/>
