@@ -1,7 +1,10 @@
 # 🐬 Try MantaPay in Dolphin Testnet
 
 MantaPay allows users to privatize public assets to private, transfer private asset, and convert private asset back to public assets (as demonstrated below).
-![overview](./resources/DolphinPay.svg)
+
+<div style={{textAlign: 'center'}}>
+    <img alt="DolphinPay Overview" src="/img/guides/DolphinPay.svg" width="70%"/>
+</div>
 
 Note: Public assets and private assets have different addresses (public addresses vs shielded addresses). There is no relationship between a public address and a shielded address. 
 
@@ -9,7 +12,7 @@ Note: Public assets and private assets have different addresses (public addresse
 
 ### Install a Polkadot.JS Browser Extension and Create a Public Address 
 
-Currently, Dolphin Testnet V2 support Polakdot.JS browser extension wallet to manage public assets.
+Currently, Dolphin Testnet V2 supports Polakdot.JS browser extension wallet to manage public assets.
 
 [Download *polkadot.js* browser wallet](https://polkadot.js.org/extension/), open the extension, and create a new account.
 
@@ -23,7 +26,9 @@ Signer is a native app to turbo-charge zero-knowledge proof generation. Signer i
 When you first open Signer, follow the prompts to create a new account:
 <br/>
 
-   ![signer-init](./resources/signer-init.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="signer-init" src="/img/guides/signer-init.png" width="50%"/>
+   </div>
 
 <br/>
 
@@ -31,7 +36,9 @@ When you first open Signer, follow the prompts to create a new account:
 
 Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#dolphin-faucet` channel, and type `/gimme`. You should see a faucet options prompt:
 
-   ![faucet](./resources/faucet.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="faucet" src="/img/guides/faucet.png" width="70%"/>
+   </div>
 
 You should first claim `DOL`, since you need `DOL` to pay gas fees. Then, you can claim your favorite testnet tokens like `KSM`, `ROC`, `kBTC`, etc.
 
@@ -46,12 +53,16 @@ Now let's send some private payments :)
    If Signer is not already running, open signer and enter your password to log in:
    <br/>
 
-   ![signer-login](./resources/signer-login.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="signer-login" src="/img/guides/signer-login.png" width="50%"/>
+   </div>
 
    Go to [Dolphin App](https://app.dolphin.manta.network/). You should see that signer is connected in the top right corner of the screen:
 <br/>
 
-   ![signer-connected](./resources/signer-connected.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="signer-connected" src="/img/guides/signer-connected.png" width="30%"/>
+   </div>
 <br/>
 <br/>
 
@@ -60,12 +71,16 @@ Now let's send some private payments :)
    Select the public address you are sending from, the token you are sending, and the amount you want to send to your shielded address. Press "To Private" to submit:
 <br/>
 
-   ![to-private](./resources/to-private.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="to-private" src="/img/guides/to-private.png" width="50%"/>
+   </div>
 
    Finally, polkadot.js will prompt you to approve the transfer, and then publish it to the Dolphin blockchain:
 <br/>
 
-   ![polkadot-js-sign](./resources/polkadot-js-sign.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="polkadot-js-sign" src="/img/guides/polkadot-js-sign.png" width="50%"/>
+   </div>
 <br/>
 <br/>
 
@@ -82,7 +97,9 @@ Now let's send some private payments :)
    Click "Private Transfer" to begin the transaction.
 <br/>
 
-   ![private-transfer](./resources/private-transfer.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="private-transfer" src="/img/guides/private-transfer.png" width="50%"/>
+   </div>
 
    Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
 
@@ -96,7 +113,9 @@ Now let's send some private payments :)
 
 <br/>
 
-   ![to-public](./resources/to-public.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="to-public" src="/img/guides/to-public.png" width="50%"/>
+   </div>
 
    Once again, Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
 
@@ -108,27 +127,37 @@ Now let's send some private payments :)
 - Check that polkadot.js browser extension is installed, and has permission to connect to the Dolphin web app.
 <br/>
 
-   ![polkadot-js-allowed](./resources/polkadot-js-allowed.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="70%"/>
+   </div>
 
 - Check that the latest version of signer is installed, running, and logged in.
 <br/>
 
-   ![signer-connected](./resources/signer-connected.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="signer-connected" src="/img/guides/signer-connected.png" width="30%"/>
+   </div>
 
 - Check that that your shields are down if you are using Brave browser.
    <br/>
 
-   ![brave-shields](./resources/brave-shields.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="brave-shields" src="/img/guides/brave-shields.png" width="70%"/>
+   </div>
 
 - Check that you are connected to a node ("Ford" by default) and that your internet connection is stable.
    <br/>
 
-   ![noce-connected](./resources/node-connected.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="node-connected" src="/img/guides/node-connected.png" width="30%"/>
+   </div>
 
 - Check that you have some public DOL in order to pay fees.
    <br/>
 
-   ![fee-balance](./resources/fee-balance.png)
+   <div style={{textAlign: 'center'}}>
+    <img alt="fee-balance" src="/img/guides/fee-balance.png" width="70%"/>
+   </div>
 
 If all these checks pass and you still can't send transactions, please let us know on discord in the `#dolphin-testnet` channel so that we can improve Dolphin!
 <br/>

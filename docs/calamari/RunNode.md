@@ -4,7 +4,7 @@ id: RunNode
 title: 🔌  Run a Calamari Node
 ---
 
-To run a calamari full node, the most easy way is to use `docker`:
+To run a calamari full node, the easiest way is to use `docker`:
 
 ```bash
 docker run mantanetwork/calamari:latest

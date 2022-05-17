@@ -1,6 +1,6 @@
 # What is Manta?
 
-Manta is the universal blockchain platform with on-chain privacy. We are building a scalable and composable blockchain platform with privacy guarantee from the first principle: using cryptographic constructions such as zkSNARKs to allow developers to build all kinds of blockchain applications, including DeFi, NFT, GameFi, DAO and many more with end-to-end privacy guarantees and at the same time interoperable, easy to use, high performance and auditable.
+Manta is the universal private blockchain platform. We are building a scalable, composable, and private network from first principles. Manta's zero-knowledge cryptography allows developers to build dapps with end-to-end privacy guarantees, which are also interoperable, easy to use, high-performance and auditable. Manta can bring privacy to DeFi, NFTs, GameFi, DAOs, and countless other blockchain applications.
 
 Manta offers two networks:
 
