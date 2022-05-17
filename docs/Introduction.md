@@ -1,12 +1,18 @@
-# Introduction
+# What is Manta?
 
-Welcome! 👋
+Manta is the universal private blockchain platform. We are building a scalable, composable, and private network from first principles. Manta's zero-knowledge cryptography allows developers to build dapps with end-to-end privacy guarantees, which are also interoperable, easy to use, high-performance and auditable. Manta can bring privacy to DeFi, NFTs, GameFi, DAOs, and countless other blockchain applications.
 
-Manta is the leading on-chain privacy platform for Polkadot and beyond. We are building a better Web 3.0 with privacy guarantees from first principles: applying cutting-edge cryptographic constructions such as zkSNARKs to build blockchain applications, including DeFi, with end-to-end privacy guarantees and at the same time interoperable, easy to use, high performance and auditable tools.
-
-Manta plans to offer two networks:
+Manta offers two networks:
 
 - [Calamari Network](https://calamari.network/): Manta's canary network. Calamari is running as a Kusama Parachain.
 - [Manta Network](https://manta.network/): Manta's Polkadot parachain. Manta is looking forward to joining the Polkadot ecosystem!
 
-and a testnet called Dolphin which will run independently of Calamari and Manta.
+## For User
+* Try [Dolphin Testnet dApp](https://app.dolphin.manta.network).
+* Join Manta Community ([discord](https://discord.gg/PRDBTChSsF), [twitter](https://twitter.com/mantanetwork), [telegram](https://t.me/mantanetworkofficial)). 
+
+## For Parachain Developer
+* Check the [XCM Onboarding Guide](guides/XcmOnboarding.md) to privatize your assets.
+
+## For Potential Node Runner
+* Join [Calamari Community Collator Program](collator/CommunityCollatorProgram.md).
