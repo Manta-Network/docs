@@ -108,6 +108,8 @@ Now let's send some private payments :)
     <img alt="private-transfer-approve" src="/img/guides/private-transfer-approve.png" width="50%"/>
    </div>
 
+<br/>
+
    Finally, polkadot.js will prompt you to approve the transfer and then publish it to the Dolphin blockchain.
 <br/>
 <br/>
