@@ -31,7 +31,9 @@ As Calamari's native currency, `KMA` has following major utilities:
 
 `KMA` follows a community-driven distribution philosophy. The majority portion of `KMA` tokens will be owned by community members.
 
-![Calamari Supply](/img/calamari-supply.png)
+<div style={{textAlign: 'center'}}>
+    <img alt="calamari supply" src="/img/calamari-supply.png" width="70%"/>
+</div>
 
 There is no team allocation; furthermore, there are no private rounds or private investors. The first community distribution is
 via rewards for community members who contribute to Calamari's first Kusama Crowdloan.
