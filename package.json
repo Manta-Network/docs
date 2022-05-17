@@ -16,8 +16,8 @@
   "dependencies": {
     "@aldridged/docusaurus-plugin-lunr": "^1.0.0-alpha.10",
     "@cmfcmf/docusaurus-search-local": "^0.10.0",
-    "@docusaurus/core": "^2.0.0-beta.15",
-    "@docusaurus/preset-classic": "^2.0.0-beta.15",
+    "@docusaurus/core": "^2.0.0-beta.20",
+    "@docusaurus/preset-classic": "^2.0.0-beta.20",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
     "hast-util-is-element": "1.1.0",

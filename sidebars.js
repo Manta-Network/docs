@@ -11,11 +11,24 @@
 
 module.exports = {
   docs: [
-    'Introduction',
+    {
+      type: 'doc',
+      label: 'What is Manta?',
+      id:'Introduction',
+    },
     {
       type: 'category',
-      label: 'Manta',
-      items: ['manta/Overview'],
+      label: 'Concepts',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'concepts/ZKP',
+        'concepts/PrivatePayment',
+        'concepts/ShieldedAddress',
+        'concepts/ViewingKey',
+        'concepts/Signer',
+        'concepts/Governance',
+      ],    
     },
     {
       type: 'category',
@@ -28,34 +41,13 @@ module.exports = {
         'calamari/Governance',
         'calamari/api',
         'calamari/CrowdloanClaim',
-        'calamari/XcmOnboarding',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Dolphin',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'dolphin/Overview',
-        'dolphin/DolphinPay',
-        'dolphin/PrivatePayment',
-        'dolphin/PrivateExchange',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Signer',
-      items: [
-        'signer/Overview',
-        'signer/HowToUseIt',
       ],
     },
     {
       type: 'category',
       label: 'Collators',
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
         'collator/CommunityCollatorProgram',
         'collator/HowToApply',
@@ -65,11 +57,23 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Learn About Zero-Knowledge Proofs',
+      label: 'Guides',
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
-        'education/ZkpChallenge',
+        'guides/DolphinPay',
+        'guides/XcmOnboarding',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Learn More About Manta',
+      collapsible: true,
+      collapsed: true,
+      items: [
+        'learn/PrivatePayment',
+        'learn/MantaPaySpec',
+        'learn/ZkpChallenge',        
       ]
     }
   ],
