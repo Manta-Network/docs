@@ -52,11 +52,7 @@ module.exports = {
               to: '/docs/Introduction',
             },
             {
-              label: 'Manta Overview',
-              to: '/docs/manta/Overview',
-            },
-            {
-              label: 'Calamari Overview',
+              label: 'Calamari',
               to: '/docs/calamari/Overview',
             },
           ],
@@ -119,6 +115,7 @@ module.exports = {
       crossorigin: 'anonymous',
     },
   ],
+  plugins: [require.resolve('@cmfcmf/docusaurus-search-local')],
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'cn'],
