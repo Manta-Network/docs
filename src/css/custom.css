@@ -70,7 +70,7 @@
   }
 }
 
-.landing-container > a {
+.landing-container > div > a {
   padding: 24px;
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
@@ -78,26 +78,35 @@
   cursor: pointer;
   color: var(--ifm-font-color-base) !important;
   font-size: 16px;
+  height: 100%;
+  /* margin: 32px; */
 }
 
-.landing-container > a h1 {
+.landing-container > div > a h1 {
   font-size: 16px;
   display: flex;
   align-items: center;
 }
 
-.landing-container > a h1 svg {
+.landing-container > div > a h1 svg {
   width: 20px;
   height: 20px;
   margin-right: 8px;
 }
 
-html[data-theme='dark'] .landing-container > a h1 svg {
+html[data-theme='dark'] .landing-container > div > a h1 svg {
   fill: #fff;
 }
 
-.landing-container > a:hover {
-  border-width: 0;
+.landing-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-container > div > a:hover {
+  /* border-width: 0; */
+  border-color: var(--ifm-background-color);
   background-color: white;
   --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -107,9 +116,10 @@ html[data-theme='dark'] .landing-container > a h1 svg {
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-html[data-theme='dark'] .landing-container > a:hover {
+html[data-theme='dark'] .landing-container > div > a:hover {
+  border-color: var(--ifm-background-color);
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  background-color: var(--ifm-navbar-background-color);
   --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
