@@ -8,7 +8,6 @@ Manta offers two networks:
 - [Manta Network](https://manta.network/): Manta's Polkadot parachain. Manta is looking forward to joining the Polkadot ecosystem!
 
 <div class="landing-container">
-    <div>
         <a>
             <div>
                 <h1>
@@ -25,8 +24,6 @@ Manta offers two networks:
                 </ul>
             </div>
         </a>
-    </div>
-    <div>
         <a>
             <div>
                 <h1>
@@ -41,8 +38,6 @@ Manta offers two networks:
                 </ul>
             </div>
         </a>
-    </div>
-    <div>
         <a>
             <div>
                 <h1>
@@ -56,5 +51,4 @@ Manta offers two networks:
                 </ul>
             </div>
         </a>
-    </div>
 </div>
