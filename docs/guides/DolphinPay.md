@@ -145,6 +145,12 @@ Now let's send some private payments :)
     <img alt="signer-connected" src="/img/guides/signer-connected.png" width="30%"/>
    </div>
 
+- Make sure you input password at least 8 characters to create a new private account in signer.
+<br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="password-too-short" src="/img/guides/pwd-too-short.png" width="50%"/>
+   </div>
+
 - Check that that your shields are down if you are using Brave browser.
    <br/>
 
