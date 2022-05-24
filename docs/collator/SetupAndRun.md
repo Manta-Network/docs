@@ -282,19 +282,23 @@ several ports are required to be accessible from outside of the node host in ord
 
 <Tabs groupId="firewallports">
 <TabItem value="docker" label="docker">
-  
-- **30333**: default calamari peer-to-peer port
-- **30334**: default (embedded-relay) kusama peer-to-peer port
-- **9615**: default calamari metrics port
-- **9616**: default (embedded-relay) kusama metrics port
-  
+
+```  
+30333: default calamari peer-to-peer port
+30334: default (embedded-relay) kusama peer-to-peer port
+9615: default calamari metrics port
+9616: default (embedded-relay) kusama metrics port
+```  
+
 </TabItem>
 <TabItem value="linux" label="linux">
-  
-- **31333**: default calamari peer-to-peer port
-- **31334**: default (embedded-relay) kusama peer-to-peer port
-- **9615**: default calamari metrics port
-- **9616**: default (embedded-relay) kusama metrics port
+
+```
+31333: default calamari peer-to-peer port
+31334: default (embedded-relay) kusama peer-to-peer port
+9615: default calamari metrics port
+9616: default (embedded-relay) kusama metrics port
+```
   
 </TabItem>
 </Tabs>
