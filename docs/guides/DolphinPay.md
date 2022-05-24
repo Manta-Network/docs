@@ -16,7 +16,7 @@ Currently, Dolphin Testnet V2 supports Polakdot.JS browser extension wallet to m
 
 [Download *polkadot.js* browser wallet](https://polkadot.js.org/extension/), open the extension, and create a new account.
 
-### Install [Manta Signer](https://github.com/Manta-Network/manta-signer/releases/latest) and Create a Shielded Address
+### Install [Manta Signer](https://signer.manta.network) and Create a Shielded Address
 
 Signer is a native app to turbo-charge zero-knowledge proof generation. Signer is available for:
    * macOS
