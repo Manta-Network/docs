@@ -20,7 +20,7 @@ Currently, Dolphin Testnet V2 supports Polakdot.JS browser extension wallet to m
 
 Signer is a native app to turbo-charge zero-knowledge proof generation. Signer is available for:
    * macOS (version 10.5 or later)
-   * Ubuntu/Debian (version 20.04)
+   * Ubuntu/Debian (version 18.04 or later)
    * Windows (version 10 or later)
 
 When you first open Signer, follow the prompts to create a new account:
