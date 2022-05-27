@@ -19,9 +19,9 @@ Currently, Dolphin Testnet V2 supports Polakdot.JS browser extension wallet to m
 ### Install [Manta Signer](https://signer.manta.network) and Create a Shielded Address
 
 Signer is a native app to turbo-charge zero-knowledge proof generation. Signer is available for:
-   * macOS
-   * Ubuntu/Debian
-   * Windows
+   * macOS (version 10.5 or later)
+   * Ubuntu (version 18.04 or 20.04)
+   * Windows (version 10 or later)
 
 When you first open Signer, follow the prompts to create a new account:
 <br/>
@@ -143,6 +143,12 @@ Now let's send some private payments :)
 
    <div style={{textAlign: 'center'}}>
     <img alt="signer-connected" src="/img/guides/signer-connected.png" width="30%"/>
+   </div>
+
+- Make sure you input password at least 8 characters to create a new private account in signer.
+<br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="password-too-short" src="/img/guides/pwd-too-short.png" width="50%"/>
    </div>
 
 - Check that that your shields are down if you are using Brave browser.
