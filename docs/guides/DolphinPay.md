@@ -174,6 +174,16 @@ Now let's send some private payments :)
 
 If all these checks pass and you still can't send transactions, please let us know on discord in the `#dolphin-testnet` channel so that we can improve Dolphin!
 <br/>
+
+- On Windows 10, occasionally the installer will fail due to WebView2 not installing correctly. If this happens, you will see a message like so:
+
+   <div style={{textAlign: 'center'}}>
+    <img alt="windows-install" src="/img/guides/windows-install-issue.png" width="70%"/>
+   </div>
+
+To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly.
+
+<br/>
 <br/>
 
 ## FAQ
