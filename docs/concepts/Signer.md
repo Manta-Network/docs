@@ -11,3 +11,12 @@ Our goal is to improve the zero-knowledge proof generation performance to eventu
 ## Difference between the Signer and Polkadot.js/Talisman wallets?
 
 The Polakdot.js and Talisman wallets control the spending secrets of the public address. **Manta Signer** controls the spending secrets of [shielded addresses](./ShieldedAddress.md).
+
+
+## Troubleshooting tips
+
+On Windows 10, occasionally the installer will fail due to WebView2 not installing correctly. If this happens, you will see a message like so:
+
+![windows issue](./resources/windows-install-issue.png)
+
+To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly.
