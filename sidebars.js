@@ -51,7 +51,20 @@ module.exports = {
       items: [
         'collator/CommunityCollatorProgram',
         'collator/HowToApply',
-        'collator/SetupAndRun',
+        {
+          type: 'category',
+          label: '🚄 Setup and Run a collator',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'collator/SetupAndRun/installation',
+            'collator/SetupAndRun/configuration',
+            'collator/SetupAndRun/running',
+            'collator/SetupAndRun/keys',
+            'collator/SetupAndRun/sync',
+            'collator/SetupAndRun/wait',
+          ]
+        },
         'collator/HowToLeave',
       ]
     },
