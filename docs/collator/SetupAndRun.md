@@ -12,22 +12,20 @@ import TabItem from '@theme/TabItem';
 
   ```bash
   #!/bin/bash
-  
-  #Depending on your setup, here are some steps to get started
-  
-  #Upgrade to latest version
+
+  # Depending on your setup, here are some steps to get started
+
+  # Upgrade to latest version
   sudo apt update && sudo apt upgrade -y
-  
-  #Install docker
+
+  # Install docker
   sudo apt install docker.io
-  
-  #Add current user to docker
+
+  # Add current user to docker
   sudo usermod -aG docker $USER
-  
-  #Pull the calamari image
+
+  # Pull the calamari image
   docker pull mantanetwork/calamari:latest
-  
-  
   ```
 </TabItem>
 <TabItem value="fedora" label="fedora">
@@ -133,7 +131,7 @@ get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
     --comment 'service account for manta and calamari services' \
     manta
   ```
-  
+
 </TabItem>
 </Tabs>
 
@@ -283,12 +281,12 @@ several ports are required to be accessible from outside of the node host in ord
 <Tabs groupId="firewallports">
 <TabItem value="docker" label="docker">
 
-```  
+```
 30333: default calamari peer-to-peer port
 30334: default (embedded-relay) kusama peer-to-peer port
 9615: default calamari metrics port
 9616: default (embedded-relay) kusama metrics port
-```  
+```
 
 </TabItem>
 <TabItem value="linux" label="linux">
@@ -299,10 +297,10 @@ several ports are required to be accessible from outside of the node host in ord
 9615: default calamari metrics port
 9616: default (embedded-relay) kusama metrics port
 ```
-  
+
 </TabItem>
 </Tabs>
-  
+
 #### reverse proxy metrics over ssl with letsencrypt and nginx
 it is good practice to serve your metrics over:
 
@@ -329,28 +327,28 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
 
   <Tabs groupId="os">
   <TabItem value="fedora" label="fedora">
-  
+
   ```bash
   #!/bin/bash
-  
+
   sudo dnf install \
     certbot \
     python3-certbot-dns-cloudflare \
     python3-certbot-dns-route53
   ```
-  
+
   </TabItem>
   <TabItem value="ubuntu" label="ubuntu">
-  
+
     ```bash
     #!/bin/bash
-    
+
     sudo apt-get install \
       certbot \
       python3-certbot-dns-cloudflare \
       python3-certbot-dns-route53
     ```
-  
+
   </TabItem>
   </Tabs>
 
@@ -361,7 +359,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
 
     ```bash
     #!/bin/bash
-    
+
     sudo certbot certonly \
       --dns-cloudflare \
       --dns-cloudflare-credentials .cloudflare-credentials \
@@ -375,7 +373,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
 
     ```bash
     #!/bin/bash
-    
+
     sudo certbot certonly \
       --dns-route53 \
       --dns-route53-propagation-seconds 30 \
@@ -494,7 +492,7 @@ sudo firewall-cmd --reload
     --collator \
     --rpc-methods=unsafe \
     --unsafe-rpc-external
-  
+
   #Production sample
   docker run \
     -it \
@@ -531,7 +529,7 @@ sudo firewall-cmd --reload
   `--rpc-methods=safe`
   - additional Kusama configuration. at the end of your command stack, add -- to designate Kusama configuration, then add telemetry-url
   `-- --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'`
-  
+
   Ensure you can see a line of log like this:
 
   ```bash
@@ -714,7 +712,7 @@ this command demonstrates a session key insertion using a key created with [subk
 
   ```bash
   #!/bin/bash
-  
+
   subkey generate \
     --scheme sr25519 \
     --network calamari \
@@ -727,7 +725,7 @@ this command demonstrates a session key insertion using a key created with [subk
 
   ```bash
   #!/bin/bash
-  
+
   echo '{
       "jsonrpc":"2.0",
       "id":1,
@@ -747,7 +745,7 @@ this command demonstrates a session key insertion using a key created with [subk
 
   ```bash
   #!/bin/bash
-  
+
   curl \
     --header 'Content-Type: application/json;charset=utf-8' \
     --data @./payload.json \
@@ -758,7 +756,7 @@ this command demonstrates a session key insertion using a key created with [subk
 
   ```bash
   #!/bin/bash
-  
+
   sudo -H -u manta cat /var/lib/substrate/chains/calamari/keystore/$(sudo -H -u manta ls /var/lib/substrate/chains/calamari/keystore/)
   ```
 
@@ -766,7 +764,7 @@ this command demonstrates a session key insertion using a key created with [subk
 
   ```bash
   #!/bin/bash
-  
+
   journalctl -u calamari.service -g AUTHORITY
   ```
 
@@ -774,7 +772,7 @@ this command demonstrates a session key insertion using a key created with [subk
 
   ```bash
   #!/bin/bash
-  
+
   rm ./aura.json ./payload.json
   ```
 
