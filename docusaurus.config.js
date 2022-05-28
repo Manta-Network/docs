@@ -120,16 +120,16 @@ module.exports = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        createRedirects: (path) => {
-          switch (path) {
-            case "/docs/collator/SetupAndRun":
-              return ["/docs/collator/SetupAndRun/installation"];
-              break;
-            case "/docs/calamari/CommunityCollatorsProgram":
-              return ["/docs/collator/CommunityCollatorProgram"];
-              break;
-          }
-        }
+        redirects: [
+          {
+            from: '/docs/collator/SetupAndRun',
+            to: '/docs/collator/SetupAndRun/installation',
+          },
+          {
+            from: '/docs/calamari/CommunityCollatorsProgram',
+            to: '/docs/collator/CommunityCollatorProgram',
+          },
+        ],
       },
     ],
   ],
