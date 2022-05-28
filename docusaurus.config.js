@@ -127,9 +127,9 @@ module.exports = {
                 "/docs/collator/SetupAndRun",
               ];
               break;
-            case "/docs/calamari/CommunityCollatorsProgram":
+            case "/docs/collator/CommunityCollatorsProgram":
               return [
-                "/docs/collator/CommunityCollatorsProgram",
+                "/docs/calamari/CommunityCollatorsProgram",
               ];
               break;
           }
