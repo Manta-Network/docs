@@ -220,11 +220,11 @@ If all these checks pass and you still can't send transactions, please let us kn
       
 9. How long will the testnet run?
 
- The testnet will run forever 👾
+    The testnet will run forever 👾
 
 10. How long will the incentive campaign run?
 
- The incentivized testnet campaign will run until the Calamari launch.
+    The incentivized testnet campaign will run until the Calamari launch.
 
 ### Incentivized Testnet FAQs
 
