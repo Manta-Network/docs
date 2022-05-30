@@ -90,7 +90,7 @@ Now let's send some private payments :)
 
    If you need an example shielded address to send to, you can send to yourself (click on the copy icon next to your shielded address), or to this example address:
 
-   `3ZUgqc84wUeFzh2ioRh9yRAM7m8CqunGxsMHHLP6sLus76B3YoLHeQ7jggoV8N1grMv6qu9sLC8oNjHFe2CgJy9s`
+   `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`
 
    (note that shielded addresses and public addresses have a different format, and are not interchageable)
 
@@ -172,7 +172,12 @@ Now let's send some private payments :)
     <img alt="fee-balance" src="/img/guides/fee-balance.png" width="70%"/>
    </div>
 
+- If you see a delay in the transaction, check the polkadot.js wallet metadata if it needs to be updated.
+   
+   See the link [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
+
 If all these checks pass and you still can't send transactions, please let us know on discord in the `#dolphin-testnet` channel so that we can improve Dolphin!
+
 <br/>
 <br/>
 
@@ -193,3 +198,48 @@ If all these checks pass and you still can't send transactions, please let us kn
 4. How does private payment work?
 
    _[Find out more.](../learn/PrivatePayment.md)_
+
+5. I can't seem to set up Manta Signer on Windows OS
+
+   The team is aware of the issue and is currently working on it; we'll update the community on the new updates.
+
+
+6. I can’t find Calamari Network on Polkadot.Js
+
+   In your Polkadot.js browser extension, click on the burger icon (3 vertical dots), then select Calamari Parachain.
+
+7. The `To Private` button on the dolphin testnet is not working
+
+    Please try reloading the page at https://app.dolphin.manta.network/#/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section`...` disappear.
+
+8. To remove your private account data completely and set up a new account, you should remove these files:
+
+      - macOS: `~/Library/Application Support/manta-signer/`
+      - Linux: `~/.config/manta-signer/`
+      - Windows: `~/AppData/Roaming/manta-signer/`
+      
+9. How long will the testnet run?
+
+ The testnet will run forever 👾
+
+10. How long will the incentive campaign run?
+
+ The incentivized testnet campaign will run until the Calamari launch.
+
+### Incentivized Testnet FAQs
+
+1. I have followed the Twitter channels, but Gleam is not showing the ✅
+
+   Please make sure the account you're logged in on Gleam is the same as your Twitter account.
+
+2. Which address should I enter in the form when asked "enter your private transfer transaction ID to this wallet address `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`? 
+ 
+   Go to https://dolphin.subscan.io/, search your public wallet address of the dolphin app, find the **extrinsic hash** of your private transfer to the `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`, and copy/paste that into the form.
+
+3. Is the gleam form closed?
+
+   No, please clear your browser cache and try again at the link https://gleam.io/ye0bg/dolphin-testnet-v2-airdrop.
+
+4. How do I participate in the testnet?*
+   
+   There is a very thorough guide, please follow the steps at: [https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7](https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7). Check the Dolphin V2 Resources & Official Announcement at [https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159](https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159)
