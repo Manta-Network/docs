@@ -181,7 +181,16 @@ If all these checks pass and you still can't send transactions, please let us kn
 <br/>
 <br/>
 
+
 ## FAQ
+
+:::info
+**Check that you've disabled Brave Browser shield while on** https://app.dolphin.manta.network/#/transact
+If you're using the Brave browser, check that you have disabled Brave's shield on the testnet page.
+
+**Check that you've allowed access to the Dolphin Web App on your Polkdot.Js extension**
+Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right corner --> then click on "Manage Website Access" --> check that "app.dolphin.manta.network" is set to "Allowed"
+:::
 
 1. Why do I need a *Signer*? Can I trust it?
 
@@ -201,16 +210,35 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 5. I can't seem to set up Manta Signer on Windows OS
 
-   The team is aware of the issue and is currently working on it; we'll update the community on the new updates.
+   On Windows 10, occasionally, the installer will fail due to WebView2 not installing correctly. If this happens, you will see a message like "There is a problem with this Windows Installer package [...] 
+
+   To fix this, you can try downloading and installing WebView2 runtime directly here: https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section. 
+
+   Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
 
 
 6. I can’t find Calamari Network on Polkadot.Js
 
-   In your Polkadot.js browser extension, click on the burger icon (3 vertical dots), then select Calamari Parachain.
+   1. To get the Calamari address, you should follow the below-mentioned steps.
+      1.1 click on polkadot.js extension > Click on three vertical dots as mentioned in the image > Select Calamari Parachain.
+
+      If you still don't see the "Calamari" parachain option, then please visit this URL https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcalamari-rpc.dwellir.com#/explorer.
+
+   2. Go to settings > Metadata > Update Metadata 
+      
+      Then please follow steps mentioned in 1.1
 
 7. The `To Private` button on the dolphin testnet is not working
 
-    Please try reloading the page at https://app.dolphin.manta.network/#/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section`...` disappear.
+   Please try reloading the page at https://app.dolphin.manta.network/#/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section `...` disappear.
+
+   Please note that our testnet is currently overwhelmingly popular, and many transactions are trying to go through the network simultaneously, so if you're still experiencing.
+
+   1. Public to private tx not activating
+   2. Polkadot.js wallet not showing
+   3. Long periods for transactions
+
+   Please wait and try again later!
 
 8. To remove your private account data completely and set up a new account, you should remove these files:
 
@@ -224,24 +252,23 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 10. How long will the incentive campaign run?
 
-    The incentivized testnet campaign will run until the Calamari launch.
+ The incentivized testnet campaign will run until the Calamari launch.
+ 
 
 ### Incentivized Testnet FAQs
 
 1. I have followed the Twitter channels, but Gleam is not showing the ✅
 
-   Please make sure the account you're logged in on Gleam is the same as your Twitter account.
+   First, please make sure the email account you're logged in on Gleam is the same as the account you were using when you filled the form. If not, you'll have to fill out the form again using the same email/account (both on Gleam and the Google Form). After that, please clean your cache, reload the page and try again.
 
 2. Which address should I enter in the form when asked "enter your private transfer transaction ID to this wallet address `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`? 
  
-   Go to https://dolphin.subscan.io/, search your public wallet address of the dolphin app, find the 
-   
-   *extrinsic hash** of your private transfer to the `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`, and copy/paste that into the form.
+   Go to https://dolphin.subscan.io/, search your public wallet address of the dolphin app, find the **extrinsic hash** of your private transfer to the `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`, and copy/paste that into the form.
 
 3. Is the gleam form closed?
 
    No, please clear your browser cache and try again at the link https://gleam.io/ye0bg/dolphin-testnet-v2-airdrop.
 
-4. How do I participate in the testnet?*
+4. How do I participate in the testnet?
    
-   There is a very thorough guide, please follow the steps at: [https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7](https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7). Check the Dolphin V2 Resources & Official Announcement at [https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159](https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159)
+   There is a very thorough guide, please follow the steps at: [Manta Network Testnet V2: Walkthrough](https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7). Check the Dolphin V2 Resources & Official Announcement at [https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159](https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159)
