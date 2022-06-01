@@ -194,7 +194,7 @@ Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right
 
 1. Why do I need a *Signer*? Can I trust it?
 
-   _*Signer* serves two purposes: first is to protect your spending secrets, and second is to use native code to build zero-knowledge proofs. The *Signer* runs locally and will never share your secrets. The *Signer* is [fully open source software](https://github.com/Manta-Network/manta-signer) and will be audited for security._
+   *Signer* serves two purposes: first is to protect your spending secrets, and second is to use native code to build zero-knowledge proofs. The *Signer* runs locally and will never share your secrets. The *Signer* is [fully open source software](https://github.com/Manta-Network/manta-signer) and will be audited for security.
 
 2. Is the private token in *Signer* secure?
 
@@ -202,11 +202,11 @@ Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right
 
 3. How can I recover private tokens if I forgot my *Signer* password?
 
-   _We will add recover feature to the *Signer* soon._
+   We will add recover feature to the *Signer* soon.
 
 4. How does private payment work?
 
-   _[Find out more.](../learn/PrivatePayment.md)_
+   [Find out more.](../learn/PrivatePayment.md)
 
 5. I can't seem to set up Manta Signer on Windows OS
 
