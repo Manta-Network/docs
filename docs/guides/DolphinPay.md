@@ -194,11 +194,11 @@ Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right
 
 1. Why do I need a *Signer*? Can I trust it?
 
-   *Signer* serves two purposes: first is to protect your spending secrets, and second is to use native code to build zero-knowledge proofs. The *Signer* runs locally and will never share your secrets. The *Signer* is [fully open source software](https://github.com/Manta-Network/manta-signer) and will be audited for security.
+   *Signer* serves two purposes: first is to protect your spending secrets, and second is to use native code to build zero-knowledge proofs. The    *Signer* runs locally and will never share your secrets. The *Signer* is [fully open source software](https://github.com/Manta-Network/manta-signer) and will be audited for security.
 
 2. Is the private token in *Signer* secure?
 
-   _All the secrets used to spend private tokens is stored locally in your computer and encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard). *Signer* will never send your secrets online._
+   All the secrets used to spend private tokens is stored locally in your computer and encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard). *Signer* will never send your secrets online.
 
 3. How can I recover private tokens if I forgot my *Signer* password?
 
