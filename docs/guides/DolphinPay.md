@@ -133,7 +133,6 @@ Now let's send some private payments :)
 ## Troubleshooting
 
 - Check that polkadot.js browser extension is installed, and has permission to connect to the Dolphin web app.
-<br/>
 
    Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right corner --> then click on "Manage Website Access" --> check that            "app.dolphin.manta.network" is set to "Allowed". See the image below.
 
@@ -154,7 +153,7 @@ Now let's send some private payments :)
     <img alt="password-too-short" src="/img/guides/pwd-too-short.png" width="50%"/>
    </div>
 
-- Check that that your shields are down if you are using Brave browser.
+- Check that your shields are down if you are using Brave browser.
 <br/>
 
    <div style={{textAlign: 'center'}}>
@@ -195,8 +194,6 @@ Now let's send some private payments :)
 
 If all these checks pass and you still can't send transactions, please let us know on discord in the [`#dolphin-testnet`](https://discord.gg/c72QMWEVyY) channel so that we can improve Dolphin!
 
-<br/>
-
 
 ## FAQ
 
@@ -219,9 +216,10 @@ If all these checks pass and you still can't send transactions, please let us kn
 5. I can’t find Calamari Network on Polkadot.Js
 
    1. To get the Calamari address, you should follow the below-mentioned steps.
-      1.1 click on polkadot.js extension > Click on three vertical dots as mentioned in the image > Select Calamari Parachain.
+      
+        1.1 click on polkadot.js extension > Click on three vertical dots as mentioned in the image > Select Calamari Parachain.
 
-      If you still don't see the "Calamari" parachain option, then please visit this URL https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcalamari-rpc.dwellir.com#/explorer.
+        If you still don't see the "Calamari" parachain option, then please visit this URL https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcalamari-rpc.dwellir.com#/explorer.
 
    2. Go to settings > Metadata > Update Metadata 
       
