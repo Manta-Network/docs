@@ -135,6 +135,8 @@ Now let's send some private payments :)
 - Check that polkadot.js browser extension is installed, and has permission to connect to the Dolphin web app.
 <br/>
 
+   Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right corner --> then click on "Manage Website Access" --> check that            "app.dolphin.manta.network" is set to "Allowed". See the image below.
+
    <div style={{textAlign: 'center'}}>
     <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="70%"/>
    </div>
@@ -174,7 +176,6 @@ Now let's send some private payments :)
    </div>
 
 - If you see a delay in the transaction, check the polkadot.js wallet metadata if it needs to be updated.
-<br/>
 
    See the link [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
 
@@ -192,13 +193,7 @@ Now let's send some private payments :)
 
 <br/>
 
-- Check that you've allowed access to the Dolphin Web App on your Polkdot.Js extension
-
-    Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right corner --> then click on "Manage Website Access" --> check that            "app.dolphin.manta.network" is set to "Allowed"
-
-<br/>
-
-If all these checks pass and you still can't send transactions, please let us know on discord in the `#dolphin-testnet` channel so that we can improve Dolphin!
+If all these checks pass and you still can't send transactions, please let us know on discord in the [`#dolphin-testnet`](https://discord.gg/c72QMWEVyY) channel so that we can improve Dolphin!
 
 <br/>
 
@@ -253,10 +248,6 @@ If all these checks pass and you still can't send transactions, please let us kn
 8. How long will the testnet run?
 
     The testnet will run forever 👾
-
-9. How long will the incentive campaign run?
-
- The incentivized testnet campaign will run until the Calamari launch.
  
 
 ### Incentivized Testnet FAQs
@@ -276,3 +267,7 @@ If all these checks pass and you still can't send transactions, please let us kn
 4. How do I participate in the testnet?
    
    There is a very thorough guide, please follow the steps at: [Manta Network Testnet V2: Walkthrough](https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7). Check the Dolphin V2 Resources & Official Announcement at [https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159](https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159)
+   
+5. How long will the incentive campaign run?
+
+ The incentivized testnet campaign will run until the Calamari launch.
