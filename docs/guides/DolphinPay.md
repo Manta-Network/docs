@@ -178,17 +178,16 @@ Now let's send some private payments :)
 
    See the link [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
 
-<br/>
-
 - On Windows 10, occasionally the installer will fail due to WebView2 not installing correctly. If this happens, you will see a message like so:
+<br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="windows-install" src="/img/guides/windows-install-issue.png" width="70%"/>
    </div>
 
-    To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly. 
+   To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly. 
 
-    Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
+   Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
 
 <br/>
 
