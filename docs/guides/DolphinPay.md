@@ -180,7 +180,6 @@ Now let's send some private payments :)
 
 - On Windows 10, occasionally the installer will fail due to WebView2 not installing correctly. If this happens, you will see a message like so:
 <br/>
-
    <div style={{textAlign: 'center'}}>
     <img alt="windows-install" src="/img/guides/windows-install-issue.png" width="70%"/>
    </div>
@@ -188,7 +187,6 @@ Now let's send some private payments :)
    To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly. 
 
    Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
-
 <br/>
 
 If all these checks pass and you still can't send transactions, please let us know on discord in the [`#dolphin-testnet`](https://discord.gg/c72QMWEVyY) channel so that we can improve Dolphin!
