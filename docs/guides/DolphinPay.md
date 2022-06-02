@@ -131,6 +131,7 @@ Now let's send some private payments :)
 <br/>
 
 ## Troubleshooting
+
 - Check that polkadot.js browser extension is installed, and has permission to connect to the Dolphin web app.
 <br/>
 
@@ -152,31 +153,30 @@ Now let's send some private payments :)
    </div>
 
 - Check that that your shields are down if you are using Brave browser.
-   <br/>
+<br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="brave-shields" src="/img/guides/brave-shields.png" width="70%"/>
    </div>
 
 - Check that you are connected to a node ("Ford" by default) and that your internet connection is stable.
-   <br/>
+<br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="node-connected" src="/img/guides/node-connected.png" width="30%"/>
    </div>
 
 - Check that you have some public DOL in order to pay fees.
-   <br/>
+<br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="fee-balance" src="/img/guides/fee-balance.png" width="70%"/>
    </div>
 
 - If you see a delay in the transaction, check the polkadot.js wallet metadata if it needs to be updated.
-   
-   See the link [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
+<br/>
 
-If all these checks pass and you still can't send transactions, please let us know on discord in the `#dolphin-testnet` channel so that we can improve Dolphin!
+   See the link [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
 
 <br/>
 
@@ -186,21 +186,24 @@ If all these checks pass and you still can't send transactions, please let us kn
     <img alt="windows-install" src="/img/guides/windows-install-issue.png" width="70%"/>
    </div>
 
-To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly.
+    To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly. 
+
+    Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
 
 <br/>
+
+- Check that you've allowed access to the Dolphin Web App on your Polkdot.Js extension
+
+    Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right corner --> then click on "Manage Website Access" --> check that            "app.dolphin.manta.network" is set to "Allowed"
+
+<br/>
+
+If all these checks pass and you still can't send transactions, please let us know on discord in the `#dolphin-testnet` channel so that we can improve Dolphin!
+
 <br/>
 
 
 ## FAQ
-
-:::info
-**Check that you've disabled Brave Browser shield while on** https://app.dolphin.manta.network/#/transact
-If you're using the Brave browser, check that you have disabled Brave's shield on the testnet page.
-
-**Check that you've allowed access to the Dolphin Web App on your Polkdot.Js extension**
-Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right corner --> then click on "Manage Website Access" --> check that "app.dolphin.manta.network" is set to "Allowed"
-:::
 
 1. Why do I need a *Signer*? Can I trust it?
 
@@ -218,16 +221,7 @@ Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right
 
    [Find out more.](../learn/PrivatePayment.md)
 
-5. I can't seem to set up Manta Signer on Windows OS
-
-   On Windows 10, occasionally, the installer will fail due to WebView2 not installing correctly. If this happens, you will see a message like "There is a problem with this Windows Installer package [...] 
-
-   To fix this, you can try downloading and installing WebView2 runtime directly here: https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section. 
-
-   Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
-
-
-6. I can’t find Calamari Network on Polkadot.Js
+5. I can’t find Calamari Network on Polkadot.Js
 
    1. To get the Calamari address, you should follow the below-mentioned steps.
       1.1 click on polkadot.js extension > Click on three vertical dots as mentioned in the image > Select Calamari Parachain.
@@ -238,7 +232,7 @@ Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right
       
       Then please follow steps mentioned in 1.1
 
-7. The `To Private` button on the dolphin testnet is not working
+6. The `To Private` button on the dolphin testnet is not working
 
    Please try reloading the page at https://app.dolphin.manta.network/#/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section `...` disappear.
 
@@ -250,17 +244,17 @@ Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right
 
    Please wait and try again later!
 
-8. To remove your private account data completely and set up a new account, you should remove these files:
+7. To remove your private account data completely and set up a new account, you should remove these files:
 
       - macOS: `~/Library/Application Support/manta-signer/`
       - Linux: `~/.config/manta-signer/`
       - Windows: `~/AppData/Roaming/manta-signer/`
       
-9. How long will the testnet run?
+8. How long will the testnet run?
 
     The testnet will run forever 👾
 
-10. How long will the incentive campaign run?
+9. How long will the incentive campaign run?
 
  The incentivized testnet campaign will run until the Calamari launch.
  
