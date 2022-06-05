@@ -90,7 +90,7 @@ Now let's send some private payments :)
 
    If you need an example shielded address to send to, you can send to yourself (click on the copy icon next to your shielded address), or to this example address:
 
-   `3ZUgqc84wUeFzh2ioRh9yRAM7m8CqunGxsMHHLP6sLus76B3YoLHeQ7jggoV8N1grMv6qu9sLC8oNjHFe2CgJy9s`
+   `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`
 
    (note that shielded addresses and public addresses have a different format, and are not interchageable)
 
@@ -131,8 +131,10 @@ Now let's send some private payments :)
 <br/>
 
 ## Troubleshooting
+
 - Check that polkadot.js browser extension is installed, and has permission to connect to the Dolphin web app.
-<br/>
+
+   Click on you Polkadot.Js extension --> click on the ⚙️ icon on the top-right corner --> then click on "Manage Website Access" --> check that            "app.dolphin.manta.network" is set to "Allowed". See the image below.
 
    <div style={{textAlign: 'center'}}>
     <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="70%"/>
@@ -151,45 +153,116 @@ Now let's send some private payments :)
     <img alt="password-too-short" src="/img/guides/pwd-too-short.png" width="50%"/>
    </div>
 
-- Check that that your shields are down if you are using Brave browser.
-   <br/>
+- Check that your shields are down if you are using Brave browser.
+<br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="brave-shields" src="/img/guides/brave-shields.png" width="70%"/>
    </div>
 
 - Check that you are connected to a node ("Ford" by default) and that your internet connection is stable.
-   <br/>
+<br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="node-connected" src="/img/guides/node-connected.png" width="30%"/>
    </div>
 
 - Check that you have some public DOL in order to pay fees.
-   <br/>
+<br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="fee-balance" src="/img/guides/fee-balance.png" width="70%"/>
    </div>
 
-If all these checks pass and you still can't send transactions, please let us know on discord in the `#dolphin-testnet` channel so that we can improve Dolphin!
+- If you see a delay in the transaction, check the polkadot.js wallet metadata if it needs to be updated.
+
+   See the link [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
+
+- On Windows 10, occasionally the installer will fail due to WebView2 not installing correctly. If this happens, you will see a message like so:
 <br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="windows-install" src="/img/guides/windows-install-issue.png" width="70%"/>
+   </div>
+
+   To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly. 
+
+   Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
 <br/>
+
+If all these checks pass and you still can't send transactions, please let us know on discord in the [`#dolphin-testnet`](https://discord.gg/c72QMWEVyY) channel so that we can improve Dolphin!
+
 
 ## FAQ
 
 1. Why do I need a *Signer*? Can I trust it?
 
-   _*Signer* serves two purposes: first is to protect your spending secrets, and second is to use native code to build zero-knowledge proofs. The *Signer* runs locally and will never share your secrets. The *Signer* is [fully open source software](https://github.com/Manta-Network/manta-signer) and will be audited for security._
+   *Signer* serves two purposes: first is to protect your spending secrets, and second is to use native code to build zero-knowledge proofs. The    *Signer* runs locally and will never share your secrets. The *Signer* is [fully open source software](https://github.com/Manta-Network/manta-signer) and will be audited for security.
 
 2. Is the private token in *Signer* secure?
 
-   _All the secrets used to spend private tokens is stored locally in your computer and encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard). *Signer* will never send your secrets online._
+   All the secrets used to spend private tokens is stored locally in your computer and encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard). *Signer* will never send your secrets online.
 
 3. How can I recover private tokens if I forgot my *Signer* password?
 
-   _We will add recover feature to the *Signer* soon._
+   We will add recover feature to the *Signer* soon.
 
 4. How does private payment work?
 
-   _[Find out more.](../learn/PrivatePayment.md)_
+   [Find out more.](../learn/PrivatePayment.md)
+
+5. I can’t find Calamari Network on Polkadot.Js
+
+   1. To get the Calamari address, you should follow the below-mentioned steps.
+      
+        1.1 click on polkadot.js extension > Click on three vertical dots as mentioned in the image > Select Calamari Parachain.
+
+        If you still don't see the "Calamari" parachain option, then please visit this URL https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcalamari-rpc.dwellir.com#/explorer.
+
+   2. Go to settings > Metadata > Update Metadata 
+      
+      Then please follow steps mentioned in 1.1
+
+6. The `To Private` button on the dolphin testnet is not working
+
+   Please try reloading the page at https://app.dolphin.manta.network/#/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section `...` disappear.
+
+   Please note that our testnet is currently overwhelmingly popular, and many transactions are trying to go through the network simultaneously, so if you're still experiencing.
+
+   1. Public to private tx not activating
+   2. Polkadot.js wallet not showing
+   3. Long periods for transactions
+
+   Please wait and try again later!
+
+7. To remove your private account data completely and set up a new account, you should remove these files:
+
+      - macOS: `~/Library/Application Support/manta-signer/`
+      - Linux: `~/.config/manta-signer/`
+      - Windows: `~/AppData/Roaming/manta-signer/`
+      
+8. How long will the testnet run?
+
+    The testnet will run forever 👾
+ 
+
+### Incentivized Testnet FAQs
+
+1. I have followed the Twitter channels, but Gleam is not showing the ✅
+
+   First, please make sure the email account you're logged in on Gleam is the same as the account you were using when you filled the form. If not, you'll have to fill out the form again using the same email/account (both on Gleam and the Google Form). After that, please clean your cache, reload the page and try again.
+
+2. Which address should I enter in the form when asked "enter your private transfer transaction ID to this wallet address `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`? 
+ 
+   Go to https://dolphin.subscan.io/, search your public wallet address of the dolphin app, find the **extrinsic hash** of your private transfer to the `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`, and copy/paste that into the form.
+
+3. Is the gleam form closed?
+
+   No, please clear your browser cache and try again at the link https://gleam.io/ye0bg/dolphin-testnet-v2-airdrop.
+
+4. How do I participate in the testnet?
+   
+   There is a very thorough guide, please follow the steps at: [Manta Network Testnet V2: Walkthrough](https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7). Check the Dolphin V2 Resources & Official Announcement at [https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159](https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159)
+   
+5. How long will the incentive campaign run?
+
+ The incentivized testnet campaign will run until the Calamari launch.
