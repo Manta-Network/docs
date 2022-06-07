@@ -364,7 +364,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
     
     sudo certbot certonly \
       --dns-cloudflare \
-      --dns-cloudflare-credentials .cloudflare-credentials \
+      --dns-cloudflare-credentials /etc/letsencrypt/.cloudflare-credentials \
       -d bob.example.com \
       -d calamari.metrics.bob.example.com \
       -d kusama.metrics.bob.example.com
