@@ -115,7 +115,24 @@ module.exports = {
       crossorigin: 'anonymous',
     },
   ],
-  plugins: [require.resolve('@cmfcmf/docusaurus-search-local')],
+  plugins: [
+    require.resolve('@cmfcmf/docusaurus-search-local'),
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/docs/collator/SetupAndRun',
+            to: '/docs/collator/SetupAndRun/installation',
+          },
+          {
+            from: '/docs/calamari/CommunityCollatorsProgram',
+            to: '/docs/collator/CommunityCollatorProgram',
+          },
+        ],
+      },
+    ],
+  ],
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'cn'],
