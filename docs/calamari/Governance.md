@@ -89,6 +89,10 @@ You can find our tutorial on how to vote in a referendum below:
     </a>
 </div>
 
+**Note** that voting with the default amount from polkadot-js front end will fail, 
+due to the fact that the transaction fee is more than the existential deposit of accounts. 
+Please reduce that amount slightly to avoid this error.
+
 ## More Resources
 
 If you'd like to learn more about governance in the Polkadot ecosystem, these links 
