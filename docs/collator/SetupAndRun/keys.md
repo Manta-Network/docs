@@ -10,11 +10,17 @@ import TabItem from '@theme/TabItem';
 
 [Installation](installation) > [Configuration](configuration) > [Running](running) > Session keys > [Sync](sync) > [Wait](wait)
 
-## 🔑 Collator session (aura) keys
+## 🔑 Collator session keys
 
-to collate, two accounts/keys are required at any given time.
+to collate on the Calamari chain, two accounts/keys are required at any given time.
 - **collator account**: this is the account that holds the collator bond of 400,000 KMA. it is also the account that the collator's share of transaction fees will be deposited into. the bond cannot be spent while the account is collating. the keys for this account should be protected carefully and should never exist on the filesystem of the collator node.
-- **aura session key**: this is a disposable account used by the collator node to author blocks. it is bound to the collator account. it is good practice to rotate the session key on a regular basis and up to once per session. substrate stores the keys for this account in the parachain keystore on the filesystem of the collator node (`/var/lib/substrate/chains/calamari/keystore`) when either of the author_insertKey or author_rotateKeys rpc methods are called.
+- **nimbus session key**: this is a disposable account used by the collator node to author blocks. it is bound to the collator account. it is good practice to rotate the session key on a regular basis and up to once per session. substrate stores the keys for this account in the parachain keystore on the filesystem of the collator node (`/var/lib/substrate/chains/calamari/keystore`) when either of the author_insertKey or author_rotateKeys rpc methods are called.
+
+:::warn While the nimbus session key is present in the node since v.3.2.1, it will only become active with v3.3.0. Before this upgrade, the aura session key below is used.
+
+In addition, your node might have two additional keys in storage:
+- **aura session key**: Used in the node to decide on the authoring node *before* v3.3.0
+- **vrf session key**: A placeholder key for a future switch to a verifiably-random block producer selection scheme
 
 :::note
 both of the following methods (insert, rotate) use an unsafe rpc call to set the node session key. you must stop the service if it is running, then run the node with the `--rpc-methods=unsafe` parameter setting in order for the calls to succeed. don't forget to change the setting back to `safe` afterwards as a node that allows unsafe rpc calls and has an exposed rpc port can easily have its session keys changed by anyone, reulting in transaction fees being paid out somewhere other than where they are intended.
@@ -24,6 +30,8 @@ both of the following methods (insert, rotate) use an unsafe rpc call to set the
 <TabItem value="insert" label="insert">
 
 this command demonstrates a session key insertion using a key created with [subkey](https://docs.substrate.io/v3/tools/subkey).
+
+:::note Starting with v3.2.1 you must provide all three of the following keys, earlier revisions needed only the aura key
 
 - generate an aura key with subkey
 
@@ -37,6 +45,30 @@ this command demonstrates a session key insertion using a key created with [subk
     --words 12 \
     > ./aura.json
   ```
+- generate a nimbus key with subkey
+
+  ```bash
+  #!/bin/bash
+
+  subkey generate \
+    --scheme sr25519 \
+    --network calamari \
+    --output-type json \
+    --words 12 \
+    > ./nimbus.json
+  ```
+- generate an vrf key with subkey
+
+  ```bash
+  #!/bin/bash
+
+  subkey generate \
+    --scheme sr25519 \
+    --network calamari \
+    --output-type json \
+    --words 12 \
+    > ./vrf.json
+  ```
 
 - create an author_insertKey rpc payload
 
@@ -49,13 +81,25 @@ this command demonstrates a session key insertion using a key created with [subk
       "method":"author_insertKey",
       "params": [
         "aura",
-        "<mnemonic phrase>",
-        "<public key>"
+        "<mnemonic phrase1>",
+        "<public key1>",
+        "nimbus",
+        "<mnemonic phrase2>",
+        "<public key2>",
+        "vrf",
+        "<mnemonic phrase3>",
+        "<public key3>"
       ]
     }' | jq \
-      --arg mnemonic "$(jq -r .secretPhrase ./aura.json)" \
-      --arg public "$(jq -r .publicKey ./aura.json)" \
-      '. | .params[1] = $mnemonic | .params[2] = $public' > ./payload.json
+      --arg s_aura "$(jq -r .secretPhrase ./aura.json)" \
+      --arg p_aura "$(jq -r .publicKey ./aura.json)" \
+      --arg s_nimbus "$(jq -r .secretPhrase ./nimbus.json)" \
+      --arg p_nimbus "$(jq -r .publicKey ./nimbus.json)" \
+      --arg s_vrf "$(jq -r .secretPhrase ./vrf.json)" \
+      --arg p_vrf "$(jq -r .publicKey ./vrf.json)" \
+      '. | .params[1] = $s_aura | .params[2] = $p_aura' \
+      '. | .params[3] = $s_nimbus | .params[4] = $p_nimbus' \
+      '. | .params[5] = $s_vrf | .params[6] = $p_vrf' > ./payload.json
   ```
 
 - execute the author_insertKey rpc payload
@@ -90,13 +134,13 @@ this command demonstrates a session key insertion using a key created with [subk
   ```bash
   #!/bin/bash
 
-  rm ./aura.json ./payload.json
+  rm ./aura.json ./nimbus.json ./vrf.json ./payload.json
   ```
 
 </TabItem>
-<TabItem value="rotate" label="rotate">
+<TabItem value="rotate" label="rotate (preferred)">
 
-this command demonstrates a session key rotation. if no session key exists, one is created.
+This command demonstrates a session key rotation. If no session key exists, one is created.
 
 ```bash
 #!/bin/bash
@@ -108,7 +152,7 @@ the output from the rpc call should look like this (the `result` property contai
 ```json
 {"jsonrpc":"2.0","result":"0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb50e6aeb15951288c562f61","id":1}
 ```
-
+<!-- TODO: Find out how author_rotateKeys looks -->
 </TabItem>
 </Tabs>
 
