@@ -8,7 +8,7 @@ Manta 的愿景是为更广泛的区块链行业带来隐私保护，而让隐�
 
 [![Tech Talk #1](../../../../../docs/learn/resources/tech-talk-1-thumbnail.jpg)](https://www.youtube.com/watch?v=qmRChiIDl2A)
 
-你可以点击观看 [视频](https://www.youtube.com/watch?v=qmRChiIDl2A), [下载ppt](./private-payment/tech-talk-1-slides.pdf), 或者继续阅读接下来的内容，了解更多关于 *_隐私支付_* 的工作原理。
+你可以点击观看 [视频](https://www.youtube.com/watch?v=qmRChiIDl2A), [下载ppt](../../../../../docs/learn/resources/tech-talk-1-slides.pdf), 或者继续阅读接下来的内容，了解更多关于 *_隐私支付_* 的工作原理。
 
 目前， *_隐私支付_* 的 formal specification 尚未开源, 敬请期待我们在未来的发布！
 
