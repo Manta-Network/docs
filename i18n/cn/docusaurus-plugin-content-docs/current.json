@@ -19,6 +19,10 @@
     "message": "Collator 节点",
     "description": "The label for category Collator in sidebar docs"
   },
+  "sidebar.docs.category.🚄 Setup and Run a collator": {
+    "message": "🚄 Collator 设置和运行",
+    "description": "The label for category Collator in sidebar docs"
+  },
   "sidebar.docs.category.Guides": {
     "message": "指南",
     "description": "The label for category Signer in sidebar docs"

@@ -16,7 +16,7 @@ MantaPay 允许用户进行公开资产的隐私化、隐私资产的转账以�
 
 [下载 *polkadot.js* 浏览器钱包](https://polkadot.js.org/extension/)，安装并打开插件，创建一个新的账户。
 
-### 安装 [Manta Signer](https://github.com/Manta-Network/manta-signer/releases/latest) **并创建隐私地址**
+### 安装 [Manta Signer](https://signer.manta.network/) **并创建隐私地址**
 
 Manta Signer 是零知识证明生成器和隐私管理工具。目前已支持以下系统版本：
 - macOS
