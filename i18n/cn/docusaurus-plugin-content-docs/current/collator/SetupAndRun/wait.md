@@ -1,4 +1,6 @@
-## 等待批准
+---
+title: 等待批准
+---
 
 确保已完成[节点申请](https://docs.google.com/forms/d/e/1FAIpQLScizDDMq7jWeOPVVEMr3EY_Z6N6ugdkL8aKgAbZ9lAJX6DEOQ/viewform)填写。如果获得批准，Calamari 理事会将提交一项提议，将您提升为候选人
 
