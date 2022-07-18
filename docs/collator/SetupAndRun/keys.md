@@ -178,4 +178,4 @@ Account binding is done on-chain. The simplest way to do this is using polkadot.
    - Leave the `include option` checkbox selected.
    - Leave the `blockhash to query at` box set to the default `0x` value.
    - Click on the small plus (`+`) icon to the right of the second dropdown box.
-   - Verify that a new box labelled `session.nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>` appears and contains a json object whose `aura,nimbus and vrf` values are set to the Aura session hex public key generated earlier.
+   - Verify that a new box labelled `session.nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>` appears and contains a json object whose `aura`,`nimbus` and `vrf` values are set to the Aura session hex public key generated earlier.
