@@ -1,6 +1,6 @@
 # Manta Signer
 
-**Signer** 是供 Manta Network, Calamari Network 和 Dolphin 测试网使用的 _密钥管理器_以及_[零知识证明](ZKP.md) 生成器_ 。
+**Signer** 是供 Manta Network, Calamari Network 和 Dolphin 测试网使用的 **密钥管理器** 以及 **[零知识证明](ZKP.md) 生成器**。
 
 ## 为什么需要 Signer? 
 
