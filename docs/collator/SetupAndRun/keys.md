@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 sidebar_label: 🔑 Session keys
 title: 🚄 Setup and run a Collator
 hide_title: false
@@ -159,9 +159,11 @@ If your collator node logs do not contain both `[Relaychain] 💤 Idle` and `[Pa
 :::
 
 Account binding is done on-chain. The simplest way to do this is using polkadot.js.
-<!-- TODO: Screenshots -->
 - Load [calamari/developer/extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/extrinsics) in a browser:
   ![session.setkeys()](/img/collator-program/session.setkeys.png)
+:::note
+Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Calamari Network
+:::
    - In the first box, labelled "using the selected account", select the collator account holding the 400,000 KMA collator bond.
    - In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
    - In the third (dropdown) box, select `setKeys(keys, proof)`
@@ -172,10 +174,13 @@ Account binding is done on-chain. The simplest way to do this is using polkadot.
    - Click on the `Submit Transaction` button and wait for confirmation (a green tick), to appear in the upper right corner of the browser window.
 - Verfy that the collator account and the Session keys are *bound* by loading [calamari/developer/chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/chainstate) in a browser:
   ![session.nextkeys()](/img/collator-program/session.nextkeys.png)
+:::note
+Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Calamari Network
+:::
    - In the first (dropdown) box, labelled "selected state query", select `session`.
    - In the second (dropdown) box, select `nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>`.
    - In the third (dropdown) box, select the collator account holding the 400,000 KMA collator bond.
    - Leave the `include option` checkbox selected.
    - Leave the `blockhash to query at` box set to the default `0x` value.
    - Click on the small plus (`+`) icon to the right of the second dropdown box.
-   - Verify that a new box labelled `session.nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>` appears and contains a json object whose `aura`,`nimbus` and `vrf` values are set to the Aura session hex public key generated earlier.
+   - Verify that a new box labelled `session.nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>` appears and contains a json object whose `aura`,`nimbus` and `vrf` values are set to the hex public keys generated earlier.

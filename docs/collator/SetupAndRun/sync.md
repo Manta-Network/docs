@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 sidebar_label: 🤝 Sync
 title: 🚄 Setup and run a Collator
 hide_title: false
