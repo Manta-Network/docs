@@ -35,7 +35,7 @@ This mode of operation is **unsafe** when exposed to the public internet, restar
 <Tabs groupId="keys">
 <TabItem value="insert" label="insertKey">
 
-This command demonstrates a session key insertion using a key created with [subkey](https://docs.substrate.io/v3/tools/subkey).
+This command demonstrates a session key insertion using a key created with [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/).
 
 :::note
 Starting with v3.2.1 you must provide all 3 of the following keys, earlier revisions needed only the Aura key
