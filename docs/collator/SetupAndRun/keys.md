@@ -82,10 +82,10 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
         "aura",
         "<mnemonic phrase1>",
         "<public key1>",
-        "nimbus",
+        "nimb",
         "<mnemonic phrase2>",
         "<public key2>",
-        "vrf",
+        "rand",
         "<mnemonic phrase3>",
         "<public key3>"
       ]
