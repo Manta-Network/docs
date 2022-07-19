@@ -5,7 +5,7 @@ title: 🚄 Setup and run a Collator
 hide_title: false
 ---
 
-[Installation](installation) > [Configuration](configuration) > [Running](running) > [Session keys](keys) > [Sync](sync) > Wait
+[Installation](installation) > [Configuration](configuration) > [Running](running) > [Sync](sync) > [Session keys](keys) > Wait
 
 ## ⏳ Wait
 

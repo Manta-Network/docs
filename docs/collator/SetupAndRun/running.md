@@ -8,7 +8,7 @@ hide_title: false
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Installation](installation) > [Configuration](configuration) > Running > [Session keys](keys) > [Sync](sync) > [Wait](wait)
+[Installation](installation) > [Configuration](configuration) > Running > [Sync](sync) > [Session keys](keys) > [Wait](wait)
 
 ## ⚙️ Running
 
