@@ -8,7 +8,7 @@ hide_title: false
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Installation](installation) > Configuration > [Running](running) > [Sync](sync) >[Session keys](keys) >  [Wait](wait)
+[Installation](installation) > Configuration > [Running](running) > [Sync](sync) > [Session keys](keys) > [Wait](wait)
 
 ## 📝 Configuration
 some extra command line parameters are required or helpful for collating.
