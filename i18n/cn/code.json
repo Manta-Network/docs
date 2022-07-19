@@ -194,5 +194,17 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "cmfcmf/d-s-l.searchBar.placeholder": {
+    "message": "搜索..",
+    "description": "The search bar"
+  },
+  "cmfcmf/d-s-l.searchBar.detachedCancelButtonText": {
+    "message": "",
+    "description": "The button to close search bar"
+  },
+  "cmfcmf/d-s-l.searchBar.noResults": {
+    "message": "没有找到",
+    "description": "The button to close search bar"
   }
 }
