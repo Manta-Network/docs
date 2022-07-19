@@ -35,12 +35,13 @@ This mode of operation is **unsafe** when exposed to the public internet, restar
 <Tabs groupId="keys">
 <TabItem value="insert" label="insertKey">
 
-This command demonstrates a session key insertion using a key created with [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/).
+This command demonstrates a session key insertion using a key created with 
 
 :::note
 Starting with v3.2.1 you must provide all 3 of the following keys, earlier revisions needed only the Aura key
 :::
 
+- Build/Install [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) for your platform 
 - Generate an Aura key with subkey
   ```bash
   #!/bin/bash
@@ -71,36 +72,35 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
     --words 12 \
     > ./vrf.json
   ```
-- Create an author_insertKey RPC payload
+- Install the [jq utility](https://stedolan.github.io/jq/download/) for your platform 
+- Create an `author_insertKey` RPC payload
   ```bash
-  #!/bin/bash
-  echo '{
-      "jsonrpc":"2.0",
-      "id":1,
-      "method":"author_insertKey",
-      "params": [
-        "aura",
-        "<mnemonic phrase1>",
-        "<public key1>",
-        "nmbs",
-        "<mnemonic phrase2>",
-        "<public key2>",
-        "rand",
-        "<mnemonic phrase3>",
-        "<public key3>"
-      ]
-    }' | jq \
-      --arg s_aura "$(jq -r .secretPhrase ./aura.json)" \
-      --arg p_aura "$(jq -r .publicKey ./aura.json)" \
-      --arg s_nimbus "$(jq -r .secretPhrase ./nimbus.json)" \
-      --arg p_nimbus "$(jq -r .publicKey ./nimbus.json)" \
-      --arg s_vrf "$(jq -r .secretPhrase ./vrf.json)" \
-      --arg p_vrf "$(jq -r .publicKey ./vrf.json)" \
-      '. | .params[1] = $s_aura | .params[2] = $p_aura' \
-      '. | .params[3] = $s_nimbus | .params[4] = $p_nimbus' \
-      '. | .params[5] = $s_vrf | .params[6] = $p_vrf' > ./payload.json
+#!/bin/bash
+echo '{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_insertKey",
+    "params": [
+      "aura",
+      "<mnemonic phrase1>",
+      "<public key1>",
+      "nmbs",
+      "<mnemonic phrase2>",
+      "<public key2>",
+      "rand",
+      "<mnemonic phrase3>",
+      "<public key3>"
+    ]
+  }' | jq \
+    --arg s_aura "$(jq -r .secretPhrase ./aura.json)" \
+    --arg p_aura "$(jq -r .publicKey ./aura.json)" \
+    --arg s_nimbus "$(jq -r .secretPhrase ./nimbus.json)" \
+    --arg p_nimbus "$(jq -r .publicKey ./nimbus.json)" \
+    --arg s_vrf "$(jq -r .secretPhrase ./vrf.json)" \
+    --arg p_vrf "$(jq -r .publicKey ./vrf.json)" \
+    '. | .params[1] = $s_aura | .params[2] = $p_aura | .params[4] = $s_nimbus | .params[5] = $p_nimbus | .params[7] = $s_vrf | .params[8] = $p_vrf' > ./payload.json
   ```
-- Execute the author_insertKey RPC payload
+- Execute the `author_insertKey` RPC payload
   ```bash
   #!/bin/bash
   curl \
@@ -108,7 +108,7 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
     --data @./payload.json \
     http://localhost:9133
   ```
-- **Validation**: Check that the mnemonics stored in the node matches the generated one
+- **Validation**: Check that the mnemonics stored in the node matches the generated ones
   ```bash
   #!/bin/bash
   sudo -H -u manta cat /var/lib/substrate/chains/calamari/keystore/$(sudo -H -u manta ls /var/lib/substrate/chains/calamari/keystore/)
@@ -118,6 +118,7 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
   #!/bin/bash
   journalctl -u calamari.service -g AUTHORITY
   ```
+- Note down the three `publicKey` fields from the `aura.json`, `nimbus.json` and `vrf.json` files and/or back-up these key files to a **secure**, offline location
 - **Cleanup**: Remove secrets from the filesystem that were created in earlier steps
   ```bash
   #!/bin/bash
@@ -176,6 +177,10 @@ Although the screenshot shows a connected dolphin node, the procedure is identic
   ![session.nextkeys()](/img/collator-program/session.nextkeys.png)
 :::note
 Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Calamari Network
+:::
+:::note
+Your node may show the following log line until the `set_keys` extrinsic is included in a block<br/>
+`2022-07-19 17:24:18 [Parachain] 🔏 No Nimbus keys available. We will not be able to author.`
 :::
    - In the first (dropdown) box, labelled "selected state query", select `session`.
    - In the second (dropdown) box, select `nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>`.
