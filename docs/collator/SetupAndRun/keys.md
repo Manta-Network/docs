@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-sidebar_label: 🔑 Session keys
+sidebar_label: 🔑 Sessionkeys
 title: 🚄 Setup and run a Collator
 hide_title: false
 ---
