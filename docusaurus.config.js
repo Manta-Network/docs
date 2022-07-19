@@ -116,7 +116,15 @@ module.exports = {
     },
   ],
   plugins: [
-    require.resolve('@cmfcmf/docusaurus-search-local'),
+    [
+      require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        indexDocs: true,
+        indexPages: false,
+        language: ["en", "zh"],
+        maxSearchResults: 10,
+      },
+    ],
     [
       '@docusaurus/plugin-client-redirects',
       {
