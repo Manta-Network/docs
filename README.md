@@ -41,7 +41,12 @@ Commands
 Run the Italian version
 
 ```
-yarn run start -- --locale it
+yarn run start --locale it
+```
+
+Or cn
+```
+yarn run start --locale cn
 ```
 
 Translate the markdown under **i18n/it** for the italian language.
