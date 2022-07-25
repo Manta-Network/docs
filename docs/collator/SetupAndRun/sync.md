@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 sidebar_label: 🤝 Sync
 title: 🚄 Setup and run a Collator
 hide_title: false
@@ -8,7 +8,7 @@ hide_title: false
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Installation](installation) > [Configuration](configuration) > [Running](running) > [Session keys](keys) > Sync > [Wait](wait)
+[Installation](installation) > [Configuration](configuration) > [Running](running) > Sync > [Session keys](keys) > [Wait](wait)
 
 ## 🤝 Sync the relay and para chains
 
