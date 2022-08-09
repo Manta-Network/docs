@@ -42,7 +42,8 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
 :::
 
 - Build/Install [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) for your platform 
-- Generate an Aura key with subkey
+- Install the [jq utility](https://stedolan.github.io/jq/download/) for your platform 
+- Generate an Aura key and insert/check payloads with subkey/jq
   ```bash
   #!/bin/bash
   subkey generate \
@@ -51,78 +52,131 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
     --output-type json \
     --words 12 \
     > ./aura.json
-  ```
-- Generate a Nimbus key with subkey
-  ```bash
-  #!/bin/bash
-  subkey generate \
-    --scheme sr25519 \
-    --network calamari \
-    --output-type json \
-    --words 12 \
-    > ./nimbus.json
-  ```
-- Generate a VRF key with subkey
-  ```bash
-  #!/bin/bash
-  subkey generate \
-    --scheme sr25519 \
-    --network calamari \
-    --output-type json \
-    --words 12 \
-    > ./vrf.json
-  ```
-- Install the [jq utility](https://stedolan.github.io/jq/download/) for your platform 
-- Create an `author_insertKey` RPC payload
-  ```bash
-#!/bin/bash
-echo '{
+  echo '{
     "jsonrpc":"2.0",
     "id":1,
     "method":"author_insertKey",
     "params": [
       "aura",
-      "<mnemonic phrase1>",
-      "<public key1>",
-      "nmbs",
-      "<mnemonic phrase2>",
-      "<public key2>",
-      "rand",
-      "<mnemonic phrase3>",
-      "<public key3>"
+      "aura mnemonic phrase",
+      "aura hex public key"
     ]
   }' | jq \
-    --arg s_aura "$(jq -r .secretPhrase ./aura.json)" \
-    --arg p_aura "$(jq -r .publicKey ./aura.json)" \
-    --arg s_nimbus "$(jq -r .secretPhrase ./nimbus.json)" \
-    --arg p_nimbus "$(jq -r .publicKey ./nimbus.json)" \
-    --arg s_vrf "$(jq -r .secretPhrase ./vrf.json)" \
-    --arg p_vrf "$(jq -r .publicKey ./vrf.json)" \
-    '. | .params[1] = $s_aura | .params[2] = $p_aura | .params[4] = $s_nimbus | .params[5] = $p_nimbus | .params[7] = $s_vrf | .params[8] = $p_vrf' > ./payload.json
+    --arg mnemonic "$(jq -r .secretPhrase ./aura.json)" \
+    --arg hex "$(jq -r .publicKey ./aura.json)" \
+    '. | .params[1] = $mnemonic | .params[2] = $hex' > ./insert-aura.json
+  echo '{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_hasKey",
+    "params": [
+      "aura hex public key",
+      "aura"
+    ]
+  }' | jq \
+    --arg hex "$(jq -r .publicKey ./aura.json)" \
+    '. | .params[0] = $hex' > ./check-aura.json
   ```
-- Execute the `author_insertKey` RPC payload
+- Generate a Nimbus (nmbs) key and insert/check payloads with subkey/jq
   ```bash
   #!/bin/bash
-  curl \
-    --header 'Content-Type: application/json;charset=utf-8' \
-    --data @./payload.json \
-    http://localhost:9133
+  subkey generate \
+    --scheme sr25519 \
+    --network calamari \
+    --output-type json \
+    --words 12 \
+    > ./nmbs.json
+  echo '{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_insertKey",
+    "params": [
+      "nmbs",
+      "nmbs mnemonic phrase",
+      "nmbs hex public key"
+    ]
+  }' | jq \
+    --arg mnemonic "$(jq -r .secretPhrase ./nmbs.json)" \
+    --arg hex "$(jq -r .publicKey ./nmbs.json)" \
+    '. | .params[1] = $mnemonic | .params[2] = $hex' > ./insert-nmbs.json
+  echo '{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_hasKey",
+    "params": [
+      "nmbs hex public key",
+      "nmbs"
+    ]
+  }' | jq \
+    --arg hex "$(jq -r .publicKey ./nmbs.json)" \
+    '. | .params[0] = $hex' > ./check-nmbs.json
   ```
-- **Validation**: Check that the mnemonics stored in the node matches the generated ones
+- Generate a VRF (rand) key and insert/check payloads with subkey/jq
   ```bash
   #!/bin/bash
-  sudo -H -u manta cat /var/lib/substrate/chains/calamari/keystore/$(sudo -H -u manta ls /var/lib/substrate/chains/calamari/keystore/)
+  subkey generate \
+    --scheme sr25519 \
+    --network calamari \
+    --output-type json \
+    --words 12 \
+    > ./rand.json
+  echo '{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_insertKey",
+    "params": [
+      "rand",
+      "rand mnemonic phrase",
+      "rand hex public key"
+    ]
+  }' | jq \
+    --arg mnemonic "$(jq -r .secretPhrase ./rand.json)" \
+    --arg hex "$(jq -r .publicKey ./rand.json)" \
+    '. | .params[1] = $mnemonic | .params[2] = $hex' > ./insert-rand.json
+  echo '{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_hasKey",
+    "params": [
+      "rand hex public key",
+      "rand"
+    ]
+  }' | jq \
+    --arg hex "$(jq -r .publicKey ./rand.json)" \
+    '. | .params[0] = $hex' > ./check-rand.json
+  ```
+- Execute the `author_insertKey` RPC payloads
+  ```bash
+  #!/bin/bash
+  for key in aura nmbs rand; do
+    curl \
+      --header 'Content-Type: application/json;charset=utf-8' \
+      --data @./insert-${key}.json \
+      http://localhost:9133
+  done
+  ```
+- **Validation**: Check that the seesion keys stored in the node match the generated ones
+  ```bash
+  #!/bin/bash
+  for key in aura nmbs rand; do
+    has_key=$(curl \
+      -s \
+      --header 'Content-Type: application/json;charset=utf-8' \
+      --data @./check-${key}.json \
+      http://localhost:9133 | jq -r '.result == "null"')
+    echo "${key}: ${has_key}"
+  done
   ```
 - **Validation**: Check that node logs show your node is running with role: `AUTHORITY` (check the timestamps)
   ```bash
   #!/bin/bash
   journalctl -u calamari.service -g AUTHORITY
   ```
-- Note down the three `publicKey` fields from the `aura.json`, `nimbus.json` and `vrf.json` files and/or back-up these key files to a **secure**, offline location
+- Note down the three `publicKey` fields from the `aura.json`, `nmbs.json` and `rand.json` files and/or back-up these key files to a **secure**, offline location
 - **Cleanup**: Remove secrets from the filesystem that were created in earlier steps
   ```bash
   #!/bin/bash
-  rm ./aura.json ./nimbus.json ./vrf.json ./payload.json
+  rm ./aura.json ./nmbs.json ./rand.json ./insert-aura.json ./insert-nmbs.json ./insert-rand.json
   ```
 
 </TabItem>
