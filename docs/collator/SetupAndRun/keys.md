@@ -155,7 +155,7 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
       http://localhost:9133
   done
   ```
-- **Validation**: Check that the seesion keys stored in the node match the generated ones
+- **Validation**: Check that the session keys stored in the node match the generated ones
   ```bash
   #!/bin/bash
   for key in aura nmbs rand; do
@@ -163,7 +163,7 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
       -s \
       --header 'Content-Type: application/json;charset=utf-8' \
       --data @./check-${key}.json \
-      http://localhost:9133 | jq -r '.result == "null"')
+      http://localhost:9133 | jq -r '.result == "true"')
     echo "${key}: ${has_key}"
   done
   ```
@@ -183,7 +183,7 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
 <TabItem value="rotate" label="rotateKeys">
 
 This command rotates session keys, i.e. creates a new private key in its keystore and outputs the corresponding public keys.
-Old keys are discarded if they exist. 
+If old keys exist, they remain present in the node's keystore and are *not* deleted.
 
 :::note
 The private keys are not displayed by the node, if you wish to back them up in order to restore your node credentials in case of loss of the node, follow the instructions in insertKey. If your session keys get lost without backup, you will have to go through the collator program ondboarding process again with your new node
@@ -233,8 +233,9 @@ Although the screenshot shows a connected dolphin node, the procedure is identic
 Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Calamari Network
 :::
 :::note
-Your node may show the following log line until the `set_keys` extrinsic is included in a block<br/>
-`2022-07-19 17:24:18 [Parachain] 🔏 No Nimbus keys available. We will not be able to author.`
+Your node may show the following log line until the first session change after the `set_keys` extrinsic is included in a block <br/>
+`2022-07-19 17:24:18 [Parachain] 🔏 No Nimbus keys available. We will not be able to author.`<br/>
+This can take up to **6 hours**.
 :::
    - In the first (dropdown) box, labelled "selected state query", select `session`.
    - In the second (dropdown) box, select `nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>`.
