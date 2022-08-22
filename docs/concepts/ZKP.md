@@ -17,6 +17,8 @@ Generally, zero-knowledge proof systems should have the following 4 crucial prop
 
 ## Trusted Setup
 
+To-Do
+
 In order to generate a ZKP, both the prover and the verifier need to commit to some shared secret and use this shared secret to generate public parameters. This secret is referred to as *toxic waste*. If this secret is revealed, an attacker could fabricate zero-knowledge proofs to fool the verifiers.
 
 To solve this issue, cryptographers from ZCash/Berkeley/Technion came up with a solution: using Multi-Party Computation (MPC) to do a ceremony called Trusted Setup for the zero-knowledge proof system. By doing so, as long as there is *a single person* who is honest during the ceremony (an honest person would discard the toxic waste successfully), the entire system is safe.
