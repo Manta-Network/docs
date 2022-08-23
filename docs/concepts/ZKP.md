@@ -17,7 +17,9 @@ Generally, zero-knowledge proof systems should have the following 4 crucial prop
 
 ## Trusted Setup
 
-To-Do
+<li>
+                        <a href='concepts/TrustedSetup'>Broken link here</a>.
+                    </li>
 
 In order to generate a ZKP, both the prover and the verifier need to commit to some shared secret and use this shared secret to generate public parameters. This secret is referred to as *toxic waste*. If this secret is revealed, an attacker could fabricate zero-knowledge proofs to fool the verifiers.
 
