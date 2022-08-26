@@ -223,8 +223,8 @@ Although the screenshot shows a connected dolphin node, the procedure is identic
    - In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
    - In the third (dropdown) box, select `setKeys(keys, proof)`
    - In both the fourth box labelled `aura: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the Aura session key you generated earlier.
-   - In both the fifth box, labelled `nimbus: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the Nimbus session key you generated earlier.
-   - In both the sixth boxes, labelled `vrf: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the VRF session key you generated earlier.
+   - In both the fifth box, labelled `nimbus: NimbusPrimitivesNimbusCryptoPublic`, enter the hex public key of the Nimbus session key you generated earlier.
+   - In both the sixth boxes, labelled `vrf: SessionKeyPrimitivesVrfVrfCryptoPublic`, enter the hex public key of the VRF session key you generated earlier.
    - In both the seventh box labelled `proof: Bytes`, enter the hex public key of the Nimbus session key *again*.
    - Click on the `Submit Transaction` button and wait for confirmation (a green tick), to appear in the upper right corner of the browser window.
 - Verfy that the collator account and the Session keys are *bound* by loading [calamari/developer/chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/chainstate) in a browser:
