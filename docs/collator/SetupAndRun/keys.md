@@ -146,6 +146,22 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
     '. | .params[0] = $hex' > ./check-rand.json
   ```
 - Execute the `author_insertKey` RPC payloads
+  <Tabs groupID="author_insertKey">
+  <TabItem value="docker" label="docker">
+    
+  ```bash
+  #!/bin/bash
+  for key in aura nmbs rand; do
+    curl \
+      --header 'Content-Type: application/json;charset=utf-8' \
+      --data @./insert-${key}.json \
+      http://localhost:9933
+  done
+  ```
+    
+  </TabItem>
+  <TabItem value="linux" label="linux">
+    
   ```bash
   #!/bin/bash
   for key in aura nmbs rand; do
@@ -155,7 +171,14 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
       http://localhost:9133
   done
   ```
+    
+  </TabItem>
+  </Tabs>
+  
 - **Validation**: Check that the session keys stored in the node match the generated ones
+  <Tabs groupID="author_hasKey">
+  <TabItem value="docker" label="docker">  
+    
   ```bash
   #!/bin/bash
   for key in aura nmbs rand; do
@@ -163,10 +186,29 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
       -s \
       --header 'Content-Type: application/json;charset=utf-8' \
       --data @./check-${key}.json \
-      http://localhost:9133 | jq -r '.result == "true"')
+      http://localhost:9933 | jq -r '.result == true')
+    echo "${key}: ${has_key}"
+  done
+  ```    
+  
+  </TabItem>
+  <TabItem value="linux" label="linux">
+    
+  ```bash
+  #!/bin/bash
+  for key in aura nmbs rand; do
+    has_key=$(curl \
+      -s \
+      --header 'Content-Type: application/json;charset=utf-8' \
+      --data @./check-${key}.json \
+      http://localhost:9133 | jq -r '.result == true')
     echo "${key}: ${has_key}"
   done
   ```
+    
+  </TabItem>
+  </Tabs>
+  
 - **Validation**: Check that node logs show your node is running with role: `AUTHORITY` (check the timestamps)
   ```bash
   #!/bin/bash
