@@ -28,6 +28,7 @@ module.exports = {
         'concepts/ViewingKey',
         'concepts/Signer',
         'concepts/Governance',
+        'concepts/TrustedSetup'
       ],    
     },
     {

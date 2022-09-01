@@ -79,7 +79,7 @@ Manta has put a lot of work into organizing this ceremony and keeping it secure,
 * [Perpetual Powers of Tau](https://github.com/weijiekoh/perpetualpowersoftau): A subtlety that we glossed over above is that the generation of prover/verifier keys for Groth16 ZKPs can be divided into two steps, or "phases." Phase 1 is multi-purpose; it results in a set of parameters that can be used by any ZKP (the only restrictions are on the size of the ZKP and the underlying elliptic curve).  Phase 1 can be performed once and reused by many projects. Phase 2 is specific to the circuits being used (in our case, the Manta Pay circuits).  The Phase 2 ceremony must be performed individually by each project and must be repeated if the project ever makes changes to their circuits.  The Manta Pay Trusted Setup Ceremony is a Phase 2 ceremony that produces prover/verifier keys that can only be used for the Manta Pay circuits.    
 Each Phase 2 ceremony must begin with the output of a Phase 1 ceremony. In our case, we chose to use the Perpetual Powers of Tau (PPoT) as our Phase 1.  PPoT is a public good organized by [todo: Semaphore or Wei Jie Koh?].  It is an ambitious public good project to provide the community with a humongous parameter set that is big enough to accommodate very large ZKPs.  PPoT is vulnerable to all the attacks we mentioned above, so before using its output we have verified the proofs of each of its rounds of contribution (72 at the time writing).  The full PPoT ceremony produced about 500x as many parameters as we needed for the Manta Pay circuits, so we have only verified the subset of parameters that we will actually use.  We did compare the full checksums against all the public announcements we could find. All checks passed and we are convinced that the PPoT ceremony produced secure output.
 * [ZCash Sapling Ceremony](https://github.com/ebfull/powersoftau): ZCash's cryptography team were trailblazers, completing one of the first ever Groth16 trusted setups.  We took lots of inspiration from their work when writing our contribution client.
-* [Kobi?](todo): TODO: do we recognize Kobi specifically or some organization he's part of?
+* [Kobi?](https://github.com/kobigurk/phase2-bn254/tree/powers_28/powersoftau/src): TODO: do we recognize Kobi specifically or some organization he's part of?
 * 
 
 # How to Participate
@@ -89,7 +89,7 @@ We have written a client that makes participation easy, but you'll need the Rust
 * **Installing Rust**: To Do
 
 ### Downloading Client
-The client is hosted at [this repository](todo). Here are the steps you'll follow:
+The client is hosted at [this repository (TODO: Real link)](https://github.com/Manta-Network/manta-rs). Here are the steps you'll follow:
 1. **Clone Repository**: To Do
 2. **Build Client**: To Do
 
