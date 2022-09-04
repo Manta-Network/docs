@@ -16,6 +16,7 @@ module.exports = {
       label: 'What is Manta?',
       id:'Introduction',
     },
+    'Roadmap',
     {
       type: 'category',
       label: 'Concepts',

@@ -1,1 +1,1 @@
-# MariPay
+# MantaPay on Calamari
