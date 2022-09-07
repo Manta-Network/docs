@@ -74,6 +74,7 @@ module.exports = {
       collapsed: true,
       items: [
         'guides/DolphinPay',
+        'guides/TrustedSetup',
         'guides/XcmOnboarding',
       ]
     },
