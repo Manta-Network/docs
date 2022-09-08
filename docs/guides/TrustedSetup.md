@@ -16,6 +16,8 @@ git clone https://github.com/Manta-Network/manta-rs.git
 Note that this will create a copy of the repository in your current directory. You now have the source code for our client and can run it by following the instructions below.
 
 ### Registration
+(TODO: Update these screenshots when server is finalized)
+
 You will be signing your contribution with an Ed25519 signature. Only participants who register their public key with Manta Network beforehand will be allowed to participate, so you must follow these steps to generate and then register a public key:
 1. **Generate Signature Keypair**: The client you downloaded above will generate your private/public signature keypair for you. Navigate to the `manta-rs` directory (created in the above `clone` step) and run
 ```sh
@@ -35,14 +37,20 @@ cargo run --package manta-trusted-setup --bin groth16_phase2_client -- contribut
 ```
 (don't forget to first navigate to the `manta-rs` directory you created when you downloaded the client!)
 
-* **TO DO**
-All you need to do is run that command and our client will take care of the rest. Once you start the client the following happens:
-1. The server checks that you are registered and adds you to the queue. While waiting for your turn you will see the message "Waiting for your turn to contribute. The maximum wait time is X minutes. Please do not close this task."  
-2. When you reach the front of the queue, the server sends you the prover/verifier keys from the previous round. It has already checked that the proof that that round was completed correctly.
-3. The client generates a random number on your machine, contributes this randomness to the prover/verifier keys, then wipes that random number from memory. It also produces a proof that your contribution conforms to the MPC protocol.
-4. The client sends the new prover/verifier keys and the proof of your contribution to the server, which does the appropriate checks and passes them to the next person in line. You will see a notification that your contribution was successful and a hash of your contribution will be printed on-screen and saved to disk. You will use this hash in the final step.
+When you enter that command you will be prompted to enter the secret phrase you saved from the registration phase (see above):
+![password prompt](./resources/client_welcome.png)
 
-Again, those 4 steps are all happening under the hood: the only thing you do is start the client and leave it running until you see confirmation that the contribution was successful.  Then you proceed to the final step...
+All you need to do is enter your secret, the rest will run automatically.  It is likely that you will be placed in the contribution queue, which will look something like this:
+![queue](./resources/client_queue.png)
+There is nothing you need to do at this point; just wait with this process running and you will automatically contribute when your turn comes. Note that if you close this task then you will lose your place in the queue! You can still restart the task later to contribute, but you will be placed at the end of the queue.
+
+When you have reached the front of the queue the client will automatically begin your contribution, which will look like this:
+![contributing](./resources/client_contributing.png)
+
+The contribution process may take up to 5 minutes. Again, there is nothing you need to do at this point; just hold tight. When your contribution is finished it will be sent to our  server for verification.  You will see this:
+![awaiting confirmation](./resources/client_await_confirmation.png)
+
+Once the server has verified your contribution you will receive a confirmation message: (TODO: add this screenshot when server is finished)
 
 ### Announcement
-Now it's time to tell the world that you have personally contributed to the security of the Manta Network.  Go on Twitter (todo: Do we provide a twitter link for them?) and tweet "I have just made the Kth contribution to the Manta Network Trusted Setup Ceremony! The hash of my contribution is XXXXXXXXXXX."  Remember, this step provides a public record of your contribution, making it impossible for an attacker to change the history of the ceremony without also hacking Twitter and changing your tweet.  We encourage you to post this in as many places as you can! (TODO: Other suggestions, on-chain perhaps?)
+Now it's time to tell the world that you have personally contributed to the security of the Manta Network.  Go on Twitter and tweet the confirmation message you received above.  Remember, this step provides a public record of your contribution, making it impossible for an attacker to change the history of the ceremony without also hacking Twitter and changing your tweet.  We encourage you to post this in as many places as you can! (TODO: Other suggestions, on-chain perhaps?)

@@ -4,19 +4,19 @@ See [here](../guides/TrustedSetup.md) for participation instructions. Read on to
 
 ## What is a trusted setup?
 
-The Manta Network uses zero-knowledge proofs (ZKPs) to protect your privacy.  The specific kind of ZKP we use for Manta Pay is a ZK-SNARK known as "Groth16" (todo: CITE) and it requires two pieces of public infrastructure: a prover key and a verifier key.  The trusted setup is a process for securely generating these keys.
+The Manta Network uses zero-knowledge proofs (ZKPs) to protect your privacy.  The specific kind of ZKP we use for Manta Pay is a ZK-SNARK known as "Groth16" and it requires two pieces of public infrastructure: a prover key and a verifier key.  The trusted setup is a process for securely generating these keys.
 
 ## What are these keys?
 
 Let's review what's happening on the Manta Network using Manta Pay as an example.  Manta Pay enables users to send tokens to each other without compromising their privacy.  The way this works is that instead of posting sensitive information (address, token type, amount) on-chain as one does on Bitcoin or Ethereum, users post a ZKP.  This ZKP is a proof of the statement "I am performing a valid transaction."  (The actual statement is a bit more complicated, of course.)
 
-So in this situation the Manta Pay user is a *prover* and the Manta Network nodes are *verifiers* of the statement "I am performing a valid transaction."  The proof itself is a solution to a complicated math problem.  This math problem can be solved easily by an honest prover (a user submitting a valid transaction) but is nearly impossible for a dishonest prover (someone attempting to submit a fraudulent transaction).  A verifier can quickly check whether a claimed solution to that math problem is valid.  Very importantly, the solution itself does not reveal any sensitive information like address, token type, or amount.  (See Groth16 for the technical details todo: CITE)
+So in this situation the Manta Pay user is a *prover* and the Manta Network nodes are *verifiers* of the statement "I am performing a valid transaction."  The proof itself is a solution to a complicated math problem.  This math problem can be solved easily by an honest prover (a user submitting a valid transaction) but is nearly impossible for a dishonest prover (someone attempting to submit a fraudulent transaction).  A verifier can quickly check whether a claimed solution to that math problem is valid.  Very importantly, the solution itself does not reveal any sensitive information like address, token type, or amount.  (See [Groth '16](https://eprint.iacr.org/2016/260.pdf) for the technical details.)
 
 Now we come to the keys: the math problem that provers must solve and verifiers must check is stated in terms of a set of public parameters that both parties agree to use.  These parameters are the so-called "keys."  The parameters needed to state a solution to the math problem are called the *prover key* and the parameters needed to verify the solution are called the *verifier key*.  To make a ZKP, Manta Pay users need the prover key; to verify that proof, Manta Network nodes need the verifier key. Of course, when you use Manta Pay you don't see any of these keys, but they're part of what's going on under the hood.
 
 ## Why do we need a trusted setup?
 
-The prover and verifier keys must be formed according to specific mathematical rules.  These rules are too complicated to explain here (but see todo cite groth), but the procedure for generating the keys is roughly this:
+The prover and verifier keys must be formed according to specific mathematical rules.  These rules are too complicated to explain here (but see [Groth '16](https://eprint.iacr.org/2016/260.pdf)), but the procedure for generating the keys is roughly this:
 1. Choose a random number (people often call it "tau")
 2. Use that number to compute a bunch of elliptic curve points. Those points form the prover/verifier keys.
 3. **Forget the random number**
@@ -80,9 +80,8 @@ Manta has put a lot of work into organizing this ceremony and keeping it secure,
 
 * [Perpetual Powers of Tau](https://github.com/weijiekoh/perpetualpowersoftau): A subtlety that we glossed over above is that the generation of prover/verifier keys for Groth16 ZKPs can be divided into two steps, or "phases." Phase 1 is multi-purpose; it results in a set of parameters that can be used by any ZKP (the only restrictions are on the size of the ZKP and the underlying elliptic curve).  Phase 1 can be performed once and reused by many projects. Phase 2 is specific to the circuits being used (in our case, the Manta Pay circuits).  The Phase 2 ceremony must be performed individually by each project and must be repeated if the project ever makes changes to their circuits.  The Manta Pay Trusted Setup Ceremony is a Phase 2 ceremony that produces prover/verifier keys that can only be used for the Manta Pay circuits.    
 Each Phase 2 ceremony must begin with the output of a Phase 1 ceremony. In our case, we chose to use the Perpetual Powers of Tau (PPoT) as our Phase 1.  PPoT is a public good organized by [todo: Semaphore or Wei Jie Koh?].  It is an ambitious public good project to provide the community with a humongous parameter set that is big enough to accommodate very large ZKPs.  PPoT is vulnerable to all the attacks we mentioned above, so before using its output we have verified the proofs of each of its rounds of contribution (72 at the time writing).  The full PPoT ceremony produced about 500x as many parameters as we needed for the Manta Pay circuits, so we have only verified the subset of parameters that we will actually use.  We did compare the full checksums against all the public announcements we could find. All checks passed and we are convinced that the PPoT ceremony produced secure output.
-* [ZCash Sapling Ceremony](https://github.com/ebfull/powersoftau): ZCash's cryptography team were trailblazers, completing one of the first ever Groth16 trusted setups.  We took lots of inspiration from their work when writing our contribution client.
+* [ZCash Sapling Ceremony](https://github.com/ebfull/powersoftau): ZCash's cryptography team were trailblazers, completing one of the first ever Groth16 trusted setups.  We took lots of inspiration from their work when writing our contribution client. (Though to be clear, we are not using the actual parameters from the Sapling ceremony; we are using PPoT.)
 * [Kobi?](https://github.com/kobigurk/phase2-bn254/tree/powers_28/powersoftau/src): TODO: do we recognize Kobi specifically or some organization he's part of?
-* 
 
 ## How to Participate
 
