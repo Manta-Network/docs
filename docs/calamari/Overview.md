@@ -1,12 +1,11 @@
 # 📝 Overview
 
-Calamari, Manta Network's canary net, is the on-chain privacy platform for Kusama Ecosystem.
-Using zkSNARK and other cutting-edge cryptography techniques, Calamari is making privacy inter-operable, easy to use, highly-performant and auditable.
+[Calamari](http://www.calamari.network/), Manta Network's canary net, is the plug-and-play privacy-preservation parachain built to serve the Kusama world. It combines Kusama and zkSNARK to bring inter-operable, easy to use, highly-performant and auditable on-chain privacy to transactions and further use cases.
 
-## The Calamari Parachain
+:::note
+The *canary net* is a highly experimental version of our the stable Manta Network, where all new features will be released and tested first.
+:::
 
-Calamari is Manta Network's canary-net, an early, highly experimental version of Manta Network, where all new features will be released and tested first. Calamari is the plug-and-play privacy-preserving parachain built to service the Kusama DeFi world. It combines Kusama and zkSNARKs to bring on-chain privacy to transactions and swaps.
+The Calamari parachain will be home to multiple privacy solutions, first of which is
 
-In the early period, Calamari parachain will provide two products:
-
-**MariPay**: a token-agnostic private payment service. MariPay supports the private transfer of Kusama and its Parachain assets, including significant crypto assets supported on Kusama. Users can transact popular assets like stablecoins and wrapped BTC while simultaneously benefiting from on-chain privacy through ZKP.
+***MantaPay on Calamari***: a token-agnostic private payment service. *MantaPay on Calamari* supports the private transfer of Kusama and assets of connected Parachains. Users can transact popular assets like stablecoins and wrapped BTC while simultaneously benefiting from on-chain privacy through ZKP.
