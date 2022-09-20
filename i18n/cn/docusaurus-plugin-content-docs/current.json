@@ -15,6 +15,10 @@
     "message": "Calamari (Manta 先行网)",
     "description": "The label for category Calamari in sidebar docs"
   },
+  "sidebar.docs.category.🐙 Calamari Token (KMA)": {
+    "message": "🐙 Calamari 代币 (KMA)",
+    "description": "The label for category Calamari in sidebar docs"
+  },
   "sidebar.docs.category.Collators": {
     "message": "Collator 节点",
     "description": "The label for category Collator in sidebar docs"
