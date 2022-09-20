@@ -1,13 +1,14 @@
 # Tokenomics
 
 ## Inflationary Pressure
-- Inflationary staking rewards of **3% of total issuance per year**.
+- (starting with Manta v3.4.0) Inflationary staking rewards of **3% of total issuance per year**
+
 ## Deflationary Pressure
-- 45% of all transaction fees is burned
-- (possibly, currently inactive) a *privacy premium* imposed on privatization of assets by the network that is burned
+- (starting with Manta v3.4.0) 45% of all transaction fees is burned
+- (if wanted, currently inactive) a *privacy premium* imposed on privatization of assets by the network that is burned
 
 :::note
-For the first 3 years, the 3% annual inflation is negated by burning an equivalent amount of tokens from the treasury.
+For the first 3 years of staking, the 3% annual inflation is negated by burning an equivalent amount of tokens from the treasury.
 
 This makes KMA **strictly deflationary**.
 
