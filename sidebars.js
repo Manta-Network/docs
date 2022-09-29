@@ -61,8 +61,7 @@ module.exports = {
       collapsible: true,
       collapsed: true,
       items: [
-        'collator/CommunityCollatorProgram',
-        'collator/HowToApply',
+        'collator/CommunityCollator',
         {
           type: 'category',
           label: '🚄 Setup and Run a collator',
@@ -75,7 +74,6 @@ module.exports = {
             },
           ]
         },
-        'collator/HowToLeave',
       ]
     },
     {
