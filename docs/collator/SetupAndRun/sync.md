@@ -8,7 +8,7 @@ hide_title: false
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Installation](installation) > [Configuration](configuration) > [Running](running) > Sync > [Session keys](keys) > [Wait](wait)
+[Installation](installation) > [Configuration](configuration) > [Running](running) > Sync > [Session keys](keys) > [Bond](bond)
 
 ## 🤝 Sync the relay and para chains
 
