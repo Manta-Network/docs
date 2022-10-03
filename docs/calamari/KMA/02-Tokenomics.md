@@ -1,10 +1,10 @@
 # Tokenomics
 
 ## Inflationary Pressure
-- (starting with Manta v3.4.0) Inflationary staking rewards of **3% of total issuance per year**
+- (starting with Calamari v3.4.0) Inflationary staking rewards of **3% of total issuance per year**
 
 ## Deflationary Pressure
-- (starting with Manta v3.4.0) 45% of all transaction fees is burned
+- (starting with Calamari v3.4.0) 45% of all transaction fees is burned
 - (if wanted, currently inactive) a *privacy premium* imposed on privatization of assets by the network that is burned
 
 :::note
