@@ -1,8 +1,10 @@
 # 🧩  Community Collators
 
-Node maintainers are encouraged and welcome to run Calamari collators. No centralized permission is required. Running an independent makes Calamari more decentralized and more secure.
+Node maintainers are encouraged and welcome to run Calamari collators. No centralized permission is required but a KMA bond must be posted.
 
-## Hardware and infrastructure requirements
+Free-Market competition between high-performing collators for delegations will ensure a Calamari Network runs at maximum performance and censorship resistance.
+
+## Hardware and Infrastructure Requirements
 
 a. Running on your own hardware and within you own premises (recommended):
 
