@@ -41,3 +41,5 @@ Transactions to privatize and de-privatize/redeem a token will initially only be
 The main purpose of a collator is to bundle transactions into blocks and support block liveness on the network. From there, collators offer up blocks to validators on the relay chain for finalization. KMA token will be used to incentivize a robust network of collators and create a privacy-preserving decentralized network. For this purpose, the network will pay an annual 3% of total issuance to stakers for the first 3 years after launch of the staking model through newly minted KMA.
 
 9% of initial total supply is allocated to be burned from the treasury to counter this inflation for the first 3 years. After that, the community can decide how to continue incentivizing collators and stakers, for example by making KMA a **Dynamic Inflation/Deflation** model where inflation from staking rewards is countered by deflation from Network Usage Fee burn.
+
+Please check the [Staking Rewards](../Staking/Rewards) for specifics on this.

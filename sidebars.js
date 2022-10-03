@@ -50,6 +50,18 @@ module.exports = {
             },
           ],
         },
+        {
+          type: 'category',
+          label: 'Staking',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'calamari/Staking/Overview',
+            'calamari/Staking/Rewards',
+            'guides/StakingGuide',
+            'faq/StakingFAQ',
+          ],
+        },
         'calamari/Governance',
         'calamari/api',
         'calamari/CrowdloanClaim',
@@ -76,6 +88,7 @@ module.exports = {
         },
         'collator/🛠 Collator Maintenance',
         'collator/Unbond',
+        'faq/CollatorFAQ',
       ]
     },
     {
