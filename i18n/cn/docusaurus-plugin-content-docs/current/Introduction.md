@@ -50,7 +50,7 @@ Manta 目前有两个网络:
                 </h1>
                 <ul>
                     <li>
-                        加入&nbsp;<a href='collator/CommunityCollatorProgram'>Calamari社区节点计划</a>.
+                        加入&nbsp;<a href='collator/CommunityCollator'>Calamari社区节点计划</a>.
                     </li>
                 </ul>
             </div>

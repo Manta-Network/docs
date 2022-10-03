@@ -46,7 +46,7 @@ Manta offers two networks:
                 </h1>
                 <ul>
                     <li>
-                        Join&nbsp;<a href='collator/CommunityCollatorProgram'>Calamari Community Collator Program</a>.
+                        Join&nbsp;<a href='collator/CommunityCollator'>Calamari Community Collator</a>.
                     </li>
                 </ul>
             </div>

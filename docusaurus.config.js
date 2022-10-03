@@ -134,8 +134,8 @@ module.exports = {
             to: '/docs/collator/SetupAndRun/installation',
           },
           {
-            from: '/docs/calamari/CommunityCollatorsProgram',
-            to: '/docs/collator/CommunityCollatorProgram',
+            from: '/docs/calamari/CommunityCollator',
+            to: '/docs/collator/CommunityCollator',
           },
         ],
       },
