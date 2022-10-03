@@ -1,9 +1,7 @@
 ---
 sidebar_label: 💔 Leave the Collator Set
+hide_title: true
 ---
-
-[Installation](installation) > [Configuration](configuration) > [Running](running) > [Sync](sync) > [Session keys](keys) > Bond
-
 ## 💔 Leave the Collator Set and Recover the KMA Bond
 
 In order to fully offboard your collator, execute `parachainStaking::scheduleLeaveCandidates`
