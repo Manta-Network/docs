@@ -1,9 +1,9 @@
 :::note
-Staking is active on Calamari Network starting v3.4.0
+Staking is active on Calamari Network starting with v3.4.0
 :::
 Calamari Network runs a delegated proof-of-stake (DPoS) consensus mechanism.
 
-Similar to other Layer 1 blockchains, block producers are selected out of a set of candidates based on a total KMA stake backing each specific block producer candidate - in our case called a `collator`. In addition, users who don't wish to run their own `collator` can instead `delegate` their KMA token to an existing collator and gain a share of its rewards.
+Similar to other Layer 1 blockchains, block producers are selected out of a set of candidates based on the total KMA stake backing each specific block producer candidate - in our case called a `collator`. In addition, users who don't wish to run their own `collator` can instead `delegate` their KMA token to an existing collator and gain a share of its rewards.
 
 ### What does this mean for KMA hodlers
 1. High-performing block producers voted in through delegation => cheapest possible gas fees for transactions
@@ -29,5 +29,5 @@ In contrast to other networks like Ethereum, where no on-chain mechanism exists 
 In order create a semi-stable set of collators, these locked tokens are subject to a 7 day waiting period if a user wishes to recover his tokens from a staking lock or change the target collator they're delegating to.
 
 ### In contrast to Kusama’s NPoS (nominated proof of stake)
-On Kusama, an on-chain election occurs to distribute tokens among backed nodes, on Calamari a delegator always picks one concrete collator and a concrete number of KMA they wish to delegate to that collator.
+On Kusama, an on-chain election occurs to distribute KSM tokens among backed nodes, while on Calamari a delegator always picks one concrete collator and a concrete number of KMA they wish to delegate to that collator.
 This approach is both simpler and less computationally heavy than running a distribution election, which has a nondeterministic execution time - something that must be avoided on Parachains as it can easily lead to chain stalls.
