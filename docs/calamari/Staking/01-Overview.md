@@ -1,4 +1,3 @@
-# Overview
 :::note
 Staking is active on Calamari Network starting v3.4.0
 :::
@@ -20,4 +19,14 @@ This approach is both simpler and less computationally heavy than running a dist
 3. You can generate yield on your KMA by participating in staking rewards
 
 ### Okay, so how do I start staking?
-Follow along with our guide to find out more 👇
+
+You have two routes to stake your KMA:
+
+1. Become a `Delegator`
+
+TODO: All you need is some KMA and [our delegation dApp](Delegation/dApp%20Overview)
+
+2. Become a `Collator Runner`
+
+This path needs technical experience and dedicated computer hardware to run a Calamari blockchain node on in addition to a larger amount of KMA than 1. and can bring higher rewards.
+You can find more info about this path [in the collator section](Collation/CommunityCollator)

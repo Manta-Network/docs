@@ -1,4 +1,4 @@
-# Collator Runner FAQ
+# FAQ
 ### Q: How to setup and run a Collator?
 
 https://docs.manta.network/docs/collator/SetupAndRun/installation
