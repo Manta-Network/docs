@@ -1,7 +1,7 @@
 # Tokenomics
 
 ## Inflationary Pressure
-- (starting with Calamari v3.4.0) Inflationary staking rewards of **3% of total issuance per year**
+- (starting with Calamari v3.4.0) Inflationary  [Staking Rewards](../Staking/Rewards) of **3% of total issuance per year**
 
 ## Deflationary Pressure
 - (starting with Calamari v3.4.0) 45% of all transaction fees is burned
