@@ -1,4 +1,4 @@
-You can find the dApp at [app.manta.network/#/calamari/stake](app.manta.network/#/calamari/stake)
+You can find the dApp at [app.manta.network/#/calamari/stake](https://app.manta.network/#/calamari/stake)
 
 You'll notice it has the following elements:
 ## Header
