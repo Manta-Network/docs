@@ -1,5 +1,5 @@
 ### Q: How to setup and run a Collator?
-See the [collator section](calamari/Staking/Collation/SetupAndRun/installation)
+See the [collator setup guide](SetupAndRun/installation)
 
 ### Q: Where can I find the current collators?
 https://sparta.calamari.systems/
