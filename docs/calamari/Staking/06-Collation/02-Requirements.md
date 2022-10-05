@@ -1,10 +1,8 @@
-# 🧩  Community Collators
+## KMA Bond
 
-Node maintainers are encouraged and welcome to run Calamari collators. No centralized permission is required but a KMA bond must be posted.
+4_000_000 KMA must be available to post as collator bond
 
-Free-Market competition between high-performing collators for delegations will ensure a Calamari Network runs at maximum performance and censorship resistance.
-
-## Hardware and Infrastructure Requirements
+## Hardware and Infrastructure
 
 a. Running on your own hardware and within you own premises (recommended):
 
@@ -31,7 +29,3 @@ b. Running on AWS EC2
 
 c. Azure/GCP or other cloud/datacenter provider
 - Please use your judgement to match or surpass the requirements for other environments above
-
-## Join the collator maintainer community discussion
-
-- Discord: [Collator Program](https://discord.com/channels/795390654628102165/936300292536942592)
