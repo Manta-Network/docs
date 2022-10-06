@@ -19,11 +19,19 @@
     "message": "🐙 Calamari 代币 (KMA)",
     "description": "The label for category Calamari in sidebar docs"
   },
-  "sidebar.docs.category.Collators": {
-    "message": "Collator 节点",
-    "description": "The label for category Collator in sidebar docs"
+  "sidebar.docs.category.Staking": {
+    "message": "质押",
+    "description": "The label for category Calamari in sidebar docs"
   },
-  "sidebar.docs.category.🚄 Setup and Run a collator": {
+  "sidebar.docs.category.Staking.05-Delegation": {
+    "message": "委托",
+    "description": "The label for category Calamari in sidebar docs"
+  },
+  "sidebar.docs.category.Staking.06-Collation": {
+    "message": "Collation",
+    "description": "The label for category Calamari in sidebar docs"
+  },
+  "sidebar.docs.category.Staking.06-Collation.03-SetupAndRun": {
     "message": "🚄 Collator 设置和运行",
     "description": "The label for category Collator in sidebar docs"
   },
