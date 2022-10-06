@@ -21,19 +21,19 @@ Note that this will create a copy of the repository in your current directory. Y
 You will be signing your contribution with an Ed25519 signature. Only participants who register their public key with Manta Network beforehand will be allowed to participate, so you must follow these steps to generate and then register a public key:
 1. **Generate Signature Keypair**: The client you downloaded above will generate your private/public signature keypair for you. Navigate to the `manta-rs` directory (created in the above `clone` step) and run
 ```sh
-cargo run --package manta-trusted-setup --bin groth16_phase2_client -- register
+cargo run --release --package manta-trusted-setup --all-features --bin groth16_phase2_client -- https://ceremony.manta.network register
 ```
 You will be asked for an email address and twitter account.  After providing them you will see output that looks something like this:
 ![registration prompt](./resources/client_register_prompts.png)
 
-2. **Register via Google Form**: Copy the information from the previous step into this [Google form (TODO!)](https://www.google.fr/intl/fr/forms/about/).  Do NOT include the secret phrase. It is important that you use the same Twitter handle and email address as above, since otherwise the signature will be invalid.
+2. **Registration Form*: Copy the information from the previous step into this [Registration form (TODO!)](https://4z64on4g0gg.typeform.com/to/N7afxPaU).  Do NOT include the secret phrase. It is important that you use the same Twitter handle and email address as above, since otherwise the signature will be invalid.
 
 3. **Store Your Secret**: Write down your secret seed phrase (in red, see above picture) somewhere safe and do not share it with anyone. Without this phrase you will not be able to participate in the ceremony!
 
 ### Contribution
 Registered participants may contribute at any time while the ceremony is running. You will do so with the following command:
 ```sh
-cargo run --package manta-trusted-setup --bin groth16_phase2_client -- contribute
+cargo run --release --package manta-trusted-setup --all-features --bin groth16_phase2_client -- https://ceremony.manta.network contribute
 ```
 (don't forget to first navigate to the `manta-rs` directory you created when you downloaded the client!)
 
