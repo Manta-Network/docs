@@ -22,7 +22,7 @@ Calamari 采用 DPoS 共识机制。与其他 L1 类似，Calamari 根据质押 
 
 2. 运行 Collator 
 
-需要一些技术经验和硬件标准来运行 Calamari Collator。此外，还需要更多的 KMA，当然也会获得更高的奖励。可在 Collator 部分里了解更多信息。
+需要一些技术经验和硬件标准来运行 Calamari Collator。此外，还需要更多的 KMA，当然也会获得更高的奖励。可在 [Collation](./06-Collation/01-Overview.md) 部分里了解更多信息。
 
 ## 什么是 DPoS ？
 
