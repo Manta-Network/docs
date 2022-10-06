@@ -1,9 +1,7 @@
 # 📝 概览
 
-:::请注意
-
+:::note
 自 v3.4.0版本起，Calamari 上线质押（Staking）功能
-
 :::
 
 Calamari 采用 DPoS 共识机制。与其他 L1 类似，Calamari 根据质押 KMA 总量选择出块节点。在 Calamari 中，这些节点称为 Collator。未运行 Collator 的用户，可将 KMA 委托给 Collator，以获得奖励。
@@ -22,7 +20,7 @@ Calamari 采用 DPoS 共识机制。与其他 L1 类似，Calamari 根据质押 
 
 只需要持有 KMA，并在 dApp 里将 KMA 委托给 Collator
 
-1. 运行 Collator 
+2. 运行 Collator 
 
 需要一些技术经验和硬件标准来运行 Calamari Collator。此外，还需要更多的 KMA，当然也会获得更高的奖励。可在 Collator 部分里了解更多信息。
 

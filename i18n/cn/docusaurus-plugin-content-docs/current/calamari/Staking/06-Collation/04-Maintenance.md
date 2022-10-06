@@ -4,7 +4,7 @@
 
 尽管 [无分叉升级](https://wiki.polkadot.network/docs/learn-runtime-upgrades#forkless-upgrades) 基本上允许在不需要改变节点软件的情况下进行升级，但是每隔一段时间，链升级都会破坏客户端的二进制文件，而需要手动更新。
 
-:注意: 请密切关注 [Manta 节点 github 发布](https://github.com/Manta-Network/Manta/releases) 中的更新指引。
+:warning: 请密切关注 [Manta 节点 github 发布](https://github.com/Manta-Network/Manta/releases) 中的更新指引。
 
 ### Collator 节点下线
 

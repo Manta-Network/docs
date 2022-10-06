@@ -4,7 +4,9 @@ Calamari 是 Manta Network 的社区化先行网，也是 Kusama 生态系统的
 
 ## Calamari 平行链 
 
+:::note
 Calamari 是 Manta Network 的社区化先行网，也是 Manta Network 的早期实验版本，所有新功能都将在 Calamari 上进行首发和测试。 Calamari 是为服务于 Kusama 的 DeFi 世界而构建的即插即用的平行链。它将 zkSNARK 带入 Kusama 生态，为交易和交换带来链上隐私保护。
+:::
 
 前期，Calamari 平行链将提供两种产品：
 
