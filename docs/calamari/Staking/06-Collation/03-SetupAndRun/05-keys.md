@@ -8,12 +8,12 @@ hide_title: false
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Installation](installation) > [Configuration](configuration) > [Running](running) > [Sync](sync) > Session keys > [Wait](wait)
+[Installation](installation) > [Configuration](configuration) > [Running](running) > [Sync](sync) > Session keys > [Bond](bond)
 
 ## 🔑 Collator session keys
 
 To collate on the Calamari chain, two accounts/keys are required at any given time:
-- **Collator Account**: This is the account that holds the collator bond of 400,000 KMA. it is also the account that the collator's share of transaction fees will be deposited into. the bond cannot be spent while the account is collating. the keys for this account should be protected carefully and should never exist on the filesystem of the collator node.
+- **Collator Account**: This is the account that holds the collator bond. it is also the account that the collator's share of transaction fees will be deposited into. the bond cannot be spent while the account is collating. the keys for this account should be protected carefully and should never exist on the filesystem of the collator node.
 - **Nimbus Session Key**: This is a disposable account used to identify your individual node and blocks it has produced with other nodes on the network.  Substrate stores this key in the parachain keystore on the filesystem of the collator node (`/var/lib/substrate/chains/calamari/keystore`) when either of the author_insertKey or author_rotateKeys RPC methods are called. As this is a hot-wallet key that can be abused to impersonate your node if leaked (potentially leading to slashing of deposited funds in the future) it is good practice to infrequently rotate the session key - typically every half year, once per session at most.
 
 Both keys are associated with one another to create a bond-node pair for transaction fee reward payouts and (in the future) slashing.
@@ -239,7 +239,7 @@ This can take up to **6 hours**.
 :::
    - In the first (dropdown) box, labelled "selected state query", select `session`.
    - In the second (dropdown) box, select `nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>`.
-   - In the third (dropdown) box, select the collator account holding the 400,000 KMA collator bond.
+   - In the third (dropdown) box, select the collator account holding the KMA collator bond.
    - Leave the `include option` checkbox selected.
    - Leave the `blockhash to query at` box set to the default `0x` value.
    - Click on the small plus (`+`) icon to the right of the second dropdown box.

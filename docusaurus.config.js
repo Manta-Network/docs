@@ -130,12 +130,8 @@ module.exports = {
       {
         redirects: [
           {
-            from: '/docs/collator/SetupAndRun',
-            to: '/docs/collator/SetupAndRun/installation',
-          },
-          {
-            from: '/docs/calamari/CommunityCollatorsProgram',
-            to: '/docs/collator/CommunityCollatorProgram',
+            from: '/docs/calamari/Staking/Collation/SetupAndRun',
+            to: '/docs/calamari/Staking/Collation/SetupAndRun/installation',
           },
         ],
       },
