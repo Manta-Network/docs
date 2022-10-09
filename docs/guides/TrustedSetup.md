@@ -23,7 +23,7 @@ You will be asked for an email address and twitter account.  After providing the
 ## Contribution
 Registered participants may contribute at any time while the ceremony is running. You will do so with the following command:
 ```sh
-cargo run --release --package manta-trusted-setup --all-features --bin groth16_phase2_client -- https://ceremony.manta.network contribute
+manta-trusted-setup contribute
 ```
 (don't forget to first navigate to the `manta-rs` directory you created when you downloaded the client!)
 
