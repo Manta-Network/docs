@@ -21,11 +21,10 @@ You will be asked for an email address and twitter account.  After providing the
 3. **Store Your Secret**: Write down your secret seed phrase (in red, see above picture) somewhere safe and do not share it with anyone. Without this phrase you will not be able to participate in the ceremony!
 
 ## Contribution
-Registered participants may contribute at any time while the ceremony is running. You will do so with the following command:
+Registered participants may contribute at any time while the ceremony is running. To do so, open a terminal and enter the following command:
 ```sh
 manta-trusted-setup contribute
 ```
-(don't forget to first navigate to the `manta-rs` directory you created when you downloaded the client!)
 
 When you enter that command you will be prompted to enter the secret phrase you saved from the registration phase (see above):
 ![password prompt](./resources/ts_guide_secret_prompt.png)
@@ -41,6 +40,6 @@ Once the server has verified your contribution you will receive a confirmation m
 ![success](./resources/ts_guide_success.png)
 
 ## Announcement
-Please finish your contribution by tweeting the message we provided (or posting to other public forums). While this step is not strictly necessary, it improves the security of the ceremony by creating a public record of your participation.
+Please finish your contribution by tweeting the message we provided (or posting to other public forums). While this step is not strictly necessary, it improves the security of the ceremony by creating a public record of your contribution.
 
 Thank you for your participation!
