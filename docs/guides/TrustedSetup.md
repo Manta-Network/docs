@@ -2,6 +2,9 @@
 
 See [here](../concepts/TrustedSetup.md) for an explanation of trusted setups and the role they play on Manta Network.  Read on for participation instructions.
 
+<div style={{textAlign: 'center'}}>
+    <img alt="Trusted Setup" src="/img/guides/trusted-setup-stages.svg" width="70%"/>
+</div>
 
 ## Downloading the Client
 For a quick installation, visit [this link](https://ceremony.manta.network). If you prefer to build the client yourself from source code, follow the instructions [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).
