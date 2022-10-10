@@ -16,7 +16,7 @@ We're here to help! If you experience difficulty at any stage, please reach out 
 
 For a quick installation, open a terminal and enter the command
 ```sh
-curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/manta-network/manta-rs/main/tools/install.sh | sh
+curl --proto '=https' --tlsv1.2 -sSf https://mnt.as/tsinstaller | sh
 ```
 followed by
 ```sh
