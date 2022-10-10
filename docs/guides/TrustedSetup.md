@@ -9,6 +9,8 @@ See [here](../concepts/TrustedSetup.md) for an explanation of trusted setups and
 ## Support
 We're here to help! If you experience difficulty at any stage, please reach out to us on [Discord](https://discord.gg/AZTZvK7X).
 
+We also have a [video tutorial](https://www.youtube.com/watch?v=libknEDADHY&ab_channel=MantaNetwork) to walk you through this process.
+
 ## Downloading the Client
 > Quick installation is currently available for the following OS: macOS, Ubuntu 20.04, and Fedora 36.
 > 
