@@ -10,6 +10,10 @@ See [here](../concepts/TrustedSetup.md) for an explanation of trusted setups and
 We're here to help! If you experience difficulty at any stage, please reach out to us on [Discord](https://discord.gg/AZTZvK7X).
 
 ## Downloading the Client
+> Quick installation is currently available for the following OS: macOS, [todo: which linux?]
+> 
+> All other users please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
+
 For a quick installation, open a terminal and enter the command
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/manta-network/manta-rs/main/tools/install.sh | sh
