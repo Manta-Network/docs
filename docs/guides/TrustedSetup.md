@@ -6,8 +6,21 @@ See [here](../concepts/TrustedSetup.md) for an explanation of trusted setups and
     <img alt="Trusted Setup" src="/img/guides/trusted-setup-stages.svg" width="70%"/>
 </div>
 
+## Support
+We're here to help! If you experience difficulty at any stage, please reach out to us on [Discord](https://discord.gg/AZTZvK7X).
+
 ## Downloading the Client
-For a quick installation, visit [this link](https://ceremony.manta.network). If you prefer to build the client yourself from source code, follow the instructions [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).
+For a quick installation, open a terminal and enter the command
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/manta-network/manta-rs/main/tools/install.sh | sh
+```
+followed by
+```sh
+source ~/.profile
+```
+That's all, you have installed the client and can move to the the next step: Registration.
+
+If you prefer to build the client yourself from source code, follow the instructions [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).
 
 ## Registration
 
