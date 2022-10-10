@@ -6,8 +6,27 @@ See [here](../concepts/TrustedSetup.md) for an explanation of trusted setups and
     <img alt="Trusted Setup" src="/img/guides/trusted-setup-stages.svg" width="70%"/>
 </div>
 
+## Support
+We're here to help! If you experience difficulty at any stage, please reach out to us on [Discord](https://discord.gg/AZTZvK7X).
+
+We also have a [video tutorial](https://www.youtube.com/watch?v=libknEDADHY&ab_channel=MantaNetwork) to walk you through this process.
+
 ## Downloading the Client
-For a quick installation, visit [this link](https://ceremony.manta.network). If you prefer to build the client yourself from source code, follow the instructions [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).
+> Quick installation is currently available for the following OS: macOS, Ubuntu 20.04, and Fedora 36.
+> 
+> All other users please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
+
+For a quick installation, open a terminal and enter the command
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/Manta-Network/manta-rs/main/tools/install.sh | sh
+```
+followed by
+```sh
+source ~/.profile
+```
+That's all, you have installed the client and can move to the the next step: Registration.
+
+If you prefer to build the client yourself from source code, follow the instructions [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).
 
 ## Registration
 
@@ -19,7 +38,7 @@ manta-trusted-setup register
 You will be asked for an email address and twitter account.  After providing them you will see output that looks something like this:
 ![registration prompt](./resources/ts_guide_register.png)
 
-2. **Registration Form**: Copy the information from the previous step into this [Registration form](https://4z64on4g0gg.typeform.com/to/N7afxPaU).  Do NOT include the secret phrase. It is important that you use the same Twitter handle and email address as above, since otherwise the signature will be invalid.
+2. **Registration Form**: Copy the information from the previous step into this [Registration form](https://mantanetwork.typeform.com/TrustedSetup).  Do NOT include the secret phrase. It is important that you use the same Twitter handle and email address as above, since otherwise the signature will be invalid.
 
 3. **Store Your Secret**: Write down your secret seed phrase (in red, see above picture) somewhere safe and do not share it with anyone. Without this phrase you will not be able to participate in the ceremony!
 
