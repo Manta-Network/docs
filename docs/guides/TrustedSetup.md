@@ -12,7 +12,7 @@ We're here to help! If you experience difficulty at any stage, please reach out 
 We also have a [video tutorial](https://www.youtube.com/watch?v=libknEDADHY&ab_channel=MantaNetwork) to walk you through this process.
 
 ## Installing the Client
-> Quick installation is currently available for the following OS: macOS, Windows, Ubuntu 20.04, and Fedora 36.
+> Quick installation is currently available for the following OS: macOS, Windows, recent Ubuntu, and Fedora 36.
 > 
 > All other users please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
 
@@ -25,6 +25,15 @@ followed by
 ```sh
 source ~/.profile
 ```
+
+### Linux alternative
+If these commands do not work on your version of Linux, try downloading the executable file [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-unknown-linux-gnu). Navigate to the containing directory (`cd Downloads` for example) and enter
+```sh
+chmod +x manta-trusted-setup-x86_64-unknown-linux-gnu
+
+./manta-trusted-setup-x86_64-unknown-linux-gnu register
+```
+This may not work on all Linux distributions; in that case please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
 
 ### Windows Installation
 For a quick installation on Windows download the `.exe` [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-pc-windows-msvc.exe). You will have to confirm that you wish to keep the file. (If you do not wish to do so then you can install from source code, see [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).)
