@@ -36,6 +36,7 @@ manta-trusted-setup-x86_64-pc-windows-msvc register
 
 That's all, you have installed the client and can move to the the next step: Registration.
 
+### Source Code Installation
 If you prefer to build the client yourself from source code, follow the instructions [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).
 
 ## Registration
