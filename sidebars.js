@@ -64,6 +64,7 @@ module.exports = {
             {
               type: "category",
               label: 'Delegation',
+              collapsed: true,
               items: [
                 'calamari/Staking/Delegation/dApp Overview',
                 'calamari/Staking/Delegation/HowTo Delegate'
@@ -72,12 +73,14 @@ module.exports = {
             {
               type: "category",
               label: 'Collation',
+              collapsed: true,
               items: [
                 'calamari/Staking/Collation/Overview',
                 'calamari/Staking/Collation/Requirements',
                 {
                   type: "category",
                   label: 'SetupAndRun',
+                  collapsed: true,
                   items: [
                     'calamari/Staking/Collation/SetupAndRun/installation',
                     'calamari/Staking/Collation/SetupAndRun/configuration',
