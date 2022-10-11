@@ -11,11 +11,12 @@ We're here to help! If you experience difficulty at any stage, please reach out 
 
 We also have a [video tutorial](https://www.youtube.com/watch?v=libknEDADHY&ab_channel=MantaNetwork) to walk you through this process.
 
-## Downloading the Client
+## Installing the Client
 > Quick installation is currently available for the following OS: macOS, Ubuntu 20.04, and Fedora 36.
 > 
 > All other users please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
 
+### Mac, Linux Installation
 For a quick installation on Mac or Linux, open a terminal and enter the command
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/Manta-Network/manta-rs/main/tools/install.sh | sh
@@ -25,7 +26,13 @@ followed by
 source ~/.profile
 ```
 
-For a quick installation on Windows download the `.exe` [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-pc-windows-msvc.exe) and do the following 
+### Windows Installation
+For a quick installation on Windows download the `.exe` [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-pc-windows-msvc.exe). You will have to confirm that you wish to keep the file. (If you do not wish to do so then you can install from source code, see [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).)
+
+Navigate to the folder where you downloaded the file (likely `cd Downloads`) and enter
+```sh
+manta-trusted-setup-x86_64-pc-windows-msvc register
+```
 
 That's all, you have installed the client and can move to the the next step: Registration.
 
