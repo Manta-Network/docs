@@ -25,12 +25,19 @@ followed by
 ```sh
 source ~/.profile
 ```
+To confirm that the installation worked, enter the command 
+```sh
+manta-trusted-setup register
+```
+Proceed to the next section on Registration.
 
 ### Linux alternative
 If these commands do not work on your version of Linux, try downloading the executable file [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-unknown-linux-gnu). Navigate to the containing directory (`cd Downloads` for example) and enter
 ```sh
 chmod +x manta-trusted-setup-x86_64-unknown-linux-gnu
-
+```
+followed by
+```sh
 ./manta-trusted-setup-x86_64-unknown-linux-gnu register
 ```
 This may not work on all Linux distributions; in that case please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
@@ -59,6 +66,8 @@ You will be signing your contribution with an Ed25519 signature. Only participan
 ```sh
 manta-trusted-setup register
 ```
+(or the appropriate variant if you used the Windows or alternative Linux installation above).
+
 You will be asked for an email address and twitter account.  After providing them you will see output that looks something like this:
 ![registration prompt](./resources/ts_guide_register.png)
 
