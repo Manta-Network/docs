@@ -12,7 +12,7 @@ We're here to help! If you experience difficulty at any stage, please reach out 
 We also have a [video tutorial](https://www.youtube.com/watch?v=libknEDADHY&ab_channel=MantaNetwork) to walk you through this process.
 
 ## Installing the Client
-> Quick installation is currently available for the following OS: macOS, Ubuntu 20.04, and Fedora 36.
+> Quick installation is currently available for the following OS: macOS, Windows, Ubuntu 20.04, and Fedora 36.
 > 
 > All other users please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
 
