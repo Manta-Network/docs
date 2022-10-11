@@ -37,12 +37,15 @@ The above commands may not work on your version of Linux. Please try the followi
 ```sh
 sudo apt update
 ```
+
 ```sh
 sudo apt install pkg-config build-essential libssl-dev curl jq
 ```
+
 ```sh
 curl https://sh.rustup.rs/ -sSf | sh -s -- -y
 ```
+
 ```sh
 source $HOME/.cargo/env
 ```
@@ -60,7 +63,6 @@ If these commands do not work on your version of Linux, try downloading the exec
 ```sh
 chmod +x manta-trusted-setup-x86_64-unknown-linux-gnu
 ```
-followed by
 ```sh
 ./manta-trusted-setup-x86_64-unknown-linux-gnu register
 ```
