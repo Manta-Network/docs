@@ -32,6 +32,30 @@ manta-trusted-setup register
 Proceed to the next section on Registration.
 
 ### Linux alternative
+
+The above commands may not work on your version of Linux. Please try the following sequence of commands instead:
+```sh
+sudo apt update
+```
+```sh
+sudo apt install pkg-config build-essential libssl-dev curl jq
+```
+```sh
+curl https://sh.rustup.rs/ -sSf | sh -s -- -y
+```
+```sh
+source $HOME/.cargo/env
+```
+```sh
+git clone https://github.com/Manta-Network/manta-rs.git
+```
+```sh
+cd manta-rs
+```
+```sh
+cargo run --release --package manta-trusted-setup --all-features --bin groth16_phase2_client register
+```
+
 If these commands do not work on your version of Linux, try downloading the executable file [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-unknown-linux-gnu). Navigate to the containing directory (`cd Downloads` for example) and enter
 ```sh
 chmod +x manta-trusted-setup-x86_64-unknown-linux-gnu
