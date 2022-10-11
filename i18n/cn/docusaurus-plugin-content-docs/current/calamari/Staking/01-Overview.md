@@ -10,11 +10,11 @@ Calamari 采用 DPoS 共识机制。与其他 L1 类似，Calamari 根据质押 
 
 1. 投票选择更好的 Collator ⇒ 尽可能低的 Gas 费用
 2. 多个独立 Collator ⇒ 强抗审查能力 
-3. 你可以通过 Stake KMA 获得奖励。
+3. 你可以通过质押 KMA 获得奖励
 
-### 如何开始 Staking ？
+### 如何开始质押?
 
-有两种方式 Stake KMA：
+有两种方式质押 KMA：
 
 1. 将 KMA 委托给 Collator
 

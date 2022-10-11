@@ -34,7 +34,7 @@ Dolphin Testnet - 开发网络
 
 ### Q: 我的防火墙上应该允许哪些网关?
 
-### Q: Is there a CPU optimized binary?
+### Q: 是否有根据 CPU 优化的二进制文件？?
 
 ### Q: 监控节点有哪些推荐吗?
 
@@ -46,11 +46,11 @@ Dolphin Testnet - 开发网络
 
 A: Nimbus 密钥是 session 密钥的一种，它是你在网络上生产区块或进行验证的节点身份证明。它并不存储或能够获取资金。节点正常运行必须可以一直获取这个密钥的权限，因此它是存储在文件系统中的热私钥。你应当在一个离线的安全地点对其进行备份，这样当你需要转移节点身份至另外的设备时。你可以在文档中查阅更多关于 nimbus session 密钥的内容。
 
-### Q: What is the failover process if my primary node is down?
+### Q: 如果我的节点宕机了，如何进行故障修复？
 
-### Q: Should I set up centralized logging?
+### Q: 应该设置中心化日志吗？
 
-### Q: What should I look for in the logs?
+### Q: 应该查找什么样的日志哦？
 
 A: 如果一切运行顺利，你的节点已经为成为 collator 做好了准备，那么你的节点日志中应该包括 不断出现的 `💤 Idle` 以及 [中继链] 和 [平行链] 中出现的 peer 数量都应该大于0，比如下图
 

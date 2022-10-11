@@ -7,6 +7,10 @@
     "message": "Manta",
     "description": "The label for category Manta in sidebar docs"
   },
+  "sidebar.docs.doc.What is Manta?": {
+    "message": "Manta 是什么?",
+    "description": "The label for category Manta in sidebar docs"
+  },
   "sidebar.docs.category.Concepts": {
     "message": "概念",
     "description": "The label for category Concepts in sidebar docs"
@@ -23,15 +27,15 @@
     "message": "质押",
     "description": "The label for category Calamari in sidebar docs"
   },
-  "sidebar.docs.category.Staking.05-Delegation": {
+  "sidebar.docs.category.Delegation": {
     "message": "委托",
     "description": "The label for category Calamari in sidebar docs"
   },
-  "sidebar.docs.category.Staking.06-Collation": {
-    "message": "Collation",
+  "sidebar.docs.category.Collation": {
+    "message": "Collator 节点",
     "description": "The label for category Calamari in sidebar docs"
   },
-  "sidebar.docs.category.Staking.06-Collation.03-SetupAndRun": {
+  "sidebar.docs.category.SetupAndRun": {
     "message": "🚄 Collator 设置和运行",
     "description": "The label for category Collator in sidebar docs"
   },
