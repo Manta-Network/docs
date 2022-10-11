@@ -33,6 +33,10 @@ Navigate to the folder where you downloaded the file (likely `cd Downloads`) and
 ```sh
 manta-trusted-setup-x86_64-pc-windows-msvc register
 ```
+For Powershell modify this to
+```sh
+./manta-trusted-setup-x86_64-pc-windows-msvc register
+```
 
 That's all, you have installed the client and can move to the the next step: Registration.
 
