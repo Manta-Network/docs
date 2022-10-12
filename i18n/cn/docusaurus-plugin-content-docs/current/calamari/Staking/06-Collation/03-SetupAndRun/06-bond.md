@@ -1,5 +1,7 @@
 # ⏳ 绑定 KMA
 
+[安装](installation) > [配置](configuration) > [运行](running) > [同步](sync) > [Collator节点session 密钥](keys) > 绑定
+
 在成为 Collator 节点候选人之前必须在链上绑定 KMA。在  `joinCandidates` extrinsic 运行前，collator 账户中必须保证有一定数量可转移的 KMA。
 
 在 (Calamari v3.4.0)上线之初，绑定数量至少为 **400万 KMA**。
