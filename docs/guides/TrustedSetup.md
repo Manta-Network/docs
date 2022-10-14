@@ -98,7 +98,12 @@ You will be asked for an email address and twitter account.  After providing the
 
 3. **Store Your Secret**: Write down your secret seed phrase (in red, see above picture) somewhere safe and do not share it with anyone. Without this phrase you will not be able to participate in the ceremony!
 
+You are now registered. Please wait until we announce the start of the ceremony to proceed to the contribution phase.
+
 ## Contribution
+
+> Note: The Ceremony is not yet active. We are currently accepting registrations, but not contributions. We will announce the start of the ceremony in advance; participants will be given ample time (at least 1 week) to contribute.
+
 Registered participants may contribute at any time while the ceremony is running. To do so, open a terminal and enter the following command:
 ```sh
 manta-trusted-setup contribute
