@@ -6,13 +6,26 @@
 <img alt="Trusted Setup" src="/img/guides/trusted-setup-stages.svg" width="70%"/>
 </div>
 
-## 帮助
+可信设置共分为两个阶段：
+- 第一阶段：注册
+- 第二阶段：Contribution
+
+## 求助
 如果您在此过程中遇到任何问题，请在[Discord](https://discord.gg/AZTZvK7X) 上联系我们。
 
+您还可以查看[视频教程](https://www.youtube.com/watch?v=libknEDADHY&ab_channel=MantaNetwork)获得帮助。
+
 ## 下载客户端
-打开终端，输入指令可进行快速下载
+:::note
+快速安装目前支持以下操作系统：`macOS`、`Windows`、`Ubuntu` 和 `Fedora 36`。
+
+而其他系统系统用户，可查看这个[**文档**](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup)
+:::
+
+### Mac、Linux安装
+为了快速安装，请打开“终端”应用程序，应运行下列命令。
 ```sh
-curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/manta-network/manta-rs/main/tools/install.sh | sh
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/Manta-Network/manta-rs/main/tools/install.sh | sh
 ```
 
 然后输入
@@ -21,11 +34,79 @@ curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/manta-net
 source ~/.profile
 ```
 
-这样你就完成了客户端的安装，可以进行下一步的注册了。
+快速安装完成后，输入
+```sh
+manta-trusted-setup register
+```
 
-如果你更倾向于从源代码来构建自己的客户端，请参考[这里](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) 的指引。
+安装完成后，请翻到后文的“注册”。
 
-### 注册
+### Linux备选方案
+上面的代码可能在Linux系统内无法运行。如果你安装了rust环境，可以运行下列代码。
+
+```sh
+sudo apt update
+```
+
+```sh
+sudo apt install pkg-config build-essential libssl-dev curl jq
+```
+
+```sh
+curl https://sh.rustup.rs/ -sSf | sh -s -- -y
+```
+
+```sh
+source $HOME/.cargo/env
+```
+
+```sh
+git clone https://github.com/Manta-Network/manta-rs.git
+```
+
+```sh
+cd manta-rs
+```
+
+```sh
+cargo run --release --package manta-trusted-setup --all-features --bin groth16_phase2_client register
+```
+
+如果你没安装rust，可下载该[**文件**](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-unknown-linux-gnu)，选择安装目录（例如输入 cd Downloads，意为将rust安装到Downloads目录下）
+
+```sh
+chmod +x manta-trusted-setup-x86_64-unknown-linux-gnu
+```
+
+```sh
+./manta-trusted-setup-x86_64-unknown-linux-gnu register
+```
+
+上述代码可能不适用全部的Linux系统，若不适配，你可以从源代码来构建自己的客户端，请参考[这里](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) 的指引。
+
+### Windows安装
+
+可直接在[**这里**](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-pc-windows-msvc.exe)下载`.exe`安装包。
+
+如果你不想直接下载，可查看该链接下的[**源代码**](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup)
+
+切换到你刚刚的下载目录(比如 `cd Downloads`)，然后执行下面这条命令
+```sh
+manta-trusted-setup-x86_64-pc-windows-msvc register
+```
+
+如果是Powershell环境里执行，则需要输入下列命令行
+
+```sh
+./manta-trusted-setup-x86_64-pc-windows-msvc register
+```
+
+安装完成后，请查看后文的**注册**。
+
+### 使用源代码安装
+
+如果你想利用源代码构建自己的客户端，请查看该[**链接**](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup)
+## 注册
 
 您将使用 Ed25519 签名签署您的贡献。 只有预先在 Manta Network 注册公钥的参与者才能参与，因此您必须按照以下步骤生成并注册公钥：
 
@@ -41,7 +122,7 @@ source ~/.profile
 
 3. **存储秘钥**: 在安全的地方写下你的助记词（红色，见上图），不要与任何人分享。 如果没有这些，您将无法参加仪式！
 
-### 贡献
+## 贡献
 
 注册的参与者可以在仪式进行期间随时贡献，只需使用以下命令执行此操作：
 
