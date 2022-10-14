@@ -163,7 +163,7 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
       -s \
       --header 'Content-Type: application/json;charset=utf-8' \
       --data @./check-${key}.json \
-      http://localhost:9133 | jq -r '.result == "true"')
+      http://localhost:9133 | jq -r '.result == true')
     echo "${key}: ${has_key}"
   done
   ```
