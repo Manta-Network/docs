@@ -57,7 +57,7 @@ Manta Signer 是零知识证明生成器和隐私管理工具。目前已支持�
 <img alt="signer-login" src="/img/guides/signer-login.png" width="50%"/>
 </div>
 
-访问 [Dolphin App](https://app.dolphin.manta.network/)。可以看到右上角 Signer 已连接的标志：
+访问 [Dolphin App](https://app.manta.network/dolphin/transact)。可以看到右上角 Signer 已连接的标志：
 <br/>
 
 <div style={{textAlign: 'center'}}>

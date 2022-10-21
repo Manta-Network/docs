@@ -50,14 +50,14 @@ Now let's send some private payments :)
 
 ### Run Signer
 
-   If Signer is not already running, open signer and enter your password to log in:
-   <br/>
+If Signer is not already running, open signer and enter your password to log in:
+<br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="signer-login" src="/img/guides/signer-login.png" width="50%"/>
    </div>
 
-   Go to [Dolphin App](https://app.dolphin.manta.network/). You should see that signer is connected in the top right corner of the screen:
+Go to [Dolphin App](https://app.manta.network/dolphin/transact). You should see that signer is connected in the top right corner of the screen:
 <br/>
 
    <div style={{textAlign: 'center'}}>
@@ -68,14 +68,14 @@ Now let's send some private payments :)
 
 ### Convert public assets to private assets
 
-   Select the public address you are sending from, the token you are sending, and the amount you want to send to your shielded address. Press "To Private" to submit:
+Select the public address you are sending from, the token you are sending, and the amount you want to send to your shielded address. Press "To Private" to submit:
 <br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="to-private" src="/img/guides/to-private.png" width="50%"/>
    </div>
 
-   Finally, polkadot.js will prompt you to approve the transfer, and then publish it to the Dolphin blockchain:
+Finally, polkadot.js will prompt you to approve the transfer, and then publish it to the Dolphin blockchain:
 <br/>
 
    <div style={{textAlign: 'center'}}>
@@ -86,22 +86,22 @@ Now let's send some private payments :)
 
 ### Send private assets to a shielded address
 
-   Press the private-public toggle button at the top of the form, so that you can send from your shielded address. Select the token you want to send, enter the amount you are sending, and enter the destination shielded address.
+Press the private-public toggle button at the top of the form, so that you can send from your shielded address. Select the token you want to send, enter the amount you are sending, and enter the destination shielded address.
 
-   If you need an example shielded address to send to, you can send to yourself (click on the copy icon next to your shielded address), or to this example address:
+If you need an example shielded address to send to, you can send to yourself (click on the copy icon next to your shielded address), or to this example address:
 
-   `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`
+`2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`
 
-   (note that shielded addresses and public addresses have a different format, and are not interchageable)
+(note that shielded addresses and public addresses have a different format, and are not interchageable)
 
-   Click "Private Transfer" to begin the transaction.
+Click "Private Transfer" to begin the transaction.
 <br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="private-transfer" src="/img/guides/private-transfer.png" width="50%"/>
    </div>
 
-   Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
+Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
 <br/>
 
    <div style={{textAlign: 'center'}}>
@@ -110,13 +110,13 @@ Now let's send some private payments :)
 
 <br/>
 
-   Finally, polkadot.js will prompt you to approve the transfer and then publish it to the Dolphin blockchain.
+Finally, polkadot.js will prompt you to approve the transfer and then publish it to the Dolphin blockchain.
 <br/>
 <br/>
 
 ### Convert private assets to public
 
-   Press the private-public toggle button at the bottom of the form, so that you can send from your shielded address to one of your public accounts. Select the token you want to send, enter the amount you are sending, and select your public destination account.
+Press the private-public toggle button at the bottom of the form, so that you can send from your shielded address to one of your public accounts. Select the token you want to send, enter the amount you are sending, and select your public destination account.
 
 <br/>
 
@@ -124,9 +124,9 @@ Now let's send some private payments :)
     <img alt="to-public" src="/img/guides/to-public.png" width="50%"/>
    </div>
 
-   Once again, Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
+Once again, Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
 
-   Finally, polkadot.js will prompt you to approve the transfer and, then publish it to the Dolphin blockchain.
+Finally, polkadot.js will prompt you to approve the transfer and, then publish it to the Dolphin blockchain.
 <br/>
 <br/>
 
@@ -176,18 +176,18 @@ Now let's send some private payments :)
 
 - If you see a delay in the transaction, check the polkadot.js wallet metadata if it needs to be updated.
 
-   See the link [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
+  See the link [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
 
 - On Windows 10, occasionally the installer will fail due to WebView2 not installing correctly. If this happens, you will see a message like so:
-<br/>
-   <div style={{textAlign: 'center'}}>
-    <img alt="windows-install" src="/img/guides/windows-install-issue.png" width="70%"/>
-   </div>
+  <br/>
+     <div style={{textAlign: 'center'}}>
+      <img alt="windows-install" src="/img/guides/windows-install-issue.png" width="70%"/>
+     </div>
 
-   To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly. 
+  To fix this, you can try downloading and installing [WebView2 runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) directly.
 
-   Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
-<br/>
+  Please note that it still might not work. The team is aware of the Windows issue and is currently working on a fix; we'll update the community on the new updates.
+  <br/>
 
 If all these checks pass and you still can't send transactions, please let us know on discord in the [`#dolphin-testnet`](https://discord.gg/c72QMWEVyY) channel so that we can improve Dolphin!
 
@@ -213,18 +213,18 @@ If all these checks pass and you still can't send transactions, please let us kn
 5. I can’t find Calamari Network on Polkadot.Js
 
    1. To get the Calamari address, you should follow the below-mentioned steps.
-      
-        1.1 click on polkadot.js extension > Click on three vertical dots as mentioned in the image > Select Calamari Parachain.
 
-        If you still don't see the "Calamari" parachain option, then please visit this URL https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcalamari-rpc.dwellir.com#/explorer.
+      1.1 click on polkadot.js extension > Click on three vertical dots as mentioned in the image > Select Calamari Parachain.
 
-   2. Go to settings > Metadata > Update Metadata 
-      
+      If you still don't see the "Calamari" parachain option, then please visit this URL https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fcalamari-rpc.dwellir.com#/explorer.
+
+   2. Go to settings > Metadata > Update Metadata
+
       Then please follow steps mentioned in 1.1
 
 6. The `To Private` button on the dolphin testnet is not working
 
-   Please try reloading the page at https://app.dolphin.manta.network/#/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section `...` disappear.
+   Please try reloading the page at https://app.manta.network/dolphin/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section `...` disappear.
 
    Please note that our testnet is currently overwhelmingly popular, and many transactions are trying to go through the network simultaneously, so if you're still experiencing.
 
@@ -236,14 +236,14 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 7. To remove your private account data completely and set up a new account, you should remove these files:
 
-      - macOS: `~/Library/Application Support/manta-signer/`
-      - Linux: `~/.config/manta-signer/`
-      - Windows: `~/AppData/Roaming/manta-signer/`
-      
+   - macOS: `~/Library/Application Support/manta-signer/`
+   - Linux: `~/.config/manta-signer/`
+   - Windows: `~/AppData/Roaming/manta-signer/`
+
 8. How long will the testnet run?
 
-    The testnet will run forever 👾
- 
+   The testnet will run forever 👾
+
 
 ### Incentivized Testnet FAQs
 
@@ -251,8 +251,8 @@ If all these checks pass and you still can't send transactions, please let us kn
 
    First, please make sure the email account you're logged in on Gleam is the same as the account you were using when you filled the form. If not, you'll have to fill out the form again using the same email/account (both on Gleam and the Google Form). After that, please clean your cache, reload the page and try again.
 
-2. Which address should I enter in the form when asked "enter your private transfer transaction ID to this wallet address `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`? 
- 
+2. Which address should I enter in the form when asked "enter your private transfer transaction ID to this wallet address `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`?
+
    Go to https://dolphin.subscan.io/, search your public wallet address of the dolphin app, find the **extrinsic hash** of your private transfer to the `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`, and copy/paste that into the form.
 
 3. Is the gleam form closed?
@@ -260,9 +260,9 @@ If all these checks pass and you still can't send transactions, please let us kn
    No, please clear your browser cache and try again at the link https://gleam.io/ye0bg/dolphin-testnet-v2-airdrop.
 
 4. How do I participate in the testnet?
-   
+
    There is a very thorough guide, please follow the steps at: [Manta Network Testnet V2: Walkthrough](https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7). Check the Dolphin V2 Resources & Official Announcement at [https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159](https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159)
-   
+
 5. How long will the incentive campaign run?
 
- The incentivized testnet campaign will run until the Calamari launch.
+The incentivized testnet campaign will run until the Calamari launch.
