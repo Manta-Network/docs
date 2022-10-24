@@ -92,7 +92,18 @@ manta-trusted-setup register
 (or the appropriate variant if you used the Windows or alternative Linux installation above).
 
 You will be asked for an email address and twitter account.  After providing them you will see output that looks something like this:
+
 ![registration prompt](./resources/ts_guide_register.png)
+
+
+<details>
+  <summary>(Drop down if your output looks different)</summary>
+    If you are using an old version of the client you may see a slightly different output, like this:
+
+  ![registration prompt v1](./resources/ts_guide_register_v1.png)
+    You can either update to the newest client (uninstall/reinstall) or enter these details manually in this [Registration form](https://mantanetwork.typeform.com/TrustedSetup). Make sure you copy each field exactly as it appears on screen.
+
+</details>
 
 2. **Registration Form**: Copy the information from the previous step into this [Registration form](https://mantanetwork.typeform.com/TrustedSetup).  Do NOT include the secret phrase. It is important that you use the same Twitter handle and email address as above, since otherwise the signature will be invalid.
 
