@@ -57,7 +57,7 @@ Now let's send some private payments :)
     <img alt="signer-login" src="/img/guides/signer-login.png" width="50%"/>
    </div>
 
-   Go to [Dolphin App](https://app.dolphin.manta.network/). You should see that signer is connected in the top right corner of the screen:
+   Go to [Dolphin App](https://app.manta.network/#/dolphin/transact). You should see that signer is connected in the top right corner of the screen:
 <br/>
 
    <div style={{textAlign: 'center'}}>
@@ -224,7 +224,7 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 6. The `To Private` button on the dolphin testnet is not working
 
-   Please try reloading the page at https://app.dolphin.manta.network/#/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section `...` disappear.
+   Please try reloading the page at https://app.manta.network/#/dolphin/transact. Click on the "To Private" button again once you see a number next to BOTH "Balance" fields. Wait patiently until the three dots in the private section `...` disappear.
 
    Please note that our testnet is currently overwhelmingly popular, and many transactions are trying to go through the network simultaneously, so if you're still experiencing.
 
