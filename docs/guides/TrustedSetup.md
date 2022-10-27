@@ -56,7 +56,7 @@ cd manta-rs
 cargo run --release --package manta-trusted-setup --all-features --bin groth16_phase2_client register
 ```
 
-If you do not have Rust, try downloading the executable file [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-unknown-linux-gnu). Navigate to the containing directory (`cd Downloads` for example) and enter
+If you do not have Rust, try downloading the executable file [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.6/manta-trusted-setup-x86_64-unknown-linux-gnu). Navigate to the containing directory (`cd Downloads` for example) and enter
 ```sh
 chmod +x manta-trusted-setup-x86_64-unknown-linux-gnu
 ```
@@ -66,7 +66,7 @@ chmod +x manta-trusted-setup-x86_64-unknown-linux-gnu
 This may not work on all Linux distributions; in that case please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
 
 ### Windows Installation
-For a quick installation on Windows download the `.exe` [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-pc-windows-msvc.exe). You will have to confirm that you wish to keep the file. (If you do not wish to do so then you can install from source code, see [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).)
+For a quick installation on Windows download the `.exe` [here](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.6/manta-trusted-setup-x86_64-pc-windows-msvc.exe). You will have to confirm that you wish to keep the file. (If you do not wish to do so then you can install from source code, see [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).)
 
 Navigate to the folder where you downloaded the file (likely `cd Downloads`) and enter
 ```sh
