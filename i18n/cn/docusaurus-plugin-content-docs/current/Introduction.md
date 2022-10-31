@@ -1,4 +1,4 @@
-# 介绍
+# Manta 是什么?
 
 欢迎大家! 👋
 
@@ -20,7 +20,7 @@ Manta 目前有两个网络:
                 </h1>
                 <ul>
                     <li>
-                        试用&nbsp;<a href='https://app.manta.network/#/dolphin/transact' target="_blank">Dolphin Testnet dApp</a>.
+                        试用&nbsp;<a href='https://app.manta.network/dolphin/transact' target="_blank">Dolphin Testnet dApp</a>.
                     </li>
                     <li>
                         加入Manta社区 (<a href='https://discord.gg/PRDBTChSsF' target="_blank">discord</a>, <a href='https://twitter.com/mantanetwork' target="_blank">twitter</a>, <a href='https://t.me/mantanetworkofficial' target='_blank'>telegram</a>).

@@ -2,6 +2,8 @@
 title: 安装
 ---
 
+安装 > [配置](configuration) > [运行](running) > [同步](sync) > [Collator节点session 密钥](keys) > [绑定](bond)
+
 <Tabs pId="os">
 
 <TabItem value="docker" label="docker">
