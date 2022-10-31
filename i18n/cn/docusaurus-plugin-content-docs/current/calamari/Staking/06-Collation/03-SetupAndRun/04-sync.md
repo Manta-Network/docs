@@ -2,6 +2,8 @@
 title: 同步
 ---
 
+[安装](installation) > [配置](configuration) > [运行](running) > 同步 > [Collator节点session 密钥](keys) > [绑定](bond)
+
 如果中继链上没发现peers，或者您的节点无法验证新块，请确保您节点的时钟准确与 ntp 时间服务器同步。
 
 提交申请前，您必须同步 calamari 平行链和 kusama 中继链。完全同步的底层区块链节点将在其日志中显示空闲状态，`[Relaychain]`并且`[Parachain]`看起来像这样：
