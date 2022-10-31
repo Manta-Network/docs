@@ -2,6 +2,8 @@
 title: 配置
 ---
 
+[安装](installation) > 配置 > [运行](running) > [同步](sync) > [Collator节点session 密钥](keys) > [绑定](bond)
+
 需要一些额外有助于节点的相关配置命令。
 
 <Tabs groupId="os">
