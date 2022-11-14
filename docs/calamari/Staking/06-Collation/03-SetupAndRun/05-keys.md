@@ -18,18 +18,14 @@ To collate on the Calamari chain, two accounts/keys are required at any given ti
 
 Both keys are associated with one another to create a bond-node pair for transaction fee reward payouts and (in the future) slashing.
 
-:::note
-While the Nimbus session key is present in the node since v.3.2.1, it will only become active with v3.3.0. Before this upgrade, the Aura session key below is used.
-:::
-
 In addition, your node might have two additional keys in storage:
-- **Aura Session Key**: Used in the node to decide on the authoring node *before* v3.3.0
-- **VRF Session Key**: A placeholder key for a future switch to a verifiably-random block producer selection scheme
+- **Aura Session Key**: Now-unused key to decide eligibility to author blocks *before* v3.3.0
+- **VRF Session Key**: Placeholder for a future [VRF](https://en.wikipedia.org/wiki/Verifiable_random_function)-based block proposer assignment mechanism that is inactive as of v3.2.1. The future mechanism will use the key you set here, so if you set it now, you won't have to touch the node later when it is enabled.
 
 :::warning
 Both of the following methods (insert, rotate) use an **unsafe** RPC call to set the node session key.
 In order to use them, you must stop the node if running and start it with a `--rpc-methods=unsafe` CLI parameter.
-This mode of operation is **unsafe** when exposed to the public internet, restart the node without the CLI parameter when done.
+This mode of operation is **unsafe** when exposed to the public internet, restart the node without this CLI parameter when done.
 :::
 
 <Tabs groupId="keys">
@@ -37,46 +33,8 @@ This mode of operation is **unsafe** when exposed to the public internet, restar
 
 This command demonstrates a session key insertion using a key created with 
 
-:::note
-Starting with v3.2.1 you must provide all 3 of the following keys, earlier revisions needed only the Aura key
-:::
-
 - Build/Install [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) for your platform 
 - Install the [jq utility](https://stedolan.github.io/jq/download/) for your platform 
-- Generate an Aura key and insert/check payloads with subkey/jq
-  ```bash
-  #!/bin/bash
-  subkey generate \
-    --scheme sr25519 \
-    --network calamari \
-    --output-type json \
-    --words 12 \
-    > ./aura.json
-  echo '{
-    "jsonrpc":"2.0",
-    "id":1,
-    "method":"author_insertKey",
-    "params": [
-      "aura",
-      "aura mnemonic phrase",
-      "aura hex public key"
-    ]
-  }' | jq \
-    --arg mnemonic "$(jq -r .secretPhrase ./aura.json)" \
-    --arg hex "$(jq -r .publicKey ./aura.json)" \
-    '. | .params[1] = $mnemonic | .params[2] = $hex' > ./insert-aura.json
-  echo '{
-    "jsonrpc":"2.0",
-    "id":1,
-    "method":"author_hasKey",
-    "params": [
-      "aura hex public key",
-      "aura"
-    ]
-  }' | jq \
-    --arg hex "$(jq -r .publicKey ./aura.json)" \
-    '. | .params[0] = $hex' > ./check-aura.json
-  ```
 - Generate a Nimbus (nmbs) key and insert/check payloads with subkey/jq
   ```bash
   #!/bin/bash
@@ -148,7 +106,7 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
 - Execute the `author_insertKey` RPC payloads
   ```bash
   #!/bin/bash
-  for key in aura nmbs rand; do
+  for key in nmbs rand; do
     curl \
       --header 'Content-Type: application/json;charset=utf-8' \
       --data @./insert-${key}.json \
@@ -158,7 +116,7 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
 - **Validation**: Check that the session keys stored in the node match the generated ones
   ```bash
   #!/bin/bash
-  for key in aura nmbs rand; do
+  for key in nmbs rand; do
     has_key=$(curl \
       -s \
       --header 'Content-Type: application/json;charset=utf-8' \
@@ -172,15 +130,19 @@ Starting with v3.2.1 you must provide all 3 of the following keys, earlier revis
   #!/bin/bash
   journalctl -u calamari.service -g AUTHORITY
   ```
-- Note down the three `publicKey` fields from the `aura.json`, `nmbs.json` and `rand.json` files and/or back-up these key files to a **secure**, offline location
+- Note down the `publicKey` fields from `nmbs.json` and `rand.json` and/or back-up these key files to a **secure**, offline location
 - **Cleanup**: Remove secrets from the filesystem that were created in earlier steps
   ```bash
   #!/bin/bash
-  rm ./aura.json ./nmbs.json ./rand.json ./insert-aura.json ./insert-nmbs.json ./insert-rand.json
+  rm ./nmbs.json ./rand.json ./insert-nmbs.json ./insert-rand.json
   ```
 
 </TabItem>
 <TabItem value="rotate" label="rotateKeys">
+
+:::warning
+Ensure your node is [fully synced](sync) before attempting this method
+:::
 
 This command rotates session keys, i.e. creates a new private key in its keystore and outputs the corresponding public keys.
 If old keys exist, they remain present in the node's keystore and are *not* deleted.
@@ -207,6 +169,11 @@ VRF => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb40e6aeb15911288c562f63
 </TabItem>
 </Tabs>
 
+:::note
+Verify that your node does *NOT* show log lines like `2022-07-19 17:24:18 [Parachain] 🔏 No Nimbus keys available. We will not be able to author.`<br/>
+If it does even after restarting the node the procedure above failed, redo the above steps following the instructions closely.
+:::
+
 ### Bind collator account to the Session Keys
 
 :::note
@@ -219,23 +186,21 @@ Account binding is done on-chain. The simplest way to do this is using polkadot.
 :::note
 Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Calamari Network
 :::
-   - In the first box, labelled "using the selected account", select the collator account holding the 400,000 KMA collator bond.
+   - In the first box, labelled "using the selected account", select the collator account holding the [collator KMA bond](../Requirements#kma-bond).
    - In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
    - In the third (dropdown) box, select `setKeys(keys, proof)`
-   - In both the fourth box labelled `aura: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the Aura session key you generated earlier.
-   - In both the fifth box, labelled `nimbus: NimbusPrimitivesNimbusCryptoPublic`, enter the hex public key of the Nimbus session key you generated earlier.
-   - In both the sixth boxes, labelled `vrf: SessionKeyPrimitivesVrfVrfCryptoPublic`, enter the hex public key of the VRF session key you generated earlier.
-   - In both the seventh box labelled `proof: Bytes`, enter the hex public key of the Nimbus session key *again*.
+   - In the fourth box labelled `aura: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the Aura session key you generated earlier.
+:::note
+`aura` is an inactive key from pre-v3.3.0 versions of the node. The value you provide here will not be used and you may provide a dummy value e.g. `0x0000000000000000000000000000000000000000000000000000000000000000` or the key obtained from `rotateKeys` above
+:::
+   - In the fifth box, labelled `nimbus: NimbusPrimitivesNimbusCryptoPublic`, enter the hex public key of the Nimbus session key you generated earlier.
+   - In the sixth box, labelled `vrf: SessionKeyPrimitivesVrfVrfCryptoPublic`, enter the hex public key of the VRF session key you generated earlier.
+   - In the seventh box labelled `proof: Bytes`, enter the hex public key of the Nimbus session key *again*.
    - Click on the `Submit Transaction` button and wait for confirmation (a green tick), to appear in the upper right corner of the browser window.
 - Verfy that the collator account and the Session keys are *bound* by loading [calamari/developer/chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/chainstate) in a browser:
   ![session.nextkeys()](/img/collator-program/session.nextkeys.png)
 :::note
 Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Calamari Network
-:::
-:::note
-Your node may show the following log line until the first session change after the `set_keys` extrinsic is included in a block <br/>
-`2022-07-19 17:24:18 [Parachain] 🔏 No Nimbus keys available. We will not be able to author.`<br/>
-This can take up to **6 hours**.
 :::
    - In the first (dropdown) box, labelled "selected state query", select `session`.
    - In the second (dropdown) box, select `nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>`.
