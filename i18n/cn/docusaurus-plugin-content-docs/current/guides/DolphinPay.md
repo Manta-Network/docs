@@ -1,4 +1,4 @@
-# 🐬 通过 Dolphin 测试网体验 MantaPay 
+# 🐬 通过 Dolphin 测试网体验 MantaPay
 
 MantaPay 允许用户进行公开资产的隐私化、隐私资产的转账以及将隐私资产赎回为公开资产 (如下图所示)。
 
@@ -6,7 +6,7 @@ MantaPay 允许用户进行公开资产的隐私化、隐私资产的转账以�
 <img alt="DolphinPay Overview" src="/img/guides/DolphinPay.svg" width="70%"/>
 </div>
 
-请注意: 公开资产和隐私资产有着不同的地址(公开地址 vs 隐私地址)，且公开地址和隐私地址之间没有关联性。 
+请注意: 公开资产和隐私资产有着不同的地址(公开地址 vs 隐私地址)，且公开地址和隐私地址之间没有关联性。
 
 ## **设置测试网账户**
 
@@ -57,7 +57,7 @@ Manta Signer 是零知识证明生成器和隐私管理工具。目前已支持�
 <img alt="signer-login" src="/img/guides/signer-login.png" width="50%"/>
 </div>
 
-访问 [Dolphin App](https://app.dolphin.manta.network/)。可以看到右上角 Signer 已连接的标志：
+访问 [Dolphin App](https://app.manta.network/dolphin/transact)。可以看到右上角 Signer 已连接的标志：
 <br/>
 
 <div style={{textAlign: 'center'}}>
@@ -134,39 +134,39 @@ Signer 将会再次提示你输入密码来确认交易。一旦得到确认，S
 
 - 请确认是否安装 polkadot.js 插件，以及是否有权限连接 Dolphin 网页端 app；
 <br/>
-    
+
     <div style={{textAlign: 'center'}}>
     <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="70%"/>
     </div>
-    
+
 - 请确认是否下载并安装了最新版 signer，Signer 是否成功运行以及出于登录状态；
 <br/>
-    
+
     <div style={{textAlign: 'center'}}>
     <img alt="signer-connected" src="/img/guides/signer-connected.png" width="30%"/>
     </div>
-    
+
 - Brave 浏览器用户请检查是否开启了屏蔽模式；
 <br/>
-    
+
     <div style={{textAlign: 'center'}}>
     <img alt="brave-shields" src="/img/guides/brave-shields.png" width="70%"/>
     </div>
-    
+
 - 请确认是否已连接到节点（默认节点 Ford）以及网络连接是否稳定；
 <br/>
-    
+
     <div style={{textAlign: 'center'}}>
     <img alt="node-connected" src="/img/guides/node-connected.png" width="30%"/>
     </div>
-    
+
 - 请确认您的账户中有领取 DOL 作为手续费；
 <br/>
-    
+
     <div style={{textAlign: 'center'}}>
     <img alt="fee-balance" src="/img/guides/fee-balance.png" width="70%"/>
     </div>
-    
+
 
 如果您确认以上所有都没有问题，但是依然无法完成转账，请在 discord 中#dolphin-testnet 频道向我们反馈。
 <br/>
@@ -175,17 +175,17 @@ Signer 将会再次提示你输入密码来确认交易。一旦得到确认，S
 ## FAQ
 
 1. 为什么需要 *Signer*? 我可以信任它吗?
-    
+
     *Manta Signer 主要有两个目的: 保护你的支付隐私；使用原生代码来构建零知识证明。Signer 在本地运行，绝不会泄露你的隐私。Manta Signer 是 [全开源软件](https://github.com/Manta-Network/manta-signer) 并会进行第三方审计。*
-    
+
 2. *Signer* 中的隐私代币是安全的吗 ?
-    
+
     *所有用于隐私代币的花费信息都安全地储存在你的电脑里，并使用 [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) 进行加密，绝不会在线泄露你的隐私。*
-    
+
 3. 如果我忘记了 *Signer* 密码，如何恢复我的隐私资产？
-    
+
     *我们将很快增加密码恢复功能，敬请期待。*
-    
+
 4. 隐私支付的原理是什么？
-    
+
     *[请点击阅读](..//learn/PrivatePayment.md)*

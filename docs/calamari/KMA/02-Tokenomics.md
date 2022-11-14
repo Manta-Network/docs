@@ -1,13 +1,14 @@
 # Tokenomics
 
 ## Inflationary Pressure
-- Inflationary staking rewards of **3% of total issuance per year**.
+- (starting with Calamari v3.4.0) Inflationary  [Staking Rewards](../Staking/Rewards) of **3% of total issuance per year**
+
 ## Deflationary Pressure
-- 45% of all transaction fees is burned
-- (possibly, currently inactive) a *privacy premium* imposed on privatization of assets by the network that is burned
+- (starting with Calamari v3.4.0) 45% of all transaction fees is burned
+- (if wanted, currently inactive) a *privacy premium* imposed on privatization of assets by the network that is burned
 
 :::note
-For the first 3 years, the 3% annual inflation is negated by burning an equivalent amount of tokens from the treasury.
+For the first 3 years of staking, the 3% annual inflation is negated by burning an equivalent amount of tokens from the treasury.
 
 This makes KMA **strictly deflationary**.
 
@@ -40,3 +41,5 @@ Transactions to privatize and de-privatize/redeem a token will initially only be
 The main purpose of a collator is to bundle transactions into blocks and support block liveness on the network. From there, collators offer up blocks to validators on the relay chain for finalization. KMA token will be used to incentivize a robust network of collators and create a privacy-preserving decentralized network. For this purpose, the network will pay an annual 3% of total issuance to stakers for the first 3 years after launch of the staking model through newly minted KMA.
 
 9% of initial total supply is allocated to be burned from the treasury to counter this inflation for the first 3 years. After that, the community can decide how to continue incentivizing collators and stakers, for example by making KMA a **Dynamic Inflation/Deflation** model where inflation from staking rewards is countered by deflation from Network Usage Fee burn.
+
+Please check the [Staking Rewards](../Staking/Rewards) for specifics on this.

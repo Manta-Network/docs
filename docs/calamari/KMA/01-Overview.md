@@ -10,8 +10,12 @@ The KMA token has multiple uses on Calamari Network:
 2. The KMA token serves as a medium of exchange.
 3. The KMA token represents governance rights on Calamari.
 4. MantaPay on Calamari public-to-private and vice versa transactions will not charge any additional premium for now. 
-5. To incentivize decentralization, for the first 3 years after launch 3% of total KMA issuance will be distributed as staking rewards per year by minting of new KMA.
-All newly minted KMA this way will periodically be burned from the treasury to compensate for this inflation. After 3 years, the Calamari community will decide on further incentives. 
+5. For the first 3 years after launch of [Staking](../Staking/Overview), 3% of total KMA issuance will be distributed per year as staking rewards to incentivize decentralization.
+KMA distributed are created through minting of new KMA. All newly minted KMA will periodically be burned from the treasury to compensate for this inflation. After 3 years, the Calamari community will decide on further incentives.
+
+:::note
+1. and 5. become active with the launch of Staking on Calamari Network ( Runtime v3.4.0 ) and 4. with the launch of MantaPay on Calamari
+:::
 
 ## Disclaimer
 
