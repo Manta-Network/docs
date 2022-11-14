@@ -189,9 +189,9 @@ Although the screenshot shows a connected dolphin node, the procedure is identic
    - In the first box, labelled "using the selected account", select the collator account holding the [collator KMA bond](../Requirements#kma-bond).
    - In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
    - In the third (dropdown) box, select `setKeys(keys, proof)`
-   - In the fourth box labelled `aura: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the Aura session key you generated earlier.
+   - In the fourth box labelled `aura: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the Aura session key you generated earlier or a dummy value, e.g. `0x0000000000000000000000000000000000000000000000000000000000000000`
 :::note
-`aura` is an inactive key from pre-v3.3.0 versions of the node. The value you provide here will not be used and you may provide a dummy value e.g. `0x0000000000000000000000000000000000000000000000000000000000000000` or the key obtained from `rotateKeys` above
+`aura` is an inactive key from pre-v3.3.0 versions of the node. The value you provide here will not be used
 :::
    - In the fifth box, labelled `nimbus: NimbusPrimitivesNimbusCryptoPublic`, enter the hex public key of the Nimbus session key you generated earlier.
    - In the sixth box, labelled `vrf: SessionKeyPrimitivesVrfVrfCryptoPublic`, enter the hex public key of the VRF session key you generated earlier.
