@@ -113,7 +113,7 @@ This command demonstrates a session key insertion using a key created with
       http://localhost:9133
   done
   ```
-- **Validation**: Check that the session keys stored in the node match the generated ones
+- **Validation**: Check that the session keys stored in the node match the generated ones (below command returns a `"result":true` field)
   ```bash
   #!/bin/bash
   for key in nmbs rand; do
@@ -121,7 +121,7 @@ This command demonstrates a session key insertion using a key created with
       -s \
       --header 'Content-Type: application/json;charset=utf-8' \
       --data @./check-${key}.json \
-      http://localhost:9133 | jq -r '.result == "true"')
+      http://localhost:9133 )
     echo "${key}: ${has_key}"
   done
   ```
