@@ -80,7 +80,7 @@ to handle emergency situations where fast technical updates are needed.
 ## How To: Vote on a Referendum
 
 The actions you can take as a public token holder can all be executed by connecting 
-to a Calamari node using the [Polkadot.JS apps interface](https://polkadot.js.org/apps/).
+to a Calamari node using the [Polkadot.JS apps interface](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems#/democracy).
 You can find our tutorial on how to vote in a referendum below:
 
 <div style={{textAlign: 'center'}}>
