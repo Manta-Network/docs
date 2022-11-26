@@ -134,35 +134,30 @@ Signer 将会再次提示你输入密码来确认交易。一旦得到确认，S
 
 - 请确认是否安装 polkadot.js 插件，以及是否有权限连接 Dolphin 网页端 app；
 <br/>
-
     <div style={{textAlign: 'center'}}>
-    <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="70%"/>
+     <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="70%"/>
     </div>
 
 - 请确认是否下载并安装了最新版 signer，Signer 是否成功运行以及出于登录状态；
 <br/>
-
     <div style={{textAlign: 'center'}}>
     <img alt="signer-connected" src="/img/guides/signer-connected.png" width="30%"/>
     </div>
 
 - Brave 浏览器用户请检查是否开启了屏蔽模式；
 <br/>
-
     <div style={{textAlign: 'center'}}>
     <img alt="brave-shields" src="/img/guides/brave-shields.png" width="70%"/>
     </div>
 
 - 请确认是否已连接到节点（默认节点 Ford）以及网络连接是否稳定；
 <br/>
-
     <div style={{textAlign: 'center'}}>
     <img alt="node-connected" src="/img/guides/node-connected.png" width="30%"/>
     </div>
 
 - 请确认您的账户中有领取 DOL 作为手续费；
 <br/>
-
     <div style={{textAlign: 'center'}}>
     <img alt="fee-balance" src="/img/guides/fee-balance.png" width="70%"/>
     </div>
