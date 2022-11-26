@@ -2,6 +2,9 @@
 title: 安装
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 安装 > [配置](configuration) > [运行](running) > [同步](sync) > [Collator节点session 密钥](keys) > [绑定](bond)
 
 <Tabs pId="os">
@@ -49,13 +52,13 @@ manta .rpm 包含：
 </TabItem>
 <TabItem value="ubuntu" label="ubuntu">
 
-manta .rpm 包含：
+manta .deb 包含：
 - manta 二进制文件（用于运行 calamari）
 - manta 和 calamari 系统文件
 - manta、calamari、polkadot 和 kusama 基础配置文件
 - 用于安装后运行创建 systemd 服务和 manta 帐户的脚本文件
 
-开始安装 (另见: [rpm.manta.systems](https://rpm.manta.systems/)):
+开始安装 (另见: [deb.manta.systems](https://deb.manta.systems/)):
 
 - 添加 manta .deb 存储库
 

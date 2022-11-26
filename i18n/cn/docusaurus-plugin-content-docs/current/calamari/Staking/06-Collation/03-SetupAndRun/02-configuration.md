@@ -2,6 +2,9 @@
 title: 配置
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 [安装](installation) > 配置 > [运行](running) > [同步](sync) > [Collator节点session 密钥](keys) > [绑定](bond)
 
 需要一些额外有助于节点的相关配置命令。
@@ -186,6 +189,7 @@ cloudfare和route53的例子如下。但你也可以google `python3-certbot-dns-
   python3-certbot-dns-cloudflare \
   python3-certbot-dns-route53
   ```
+
   </TabItem>
   <TabItem value="ubuntu" label="ubuntu">
 

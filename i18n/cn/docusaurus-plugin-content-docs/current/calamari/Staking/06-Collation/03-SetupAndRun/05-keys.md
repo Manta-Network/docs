@@ -15,13 +15,9 @@ import TabItem from '@theme/TabItem';
 
 两个密钥相互关联，以创建用于交易费用奖励支付和（在未来）削减的债券节点对。
 
-:::note
-虽然Nimbus会话密钥从`v.3.2.1`开始就存在于节点中，但它只有在`v3.3.0`时被激活。在这次升级之前，使用的是下面的Aura会话密钥。
-:::
-
 此外，您的节点可能在存储中有两个额外的密钥：
-- **Aura会话密钥**: 在**v3.3.0**之前，用于决定创作节点的节点。
-- **VRF会话密钥**: 未来切换到可验证的随机区块生产者选择方案的占位钥匙。
+- **Aura会话密钥**: 在**v3.3.0**之前，此密钥赋予节点出块的合法性，但现在已经弃用了。
+- **VRF会话密钥**: 预留密钥给未来的基于[VRF](https://en.wikipedia.org/wiki/Verifiable_random_function)的出块机制，在**v3.2.1**之前是不被开启的，但在未来会切换到此出块算法。
 
 :::warning
 以下两种方法（插入、更新）都使用 unsafe RPC 调用来设置节点会话密钥。
@@ -34,46 +30,8 @@ import TabItem from '@theme/TabItem';
 
 这条命令演示了一个会话密钥的插入，该密钥是用
 
-:::note
-从v3.2.1开始，你必须提供以下所有3个密钥，早期版本只需要Aura密钥
-:::
-
 - 为您的平台构建/安装 [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/)
 - 为您的平台安装 [jq utility](https://stedolan.github.io/jq/download/)
-- 生成一个Aura密钥，用subkey/jq插入私钥/检查私钥的有效性
-    ```bash
-    #!/bin/bash
-    subkey generate \
-        --scheme sr25519 \
-        --network calamari \
-        --output-type json \
-        --words 12 \
-        > ./aura.json
-    echo '{
-        "jsonrpc":"2.0",
-        "id":1,
-        "method":"author_insertKey",
-        "params": [
-            "aura",
-            "aura mnemonic phrase",
-            "aura hex public key"
-        ]
-    }' | jq \
-        --arg mnemonic "$(jq -r .secretPhrase ./aura.json)" \
-        --arg hex "$(jq -r .publicKey ./aura.json)" \
-        '. | .params[1] = $mnemonic | .params[2] = $hex' > ./insert-aura.json
-    echo '{
-        "jsonrpc":"2.0",
-        "id":1,
-        "method":"author_hasKey",
-        "params": [
-            "aura hex public key",
-            "aura"
-        ]
-    }' | jq \
-        --arg hex "$(jq -r .publicKey ./aura.json)" \
-        '. | .params[0] = $hex' > ./check-aura.json
-    ```
 
 - 生成一个Nimbus（nmbs）密钥，用subkey/jq插入私钥/检查私钥的有效性
     ```bash
@@ -148,7 +106,7 @@ import TabItem from '@theme/TabItem';
 - 使用 RPC `author_insertKey` 来插入刚刚生成的`session keys`
     ```bash
     #!/bin/bash
-    for key in aura nmbs rand; do
+    for key in nmbs rand; do
         curl \
             --header 'Content-Type: application/json;charset=utf-8' \
             --data @./insert-${key}.json \
@@ -156,15 +114,15 @@ import TabItem from '@theme/TabItem';
     done
     ```
 
-- **验证**：检查存储在节点中的会话密钥是否与生成的密钥匹配
+- **验证**：检查存储在节点中的会话密钥是否与生成的密钥匹配(执行一下命令之后，返回结果里应该有一个像这样的字段`"result":true`)
     ```bash
     #!/bin/bash
-    for key in aura nmbs rand; do
+    for key in nmbs rand; do
         has_key=$(curl \
             -s \
             --header 'Content-Type: application/json;charset=utf-8' \
             --data @./check-${key}.json \
-            http://localhost:9133 | jq -r '.result == "true"')
+            http://localhost:9133
         echo "${key}: ${has_key}"
     done
     ```
@@ -175,21 +133,27 @@ import TabItem from '@theme/TabItem';
     journalctl -u calamari.service -g AUTHORITY
     ```
 
-- 从这三个文件 `aura.json/nmbs.json/rand.json` 保存分别三个公钥，并且安全地备份这三个私钥文件到安全且离线的地方
-- 清除: 从文件系统中删除之前步骤中创建的私钥
+- 从这两个个文件 `nmbs.json/rand.json` 保存分别各自的公钥，并且安全地备份这三个私钥文件到安全且离线的地方
+- **清除**: 从文件系统中删除之前步骤中创建的私钥
     ```bash
     #!/bin/bash
-    rm ./aura.json ./nmbs.json ./rand.json ./insert-aura.json ./insert-nmbs.json ./insert-rand.json
+    rm ./nmbs.json ./rand.json ./insert-nmbs.json ./insert-rand.json
     ```
 
 </TabItem>
-<TabItem value="rotate" label="rotateKeys">
+<TabItem value="rotate" label="rotate">
+
+:::warning
+在尝试这个步骤之前确保你的节点已经完全[同步](sync)了
+:::
+
 此命令轮换会话密钥，即在其密钥库中创建一个新的私钥并输出相应的公钥。
 如果旧密钥存在，它们仍然存在于节点的密钥库中并且不被删除。
 
 :::note
 节点不显示私钥，如果你想备份它们，以便在节点丢失时恢复你的节点凭证，请按照`insertKey`中的说明进行。如果你的会话密钥在没有备份的情况下丢失，你的节点将不得不再次走一遍`collator program`才能成为collator。
 :::
+
 更新session keys
 ```bash
 #!/bin/bash
@@ -202,16 +166,21 @@ curl -H 'Content-Type: application/json' --data '{ "jsonrpc":"2.0", "method":"au
 ```
 
 去掉前面的 `0x`，然后在每64个字符后分割这个数字，以恢复三个组成的公钥。
+
 ```
 aura => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb50e6aeb15951288c562f69
 nimbus => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb50e6aeb15951288c562f61
 VRF => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb40e6aeb15911288c562f63
 ```
-
 </TabItem>
 </Tabs>
 
-### 将节点帐户绑定到 aura session 密钥
+:::note
+检查你的节点如果没有出现这样的日志 `2022-07-19 17:24:18 [Parachain] 🔏 No Nimbus keys available. We will not be able to author.`<br/>
+或者甚至重启节点之后还是不能生成这样的日志，请细致地重复以上的步骤。
+:::
+
+### 将节点帐户绑定到 session 密钥
 
 :::note
 如果节点日志不包含`[Relaychain] 💤 Idle`和`[Parachain] 💤 Idle`消息，意味着您的节点需要继续同步。当节点未同步完成，**不要绑定** 一个未完全同步的节点帐户到 session 密钥。这样做会导致节点被系统拒绝接入。
@@ -225,10 +194,13 @@ VRF => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb40e6aeb15911288c562f63
 现在展示的图片都是从dolphin测试网上截去的，但是在calamari主网上操作都是一样的。
 :::
 
-   - 在标有`using the selected account`的第一个框中，选择持有 `400,000` KMA collator绑定帐户。
+   - 在标有`using the selected account`的第一个框中，选择持有 `400,000` KMA [collator绑定](../Requirements#kma-绑定)帐户。
    - 在标有`submit the following extrinsic`的第二个（下拉）框中，选择`session`.
    - 在第三个（下拉）框中，选择`setKeys(keys, proof)`
-   - 在标有`aura: SpConsensusAuraSr25519AppSr25519Public` and `proof: Bytes`第四个对话框中输入 `aura` 会话密钥的十六进制公钥。
+   - 在标有`aura: SpConsensusAuraSr25519AppSr25519Public` and `proof: Bytes`第四个对话框中输入 `aura` 会话密钥的十六进制公钥，或者输入一个虚设的公钥: `0x0000000000000000000000000000000000000000000000000000000000000000`。
+   :::note
+    `aura` 在 节点版本`pre-v3.3.0` 之后就被废弃了，所以这个值实际上是不会被用到的。
+   :::
    - 在标有`nimbus: NimbusPrimitivesNimbusCryptoPublic` and `proof: Bytes`第五对话框中输入 `nimbus` 会话密钥的十六进制公钥。
    - 在标有`vrf: SessionKeyPrimitivesVrfVrfCryptoPublic` and `proof: Bytes`第六对话框中输入 `vrf` 会话密钥的十六进制公钥。
    - 在标有 `proof: Bytes`对话框, 再次输入十六进制的nimbus session公钥。
@@ -238,11 +210,6 @@ VRF => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb40e6aeb15911288c562f63
     ![session.nextkeys()](/img/collator-program/session.nextkeys.png)
 :::note
 再次说明一次，现在展示的图片都是从dolphin测试网上截去的，但是在calamari主网上操作都是一样的。
-:::
-:::note
-在提交交易`set_keys`并且生效之前，
-你的节点可能会出现下面这样的一条log:<br/>`2022-07-19 17:24:18 [Parachain] 🔏 No Nimbus keys available. We will not be able to author.`<br/>
-生效需要等待`6`个小时。
 :::
 
    - 在第一个（下拉）框中，标记为`selected state query`，选择`session`.
