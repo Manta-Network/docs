@@ -28,7 +28,7 @@ _注意: Calamari 刚刚开始推行治理，因此许多计划中的功能尚�
 技术委员会可以在紧急情况下加快启动期、投票期和制定期。时间具体缩短多少取决于委员会成员，即使更改也需要委员会一致同意。同样，理事会可以在投票期间取消公投。
 显然，理事会和技术委员会对通过哪些提案和公投有很大影响！理事会抵消了民主制度中通常的低投票率，并预计将提交有关该制度的常规运营和维护的建议。技术委员会的存在是为了处理需要快速技术更新的紧急情况。
 ## 如何对公投进行投票
-您作为公共代币持有者可以采取的所有操作都可以通过使用 [Polkadot.JS 应用程序界面](https://polkadot.js.org/apps/) 连接到 Calamari 节点来执行。
+您作为公共代币持有者可以采取的所有操作都可以通过使用 [Polkadot.JS 应用程序界面](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems#/democracy) 连接到 Calamari 节点来执行。
 Polkadot 有很多关于如何使用 App的 [视频教程](https://wiki.polkadot.network/docs/learn-video-tutorials#getting-started)
 ## 更多资源
 如果你想了解更多关于 Polkadot 生态系统治理的信息，可以参考以下链接：
