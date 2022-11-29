@@ -86,7 +86,7 @@ chmod +x manta-trusted-setup-x86_64-unknown-linux-gnu
 
 ### Windows安装
 
-可直接在[**这里**](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.5/manta-trusted-setup-x86_64-pc-windows-msvc.exe)下载`.exe`安装包。
+可直接在[**这里**](https://github.com/Manta-Network/manta-rs/releases/download/v0.5.6/manta-trusted-setup-x86_64-pc-windows-msvc.exe)下载`.exe`安装包。
 
 如果你不想直接下载，可查看该链接下的[**源代码**](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup)
 
