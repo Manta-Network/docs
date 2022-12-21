@@ -112,6 +112,7 @@ module.exports = {
       items: [
         'guides/MantaSigner',
         'guides/DolphinPay',
+        'guides/DolphinBridge',
         'guides/TrustedSetup',
         'guides/XcmOnboarding',
       ]
