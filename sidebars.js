@@ -110,6 +110,7 @@ module.exports = {
       collapsible: true,
       collapsed: true,
       items: [
+        'guides/MantaSigner',
         'guides/DolphinPay',
         'guides/DolphinBridge',
         'guides/TrustedSetup',
