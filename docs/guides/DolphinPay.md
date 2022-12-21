@@ -24,7 +24,7 @@ To get started, click the "Connect Wallet" button.
 
 <br/>
 
-If you don't already have a wallet installed, click the "Install" link for your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page.
+If you don't already have a wallet installed, click the "Install" link for your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page and the button text will change from "Install" to "Connect".
 
 <br/>
 
@@ -92,7 +92,7 @@ Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#do
    </div>
 <br/>
 
-Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, but you will have to bridge them onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/DolphinXCMBridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
+Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, but you will have to bridge them onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/DolphinBridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
 
 <br/>
 
