@@ -24,7 +24,7 @@ To get started, click the "Connect Wallet" button.
 
 <br/>
 
-If you don't already have a wallet installed, click the "Install" link for your your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page.
+If you don't already have a wallet installed, click the "Install" link for your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page.
 
 <br/>
 

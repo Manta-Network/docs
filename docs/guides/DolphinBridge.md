@@ -6,26 +6,26 @@
 
 ### Install a Browser Wallet and Create a Public Address
 
-Currently, Dolphin Testnet V3 supports Talisman, Subwallet, Polakdot.js wallets to manage public assets.
+Currently, Dolphin Testnet V3 supports Talisman, SubWallet, Polakdot.js wallets to manage public assets.
 
 To get started, click the "Connect Wallet" button.
 
 <br/>
 
    <div style={{textAlign: 'center'}}>
-    <img alt="signer-init" src="/img/guides/connect_wallet_bridge_button.png" width="80%"/>
+    <img alt="connect-wallet" src="/img/guides/connect_wallet_bridge_button.png" width="80%"/>
    </div>
 
 <br/>
 
-If you don't already have a wallet installed, click the "Install" link for your your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page.
+If you don't already have a wallet installed, click the "Install" link for your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page.
 
-🦊__Metamask:__ Dolphin Testnet supports substrate account connection through PolkadotJS, Talisman, and SubwalletJS. Ethereum account is supported only through Metamask wallet. You will only need to connect both substrate account and ethereum account when you are bridging from or to Moonriver. Otherwise, you are good with only connecting with one substrate account.
+🦊__Metamask:__ Dolphin Testnet supports substrate account connection through Polkadot.js, Talisman, and SubWallet. Ethereum account is supported only through Metamask wallet. You will only need to connect both substrate account and ethereum account when you are bridging from or to Moonriver. Otherwise, you are good with only connecting with one substrate account.
 
 <br/>
 
    <div style={{textAlign: 'center'}}>
-    <img alt="signer-init" src="/img/guides/connect_wallet_modal_bridge.png" width="50%"/>
+    <img alt="connect-wallet-modal" src="/img/guides/connect_wallet_modal_bridge.png" width="50%"/>
    </div>
 
 <br/> 
@@ -36,7 +36,7 @@ Once you have a wallet installed, click the "Connect Wallet" button, press "Conn
 <br/>
 
    <div style={{textAlign: 'center'}}>
-    <img alt="signer-init" src="/img/guides/wallet_connected_bridge.png" width="80%"/>
+    <img alt="wallet-connected" src="/img/guides/wallet_connected_bridge.png" width="80%"/>
    </div>
 <br/>
 
@@ -64,7 +64,7 @@ Now let's bridge some tokens!
    Select the parachain you are sending from, the token you are sending, and the amount to bridge into your current account address. Press 'Submit' button to initialize a bridge transaction:
 
    <div style={{textAlign: 'center'}}>
-    <img alt="to-private" src="/img/guides/bridge_from_kusama.png" width="50%"/>
+    <img alt="bridge-from-kusama" src="/img/guides/bridge_from_kusama.png" width="50%"/>
    </div>
    <br/>
    Your browser wallet will prompt you to approve the transfer, and then publish it to the Dolphin blockchain:
@@ -82,7 +82,7 @@ Now let's bridge some tokens!
    Select Moonriver as the origin chain and Dolphin Testnet as the destination chain (default). Enter the amount of MOVR you want to bridge to Dolphin Testnet. Enter manually the substrate address or press 'Get Address' button to autofill the address of the current substrate account. Press 'Submit' button to initialize a bridge transaction:
 
    <div style={{textAlign: 'center'}}>
-    <img alt="private-transfer" src="/img/guides/bridge_from_moonriver.png" width="50%"/>
+    <img alt="bridge-from-moonriver" src="/img/guides/bridge_from_moonriver.png" width="50%"/>
    </div>
    <br/>
 
@@ -105,13 +105,12 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 2. What is origin and destination fee?
 
-   Let's take the example of bridging KSM from Kusama to Dolphin.
-
-   When KSM is being bridged from Kusama, Kusama need to keep a record of that transaction which incurs a on-chain transaction fee in KSM and when Test KSM arrived at Dolphin Testnet, Dolphin would also need to record that transaction in DOL.
+   Origin fee is paid in the native token of the origin bridge.
+   Destination fee is paid with the token you are trying to bridge.
 
 3. When do I need to connect Metamask?
 
-   You would only need to connect Metamask when you want to bridge from or to Moonriver. Otherwise, you are perfectly fine with only connecting a substrate account through PolkadotJS, Talisman, or SubwalletJS
+   You would only need to connect Metamask when you want to bridge from or to Moonriver. Otherwise, you are perfectly fine with only connecting a substrate account through Polkadot.js, Talisman, or SubWallet
 
 4. What are the currently supported parachains?
 
