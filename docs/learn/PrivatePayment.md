@@ -1,4 +1,4 @@
-# How Does Private Payment Work??
+# How Does Private Payment Work?
 
 Manta is all about bringing privacy to the wider blockchain space, and an important part of making privacy practical to use is the construction of simple and powerful privacy primitives. The first and most powerful primitive we are building is _Private Payment_, more specifcally, a _multi-asset decentralized anonymous payment protocol_.
 
