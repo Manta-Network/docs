@@ -174,10 +174,10 @@ If Signer is not already running, open signer and enter your password to log in:
    <div style={{textAlign: 'center'}}>
     <img alt="toggle_private_public" src="/img/guides/toggle_private_public.png" width="50%"/>
    </div>
-
-   Select the token you want to send, enter the amount you are sending.
-
    <br/>
+   Select the token you want to send, enter the amount you are sending.
+   <br/>
+    <br/>
    <div style={{textAlign: 'center'}}>
     <img alt="to_public" src="/img/guides/to_public.png" width="50%"/>
    </div>
