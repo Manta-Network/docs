@@ -1,12 +1,12 @@
 # 🐬 Try MantaBridge on Dolphin Testnet
 
-[The Dolphin Bridge page](https://app.manta.network/dolphin/bridge) allows users to bridge assets from different Polkadot parachains and parathreads to Dolphin Testnet and vice versa. Once assets are bridged over into Dolphin Testnet, user can then navigate to the zkTransact page and start to privatize public assets.
+[The Dolphin Bridge page](https://app.manta.network/dolphin/bridge) allows you to transfer assets between Dolphin and other testnet parachains. Once assets are bridged onto Dolphin Testnet, you can navigate to [the zkTransact page](https://app.manta.network/dolphin/transact) to transact these assets privately. Check out our guide to the zkTransact page [here](https://docs.manta.network/docs/guides/DolphinBridge).
 
 ## Setup Testnet Accounts
 
 ### Install a Browser Wallet and Create a Public Address
 
-Currently, Dolphin Testnet V3 supports Talisman, SubWallet, Polakdot.js wallets to manage public assets.
+Currently, Dolphin Testnet V3 supports Talisman, SubWallet, Polakdot.js wallets.
 
 To get started, click the "Connect Wallet" button.
 
@@ -20,7 +20,7 @@ To get started, click the "Connect Wallet" button.
 
 If you don't already have a wallet installed, click the "Install" link for your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page.
 
-🦊__Metamask:__ Dolphin Testnet supports substrate account connection through Polkadot.js, Talisman, and SubWallet. Ethereum account is supported only through Metamask wallet. You will only need to connect both substrate account and ethereum account when you are bridging from or to Moonriver. Otherwise, you are good with only connecting with one substrate account.
+🦊 __Metamask:__ You will only need to connect Metamask when you are bridging to or from Moonriver.
 
 <br/>
 
@@ -28,10 +28,10 @@ If you don't already have a wallet installed, click the "Install" link for your 
     <img alt="connect-wallet-modal" src="/img/guides/connect_wallet_modal_bridge.png" width="50%"/>
    </div>
 
-<br/> 
+<br/>
 
 
-Once you have a wallet installed, click the "Connect Wallet" button, press "Connect", and follow the prompts from your wallet extension. When you have successfully connected, you will see the wallet in the navbar.
+Once you have a wallet installed, click the "Connect Wallet" button, press "Connect", and follow the prompts from your wallet extension. When you have successfully connected, you will see your wallet in the navbar.
 
 <br/>
 
@@ -51,7 +51,7 @@ Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#do
    </div>
 <br/>
 
-Enter your polkadot address and claim some `DOL`, `KSM`, `KAR`, and `MOVR`. After successfully receiving the tokens, you can start bridging assets from or to Dolphin Testnet
+Enter your polkadot address and claim some `DOL`, `KSM`, `KAR`, and `MOVR`. After successfully receiving the tokens, you can start bridging assets to and from Dolphin Testnet
 
 <br/>
 
@@ -59,16 +59,15 @@ Enter your polkadot address and claim some `DOL`, `KSM`, `KAR`, and `MOVR`. Afte
 
 Now let's bridge some tokens!
 
-### Bridge from Kusama & Karura to Dolphin Testnet
+### Bridge betwen Kusama / Karura and Dolphin Testnet
 
-   Select the parachain you are sending from, the token you are sending, and the amount to bridge into your current account address. Press 'Submit' button to initialize a bridge transaction:
+   Select the chains you want to bridge between, the token type, and amount you want to bridge. Your current account will send funds on the "From" chan, and receive them on the "To" chain. Press the "Submit" button to begin the transaction:
 
    <div style={{textAlign: 'center'}}>
     <img alt="bridge-from-kusama" src="/img/guides/bridge_from_kusama.png" width="50%"/>
    </div>
    <br/>
-   Your browser wallet will prompt you to approve the transfer, and then publish it to the Dolphin blockchain:
-
+   Your browser wallet will prompt you to approve the transfer, and then publish it on chain.
 <br/>
 <br/>
    <div style={{textAlign: 'center'}}>
@@ -77,9 +76,9 @@ Now let's bridge some tokens!
 <br/>
 <br/>
 
-### Bridge from Moonriver to Dolphin Testnet
+### Bridge between Moonriver and Dolphin Testnet
 
-   Select Moonriver as the origin chain and Dolphin Testnet as the destination chain (default). Enter the amount of MOVR you want to bridge to Dolphin Testnet. Enter manually the substrate address or press 'Get Address' button to autofill the address of the current substrate account. Press 'Submit' button to initialize a bridge transaction:
+   Select Moonriver as the "From" chain and Dolphin Testnet as the "To" chain. Enter the amount of MOVR you want to bridge to Dolphin Testnet. You can copy-paste your substrate address, or press "Get Address" button to autofill your current substrate account. Press 'Submit' button to initialize a bridge transaction. Metamask will prompt you for approval.
 
    <div style={{textAlign: 'center'}}>
     <img alt="bridge-from-moonriver" src="/img/guides/bridge_from_moonriver.png" width="50%"/>
@@ -90,66 +89,53 @@ Now let's bridge some tokens!
 <br/>
 
 ## Troubleshooting
-- Refresh the page if wallet is already installed but the 'install' button appear for wallet connection modal
+- Check that one of Talisman, SubWallet, or polkadot.js is installed, and has permission to connect to the Dolphin web app.
+  - In polkadot.Js, click on the ⚙️ icon on the top-right corner, then click on "Manage Website Access", then "app.dolphin.manta.network" is set to "Allowed":
+   <div style={{textAlign: 'center'}}>
+    <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="60%"/>
+   </div>
+  - In SubWallet, open Settings, then click on Manage Website Access, and unblock app.manta.network.
+    <div style={{textAlign: 'center'}}>
+    <img alt="polkadot-js-allowed" src="/img/guides/subwallet_settings.png" width="40%"/>
+    <img alt="polkadot-js-allowed" src="/img/guides/subwallet_manage_website_access.png" width="40%"/>
+    </div>
 - Check that your internet connection is stable.
-- If you see a delay in the transaction, check the polkadot.js wallet metadata if it needs to be updated. Check [here](https://polkadot.js.org/apps/#/settings/metadata) for any metadata updates.
+- Check [here](https://polkadot.js.org/apps/#/settings/metadata) to see if your browser wallet's metadata needs to be updated.
+- If you see "..." or "Syncing to network," wait for your balances to finish loading before trying to transact.
+- Try refreshing the page.
 
 If all these checks pass and you still can't send transactions, please let us know on discord in the [`#dolphin-testnet`](https://discord.gg/c72QMWEVyY) channel so that we can improve Dolphin!
 
 
 ## FAQ
 
-1. What is MantaBridge & Why do I need it
+1. What is the Dolphin bridge page? Why do I need it?
 
-   MantaBridge enables user to bridge assets from other Polkadot parachain to Dolphin Testnet. Once assets are on Dolphin Testnet, users can then privatize them to enjoy the on-chain privacy.
+   The DOlphin bridge page enables user to bridge assets between other testnet chains and Dolphin Testnet. Once assets are on Dolphin Testnet, users can then privatize them to enjoy the on-chain privacy.
 
-2. What is origin and destination fee?
+2. What are the origin and destination fee?
 
-   Origin fee is paid in the native token of the origin bridge.
-   Destination fee is paid with the token you are trying to bridge.
+   The origin fee is a fee paid on the chain you are trying to bridge from. The origin fee is paid in the origin chain's native token: DOL on Dolphin, KSM on Kusama, etc.
+   The destinatin fee is paid on the chain you are trying to bridge to. The destinatin fee is paid in the token you are bridging.
 
 3. When do I need to connect Metamask?
 
-   You would only need to connect Metamask when you want to bridge from or to Moonriver. Otherwise, you are perfectly fine with only connecting a substrate account through Polkadot.js, Talisman, or SubWallet
+   You only need to connect Metamask when you want to bridge to or from Moonriver. Otherwise, you only need to connect a substrate account using Polkadot.js, Talisman, or SubWallet
 
 4. What are the currently supported parachains?
 
-   Dolphin Testnet is currently supporting Kusama, Karura, and Moonriver. 
+   Dolphin Testnet supports testnet Kusama, testnet Karura, and testnet Moonriver. All of these testnets are managed by Manta.
 
-   For the supported network, only native tokens such as KSM for Kusama and KAR for Karura is eligible to be bridged. 
+5. What are substrate and EVM accounts?
 
-5. What is Substrate and EVM account?
+   A substrate account is the account type used by most Polkadot ecosystem blockchains, such as Dolphin, Kusama, and Polkadot.
 
-   A substrate-based account is an account created for Polkadot Ecosystem Blockchains such as Dolphin, Kusama & Polkadot
-
-   An EVM-based account is an account created for Ethereum Ecosystem Blockchains
+   An EVM account is the account type used by Ethereum and similar chains. Moonbeam and Moonriver use EVM accounts.
 
 6. Is my asset private immediately after bridging?
 
-   No, when you bridge asset from another parachain (ex. Kusama) to Dolphin, your assets do not immediately become private after bridging. However, you can easily privatize public assets through [Mantapay zkTransact Page](https://app.manta.network/dolphin/transact) 
+   No, when you bridge asset from another parachain (e.g. Kusama) to Dolphin, your assets do not immediately become private. However, you can easily privatize public assets through [the zkTransact Page](https://app.manta.network/dolphin/transact)
 
 7. How long will the testnet run?
 
     The testnet will run forever 👾
-
-### Incentivized Testnet FAQs
-
-1. I have followed the Twitter channels, but Gleam is not showing the ✅
-
-   First, please make sure the email account you're logged in on Gleam is the same as the account you were using when you filled the form. If not, you'll have to fill out the form again using the same email/account (both on Gleam and the Google Form). After that, please clean your cache, reload the page and try again.
-
-2. Which address should I enter in the form when asked "enter your private transfer transaction ID to this wallet address `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`?
-
-   Go to https://dolphin.subscan.io/, search your public wallet address of the dolphin app, find the **extrinsic hash** of your private transfer to the `2LTk1QjGptbMdHUVKYD6RzRuWv5hefTd1SrcZsS9o1ZEmvvppZmMfE36ChcEve7azJHXvrx5qptmBzDykaenTmTG`, and copy/paste that into the form.
-
-3. Is the gleam form closed?
-
-   No, please clear your browser cache and try again at the link https://gleam.io/ye0bg/dolphin-testnet-v2-airdrop.
-
-4. How do I participate in the testnet?
-
-   There is a very thorough guide, please follow the steps at: [Manta Network Testnet V2: Walkthrough](https://mantanetwork.medium.com/manta-network-testnet-v2-walkthrough-28837d7bbba7). Check the Dolphin V2 Resources & Official Announcement at [https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159](https://discord.com/channels/795390654628102165/795403612107964416/978712997117698159)
-
-5. How long will the incentive campaign run?
-
-    The incentivized testnet campaign will run until the Calamari launch.
