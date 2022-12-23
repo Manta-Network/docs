@@ -43,7 +43,7 @@ Once you have a wallet installed, click the "Connect Wallet" button, press "Conn
 
 ### Install [Manta Signer](https://signer.manta.network) and Create a zkAccount
 
-Manta Signer is a native app to turbo-charge zero-knowledge proof generation.It allows you to send and receive private payments. Signer is available for:
+Manta Signer is a native app to turbo-charge zero-knowledge proof generation. It allows you to send and receive private payments. Signer is available for:
    * macOS (version 10.5 or later)
    * Ubuntu (version 18.04 or 20.04)
    * Windows (version 10 or later)
