@@ -89,7 +89,7 @@ Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#do
    </div>
 <br/>
 
-Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, but you will have to bridge them onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/DolphinBridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
+Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, to test cross-chain bridging of assets onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/DolphinBridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
 
 <br/>
 
