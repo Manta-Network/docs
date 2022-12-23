@@ -43,7 +43,7 @@ Once you have a wallet installed, click the "Connect Wallet" button, press "Conn
 
 ### Install [Manta Signer](https://signer.manta.network) and Create a zkAccount
 
-Manta Signer is a native app to turbo-charge zero-knowledge proof generation.It allows you to send and receive private payments. Signer is available for:
+Manta Signer is a native app to turbo-charge zero-knowledge proof generation. It allows you to send and receive private payments. Signer is available for:
    * macOS (version 10.5 or later)
    * Ubuntu (version 18.04 or 20.04)
    * Windows (version 10 or later)
@@ -89,7 +89,7 @@ Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#do
    </div>
 <br/>
 
-Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, but you will have to bridge them onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/DolphinBridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
+Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, to test cross-chain bridging of assets onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/DolphinBridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
 
 <br/>
 

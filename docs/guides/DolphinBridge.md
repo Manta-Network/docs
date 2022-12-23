@@ -111,7 +111,7 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 1. What is the Dolphin bridge page? Why do I need it?
 
-   The DOlphin bridge page enables user to bridge assets between other testnet chains and Dolphin Testnet. Once assets are on Dolphin Testnet, users can then privatize them to enjoy the on-chain privacy.
+   The Dolphin bridge page enables user to bridge assets between other testnet chains and Dolphin Testnet. Once assets are on Dolphin Testnet, users can then privatize them to enjoy the on-chain privacy.
 
 2. What are the origin and destination fee?
 
