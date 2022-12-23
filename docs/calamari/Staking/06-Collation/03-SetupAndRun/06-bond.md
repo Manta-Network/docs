@@ -36,3 +36,8 @@ It is safe to just set a high number, but reducing it as much as possible reduce
 :::
 
 Your collator will join the set of block producers and become eligible for rewards at the beginning of the next *round* ( i.e. after a maximum of 6 hours ) **if it is in the top 63 of registered node candidates by total stake** ( i.e. your collator bond + sum of all delegations on your node )
+
+### Reduce Bond
+- Run the `parachainStaking` extrinsic `scheduleCandidateBondLess` function [extrinsic](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/extrinsics) from the account, and enter the desired amount to reduce from bond. Remember, the KMA amount with 12 decmals.
+- Wait for 7 days.
+- Run the `parachainStaking` extrinsic `executeCandidateBondLess` function [extrinsic](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/extrinsics) from the account, to withdrawal the expected KMA to the account.
