@@ -5,6 +5,9 @@ Manta Signer is a desktop application that protects your spending secrets and bu
 ## Installation
 
 The latest version of Manta Signer can be installed from [here](https://signer.manta.network/).
+:::warning
+Do not install signer from other sources, malicious manipulated versions can look like the real one but steal your funds
+:::
 
 ## Creating a New Account
 
@@ -35,7 +38,9 @@ You will be brought to a page that displays your secret recovery phrase. Click t
    </div>
 <br/>
 
-Please write down your recovery phrase offline, somewhere hidden. It is the only way to recover your assets if you lose access to your computer or forget your password! If anyone learns this phrase, they can steal all of your private assets.
+:::warning
+Write down your recovery phrase offline, somewhere hidden and secure. It is the only way to recover your assets if you lose access to your computer or forget your password!
+:::
 
  Refer to the `Recovering an Existing Account` section to see how you can use your recovery phrase to recover lost funds.
 
@@ -75,7 +80,7 @@ After you have created your account, you will be brought to the login page. Ente
    </div>
 <br/>
 
-If your password matches, you will be brought to the Sign In confirmation page. You can view and copy your ZkAddress. Press `Start` to hide this window. Signer will continue running in the background listening for any transaction requests requiring zero knowledge proof generation. Now you are ready to connect to the MantaPay DApp.
+If your password matches, you will be brought to the Sign In confirmation page. You can view and copy your zkAddress. Press `Start` to hide this window. Signer will continue running in the background listening for any transaction requests requiring zero knowledge proof generation. Now you are ready to connect to the MantaPay DApp.
 
 <br/>
 
@@ -113,9 +118,9 @@ After entering your password correctly, you will be able to view your secret rec
    </div>
 <br/>
 
-## Viewing your ZkAddress
+## Viewing your zkAddress
 
-If you ever wish to view your ZkAddress after signing in, navigate to the task bar and select `View ZkAddress`. This will bring you back to the same Sign In confirmation page that displays your ZkAddress.
+If you ever wish to view your zkAddress after signing in, navigate to the task bar and select `View zkAddress`. This will bring you back to the same Sign In confirmation page that displays your zkAddress.
 
 <br/>
 
@@ -182,7 +187,9 @@ If you wish to delete your existing account, you may do so by starting Manta Sig
    </div>
 <br/>
 
-The following page will appear. ATTENTION: After clicking the red `Delete Account` button, all your account data will be removed and you will lose access to your private funds FOREVER unless you have your secret recovery phrase.
+:::warning
+After clicking the red `Delete Account` button, all your account data will be removed and you will lose access to your private funds FOREVER unless you have your secret recovery phrase.
+:::
 
 <br/>
 

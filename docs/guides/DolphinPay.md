@@ -3,7 +3,7 @@
 [The Dolphin zkTransact page](https://app.manta.network/dolphin/transact) allows users to privatize public assets to private or
 "zk" assets, transfer zk assets, and convert zk assets back to public assets.
 
-The most important concept to remember when using the Dolphin zkTransact page is that public assets and zk assets have different addresses: public addresses and ZkAddresses. There is no relationship between a public address and a ZkAddress.
+The most important concept to remember when using the Dolphin zkTransact page is that public assets and zk assets have different addresses: public addresses and zkAddresses. There is no relationship between a public address and a zkAddress.
 
 ## Setup Testnet Accounts
 
@@ -70,7 +70,7 @@ If you don't have signer installed, you can find the download link by clicking o
    </div>
 <br/>
 
-Open Manta Signer and follow instructions to create your ZkAddress. See our [guide to Manta Signer](https://docs.manta.network/docs/guides/MantaSigner) for more details.
+Open Manta Signer and follow instructions to create your zkAddress. See our [guide to Manta Signer](https://docs.manta.network/docs/guides/MantaSigner) for more details.
 
 <br/>
 
@@ -107,7 +107,7 @@ If Signer is not already running, open signer and enter your password to log in:
    </div>
 <br/>
 
-   Go to [Dolphin App](https://app.manta.network/dolphin/transact). If Manta Signer is connected, you will see your ZkAddress the top right corner of the screen:
+   Go to [Dolphin App](https://app.manta.network/dolphin/transact). If Manta Signer is connected, you will see your zkAddress the top right corner of the screen:
 <br/>
    <div style={{textAlign: 'center'}}>
     <img alt="signer_connected" src="/img/guides/signer_connected.png" width="80%"/>
@@ -117,7 +117,7 @@ If Signer is not already running, open signer and enter your password to log in:
 
 ### Convert Public Assets to Private Assets
 
-   Select the public address you are sending from, the token you are sending, and the amount you want to send to your ZkAddress. Press "To Private" to submit:
+   Select the public address you are sending from, the token you are sending, and the amount you want to send to your zkAddress. Press "To Private" to submit:
 
    <div style={{textAlign: 'center'}}>
     <img alt="to_private" src="/img/guides/to_private.png" width="50%"/>
@@ -133,19 +133,21 @@ If Signer is not already running, open signer and enter your password to log in:
 <br/>
 <br/>
 
-### Send Private Assets to a ZkAddress
-   Press the private-public toggle button at the top of the form, so that you can send tokens from your ZkAddress instead of your public address.
+### Send Private Assets to a zkAddress
+   Press the private-public toggle button at the top of the form, so that you can send tokens from your zkAddress instead of your public address.
    <div style={{textAlign: 'center'}}>
     <img alt="toggle_public_private" src="/img/guides/toggle_public_private.png" width="50%"/>
    </div>
    <br/>
 
 
-   Select the token you want to send, enter the amount you are sending, and enter the destination ZkAddress. If you need an example ZkAddress to send to, you can send to yourself (click on the copy icon next to your ZkAddress), or to this example ZkAddress:
+   Select the token you want to send, enter the amount you are sending, and enter the destination zkAddress. If you need an example zkAddress to send to, you can send to yourself (click on the copy icon next to your zkAddress), or to this example zkAddress:
 
    `DfZHqhfhtvjSxGY3c6UBnfDAPYCyF8xz9G4bHTHfCrYE`
 
-   ⚠️ Note that ZkAddresses and public addresses have a different format, and are not interchageable! You cannot send a private transfer to a public address, or a public transfer to a private address.
+:::note
+zkAddresses and public addresses have a different format, and are not interchageable! You cannot send a private transfer to a public address, or a public transfer to a private address.
+:::
 
    Now click "Private Transfer" to begin the transaction.
    <div style={{textAlign: 'center'}}>
@@ -169,7 +171,7 @@ If Signer is not already running, open signer and enter your password to log in:
 <br/>
 
 ### Convert Private Assets to Public
-   Now press the private-public toggle button at the bottom of the form, so that you can send assets from your ZkAddress to your public account.
+   Now press the private-public toggle button at the bottom of the form, so that you can send assets from your zkAddress to your public account.
 
    <div style={{textAlign: 'center'}}>
     <img alt="toggle_private_public" src="/img/guides/toggle_private_public.png" width="50%"/>
@@ -258,4 +260,4 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 8. How long will the testnet run?
 
-    The testnet will run forever 👾
+We will run various iterations of testnets over time and reset the network (after announcement) when necessary. Do not expect your testnet assets to be available forever. However, we will always maintain some kind of public testnet.
