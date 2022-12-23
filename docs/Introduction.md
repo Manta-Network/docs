@@ -16,7 +16,7 @@ Manta offers two networks:
                 </h1>
                 <ul>
                     <li>
-                        Try&nbsp;<a href='https://docs.manta.network/docs/guides/MantaPay' target="_blank">Dolphin Testnet dApp</a>.
+                        Try&nbsp;<a href='https://docs.manta.network/docs/guides/MantaPay' target="_blank">Try Private Payments on Dolphin Testnet</a>.
                     </li>
                     <li>
                         Join Manta Community (<a href='https://discord.gg/PRDBTChSsF' target="_blank">discord</a>, <a href='https://twitter.com/mantanetwork' target="_blank">twitter</a>, <a href='https://t.me/mantanetworkofficial' target='_blank'>telegram</a>).
