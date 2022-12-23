@@ -25,7 +25,7 @@ module.exports = {
       items: [
         'concepts/ZKP',
         'concepts/PrivatePayment',
-        'concepts/ShieldedAddress',
+        'concepts/zkAddress',
         'concepts/ViewingKey',
         'concepts/Signer',
         'concepts/Governance',
@@ -94,7 +94,7 @@ module.exports = {
                 'calamari/Staking/Collation/Unbond',
                 'calamari/Staking/Collation/CollatorFAQ',
               ],
-              
+
             },
             'calamari/Staking/StakingFAQ',
           ],

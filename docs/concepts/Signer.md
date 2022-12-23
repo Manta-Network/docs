@@ -1,6 +1,6 @@
 # Manta Signer
 
-The **Signer** is a _secret manager_ and _[zero-knowledge proof](./ZKP.md) generator_ that is used with Manta Network, Calamari Network, and Dolphin Testnet. 
+The **Signer** is a _secret manager_ and _[zero-knowledge proof](./ZKP.md) generator_ that is used with Manta Network, Calamari Network, and Dolphin Testnet.
 
 ## Why do you need the Signer?
 
@@ -10,4 +10,8 @@ Our goal is to improve the zero-knowledge proof generation performance to eventu
 
 ## Difference between the Signer and Polkadot.js/Talisman wallets?
 
-The Polakdot.js and Talisman wallets control the spending secrets of the public address. **Manta Signer** controls the spending secrets of [shielded addresses](./ShieldedAddress.md).
+The Polakdot.js and Talisman wallets control the spending secrets of the public address. **Manta Signer** controls the spending secrets of [zkAddresses](./zkAddress.md).
+
+## Using Manta Signer
+
+For insturctions on how to use Manta Signer, check out [our guide](https://docs.manta.network/docs/guides/MantaSigner).
