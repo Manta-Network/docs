@@ -9,3 +9,7 @@ The *canary net* is a highly experimental version of our the stable Manta Networ
 The Calamari parachain will be home to multiple privacy solutions, first of which is
 
 ***MantaPay on Calamari***: a token-agnostic private payment service. *MantaPay on Calamari* supports the private transfer of Kusama and assets of connected Parachains. Users can transact popular assets like stablecoins and wrapped BTC while simultaneously benefiting from on-chain privacy through ZKP.
+
+## Guide
+
+To learn how to send private payments with Calamari, please see [our guide](https://docs.manta.network/docs/guides/MantaPay).
