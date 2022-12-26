@@ -91,6 +91,7 @@ module.exports = {
                   ],
                 },
                 'calamari/Staking/Collation/Maintenance',
+                'calamari/Staking/Collation/Reduce Bond',
                 'calamari/Staking/Collation/Unbond',
                 'calamari/Staking/Collation/CollatorFAQ',
               ],
