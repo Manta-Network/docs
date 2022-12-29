@@ -43,15 +43,31 @@ Once you have a wallet installed, click the "Connect Wallet" button, press "Conn
 
 ### Get Testnet Tokens
 
-Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#dolphin-faucet` channel, and type `/gimme`. You should see a faucet options prompt:
+Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#dolphin-faucet` channel, and type `/gimme` (Note: do not press enter to send). You should see a list of faucet options prompt:
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="faucet" src="/img/guides/faucet_bot.png" width="70%"/>
+    <img alt="faucet_bot_select_option" src="/img/guides/faucet_bot_select_option.png" width="70%"/>
+   </div>
+<br/>
+
+Click on one of the faucet options prompt:
+
+<br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="faucet_bot_enter_address" src="/img/guides/faucet_bot_enter_address.png" width="70%"/>
    </div>
 <br/>
 
 Enter your polkadot address and claim some `DOL`, `KSM`, `KAR`, and `MOVR`. After successfully receiving the tokens, you can start bridging assets to and from Dolphin Testnet
+
+Confirm the updated balance in [bridge page](https://app.manta.network/dolphin/bridge) and remember to set the correct origin chain (Note: change origin chain to dolphin to see dol balance)
+
+<br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="check_balance" src="/img/guides/check_balance.png" width="70%"/>
+   </div>
+<br/>
 
 <br/>
 
