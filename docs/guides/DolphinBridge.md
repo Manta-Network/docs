@@ -69,6 +69,14 @@ Confirm the updated balance in [bridge page](https://app.manta.network/dolphin/b
    </div>
 <br/>
 
+Hint: When you are requesting MOVR token, please enter your Metamask Address. For other tokens (KAR, KSM, DOL), please enter your Polkadot Address.
+
+<br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="copy_account_address" src="/img/guides/copy_account_address.png" width="70%"/>
+   </div>
+<br/>
+
 <br/>
 
 ## MantaBridge User Guide
