@@ -81,15 +81,39 @@ Open Manta Signer and follow instructions to create your zkAddress. See our [gui
 
 ### Get Testnet Tokens
 
-Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#dolphin-faucet` channel, and type `/gimme`. You should see a faucet options prompt:
+Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#dolphin-faucet` channel, and type `/gimme` (Note: do not press enter to send). You should see a list of faucet options prompt:
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="faucet_bot" src="/img/guides/faucet_bot.png" width="70%"/>
+    <img alt="faucet_bot_select_option" src="/img/guides/faucet_bot_select_option.png" width="70%"/>
+   </div>
+<br/>
+
+Click on one of the faucet options prompt:
+
+<br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="faucet_bot_enter_address" src="/img/guides/faucet_bot_enter_address.png" width="70%"/>
    </div>
 <br/>
 
 Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, to test cross-chain bridging of assets onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/DolphinBridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
+
+Confirm the updated balance in [bridge page](https://app.manta.network/dolphin/bridge) and remember to set the correct origin chain (Note: change origin chain to dolphin to see dol balance)
+
+<br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="check_balance" src="/img/guides/check_balance.png" width="70%"/>
+   </div>
+<br/>
+
+Hint: When you are requesting MOVR token, please enter your Metamask Address. For other tokens (KAR, KSM, DOL), please enter your Polkadot Address.
+
+<br/>
+   <div style={{textAlign: 'center'}}>
+    <img alt="copy_account_address" src="/img/guides/copy_account_address.png" width="70%"/>
+   </div>
+<br/>
 
 <br/>
 
