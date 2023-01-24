@@ -14,6 +14,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Manta Network',
+      collapsible: false,
       items: [
         {
           type: 'doc',
@@ -23,8 +24,6 @@ module.exports = {
         {
           type: 'category',
           label: 'Core Concepts',
-          collapsible: true,
-          collapsed: false,
           items: [
             'concepts/ZKP',
             'concepts/PrivatePayment',
@@ -56,6 +55,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Calamari Network',
+      collapsible: false,
       items: [
         {
           type: 'doc',
@@ -80,6 +80,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Product Guides',
+      collapsible: false,
       items: [
         'guides/MantaSigner',
         {
@@ -132,6 +133,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Developers',
+      collapsible: false,
       items: [
         {
           type: 'category',
@@ -152,31 +154,31 @@ module.exports = {
                 'guides/XcmOnboarding',
               ]
             },
-            {   
+            {
+              type: "category",
+              label: 'Collation',
+              items: [
+                'calamari/Staking/Collation/Overview',
+                'calamari/Staking/Collation/Requirements',
+                {
                   type: "category",
-                  label: 'Collation',
+                  label: 'SetupAndRun',
                   items: [
-                    'calamari/Staking/Collation/Overview',
-                    'calamari/Staking/Collation/Requirements',
-                    {
-                      type: "category",
-                      label: 'SetupAndRun',
-                      items: [
-                        'calamari/Staking/Collation/SetupAndRun/installation',
-                        'calamari/Staking/Collation/SetupAndRun/configuration',
-                        'calamari/Staking/Collation/SetupAndRun/running',
-                        'calamari/Staking/Collation/SetupAndRun/sync',
-                        'calamari/Staking/Collation/SetupAndRun/keys',
-                        'calamari/Staking/Collation/SetupAndRun/bond',
-                      ],
-                    },
-                    'calamari/Staking/Collation/Maintenance',
-                    'calamari/Staking/Collation/Reduce Bond',
-                    'calamari/Staking/Collation/Unbond',
-                    'calamari/Staking/Collation/CollatorFAQ',
-                    'calamari/Staking/Early Collator Program',
+                    'calamari/Staking/Collation/SetupAndRun/installation',
+                    'calamari/Staking/Collation/SetupAndRun/configuration',
+                    'calamari/Staking/Collation/SetupAndRun/running',
+                    'calamari/Staking/Collation/SetupAndRun/sync',
+                    'calamari/Staking/Collation/SetupAndRun/keys',
+                    'calamari/Staking/Collation/SetupAndRun/bond',
                   ],
                 },
+                'calamari/Staking/Collation/Maintenance',
+                'calamari/Staking/Collation/Reduce Bond',
+                'calamari/Staking/Collation/Unbond',
+                'calamari/Staking/Collation/CollatorFAQ',
+                'calamari/Staking/Early Collator Program',
+              ],
+            },
           ]
         }
       ]
