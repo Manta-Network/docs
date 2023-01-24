@@ -272,7 +272,7 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 5. How does private payment work?
 
-   [Find out more here.](../learn/PrivatePayment.md)
+   [Find out more here.](../learn/PrivatePayment)
 
 6. How do I find my Calamari address on polkadot.js?
 
