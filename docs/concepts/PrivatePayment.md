@@ -12,4 +12,4 @@ One difference between Manta and ZCash is that Manta supports BYOT (Bring Your O
 
 ## Guide
 
-To learn how to send private payments with Manta, please see [our guide](https://docs.manta.network/docs/guides/DolphinPay).
+To learn how to send private payments with Manta, please see [our guide](https://docs.manta.network/docs/guides/MantaPay).
