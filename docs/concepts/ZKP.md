@@ -69,7 +69,7 @@ Once all the elements are fixed, a SNARK is defined as a pair of functions
 
 ## ZKPs in MantaPay
 
-MantaPay, Manta's private payment system, uses ZKPs to ensure that transfers are executed according to a structured protocol while keeping sensitive information (for example, how much money you send or who you send it to) private.
+MantaPay, Manta Network's private payment system, uses ZKPs to ensure that transfers are executed according to a structured protocol, called **circuit**, while keeping sensitive information (for example, how much money you send or who you send it to) private.
 
 Instead directly publishing those details on-chain, which would ensure that the protocol has been properly executed but leak all private data, the sensitive bits of information act as witnesses in a ZKP system, namely the SNARK [Groth16](https://eprint.iacr.org/2016/260.pdf). Then the Ledger runs the $\textsf{verify}$ function on the resulting ZKP against the public inputs and, if it passes, posts the transaction. 
 
@@ -78,3 +78,10 @@ This ZKP can be summarized as *I executed my transaction following the protocol*
 * I own the asset I am sending.
 * I haven't spent the asset I am sending yet.
 * The transfer I made is auditable using my viewing key.
+
+### The three circuits
+
+MantaPay has three circuits:
+* **ToPrivate**: Privatizes an asset, realizing it as a [zkAsset](./zkAsset.md) and putting it in the private Shielded Pool. zkAssets can then be used in private transfers.
+* **PrivateTransfer**: Sends a zkAsset to a [zkAddress](./zkAddress.md) privately.
+* **ToPublic**: Reclaims a zkAsset to get the equivalent amount of Asset in your wallet.
