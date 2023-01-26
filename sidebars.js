@@ -26,12 +26,10 @@ module.exports = {
           label: 'Core Concepts',
           items: [
             'concepts/ZKP',
-            'concepts/PrivatePayment',
+            'concepts/zkAsset',
             'concepts/zkAddress',
-            'concepts/ViewingKey',
-            'concepts/Signer',
-            'concepts/Governance',
-            'concepts/TrustedSetup'
+            'concepts/TrustedSetup',
+            'concepts/proofID',
           ],
         },
         {
