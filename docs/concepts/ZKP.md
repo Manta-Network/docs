@@ -13,7 +13,7 @@ A zero-knowledge proof system is a protocol by which someone (the prover) can pr
 
 * **Statement**: The statement whose veracity we want to proof.
 * **Public Input**: The information available to both the prover and the verifier. 
-* **Witness**: The information known only by the prover which is enough to prove the statement. The prove wants to keep this information secret from the verifier.
+* **Witness**: The information known only by the prover which is enough to prove the statement. The prover wants to keep this information secret from the verifier.
 * **Proof**: A piece of information which is derived by the prover from the statement, public input and witness and can be verified against the statement and the public input to test the veracity of the statement. 
 
 ### Properties of Zero-Knowledge Proof Systems
@@ -22,7 +22,7 @@ Generally, zero-knowledge proof systems must satisfy the following 3 crucial pro
 
 * **Completeness**: An honest prover can convince the verifier about any statement he/she knows.
 * **Soundness**: A computationally bounded prover cannot forfeit a proof that can convince an honest verifier.
-* **Zero-Knowledge**: The proof doesn’t leak any information other than the proof itself.
+* **Zero-Knowledge**: The proof doesn’t leak any information other than the veracity of the statement itself.
 
 ### Example
 To better illustrate a ZKP system, let us run a simple example in the finite field $\mathbb{F}_7$.
@@ -41,14 +41,14 @@ Then they repeat the protocol above for different values of $a$ until the verifi
 Let us check that the above protocol satisfies the desired properties:
 1. Completeness: It is clear, since $\pi^2 = w^{2b} a^2 = x^b y$.
 2. Soundness: A dishonest prover might try to trick the verifier by sending a $y$ in step 1 which is not a square. In that case the verifier would reject the proof in half the cases, when they choose $b = 0$. If $y$ is a square but $x$ is not, the verifier would reject the proof when $b = 1$. A dishonest prover has a $1/2$ probability to trick the protocol on each iteration, so this probability can be made negligible by iterating enough times. 
-3. Zero-knowledge: If $b = 0$, the prover does not use $w$ at any point in the proof, so they cannot leak it. If $b=1$, the only place where the prover uses $w$ is in $\pi = w a$, from which the verifier cannot extract $w$ without the knowledge of $a$. As long as the prover does not repeat the above protocol with the same $a$ for different $b$'s, the protocol remains zero-knowledge.
+3. Zero-knowledge: If $b = 0$, the prover does not use $w$ at any point in the proof, it cannot be leaked. If $b=1$, the only place where the prover uses $w$ is in $\pi = w a$, from which the verifier cannot extract $w$ without the knowledge of $a$. As long as the prover does not repeat the above protocol with the same $a$ for different $b$'s, the protocol remains zero-knowledge.
 
 ## Succint Non-Interactive Arguments of Knowledge (SNARKs)
 A particularly important type of ZKP systems are SNARKs. They are zero-knowledge proof systems which satisfy the following extra properties:
 
-* **Argument of knowledge**: On top of the statement, the prover wants to prove knowledge of the witness itself. In the example above, the statement would be "*$2$ is a square in $\mathbb{F}_7$, and I know its square root*". One can show the protocol above also proves this stronger statement, thus making it an argument of knowledge.
+* **Argument of knowledge**: The prover wants to prove knowledge of the witness itself. In the example above, the statement would be "*I know a square root of $2$ in $\mathbb{F}_7$*". One can show the protocol above also proves this stronger statement, thus making it an argument of knowledge.
 
-* **Succinctness**: The proof size is constant or logarithmic compared with the circuit size (ie. the amount of computation) of the statement. The protocol above is also succint, since the proof is just a number in $\mathbb{F}_7$.
+* **Succinctness**: The proof size is constant or logarithmic compared with the circuit size (i.e. the amount of computations) of the statement. The protocol above is also succint, since the proof is just a number in $\mathbb{F}_7$.
 
 * **Non-Interactive**: Proof generation and proof verification happen in two consecutive rounds: first the prover runs a function $\textsf{prove}$ to generate a proof and then the verifier runs a function $\textsf{verify}$ to verify it. The protocol above is interactive, i.e., it does not satisfy this property because of the continuous communication between prover and verifier. 
 
@@ -64,14 +64,14 @@ In pairing-based proving systems such as Groth16, the setup consists of a set of
 
 Once all the elements are fixed, a SNARK is defined as a pair of functions
 
-* **prove(Setup, Statement, Public Input, Witness) -> Proof**:
-* **verify(Setup, Statement, Public Input, Proof) -> bool**:
+* **prove(Setup, Public Input, Witness) -> Proof**: Generates a proof for the knowledge of the witness using the public input and witness.
+* **verify(Setup, Public Input, Proof) -> bool**: Verifies the proof against the public input. 
 
 ## ZKPs in MantaPay
 
 MantaPay, Manta Network's private payment system, uses ZKPs to ensure that transfers are executed according to a structured protocol, called **circuit**, while keeping sensitive information (for example, how much money you send or who you send it to) private.
 
-Instead directly publishing those details on-chain, which would ensure that the protocol has been properly executed but leak all private data, the sensitive bits of information act as witnesses in a ZKP system, namely the SNARK [Groth16](https://eprint.iacr.org/2016/260.pdf). Then the Ledger runs the $\textsf{verify}$ function on the resulting ZKP against the public inputs and, if it passes, posts the transaction. 
+Instead of directly publishing those details on-chain, which would ensure that the protocol has been properly executed but leak all private data, the sensitive bits of information act as witnesses in a ZKP system, namely the SNARK [Groth16](https://eprint.iacr.org/2016/260.pdf). Then the Ledger runs the $\textsf{verify}$ function on the resulting ZKP against the public inputs and, if it passes, posts the transaction. 
 
 This ZKP can be summarized as *I executed my transaction following the protocol* but much more is going under the hood:
 * The amount of asset sent from my account is equal to the amount of asset received in the other account.
@@ -81,7 +81,7 @@ This ZKP can be summarized as *I executed my transaction following the protocol*
 
 ### The three circuits
 
-MantaPay has three circuits:
-* **ToPrivate**: Privatizes an asset, realizing it as a [zkAsset](./zkAsset.md) and putting it in the private Shielded Pool. zkAssets can then be used in private transfers.
+MantaPay has three zk-powered circuits:
+* **ToPrivate**: Privatizes an asset, realizing it as a [zkAsset](./zkAsset.md) and depositing it in the private Shielded Pool. zkAssets can then be used in private transfers.
 * **PrivateTransfer**: Sends a zkAsset to a [zkAddress](./zkAddress.md) privately.
-* **ToPublic**: Reclaims a zkAsset to get the equivalent amount of Asset in your wallet.
+* **ToPublic**: Reclaims a zkAsset to get the equivalent amount of Asset in your public wallet.
