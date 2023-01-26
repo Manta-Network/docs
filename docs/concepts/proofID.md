@@ -10,17 +10,17 @@ In order to perform the first step, let us recall how a [zkAsset (in this case, 
 
 which is then posted on-chain. The salt is a randomly generated quantity used to prevent UTXO duplication: if the same zkAsset sent to the same zkAddress generated the same UTXO, that would compromise privacy.
 
-Therefore, to prove that a certain zkAddress owns a zkSBT, it is enough to give the verifier the zkSBT data, namely the AssetID and AssetValue (which is always 1 for NFTs/SBTs) and the salt used to encode the UTXO. The verifier would then reconstruct the UTXO with these data and cross-reference it to the blockchain.
+Therefore, to prove that a certain zkAddress owns a zkSBT, it is enough to give the verifier the zkSBT data, namely the AssetID and AssetValue (which is always 1 for NFTs/SBTs) and the salt used to encode the UTXO. The verifier would then reconstruct the UTXO with these data and cross-reference it with the blockchain.
 
 ## Identity Proof
-In order to perform the second step, the verifier will send the prover a challenge, namely a virtual zkAsset with some salt. The prover will then create a UTXO to their zkAddress encoding this zkAsset and generate a virtual (i.e. off-chain) ToPublic transaction spending it, sending the public outputs and the ZKP to the verifier. 
+In order to perform the second step, the verifier will send the prover a challenge, namely a virtual zkAsset with some salt. The prover will then create a UTXO to their zkAddress encoding this zkAsset with the provided salt and generate a virtual (i.e. off-chain) ToPublic transaction reclaiming it. The public outputs of this virtual transaction and the ZKP are then sent to the verifier. 
 
-Then the verifier checks the transaction output as follows:
+The verifier checks the transaction output as follows:
 1. The output has a valid signature.
 2. The output has a valid ZKP.
 3. The output is consistent with the provided zkAsset and salt.
 
-Only the owner of the spending key to that zkAddress would be able to generate such a virtual ToPublic transaction, therefore this is enough to show ownership of a zkAddress.
+Only the owner of the spending key to that zkAddress would be able to generate such a virtual ToPublic transaction, therefore this is enough to prove ownership of a zkAddress.
 
 ## No gas fees!
 

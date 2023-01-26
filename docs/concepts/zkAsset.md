@@ -26,4 +26,4 @@ When sending both transparent and opaque UTXOs, the identities of the sender and
 
 Opaque UTXOs are cryptographic commitments to zkAssets. In non-technical language, one should think of opaque UTXOs as envelopes where you can put your banknotes, the zkAssets. To make a private payment in this case, a sender can simply hand the envelope with the money to a receiver, without publicly disclosing how much money they’re putting in the envelope.
 
-Unfortunately, in this real world scenario, there’s no way to ensure that the money in the envelope is what was agreed to be without opening it, breaking privacy. MantaPay guarantees the transfer is properly executed while keeping all zkAssets involved private by using zero-knowledge proofs (ZKPs).
+Unfortunately, in this real world scenario, there’s no way to ensure that the money in the envelope is what it was agreed to be without opening it, breaking privacy. MantaPay guarantees the transfer is properly executed while keeping all zkAssets involved private by using zero-knowledge proofs (ZKPs).

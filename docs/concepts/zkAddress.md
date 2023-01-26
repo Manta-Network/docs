@@ -13,7 +13,7 @@ The zkAddress is a part of our zkAddress system, which provides the user with di
 
 ![zkAddress system](./resources/zkAddress.png)
 
-* The **zkAddress**, grants the right to send zkAssets to the holder of the corresponding secret key.
+* The **zkAddress** grants the right to send zkAssets to the holder of the corresponding secret key.
 
 * The **viewing key** grants the right to view all transactions of the holder of the corresponding secret key. The viewing key can be given to third parties for accounting/auditing purposes or to help the authorities track down illegal activity.
 
@@ -23,7 +23,7 @@ The zkAddress is a part of our zkAddress system, which provides the user with di
 
 ## zkAddress System: the math
 
-It would be really bad if someone could deduce the spending key or the viewing key from the zkAddress. Let's see why the zkAddress system is cryptographically secure.
+It would be disastrous if someone could deduce the spending key or the viewing key from the zkAddress. Let's see why the zkAddress system is cryptographically secure.
 
 The spending key is a field element, and the proof authorisation key is an elliptic curve point derived from the spending key by multiplication by a generator. The same applies to the viewing key and the zkAddress. These two derivations are secure because of the discrete logarithm assumption. 
 
