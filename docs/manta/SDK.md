@@ -1,4 +1,4 @@
-# 🛠 Manta API
+# 🛠 Manta SDK
 
 This package implements a Javascript SDK for connecting with the Manta Network. API end points to connect to Calamari:
 

@@ -94,6 +94,6 @@ Additionally you can check the status of your address at `https://faucet.dolphin
 
 ## Development Tools
 
-* API: A set of functionality which connects your public address (polkadot-js), your private addresses (signer) and manages the creation of the payloads required for MantaPay extrinsics. In order to use the Manta SDK please refer to [API.md](Api.md).
+* SDK: A set of functionality which connects your public address (polkadot-js), your private addresses (signer) and manages the creation of the payloads required for MantaPay extrinsics. In order to use the Manta SDK please refer to [SDK](SDK.md) section.
 * Signer: The signer is a desktop application which generates zero knowledge proofs and manages the private keys of your UTXOs. The signer is open sourced and you find instruction to set it up locally at [manta-signer](https://github.com/Manta-Network/manta-signer).
 * [zombienet](https://github.com/paritytech/zombienet) or the deprecated [polkadot-launch](https://github.com/paritytech/polkadot-launch) tool can help you set up a full relaychain + parachain network.
