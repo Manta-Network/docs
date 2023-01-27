@@ -275,14 +275,18 @@ Then you can use the signResult to submit transaction by your self. Here is an e
 
 Copy the transaction to polkadot.js `Extrinsic` decode:
 
-![extrinsic decode](./doc/to_private_decode.png)
+![extrinsic decode](../images/to_private_decode.png)
 
 Switch to `Submission`:
 
-![extrinsic decode](./doc/to_private_extrinsic.png)
+![extrinsic decode](../images/to_private_extrinsic.png)
 
 Then submit transaction.
 
-![extrinsic decode](./doc/to_private_submit.png)
+![extrinsic decode](../images/to_private_submit.png)
 
 You should see your extrinsic show up on polkadot.js explorer. Then you will notice an increase in your private balance.
+
+## Signer
+
+Manta Signer is a desktop application which generates zero knowledge proofs for MantaPay transactions and manages the private keys of your UTXOs. The signer is open sourced and you may find instruction on how to set it up at [manta-signer](https://github.com/Manta-Network/manta-signer).
