@@ -38,9 +38,10 @@ module.exports = {
           type: 'category',
           label: 'Research',
           items: [
+            'learn/Talks',
             'learn/PrivatePayment',
-            'learn/MantaPaySpec',
-            'learn/ZkpChallenge',
+            'learn/Spec',
+            'learn/Papers',
           ],
         },
         {
