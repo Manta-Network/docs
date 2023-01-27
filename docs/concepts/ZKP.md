@@ -11,10 +11,10 @@ A zero-knowledge proof system is a protocol by which someone (the prover) can pr
 
 ### Elements of Zero-Knowledge Proof Systems
 
-* **Statement**: The statement whose veracity we want to proof.
+* **Statement**: The statement whose truth we want to prove.
 * **Public Input**: The information available to both the prover and the verifier. 
 * **Witness**: The information known only by the prover which is enough to prove the statement. The prover wants to keep this information secret from the verifier.
-* **Proof**: A piece of information which is derived by the prover from the statement, public input and witness and can be verified against the statement and the public input to test the veracity of the statement. 
+* **Proof**: A piece of information derived by the prover from the statement, public input, and witness that can be verified against the statement and the public input to test the truth of the claim. 
 
 ### Properties of Zero-Knowledge Proof Systems
 
@@ -22,7 +22,7 @@ Generally, zero-knowledge proof systems must satisfy the following 3 crucial pro
 
 * **Completeness**: An honest prover can convince the verifier about any statement he/she knows.
 * **Soundness**: A computationally bounded prover cannot forfeit a proof that can convince an honest verifier.
-* **Zero-Knowledge**: The proof doesn’t leak any information other than the veracity of the statement itself.
+* **Zero-Knowledge**: The proof doesn’t leak any information other than the truth of the statement itself.
 
 ### Example
 To better illustrate a ZKP system, let us run a simple example in the finite field $\mathbb{F}_7$.

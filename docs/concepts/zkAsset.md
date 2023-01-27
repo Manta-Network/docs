@@ -19,8 +19,8 @@ zkAssets have the following properties:
 
 To allow for the privatisation of zkAssets, we employ the Unspent Transaction Output (UTXO) model. There are two kinds of UTXOs:
 
-* **Transparent UTXOs**: They don't conceal the AssetID nor the AssetValue of the zkAsset. This is very convenient for the enforcement of smart contracts on-chain.
 * **Opaque UTXOs**: They conceal the zkAsset. This is the default for private payments.
+* **Transparent UTXOs**: They don't conceal the AssetID nor the AssetValue of the zkAsset. This is very convenient for the enforcement of smart contracts on-chain.
 
 When sending both transparent and opaque UTXOs, the identities of the sender and the receiver remain private.
 
