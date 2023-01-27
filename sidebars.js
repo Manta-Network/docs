@@ -42,13 +42,6 @@ module.exports = {
             'learn/Papers',
           ],
         },
-        {
-          type: 'category',
-          label: 'Ecosystem',
-          items: [
-            'concepts/TrustedSetup' // TODO - PLACEHOLDER
-          ],
-        }
       ]
     },
     {
