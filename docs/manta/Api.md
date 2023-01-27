@@ -29,7 +29,7 @@ yarn install manta.js
 
 All methods are called through the `MantaPrivateWallet` class.
 
-`manta-signer` must be installed and running.
+`manta-signer` must be installed and running. TODO: link to how-to
 
 > If running `manta-signer` on dev mode, you should use the following features: `features=unsafe-disable-cors,disable-restart`.
 
@@ -279,3 +279,5 @@ Then submit transaction.
 ![extrinsic decode](./doc/to_private_submit.png)
 
 You should see your extrinsic show up on polkadot.js explorer. Then you will notice an increase in your private balance.
+
+## Signer

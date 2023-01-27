@@ -39,6 +39,9 @@ Or run it directly with:
 cargo run --release -- --chain=manta-localdev --alice --tmp
 ```
 
+TODO: links
+If you want a more complete simulation you would need to run a relay chain with a full parachain with a tool like polkadot-launch or zombienet.
+
 ## Connect polkadot-js
 
 TODO: screenshots
@@ -94,11 +97,11 @@ You can request each of the 4 supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) onc
 
 Additionally you can check the status of your address at `https://faucet.dolphin.community/`.
 
-## Use Manta API
+## Manta Signer and API
 
-In order to use the Manta SDK please refer to API.md
 
 ## Development Tools
 
-* TODO: LLDB debugger
-* polkadot-launch / zombienet
+* API: A set of functionality which connects your public address (polkadot-js), your private addresses (signer) and manages the creation of the payloads required for MantaPay extrinsics. In order to use the Manta SDK please refer to API.md  TODO: link
+* Signer: The signer is a desktop application which generates zero knowledge proofs and manages the private keys of your UTXOs. The signer is open sourced and you find instruction to set it up locally at [manta-signer](https://github.com/Manta-Network/manta-signer).
+* polkadot-launch / zombienet todo: description and link
