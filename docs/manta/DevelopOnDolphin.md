@@ -31,20 +31,17 @@ Next, update your PATH environment variable by running:
 Now you can either build and run the binary separately with:
 ```bash
   cargo build --release
-  ./target/release/manta --chain=manta-localdev --alice --tmp
+  ./target/release/manta --chain=calamari-localdev --alice --tmp
 ```
 
 Or run it directly with:
 ```bash
-cargo run --release -- --chain=manta-localdev --alice --tmp
+cargo run --release -- --chain=calamari-localdev --alice --tmp
 ```
 
-TODO: links
-If you want a more complete simulation you would need to run a relay chain with a full parachain with a tool like polkadot-launch or zombienet.
+If you want a more complete simulation you would need to run a relay chain with a full parachain with a tool like [zombienet or polkadot-launch](#Development-Tools). In that case you need to run the node with `--chain=calamari-local` 
 
 ## Connect polkadot-js
-
-TODO: screenshots
 
 The development node is a Substrate-based node, so you can interact with it using standard Substrate tools. The two default RPC endpoints are:
 
@@ -52,17 +49,17 @@ HTTP - `http://127.0.0.1:9933`
 WS - `ws://127.0.0.1:9944`
 
 Start by connecting to it with Polkadot.js Apps. Open a browser to: `https://polkadot.js.org/apps/#/explorer`. This will open Polkadot.js Apps, which automatically connects to Polkadot MainNet.
-
-Polkadot.js Apps
+![default node](../images/default-node.png)
 
 Click on the top left corner to open the menu to configure the networks, then take the following steps:
 
-Navigate down to open the Development sub-menu
-Click on Local Node, which points Polkadot.js Apps to ws://127.0.0.1:9944. If not, you can enter it under custom endpoint
-Select the Switch button, and the site should connect to your Manta development node
-Select local node
+1. Navigate down to open the Development sub-menu
+2. Click on Local Node, which points Polkadot.js Apps to ws://127.0.0.1:9944. If not, you can enter it under custom endpoint
+3. Select the Switch button, and the site should connect to your Manta development node
+![connect local](../images/connect-local.png)
 
 With Polkadot.js Apps connected, you will see the Manta development node waiting for transactions to arrive to begin producing blocks.
+![local node](../images/local-node.png)
 
 ## Network Endpoints
 
@@ -75,11 +72,9 @@ Dolphin chain id is `2084`
 
 ## Block Explorer
 
-TODO: screenshots
-
 Block explorers can be thought of as search engines for the blockchain. They allow users to search information such as balances, contracts, and transactions.
 
-Subscan is the primary Substrate API block explorer. Subscan is capable of parsing standard or custom modules. For example, this is useful to display information regarding the Staking, Governance, and XCM pallets (or modules). The code is all open-source and can be found in the [Subscan Essentials GitHub repo](todo: link).
+Subscan is the primary Substrate API block explorer. Subscan is capable of parsing standard or custom modules. For example, this is useful to display information regarding the Staking, Governance, and XCM pallets (or modules). The code is all open-source and can be found in the [Subscan Essentials GitHub repo](https://github.com/subscan-explorer/subscan-essentials).
 
 While not a full-featured block explorer, Polkadot.js Apps is a convenient option especially for users running local development nodes to view events and query transaction hashes. Polkadot.js Apps uses the WebSocket endpoint to interact with the Network. You can easily connect to Moonbeam, Moonriver, or Moonbase Alpha.
 
@@ -89,7 +84,7 @@ Dolphin faucet is live on our discord channel at: `https://discord.com/channels/
 
 You must get the attention of the faucet bot in order to receive tokens. To alert the bot simply begin typing the command for the token you want. eg: `/gimme-dol.` Discord will display a small pop-up, prompting for your wallet address.
 
-TODO: screenshot
+![gimme-dol](../images/faucet.png)
 
 Type or paste your wallet address into the address field when prompted, then press enter to trigger the faucet request.
 
@@ -97,11 +92,8 @@ You can request each of the 4 supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) onc
 
 Additionally you can check the status of your address at `https://faucet.dolphin.community/`.
 
-## Manta Signer and API
-
-
 ## Development Tools
 
-* API: A set of functionality which connects your public address (polkadot-js), your private addresses (signer) and manages the creation of the payloads required for MantaPay extrinsics. In order to use the Manta SDK please refer to API.md  TODO: link
+* API: A set of functionality which connects your public address (polkadot-js), your private addresses (signer) and manages the creation of the payloads required for MantaPay extrinsics. In order to use the Manta SDK please refer to [API.md](Api.md).
 * Signer: The signer is a desktop application which generates zero knowledge proofs and manages the private keys of your UTXOs. The signer is open sourced and you find instruction to set it up locally at [manta-signer](https://github.com/Manta-Network/manta-signer).
-* polkadot-launch / zombienet todo: description and link
+* [zombienet](https://github.com/paritytech/zombienet) or the deprecated [polkadot-launch](https://github.com/paritytech/polkadot-launch) tool can help you set up a full relaychain + parachain network.

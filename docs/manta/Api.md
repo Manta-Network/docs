@@ -29,7 +29,7 @@ yarn install manta.js
 
 All methods are called through the `MantaPrivateWallet` class.
 
-`manta-signer` must be installed and running. TODO: link to how-to
+[manta-signer](#signer) must be installed and running.
 
 > If running `manta-signer` on dev mode, you should use the following features: `features=unsafe-disable-cors,disable-restart`.
 
