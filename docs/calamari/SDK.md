@@ -71,11 +71,11 @@ To switch between environments and networks, a new `MantaPrivateWallet` instance
 import { MantaPrivateWallet, Environment, Network } from 'manta.js';
 
 const prodEnvironment = sdk.Environment.Production;
-const dolphinNetwork = sdk.Network.Dolphin;
+const calamariNetwork = sdk.Network.Calamari;
 
 const privateWalletConfig: PrivateWalletConfig = {
     environment: prodEnvironment,
-    network: dolphinNetwork,
+    network: calamariNetwork,
 };
 
 const privateWallet = await MantaPrivateWallet.init(privateWalletConfig);
