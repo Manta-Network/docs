@@ -22,8 +22,7 @@
 
 ## Local XCM Integration
 
-- As a first step we insist that both teams first run all tests on a local network.
-- For that you can download the latest manta binary from the Releases page.
+- First you can test the integration locally. For that you can download the latest manta binary from the Releases page.
 - Then use polkadot-launch to launch a `calamari-local` or `calamari-dev` network for testing.
 - You will also need to launch a `rococo-local` relay chain using the latest release of Polkadot.
 - Here's a reference polkadot-launch config for [calamari-dev](XcmOnboarding#example-polkadot-launch-config).
@@ -36,9 +35,9 @@
 ### Rococo Ecosystem Data
 
 - [Rococo endpoint](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer)
-- [Dolphin endpoint](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Feddie.rococo.dolphin.engineering#/explorer)
+- [Dolphin endpoint](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ff1.dolphin.engineering#/explorer)
 - [Rococo faucet guide](https://wiki.polkadot.network/docs/build-pdk#obtaining-roc)
-- [Dolphin faucet](https://discord.gg/UvXpxuyg)
+- [Dolphin faucet](https://discord.com/channels/795390654628102165/1055864933692219453)
 
 ### Sync Node & Open Rococo Slot Request
 
@@ -154,20 +153,20 @@ Transact { originType: Native, requireWeightAtMost: 1000000000, call: XcmDoubleE
     
     `5CacAW3K4gq3Ufv2dAqUFYWKoqJcQaFu346ahesmt4sua7Xx`
     
-- If you need DOL tokens (the native token for Dolphin) to use your parachain's asset, you can get some from our Discord Bot - We can also provide you with some if you give us your address
+- If you need KMA tokens (the native token for Dolphin) to use your parachain's asset, you can get some from our Discord Bot - We can also provide you with some if you give us your address
 
 ### Registering Calamari’s Token on your Parachain
 
-- To register our DOL token on your parachain, you can use the following MultiLocation:
+- To register our KMA token on your parachain, you can use the following MultiLocation:
 
 `{ "parents": 1, "interior": {"X1": { "Parachain": 2084 }}`
 
 - And the following metadata:
 
 ```
-Name: Dolphin
-Symbol: DOL
-Decimals: 18
+Name: Calamari
+Symbol: KMA
+Decimals: 12
 ```
 
 - Note: Calamari MultiLocation is different!
@@ -255,6 +254,6 @@ Decimals: 18
 * The following items must have been completed and fully tested in the Rococo Ecosystem with Dolphin before proceeding with an XCM integration on Calamari (and Manta in the future):
 
     1. Bi-directional HRMP channels between Dolphin and your parachain
-    2. Bi-directional asset registration (DOL token and the token of your parachain)
+    2. Bi-directional asset registration (KMA token and the token of your parachain)
     3. Both teams must have successfully tested asset transfers through Polkadot.js Apps
 * Once everything is successful we can plan governance proposals to open HRMP channels and asset registrations on the Kusama parachains, as well as additional marketing initiatives if relevant.
