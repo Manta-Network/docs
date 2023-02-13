@@ -284,3 +284,5 @@ You should see your extrinsic show up on polkadot.js explorer. Then you will not
 ## Signer
 
 Manta Signer is a desktop application which generates zero knowledge proofs for MantaPay transactions and manages the private keys of your UTXOs. The signer is open sourced and you may find instruction on how to set it up at [manta-signer](https://github.com/Manta-Network/manta-signer).
+In short you need to install `tauri-cli` and build the signer with `cargo tauri build`. Then run the signer and create your private address by following the user prompts.
+If you don't need ot interact with the signer directly you can run a simple test server with `cargo run --example test_server --features=unsafe-disable-cors,disable-restart --release`
