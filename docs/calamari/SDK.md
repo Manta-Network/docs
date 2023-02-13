@@ -133,12 +133,12 @@ Below is an example of how to transact using fungible tokens, there are four mai
 
 ### To Private
 
-This example converts 10 public DOL tokens to 10 private DOL tokens.
+This example converts 10 public KMA tokens to 10 private KMA tokens.
 
 ```javascript
-// DOL token
+// KMA token
 const assetId = new BN("1");
-const amount = new BN("10000000000000000000");
+const amount = new BN("10000000000000");
 
 // Sync with most recent ledger state.
 await privateWallet.initialWalletSync();
@@ -146,27 +146,27 @@ await privateWallet.initialWalletSync();
 // Get private address
 const privateAddress = await privateWallet.getPrivateAddress();
 
-// Get private balance of DOL for given private address
+// Get private balance of KMA for given private address
 const privateBalance = await privateWallet.getPrivateBalance(assetId);
 
-// Privatize 10 DOL to 10 pDOL
+// Privatize 10 KMA to 10 zkKMA
 await privateWallet.toPrivateSend(assetId, amount, polkadotSigner, polkadotAddress);
 
 // Sync to get latest data after the transaction and check that it was successful.
 await privateWallet.walletSync();
 
-// The private balance of pDOL should be incremented by 10 units.
+// The private balance of zkKMA should be incremented by 10 units.
 const newPrivateBalance = await mantaSdk.getPrivateBalance(assetId);
 ```
 
 ### Private Transfer
 
-This example transfers 10 private private pDOL to another address.
+This example transfers 10 zkKMA to another address.
 
 ```javascript
-// DOL token
+// KMA token
 const assetId = new BN("1");
-const amount = new BN("10000000000000000000");
+const amount = new BN("10000000000000");
 
 // Sync with most recent ledger state.
 await privateWallet.initialWalletSync();
@@ -174,25 +174,25 @@ await privateWallet.initialWalletSync();
 // Get private address
 const privateAddress = await privateWallet.getPrivateAddress();
 
-// Private Transfer of 10 pDOL to another private address
+// Private Transfer of 10 zkKMA to another private address
 const examplePrivateAddress = "3UG1BBvv7viqwyg1QKsMVarnSPcdiRQ1aL2vnTgwjWYX";
 await privateWallet.privateTransferSend(assetId, amount, examplePrivateAddress, polkadotSigner, polkadotAddress);
 
 // Sync to get latest data after transaction and check that it was successful.
 await privateWallet.walletSync();
 
-// The private balance of pDOL should decrease by 10 units.
+// The private balance of zkKMA should decrease by 10 units.
 const newPrivateBalance = await privateWallet.getPrivateBalance(assetId);
 ```
 
 ### To Public
 
-This example converts 5 private pDOL to 5 public DOL.
+This example converts 5 zkKMA to 5 public KMA.
 
 ```javascript
-// DOL token
+// KMA token
 const assetId = new BN("1");
-const amount = new BN("5000000000000000000");
+const amount = new BN("5000000000000");
 
 // Sync with most recent ledger state.
 await privateWallet.initialWalletSync();
@@ -200,16 +200,16 @@ await privateWallet.initialWalletSync();
 // Get private address
 const privateAddress = await privateWallet.getPrivateAddress();
 
-// Get private balance of DOL for given private address
+// Get private balance of zkKMA for given private address
 const privateBalance = await privateWallet.getPrivateBalance(assetId);
 
-// Convert 5 pDOL back to DOL
+// Convert 5 zkKMA back to KMA
 await privateWallet.toPublicSend(assetId, amount, polkadotSigner, polkadotAddress);
 
 // Sync to get latest data after transaction and check that it was successful.
 await privateWallet.walletSync();
 
-// The private balance of pDOL should decrease by 5 units.
+// The private balance of zkKMA should decrease by 5 units.
 const newPrivateBalance = await privateWallet.getPrivateBalance(assetId);
 ```
 
@@ -223,18 +223,18 @@ import { MantaUtilities } from "manta.js";
 // Get signer version, signer must be running.
 const signerVersion = await MantaUtilities.getSignerVersion();
 
-// DOL token
+// KMA token
 const assetId = new BN("1");
 
-// Get public balance of DOL for `polkadotAddress`.
+// Get public balance of KMA for `polkadotAddress`.
 const oldPublicBalance = await MantaUtilities.getPublicBalance(privateWallet.api, assetId, polkadotAddress);
 
-// Public transfer of 5 DOL to `destinationAddress`.
+// Public transfer of 5 KMA to `destinationAddress`.
 const destinationAddress = "dmyhNmYL13N7ZKcVYqBQhvrk5kSfrKZUmrjX9vAaM4846bWKR";
 const amount = new BN("5000000000000000000");
 await MantaUtilities.publicTransfer(privateWallet.api, assetId, amount, destinationAddress, polkadotAddress, polkadotSigner);
 
-// Public balance should now be 5 DOL less that `oldPublicBalance`.
+// Public balance should now be 5 KMA less that `oldPublicBalance`.
 const newPublicBalance = await MantaUtilities.getPublicBalance(privateWallet.api, assetId, polkadotAddress);
 ```
 
@@ -242,14 +242,14 @@ const newPublicBalance = await MantaUtilities.getPublicBalance(privateWallet.api
 
 In some cases you may not want to send transaction to the ledger through manta.js, thus you can get sign result after manta-signer has signed the transaction and send the transaction yourself. This is done by using the `toPrivateBuild`, `privateTransferBuild`, `publicTransferBuild` functions.
 
-This example returns the signed transaction of `toPrivate` for 10 DOL.
+This example returns the signed transaction of `toPrivate` for 10 KMA.
 
 ```javascript
 const assetId = new BN("1");
-const amount = new BN("10000000000000000000");
+const amount = new BN("10000000000000");
 
-const env = sdk.Environment.Development;
-const net = sdk.Network.Dolphin;
+const env = sdk.Environment.Production;
+const net = sdk.Network.Calamari;
 const privateWallet = await sdk.init(env,net);
 
 const privateAddress = await privateWallet.privateAddress();
