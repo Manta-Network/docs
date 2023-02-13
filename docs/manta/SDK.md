@@ -8,6 +8,7 @@ This package implements a Javascript SDK for connecting with the Manta Network. 
 
 ## Asset API (Javascript)
 
+* Token: `api.query.assets.account(asset_id, AccountId)`
 - MANTA: `api.query.system.account(AccountId)`
 
 ## Installation
