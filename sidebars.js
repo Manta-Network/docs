@@ -46,7 +46,7 @@ module.exports = {
           type: 'category',
           label: 'Ecosystem',
           items: [
-            'concepts/TrustedSetup' // TODO - PLACEHOLDER
+            'manta/ecosystem/Overview'
           ],
         }
       ]
