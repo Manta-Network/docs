@@ -9,6 +9,7 @@ This package implements a Javascript SDK for connecting with the Manta Network. 
 
 ## Asset API (Javascript)
 
+* Token: `api.query.assets.account(asset_id, AccountId)`
 - KMA: `api.query.system.account(AccountId)`
 - KAR: `api.query.assets.account(8u128, AccountId)`
 - AUSD: `api.query.assets.account(9u128, AccountId)`
@@ -16,6 +17,7 @@ This package implements a Javascript SDK for connecting with the Manta Network. 
 - MOVR: `api.query.assets.account(11u128, AccountId)`
 - KSM: `api.query.assets.account(12u128, AccountId)`
 - PHA: `api.query.assets.account(13u128, AccountId)`
+* Note: In these examples asset-ids start from 8 to 13
 
 ## Installation
 
