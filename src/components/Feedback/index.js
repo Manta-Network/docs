@@ -1,44 +1,56 @@
 import React, { useState } from "react";
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 import styles from "./styles.module.css";
-import mehFace from "../../../static/img/face-meh-regular.svg";
-import smileFace from "../../../static/img/face-smile-regular.svg";
-import frownFace from "../../../static/img/face-frown-regular.svg";
-
 
 const DocsRating = ({ label }) => {
-	if (!ExecutionEnvironment.canUseDOM) {
-		return null;
-	}
+    if (!ExecutionEnvironment.canUseDOM) {
+        return null;
+    }
 
-	const [haveVoted, setHaveVoted] = useState(false);
-	const giveFeedback = (value) => {
-		if (window.ga) {
-			window.ga("send", {
-				hitType: "event",
-				eventCategory: "button",
-				eventAction: "feedback",
-				eventLabel: label,
-				eventValue: value,
-			});
-		}
-		setHaveVoted(true);
-	};
+    const [vote, setVote] = useState(undefined);
+    const giveFeedback = (value) => {
+        if (window.ga) {
+            window.ga("send", {
+                hitType: "event",
+                eventCategory: "button",
+                eventAction: "feedback",
+                eventLabel: label,
+                eventValue: value,
+            });
+        }
+        setVote(value);
+    };
 
-	return (
-		<div className={styles.content}>
-			{haveVoted ? "Thanks for letting us know!" : "Helpful?"}
-			<div className={styles.button} onClick={() => giveFeedback(1)}>
-				Good
-			</div>
-			<img src="smileFace" />
-			<img src="mehFace" />
-			<img src="frownFace" />
-			<div className="rate-button" onClick={() => giveFeedback(0)}>
-				Bad
-			</div>
-		</div>
-	);
+    return (
+        <div className={styles.content}>
+            <div className={styles.innerContent}>
+                <div className={styles.font}>
+                    {vote ? "Thanks for letting us know!" : "Helpful?"}
+                </div>
+                {vote === undefined || vote === 1 ? (
+                    <img
+                        onClick={() => giveFeedback(1)}
+                        height={25}
+                        src="/img/face-smile-regular.svg"
+                    />
+                ) : null}
+                {vote === undefined || vote === 0 ? (
+                    <img
+                        onClick={() => giveFeedback(0)}
+                        height={25}
+                        src="/img/face-meh-regular.svg"
+                    />
+                ) : null}
+                {vote === undefined || vote === -1 ? (
+                    <img
+                        onClick={() => giveFeedback(-1)}
+                        height={25}
+                        src="/img/face-frown-regular.svg"
+                    />
+                ) : null}
+            </div>
+        </div>
+    );
 };
 
 export default DocsRating;
