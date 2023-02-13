@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 import styles from "./styles.module.css";
-import mehFace from "../../static/img/face-meh-regular.svg";
-import smileFace from "../../static/img/face-smile-regular.svg";
-import frownFace from "../../static/img/face-frown-regular.svg";
+import mehFace from "../../../static/img/face-meh-regular.svg";
+import smileFace from "../../../static/img/face-smile-regular.svg";
+import frownFace from "../../../static/img/face-frown-regular.svg";
 
 
 const DocsRating = ({ label }) => {
