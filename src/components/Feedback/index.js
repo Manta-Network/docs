@@ -9,8 +9,8 @@ const DocsRating = ({ label }) => {
 
     const [vote, setVote] = useState(undefined);
     const giveFeedback = (value) => {
-        if (window.ga) {
-            window.ga("send", {
+        if (window.gtag) {
+            window.gtag("send", {
                 hitType: "event",
                 eventCategory: "button",
                 eventAction: "feedback",
