@@ -1,19 +1,19 @@
 # 🛠 Develop on Dolphin
 
 ## Quick Overview
-This guide outlines the steps needed to create a Manta node for testing your applications.
+This guide outlines the steps needed to create a Calamari node for testing your applications on our public testnet name Dolphin.
 
-A Manta development node is your own personal development environment for building and testing applications on Manta Network. It enables you to get started quickly and easily without the overhead of a relay chain. By default a block will be created when a transaction is received.
+A Calamari development node is your own personal development environment for building and testing applications on Calamari Network. It enables you to get started quickly and easily without the overhead of a relay chain. By default a block will be created when a transaction is received.
 
-To get started running a Manta node you will need to first download it or build it. This could take roughly 30 minutes or longer to complete depending on your hardware.
+To get started running a Calamari node you will need to first download it or build it. This could take roughly 30 minutes or longer to complete depending on your hardware.
 
 ## Download Binary File
 
-To download any of the official releases of Manta, please go to our [release page](https://github.com/Manta-Network/Manta/releases).
+To download any of the official releases of Calamari, please go to our [release page](https://github.com/Manta-Network/Manta/releases).
 
 ## Build Binary File
 
-First, start by cloning a specific tag of the Manta repo that you can find here:
+First, start by cloning a specific tag of the Calamari repo that you can find here:
 
 `https://github.com/Manta-Network/Manta/`
 
@@ -55,20 +55,20 @@ Click on the top left corner to open the menu to configure the networks, then ta
 
 1. Navigate down to open the Development sub-menu
 2. Click on Local Node, which points Polkadot.js Apps to ws://127.0.0.1:9944. If not, you can enter it under custom endpoint
-3. Select the Switch button, and the site should connect to your Manta development node
+3. Select the Switch button, and the site should connect to your Calamari development node
 ![connect local](../images/connect-local.png)
 
-With Polkadot.js Apps connected, you will see the Manta development node waiting for transactions to arrive to begin producing blocks.
+With Polkadot.js Apps connected, you will see the Calamari development node waiting for transactions to arrive to begin producing blocks.
 ![local node](../images/local-node.png)
 
 ## Network Endpoints
 
-Alternatively to connecting to your own development node you can access one of the load-balancer endpoints provided by Manta: 
+Alternatively to connecting to your own development node you can access one of the load-balancer endpoints provided by Calamari: 
 `wss://ws.calamari.seabird.systems`
 
 ## Chain ID
 
-Dolphin chain id is `2084`
+Dolphin testnet chain id is `2084`
 
 ## Block Explorer
 
@@ -94,6 +94,6 @@ Additionally you can check the status of your address at `https://faucet.dolphin
 
 ## Development Tools
 
-* SDK: A set of functionality which connects your public address (polkadot-js), your private addresses (signer) and manages the creation of the payloads required for MantaPay extrinsics. In order to use the Manta SDK please refer to [SDK](SDK.md) section.
+* SDK: A set of functionality which connects your public address (polkadot-js), your private addresses (signer) and manages the creation of the payloads required for MantaPay extrinsics. In order to use the Calamari SDK please refer to [SDK](SDK.md) section.
 * Signer: The signer is a desktop application which generates zero knowledge proofs and manages the private keys of your UTXOs. The signer is open sourced and you find instruction to set it up locally at [manta-signer](https://github.com/Manta-Network/manta-signer).
 * [zombienet](https://github.com/paritytech/zombienet) or the deprecated [polkadot-launch](https://github.com/paritytech/polkadot-launch) tool can help you set up a full relaychain + parachain network.
