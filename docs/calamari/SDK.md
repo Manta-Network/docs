@@ -151,7 +151,7 @@ Note: The polkadotAddress should already have associated public funds.
 
 ### Converting Public Tokens To Private Tokens
 
-This example converts 10 public KMA tokens to 10 private KMA tokens.
+This example converts 10 public KMA tokens to 10 zkKMA tokens.
 
 ```javascript
 // Identify the KMA token with an asset ID
@@ -166,16 +166,16 @@ await privateWallet.initialWalletSync();
 // Get the private address
 const privateAddress = await privateWallet.getPrivateAddress();
 
-// Get the private balance of KMA tokens for the given private address
+// Get the balance of zkKMA tokens for the given private address
 const privateBalance = await privateWallet.getPrivateBalance(assetId);
 
-// Convert 10 public KMA tokens to 10 private KMA tokens
+// Convert 10 public KMA tokens to 10 zkKMA tokens
 await privateWallet.toPrivateSend(assetId, amount, polkadotSigner, polkadotAddress);
 
 // Synchronize again to check if the transaction was successful
 await privateWallet.walletSync();
 
-// Check the updated private balance of KMA tokens
+// Check the updated private balance of zkKMA tokens
 const newPrivateBalance = await mantaSdk.getPrivateBalance(assetId);
 ```
 
@@ -187,7 +187,7 @@ This example transfers 10 zkKMA to another address.
 // Identify the KMA token with an asset ID
 const assetId = new BN("1");
 
-// Define the amount to transfer, 10 private KMA tokens
+// Define the amount to transfer, 10 zkKMA tokens
 const amount = new BN("10000000000000");
 
 // Synchronize with the latest ledger state
@@ -199,13 +199,13 @@ const privateAddress = await privateWallet.getPrivateAddress();
 // Define the recipient private address
 const examplePrivateAddress = "3UG1BBvv7viqwyg1QKsMVarnSPcdiRQ1aL2vnTgwjWYX";
 
-// Transfer 10 private KMA tokens to another private address
+// Transfer 10 zkKMA tokens to another private address
 await privateWallet.privateTransferSend(assetId, amount, examplePrivateAddress, polkadotSigner, polkadotAddress);
 
 // Synchronize again to check if the transaction was successful
 await privateWallet.walletSync();
 
-// Check the updated private balance of KMA tokens
+// Check the updated private balance of zkKMA tokens
 const newPrivateBalance = await privateWallet.getPrivateBalance(assetId);
 ```
 
