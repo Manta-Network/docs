@@ -115,45 +115,39 @@ const privateWallet = await MantaPrivateWallet.init(privateWalletConfig);
 Before you can make transactions, you'll need to call the `initialWalletSync()` method on your `MantaPrivateWallet` instance. This will sync your wallet with the latest data from the ledger.
 
 After every single transaction, you'll need to call the `walletSync()` method to get the latest data from the ledger.
-
-To make transactions, you'll need to provide a `Signer` and a public Address from `PolkadotJS`. 
-
-Following is an example that shows how to get these values, assuming that the `PolkadotJS` extension is installed and contains an existing account:
-
-
-
-
 ### Polkadot JS Transaction Parameters
+
+Before making any transactions, you need to obtain the Polkadot JS `Signer` and `Address`. To do so, you need to have the PolkadotJS extension installed in your browser. You can use the following code to get the values:
 
 ```javascript
 import { web3Accounts, web3Enable, web3FromSource } from '@polkadot/extension-dapp';
 
-// Get Polkadot JS Signer and Polkadot JS account address.
 const getPolkadotSignerAndAddress = async () => {
-    const extensions = await web3Enable('Polkadot App');
-    if (extensions.length === 0) {
-        throw new Error("Polkadot browser extension missing. https://polkadot.js.org/extension/");
-    }
+    await web3Enable('Polkadot App');
     const allAccounts = await web3Accounts();
-    let account = allAccounts[0];
+    if (allAccounts.length === 0) {
+        throw new Error("PolkadotJS browser extension missing. Please visit https://polkadot.js.org/extension/ to install it.");
+    }
 
+    const account = allAccounts[0];
     const injector = await web3FromSource(account.meta.source);
     const polkadotSigner = injector.signer;
     const polkadotAddress = account.address;
+
     return {
         polkadotSigner,
         polkadotAddress
-    }
-}
+    };
+};
 ```
 
-Below is an example of how to transact using fungible tokens, there are four main methods that `manta-pay` provides:
-- `toPrivateSend(asset, amount, polkadotSigner, polkadotAddress)`
-- `privateTransferSend(asset, amount, receiver, polkadotSigner, polkadotAddress)`
-- `toPublicSend(asset, amount, polkadotSigner, polkadotAddress)`
-- `publicTransfer(asset, amount, destinationAddress, polkadotSigner, polkadotAddress)`
+To transact using fungible tokens, manta-pay provides 4 methods:
 
-> This example assumes the `polkadotAddress` already has associated public funds.
+* `toPrivateSend(asset, amount, polkadotSigner, polkadotAddress)`
+* `privateTransferSend(asset, amount, receiver, polkadotSigner, polkadotAddress)`
+* `toPublicSend(asset, amount, polkadotSigner, polkadotAddress)`
+* `publicTransfer(asset, amount, destinationAddress, polkadotSigner, polkadotAddress)`
+Note: The polkadotAddress should already have associated public funds.
 
 ### To Private
 
