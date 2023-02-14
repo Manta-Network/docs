@@ -12,11 +12,11 @@ To download an official release of Calamari, visit our [release page](https://gi
 1. Clone the specific tag of the Calamari repository from this URL: `https://github.com/Manta-Network/Manta/`
 
 ```sh
-git clone -b v4.0.1 https://github.com/Manta-Network/Manta
+git clone https://github.com/Manta-Network/Manta
 cd Manta
 ```
 
-2. Clone the specific tag of the Calamari repository from this URL:
+2. Install Rust:
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
