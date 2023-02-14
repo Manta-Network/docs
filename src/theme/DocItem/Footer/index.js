@@ -27,7 +27,8 @@ function EditMetaRow({
   formattedLastUpdatedAt,
 }) {
   return (
-    <div className={clsx(ThemeClassNames.docs.docFooterEditMetaRow, 'row')}>
+    <div className={clsx(styles.flex, styles.spaceBetween, styles.contentContainer)}>
+    <div className={clsx(ThemeClassNames.docs.docFooterEditMetaRow, 'row', styles.flexColumn)}>
       <div className="col">{editUrl && <EditThisPage editUrl={editUrl} />}</div>
 
       <div className={clsx('col', styles.lastUpdated)}>
@@ -39,6 +40,8 @@ function EditMetaRow({
           />
         )}
       </div>
+    </div>
+			<DocsRating label={'Feedback'} />
     </div>
   );
 }
@@ -64,7 +67,6 @@ export default function DocItemFooter() {
 					/>
 				)}
 			</footer>
-			<DocsRating label={'Feedback'} />
 		</>
 	);
 }
