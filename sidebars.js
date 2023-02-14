@@ -150,6 +150,7 @@ module.exports = {
               label: 'Integration with Calamari',
               items: [
                 'calamari/api',
+                'guides/XcmTransfers',
                 'guides/XcmOnboarding',
               ]
             },
