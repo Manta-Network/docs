@@ -6,7 +6,6 @@ const DocsRating = ({ label }) => {
     if (!ExecutionEnvironment.canUseDOM) {
         return null;
     }
-
     const [vote, setVote] = useState(undefined);
     const giveFeedback = (value) => {
         if (window.gtag) {
@@ -25,26 +24,28 @@ const DocsRating = ({ label }) => {
         <div className={styles.content}>
             <div className={styles.innerContent}>
                 <div className={styles.font}>
-                    {vote ? "Thanks for letting us know!" : "Helpful?"}
+                    {vote !== undefined
+                        ? "Thanks for letting us know!"
+                        : "Was this page helpful?"}
                 </div>
                 {vote === undefined || vote === 1 ? (
                     <img
                         onClick={() => giveFeedback(1)}
-                        height={25}
+                        height={16}
                         src="/img/face-smile-regular.svg"
                     />
                 ) : null}
                 {vote === undefined || vote === 0 ? (
                     <img
                         onClick={() => giveFeedback(0)}
-                        height={25}
+                        height={16}
                         src="/img/face-meh-regular.svg"
                     />
                 ) : null}
                 {vote === undefined || vote === -1 ? (
                     <img
                         onClick={() => giveFeedback(-1)}
-                        height={25}
+                        height={16}
                         src="/img/face-frown-regular.svg"
                     />
                 ) : null}
