@@ -264,9 +264,9 @@ const newPublicBalance = await MantaUtilities.getPublicBalance(privateWallet.api
 
 ### Sign and manually send transaction
 
-In some cases you may not want to send transaction to the ledger through manta.js, thus you can get sign result after manta-signer has signed the transaction and send the transaction yourself. This is done by using the `toPrivateBuild`, `privateTransferBuild`, `publicTransferBuild` functions.
+Sometimes, you may want to sign a transaction without sending it automatically to the ledger via manta.js. In this case, you can use the `toPrivateBuild`, `privateTransferBuild`, or `publicTransferBuild` functions.
 
-This example returns the signed transaction of `toPrivate` for 10 KMA.
+Here is a code example of how to sign a `toPrivate` transaction for 10 KMA:
 
 ```javascript
 const assetId = new BN("1");
@@ -297,7 +297,7 @@ const toPublicSignResult = await privateWallet.toPublicBuild(assetId, amount, po
 const privateTransferSignResult = await privateWallet.privateTransferBuild(assetId, amount, privateAddress, polkadotSigner, polkadotAddress);
 ```
 
-Then you can use the signResult to submit transaction by your self. Here is an example on how to verify the `toPrivateBuild` sign result is valid:
+Once you have the signed transaction, you can submit it yourself. To verify the signed transaction, you can follow these steps:
 
 Copy the transaction to polkadot.js `Extrinsic` decode:
 
@@ -313,8 +313,9 @@ Then submit transaction.
 
 You should see your extrinsic show up on polkadot.js explorer. Then you will notice an increase in your private balance.
 
-## Signer
+## Manta Signer
 
-Manta Signer is a desktop application which generates zero knowledge proofs for MantaPay transactions and manages the private keys of your UTXOs. The signer is open sourced and you may find instruction on how to set it up at [manta-signer](https://github.com/Manta-Network/manta-signer).
-In short you need to install `tauri-cli` and build the signer with `cargo tauri build`. Then run the signer and create your private address by following the user prompts.
-If you don't need ot interact with the signer directly you can run a simple test server with `cargo run --example test_server --features=unsafe-disable-cors,disable-restart --release`
+`Manta Signer` is a desktop application that generates zero-knowledge proofs for `MantaPay` transactions and manages the private keys of your UTXOs. The signer is open-source and you can find instructions on how to set it up on the [manta-signer](https://github.com/Manta-Network/manta-signer).
+
+To get started, you need to install `tauri-cli` and build the signer using `cargo tauri build`. Then, run the signer and create your private address by following the prompts.
+If you do not need to interact with the signer directly, you can run a simple test server with `cargo run --example test_server --features=unsafe-disable-cors,disable-restart --release`.
