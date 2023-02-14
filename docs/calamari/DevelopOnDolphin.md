@@ -1,70 +1,67 @@
 # 🛠 Develop on Dolphin
 
-## Quick Overview
-This guide outlines the steps needed to create a Calamari node for testing your applications on our public testnet name Dolphin.
-
-A Calamari development node is your own personal development environment for building and testing applications on Calamari Network. It enables you to get started quickly and easily without the overhead of a relay chain. By default a block will be created when a transaction is received.
-
-To get started running a Calamari node you will need to first download it or build it. This could take roughly 30 minutes or longer to complete depending on your hardware.
+## Introduction
+This guide provides step-by-step instructions to set up a Calamari development node to test your applications on the public testnet named Dolphin. A Calamari development node acts as your personal development environment to build and test applications on the Calamari Network. It eliminates the need for a relay chain and creates blocks automatically when transactions are received.
 
 ## Download Binary File
 
-To download any of the official releases of Calamari, please go to our [release page](https://github.com/Manta-Network/Manta/releases).
+To download an official release of Calamari, visit our [release page](https://github.com/Manta-Network/Manta/releases).
 
 ## Build Binary File
 
-First, start by cloning a specific tag of the Calamari repo that you can find here:
+1. Clone the specific tag of the Calamari repository from this URL: `https://github.com/Manta-Network/Manta/`
 
-`https://github.com/Manta-Network/Manta/`
-
-```
+```sh
 git clone -b v4.0.1 https://github.com/Manta-Network/Manta
 cd Manta
 ```
 
-If you already have Rust installed, you can skip the next two steps. Otherwise, install Rust and its prerequisites via Rust's recommended method by executing:
-`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+2. Clone the specific tag of the Calamari repository from this URL:
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
-Next, update your PATH environment variable by running:
-`source $HOME/.cargo/env`
+3. Update your PATH environment variable with this command:
+```sh
+source $HOME/.cargo/env
+```
 
-Now you can either build and run the binary separately with:
-```bash
+4. To build and run the binary file, choose one of the following options:
+```sh
   cargo build --release
   ./target/release/manta --chain=calamari-localdev --alice --tmp
 ```
 
-Or run it directly with:
-```bash
+or:
+
+```sh
 cargo run --release -- --chain=calamari-localdev --alice --tmp
 ```
 
-If you want a more complete simulation you would need to run a relay chain with a full parachain with a tool like [zombienet or polkadot-launch](#Development-Tools). In that case you need to run the node with `--chain=calamari-local` 
+INote: For a complete simulation, you can run a relay chain with a full parachain using tools like [zombienet or polkadot-launch](#Development-Tools). In that case you need to run the node with `--chain=calamari-local` 
 
-## Connect polkadot-js
+## Connecting With Polkadot-JS
 
-The development node is a Substrate-based node, so you can interact with it using standard Substrate tools. The two default RPC endpoints are:
+The development node is based on Substrate and can be interacted with using standard Substrate tools. The default RPC endpoints are:
 
 HTTP - `http://127.0.0.1:9933`
 WS - `ws://127.0.0.1:9944`
 
-Start by connecting to it with Polkadot.js Apps. Open a browser to: `https://polkadot.js.org/apps/#/explorer`. This will open Polkadot.js Apps, which automatically connects to Polkadot MainNet.
+To connect to your development node with Polkadot.js Apps, follow these steps:
+
+1. Open a browser to `https://polkadot.js.org/apps/#/explorer`. This opens Polkadot.js Apps, which connects to Polkadot MainNet by default.
 ![default node](../images/default-node.png)
-
-Click on the top left corner to open the menu to configure the networks, then take the following steps:
-
-1. Navigate down to open the Development sub-menu
-2. Click on Local Node, which points Polkadot.js Apps to ws://127.0.0.1:9944. If not, you can enter it under custom endpoint
-3. Select the Switch button, and the site should connect to your Calamari development node
+2. In the top-left corner, open the menu and navigate to the Development sub-menu.
+3. Click on `Local Node`, or enter `ws://127.0.0.1:9944` under custom endpoint.
+4. Click the `Switch` button to connect to your Calamari development node.
 ![connect local](../images/connect-local.png)
 
-With Polkadot.js Apps connected, you will see the Calamari development node waiting for transactions to arrive to begin producing blocks.
+With Polkadot.js Apps connected, your Calamari development node will be ready to receive transactions and produce blocks.
 ![local node](../images/local-node.png)
 
 ## Network Endpoints
 
-Alternatively to connecting to your own development node you can access one of the load-balancer endpoints provided by Calamari: 
-`wss://ws.calamari.seabird.systems`
+You can also access one of the load-balancer endpoints provided by Calamari: `wss://ws.calamari.seabird.systems`
 
 ## Chain ID
 
@@ -72,25 +69,23 @@ Dolphin testnet chain id is `2084`
 
 ## Block Explorer
 
-Block explorers can be thought of as search engines for the blockchain. They allow users to search information such as balances, contracts, and transactions.
+A block explorer is like a search engine for the blockchain. It lets you search for information such as balances, contracts, and transactions.
 
-Subscan is the primary Substrate API block explorer. Subscan is capable of parsing standard or custom modules. For example, this is useful to display information regarding the Staking, Governance, and XCM pallets (or modules). The code is all open-source and can be found in the [Subscan Essentials GitHub repo](https://github.com/subscan-explorer/subscan-essentials).
+Subscan is the main block explorer for the Substrate API. It can handle both standard and custom modules, so you can see information about Staking, Governance, and XCM pallets (or modules), among others. The code is open-source and available on the [Subscan Essentials GitHub repo](https://github.com/subscan-explorer/subscan-essentials).
 
-While not a full-featured block explorer, Polkadot.js Apps is a convenient option especially for users running local development nodes to view events and query transaction hashes. Polkadot.js Apps uses the WebSocket endpoint to interact with the Network. You can easily connect to Moonbeam, Moonriver, or Moonbase Alpha.
+Polkadot.js Apps is another option, especially if you're running local development nodes. It's not a full-featured block explorer, but it lets you view events and query transaction hashes using the WebSocket endpoint. You can easily connect to Moonbeam, Moonriver, or Moonbase Alpha.
 
 ## Faucet
 
-Dolphin faucet is live on our discord channel at: `https://discord.com/channels/795390654628102165/1055864933692219453`
+To use the Dolphin faucet, head to our [Discord channel](https://discord.com/channels/795390654628102165/1055864933692219453).
 
-You must get the attention of the faucet bot in order to receive tokens. To alert the bot simply begin typing the command for the token you want. eg: `/gimme-dol.` Discord will display a small pop-up, prompting for your wallet address.
 
-![gimme-dol](../images/faucet.png)
+To receive tokens from the faucet, you'll need to get the attention of the faucet bot. Start by typing the command for the token you want, such as `/gimme-dol`. Discord will display a small pop-up asking for your wallet address.
 
-Type or paste your wallet address into the address field when prompted, then press enter to trigger the faucet request.
 
-You can request each of the 4 supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) once per utc day. If you request the same token twice in the same day, the faucet bot will just respond with the status of your first request of the day. Feel free to check the status as many times as you like. The faucet will respond with messages that are only visible to you.
+Type or paste your wallet address into the address field, then press enter to trigger the faucet request.
 
-Additionally you can check the status of your address at `https://faucet.dolphin.community/`.
+You can request each of the four supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) once per UTC day. If you request the same token twice in the same day, the faucet bot will only respond with the status of your first request of the day. You can check the status of your address at https://faucet.dolphin.community/.
 
 ## Development Tools
 
