@@ -149,57 +149,63 @@ To transact using fungible tokens, manta-pay provides 4 methods:
 * `publicTransfer(asset, amount, destinationAddress, polkadotSigner, polkadotAddress)`
 Note: The polkadotAddress should already have associated public funds.
 
-### To Private
+### Converting Public Tokens To Private Tokens
 
 This example converts 10 public KMA tokens to 10 private KMA tokens.
 
 ```javascript
-// KMA token
+// Identify the KMA token with an asset ID
 const assetId = new BN("1");
+
+// Define the amount to convert, 10 KMA tokens
 const amount = new BN("10000000000000");
 
-// Sync with most recent ledger state.
+// Synchronize with the latest ledger state
 await privateWallet.initialWalletSync();
 
-// Get private address
+// Get the private address
 const privateAddress = await privateWallet.getPrivateAddress();
 
-// Get private balance of KMA for given private address
+// Get the private balance of KMA tokens for the given private address
 const privateBalance = await privateWallet.getPrivateBalance(assetId);
 
-// Privatize 10 KMA to 10 zkKMA
+// Convert 10 public KMA tokens to 10 private KMA tokens
 await privateWallet.toPrivateSend(assetId, amount, polkadotSigner, polkadotAddress);
 
-// Sync to get latest data after the transaction and check that it was successful.
+// Synchronize again to check if the transaction was successful
 await privateWallet.walletSync();
 
-// The private balance of zkKMA should be incremented by 10 units.
+// Check the updated private balance of KMA tokens
 const newPrivateBalance = await mantaSdk.getPrivateBalance(assetId);
 ```
 
-### Private Transfer
+### Transferring Private Tokens
 
 This example transfers 10 zkKMA to another address.
 
 ```javascript
-// KMA token
+// Identify the KMA token with an asset ID
 const assetId = new BN("1");
+
+// Define the amount to transfer, 10 private KMA tokens
 const amount = new BN("10000000000000");
 
-// Sync with most recent ledger state.
+// Synchronize with the latest ledger state
 await privateWallet.initialWalletSync();
 
-// Get private address
+// Get the private address
 const privateAddress = await privateWallet.getPrivateAddress();
 
-// Private Transfer of 10 zkKMA to another private address
+// Define the recipient private address
 const examplePrivateAddress = "3UG1BBvv7viqwyg1QKsMVarnSPcdiRQ1aL2vnTgwjWYX";
+
+// Transfer 10 private KMA tokens to another private address
 await privateWallet.privateTransferSend(assetId, amount, examplePrivateAddress, polkadotSigner, polkadotAddress);
 
-// Sync to get latest data after transaction and check that it was successful.
+// Synchronize again to check if the transaction was successful
 await privateWallet.walletSync();
 
-// The private balance of zkKMA should decrease by 10 units.
+// Check the updated private balance of KMA tokens
 const newPrivateBalance = await privateWallet.getPrivateBalance(assetId);
 ```
 
@@ -208,51 +214,51 @@ const newPrivateBalance = await privateWallet.getPrivateBalance(assetId);
 This example converts 5 zkKMA to 5 public KMA.
 
 ```javascript
-// KMA token
+// Define the KMA token with asset ID "1".
 const assetId = new BN("1");
 const amount = new BN("5000000000000");
 
-// Sync with most recent ledger state.
+// Sync the private wallet with the latest ledger state.
 await privateWallet.initialWalletSync();
 
-// Get private address
+// Get the private address of the wallet.
 const privateAddress = await privateWallet.getPrivateAddress();
 
-// Get private balance of zkKMA for given private address
+// Check the current private balance of zkKMA for the private address.
 const privateBalance = await privateWallet.getPrivateBalance(assetId);
 
-// Convert 5 zkKMA back to KMA
+// Convert 5 zkKMA to 5 public KMA tokens.
 await privateWallet.toPublicSend(assetId, amount, polkadotSigner, polkadotAddress);
 
-// Sync to get latest data after transaction and check that it was successful.
+// Sync the wallet again to get the latest data after the transaction and verify it was successful.
 await privateWallet.walletSync();
 
-// The private balance of zkKMA should decrease by 5 units.
+// The private balance of zkKMA should now be 5 units less.
 const newPrivateBalance = await privateWallet.getPrivateBalance(assetId);
 ```
 
 ### Manta Utilities
 
-There also exists a `MantaUtilities` class with additional functions. Mainly for interacting publicly with the Manta ecosystem. This example demonstrates these functions. This example assumes the `MantaPrivateWallet` class has already been initialized, as well as `polkadotAddress` and `polkadotSigner`.
+The `MantaUtilities` class provides additional functions for interacting publicly with the Manta ecosystem. This example demonstrates these functions. It assumes that the `MantaPrivateWallet` class has already been initialized, as well as `polkadotAddress` and `polkadotSigner`.
 
 ```javascript
 import { MantaUtilities } from "manta.js";
 
-// Get signer version, signer must be running.
+// Get the version of the signer, it must be running.
 const signerVersion = await MantaUtilities.getSignerVersion();
 
-// KMA token
+// Define the KMA token with asset ID "1".
 const assetId = new BN("1");
 
-// Get public balance of KMA for `polkadotAddress`.
+// Check the current public balance of KMA for the `polkadotAddress`.
 const oldPublicBalance = await MantaUtilities.getPublicBalance(privateWallet.api, assetId, polkadotAddress);
 
-// Public transfer of 5 KMA to `destinationAddress`.
+// Transfer 5 public KMA to another public address.
 const destinationAddress = "dmyhNmYL13N7ZKcVYqBQhvrk5kSfrKZUmrjX9vAaM4846bWKR";
 const amount = new BN("5000000000000000000");
 await MantaUtilities.publicTransfer(privateWallet.api, assetId, amount, destinationAddress, polkadotAddress, polkadotSigner);
 
-// Public balance should now be 5 KMA less that `oldPublicBalance`.
+// The public balance should now be 5 KMA less than the old public balance.
 const newPublicBalance = await MantaUtilities.getPublicBalance(privateWallet.api, assetId, polkadotAddress);
 ```
 
