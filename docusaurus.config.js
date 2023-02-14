@@ -113,6 +113,9 @@ module.exports = {
 					trackingID: 'G-J7YDH8B96W',
 					anonymizeIP: true,
 				  },
+				googleTagManager:{
+					containerId: 'G-J7YDH8B96W',
+				  }
 			},
 		],
 	],
