@@ -72,13 +72,19 @@ global.Request = fetch.Request;
 global.Response = fetch.Response;
 ```
 
-## Initialization
+## Getting Started With Manta.js
+
+`Manta.js` is a library that helps you connect to and interact with the Polkadot network. To get started with Manta.js, you'll need to specify the `Environment` and `Network` you want to connect to.
 
 The `Environment` flag specifies whether to connect to a local node (`ws://127.0.0.1:9944`), or the use an actual node from the specified network.
 
 The `Network` flag specifies which network to connect to, either `Dolphin`, `Calamari` or `Manta`.
 
-To switch between environments and networks, a new `MantaPrivateWallet` instance should be created.
+## Setting Up MantaPrivateWallet
+
+To connect to a specific environment and network, you'll need to create a new instance of the `MantaPrivateWallet` class. To switch between environments and networks, simply create a new instance.
+
+Here's an example of how to create a `MantaPrivateWallet` instance for the production environment and the Calamari network:
 
 ```javascript
 import { MantaPrivateWallet, Environment, Network } from 'manta.js';
@@ -94,6 +100,8 @@ const privateWalletConfig: PrivateWalletConfig = {
 const privateWallet = await MantaPrivateWallet.init(privateWalletConfig);
 ```
 
+## Configuring The Wallet
+
 `PrivateWalletConfig` has several optional arguments:
 
 - `loggingEnabled`, whether or not non-error logging to console should occur, set by default to `false`.
@@ -102,13 +110,18 @@ const privateWallet = await MantaPrivateWallet.init(privateWalletConfig);
 - `pullCallback`, callback function after a pull has occured, set by default to `null`.
 - `errorCallback`, callback function after an error has occured, set by default to `null`.
 
-## Transacting
+## Making A Transaction
 
-After initialization of the `MantaPrivateWallet` class, `initialWalletSync()` must be called before any transactions are made.
+Before you can make transactions, you'll need to call the `initialWalletSync()` method on your `MantaPrivateWallet` instance. This will sync your wallet with the latest data from the ledger.
 
-After every single transaction, to get the latest data from the ledger, `walletSync()` must be called.
+After every single transaction, you'll need to call the `walletSync()` method to get the latest data from the ledger.
 
-A PolkadotJS `Signer` and public PolkadotJS `Address` should be provided to every function that requires transacting. Below is an example of how to get these values, this example assumes that the Polkadot JS extension is installed and contains an existing account.
+To make transactions, you'll need to provide a `Signer` and a public Address from `PolkadotJS`. 
+
+Following is an example that shows how to get these values, assuming that the `PolkadotJS` extension is installed and contains an existing account:
+
+
+
 
 ### Polkadot JS Transaction Parameters
 
