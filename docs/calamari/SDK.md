@@ -1,13 +1,15 @@
 # 🛠 Calamari SDK
 
-This package implements a Javascript SDK for connecting with the Manta Network. API end points to connect to Calamari:
+The Calamari SDK is a JavaScript library that provides a connection to the Manta Network. The API endpoints you can use to connect to Calamari are as follows:
 
 ## Full Nodes
 
-- provided by Manta: `wss://ws.calamari.systems`
-- provided by third party: `wss://calamari.api.onfinality.io`
+- Manta-provided: wss://ws.calamari.systems
+- Third-party provided: wss://calamari.api.onfinality.io
 
 ## Asset API (Javascript)
+
+The following is a list of assets and the API call to retrieve information about each asset:
 
 * Token: `api.query.assets.account(asset_id, AccountId)`
 - KMA: `api.query.system.account(AccountId)`
@@ -21,24 +23,33 @@ This package implements a Javascript SDK for connecting with the Manta Network. 
 
 ## Installation
 
+To install the SDK, run the following command:
+
 ```sh
 yarn install manta.js
 ```
 
 ### Local Development
 
-1. `git clone https://github.com/Manta-Network/sdk.git`
-2. `cd sdk/manta-js/package`
-3. `yarn`
-4. `yarn build` for use in browser or `yarn build-node` for use in node.js
-5. Add `"manta.js": "file:/<LOCAL PATH OF SDK/manta-js/package>` to your project's package.json
-6. `yarn upgrade manta.js` in your project's directory
+If you want to develop locally with the SDK, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/Manta-Network/sdk.git`
+2. Change to the package directory: `cd sdk/manta-js/package`
+3. Install dependencies: `yarn`
+4. Build the package for either a browser or node.js environment:
+    - For a browser: `yarn build`
+    - For node.js: `yarn build-node`
+5. Add the following line to your project's `package.json` file, replacing `<LOCAL PATH OF SDK>` with the local path to the SDK:
+```json
+"manta.js": "file:/<LOCAL PATH OF SDK>/manta-js/package"
+```
+6. Upgrade the SDK in your project directory: `yarn upgrade manta.js`
 
 # Usage
 
 All methods are called through the `MantaPrivateWallet` class.
 
-[manta-signer](#signer) must be installed and running.
+Manta-signer must be installed and running. Refer to the [manta-signer](#signer) section for more details.
 
 > If running `manta-signer` on dev mode, you should use the following features: `features=unsafe-disable-cors,disable-restart`.
 
