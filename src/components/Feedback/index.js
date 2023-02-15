@@ -62,7 +62,7 @@ const DocsRating = ({ label }) => {
                         borderRadius: 16,
                     }}
                     className={styles.good}
-                    fill={isLight || !unVoted ? lightColor : darkColor}
+                    fill={isLight ? lightColor : darkColor}
                     onClick={() => giveFeedback(RatingEnum.GOOD)}
                 />
                 <Normal
@@ -72,7 +72,7 @@ const DocsRating = ({ label }) => {
                         borderRadius: 16,
                     }}
                     className={styles.normal}
-                    fill={isLight || !unVoted ? lightColor : darkColor}
+                    fill={isLight ? lightColor : darkColor}
                     onClick={() => giveFeedback(RatingEnum.NORMAL)}
                 />
                 <Bad
@@ -82,7 +82,7 @@ const DocsRating = ({ label }) => {
                         borderRadius: 16,
                     }}
                     className={styles.bad}
-                    fill={isLight || !unVoted ? lightColor : darkColor}
+                    fill={isLight ? lightColor : darkColor}
                     onClick={() => giveFeedback(RatingEnum.BAD)}
                 />
             </div>
