@@ -55,44 +55,36 @@ const DocsRating = ({ label }) => {
                 >
                     {unVoted ? helpfulString : "Thanks for letting us know!"}
                 </div>
-                {unVoted || vote === RatingEnum.GOOD ? (
-                    <Good
-                        style={{
-                            cursor: unVoted ? "pointer" : "unset",
-                            backgroundColor:
-                                vote === RatingEnum.GOOD ? "#97E910" : "",
-                            borderRadius: 16,
-                        }}
-                        fill={isLight || !unVoted ? lightColor : darkColor}
-                        onClick={() => unVoted && giveFeedback(RatingEnum.GOOD)}
-                    />
-                ) : null}
-                {unVoted || vote === RatingEnum.NORMAL ? (
-                    <Normal
-                        style={{
-                            cursor: unVoted ? "pointer" : "unset",
-                            backgroundColor:
-                                vote === RatingEnum.NORMAL ? "#FFE606" : "",
-                            borderRadius: 16,
-                        }}
-                        fill={isLight || !unVoted ? lightColor : darkColor}
-                        onClick={() =>
-                            unVoted && giveFeedback(RatingEnum.NORMAL)
-                        }
-                    />
-                ) : null}
-                {unVoted || vote === RatingEnum.BAD ? (
-                    <Bad
-                        style={{
-                            cursor: unVoted ? "pointer" : "unset",
-                            backgroundColor:
-                                vote === RatingEnum.BAD ? "#FF431A" : "",
-                            borderRadius: 16,
-                        }}
-                        fill={isLight || !unVoted ? lightColor : darkColor}
-                        onClick={() => unVoted && giveFeedback(RatingEnum.BAD)}
-                    />
-                ) : null}
+                <Good
+                    style={{
+                        backgroundColor:
+                            vote === RatingEnum.GOOD ? "#97E910" : "",
+                        borderRadius: 16,
+                    }}
+                    className={styles.good}
+                    fill={isLight || !unVoted ? lightColor : darkColor}
+                    onClick={() => giveFeedback(RatingEnum.GOOD)}
+                />
+                <Normal
+                    style={{
+                        backgroundColor:
+                            vote === RatingEnum.NORMAL ? "#FFE606" : "",
+                        borderRadius: 16,
+                    }}
+                    className={styles.normal}
+                    fill={isLight || !unVoted ? lightColor : darkColor}
+                    onClick={() => giveFeedback(RatingEnum.NORMAL)}
+                />
+                <Bad
+                    style={{
+                        backgroundColor:
+                            vote === RatingEnum.BAD ? "#FF431A" : "",
+                        borderRadius: 16,
+                    }}
+                    className={styles.bad}
+                    fill={isLight || !unVoted ? lightColor : darkColor}
+                    onClick={() => giveFeedback(RatingEnum.BAD)}
+                />
             </div>
         </div>
     );
