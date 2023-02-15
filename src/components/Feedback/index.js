@@ -39,7 +39,8 @@ const DocsRating = ({ label }) => {
         <div className={styles.content}>
             <div
                 style={{
-                    backgroundColor: isDark ? "rgba(255, 255, 255, 0.05)" : "",
+                    backgroundColor:
+                        isDark && isTop ? "rgba(255, 255, 255, 0.05)" : null,
                 }}
                 className={clsx(
                     styles.innerContent,
@@ -49,9 +50,7 @@ const DocsRating = ({ label }) => {
                 <div
                     className={styles.font}
                     style={{
-                        color: isDark
-                            ? "rgba(255, 255, 255, 0.6)"
-                            : "rgba(0, 0, 0, 0.6)",
+                        color: isDark ? darkColor : lightColor,
                     }}
                 >
                     {unVoted ? helpfulString : "Thanks for letting us know!"}
