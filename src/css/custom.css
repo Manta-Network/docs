@@ -165,7 +165,6 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
 }
 
 a{
-  font-family: 'Red Hat Text SemiBold';
   color: var(--ifm-link-color);
 }
 

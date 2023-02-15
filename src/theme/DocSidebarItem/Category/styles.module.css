@@ -4,3 +4,6 @@
 .gap:first-child{
     margin-top: 24px;
 }
+.fontSemiBold{
+    font-family: 'Red Hat Text SemiBold';
+}
