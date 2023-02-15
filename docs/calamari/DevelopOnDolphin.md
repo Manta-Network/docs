@@ -1,7 +1,7 @@
 # 🛠 Develop on Dolphin
 
 ## Introduction
-This guide provides step-by-step instructions to set up a Calamari development node to test your applications on the public testnet named Dolphin. A Calamari development node acts as your personal development environment to build and test applications on the Calamari Network.
+This guide provides step-by-step instructions to connect to a Dolphin node to test your applications on the public testnet named Dolphin. Dolphin is the public testnet of Calamari, which in turn is Manta Network's canary. A Dolphin node acts as your personal development environment to build and test applications for the Calamari Network.
 
 ## Download Binary File
 
