@@ -8,7 +8,25 @@
 /* You can override the default Infima variables here. */
 @import url('https://rsms.me/inter/inter.css');
 
+@font-face {
+  font-family: "Red Hat Text";
+  src: url('/static/RedHatText-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: "Red Hat Text SemiBold";
+  src: url('/static/RedHatText-SemiBold.woff') format('woff');
+}
+@font-face {
+  font-family: "Red Hat Text Bold";
+  src: url('/static/RedHatText-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: "Red Hat Mono";
+  src: url('/static/RedHatMono-Medium.woff') format('woff');
+}
+
 :root {
+  --ifm-font-family-base: "Red Hat Text";
   --ifm-color-primary: #0396F9;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
@@ -17,7 +35,7 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
-  font-family: 'Red Hat Text';
+  --ifm-link-color:#24c6bc;
 }
 
 .docusaurus-highlight-code-line {
@@ -138,6 +156,30 @@ html[data-theme='dark'] .landing-container > a:hover {
   transform: translateY(-50%);
 }
 
+html[data-theme='dark'] .dropdown > .navbar__link:after {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .menu__link--active{
   color: #24c6bc;
+}
+
+a{
+  color: #24c6bc;
+}
+
+a:hover{
+  color: #24c6bc;
+}
+
+.menu__list-item:not(:first-child){
+  margin-top: 8px;
+}
+
+h1{
+  font-family: 'Red Hat Text Bold';
+}
+
+h2,h3,h4,h5,h6{
+  font-family: 'Red Hat Text SemiBold';
 }
