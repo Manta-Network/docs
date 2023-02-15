@@ -161,15 +161,15 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
 }
 
 .menu__link--active{
-  color: #24c6bc;
+  color: var(--ifm-link-color);
 }
 
 a{
-  color: #24c6bc;
+  color: var(--ifm-link-color);
 }
 
 a:hover{
-  color: #24c6bc;
+  color: var(--ifm-link-color);
 }
 
 .menu__list-item:not(:first-child){
