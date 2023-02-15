@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.innerContent > img:not(:last-child) {
+.innerContent > svg:not(:last-child) {
     margin-right: 8px;
 }
 
