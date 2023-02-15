@@ -1,4 +1,4 @@
-# Partnership
+# Partnerships
 
 A collection of projects within the Calamari network.
 
