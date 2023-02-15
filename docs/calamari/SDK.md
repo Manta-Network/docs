@@ -1,11 +1,33 @@
 # 🛠 Calamari SDK
 
-The Calamari SDK is a JavaScript library that provides a connection to the Manta Network. The API endpoints you can use to connect to Calamari are as follows:
+The Calamari SDK is a JavaScript library that provides a connection to the Manta Network and its pallets such as MantaPay. MantaPay is a substrate-based pallet on Manta Network that allows users to send and receive fungible and non-fungible assets using MantaPay’s private wallet SDK. The SDK provides an easy-to-use interface for interacting with MantaPay's smart contracts and APIs.
 
-## Full Nodes
+It is recommended to use the MantaPay SDK instead of the PolkadotJS API directly. Using the SDK provides many benefits such as:
 
-- Manta-provided: wss://ws.calamari.systems
-- Third-party provided: wss://calamari.api.onfinality.io
+* Convenient and easy-to-use interface.
+* Secure interactions with the blockchain.
+* Built-in support for interacting with testnets.
+* Built-in support for interacting with Manta's zero knowledge proof generation tool.
+* Access to wallet features such as asset conversion, balance checks, and more.
+
+To use the SDK, you will need to meet the following requirements:
+
+* Have Manta Network's private wallet and signer (Manta-Signer) set up and running.
+* Have access to a public wallet (such as the PolkadotJS or Metamask extension for web browsers).
+* Have a node or browser version with the necessary dependencies.
+* Have a Manta Network account.
+
+## Network Endpoints
+
+The API endpoints you can use to connect to production Calamari are as follows:
+
+* Manta-provided: `wss://ws.calamari.systems`
+* Third-party provided: `wss://calamari.api.onfinality.io`
+
+If you need a testnet environment you can connect to Manta Network's public testnet called Dolphin:
+
+* WSS - `wss://ws.calamari.seabird.systems`
+* HTTPS - `https://rpc.calamari.seabird.systems`
 
 ## Asset API (Javascript)
 
@@ -29,7 +51,7 @@ To install the SDK, run the following command:
 yarn install manta.js
 ```
 
-### Local Development
+## Local Development
 
 If you want to develop locally with the SDK, follow these steps:
 
@@ -49,9 +71,7 @@ If you want to develop locally with the SDK, follow these steps:
 
 All methods are called through the `MantaPrivateWallet` class.
 
-Manta-signer must be installed and running. Refer to the [manta-signer](#signer) section for more details.
-
-> If running `manta-signer` on dev mode, you should use the following features: `features=unsafe-disable-cors,disable-restart`.
+Manta-signer must be installed and running. Refer to the [manta-signer section](#signer) for more details. If running `manta-signer` on dev mode, you should use the following features: `features=unsafe-disable-cors,disable-restart`.
 
 Refer to [sdk/manta-js/examples](https://github.com/Manta-Network/sdk/tree/main/manta-js/examples/asset-webpack-ts#mantajs-examples) for more thorough examples, and how to run them.
 
@@ -76,11 +96,11 @@ global.Response = fetch.Response;
 
 `Manta.js` is a library that helps you connect to and interact with the Polkadot network. To get started with Manta.js, you'll need to specify the `Environment` and `Network` you want to connect to.
 
-The `Environment` flag specifies whether to connect to a local node (`ws://127.0.0.1:9944`), or the use an actual node from the specified network.
+The Environment flag specifies whether to connect to a local node (`ws://127.0.0.1:9944`), or the use an actual node from the specified network.
 
 The `Network` flag specifies which network to connect to, either `Dolphin`, `Calamari` or `Manta`.
 
-## Setting Up MantaPrivateWallet
+### Setting Up `MantaPrivateWallet`
 
 To connect to a specific environment and network, you'll need to create a new instance of the `MantaPrivateWallet` class. To switch between environments and networks, simply create a new instance.
 
@@ -100,7 +120,7 @@ const privateWalletConfig: PrivateWalletConfig = {
 const privateWallet = await MantaPrivateWallet.init(privateWalletConfig);
 ```
 
-## Configuring The Wallet
+### Configuring The Wallet
 
 `PrivateWalletConfig` has several optional arguments:
 
