@@ -1,4 +1,7 @@
 .gap{
+    font-family: 'Red Hat Text SemiBold';
+    color: black;
+    font-size: 16px;
     margin: 32px 0 16px 0;
 }
 .gap:first-child{

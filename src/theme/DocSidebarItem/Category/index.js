@@ -164,7 +164,7 @@ export default function DocSidebarItemCategory({
             )}
         >
             {/* {level===1&&<div>{titleMap[currentLocale][`category${index}`]}</div>} */}
-            <div className={styles.gap} />
+            {level === 1 && <div className={styles.gap} />}
             <div
                 className={clsx("menu__list-item-collapsible", {
                     "menu__list-item-collapsible--active": isCurrentPage,
