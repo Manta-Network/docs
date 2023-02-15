@@ -39,9 +39,7 @@ const DocsRating = ({ label }) => {
                                 : "rgba(0, 0, 0, 0.6)",
                     }}
                 >
-                    {unVoted
-                        ? "Thanks for letting us know!"
-                        : helpfulString}
+                    {unVoted ? helpfulString : "Thanks for letting us know!"}
                 </div>
                 {unVoted || vote === RatingEnum.GOOD ? (
                     <img
