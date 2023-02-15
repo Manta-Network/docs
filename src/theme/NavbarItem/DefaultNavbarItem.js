@@ -1,6 +1,8 @@
-import React from "react";
-import clsx from "clsx";
 import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
+import clsx from "clsx";
+import React from "react";
+import styles from './styles.module.css';
+
 function DefaultNavbarItemDesktop({
     className,
     isDropdownItem = false,
@@ -8,17 +10,10 @@ function DefaultNavbarItemDesktop({
 }) {
     const element = (
         <NavbarNavLink
-            style={{
-                fontFamily: "Red Hat Text",
-                fontStyle: "normal",
-                fontWeight: 400,
-                fontSize: "16px",
-                lineHeight: "21px",
-                textAlign: 'center',
-            }}
             className={clsx(
                 isDropdownItem ? "dropdown__link" : "navbar__item navbar__link",
-                className
+                className,
+                styles.navLinkFont
             )}
             isDropdownLink={isDropdownItem}
             {...props}
