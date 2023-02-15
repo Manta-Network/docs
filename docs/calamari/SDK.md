@@ -1,5 +1,7 @@
 # 🛠 Calamari SDK
 
+## Introduction
+
 The Calamari SDK is a JavaScript library that provides a connection to the Manta Network and its pallets such as MantaPay. MantaPay is a substrate-based pallet on Manta Network that allows users to send and receive fungible and non-fungible assets using MantaPay’s private wallet SDK. The SDK provides an easy-to-use interface for interacting with MantaPay's smart contracts and APIs.
 
 It is recommended to use the MantaPay SDK instead of the PolkadotJS API directly. Using the SDK provides many benefits such as:
