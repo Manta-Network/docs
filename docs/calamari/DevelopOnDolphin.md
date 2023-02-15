@@ -1,13 +1,36 @@
 # 🛠 Develop on Dolphin
 
 ## Introduction
-This guide provides step-by-step instructions to set up a Calamari development node to test your applications on the public testnet named Dolphin. A Calamari development node acts as your personal development environment to build and test applications on the Calamari Network. It eliminates the need for a relay chain and creates blocks automatically when transactions are received.
+This guide provides step-by-step instructions to set up a Calamari development node to test your applications on the public testnet named Dolphin. A Calamari development node acts as your personal development environment to build and test applications on the Calamari Network.
 
 ## Download Binary File
 
 To download an official release of Calamari, visit our [release page](https://github.com/Manta-Network/Manta/releases).
 
+
+## Connecting With Polkadot-JS
+
+For development purposes, it is recommended to use the public Dolphin testnet.
+
+1. Open a browser to `https://polkadot.js.org/apps/#/explorer`. This opens Polkadot.js Apps, which connects to Polkadot MainNet by default.
+![default node](../images/default-node.png)
+2. In the top-left corner, open the menu and navigate to the Development sub-menu.
+3. Enter `wss://ws.calamari.seabird.systems` under custom endpoint.
+4. Click the `Switch` button to connect to your Calamari development node.
+![connect local](TODO: add Dolphin endpoint)
+
+With Polkadot.js Apps connected, your Calamari development node will be ready to receive transactions and produce blocks.
+![local node](TODO: add Dolphin endpoint)
+
+## Network Endpoints
+
+List of the load-balancer endpoints provided by Calamari:
+* WSS - `wss://ws.calamari.seabird.systems`
+* HTTPS - `https://rpc.calamari.seabird.systems`
+
 ## Build Binary File
+
+Building your own binary is especially useful if you're not working on a Linux as we don't distribute binaries for Mac/Windows. Furthermore should you need to customize something in your testing environment related to the node, you can rebuild it locally:
 
 1. Clone the specific tag of the Calamari repository from this URL: `https://github.com/Manta-Network/Manta/`
 
@@ -38,30 +61,9 @@ or:
 cargo run --release -- --chain=calamari-localdev --alice --tmp
 ```
 
-INote: For a complete simulation, you can run a relay chain with a full parachain using tools like [zombienet or polkadot-launch](#Development-Tools). In that case you need to run the node with `--chain=calamari-local` 
+Note: `calamari-localdev` eliminates the need for a relay chain and creates blocks automatically when transactions are received.
 
-## Connecting With Polkadot-JS
-
-The development node is based on Substrate and can be interacted with using standard Substrate tools. The default RPC endpoints are:
-
-HTTP - `http://127.0.0.1:9933`
-WS - `ws://127.0.0.1:9944`
-
-To connect to your development node with Polkadot.js Apps, follow these steps:
-
-1. Open a browser to `https://polkadot.js.org/apps/#/explorer`. This opens Polkadot.js Apps, which connects to Polkadot MainNet by default.
-![default node](../images/default-node.png)
-2. In the top-left corner, open the menu and navigate to the Development sub-menu.
-3. Click on `Local Node`, or enter `ws://127.0.0.1:9944` under custom endpoint.
-4. Click the `Switch` button to connect to your Calamari development node.
-![connect local](../images/connect-local.png)
-
-With Polkadot.js Apps connected, your Calamari development node will be ready to receive transactions and produce blocks.
-![local node](../images/local-node.png)
-
-## Network Endpoints
-
-You can also access one of the load-balancer endpoints provided by Calamari: `wss://ws.calamari.seabird.systems`
+Note: For a complete simulation, you can run a relay chain with a full parachain using tools like [zombienet or polkadot-launch](#Development-Tools). In that case you need to run the node with `--chain=calamari-local`
 
 ## Chain ID
 
@@ -79,9 +81,7 @@ Polkadot.js Apps is another option, especially if you're running local developme
 
 To use the Dolphin faucet, head to our [Discord channel](https://discord.com/channels/795390654628102165/1055864933692219453).
 
-
 To receive tokens from the faucet, you'll need to get the attention of the faucet bot. Start by typing the command for the token you want, such as `/gimme-dol`. Discord will display a small pop-up asking for your wallet address.
-
 
 Type or paste your wallet address into the address field, then press enter to trigger the faucet request.
 
@@ -89,6 +89,6 @@ You can request each of the four supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) 
 
 ## Development Tools
 
-* SDK: A set of functionality which connects your public address (polkadot-js), your private addresses (signer) and manages the creation of the payloads required for MantaPay extrinsics. In order to use the Calamari SDK please refer to [SDK](SDK.md) section.
-* Signer: The signer is a desktop application which generates zero knowledge proofs and manages the private keys of your UTXOs. The signer is open sourced and you find instruction to set it up locally at [manta-signer](https://github.com/Manta-Network/manta-signer).
+* `SDK`: A set of functionality which connects your public address (polkadot-js), your private addresses (`manta-signer`) and manages the creation of the payloads required for `MantaPay` extrinsics. In order to use the Calamari SDK please refer to [SDK](SDK.md) section.
+* `Manta-Signer`: The signer is a desktop application which generates zero knowledge proofs and manages the private keys of your UTXOs. The signer is open sourced and you find instruction to set it up locally at [manta-signer](https://github.com/Manta-Network/manta-signer).
 * [zombienet](https://github.com/paritytech/zombienet) or the deprecated [polkadot-launch](https://github.com/paritytech/polkadot-launch) tool can help you set up a full relaychain + parachain network.
