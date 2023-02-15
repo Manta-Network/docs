@@ -1,9 +1,12 @@
-# 💸 Cross Chain Transfers with xTokens
+# 💸 Send Cross-Chain Transfers From Calamari
 
 ## Introduction
-Cross-chain communication can be a challenging task, and developers often rely on wrapper functions and pallets to leverage XCM (Cross-Consensus Messages) features on Polkadot/Kusama. One such pallet is the x-tokens pallet, which provides different methods to transfer fungible assets via XCM.
 
-This guide explains how to use the x-tokens pallet to transfer tokens from one substrate-based blockchain to another. It is important to note that sending incorrect XCM messages can result in the loss of funds, and it is essential to test XCM features on a TestNet before moving to a production environment.
+Cross-chain communication can be a challenging task, and developers often rely on wrapper functions and pallets to leverage XCM (Cross-Consensus Messages) features on Polkadot/Kusama. One such pallet is the `x-tokens` pallet, which provides different methods to transfer fungible assets via XCM.
+
+Until an XCM-SDK is available to abstract this process, third parties who want to integrate XCM transfers from Calamari in their dApps need to use Polkadot.js API to connect to the Calamari backend and do these transfers by xTokens. This guide explains how to use the x-tokens pallet to transfer tokens from one substrate-based blockchain to another. 
+
+It is important to note that sending incorrect XCM messages can result in the loss of funds, and it is essential to test XCM features on a TestNet before moving to a production environment.
 
 ## Relevant XCM Definitions
 
