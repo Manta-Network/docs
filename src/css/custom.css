@@ -172,6 +172,13 @@ a:hover{
   color: var(--ifm-link-color);
 }
 
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+    color: var(--ifm-link-color) ;
+}
+
 .menu__list-item:not(:first-child){
   margin-top: 8px;
 }
