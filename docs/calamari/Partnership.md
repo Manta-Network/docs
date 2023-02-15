@@ -1,12 +1,10 @@
-# Partnerships
+# Partnership
 
 A collection of projects within the Calamari network.
 
 ## **Infrastructure**
 
 ### MantaPay
-
-Website(link TBD)
 
 MantaPay is an on-chain, multi-asset shielded pool that enables private transacting using zkSNARK. It leverages a BYOT (Bring your own token) model, allowing users to privatize and transact with different cryptocurrencies. 
 
@@ -17,8 +15,6 @@ MantaPay is an on-chain, multi-asset shielded pool that enables private transact
 Subscan is a high-precision Web3 explorer that is used to browse blockchain data from Substrate-based chains including Manta Network.
 
 ### XCM Bridge
-
-Website(link TBD)
 
 XCM (Cross-Consensus Message Format (XCM) aims to be a language to communicate ideas between consensus systems.
 
@@ -122,13 +118,13 @@ StakerSpace is a independent secure-validator.
 
 Pathrock Network is a secure Non-Custodial Staking for PoS Blockchain Projects.
 
-**Let's Node**
+### **Let's Node**
 
 [Twitter](https://twitter.com/Lets_node) 
 
 Staking providers, educational and informational channel about nodes, testnets and technical assignments.
 
-**CertHum**
+### **CertHum**
 
 [Twitter](https://twitter.com/CertHum) | [Website](https://www.certhum.com/)
 

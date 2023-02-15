@@ -84,7 +84,7 @@ Web3Go is an all-in-one open data analytics and service platform where everyone 
 
 [Twitter](https://twitter.com/alliancedao) | [Website](https://alliance.xyz/apply)
 
-AllianceDao is a web3 accelerator and founder community.
+AllianceDao is the leading Web3 accelerator and founder community.
 
 ### Longhash Accelerator
 
@@ -98,7 +98,11 @@ Longhash is a web3 Venture Fund & Accelerator, building with founders since 2018
 
 Berkeley Blockchain Accelerator is a joint venture by three premier organizations on the UC Berkeley campus – Berkeley Engineering, the Berkeley Haas School of Business and Blockchain at Berkeley.
 
-登月工坊
+### Moonshot Commons
+
+[Twitter](https://twitter.com/buildmoonshot?s=20&t=_PGgylBWN8JMlz9tIAvCCQ) | [Website](https://moonshotcommons.com/)
+
+Based in Hong Kong, Singapore, and New York, Moonshot Commons is a global builder community for Gen-Z engineers in Web 3.
 
 ## **Development Awards**
 
