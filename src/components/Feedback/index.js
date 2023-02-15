@@ -3,6 +3,8 @@ import { useColorMode } from "@docusaurus/theme-common";
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 
+const RatingEnum = { GOOD: 1, NORMAL: 0, BAD: -1 };
+
 const DocsRating = ({ label }) => {
     const { colorMode, setColorMode } = useColorMode();
     const helpfulString =
@@ -11,9 +13,10 @@ const DocsRating = ({ label }) => {
         return null;
     }
     const [vote, setVote] = useState(undefined);
+    const unVoted = vote === undefined;
     const giveFeedback = (value) => {
         if (window.gtag) {
-            window.gtag("send", {
+            window.gtag("event", "feedback_event", {
                 hitType: "event",
                 eventCategory: "button",
                 eventAction: "feedback",
@@ -36,42 +39,47 @@ const DocsRating = ({ label }) => {
                                 : "rgba(0, 0, 0, 0.6)",
                     }}
                 >
-                    {vote !== undefined
+                    {unVoted
                         ? "Thanks for letting us know!"
                         : helpfulString}
                 </div>
-                {vote === undefined || vote === 1 ? (
+                {unVoted || vote === RatingEnum.GOOD ? (
                     <img
                         style={{
-                            cursor: vote === undefined ? "pointer" : "unset",
-                            backgroundColor: "#97E910",
+                            cursor: unVoted ? "pointer" : "unset",
+                            backgroundColor:
+                                vote === RatingEnum.GOOD ? "#97E910" : "",
                             borderRadius: 16,
                         }}
-                        onClick={() => !vote && giveFeedback(1)}
+                        onClick={() => !vote && giveFeedback(RatingEnum.GOOD)}
                         height={16}
                         src="/img/face-smile-regular.svg"
                     />
                 ) : null}
-                {vote === undefined || vote === 0 ? (
+                {unVoted || vote === RatingEnum.NORMAL ? (
                     <img
                         style={{
-                            cursor: vote === undefined ? "pointer" : "unset",
-                            backgroundColor: "#FFE606",
+                            cursor: unVoted ? "pointer" : "unset",
+                            backgroundColor:
+                                vote === RatingEnum.NORMAL ? "#FFE606" : "",
                             borderRadius: 16,
                         }}
-                        onClick={() => !vote && giveFeedback(0)}
+                        onClick={() =>
+                            unVoted && giveFeedback(RatingEnum.NORMAL)
+                        }
                         height={16}
                         src="/img/face-meh-regular.svg"
                     />
                 ) : null}
-                {vote === undefined || vote === -1 ? (
+                {unVoted || vote === RatingEnum.BAD ? (
                     <img
                         style={{
-                            cursor: vote === undefined ? "pointer" : "unset",
-                            backgroundColor: "#FF431A",
+                            cursor: unVoted ? "pointer" : "unset",
+                            backgroundColor:
+                                vote === RatingEnum.BAD ? "#FF431A" : "",
                             borderRadius: 16,
                         }}
-                        onClick={() => !vote && giveFeedback(-1)}
+                        onClick={() => unVoted && giveFeedback(RatingEnum.BAD)}
                         height={16}
                         src="/img/face-frown-regular.svg"
                     />
