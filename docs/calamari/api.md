@@ -1,4 +1,4 @@
-# 🛠  Calamari API
+# 🛠  TODO: Calamari API
 
 API end points to connect to Calamari:
 

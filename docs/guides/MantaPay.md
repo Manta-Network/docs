@@ -1,4 +1,4 @@
-# 🐬 Try MantaPay on Dolphin Testnet
+# 🐬 TODO: MantaPay
 
 [The Dolphin zkTransact page](https://app.manta.network/dolphin/transact) allows users to privatize public assets to private or
 "zk" assets, transfer zk assets, and convert zk assets back to public assets.
@@ -272,7 +272,7 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 5. How does private payment work?
 
-   [Find out more here.](../learn/PrivatePayment.md)
+   [Find out more here.](../learn/PrivatePayment)
 
 6. How do I find my Calamari address on polkadot.js?
 
