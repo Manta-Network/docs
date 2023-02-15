@@ -13,14 +13,11 @@ To download an official release of Calamari, visit our [release page](https://gi
 For development purposes, it is recommended to use the public Dolphin testnet.
 
 1. Open a browser to `https://polkadot.js.org/apps/#/explorer`. This opens Polkadot.js Apps, which connects to Polkadot MainNet by default.
-![default node](../images/default-node.png)
 2. In the top-left corner, open the menu and navigate to the Development sub-menu.
 3. Enter `wss://ws.calamari.seabird.systems` under custom endpoint.
 4. Click the `Switch` button to connect to your Calamari development node.
-![connect local](TODO: add Dolphin endpoint)
 
 With Polkadot.js Apps connected, your Calamari development node will be ready to receive transactions and produce blocks.
-![local node](TODO: add Dolphin endpoint)
 
 ## Network Endpoints
 
