@@ -1,17 +1,27 @@
 .content {
     display: flex;
 }
+
 .innerContent {
     display: flex;
     margin: auto;
     align-items: center;
 }
-.innerContent > img {
+
+.innerContent > img:not(:last-child) {
     margin-right: 8px;
 }
+
+.topContainer {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 59px;
+    padding: 5px 12px;
+    margin-top: 4px;
+}
+
 .font {
     margin-right: 8px;
-    font-family: 'Red Hat Text';
+    font-family: "Red Hat Text";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;

@@ -1,5 +1,6 @@
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 import { useColorMode } from "@docusaurus/theme-common";
+import clsx from "clsx";
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 
@@ -7,8 +8,8 @@ const RatingEnum = { GOOD: 1, NORMAL: 0, BAD: -1 };
 
 const DocsRating = ({ label }) => {
     const { colorMode, setColorMode } = useColorMode();
-    const helpfulString =
-        label === "top" ? "Helpful" : "Was this page helpful?";
+    const isTop = label === "top";
+    const helpfulString = isTop ? "Helpful" : "Was this page helpful?";
     if (!ExecutionEnvironment.canUseDOM) {
         return null;
     }
@@ -29,7 +30,12 @@ const DocsRating = ({ label }) => {
 
     return (
         <div className={styles.content}>
-            <div className={styles.innerContent}>
+            <div
+                className={clsx(
+                    styles.innerContent,
+                    isTop ? styles.topContainer : null
+                )}
+            >
                 <div
                     className={styles.font}
                     style={{
@@ -49,7 +55,7 @@ const DocsRating = ({ label }) => {
                                 vote === RatingEnum.GOOD ? "#97E910" : "",
                             borderRadius: 16,
                         }}
-                        onClick={() => !vote && giveFeedback(RatingEnum.GOOD)}
+                        onClick={() => unVoted && giveFeedback(RatingEnum.GOOD)}
                         height={16}
                         src="/img/face-smile-regular.svg"
                     />
