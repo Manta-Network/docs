@@ -137,3 +137,7 @@ html[data-theme='dark'] .landing-container > a:hover {
   top: 0px;
   transform: translateY(-50%);
 }
+
+.menu__link--active{
+  color: #24c6bc;
+}
