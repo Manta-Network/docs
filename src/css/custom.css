@@ -179,6 +179,26 @@ a:hover{
     color: var(--ifm-link-color) ;
 }
 
+/* search bar */
+.aa-Autocomplete,
+.aa-DetachedFormContainer,
+.aa-Panel,
+.aa-DetachedSearchButtonIcon,
+.aa-Input,
+.aa-Label svg,
+.aa-LoadingIndicator svg {
+    color: var(--ifm-link-color) !important;
+}
+
+.aa-DetachedSearchButton{
+    color: var(--ifm-link-color) !important;
+
+}
+.aa-InputWrapper>input::placeholder{
+    color: var(--ifm-link-color) !important;
+
+}
+
 .menu__list-item:not(:first-child){
   margin-top: 8px;
 }
