@@ -20,22 +20,6 @@ import clsx from "clsx";
 import React, { useEffect, useMemo } from "react";
 import styles from "./styles.module.css";
 
-// TODO 首级标题
-const titleMap = {
-    en: {
-        category1: "Into Manta",
-        category2: "Into Calamari",
-        category3: "Product Guides",
-        category4: "Developers",
-    },
-    cn: {
-        category1: "Into Manta",
-        category2: "Into Calamari",
-        category3: "Product Guides",
-        category4: "Developers",
-    },
-};
-
 // If we navigate to a category and it becomes active, it should automatically
 // expand itself
 function useAutoExpandActiveCategory({ isActive, collapsed, updateCollapsed }) {
@@ -163,19 +147,22 @@ export default function DocSidebarItemCategory({
                 className
             )}
         >
-            {/* {level===1&&<div>{titleMap[currentLocale][`category${index}`]}</div>} */}
-            <div className={styles.gap} />
+            {level === 1 && <div className={styles.gap} />}
             <div
                 className={clsx("menu__list-item-collapsible", {
                     "menu__list-item-collapsible--active": isCurrentPage,
                 })}
             >
                 <Link
-                    className={clsx("menu__link", {
-                        "menu__link--sublist": collapsible,
-                        "menu__link--sublist-caret": !href && collapsible,
-                        "menu__link--active": isActive,
-                    })}
+                    className={clsx(
+                        "menu__link",
+                        {
+                            "menu__link--sublist": collapsible,
+                            "menu__link--sublist-caret": !href && collapsible,
+                            "menu__link--active": isActive,
+                        },
+                        level === 1 ? styles.fontSemiBold : null
+                    )}
                     onClick={
                         collapsible
                             ? (e) => {
