@@ -120,7 +120,9 @@ export default function DocSidebarItemCategory({
         setExpandedItem(toCollapsed ? null : index);
         setCollapsed(toCollapsed);
     };
-    const { i18n :{currentLocale}} = useDocusaurusContext();
+    const {
+        i18n: { currentLocale },
+    } = useDocusaurusContext();
     useAutoExpandActiveCategory({ isActive, collapsed, updateCollapsed });
     useEffect(() => {
         if (
@@ -138,6 +140,22 @@ export default function DocSidebarItemCategory({
         setCollapsed,
         autoCollapseCategories,
     ]);
+
+    const handleLinkClick = e => {
+        collapsible
+            ? (e) => {
+                  onItemClick?.(item);
+                  if (href) {
+                      updateCollapsed(false);
+                  } else {
+                      e.preventDefault();
+                      updateCollapsed();
+                  }
+              }
+            : () => {
+                  onItemClick?.(item);
+              };
+    };
     return (
         <li
             className={clsx(
@@ -162,21 +180,7 @@ export default function DocSidebarItemCategory({
                         "menu__link--sublist-caret": !href && collapsible,
                         "menu__link--active": isActive,
                     })}
-                    onClick={
-                        collapsible
-                            ? (e) => {
-                                  onItemClick?.(item);
-                                  if (href) {
-                                      updateCollapsed(false);
-                                  } else {
-                                      e.preventDefault();
-                                      updateCollapsed();
-                                  }
-                              }
-                            : () => {
-                                  onItemClick?.(item);
-                              }
-                    }
+                    onClick={(e) => handleLinkClick(e)}
                     aria-current={isCurrentPage ? "page" : undefined}
                     aria-expanded={collapsible ? !collapsed : undefined}
                     href={

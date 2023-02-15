@@ -11,6 +11,8 @@ import {
 } from "@docusaurus/theme-common/internal";
 import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
 import NavbarItem from "@theme/NavbarItem";
+import styles from "./styles.module.css";
+
 function isItemActive(item, localPathname) {
     if (isSamePath(item.to, localPathname)) {
         return true;
@@ -52,6 +54,23 @@ function DropdownNavbarItemDesktop({
             document.removeEventListener("touchstart", handleClickOutside);
         };
     }, [dropdownRef]);
+
+    const handleKeyDown = (e, i, items) => {
+        if (i === items.length - 1 && e.key === "Tab") {
+            e.preventDefault();
+            setShowDropdown(false);
+            const nextNavbarItem = dropdownRef.current.nextElementSibling;
+            if (nextNavbarItem) {
+                const targetItem =
+                    nextNavbarItem instanceof HTMLAnchorElement
+                        ? nextNavbarItem
+                        : // Next item is another dropdown; focus on the inner
+                          // anchor element instead so there's outline
+                          nextNavbarItem.querySelector("a");
+                targetItem.focus();
+            }
+        }
+    };
     return (
         <div
             ref={dropdownRef}
@@ -61,19 +80,11 @@ function DropdownNavbarItemDesktop({
             })}
         >
             <NavbarNavLink
-                style={{
-                    fontFamily: "Red Hat Text",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    fontSize: "16px",
-                    lineHeight: "21px",
-                    textAlign: "center",
-                }}
                 aria-haspopup="true"
                 aria-expanded={showDropdown}
                 role="button"
                 href={props.to ? undefined : "#"}
-                className={clsx("navbar__link", className)}
+                className={clsx("navbar__link", className, styles.navLinkFont)}
                 {...props}
                 onClick={props.to ? undefined : (e) => e.preventDefault()}
                 onKeyDown={(e) => {
@@ -89,24 +100,7 @@ function DropdownNavbarItemDesktop({
                 {items.map((childItemProps, i) => (
                     <NavbarItem
                         isDropdownItem
-                        onKeyDown={(e) => {
-                            if (i === items.length - 1 && e.key === "Tab") {
-                                e.preventDefault();
-                                setShowDropdown(false);
-                                const nextNavbarItem =
-                                    dropdownRef.current.nextElementSibling;
-                                if (nextNavbarItem) {
-                                    const targetItem =
-                                        nextNavbarItem instanceof
-                                        HTMLAnchorElement
-                                            ? nextNavbarItem
-                                            : // Next item is another dropdown; focus on the inner
-                                              // anchor element instead so there's outline
-                                              nextNavbarItem.querySelector("a");
-                                    targetItem.focus();
-                                }
-                            }
-                        }}
+                        onKeyDown={(e) => handleKeyDown(e, i, items)}
                         activeClassName="dropdown__link--active"
                         {...childItemProps}
                         key={i}
