@@ -41,7 +41,7 @@ function EditMetaRow({
         )}
       </div>
     </div>
-			<DocsRating label={'Feedback'} />
+			<DocsRating label={'bottom'} />
     </div>
   );
 }

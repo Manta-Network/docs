@@ -92,7 +92,7 @@ module.exports = {
 					],
 				},
 			],
-			copyright: `Copyright © 2019-${new Date().getFullYear()} Manta Network. Built with Docusaurus.`,
+			copyright: `Copyright © 2019-${new Date().getFullYear()} Manta Network.`,
 		},
 	},
 	presets: [
@@ -110,12 +110,8 @@ module.exports = {
 					customCss: require.resolve("./src/css/custom.css"),
 				},
 				gtag: {
-					trackingID: 'G-J7YDH8B96W',
-					anonymizeIP: true,
+					trackingID: 'G-J7YDH8B96W'
 				  },
-				googleTagManager:{
-					containerId: 'G-J7YDH8B96W',
-				  }
 			},
 		],
 	],

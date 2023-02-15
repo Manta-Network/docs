@@ -31,6 +31,7 @@ export default function NavbarLayout({children}) {
         message: 'Main',
         description: 'The ARIA label for the main navigation',
       })}
+      style={{background:'rgba(0, 0, 0, 0.05)'}}
       className={clsx(
         'navbar',
         'navbar--fixed-top',

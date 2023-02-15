@@ -1,0 +1,7 @@
+.menuExternalLink {
+    align-items: center;
+}
+.menuLinkActive {
+    background: rgba(36, 198, 188, 0.1);
+    color: #24c6bc;
+}
