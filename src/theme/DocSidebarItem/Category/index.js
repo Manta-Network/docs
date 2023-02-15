@@ -1,23 +1,23 @@
-import React, { useEffect, useMemo } from "react";
-import clsx from "clsx";
-import {
-    ThemeClassNames,
-    useThemeConfig,
-    usePrevious,
-    Collapsible,
-    useCollapsible,
-} from "@docusaurus/theme-common";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import {
-    isActiveSidebarItem,
-    findFirstCategoryLink,
-    useDocSidebarItemsExpandedState,
-    isSamePath,
-} from "@docusaurus/theme-common/internal";
 import Link from "@docusaurus/Link";
+import {
+    Collapsible,
+    ThemeClassNames,
+    useCollapsible,
+    usePrevious,
+    useThemeConfig,
+} from "@docusaurus/theme-common";
+import {
+    findFirstCategoryLink,
+    isActiveSidebarItem,
+    isSamePath,
+    useDocSidebarItemsExpandedState,
+} from "@docusaurus/theme-common/internal";
 import { translate } from "@docusaurus/Translate";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import DocSidebarItems from "@theme/DocSidebarItems";
+import clsx from "clsx";
+import React, { useEffect, useMemo } from "react";
 
 // TODO 首级标题
 const titleMap = {
@@ -141,20 +141,14 @@ export default function DocSidebarItemCategory({
         autoCollapseCategories,
     ]);
 
-    const handleLinkClick = e => {
-        collapsible
-            ? (e) => {
-                  onItemClick?.(item);
-                  if (href) {
-                      updateCollapsed(false);
-                  } else {
-                      e.preventDefault();
-                      updateCollapsed();
-                  }
-              }
-            : () => {
-                  onItemClick?.(item);
-              };
+    const handleCollapsible = (e) => {
+        onItemClick?.(item);
+        if (href) {
+            updateCollapsed(false);
+        } else {
+            e.preventDefault();
+            updateCollapsed();
+        }
     };
     return (
         <li
@@ -180,7 +174,15 @@ export default function DocSidebarItemCategory({
                         "menu__link--sublist-caret": !href && collapsible,
                         "menu__link--active": isActive,
                     })}
-                    onClick={(e) => handleLinkClick(e)}
+                    onClick={
+                        collapsible
+                            ? (e) => {
+                                  handleCollapsible(e);
+                              }
+                            : () => {
+                                  onItemClick?.(item);
+                              }
+                    }
                     aria-current={isCurrentPage ? "page" : undefined}
                     aria-expanded={collapsible ? !collapsed : undefined}
                     href={
