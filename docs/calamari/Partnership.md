@@ -2,7 +2,7 @@
 
 A collection of projects within the Calamari network.
 
-## **Infrastructure**
+## Infrastructure
 
 ### MantaPay
 
@@ -18,7 +18,7 @@ Subscan is a high-precision Web3 explorer that is used to browse blockchain data
 
 XCM (Cross-Consensus Message Format (XCM) aims to be a language to communicate ideas between consensus systems.
 
-## **DeFi**
+## DeFi
 
 ### Solarbeam
 
@@ -32,7 +32,7 @@ Solarbeam is a decentralized exchange, providing liquidity and enabling peer-to-
 
 Karura is a scalable, EVM-compatible network optimized for DeFi.
 
-## **Wallets**
+## Wallets
 
 ### Talisman
 
@@ -52,7 +52,7 @@ Subwallet is a Web3 Extension Wallet for the Polkadot & Kusama networks.
 
 Polkadot.js is a browser-based vault for the management of your account keys.
 
-## **Dev Tools**
+## Dev Tools
 
 ### zkAddress
 
@@ -60,7 +60,7 @@ Polkadot.js is a browser-based vault for the management of your account keys.
 
 zkAddress is the public key for the zkAssets. It is not disclosed in any zk-transaction on-chain, thus, an observer cannot associate a zk-transaction on-chain with an zkAddresses unless the sender or the receiver of the transaction grants the viewing key to the observer.
 
-### ****zkAssets****
+### zkAssets
 
 [Website](https://mantanetwork.medium.com/introducing-zkassets-and-zkaddresses-7b7a8e3e2af3)
 
@@ -72,7 +72,7 @@ zkAssets are a new crypto asset class where privacy, integrity, and access polic
 
 The Signer is a secret manager and zero-knowledge proof generator that is used with Manta Network, Calamari Network, and Dolphin Testnet.
 
-## **Analytics**
+## Analytics
 
 ### Web3Go
 
@@ -80,7 +80,7 @@ The Signer is a secret manager and zero-knowledge proof generator that is used w
 
 Web3Go is an all-in-one open data analytics and service platform where everyone can grasp the value behind blockchain data.
 
-## **Collators**
+## Collators
 
 ### P2P
 
@@ -118,19 +118,19 @@ StakerSpace is a independent secure-validator.
 
 Pathrock Network is a secure Non-Custodial Staking for PoS Blockchain Projects.
 
-### **Let's Node**
+### Let's Node
 
 [Twitter](https://twitter.com/Lets_node) 
 
 Staking providers, educational and informational channel about nodes, testnets and technical assignments.
 
-### **CertHum**
+### CertHum
 
 [Twitter](https://twitter.com/CertHum) | [Website](https://www.certhum.com/)
 
 CertHum provides Web3 infrastructure and is building for a decentralized future.
 
-## **Parachains**
+## Parachains
 
 ### Moonriver
 

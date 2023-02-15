@@ -2,7 +2,7 @@
 
 A collection of projects within the Calamari network.
 
-## **Infrastructure**
+## Infrastructure
 
 ### MantaPay
 
@@ -24,7 +24,7 @@ XCM(Cross-Consensus Message Format (XCM) aims to be a language to communicate id
 
 Axelar delivers secure cross-chain communication for Web3, enabling users to interact with various blockchains, applications, and crypto assets.
 
-## **Wallets**
+## Wallets
 
 ### Talisman
 
@@ -44,7 +44,7 @@ Subwallet is a Web3 Extension Wallet for the Polkadot & Kusama networks.
 
 Polkadot.js is a browser-based vault for the management of your account keys.
 
-## **Dev Tools**
+## Dev Tools
 
 ### zkAddress
 
@@ -52,7 +52,7 @@ Polkadot.js is a browser-based vault for the management of your account keys.
 
 zkAddress is the public key for the zkAssets. It is not disclosed in any zk-transaction on-chain, thus, an observer cannot associate a zk-transaction on-chain with an zkAddresses unless the sender or the receiver of the transaction grants the viewing key to the observer.
 
-### ****zkAssets****
+### **zkAssets**
 
 [Website](https://mantanetwork.medium.com/introducing-zkassets-and-zkaddresses-7b7a8e3e2af3)
 
@@ -70,7 +70,7 @@ The Signer is a secret manager and zero-knowledge proof generator used with Mant
 
 Zero-Knowledge Cryptography Infrastructure Stack
 
-## **Analytics**
+## Analytics
 
 ### Web3Go
 
@@ -78,7 +78,7 @@ Zero-Knowledge Cryptography Infrastructure Stack
 
 Web3Go is an all-in-one open data analytics and service platform where everyone can grasp the value behind blockchain data.
 
-## **Incubation Partners**
+## Incubation Partners
 
 ### AllianceDao
 
@@ -104,7 +104,7 @@ Berkeley Blockchain Accelerator is a joint venture by three premier organization
 
 Based in Hong Kong, Singapore, and New York, Moonshot Commons is a global builder community for Gen-Z engineers in Web 3.
 
-## **Development Awards**
+## Development Awards
 
 ### ZPrize
 
@@ -124,7 +124,7 @@ The Substrate Builders Program identifies, supports, and mentors current and pot
 
 The Web3 Foundation Grant program aims at nurturing cutting-edge applications for decentralized web software protocols.
 
-## **Research Partners**
+## Research Partners
 
 ### Jump Crypto
 
@@ -156,7 +156,7 @@ RISC Zero is a zero-knowledge verifiable general computing platform based on zk-
 
 The Universal Privacy Alliance seeks to advance the understanding of privacy as the very basis of free and flourishing digital societies.
 
-## **Parachains**
+## Parachains
 
 ### Moonbeam
 
