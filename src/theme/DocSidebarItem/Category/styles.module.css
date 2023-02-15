@@ -1,0 +1,6 @@
+.gap{
+    margin: 32px 0 16px 0;
+}
+.gap:first-child{
+    margin-top: 24px;
+}

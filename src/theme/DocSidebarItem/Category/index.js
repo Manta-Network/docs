@@ -18,6 +18,7 @@ import useIsBrowser from "@docusaurus/useIsBrowser";
 import DocSidebarItems from "@theme/DocSidebarItems";
 import clsx from "clsx";
 import React, { useEffect, useMemo } from "react";
+import styles from "./styles.module.css";
 
 // TODO 首级标题
 const titleMap = {
@@ -163,6 +164,7 @@ export default function DocSidebarItemCategory({
             )}
         >
             {/* {level===1&&<div>{titleMap[currentLocale][`category${index}`]}</div>} */}
+            <div className={styles.gap} />
             <div
                 className={clsx("menu__list-item-collapsible", {
                     "menu__list-item-collapsible--active": isCurrentPage,
