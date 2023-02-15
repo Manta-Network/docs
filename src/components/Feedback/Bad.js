@@ -1,5 +1,5 @@
 import React from "react";
-export default function Bad({size=16,fill='black',...props}) {
+export default function Bad({ size = 16, fill = "black", ...props }) {
     return (
         <svg
             width={size}
