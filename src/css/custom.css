@@ -217,7 +217,7 @@ a:hover{
 }
 
 .menu__list-item:not(:first-child){
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .table-of-contents__left-border{
