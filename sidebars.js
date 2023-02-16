@@ -42,7 +42,13 @@ module.exports = {
             'learn/Papers',
           ],
         },
-        'manta/Ecosystem'
+        {
+          type: 'category',
+          label: 'Ecosystem',
+          items: [
+            'concepts/TrustedSetup' // TODO - PLACEHOLDER
+          ],
+        }
       ]
     },
     {
