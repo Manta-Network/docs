@@ -1,4 +1,4 @@
-# Overview
+# Ecosystem
 
 A collection of projects within the Calamari network.
 
