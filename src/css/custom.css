@@ -216,6 +216,11 @@ a:hover{
   border-color: var(--ifm-link-color) !important;
 }
 
+.theme-doc-sidebar-item-category-level-1{
+  margin-top:24px !important;
+
+}
+
 .menu__list-item:not(:first-child){
   margin-top: 4px;
 }
