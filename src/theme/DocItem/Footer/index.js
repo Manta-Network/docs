@@ -4,6 +4,7 @@ import { ThemeClassNames } from "@docusaurus/theme-common";
 import { useDoc } from "@docusaurus/theme-common/internal";
 import LastUpdated from "@theme/LastUpdated";
 import EditThisPage from "@theme/EditThisPage";
+import { useWindowSize } from "@docusaurus/theme-common";
 import TagsListInline from "@theme/TagsListInline";
 import DocsRating from "../../../components/Feedback";
 import styles from "./styles.module.css";
@@ -22,7 +23,9 @@ function TagsRow(props) {
         </div>
     );
 }
+
 function EditMetaRow({
+    shouldRenderMobile,
     editUrl,
     lastUpdatedAt,
     lastUpdatedBy,
@@ -38,7 +41,7 @@ function EditMetaRow({
                         : "rgba(255,255,255,0.05)",
             }}
             className={clsx(
-                styles.flex,
+                !shouldRenderMobile ? styles.flex : null,
                 styles.spaceBetween,
                 styles.contentContainer
             )}
@@ -68,7 +71,10 @@ function EditMetaRow({
         </div>
     );
 }
-export default function DocItemFooter() {
+
+export default function DocItemFooter(props) {
+    const windowSize = useWindowSize();
+    const shouldRenderMobile = windowSize === "mobile";
     const { metadata } = useDoc();
     const {
         editUrl,
@@ -84,6 +90,7 @@ export default function DocItemFooter() {
     if (!canDisplayFooter) {
         return null;
     }
+
     return (
         <>
             <footer
@@ -95,6 +102,7 @@ export default function DocItemFooter() {
                 {canDisplayTagsRow && <TagsRow tags={tags} />}
                 {canDisplayEditMetaRow && (
                     <EditMetaRow
+                        shouldRenderMobile={shouldRenderMobile}
                         editUrl={editUrl}
                         lastUpdatedAt={lastUpdatedAt}
                         lastUpdatedBy={lastUpdatedBy}
