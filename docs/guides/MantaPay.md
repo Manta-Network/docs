@@ -1,4 +1,4 @@
-# 🐬 TODO: MantaPay
+# 🐬 Getting Started with MantaPay
 
 [The Dolphin zkTransact page](https://app.manta.network/dolphin/transact) allows users to privatize public assets to private or
 "zk" assets, transfer zk assets, and convert zk assets back to public assets.
