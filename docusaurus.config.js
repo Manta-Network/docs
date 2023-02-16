@@ -18,29 +18,34 @@ module.exports = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    navbar: {
-      title: 'Manta Network Docs',
-      logo: {
-        alt: 'Manta Network Logo',
-        src: 'img/manta2.png',
-      },
-      items: [
-        {
-          href: 'https://manta.network',
-          label: 'Manta Network',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/Manta-Network',
-          label: 'GitHub',
-          position: 'left',
-        },
-        {
-          type: "localeDropdown",
-          position: "left"
-        }
-      ],
-    },
+	navbar: {
+		title: "Manta Network Docs",
+		logo: {
+			alt: "Manta Network Logo",
+			src: "img/manta2.png",
+		},
+		items: [
+			{
+				href: "https://manta.network",
+				label: "Manta Network",
+				position: "right",
+			},
+			{
+				href: "http://calamari.network/",
+				label: "Calamari Network",
+				position: "right",
+			},
+			{
+				href: "https://github.com/Manta-Network",
+				label: "GitHub",
+				position: "right",
+			},
+			{
+				type: "localeDropdown",
+				position: "right",
+			},
+		],
+	},
     footer: {
       style: 'dark',
       links: [
