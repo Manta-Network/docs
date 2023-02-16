@@ -144,7 +144,7 @@ html[data-theme='dark'] .landing-container > a:hover {
 }
 
 html[data-theme='dark'] .navbar--fixed-top{
-  background-color: unset;
+  background-color: rgb(31, 33, 36);
 }
 
 .dropdown > .navbar__link:after {
