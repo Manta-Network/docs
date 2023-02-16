@@ -150,8 +150,15 @@ module.exports = {
               label: 'Integration with Calamari',
               items: [
                 'calamari/api',
-                'guides/XcmTransfers',
-                'guides/XcmOnboarding',
+                {
+                  type: "category",
+                  label: 'Cross-Chain Interactions (XCM)',
+                  items: [
+                    'guides/XcmOverview',
+                    'guides/XcmTransfers',
+                    'guides/XcmOnboarding',
+                  ],
+                },
               ]
             },
             {
