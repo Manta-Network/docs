@@ -39,9 +39,11 @@
 }
 html[data-theme='light']:root{
   --ifm-menu-color: rgba(0,0,0,0.8);
+  --ifm-toc-link-color: rgba(0,0,0,0.6);
 }
 html[data-theme='dark']:root{
   --ifm-menu-color: rgba(255,255,255,0.8);
+  --ifm-toc-link-color: rgba(255,255,255,0.6);
 }
 
 .docusaurus-highlight-code-line {
