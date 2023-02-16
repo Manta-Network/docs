@@ -221,6 +221,7 @@ a:hover{
     color: var(--ifm-link-color) !important;
 
 }
+
 .aa-InputWrapper>input::placeholder{
     color: var(--ifm-link-color) !important;
 
