@@ -1,8 +1,13 @@
-.gap{
+.gap {
     margin: 0px 0 16px 0;
 }
 
-.fontSemiBold{
+[data-theme="light"].fontSemiBold {
     color: black;
-    font-family: 'Red Hat Text SemiBold';
+}
+[data-theme="light"].fontSemiBold {
+    color: white;
+}
+.fontSemiBold {
+    font-family: "Red Hat Text SemiBold";
 }

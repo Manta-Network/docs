@@ -1,5 +1,10 @@
-.font {
+[data-theme="light"].font {
     color: black;
+}
+[data-theme="light"].font {
+    color: white;
+}
+.font {
     font-family: "Red Hat Mono";
     font-style: normal;
     font-weight: 500;
