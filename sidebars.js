@@ -42,13 +42,7 @@ module.exports = {
             'learn/Papers',
           ],
         },
-        {
-          type: 'category',
-          label: 'Ecosystem',
-          items: [
-            'concepts/TrustedSetup' // TODO - PLACEHOLDER
-          ],
-        }
+        'manta/Ecosystem'
       ]
     },
     {
@@ -149,8 +143,17 @@ module.exports = {
               type: 'category',
               label: 'Integration with Calamari',
               items: [
-                'calamari/api',
-                'guides/XcmOnboarding',
+                'calamari/DevelopOnDolphin',
+                'calamari/SDK',
+                {
+                  type: "category",
+                  label: 'Cross-Chain Interactions (XCM)',
+                  items: [
+                    'guides/XcmOverview',
+                    'guides/XcmTransfers',
+                    'guides/XcmOnboarding',
+                  ],
+                },
               ]
             },
             {
