@@ -144,10 +144,12 @@ html[data-theme='dark'] .landing-container > a:hover {
 
 html[data-theme='light'] .navbar--fixed-top{
   background-color: rgb(242,242,242);
+  border-bottom: 1px solid #D9D9D9;
 }
 
 html[data-theme='dark'] .navbar--fixed-top{
   background-color: rgb(31, 33, 36);
+  border-bottom: 1px solid #121416;
 }
 
 .dropdown > .navbar__link:after {
@@ -216,6 +218,10 @@ a:hover{
 
 .menu__list-item:not(:first-child){
   margin-top: 8px;
+}
+
+.table-of-contents__left-border{
+  border-left:unset
 }
 
 h1{

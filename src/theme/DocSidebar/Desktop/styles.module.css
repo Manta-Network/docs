@@ -1,4 +1,12 @@
 @media (min-width: 997px) {
+  html[data-theme='light'] .sidebar{
+    border-right: 1px solid #D9D9D9;
+  }
+
+  html[data-theme='dark'] .sidebar{
+    border-right: 1px solid #121416;
+  }
+
   .sidebar {
     font-size: 14px;
     display: flex;
