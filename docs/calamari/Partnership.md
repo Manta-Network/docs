@@ -52,26 +52,6 @@ Subwallet is a Web3 Extension Wallet for the Polkadot & Kusama networks.
 
 Polkadot.js is a browser-based vault for the management of your account keys.
 
-## Dev Tools
-
-### zkAddress
-
-[Website](https://mantanetwork.medium.com/introducing-zkassets-and-zkaddresses-7b7a8e3e2af3)
-
-zkAddress is the public key for the zkAssets. It is not disclosed in any zk-transaction on-chain, thus, an observer cannot associate a zk-transaction on-chain with an zkAddresses unless the sender or the receiver of the transaction grants the viewing key to the observer.
-
-### zkAssets
-
-[Website](https://mantanetwork.medium.com/introducing-zkassets-and-zkaddresses-7b7a8e3e2af3)
-
-zkAssets are a new crypto asset class where privacy, integrity, and access policy are guarded by zero-knowledge proofs. It has the following properties: flexible asset types, privacy by default, disclosing at will, configurable aasset policy.
-
-### Signer
-
-[Github](https://github.com/Manta-Network/manta-signer)
-
-The Signer is a secret manager and zero-knowledge proof generator that is used with Manta Network, Calamari Network, and Dolphin Testnet.
-
 ## Analytics
 
 ### Web3Go
