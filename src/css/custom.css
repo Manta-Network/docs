@@ -210,6 +210,9 @@ a:hover{
 .aa-Form{
   border: 1px solid var(--ifm-link-color) !important;
 }
+.aa-DetachedSearchButton:focus{
+  border-color: var(--ifm-link-color) !important;
+}
 
 .menu__list-item:not(:first-child){
   margin-top: 8px;
