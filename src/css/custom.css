@@ -36,6 +36,7 @@
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
   --ifm-link-color:#24c6bc;
+  --ifm-navbar-background-color:rgb(242,242,242);
 }
 
 .docusaurus-highlight-code-line {
