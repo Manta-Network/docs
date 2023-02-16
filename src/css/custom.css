@@ -176,6 +176,10 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.menu__link{
+  font-family: 'Red Hat Text SemiBold';
+}
+
 .menu__link--active{
   color: var(--ifm-link-color);
 }
