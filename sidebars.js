@@ -112,13 +112,14 @@ module.exports = {
                 'calamari/Staking/StakingFAQ',
               ],
             },
-            {
-              type: 'category',
-              label: 'MANTA Staking',
-              items: [
-                'guides/staking/MANTA/Overview',
-              ],
-            }
+            // NOTE: To be created later
+            // {
+            //   type: 'category',
+            //   label: 'MANTA Staking',
+            //   items: [
+            //     'guides/staking/MANTA/Overview',
+            //   ],
+            // }
           ]
         },
       ],
@@ -128,13 +129,13 @@ module.exports = {
       label: 'Developers',
       collapsible: false,
       items: [
-        {
-          type: 'category',
-          label: 'Develop on Manta',
-          items: [
-            'guides/TrustedSetup',
-          ]
-        },
+        // NOTE: To be created later
+        // {
+        //   type: 'category',
+        //   label: 'Develop on Manta',
+        //   items: [
+        //   ]
+        // },
         {
           type: 'category',
           label: 'Develop on Calamari',
