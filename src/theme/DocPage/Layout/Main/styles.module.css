@@ -1,6 +1,7 @@
 .docMainContainer {
     display: flex;
     width: 100%;
+    font-size: 15px;
 }
 .docMainContainer a {
     font-family: "Red Hat Text SemiBold";

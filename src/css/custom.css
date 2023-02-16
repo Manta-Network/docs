@@ -36,7 +36,6 @@
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
   --ifm-link-color:#24c6bc;
-  --ifm-navbar-background-color:rgb(242,242,242);
 }
 
 .docusaurus-highlight-code-line {
@@ -143,6 +142,10 @@ html[data-theme='dark'] .landing-container > a:hover {
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+html[data-theme='light'] .navbar--fixed-top{
+  background-color: rgb(242,242,242);
+}
+
 html[data-theme='dark'] .navbar--fixed-top{
   background-color: rgb(31, 33, 36);
 }
@@ -204,14 +207,20 @@ a:hover{
 
 }
 
+.aa-Form{
+  border: 1px solid var(--ifm-link-color) !important;
+}
+
 .menu__list-item:not(:first-child){
   margin-top: 8px;
 }
 
 h1{
   font-family: 'Red Hat Text Bold';
+  font-size: 24px;
 }
 
 h2,h3,h4,h5,h6{
   font-family: 'Red Hat Text SemiBold';
+  font-size: 20px;
 }

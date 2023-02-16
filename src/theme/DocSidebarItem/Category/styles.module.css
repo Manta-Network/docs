@@ -1,9 +1,7 @@
 .gap{
-    margin: 32px 0 16px 0;
+    margin: 0px 0 16px 0;
 }
-.gap:first-child{
-    margin-top: 24px;
-}
+
 .fontSemiBold{
     font-family: 'Red Hat Text SemiBold';
 }
