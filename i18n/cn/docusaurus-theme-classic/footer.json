@@ -44,7 +44,7 @@
     "description": "The label of footer link with label=Email linking to mailto:contact@manta.network"
   },
   "copyright": {
-    "message": "版权 © 2019-2022 Manta Network.",
+    "message": "版权 © 2019-2023 Manta Network.",
     "description": "The footer copyright"
   }
 }
