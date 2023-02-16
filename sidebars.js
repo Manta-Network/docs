@@ -143,8 +143,17 @@ module.exports = {
               type: 'category',
               label: 'Integration with Calamari',
               items: [
-                'calamari/api',
-                'guides/XcmOnboarding',
+                'calamari/DevelopOnDolphin',
+                'calamari/SDK',
+                {
+                  type: "category",
+                  label: 'Cross-Chain Interactions (XCM)',
+                  items: [
+                    'guides/XcmOverview',
+                    'guides/XcmTransfers',
+                    'guides/XcmOnboarding',
+                  ],
+                },
               ]
             },
             {
