@@ -170,11 +170,12 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
   color: rgba(255, 255, 255, 0.5);
 }
 
-[data-theme="light"].menu__link{
+html[data-theme="light"] .menu__link{
   color: rgba(0, 0, 0, 0.8);
 }
-[data-theme="dark"].menu__link{
-  color: rgba(255, 255, 255, 0.8);
+
+html[data-theme="dark"] .menu__link{
+  color: rgba(255, 255, 255, 0.8) ;
 }
 
 .menu__link--active{
