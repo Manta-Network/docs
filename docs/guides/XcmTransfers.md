@@ -1,4 +1,4 @@
-# 💸 Send Cross-Chain Transfers From Calamari
+# 💸 XCM Token Transfers
 
 ## Introduction
 
