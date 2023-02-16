@@ -143,6 +143,10 @@ html[data-theme='dark'] .landing-container > a:hover {
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+html[data-theme='dark'] .navbar--fixed-top{
+  background-color: unset;
+}
+
 .dropdown > .navbar__link:after {
   color: rgba(0, 0, 0, 0.5);
   border-color: currentColor transparent;
