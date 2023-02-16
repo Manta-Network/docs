@@ -93,7 +93,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © 2019-${new Date().getFullYear()} Manta Network. Built with Docusaurus.`,
+      copyright: `Copyright © 2019-${new Date().getFullYear()} Manta Network.`,
     },
   },
   presets: [
