@@ -105,6 +105,7 @@ module.exports = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           editUrl: 'https://github.com/Manta-Network/docs/edit/main/',
+		  showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -37,6 +37,12 @@
   --ifm-code-font-size: 95%;
   --ifm-link-color:#24c6bc;
 }
+html[data-theme='light']:root{
+  --ifm-menu-color: rgba(0,0,0,0.8);
+}
+html[data-theme='dark']:root{
+  --ifm-menu-color: rgba(255,255,255,0.8);
+}
 
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
@@ -168,14 +174,6 @@ html[data-theme='dark'] .navbar--fixed-top{
 
 html[data-theme='dark'] .dropdown > .navbar__link:after {
   color: rgba(255, 255, 255, 0.5);
-}
-
-html[data-theme="light"] .menu__link{
-  color: rgba(0, 0, 0, 0.8);
-}
-
-html[data-theme="dark"] .menu__link{
-  color: rgba(255, 255, 255, 0.8) ;
 }
 
 .menu__link--active{
