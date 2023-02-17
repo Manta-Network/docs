@@ -18,12 +18,15 @@ Manta offers two networks:
                 </h1>
                 <ul>
                     <li>
+                        <a href='https://www.manta.network/' target="_blank">Check out the main Manta Network website</a>.
+                    </li>
+                    <li>
                         <a href='https://docs.manta.network/docs/guides/MantaPay' target="_blank">Try Private Payments on Dolphin Testnet</a>.
                     </li>
                     <li>
-                        Join Manta Community (<a href='https://discord.gg/PRDBTChSsF' target="_blank">discord</a>, <a href='https://twitter.com/mantanetwork' target="_blank">twitter</a>, <a href='https://t.me/mantanetworkofficial' target='_blank'>telegram</a>).
+                        Join Manta Community (<a href='https://discord.gg/PRDBTChSsF' target="_blank">discord</a>, <a href='https://twitter.com/mantanetwork' target="_blank">twitter</a>, <a href='https://t.me/mantanetworkofficial' target='_blank'>telegram</a> or <a href='http://eepurl.com/hnoWQv' target='_blank'>newsletter</a>).
                     </li>                    <li>
-                        Check out &nbsp;<a href='calamari/Staking/Overview'>KMA Staking</a>.
+                        Calamari Network’s token is live! Check out&nbsp;<a href='calamari/Staking/Overview'>KMA Staking</a>.
                     </li>
                 </ul>
             </div>
