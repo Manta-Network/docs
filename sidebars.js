@@ -183,7 +183,8 @@ module.exports = {
               ],
             },
           ]
-        }
+        },
+        'Codebase'
       ]
     }
   ]
