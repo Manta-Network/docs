@@ -1,15 +1,13 @@
 # What is Manta?
 
-Manta Network is the on-chain privacy solution for blockchain assets built from first principles. In the short term, Manta will be a product that enables high-performance private FT/NFT transfers. In the long term, Manta will be the privacy-preservation platform for all blockchain applications.
+Manta Network is a layer one network that enables privacy functionality for applications and crypto assets (fungible and non-fungible) through zero-knowledge proofs. Manta’s founding team comprises many US cryptocurrency veterans, professors, and scholars whose experience includes Harvard, MIT, and Algorand. The project has received funding from lead web3 investors including Polychain and Binance Labs. Manta Network’s growth has been catalyzed by participating in several leading web3 accelerators including Alliance DAO, and the Berkeley Blockchain Xcelerator.
 
-Manta’s founding team comprises many US cryptocurrency veterans, professors, and scholars whose experience includes Harvard, MIT, and Algorand. The advisors of Manta include Hypersphere Ventures co-founder Jack Platts, Polychain partner Tekin Salimi, former Web3 Foundation co-founder Ashley Tyson, and ConsenSys’ Shuyao Kong. Manta has previously completed a million-dollar seed round of financing led by Polychain and participated in by Three Arrows Capital, Multicoin, Alameda, and Hypersphere. Manta is also a grant fund recipient of Polkadot’s official Web3 Foundation. Manta is also an outstanding member of the Substrate Builder Program and the Blockchain Accelerator of the University of Berkeley.
-
-Manta Network was founded in mid-2020 as an idea born from the personal pains of the founders. While on-chain privacy has been a persistent problem in the space since the inception of Bitcoin, it has been compounded by the growth and adoption of DeFi services. As a result, on-chain privacy is more important than ever before. As investors and developers, the Manta Network founding team recognized this pain point. Upon speaking with other leaders in the industry, the founders immediately understood the importance of the unaddressed issue of private decentralized finance. Thus, Manta Network was born.
+Furthermore, Manta Network provides Dolphin Testnet, the testnet for Manta Network that experiments with all new features coming to Manta Network at a later production stage.
 
 Manta offers two networks:
 
-- [Calamari Network](https://calamari.network/): Manta's canary network. Calamari is running as a Kusama Parachain.
-- [Manta Network](https://manta.network/): Manta's Polkadot parachain. Manta is looking forward to joining the Polkadot ecosystem!
+- [Manta Network](https://manta.network/): Manta’s primary production layer one network.
+- [Calamari Network](https://calamari.network/): Manta Network’s canary network, which runs as a separate, independent layer one network.
 
 <div class="landing-container">
         <a>
