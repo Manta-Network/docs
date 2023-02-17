@@ -1,6 +1,10 @@
 # What is Manta?
 
-Manta is the universal private blockchain platform. We are building a scalable, composable, and private network from first principles. Manta's zero-knowledge cryptography allows developers to build dapps with end-to-end privacy guarantees, which are also interoperable, easy to use, high-performance and auditable. Manta can bring privacy to DeFi, NFTs, GameFi, DAOs, and countless other blockchain applications.
+Manta Network is the on-chain privacy solution for blockchain assets built from first principles. In the short term, Manta will be a product that enables high-performance private FT/NFT transfers. In the long term, Manta will be the privacy-preservation platform for all blockchain applications.
+
+Manta’s founding team comprises many US cryptocurrency veterans, professors, and scholars whose experience includes Harvard, MIT, and Algorand. The advisors of Manta include Hypersphere Ventures co-founder Jack Platts, Polychain partner Tekin Salimi, former Web3 Foundation co-founder Ashley Tyson, and ConsenSys’ Shuyao Kong. Manta has previously completed a million-dollar seed round of financing led by Polychain and participated in by Three Arrows Capital, Multicoin, Alameda, and Hypersphere. Manta is also a grant fund recipient of Polkadot’s official Web3 Foundation. Manta is also an outstanding member of the Substrate Builder Program and the Blockchain Accelerator of the University of Berkeley.
+
+Manta Network was founded in mid-2020 as an idea born from the personal pains of the founders. While on-chain privacy has been a persistent problem in the space since the inception of Bitcoin, it has been compounded by the growth and adoption of DeFi services. As a result, on-chain privacy is more important than ever before. As investors and developers, the Manta Network founding team recognized this pain point. Upon speaking with other leaders in the industry, the founders immediately understood the importance of the unaddressed issue of private decentralized finance. Thus, Manta Network was born.
 
 Manta offers two networks:
 
