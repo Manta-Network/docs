@@ -87,6 +87,7 @@ Web3Go is an all-in-one open data analytics and service platform where everyone 
 [Twitter](https://mobile.twitter.com/subsquid) | [Website](https://www.subsquid.io/)
 
 Subsquid is the most dev-friendly way to develop and deploy custom GraphQL APIs and ETLs for advanced blockchain use cases.
+
 ----
 ## Incubation Partners
 
