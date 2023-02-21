@@ -187,6 +187,23 @@ module.exports = {
         },
         'Codebase'
       ]
+    },
+    {
+      type: 'category',
+      label: 'Previous Events',
+      collapsible: false,
+      items: [
+        {
+          type: 'link',
+          label: 'Squad Game',
+          href: 'https://squadgame.manta.network/'
+        },
+        {
+          type: 'link',
+          label: 'Manta Network Crowdload', // string - the label that should be displayed.
+          href: 'https://crowdloanstrategy.manta.network/' // string - the target URL.
+        }
+      ]
     }
   ]
 };
