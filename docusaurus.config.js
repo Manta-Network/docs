@@ -18,29 +18,34 @@ module.exports = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    navbar: {
-      title: 'Manta Network Docs',
-      logo: {
-        alt: 'Manta Network Logo',
-        src: 'img/manta2.png',
-      },
-      items: [
-        {
-          href: 'https://manta.network',
-          label: 'Manta Network',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/Manta-Network',
-          label: 'GitHub',
-          position: 'left',
-        },
-        {
-          type: "localeDropdown",
-          position: "left"
-        }
-      ],
-    },
+	navbar: {
+		title: "Manta Network Docs",
+		logo: {
+			alt: "Manta Network Logo",
+			src: "img/manta2.png",
+		},
+		items: [
+			{
+				href: "https://manta.network",
+				label: "Manta Network",
+				position: "right",
+			},
+			{
+				href: "http://calamari.network/",
+				label: "Calamari Network",
+				position: "right",
+			},
+			{
+				href: "https://github.com/Manta-Network",
+				label: "GitHub",
+				position: "right",
+			},
+			{
+				type: "localeDropdown",
+				position: "right",
+			},
+		],
+	},
     footer: {
       style: 'dark',
       links: [
@@ -88,7 +93,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © 2019-${new Date().getFullYear()} Manta Network. Built with Docusaurus.`,
+      copyright: `Copyright © 2019-${new Date().getFullYear()} Manta Network.`,
     },
   },
   presets: [
@@ -100,10 +105,14 @@ module.exports = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           editUrl: 'https://github.com/Manta-Network/docs/edit/main/',
+		  showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+		gtag: {
+			trackingID: "G-J7YDH8B96W",
+		},
       },
     ],
   ],

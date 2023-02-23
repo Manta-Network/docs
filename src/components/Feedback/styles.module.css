@@ -1,0 +1,47 @@
+.content {
+    display: flex;
+}
+
+.innerContent {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.innerContent > svg:not(:last-child) {
+    margin-right: 8px;
+}
+
+.topContainer {
+    background-color:  rgba(0, 0, 0, 0.05);;
+    border-radius: 59px;
+    padding: 5px 12px;
+    margin-top: 4px;
+}
+
+.font {
+    margin-right: 8px;
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.button {
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+}
+.good:hover {
+    cursor: pointer;
+    background: rgba(151, 233, 16, 0.5);
+}
+.normal:hover {
+    cursor: pointer;
+    background: rgba(255, 230, 6, 0.5);
+}
+.bad:hover {
+    cursor: pointer;
+    background: rgba(255, 67, 26, 0.5);
+}
