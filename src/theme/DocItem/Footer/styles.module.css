@@ -1,0 +1,29 @@
+.flex {
+    display: flex;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.spaceBetween{
+    justify-content: space-between;
+}
+
+.contentContainer{
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+.lastUpdated {
+    margin-top: 0.2rem;
+    font-style: italic;
+    font-size: smaller;
+}
+
+@media (min-width: 997px) {
+    .lastUpdated {
+        text-align: right;
+    }
+}

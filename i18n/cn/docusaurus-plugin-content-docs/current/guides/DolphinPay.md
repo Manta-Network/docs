@@ -3,7 +3,7 @@
 MantaPay 允许用户进行公开资产的隐私化、隐私资产的转账以及将隐私资产赎回为公开资产 (如下图所示)。
 
 <div style={{textAlign: 'center'}}>
-<img alt="DolphinPay Overview" src="/img/guides/DolphinPay.svg" width="70%"/>
+<img alt="MantaPay Overview" src="/img/guides/DolphinPay.svg" width="70%"/>
 </div>
 
 请注意: 公开资产和隐私资产有着不同的地址(公开地址 vs 隐私地址)，且公开地址和隐私地址之间没有关联性。
@@ -114,7 +114,7 @@ Signer 将会提示你输入密码来确认交易。一旦得到确认，Signer 
 <br/>
 <br/>
 
-### **将隐私资产赎回为公开资产[](https://docs-l6ldq5g4v-manta-fullstack.vercel.app/docs/guides/DolphinPay#convert-private-assets-to-public)**
+### **将隐私资产赎回为公开资产[](https://docs-l6ldq5g4v-manta-fullstack.vercel.app/docs/guides/MantaPay#convert-private-assets-to-public)**
 
 点击图片下方的 Private 按钮，切换至 private-public 模式，这样你就可以从隐私地址将资产赎回到公开地址。选择你想发送的代币种类，输入发送数量并选择目标公开地址。
 

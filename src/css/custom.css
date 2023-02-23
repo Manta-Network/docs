@@ -6,8 +6,28 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://rsms.me/inter/inter.css');
+
+@font-face {
+  font-family: "Red Hat Text";
+  src: url('/static/RedHatText-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: "Red Hat Text SemiBold";
+  src: url('/static/RedHatText-SemiBold.woff') format('woff');
+}
+@font-face {
+  font-family: "Red Hat Text Bold";
+  src: url('/static/RedHatText-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: "Red Hat Mono";
+  src: url('/static/RedHatMono-Medium.woff') format('woff');
+}
+
 :root {
-  --ifm-color-primary: #25c2a0;
+  --ifm-font-family-base: "Red Hat Text";
+  --ifm-color-primary: #0396F9;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -15,6 +35,15 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --ifm-link-color:#24c6bc;
+}
+html[data-theme='light']:root{
+  --ifm-menu-color: rgba(0,0,0,0.8);
+  --ifm-toc-link-color: rgba(0,0,0,0.6);
+}
+html[data-theme='dark']:root{
+  --ifm-menu-color: rgba(255,255,255,0.8);
+  --ifm-toc-link-color: rgba(255,255,255,0.6);
 }
 
 .docusaurus-highlight-code-line {
@@ -119,4 +148,122 @@ html[data-theme='dark'] .landing-container > a:hover {
     0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+html[data-theme='light'] .navbar--fixed-top{
+  background-color: rgb(242,242,242);
+  border-bottom: 1px solid #D9D9D9;
+}
+
+html[data-theme='dark'] .navbar--fixed-top{
+  background-color: rgb(31, 33, 36);
+  border-bottom: 1px solid #121416;
+}
+
+.dropdown > .navbar__link:after {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: currentColor transparent;
+  border-style: solid;
+  border-width: 5px 6px 0;
+  border-radius: 3px;
+  content: '';
+  display: inline-block;
+  margin-left: 13px;
+  position: relative;
+  top: 0px;
+  transform: translateY(-50%);
+}
+
+html[data-theme='dark'] .dropdown > .navbar__link:after {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.menu__link--active{
+  color: var(--ifm-link-color);
+}
+
+.menu__link--active:hover{
+  color: var(--ifm-link-color);
+}
+
+.navbar__link--active, .navbar__link:hover{
+  color: var(--ifm-link-color);
+
+}
+
+a{
+  color: var(--ifm-link-color);
+}
+
+a:hover{
+  color: var(--ifm-link-color);
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+    color: var(--ifm-link-color) ;
+}
+
+/* search bar */
+.aa-Autocomplete,
+.aa-DetachedFormContainer,
+.aa-Panel,
+.aa-DetachedSearchButtonIcon,
+.aa-Input,
+.aa-Label svg,
+.aa-LoadingIndicator svg {
+    color: var(--ifm-link-color) !important;
+}
+
+.aa-DetachedSearchButton{
+    color: var(--ifm-link-color) !important;
+
+}
+
+.aa-InputWrapper>input::placeholder{
+    color: var(--ifm-link-color) !important;
+
+}
+
+.aa-Form{
+  border: 1px solid var(--ifm-link-color) !important;
+}
+.aa-DetachedSearchButton:focus{
+  border-color: var(--ifm-link-color) !important;
+}
+
+.theme-doc-sidebar-item-category-level-1{
+  margin-top:24px !important;
+}
+
+.menu__list-item:not(:first-child){
+  margin-top: 4px;
+}
+
+.menu__link--sublist-caret:after {
+  content: '';
+  margin-left: auto;
+  min-width: 0.5rem;
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1rem 1rem;
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+  height: 0.5rem;
+  transform: rotate(180deg);
+  width: 0.5rem;
+  transition: transform var(--ifm-transition-fast) linear;
+}
+
+.table-of-contents__left-border{
+  border-left:unset
+}
+
+h1{
+  font-family: 'Red Hat Text Bold';
+  font-size: 24px;
+}
+
+h2,h3,h4,h5,h6{
+  font-family: 'Red Hat Text SemiBold';
+  font-size: 20px;
 }

@@ -1,0 +1,17 @@
+.docItemContainer header + *,
+.docItemContainer article > *:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: 997px) {
+  .docItemCol {
+    max-width: 75% !important;
+  }
+  html[data-theme='light'] .docItemCol{
+    border-right: 1px solid #D9D9D9;
+  }
+
+  html[data-theme='dark'] .docItemCol{
+    border-right: 1px solid #121416;
+  }
+}
