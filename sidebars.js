@@ -146,7 +146,6 @@ module.exports = {
               label: 'Integration with Calamari',
               items: [
                 'calamari/DevelopOnDolphin',
-                'calamari/SDK',
                 {
                   type: "category",
                   label: 'Cross-Chain Interactions (XCM)',
