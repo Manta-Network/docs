@@ -1,8 +1,8 @@
 # ProofID
 
-ProofID is a protocol that allows users to verify their identity on-chain. Imagine that a user has an online identity linked to a private soul-bound token (i.e. an NFT which cannot be transferred). In order to prove their identity, they would need to:
+ProofID is a protocol that allows users to verify their identity on-chain. Imagine that a user has an online identity linked to a private soul-bound token (SBT), which is an NFT that cannot be transferred. We refer to the private SBT as a zkSBT. To prove their identity, they would need to:
 1. Show the zkSBT has been minted to their zkAddress.
-2. Show they have spending rights to that zkAddress.
+1. Show they have spending rights to that zkAddress.
 
 ## Transaction Data
 In order to perform the first step, let us recall how a [zkAsset (in this case, a zkSBT) is encoded in a UTXO](zkAsset.md)

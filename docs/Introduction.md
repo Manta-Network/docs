@@ -1,11 +1,15 @@
 # What is Manta?
 
-Manta is the universal private blockchain platform. We are building a scalable, composable, and private network from first principles. Manta's zero-knowledge cryptography allows developers to build dapps with end-to-end privacy guarantees, which are also interoperable, easy to use, high-performance and auditable. Manta can bring privacy to DeFi, NFTs, GameFi, DAOs, and countless other blockchain applications.
+Manta Network is the zk layer 1 blockchain with the fastest prover speed that brings programmable privacy to web3. Its suite of core products and technologies, including zkNFTs and MantaPay, offers user-friendly access to powerful ZK-enabled use cases. 
+
+The project is created by a team of experienced founders from prestigious institutions like Harvard, MIT, and Algorand. Manta Network has received investments from some of the top web3 investment funds, including Binance Labs and Polychain, and has grown through participation in the best web3 accelerators, including Alliance DAO and Berkeley Blockchain Xcelerator. Manta Network is poised to bring the next generation of web3 users and usher in a new chapter of privacy-focused web3 applications.
+
+Furthermore, Manta Network provides Dolphin Testnet, the testnet for Manta Network that experiments with all new features coming to Manta Network at a later production stage.
 
 Manta offers two networks:
 
-- [Calamari Network](https://calamari.network/): Manta's canary network. Calamari is running as a Kusama Parachain.
-- [Manta Network](https://manta.network/): Manta's Polkadot parachain. Manta is looking forward to joining the Polkadot ecosystem!
+- [Manta Network](https://manta.network/): Manta’s primary production layer one network.
+- [Calamari Network](https://calamari.network/): Manta Network’s canary network, which runs as a separate, independent layer one network.
 
 <div class="landing-container">
         <a>
@@ -16,12 +20,15 @@ Manta offers two networks:
                 </h1>
                 <ul>
                     <li>
+                        <a href='https://www.manta.network/' target="_blank">Check out the main Manta Network website</a>.
+                    </li>
+                    <li>
                         <a href='https://docs.manta.network/docs/guides/MantaPay' target="_blank">Try Private Payments on Dolphin Testnet</a>.
                     </li>
                     <li>
-                        Join Manta Community (<a href='https://discord.gg/PRDBTChSsF' target="_blank">discord</a>, <a href='https://twitter.com/mantanetwork' target="_blank">twitter</a>, <a href='https://t.me/mantanetworkofficial' target='_blank'>telegram</a>).
+                        Join Manta Community (<a href='https://discord.gg/PRDBTChSsF' target="_blank">discord</a>, <a href='https://twitter.com/mantanetwork' target="_blank">twitter</a>, <a href='https://t.me/mantanetworkofficial' target='_blank'>telegram</a> or <a href='http://eepurl.com/hnoWQv' target='_blank'>newsletter</a>).
                     </li>                    <li>
-                        Check out &nbsp;<a href='calamari/Staking/Overview'>KMA Staking</a>.
+                        Calamari Network’s token is live! Check out&nbsp;<a href='calamari/Staking/Overview'>KMA Staking</a>.
                     </li>
                 </ul>
             </div>
@@ -43,7 +50,7 @@ Manta offers two networks:
             <div>
                 <h1>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M414.8 40.79L286.8 488.8C281.9 505.8 264.2 515.6 247.2 510.8C230.2 505.9 220.4 488.2 225.2 471.2L353.2 23.21C358.1 6.216 375.8-3.624 392.8 1.232C409.8 6.087 419.6 23.8 414.8 40.79H414.8zM518.6 121.4L630.6 233.4C643.1 245.9 643.1 266.1 630.6 278.6L518.6 390.6C506.1 403.1 485.9 403.1 473.4 390.6C460.9 378.1 460.9 357.9 473.4 345.4L562.7 256L473.4 166.6C460.9 154.1 460.9 133.9 473.4 121.4C485.9 108.9 506.1 108.9 518.6 121.4V121.4zM166.6 166.6L77.25 256L166.6 345.4C179.1 357.9 179.1 378.1 166.6 390.6C154.1 403.1 133.9 403.1 121.4 390.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4L121.4 121.4C133.9 108.9 154.1 108.9 166.6 121.4C179.1 133.9 179.1 154.1 166.6 166.6V166.6z"/></svg>
-                    For Parachain Developers
+                    For Developers
                 </h1>
                 <ul>
                     <li>

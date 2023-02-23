@@ -2,6 +2,7 @@
 
 A collection of projects within the Calamari network.
 
+----
 ## Infrastructure
 
 ### MantaPay
@@ -18,6 +19,7 @@ Subscan is a high-precision Web3 explorer that is used to browse blockchain data
 
 XCM (Cross-Consensus Message Format (XCM) aims to be a language to communicate ideas between consensus systems.
 
+----
 ## DeFi
 
 ### Solarbeam
@@ -32,6 +34,7 @@ Solarbeam is a decentralized exchange, providing liquidity and enabling peer-to-
 
 Karura is a scalable, EVM-compatible network optimized for DeFi.
 
+----
 ## Wallets
 
 ### Talisman
@@ -52,6 +55,7 @@ Subwallet is a Web3 Extension Wallet for the Polkadot & Kusama networks.
 
 Polkadot.js is a browser-based vault for the management of your account keys.
 
+----
 ## Analytics
 
 ### Web3Go
@@ -60,6 +64,7 @@ Polkadot.js is a browser-based vault for the management of your account keys.
 
 Web3Go is an all-in-one open data analytics and service platform where everyone can grasp the value behind blockchain data.
 
+----
 ## Collators
 
 ### P2P
@@ -110,6 +115,7 @@ Staking providers, educational and informational channel about nodes, testnets a
 
 CertHum provides Web3 infrastructure and is building for a decentralized future.
 
+----
 ## Parachains
 
 ### Moonriver
