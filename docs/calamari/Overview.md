@@ -12,4 +12,4 @@ The Calamari parachain will be home to multiple privacy solutions, first of whic
 
 ## Guide
 
-To learn how to send private payments with Calamari, please see [our guide](https://docs.manta.network/docs/guides/DolphinPay).
+To learn how to send private payments with Calamari, please see [our guide](https://docs.manta.network/docs/guides/MantaPay).
