@@ -1,6 +1,6 @@
-# ProofID
+# Proof Key
 
-ProofID is a protocol that allows users to verify their identity on-chain. Imagine that a user has an online identity linked to a private soul-bound token (SBT), which is an NFT that cannot be transferred. We refer to the private SBT as a zkSBT. To prove their identity, they would need to:
+Proof Key is a protocol that allows users to verify their identity on-chain. Imagine that a user has an online identity linked to a private soul-bound token (SBT), which is an NFT that cannot be transferred. We refer to the private SBT as a zkSBT. To prove their identity, they would need to:
 1. Show the zkSBT has been minted to their zkAddress.
 1. Show they have spending rights to that zkAddress.
 
@@ -24,4 +24,4 @@ Only the owner of the spending key to that zkAddress would be able to generate s
 
 ## No gas fees!
 
-Even though the first step involves checking some on-chain data, neither the prover nor the verifier post any transactions there. This means that both steps of the ProofID protocol happen off-chain, sparing the user of any gas fees!
+Even though the first step involves checking some on-chain data, neither the prover nor the verifier post any transactions there. This means that both steps of the Proof Key protocol happen off-chain, sparing the user of any gas fees!
