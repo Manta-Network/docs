@@ -29,7 +29,7 @@ module.exports = {
             'concepts/zkAsset',
             'concepts/zkAddress',
             'concepts/TrustedSetup',
-            'concepts/proofID',
+            'concepts/proofkey',
           ],
         },
         {
