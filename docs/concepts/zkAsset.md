@@ -11,7 +11,7 @@ zkAssets have the following properties:
 
 * **Privacy by Default**: zkAssets are private by default (a.k.a. zero-knowledge) on chain, which means that the asset holder’s zkAddress, the nomination of the assets of each holder, as well as the type of the assets are encrypted on chain.
 
-* **Disclosing at Will**: zkAssets support disclosing provable assets information with the assets holders permission. More specifically, the asset holders can disclose the asset transaction history to auditors without having to disclose the spending secret key. The asset holders are also able to selectively disclose the assets information that can be verified using zero-knowledge proofs (see [proofID](proofID.md)).
+* **Disclosing at Will**: zkAssets support disclosing provable assets information with the assets holders permission. More specifically, the asset holders can disclose the asset transaction history to auditors without having to disclose the spending secret key. The asset holders are also able to selectively disclose the assets information that can be verified using zero-knowledge proofs (see [Proof Key](proofkey.md)).
 
 * **Configurable Asset Policy**: zkAssets issuer can customize the access control policies of a zkAssets, for example, KYC rules, access control policy e.g. to have or not have the ability to blacklist the hacked assets.
 
