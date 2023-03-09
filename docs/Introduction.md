@@ -1,8 +1,8 @@
 # What is Manta?
 
-Manta Network is the zk layer 1 blockchain with the fastest prover speed that brings programmable privacy to web3. Its suite of core products and technologies, including zkNFTs and MantaPay, offers user-friendly access to powerful ZK-enabled use cases. 
+Manta Network is the zk layer 1 blockchain with the fastest prover speed and most decentralized trusted setup that brings programmable privacy to web3. Its suite of core products and technologies, including zkNFTs and MantaPay, offers user-friendly access to powerful ZK-enabled use cases.
 
-The project is created by a team of experienced founders from prestigious institutions like Harvard, MIT, and Algorand. Manta Network has received investments from some of the top web3 investment funds, including Binance Labs and Polychain, and has grown through participation in the best web3 accelerators, including Alliance DAO and Berkeley Blockchain Xcelerator. Manta Network is poised to bring the next generation of web3 users and usher in a new chapter of privacy-focused web3 applications.
+The project is created by a team of experienced founders from prestigious institutions including Harvard, MIT, and Algorand. The team began its research on Zero Knowledge Proof since 2019 during cross-border payment research project under the MIT Digital Currency Initiative with the Monetary Authority of Singapore. Manta Network has received investments from many of the top web3 investment funds, including Binance Labs and Polychain Capital, and has grown through participation in the best web3 accelerators, including Alliance DAO and Berkeley Blockchain Xcelerator. Manta Network is poised to bring the next generation of web3 users and usher in a new chapter of privacy-focused web3 applications.
 
 Furthermore, Manta Network provides Dolphin Testnet, the testnet for Manta Network that experiments with all new features coming to Manta Network at a later production stage.
 
