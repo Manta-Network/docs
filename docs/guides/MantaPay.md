@@ -1,9 +1,10 @@
-# 🐬 Getting Started with MantaPay
+# Getting Started with MantaPay
 
-[The Dolphin zkTransact page](https://app.manta.network/dolphin/transact) allows users to privatize public assets to private or
-"zk" assets, transfer zk assets, and convert zk assets back to public assets.
+The  zkTransact page allows users to privatize public assets to private or "zk" assets, transfer zk assets, and convert zk assets back to public assets.
+- [zkTransact](https://app.manta.network/calamari/transact) page for Calamari Network
+- zkTransact page for Manta Network (coming soon)
 
-The most important concept to remember when using the Dolphin zkTransact page is that public assets and zk assets have different addresses: public addresses and zkAddresses. There is no relationship between a public address and a zkAddress.
+The most important concept to remember when using the zkTransact page is that public assets and zk assets have different addresses: public addresses and zkAddresses. There is no relationship between a public address and a zkAddress.
 
 ## Setup Testnet Accounts
 
@@ -97,7 +98,7 @@ Click on one of the faucet options prompt:
    </div>
 <br/>
 
-Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, to test cross-chain bridging of assets onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/DolphinBridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
+Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, to test cross-chain bridging of assets onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/Bridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
 
 Confirm the updated balance in [bridge page](https://app.manta.network/dolphin/bridge) and remember to set the correct origin chain (Note: change origin chain to dolphin to see dol balance)
 
@@ -117,13 +118,13 @@ Hint: When you are requesting MOVR token, please enter your Metamask Address. Fo
 
 <br/>
 
-## Try MantaPay on Dolphin Testnet
+## Using MantaPay on Calamari Network
 
 Now let's send some private payments!
 
 ### Run Signer
 
-If Signer is not already running, open signer and enter your password to log in:
+If the Manta Signer is not already running, open the Manta Signer and enter your password to log in:
 
 <br/>
    <div style={{textAlign: 'center'}}>
@@ -131,7 +132,7 @@ If Signer is not already running, open signer and enter your password to log in:
    </div>
 <br/>
 
-   Go to [Dolphin App](https://app.manta.network/dolphin/transact). If Manta Signer is connected, you will see your zkAddress the top right corner of the screen:
+   Go to [MantaPay on Calamari](https://app.manta.network/calamari/transact). If Manta Signer is connected, you will see your zkAddress at the top right corner of the screen:
 <br/>
    <div style={{textAlign: 'center'}}>
     <img alt="signer_connected" src="/img/guides/signer_connected.png" width="80%"/>
@@ -141,13 +142,13 @@ If Signer is not already running, open signer and enter your password to log in:
 
 ### Convert Public Assets to Private Assets
 
-   Select the public address you are sending from, the token you are sending, and the amount you want to send to your zkAddress. Press "To Private" to submit:
+   Select the public address you are sending from, the token you are sending, and the amount you want to send to your zkAddress. Press "To Private" to submit.
 
    <div style={{textAlign: 'center'}}>
     <img alt="to_private" src="/img/guides/to_private.png" width="50%"/>
    </div>
    <br/>
-   Your browser wallet will prompt you to approve the transfer, and then publish it to the Dolphin blockchain:
+   Your browser wallet will prompt you to approve the transfer, and then publish it to the Calamari blockchain.
 
 <br/>
 <br/>
@@ -158,27 +159,25 @@ If Signer is not already running, open signer and enter your password to log in:
 <br/>
 
 ### Send Private Assets to a zkAddress
-   Press the private-public toggle button at the top of the form, so that you can send tokens from your zkAddress instead of your public address.
+    Press the private-public toggle button at the top of the form, so that you can send tokens from your zkAddress instead of your public address.
    <div style={{textAlign: 'center'}}>
     <img alt="toggle_public_private" src="/img/guides/toggle_public_private.png" width="50%"/>
    </div>
    <br/>
 
 
-   Select the token you want to send, enter the amount you are sending, and enter the destination zkAddress. If you need an example zkAddress to send to, you can send to yourself (click on the copy icon next to your zkAddress), or to this example zkAddress:
-
-   `DfZHqhfhtvjSxGY3c6UBnfDAPYCyF8xz9G4bHTHfCrYE`
+   Select the token you want to send, enter the amount you are sending, and enter the destination zkAddress.
 
 :::note
-zkAddresses and public addresses have a different format, and are not interchageable! You cannot send a private transfer to a public address, or a public transfer to a private address.
+zkAddresses and public addresses have a different format, and are not interchangeable! You cannot send a private transfer to a public address, or a public transfer to a private address.
 :::
 
-   Now click "Private Transfer" to begin the transaction.
+   Click "Private Transfer" to begin the transaction.
    <div style={{textAlign: 'center'}}>
     <img alt="private_transfer" src="/img/guides/private_transfer.png" width="50%"/>
    </div>
 <br/>
-   Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
+   ner will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
 <br/>
 <br/>
    <div style={{textAlign: 'center'}}>
@@ -187,7 +186,7 @@ zkAddresses and public addresses have a different format, and are not interchage
 
 <br/>
 
-   Finally, your browser wallet will prompt you to approve the transfer and then publish it to the Dolphin blockchain.
+   Finally, your browser wallet will prompt you to approve the transfer and then publish it to the Calamari blockchain.
   <div style={{textAlign: 'center'}}>
     <img alt="private_transfer_publish" src="/img/guides/private_transfer_publish.png" width="30%"/>
    </div>
@@ -216,7 +215,7 @@ zkAddresses and public addresses have a different format, and are not interchage
    </div>
    <br/>
 
-   Finally, polkadot.js will prompt you to approve the transfer and, then publish it to the Dolphin blockchain.
+   Finally, polkadot.js will prompt you to approve the transfer and, then publish it to the Calamari blockchain.
 
    <br/>
     <div style={{textAlign: 'center'}}>
@@ -226,12 +225,12 @@ zkAddresses and public addresses have a different format, and are not interchage
 <br/>
 
 ## Troubleshooting
-- If you are using Brave browser, make sure that your shields are down, as they block connection to Manta Signer.
+-If you are using Brave browser, make sure that your shields are down, as they block connection to Manta Signer.
 <div style={{textAlign: 'center'}}>
 <img alt="brave-shields" src="/img/guides/brave-shields.png" width="60%"/>
 </div>
-- Check that one of Talisman, SubWallet, or polkadot.js is installed, and has permission to connect to the Dolphin web app.
-  - In polkadot.Js, click on the ⚙️ icon on the top-right corner, then click on "Manage Website Access", then "app.dolphin.manta.network" is set to "Allowed":
+- Check that one of Talisman, SubWallet, or polkadot.js is installed, and has permission to connect to the Manta web app.
+  - In polkadot.js, click on the ⚙️ icon on the top-right corner, then click on "Manage Website Access", then "app.manta.network" is set to "Allowed":
    <div style={{textAlign: 'center'}}>
     <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="60%"/>
    </div>
@@ -247,8 +246,7 @@ zkAddresses and public addresses have a different format, and are not interchage
 - If you see "..." or "Syncing to network," wait for your balances to finish loading before trying to transact.
 - Try refreshing the page.
 
-If all these checks pass and you still can't send transactions, please let us know on discord in the [`#dolphin-testnet`](https://discord.gg/c72QMWEVyY) channel so that we can improve Dolphin!
-
+If all these checks pass and you still can't send transactions, please let us know on [Discord](https://www.discord.gg/mantanetwork) so that we can improve Manta!
 
 ## FAQ
 
