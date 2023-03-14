@@ -10,7 +10,7 @@ The most important concept to remember when using the zkTransact page is that pu
 
 ### Install a Browser Wallet and Create a Public Address
 
-Currently, Dolphin Testnet V3 supports Talisman, SubWallet, Polakdot.js wallets to manage public assets.
+Currently, MantaPay on Calamari supports Talisman, SubWallet and Polkadot.js wallets to manage public assets.
 
 To get started, click the "Connect Wallet" button.
 
@@ -25,18 +25,15 @@ To get started, click the "Connect Wallet" button.
 If you don't already have a wallet installed, click the "Install" link for your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page and the button text will change from "Install" to "Connect".
 
 <br/>
-
    <div style={{textAlign: 'center'}}>
     <img alt="connect_wallet_modal" src="/img/guides/connect_wallet_modal.png" width="50%"/>
    </div>
-
 <br/>
 
 
 Once you have a wallet installed, click the "Connect Wallet" button, press "Connect", and follow the prompts from your wallet extension. When you have successfully connected, you will see the wallet in the navbar.
 
 <br/>
-
    <div style={{textAlign: 'center'}}>
     <img alt="wallet_connected" src="/img/guides/wallet_connected.png" width="80%"/>
    </div>
@@ -80,44 +77,6 @@ Open Manta Signer and follow instructions to create your zkAddress. See our [gui
    </div>
 <br/>
 
-### Get Testnet Tokens
-
-Join [Manta & Calamari's Discord](https://t.co/5BacMMLSCW), navigate to the `#dolphin-faucet` channel, and type `/gimme` (Note: do not press enter to send). You should see a list of faucet options prompt:
-
-<br/>
-   <div style={{textAlign: 'center'}}>
-    <img alt="faucet_bot_select_option" src="/img/guides/faucet_bot_select_option.png" width="70%"/>
-   </div>
-<br/>
-
-Click on one of the faucet options prompt:
-
-<br/>
-   <div style={{textAlign: 'center'}}>
-    <img alt="faucet_bot_enter_address" src="/img/guides/faucet_bot_enter_address.png" width="70%"/>
-   </div>
-<br/>
-
-Enter your polkadot address and claim some `DOL`. Feel free to claim other testnet tokens like `KSM`, `KAR`, `MOVR`, to test cross-chain bridging of assets onto Dolphin (see our guide to bridging [here](https://docs.manta.network/docs/guides/Bridge)). If you want to do private transactions with bridged coins, you will still need `DOL` to pay fees. Note that you can finish this guide with only `DOL`.
-
-Confirm the updated balance in [bridge page](https://app.manta.network/dolphin/bridge) and remember to set the correct origin chain (Note: change origin chain to dolphin to see dol balance)
-
-<br/>
-   <div style={{textAlign: 'center'}}>
-    <img alt="check_balance" src="/img/guides/check_balance.png" width="70%"/>
-   </div>
-<br/>
-
-Hint: When you are requesting MOVR token, please enter your Metamask Address. For other tokens (KAR, KSM, DOL), please enter your Polkadot Address.
-
-<br/>
-   <div style={{textAlign: 'center'}}>
-    <img alt="copy_account_address" src="/img/guides/copy_account_address.png" width="70%"/>
-   </div>
-<br/>
-
-<br/>
-
 ## Using MantaPay on Calamari Network
 
 Now let's send some private payments!
@@ -159,7 +118,7 @@ If the Manta Signer is not already running, open the Manta Signer and enter your
 <br/>
 
 ### Send Private Assets to a zkAddress
-    Press the private-public toggle button at the top of the form, so that you can send tokens from your zkAddress instead of your public address.
+Press the private-public toggle button at the top of the form, so that you can send tokens from your zkAddress instead of your public address.
    <div style={{textAlign: 'center'}}>
     <img alt="toggle_public_private" src="/img/guides/toggle_public_private.png" width="50%"/>
    </div>
@@ -177,7 +136,7 @@ zkAddresses and public addresses have a different format, and are not interchang
     <img alt="private_transfer" src="/img/guides/private_transfer.png" width="50%"/>
    </div>
 <br/>
-   ner will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
+   Manta Signer will prompt you to enter your password and approve the transaction. Once approved, it will build a zero knowledge proof.
 <br/>
 <br/>
    <div style={{textAlign: 'center'}}>
@@ -185,7 +144,6 @@ zkAddresses and public addresses have a different format, and are not interchang
    </div>
 
 <br/>
-
    Finally, your browser wallet will prompt you to approve the transfer and then publish it to the Calamari blockchain.
   <div style={{textAlign: 'center'}}>
     <img alt="private_transfer_publish" src="/img/guides/private_transfer_publish.png" width="30%"/>
@@ -225,7 +183,7 @@ zkAddresses and public addresses have a different format, and are not interchang
 <br/>
 
 ## Troubleshooting
--If you are using Brave browser, make sure that your shields are down, as they block connection to Manta Signer.
+- If you are using Brave browser, make sure that your shields are down, as they block connection to Manta Signer.
 <div style={{textAlign: 'center'}}>
 <img alt="brave-shields" src="/img/guides/brave-shields.png" width="60%"/>
 </div>
@@ -262,7 +220,7 @@ If all these checks pass and you still can't send transactions, please let us kn
 
    See our [guide to Manta Signer](https://docs.manta.network/docs/guides/MantaSigner) for more details.
 
-4. How long do trnsactions take? Why is my transaction taking so long?
+4. How long do transactions take? Why is my transaction taking so long?
 
   After you have approved a transaction with your browser wallet, it should take about 45 seconds to finalize. Occasionally, transactions with many small inputs require multiple "batches"; you will have to to approve the first part of the transaction, wait for the first part of the transaction to finalize, and then approve the next part.
 
@@ -280,6 +238,11 @@ If all these checks pass and you still can't send transactions, please let us kn
 
    See our [guide to Manta Signer](https://docs.manta.network/docs/guides/MantaSigner) for more details.
 
-8. How long will the testnet run?
+8. Why is my transaction activity not showing up on my zkAddress account?
+When you click on your zkAddress, you can view your local activity. This activity is stored locally and viewable based on your browser account. If you switch browser accounts, you will not be able to view the transaction history from the account you originally conducted the transaction. To see that information, you can switch back to your original account.
 
-We will run various iterations of testnets over time and reset the network (after announcement) when necessary. Do not expect your testnet assets to be available forever. However, we will always maintain some kind of public testnet.
+10. I just received some zkAssets but I don't see it in my assets on the dapp. 
+Simply refresh the page, and you should see the zkAsset. If you still do not see it, double check with the sender to make sure that they sent to the correct zkAddress. zkAddress transactions cannot be reversed or refunded as they are immutable on-chain like any on-chain transaction, so please make sure you are sending to the correct address.
+
+11. Can I use MantaPay from anywhere?
+The mantaPay dApp hosted by p0x Labs aims to be compliant with existing regulations and so accessing it from the United States, China, Iran, Cuba, North Korea, Syria, Myanmar (Burma), the regions of Crimea, Donetsk or Luhansk is prohibited.

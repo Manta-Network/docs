@@ -36,11 +36,8 @@ How to bridge tokens.
 <br/>
 
 ## Troubleshooting
-- Check that one of Talisman, SubWallet, or polkadot.js is installed, and has permission to connect to the Dolphin web app.
-  - In polkadot.Js, click on the ⚙️ icon on the top-right corner, then click on "Manage Website Access", then "app.dolphin.manta.network" is set to "Allowed":
-   <div style={{textAlign: 'center'}}>
-    <img alt="polkadot-js-allowed" src="/img/guides/polkadot-js-allowed.png" width="60%"/>
-   </div>
+- Check that one of Talisman, SubWallet, or polkadot.js is installed, and has permission to connect to the Manta dApp.
+  - In polkadot.Js, click on the ⚙️ icon on the top-right corner, then click on "Manage Website Access", then "app.manta.network" is set to "Allowed".
   - In SubWallet, open Settings, then click on Manage Website Access, and unblock app.manta.network.
     <div style={{textAlign: 'center'}}>
     <img alt="polkadot-js-allowed" src="/img/guides/subwallet_settings.png" width="40%"/>
@@ -51,19 +48,18 @@ How to bridge tokens.
 - If you see "..." or "Syncing to network," wait for your balances to finish loading before trying to transact.
 - Try refreshing the page.
 
-If all these checks pass and you still can't send transactions, please let us know on discord in the [`#dolphin-testnet`](https://discord.gg/c72QMWEVyY) channel so that we can improve Dolphin!
-
+If all these checks pass and you still can't send transactions, please let us know on [Discord](https://discord.gg/c72QMWEVyY) so that we can improve Manta and Calamari!
 
 ## FAQ
 
-1. What is the Dolphin bridge page? Why do I need it?
+1. What is the bridge page? Why do I need it?
 
-   The Dolphin bridge page enables user to bridge assets between other testnet chains and Dolphin Testnet. Once assets are on Dolphin Testnet, users can then privatize them to enjoy the on-chain privacy.
+   The bridge page enables user to bridge assets between other chains and Manta or Calamari. Once assets are on our network, users can then privatize them to enjoy on-chain privacy.
 
 2. What are the origin and destination fee?
 
-   The origin fee is a fee paid on the chain you are trying to bridge from. The origin fee is paid in the origin chain's native token: DOL on Dolphin, KSM on Kusama, etc.
-   The destinatin fee is paid on the chain you are trying to bridge to. The destinatin fee is paid in the token you are bridging.
+   The origin fee is a fee paid on the chain you are trying to bridge from. The origin fee is paid in the origin chain's native token: KMA on Calamari, KSM on Kusama, etc.
+   The destination fee is paid on the chain you are trying to bridge to. The destination fee is paid in the token you are bridging.
 
 3. When do I need to connect Metamask?
 
@@ -71,18 +67,14 @@ If all these checks pass and you still can't send transactions, please let us kn
 
 4. What are the currently supported parachains?
 
-   Dolphin Testnet supports testnet Kusama, testnet Karura, and testnet Moonriver. All of these testnets are managed by Manta.
+   Calamari supports Kusama, Karura and Moonriver.
 
 5. What are substrate and EVM accounts?
 
-   A substrate account is the account type used by most Polkadot ecosystem blockchains, such as Dolphin, Kusama, and Polkadot.
+   A substrate account is the account type used by most Polkadot ecosystem blockchains, such as Calamari, Kusama, and Polkadot.
 
    An EVM account is the account type used by Ethereum and similar chains. Moonbeam and Moonriver use EVM accounts.
 
 6. Is my asset private immediately after bridging?
 
-   No, when you bridge asset from another parachain (e.g. Kusama) to Dolphin, your assets do not immediately become private. However, you can easily privatize public assets through [the zkTransact Page](https://app.manta.network/dolphin/transact)
-
-7. How long will the testnet run?
-
-    The testnet will run forever 👾
+   No, when you bridge asset from another parachain (e.g. Kusama) to Manta or Calamari, your assets do not immediately become private. However, you can easily privatize public assets through [the zkTransact Page](https://app.manta.network/calamari/transact)
