@@ -82,13 +82,7 @@ module.exports = {
           label: 'MantaPay',
           items: [
             'guides/MantaPay',
-            {
-              type: 'category',
-              label: 'Bridge',
-              items: [
-                'guides/DolphinBridge',
-              ]
-            }
+            'guides/Bridge',
           ]
         },
         {
