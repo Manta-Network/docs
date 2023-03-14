@@ -245,4 +245,4 @@ When you click on your zkAddress, you can view your local activity. This activit
 Simply refresh the page, and you should see the zkAsset. If you still do not see it, double check with the sender to make sure that they sent to the correct zkAddress. zkAddress transactions cannot be reversed or refunded as they are immutable on-chain like any on-chain transaction, so please make sure you are sending to the correct address.
 
 11. Can I use MantaPay from anywhere?
-The mantaPay dApp hosted by p0x Labs aims to be compliant with existing regulations and so accessing it from the United States, China, Iran, Cuba, North Korea, Syria, Myanmar (Burma), the regions of Crimea, Donetsk or Luhansk is prohibited.
+MantaPay aims to be compliant with existing regulations and so accessing it from the United States, China, Iran, Cuba, North Korea, Syria, Myanmar (Burma), the regions of Crimea, Donetsk or Luhansk is prohibited.
