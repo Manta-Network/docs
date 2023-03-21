@@ -14,10 +14,6 @@ MantaPay is an on-chain, multi-asset shielded pool that enables private transact
 
 NFT Private Offering (NPO) is set to revolutionize how users generate and mint zkNFTs/zkSBTs. NPO is an NFT/SBT launchpad that leverages the Manta Network’s zkAddress tooling and the MantaPay ZK circuit to privately mint NFTs/SBTs on zkAddress while using public tokens to pay minting fees.
 
-### AsMatch
-
-AsMatch is the world's first astrology-based Web3 socialfi matching app built for mobile. AsMatch is an innovative Web3 mobile app that combines AI-generated content (AIGC), zero-knowledge proofs (ZKPs) and zkSBTs powered by Manta Network, and a match-to-earn model with token incentives on BNB Chain. The app’s powerful astrology-focused matching engine connects users for dating, social networking, professional connections, and making new friends.
-
 ### Subscan
 
 [Twitter](https://twitter.com/subscan_io) | [Website](https://www.subscan.io/)
@@ -33,6 +29,14 @@ XCM(Cross-Consensus Message Format (XCM) aims to be a language to communicate id
 [Twitter](https://twitter.com/axelarcore) | [Website](https://axelar.network/)
 
 Axelar delivers secure cross-chain communication for Web3, enabling users to interact with various blockchains, applications, and crypto assets.
+
+---
+
+## SocialFi
+
+### AsMatch
+
+AsMatch is the world's first astrology-based Web3 socialfi matching app built for mobile. AsMatch is an innovative Web3 mobile app that combines AI-generated content (AIGC), zero-knowledge proofs (ZKPs) and zkSBTs powered by Manta Network, and a match-to-earn model with token incentives on BNB Chain. The app’s powerful astrology-focused matching engine connects users for dating, social networking, professional connections, and making new friends.
 
 ---
 
