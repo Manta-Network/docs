@@ -2,12 +2,17 @@
 
 A collection of projects within the Calamari network.
 
-----
+---
+
 ## Infrastructure
 
 ### MantaPay
 
-MantaPay is an on-chain, multi-asset shielded pool that enables private transacting using zkSNARK. It leverages a BYOT (Bring your own token) model, allowing users to privatize and transact with different cryptocurrencies. 
+MantaPay is an on-chain, multi-asset shielded pool that enables private transacting using zkSNARK. It leverages a BYOT (Bring your own token) model, allowing users to privatize and transact with different cryptocurrencies.
+
+### NPO
+
+NFT Private Offering (NPO) is set to revolutionize how users generate and mint zkNFTs/zkSBTs. NPO is an NFT/SBT launchpad that leverages the Manta Network’s zkAddress tooling and the MantaPay ZK circuit to privately mint NFTs/SBTs on zkAddress while using public tokens to pay minting fees.
 
 ### Subscan
 
@@ -25,7 +30,16 @@ XCM(Cross-Consensus Message Format (XCM) aims to be a language to communicate id
 
 Axelar delivers secure cross-chain communication for Web3, enabling users to interact with various blockchains, applications, and crypto assets.
 
-----
+---
+
+## SocialFi
+
+### AsMatch
+
+AsMatch is the world's first astrology-based Web3 socialfi matching app built for mobile. AsMatch is an innovative Web3 mobile app that combines AI-generated content (AIGC), zero-knowledge proofs (ZKPs) and zkSBTs powered by Manta Network, and a match-to-earn model with token incentives on BNB Chain. The app’s powerful astrology-focused matching engine connects users for dating, social networking, professional connections, and making new friends.
+
+---
+
 ## Wallets
 
 ### Talisman
@@ -46,7 +60,8 @@ Subwallet is a Web3 Extension Wallet for the Polkadot & Kusama networks.
 
 Polkadot.js is a browser-based vault for the management of your account keys.
 
-----
+---
+
 ## Dev Tools
 
 ### zkAddress
@@ -73,7 +88,8 @@ The Signer is a secret manager and zero-knowledge proof generator used with Mant
 
 Zero-Knowledge Cryptography Infrastructure Stack
 
-----
+---
+
 ## Analytics
 
 ### Web3Go
@@ -88,7 +104,8 @@ Web3Go is an all-in-one open data analytics and service platform where everyone 
 
 Subsquid is the most dev-friendly way to develop and deploy custom GraphQL APIs and ETLs for advanced blockchain use cases.
 
-----
+---
+
 ## Incubation Partners
 
 ### AllianceDao
@@ -115,7 +132,8 @@ Berkeley Blockchain Accelerator is a joint venture by three premier organization
 
 Based in Hong Kong, Singapore, and New York, Moonshot Commons is a global builder community for Gen-Z engineers in Web 3.
 
-----
+---
+
 ## Development Awards
 
 ### ZPrize
@@ -136,7 +154,8 @@ The Substrate Builders Program identifies, supports, and mentors current and pot
 
 The Web3 Foundation Grant program aims at nurturing cutting-edge applications for decentralized web software protocols.
 
-----
+---
+
 ## Research Partners
 
 ### Jump Crypto
@@ -169,7 +188,8 @@ RISC Zero is a zero-knowledge verifiable general computing platform based on zk-
 
 The Universal Privacy Alliance seeks to advance the understanding of privacy as the very basis of free and flourishing digital societies.
 
-----
+---
+
 ## Parachains
 
 ### Moonbeam
