@@ -139,7 +139,7 @@ module.exports = {
               type: 'category',
               label: 'Integration with Calamari',
               items: [
-                'calamari/DevelopOnDolphin',
+                'calamari/DevelopOnCalamari',
                 {
                   type: "category",
                   label: 'Cross-Chain Interactions (XCM)',
@@ -175,6 +175,28 @@ module.exports = {
                 'calamari/Staking/Collation/CollatorFAQ',
                 'calamari/Staking/Early Collator Program',
               ],
+            },
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Develop on Dolphin',
+          items: [
+            {
+              type: 'category',
+              label: 'Integration with Dolphin',
+              items: [
+                'calamari/DevelopOnDolphin',
+                {
+                  type: "category",
+                  label: 'Cross-Chain Interactions (XCM)',
+                  items: [
+                    'guides/XcmOverview',
+                    'guides/XcmTransfers',
+                    'guides/XcmOnboarding',
+                  ],
+                },
+              ]
             },
           ]
         },
