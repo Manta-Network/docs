@@ -9,7 +9,7 @@ To download an official release of Calamari, visit our [release page](https://gi
 
 ## Connecting With Polkadot-JS
 
-For development purposes, it is recommended to use the public Dolphin testnet.
+For development purposes, it is recommended to use the public Calamari testnet.
 
 1. Open a browser to `https://polkadot.js.org/apps/#/explorer`. This opens Polkadot.js Apps, which connects to Polkadot MainNet by default.
 2. In the top-left corner, open the menu and navigate to the Development sub-menu.
@@ -63,7 +63,7 @@ Note: For a complete simulation, you can run a relay chain with a full parachain
 
 ## Chain ID
 
-Dolphin testnet chain id is `2084`
+Calamari testnet chain id is `2084`
 
 ## Block Explorer
 
@@ -75,13 +75,13 @@ Polkadot.js Apps is another option, especially if you're running local developme
 
 ## Faucet
 
-To use the Dolphin faucet, head to our [Discord channel](https://discord.com/channels/795390654628102165/1055864933692219453).
+To use the Calamari faucet, head to our [Discord channel](https://discord.com/channels/795390654628102165/1029569907542720512).
 
 To receive tokens from the faucet, you'll need to get the attention of the faucet bot. Start by typing the command for the token you want, such as `/gimme-dol`. Discord will display a small pop-up asking for your wallet address.
 
 Type or paste your wallet address into the address field, then press enter to trigger the faucet request.
 
-You can request each of the four supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) once per UTC day. If you request the same token twice in the same day, the faucet bot will only respond with the status of your first request of the day. You can check the status of your address at https://faucet.dolphin.community/.
+You can request each of the four supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) once per UTC day. If you request the same token twice in the same day, the faucet bot will only respond with the status of your first request of the day.
 
 ## Development Tools
 
