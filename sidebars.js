@@ -198,6 +198,31 @@ module.exports = {
                 },
               ]
             },
+            {
+              type: "category",
+              label: 'Collation',
+              items: [
+                'calamari/Staking/Collation/Overview',
+                'calamari/Staking/Collation/Requirements',
+                {
+                  type: "category",
+                  label: 'SetupAndRun',
+                  items: [
+                    'calamari/Staking/Collation/SetupAndRun/installation',
+                    'calamari/Staking/Collation/SetupAndRun/configuration',
+                    'calamari/Staking/Collation/SetupAndRun/running',
+                    'calamari/Staking/Collation/SetupAndRun/sync',
+                    'calamari/Staking/Collation/SetupAndRun/keys',
+                    'calamari/Staking/Collation/SetupAndRun/bond',
+                  ],
+                },
+                'calamari/Staking/Collation/Maintenance',
+                'calamari/Staking/Collation/Reduce Bond',
+                'calamari/Staking/Collation/Unbond',
+                'calamari/Staking/Collation/CollatorFAQ',
+                'calamari/Staking/Early Collator Program',
+              ],
+            },
           ]
         },
         'Codebase'

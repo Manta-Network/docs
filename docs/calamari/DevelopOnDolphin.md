@@ -88,4 +88,6 @@ You can request each of the four supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) 
 * `manta.js Javascript SDK`: A set of functionality which connects your public address (polkadot-js), your private addresses (`manta-signer`) and manages the creation of the payloads required for `MantaPay` extrinsics.
 * `Mant Signer`: The signer is a desktop application which generates zero knowledge proofs and manages the private keys of your UTXOs. The signer is open sourced and you find instruction to set it up locally at [manta-signer](https://github.com/Manta-Network/manta-signer).
 * [zombienet](https://github.com/paritytech/zombienet) or the deprecated [polkadot-launch](https://github.com/paritytech/polkadot-launch) tool can help you set up a full relaychain + parachain network.
-* `Manta zkSBT SDK`:  A set of functionality which enable you to develop your own zkSBT.
+* `Manta zkSBT SDK`: zkSBT sdk is extension of manta-pay sdk, and add some custom logic, including:
+  - We have a pre-charge steps when reserve asset id of zkSBT.
+  - User mint zkSBT by provide metadata, the metadata of zkSBT can be image url or anything, but we have a size limit of metadata(Current is 300 length).
