@@ -76,7 +76,7 @@ module.exports = {
       label: 'Product Guides',
       collapsible: false,
       items: [
-        'guides/MantaSigner',
+
         {
           type: 'category',
           label: 'MantaPay',
@@ -117,6 +117,8 @@ module.exports = {
             // }
           ]
         },
+        'guides/MantaWallet',
+        'guides/MantaSigner',
       ],
     },
     {
