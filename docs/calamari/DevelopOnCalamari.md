@@ -68,7 +68,7 @@ Note: For a complete simulation, you can run a relay chain with a full parachain
 
 ## Chain ID
 
-Calamari testnet chain id is `2084`
+Calamari chain id is `2084`
 
 ## Block Explorer
 
@@ -77,16 +77,6 @@ A block explorer is like a search engine for the blockchain. It lets you search 
 Subscan is the main block explorer for the Substrate API. It can handle both standard and custom modules, so you can see information about Staking, Governance, and XCM pallets (or modules), among others. The code is open-source and available on the [Subscan Essentials GitHub repo](https://github.com/subscan-explorer/subscan-essentials).
 
 Polkadot.js Apps is another option, especially if you're running local development nodes. It's not a full-featured block explorer, but it lets you view events and query transaction hashes using the WebSocket endpoint. You can easily connect to Moonbeam, Moonriver, or Moonbase Alpha.
-
-## Faucet
-
-To use the Calamari faucet, head to our [Discord channel](https://discord.com/channels/795390654628102165/1029569907542720512).
-
-To receive tokens from the faucet, you'll need to get the attention of the faucet bot. Start by typing the command for the token you want, such as `/gimme-dol`. Discord will display a small pop-up asking for your wallet address.
-
-Type or paste your wallet address into the address field, then press enter to trigger the faucet request.
-
-You can request each of the four supported tokens (`DOL`, `KAR`, `KSM`, `MOVR`) once per UTC day. If you request the same token twice in the same day, the faucet bot will only respond with the status of your first request of the day.
 
 ## Development Tools
 
