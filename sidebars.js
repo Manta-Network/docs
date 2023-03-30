@@ -76,14 +76,15 @@ module.exports = {
       label: 'Product Guides',
       collapsible: false,
       items: [
-
         {
-          type: 'category',
+          type: 'doc',
           label: 'MantaPay',
-          items: [
-            'guides/MantaPay',
-            'guides/Bridge',
-          ]
+          id:  'guides/MantaPay',
+        },
+        {
+          type: 'doc',
+          label: 'Bridge',
+          id:  'guides/Bridge',
         },
         {
           type: 'category',
