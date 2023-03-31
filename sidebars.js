@@ -142,7 +142,11 @@ module.exports = {
               type: 'category',
               label: 'Integration with Calamari',
               items: [
-                'calamari/DevelopOnCalamari',
+                {
+                  type: 'doc',
+                  label: 'Get Started',
+                  id: 'calamari/DevelopOnCalamari',
+                },
                 {
                   type: "category",
                   label: 'Cross-Chain Interactions (XCM)',
@@ -189,7 +193,11 @@ module.exports = {
               type: 'category',
               label: 'Integration with Dolphin',
               items: [
-                'calamari/DevelopOnDolphin',
+                {
+                  type: 'doc',
+                  label: 'Get Started',
+                  id: 'calamari/DevelopOnDolphin',
+                },
                 {
                   type: "category",
                   label: 'Cross-Chain Interactions (XCM)',

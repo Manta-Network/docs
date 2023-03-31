@@ -2,9 +2,9 @@
 
 ## Introduction
 
-A blockchain app typicallly consists of a frontend application connecting to and interacting with a blockchain node via RPC or Websocket.
+A blockchain app typically consists of a frontend application connecting to and interacting with a blockchain node via RPC or Websocket.
 
-This guide provides step-by-step instructions test to your frontend application by 
+This guide provides step-by-step instructions test to your frontend application by
 - creating a non-networked local blockchain node for no-stakes testing, or
 - connecting to a node on the live Calamari Network.
 
@@ -13,7 +13,7 @@ To freely test on a public network with no economic risk, check our guide to the
 
 ## Developing against a local blockchain node
 
-This mode of development is recommended to work out your app functionality that does not depend on a long (real-world) history of user transactions as it is 
+This mode of development is recommended to work out your app functionality that does not depend on a long (real-world) history of user transactions as it is
 - simple
 - local to the developer, so no economic risk involved
 
@@ -52,7 +52,7 @@ source $HOME/.cargo/env
 
 ### Running the Blockchain Node
 
-Running the already compiled node can be done by invoking 
+Running the already compiled node can be done by invoking
 
 ```sh
   ./target/release/manta --chain=calamari-localdev --alice --tmp
@@ -115,7 +115,7 @@ It can handle both standard and custom modules, so you can see information about
 
 ## Useful Development Tools
 
--   `Manta.js Javascript SDK`: A set of functionality which connects your public address (polkadot-js), your private addresses (`manta-signer`) and manages the creation of the payloads required for `MantaPay` extrinsics.
+-   `Manta.js Javascript SDK`: A set of functionality which connects your public address (polkadot-js), your private addresses and manages the creation of the payloads required for `MantaPay` extrinsics.
 -   `Manta zkSBT SDK`: A set of functionality that can help you mint zkSBT, store and verify the proof key of zkSBT. To mint zkSBT, you need a Polkadot wallet and Manta Signer. In the future, you can replace Polkadot wallets and Manta Signer with Manta Wallet.
 -   `Manta Wallet Extension`: The extension is a browser extension which generates zero knowledge proofs and manages the private keys of your UTXOs. The extension is open sourced and you find instruction to set it up locally at [manta-extension](https://github.com/Manta-Network/manta-extension).
 -   `Manta Signer`: The signer is a desktop application which generates zero knowledge proofs and manages the private keys of your UTXOs. The signer is open sourced and you find instruction to set it up locally at [manta-signer](https://github.com/Manta-Network/manta-signer).
