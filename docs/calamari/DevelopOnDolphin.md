@@ -72,7 +72,7 @@ cargo run --release -- --chain=dolphin-localdev --alice --tmp
 :::note
 `dolphin-localdev` eliminates the need for a relay chain and creates a block each time a single transaction is received (but not otherwise)
 
-If you need a more complete blockchain creating blocks periodically like mainnet, you can use substrate ecosystem tools like [zombienet or polkadot-launch](#Development-Tools) and use the `--chain=calamari-local` chainspec when running the nodes instead.
+If you need a more complete blockchain creating blocks periodically like mainnet, you can use substrate ecosystem tools like [zombienet or polkadot-launch](#Development-Tools) and use the `--chain=dolphin-local` chainspec when running the nodes instead.
 :::
 
 ## Connecting With Polkadot-JS
