@@ -19,13 +19,13 @@ This mode of development is recommended to work out your app functionality that 
 
 ### Download Manta Executable
 
-To download an official release of Calamari, visit our [release page](https://github.com/Manta-Network/Manta/releases).
+To download an official release of Dolphin, visit our [release page](https://github.com/Manta-Network/Manta/releases).
 
 ### Alternative: Compile Manta Executable
 
 Building your own binary is especially useful if you're not working on a Linux as we don't distribute binaries for Mac/Windows. Furthermore should you need to customize something in your testing environment related to the node, you can rebuild it locally:
 
-1. Clone the specific tag of the Calamari repository from this URL: `https://github.com/Manta-Network/Manta/`
+1. Clone the specific tag of the Dolphin repository from this URL: `https://github.com/Manta-Network/Manta/`
 
 ```sh
 git clone https://github.com/Manta-Network/Manta
