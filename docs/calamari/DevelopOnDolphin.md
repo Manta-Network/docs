@@ -6,9 +6,9 @@ A blockchain app typically consists of a frontend application connecting to and 
 
 This guide provides step-by-step instructions test to your frontend application by
 - creating a non-networked local blockchain node for no-stakes testing, or
-- connecting to a node on the live Calamari Network.
+- connecting to a node on the live Dolphin Network.
 
-Dolphin is a testnet network to Calamari with no economic risk. If you want to use on public network, check our guide to the [Calamari NetWork](DevelopOnCalamari.md).
+Dolphin is a testnet network to Calamari Network with no economic risk. If you want to use on public network, check our guide to the [Calamari NetWork](DevelopOnCalamari.md).
 
 
 ## Developing against a local blockchain node
@@ -56,21 +56,21 @@ source $HOME/.cargo/env
 Running the already compiled node can be done by invoking
 
 ```sh
-  ./target/release/manta --chain=calamari-localdev --alice --tmp
+  ./target/release/manta --chain=dolphin-localdev --alice --tmp
 ```
 
 Alternatively, you can build and run in one step:
 
 ```sh
-cargo run --release -- --chain=calamari-localdev --alice --tmp
+cargo run --release -- --chain=dolphin-localdev --alice --tmp
 ```
 
 :::note
-`calamari-localdev` exposes the websocket at port 9944 by default, if you need to customize this, you can pass an additional parameter `--ws-port 42069` to use e.g port 42069 instead.
+`dolphin-localdev` exposes the websocket at port 9944 by default, if you need to customize this, you can pass an additional parameter `--ws-port 42069` to use e.g port 42069 instead.
 :::
 
 :::note
-`calamari-localdev` eliminates the need for a relay chain and creates a block each time a single transaction is received (but not otherwise)
+`dolphin-localdev` eliminates the need for a relay chain and creates a block each time a single transaction is received (but not otherwise)
 
 If you need a more complete blockchain creating blocks periodically like mainnet, you can use substrate ecosystem tools like [zombienet or polkadot-launch](#Development-Tools) and use the `--chain=calamari-local` chainspec when running the nodes instead.
 :::
