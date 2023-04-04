@@ -1,4 +1,4 @@
-# MantaBridge User Guide
+# Manta Bridge User Guide
 
 How to bridge tokens.
 
