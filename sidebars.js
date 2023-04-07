@@ -118,7 +118,7 @@ module.exports = {
             // }
           ]
         },
-        // 'guides/MantaWallet',
+        'guides/MantaWallet',
         'guides/MantaSigner',
       ],
     },
