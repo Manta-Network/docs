@@ -118,7 +118,22 @@ module.exports = {
             // }
           ]
         },
-        'guides/MantaWallet',
+        {
+          type: 'category',
+          label: 'Manta Wallet',
+          items:[
+            {
+              type: 'doc',
+              label: 'Get Started',
+              id: 'guides/MantaWallet',
+            },
+            {
+              type: 'doc',
+              label: 'Migration',
+              id: 'guides/MantaWalletMigration',
+            },
+          ]
+        },
         'guides/MantaSigner',
       ],
     },
