@@ -21,7 +21,7 @@ Next you will need to copy the Secret Recovery Phrase.
    </div>
 <br/>
 
-After that you can create Manta Wallet account from the browser extension.
+After that you can import account to Manta Wallet from the browser extension.
 
 <br/>
 
