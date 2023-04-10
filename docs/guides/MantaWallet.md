@@ -6,7 +6,7 @@ Manta Wallet is a browser extension that protects your spending secrets and buil
 
 The latest version of Manta Wallet extension for chromium can be installed from [here](https://chrome.google.com/webstore/detail/manta-walletstaging/ojfnheclkhcophocgofibdgofgijnfck).
 :::tip
-Manta Signer will be deprecated in the future. Users can migrate their account to Manta Wallet by following [migration instruction](./MantaWalletTransfer).
+Manta Signer will be deprecated in the future. Users can migrate their account to Manta Wallet by following [migration instruction](/docs/guides/MantaWalletMigration).
 :::
 
 ## Creating a New Account
