@@ -1,10 +1,16 @@
 # Manta Wallet
 
-Manta Wallet is a browser extension that protects your spending secrets and builds zero-knowledge proofs. It allows you to send and receive private (or "zk") assets.
+Manta Wallet is a browser extension that protects your spending secrets and builds zero-knowledge proofs. It allows you to send and receive zkAssets.
+:::tip notice
+Currently Manta Wallet can be use only in [NPO](https://npo.manta.network/), in the future it will support the other Dapps like Manta Pay,Bridge and Staking.
+:::
 
 ## Installation
 
 The latest version of Manta Wallet extension for chromium can be installed from [here](https://chrome.google.com/webstore/detail/manta-walletstaging/ojfnheclkhcophocgofibdgofgijnfck).
+:::tip
+Manta Signer will be deprecated in the future. Users can migrate their account to Manta Wallet by following [migration instruction](/docs/guides/MantaWalletMigration).
+:::
 
 ## Creating a New Account
 
@@ -17,7 +23,7 @@ To create a new account, install the Wallet Extension and select the first optio
    </div>
 <br/>
 
-Next you will have to pick a password that you will use to unlock the Signer. Please pick a strong password which is at least 8 characters long.
+Next you will have to pick a password that you will use to unlock the Manta Wallet. Please pick a strong password which is at least 8 characters long.
 
 <br/>
 
@@ -46,5 +52,14 @@ After you have created your account, you will be brought to the home page. And f
 
    <div style={{textAlign: 'center'}}>
     <img alt="sync-data" src="/img/guides/manta-wallet/sync-data.png" width="50%"/>
+   </div>
+<br/>
+
+And after the sync is finished. You can switch to zkAssets and starting to use it.
+
+<br/>
+
+   <div style={{textAlign: 'center'}}>
+    <img alt="sync-data" src="/img/guides/manta-wallet/switch-zk.png" width="50%"/>
    </div>
 <br/>
