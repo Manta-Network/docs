@@ -77,6 +77,22 @@ module.exports = {
       collapsible: false,
       items: [
         {
+          type: 'category',
+          label: 'Manta Wallet',
+          items:[
+            {
+              type: 'doc',
+              label: 'Get Started',
+              id: 'guides/MantaWallet',
+            },
+            {
+              type: 'doc',
+              label: 'Migration',
+              id: 'guides/MantaWalletMigration',
+            },
+          ]
+        },
+        {
           type: 'doc',
           label: 'MantaPay',
           id:  'guides/MantaPay',
@@ -116,22 +132,6 @@ module.exports = {
             //     'guides/staking/MANTA/Overview',
             //   ],
             // }
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Manta Wallet',
-          items:[
-            {
-              type: 'doc',
-              label: 'Get Started',
-              id: 'guides/MantaWallet',
-            },
-            {
-              type: 'doc',
-              label: 'Migration',
-              id: 'guides/MantaWalletMigration',
-            },
           ]
         },
         'guides/MantaSigner',
