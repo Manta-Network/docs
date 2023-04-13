@@ -1,6 +1,6 @@
 # Manta Wallet
 
-Manta Wallet is a browser extension that protects your spending secrets and builds zero-knowledge proofs. It allows you to send and receive private (or "zk") assets.
+Manta Wallet is a browser extension that protects your spending secrets and builds zero-knowledge proofs. It allows you to send and receive zkAssets.
 :::tip notice
 Currently Manta Wallet can be use only in [NPO](https://npo.manta.network/), in the future it will support the other Dapps like Manta Pay,Bridge and Staking.
 :::
@@ -55,7 +55,7 @@ After you have created your account, you will be brought to the home page. And f
    </div>
 <br/>
 
-And after the sync is finished. You can switch to private(zk) assets and starting to use it.
+And after the sync is finished. You can switch to zkAssets and starting to use it.
 <br/>
 
    <div style={{textAlign: 'center'}}>
