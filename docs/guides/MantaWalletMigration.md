@@ -38,3 +38,21 @@ Paste the phrase from Manta Signer and waiting for your account's import to be f
     <img alt="import-phrase" src="/img/guides/manta-wallet/migration/import-phrase.png" width="50%"/>
    </div>
 <br/>
+
+For the first time you need to sync zkAssets manually.
+
+<br/>
+
+   <div style={{textAlign: 'center'}}>
+    <img alt="sync-data" src="/img/guides/manta-wallet/sync-data.png" width="50%"/>
+   </div>
+<br/>
+
+And after the sync is finished. You can switch to see zkAsset's balance and starting to use it.
+
+<br/>
+
+   <div style={{textAlign: 'center'}}>
+    <img alt="sync-data" src="/img/guides/manta-wallet/switch-zk.png" width="50%"/>
+   </div>
+<br/>

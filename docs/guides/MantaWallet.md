@@ -56,6 +56,7 @@ After you have created your account, you will be brought to the home page. And f
 <br/>
 
 And after the sync is finished. You can switch to zkAssets and starting to use it.
+
 <br/>
 
    <div style={{textAlign: 'center'}}>
