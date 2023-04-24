@@ -1,10 +1,11 @@
 # Getting Started with Manta Wallet
 
-The  zkTransact page allows users to privatize public assets to private or "zk" assets, transfer zk assets, and convert zk assets back to public assets.
-- [zkTransact](https://app.manta.network/calamari/transact) page for Calamari Network
-- zkTransact page for Manta Network (coming soon)
+The MantaPay page allows users to privatize public assets to private or "zk" assets, transfer zk assets, and convert zk assets back to public assets.
 
-The most important concept to remember when using the zkTransact page is that public assets and zk assets have different addresses: public addresses and zkAddresses. There is no relationship between a public address and a zkAddress.
+ - [MantaPay](https://app.manta.network/calamari/transact) page for Calamari Network.
+ - MantaPay page for Manta Network (coming soon).
+
+The most important concept to remember when using the MantaPay is that public assets and zk assets have different addresses: public addresses and zkAddresses. There is no relationship between a public address and a zkAddress.
 
 ## Setup Accounts
 
