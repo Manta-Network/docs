@@ -8,7 +8,7 @@ The most important concept to remember when using the zkTransact page is that pu
 
 ## Setup Accounts
 
-### Install Manta Wallet and Create a Public Address
+### Install Manta Wallet and Create an account
 
 Currently, MantaPay on Calamari supports Talisman, SubWallet and Polkadot.js wallets to manage public assets.
 
@@ -39,19 +39,9 @@ Once you have a wallet installed, click the "Connect Wallet" button, press "Conn
    </div>
 <br/>
 
-### Create a zkAccount with Manta Wallet
+### Open Wallet and sync data
 
-Manta Wallet is a browser extension to turbo-charge zero-knowledge proof generation. It allows you to send and receive private payments.
-
-To create a zkAccount, you can follow the [Wallet guide](/docs/guides/MantaWallet.md).
-
-## Using MantaPay on Calamari Network
-
-When you finished the [Wallet guide](/docs/guides/MantaWallet.md), let's send some private payments!
-
-### Open Wallet
-
-Ensure wallet is unlocked and blocks sync is finished.
+Follow the [Wallet guide](/docs/guides/MantaWallet.md), ensure wallet is unlocked and blocks sync is finished.
 
 <br/>
    <div style={{textAlign: 'center'}}>
@@ -93,7 +83,7 @@ zkAddresses and public addresses have a different format, and are not interchang
 
    Click "Private Transfer" to begin the transaction.
    <div style={{textAlign: 'center'}}>
-    <img alt="private_transfer" src="/img/guides/manta-wallet/private_transfer.png" width="50%"/>
+    <img alt="private_transfer" src="/img/guides/private_transfer.png" width="50%"/>
    </div>
 <br/>
    Manta Wallet will prompt you to double approve the transaction. Once approved, it will build a zero knowledge proof and begin to transact.
