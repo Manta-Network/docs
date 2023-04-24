@@ -11,7 +11,7 @@ The most important concept to remember when using the MantaPay is that public as
 
 ### Install Manta Wallet and Create an account
 
-Currently, MantaPay on Calamari supports Talisman, SubWallet and Polkadot.js wallets to manage public assets.
+Currently, MantaPay on Calamari supports Manta Wallet, Talisman, SubWallet and Polkadot.js wallets. We recommend that you use Manta Wallet. Because it has both a public address and a zkAddress, you only need it to access all the functions of MantaPay.
 
 To get started, click the "Connect Wallet" button.
 
@@ -23,7 +23,7 @@ To get started, click the "Connect Wallet" button.
 
 <br/>
 
-If you don't already have a wallet installed, click the "Install" link for your chosen wallet. Once you install the wallet, it will give you instructions to set up your first account. When you are finished, refresh the page and the button text will change from "Install" to "Connect".
+If you don't already have a Manta Wallet installed, click the "Install" link for it. Once you install the Manta Wallet, it will give you instructions to set up your first account. When you are finished, refresh the page and the button text will change from "Install" to "Connect".
 
 <br/>
    <div style={{textAlign: 'center'}}>
@@ -31,8 +31,7 @@ If you don't already have a wallet installed, click the "Install" link for your 
    </div>
 <br/>
 
-
-Once you have a wallet installed, click the "Connect Wallet" button, press "Connect", and follow the prompts from your wallet extension. When you have successfully connected, you will see the wallet in the navbar.
+Once you have Manta Wallet installed, click the "Connect Wallet" button, press "Connect", and follow the prompts from your wallet extension. When you have successfully connected, you will see the wallet in the navbar.
 
 <br/>
    <div style={{textAlign: 'center'}}>
