@@ -93,9 +93,20 @@ module.exports = {
           ]
         },
         {
-          type: 'doc',
-          label: 'MantaPay',
-          id:  'guides/MantaPay',
+          type: 'category',
+          label: 'Manta Pay',
+          items:[
+            {
+              type: 'doc',
+              label: 'Manta Wallet User (New)',
+              id: 'guides/MantaPay-Wallet',
+            },
+            {
+              type: 'doc',
+              label: 'Manta Signer User',
+              id: 'guides/MantaPay-Signer',
+            },
+          ]
         },
         {
           type: 'doc',
