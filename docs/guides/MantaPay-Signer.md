@@ -1,4 +1,4 @@
-# Getting Started with MantaPay
+# Getting Started with Manta Signer
 
 The  zkTransact page allows users to privatize public assets to private or "zk" assets, transfer zk assets, and convert zk assets back to public assets.
 - [zkTransact](https://app.manta.network/calamari/transact) page for Calamari Network
@@ -6,7 +6,7 @@ The  zkTransact page allows users to privatize public assets to private or "zk" 
 
 The most important concept to remember when using the zkTransact page is that public assets and zk assets have different addresses: public addresses and zkAddresses. There is no relationship between a public address and a zkAddress.
 
-## Setup Testnet Accounts
+## Setup Accounts
 
 ### Install a Browser Wallet and Create a Public Address
 
@@ -241,7 +241,7 @@ If all these checks pass and you still can't send transactions, please let us kn
 8. Why is my transaction activity not showing up on my zkAddress account?
 When you click on your zkAddress, you can view your local activity. This activity is stored locally and viewable based on your browser account. If you switch browser accounts, you will not be able to view the transaction history from the account you originally conducted the transaction. To see that information, you can switch back to your original account.
 
-10. I just received some zkAssets but I don't see it in my assets on the dapp. 
+10. I just received some zkAssets but I don't see it in my assets on the dapp.
 Simply refresh the page, and you should see the zkAsset. If you still do not see it, double check with the sender to make sure that they sent to the correct zkAddress. zkAddress transactions cannot be reversed or refunded as they are immutable on-chain like any on-chain transaction, so please make sure you are sending to the correct address.
 
 11. Can I use MantaPay from anywhere?
