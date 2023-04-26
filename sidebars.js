@@ -171,7 +171,7 @@ module.exports = {
             },
             {
               type: 'doc',
-              label: 'How to Use Manta.js SDK',
+              label: 'How to use Manta.js SDK',
               id: 'developers/manta.js/how-to-use-manta-js-sdk',
             },
             {
