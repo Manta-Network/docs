@@ -175,13 +175,13 @@ module.exports = {
                 },
                 {
                   type: 'doc',
-                  label: 'How to Use Manta.js SDK',
-                  id: 'developers/manta.js/how-to-use-manta-js-sdk',
+                  label: 'How to Use Manta Private Wallet in Dapp',
+                  id: 'developers/manta.js/how-to-use-manta-private-wallet-in-dapp',
                 },
                 {
                   type: 'doc',
-                  label: 'How to Use Manta Private Wallet in Dapp',
-                  id: 'developers/manta.js/how-to-use-manta-private-wallet-in-dapp',
+                  label: 'How to Use Manta.js SDK',
+                  id: 'developers/manta.js/how-to-use-manta-js-sdk',
                 },
               ]
             },
