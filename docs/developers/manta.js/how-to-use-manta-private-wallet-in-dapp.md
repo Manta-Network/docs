@@ -5,7 +5,7 @@ This doc mainly introduces the private-related content in Manta Wallet; some oth
 
 ## Examples
 
-  - [`extension-example`](../examples/extension-example). Temporary online website: https://2076b1.csb.app
+  - [`extension-example`](https://github.com/Manta-Network/sdk/tree/sbt_doc/manta-js/examples/extension-example). Temporary online website: https://2076b1.csb.app
 
 ## Initialize
 
@@ -32,7 +32,7 @@ const privateWallet = mantaWallet?.privateWallet;
 
 ## TypeScript type support
 
-Just import the [interfaces.ts](../examples/extension-example/src/interfaces.ts) file, which will be published to npm later.
+Just import the [interfaces.ts](https://github.com/Manta-Network/sdk/blob/sbt_doc/manta-js/examples/extension-example/src/interfaces.ts) file, which will be published to npm later.
 
 ``` typescript
 const privateWallet = privateWallet as InjectedPrivateWallet;

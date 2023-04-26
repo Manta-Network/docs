@@ -4,12 +4,12 @@ The SDK is no longer directly provided to the dApp side, but allows the wallet t
 
 ## Examples
 
-- [sdk-example](../examples/sdk-example) Check out this example to get a quicker understanding of how to use the manta.js SDK
+- [sdk-example](https://github.com/Manta-Network/sdk/tree/sbt_doc/manta-js/examples/sdk-example) Check out this example to get a quicker understanding of how to use the manta.js SDK
 
 
 ## Some key Class introductions
 
-- [BaseWallet.ts](../package/src/BaseWallet.ts) The basic instance of all wallets, which handles some common logic
+- [BaseWallet.ts](https://github.com/Manta-Network/sdk/blob/sbt_doc/manta-js/package/src/BaseWallet.ts) The basic instance of all wallets, which handles some common logic
 ``` typescript
 export type Network = 'Dolphin' | 'Calamari' | 'Manta';
 
@@ -40,7 +40,7 @@ export interface IBaseWallet {
   log(message: string, name?: string): void;
 }
 ```
-- [PrivateWallet.ts](../package/src/PrivateWallet.ts) The base class for all wallets, which handles the common functions of wallets
+- [PrivateWallet.ts](https://github.com/Manta-Network/sdk/blob/sbt_doc/manta-js/package/src/PrivateWallet.ts) The base class for all wallets, which handles the common functions of wallets
 ``` typescript
 export type PalletName = 'mantaPay' | 'mantaSBT';
 
@@ -69,7 +69,7 @@ export interface IPrivateWallet {
   resetState(): Promise<boolean>;
 }
 ```
-- [pallets/MantaPayWallet.ts](../package/src/pallets/MantaPayWallet.ts) Inherited PrivateWallet and implemented MantaPay related functions
+- [pallets/MantaPayWallet.ts](https://github.com/Manta-Network/sdk/blob/sbt_doc/manta-js/package/src/pallets/MantaPayWallet.ts) Inherited PrivateWallet and implemented MantaPay related functions
 ``` typescript
 export type SignedTransaction = {
   posts: any;
@@ -92,7 +92,7 @@ export interface IMantaPayWallet extends IPrivateWallet {
   ): Promise<SignedTransaction | null>;
 }
 ```
-- [pallets/MantaSbtWallet.ts](../package/src/pallets/MantaSbtWallet.ts) Inherited PrivateWallet and implemented MantaSBT related functions
+- [pallets/MantaSbtWallet.ts](https://github.com/Manta-Network/sdk/blob/sbt_doc/manta-js/package/src/pallets/MantaSbtWallet.ts) Inherited PrivateWallet and implemented MantaSBT related functions
 ``` typescript
 export type SignedMultiSbtPost = {
   transactionDatas: any[];
@@ -106,7 +106,7 @@ export interface IMantaSbtWallet extends IPrivateWallet {
   getIdentityProof(virtualAsset: string, polkadotAddress: Address,): Promise<any>;
 }
 ```
-- [ledger-api/index.ts](../package/src/ledger-api/index.ts) Interface for pulling ledger data
+- [ledger-api/index.ts](https://github.com/Manta-Network/sdk/blob/sbt_doc/manta-js/package/src/ledger-api/index.ts) Interface for pulling ledger data
 ``` typescript
 export interface ILedgerApi {
   api: ApiPromise;
@@ -171,7 +171,7 @@ await mantaPayWallet.initialSigner();
 const mantaSbtWallet = MantaSbtWallet.init('Dolphin', baseWallet);
 await mantaSbtWallet.initialSigner();
 ```
-### 4. Load the user seed phrase, there are two types of user permissions in the SDK: 
+### 4. Load the user seed phrase, there are two types of user permissions in the SDK:
 - Related to the signature transaction, the user's seed phrase needs to be loaded
 ``` typescript
 // Step 1: load user seed phrase
