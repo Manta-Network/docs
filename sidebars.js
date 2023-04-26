@@ -170,11 +170,6 @@ module.exports = {
               items: [
                 {
                   type: 'doc',
-                  label: 'How to Mint zkSBT',
-                  id: 'developers/manta.js/how-to-mint-zk-sbt',
-                },
-                {
-                  type: 'doc',
                   label: 'How to Use Manta Private Wallet in Dapp',
                   id: 'developers/manta.js/how-to-use-manta-private-wallet-in-dapp',
                 },
@@ -182,6 +177,11 @@ module.exports = {
                   type: 'doc',
                   label: 'How to Use Manta.js SDK',
                   id: 'developers/manta.js/how-to-use-manta-js-sdk',
+                },
+                {
+                  type: 'doc',
+                  label: 'How to Mint zkSBT',
+                  id: 'developers/manta.js/how-to-mint-zk-sbt',
                 },
               ]
             },
