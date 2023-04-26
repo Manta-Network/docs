@@ -165,25 +165,19 @@ module.exports = {
           label: 'Develop on Calamari',
           items: [
             {
-              type: 'category',
+              type: 'doc',
+              label: 'How to use Manta Wallet in dApp',
+              id: 'developers/manta.js/how-to-use-manta-private-wallet-in-dapp',
+            },
+            {
+              type: 'doc',
+              label: 'How to Use Manta.js SDK',
+              id: 'developers/manta.js/how-to-use-manta-js-sdk',
+            },
+            {
+              type: 'doc',
               label: 'How to Mint zkSBT',
-              items: [
-                {
-                  type: 'doc',
-                  label: 'How to Use Manta Private Wallet in Dapp',
-                  id: 'developers/manta.js/how-to-use-manta-private-wallet-in-dapp',
-                },
-                {
-                  type: 'doc',
-                  label: 'How to Use Manta.js SDK',
-                  id: 'developers/manta.js/how-to-use-manta-js-sdk',
-                },
-                {
-                  type: 'doc',
-                  label: 'How to Mint zkSBT',
-                  id: 'developers/manta.js/how-to-mint-zk-sbt',
-                },
-              ]
+              id: 'developers/manta.js/how-to-mint-zk-sbt',
             },
             {
               type: 'category',
