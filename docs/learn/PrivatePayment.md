@@ -41,7 +41,7 @@ This discussion is not entirely self-contained but we will attempt to explain cr
 
 ### Participants (in detail)
 
-- `Alice` (_sender_): a participant that already has access to some assets and is guaranteed by the `Ledger` the ability to spen them.
+- `Alice` (_sender_): a participant that already has access to some assets and is guaranteed by the `Ledger` the ability to spend them.
 - `Bob` (_receiver_): a participant that can be uniquely identified by other _senders_ and will be guaranteed the ability to spend received assets in the future.
 - `Ledger`: represents all public information (the _state_) and the network of validators (_blockchain_) which come to consensus on the private transfer of ownership of assets between _senders_ and _receivers_.
 
