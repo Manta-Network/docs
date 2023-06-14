@@ -95,6 +95,11 @@ module.exports = {
 							label: 'Update',
 							id: 'guides/MantaWalletUpdate',
 						},
+						{
+							type: 'doc',
+							label: 'Consolidate UTXOs',
+							id: 'guides/ConsolidateUTXOs',
+						},
 					],
 				},
 				{
