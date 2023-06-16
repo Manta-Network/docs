@@ -14,7 +14,7 @@ If you own a mobile app, regardless of whether it is Web2 or Web3, you can conne
 <br/>
 
    <div style={{textAlign: 'center'}}>
-    <img alt="setup_page" src="/img/guides/npo/developer.png" width="50%"/>
+    <img alt="setup_page" src="/img/guides/npo/developer.gif" width="50%"/>
    </div>
 <br/>
 

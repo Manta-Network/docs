@@ -5,14 +5,14 @@
 ### Minting page
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab" src="/img/guides/npo/zkbab.png" width="50%"/>
+    <img alt="zkbab" src="/img/guides/npo/zkbab.gif" width="50%"/>
    </div>
 <br/>
 Leveraging the existing [Binance Account Bound](https://www.binance.com/en/BABT?source=header) (BAB) token, an SBT offered by Binance as proof of KYC, Manta will allow any BAB token holders to mint a corresponding, privacy-preserving zkBAB. The zkBAB marks a major new milestone in on-chain identity, offering both a level of compliance verification with on-chain privacy benefits, delivered in a decentralized manner that is controlled by the user.
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab_logo" src="/img/guides/npo/zkbab_logo.png" width="50%"/>
+    <img alt="zkbab_logo" src="/img/guides/npo/zkbab_logo.png" width="40%"/>
    </div>
 <br/>
 
@@ -22,14 +22,14 @@ The zkBAB delivers a similar digital verification experience as the BAB for Bina
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab" src="/img/guides/npo/zkgalaxy.png" width="50%"/>
+    <img alt="zkbab" src="/img/guides/npo/zkgalaxy.gif" width="50%"/>
    </div>
 <br/>
 Leveraging the existing Galxe Passport, an SBT offered by Galxe as proof of KYC, Manta will allow any Galxe Passport token holders to mint a corresponding, privacy-preserving zkGalxe. The zkGalxe marks a major new milestone in on-chain identity, offering both a level of compliance verification with on-chain privacy benefits, delivered in a decentralized manner that is controlled by the user.
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab_logo" src="/img/guides/npo/zkgalaxy_logo.png" width="50%"/>
+    <img alt="zkbab_logo" src="/img/guides/npo/zkgalaxy_logo.png" width="40%"/>
    </div>
 <br/>
 
@@ -39,14 +39,14 @@ The zkGalxe Passport offers a similar digital verification experience as the Gal
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab" src="/img/guides/npo/zkARB.png" width="50%"/>
+    <img alt="zkbab" src="/img/guides/npo/zkARB.gif" width="50%"/>
    </div>
 <br/>
 zkARB offers users a decentralized, trustless, and private way to verify their real identities without compromising any information or data leakage about their on-chain activity. Through the new zkSBT offerings launching starting today on [Manta Network’s NPO](https://npo.manta.network/calamari/sbt?utm_source=Medium&utm_campaign=zkArbitrum&utm_medium=Organic&utm_term=Global&utm_content=zkArbitrum+Announcement+Article), Arbitrum users will be able to privately verify various aspects of their on-chain identity without revealing any additional information. y benefits, delivered in a decentralized manner that is controlled by the user.
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab_logo" src="/img/guides/npo/zkARB_logo.png" width="50%"/>
+    <img alt="zkbab_logo" src="/img/guides/npo/zkARB_logo.png" width="40%"/>
    </div>
 <br/>
 
@@ -56,14 +56,14 @@ All three zkSBT mints will be available indefinitely; i.e., users can mint their
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkReadoN" src="/img/guides/npo/zkReadoN.png" width="50%"/>
+    <img alt="zkReadoN" src="/img/guides/npo/zkReadoN.gif" width="50%"/>
    </div>
 <br/>
 The ReadON zkPass offers a privacy-enhanced version of the ReadON Pass, powered by ZK. To obtain a ReadON Pass SBT, simply create an account on ReadON. From there, you can use the obtained ReadON Pass to mint a ReadON zkPass through the Manta Network NPO.
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkReadoN_logo" src="/img/guides/npo/zkReadoN_logo.png" width="50%"/>
+    <img alt="zkReadoN_logo" src="/img/guides/npo/zkReadoN_logo.png" width="40%"/>
    </div>
 <br/>
 
@@ -73,7 +73,7 @@ By proving their ownership and eligibility using this ReadON zkPass, users can a
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkProfile" src="/img/guides/npo/zkProfile.png" width="50%"/>
+    <img alt="zkProfile" src="/img/guides/npo/zkProfile.gif" width="50%"/>
    </div>
 <br/>
 
@@ -81,7 +81,7 @@ zkProfile offers users a decentralized, trustless, and private way to verify the
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkProfile_logo" src="/img/guides/npo/zkProfile_logo.png" width="50%"/>
+    <img alt="zkProfile_logo" src="/img/guides/npo/zkProfile_logo.png" width="40%"/>
    </div>
 <br/>
 
@@ -99,7 +99,7 @@ Manta Network is proud to support Linea in providing on-chain private soul-bound
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkPioneer_logo" src="/img/guides/npo/zkPioneer_logo.png" width="50%"/>
+    <img alt="zkPioneer_logo" src="/img/guides/npo/zkPioneer_logo.png" width="40%"/>
    </div>
 <br/>
 
@@ -117,7 +117,7 @@ Manta Network provides Ultiverse community members with the ability to mint zkGu
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkGuardian_logo" src="/img/guides/npo/zkGuardian_logo.png" width="50%"/>
+    <img alt="zkGuardian_logo" src="/img/guides/npo/zkGuardian_logo.png" width="40%"/>
    </div>
 <br/>
 
