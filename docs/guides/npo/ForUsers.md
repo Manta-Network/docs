@@ -56,14 +56,14 @@ All three zkSBT mints will be available indefinitely; i.e., users can mint their
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab" src="/img/guides/npo/zkReadoN.png" width="50%"/>
+    <img alt="zkReadoN" src="/img/guides/npo/zkReadoN.png" width="50%"/>
    </div>
 <br/>
 The ReadON zkPass offers a privacy-enhanced version of the ReadON Pass, powered by ZK. To obtain a ReadON Pass SBT, simply create an account on ReadON. From there, you can use the obtained ReadON Pass to mint a ReadON zkPass through the Manta Network NPO.
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab_logo" src="/img/guides/npo/zkReadoN_logo.png" width="50%"/>
+    <img alt="zkReadoN_logo" src="/img/guides/npo/zkReadoN_logo.png" width="50%"/>
    </div>
 <br/>
 
@@ -73,7 +73,7 @@ By proving their ownership and eligibility using this ReadON zkPass, users can a
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab" src="/img/guides/npo/zkProfile.png" width="50%"/>
+    <img alt="zkProfile" src="/img/guides/npo/zkProfile.png" width="50%"/>
    </div>
 <br/>
 
@@ -81,7 +81,7 @@ zkProfile offers users a decentralized, trustless, and private way to verify the
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab_logo" src="/img/guides/npo/zkProfile_logo.png" width="50%"/>
+    <img alt="zkProfile_logo" src="/img/guides/npo/zkProfile_logo.png" width="50%"/>
    </div>
 <br/>
 
@@ -91,7 +91,7 @@ Anyone with a CyberConnect Profile and 10 or more Web3 Status Tokens (W3STs) are
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab" src="/img/guides/npo/zkPioneer.png" width="50%"/>
+    <img alt="zkPioneer" src="/img/guides/npo/zkPioneer.png" width="50%"/>
    </div>
 <br/>
 
@@ -99,7 +99,7 @@ Manta Network is proud to support Linea in providing on-chain private soul-bound
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab_logo" src="/img/guides/npo/zkPioneer_logo.png" width="50%"/>
+    <img alt="zkPioneer_logo" src="/img/guides/npo/zkPioneer_logo.png" width="50%"/>
    </div>
 <br/>
 
@@ -109,7 +109,7 @@ The Linea zkPioneer enables any Web2 or Web3 applications (mobile or desktop) to
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab" src="/img/guides/npo/zkGuardian.png" width="50%"/>
+    <img alt="zkGuardian" src="/img/guides/npo/zkGuardian.png" width="50%"/>
    </div>
 <br/>
 
@@ -117,7 +117,7 @@ Manta Network provides Ultiverse community members with the ability to mint zkGu
 
 <br/>
    <div style={{textAlign: 'center'}}>
-    <img alt="zkbab_logo" src="/img/guides/npo/zkGuardian_logo.png" width="50%"/>
+    <img alt="zkGuardian_logo" src="/img/guides/npo/zkGuardian_logo.png" width="50%"/>
    </div>
 <br/>
 
