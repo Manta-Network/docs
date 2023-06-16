@@ -1,4 +1,4 @@
-# For users: How can I mint zkSBTs
+# For Users: How can I mint zkSBTs
 
 ## zkKYC: zkBAB
 

@@ -72,7 +72,7 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "For Developer",
+                            label: "For Developers",
                             id: "guides/npo/ForDeveloper",
                         },
                     ],
