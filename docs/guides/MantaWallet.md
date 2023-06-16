@@ -42,21 +42,21 @@ You will be brought to a page that displays your secret recovery phrase. Click t
 Write down your recovery phrase offline, somewhere hidden and secure. It is the only way to recover your assets if you lose access to your computer or forget your password!
 :::
 
-
-After you have created your account, you will be brought to the home page. And for the first time you need to sync zkAssets manually.
-
+Once your account is established, you'll be redirected to the home page. You can start using the public account right away with no further actions necessary, for activities such as utilizing Manta Wallet in Bridge, Staking, or NPO.
 <br/>
 
    <div style={{textAlign: 'center'}}>
     <img alt="sync-data" src="/img/guides/manta-wallet/sync-data.png" width="50%"/>
    </div>
 <br/>
-
-And after the sync is finished. You can switch to zkAssets and starting to use it.
+However, if you wish to use a zkAccount—for instance, to perform a "public to private", "private to public" or “private to private” transaction in MantaPay—you need to execute a few more steps. First, click on "Sync blocks to continue using the zkAccount" and switch over to the zkAccount. Subsequently, hit the "Blocks Sync Required" button to synchronize blocks. Once synchronization is complete, you are ready to use the zkAccount.
 
 <br/>
-
    <div style={{textAlign: 'center'}}>
     <img alt="sync-data" src="/img/guides/manta-wallet/switch-zk.png" width="50%"/>
    </div>
 <br/>
+
+   <div style={{textAlign: 'center'}}>
+    <img alt="sync-data" src="/img/guides/manta-wallet/switch-zk2.png" width="50%"/>
+   </div>
