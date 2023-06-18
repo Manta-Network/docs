@@ -161,7 +161,7 @@ module.exports = {
         },
         {
             type: "category",
-            label: "Calamari Network",
+            label: "Calamari Test Network",
             collapsible: false,
             items: [
                 {
@@ -198,7 +198,7 @@ module.exports = {
                 // },
                 {
                     type: "category",
-                    label: "Develop on Calamari",
+                    label: "Develop on Calamari Testnet",
                     items: [
                         {
                             type: "doc",
@@ -264,7 +264,7 @@ module.exports = {
                 },
                 {
                     type: "category",
-                    label: "Develop on Dolphin",
+                    label: "Develop on Dolphin Testnet",
                     items: [
                         {
                             type: "category",
