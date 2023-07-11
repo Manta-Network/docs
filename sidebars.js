@@ -27,13 +27,13 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "What is Manta Atlantic (Layer1)",
-                            id: "introduction/Manta-Atlantic",
+                            label: "What is Manta Pacific (Layer 2)",
+                            id: "introduction/Manta-Pacific",
                         },
                         {
                             type: "doc",
-                            label: "What is Manta Pacific (Layer 2)",
-                            id: "introduction/Manta-Pacific",
+                            label: "What is Manta Atlantic (Layer1)",
+                            id: "introduction/Manta-Atlantic",
                         },
                     ],
                 },
