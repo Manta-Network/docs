@@ -17,9 +17,25 @@ module.exports = {
             collapsible: false,
             items: [
                 {
-                    type: "doc",
+                    type: "category",
                     label: "What is Manta?",
-                    id: "Introduction",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "What is Manta?",
+                            id: "Introduction",
+                        },
+                        {
+                            type: "doc",
+                            label: "What is Manta Pacific (Layer 2)",
+                            id: "introduction/Manta-Pacific",
+                        },
+                        {
+                            type: "doc",
+                            label: "What is Manta Atlantic (Layer1)",
+                            id: "introduction/Manta-Atlantic",
+                        },
+                    ],
                 },
                 {
                     type: "category",
