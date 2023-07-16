@@ -1,6 +1,6 @@
 ---
-title: 'Tourial'
-description: 'zkShuffle SDK Tourial Step-by-Step'
+title: 'Tutorial'
+description: 'zkShuffle SDK Tutorial Step-by-Step'
 ---
 
 

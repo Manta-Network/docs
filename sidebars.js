@@ -188,10 +188,11 @@ module.exports = {
                 {
                     type: "category",
                     label: "Universal Circuits (Alpha): zkShuffle",
+
                     items: [
                         {
                             type: "doc",
-                            label: "zkShuffle Main Components",
+                            label: "Overview",
                             id: "zkShuffle-Overview",
                         },
                         {
