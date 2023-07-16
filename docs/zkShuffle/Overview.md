@@ -17,12 +17,12 @@ This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/c
 
 ### Solidity Contracts
 
-This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/contracts/contracts/shuffle) contains contracts that manages shuffled deck and verifies proofs on-chain. It comprises the manager contract, ShuffleManager.sol, as well as supplementary contracts tasked with operations such as encryption and decryption. The manager contract is responsible for creating new games, registering players, checking game states, and performing various operations required for game management. This frees developers from considering technical details such as card shuffling and dealing, such that developers could focuses on game logic contracts. [Read more](/docs/zkShuffle/ContractInterface)
+This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/contracts/contracts/shuffle) contains contracts that manages shuffled deck and verifies proofs on-chain. It comprises the manager contract, ShuffleManager.sol, as well as supplementary contracts tasked with operations such as encryption and decryption. The manager contract is responsible for creating new games, registering players, checking game states, and performing various operations required for game management. This frees developers from considering technical details such as card shuffling and dealing, such that developers could focuses on game logic contracts. [Read more](/docs/zkShuffle/Circuits/ContractInterface)
 
 ### Typescript SDK (Alpha)
 
-This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/jssdk) contains typescript SDK as the standard interface to interact with shuffle manager contract. Developers could use SDK to generate zk proof generation and gaming private and public key management. We have released it as an [npm package](https://www.npmjs.com/search?q=%40poseidon-zkp) for easy import in front-end implementation. [Read more](/docs/zkShuffle/TypescriptSDK)
+This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/jssdk) contains typescript SDK as the standard interface to interact with shuffle manager contract. Developers could use SDK to generate zk proof generation and gaming private and public key management. We have released it as an [npm package](https://www.npmjs.com/search?q=%40poseidon-zkp) for easy import in front-end implementation. [Read more](/docs/zkShuffle/Circuits/TypescriptSDK)
 
 ### Game Contracts
 
-Developers need to implement game contracts for a complete game, which contains game logic such as the order of players to take action and effects of each card. Please review this tutorial for a simple example: [Tutorial](/docs/zkShuffle/Tutorial)
+Developers need to implement game contracts for a complete game, which contains game logic such as the order of players to take action and effects of each card. Please review this tutorial for a simple example: [Tutorial](/docs/zkShuffle/Circuits/Tutorial)
