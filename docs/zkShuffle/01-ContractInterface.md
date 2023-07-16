@@ -7,15 +7,15 @@ description: 'zkShuffle Contract desc'
 # Overview
 
 zkShuffle Contracts provide two contract interfaces to help developers build their own card games:
-- [IShuffleStateManager](https://github.com/Poseidon-ZKP/Poseidon-ZKP/blob/main/packages/contracts/contracts/shuffle/IShuffleStateManager.sol): The manager of shuffle state machine, which creates and registers shuffle state, deals and opens cards.
-- [IBaseGame](https://github.com/Poseidon-ZKP/Poseidon-ZKP/blob/main/packages/contracts/contracts/shuffle/IBaseGame.sol): Developers need to inherit this interface when writing their own game contracts.
+- [IShuffleStateManager](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/IShuffleStateManager.sol): The manager of shuffle state machine, which creates and registers shuffle state, deals and opens cards.
+- [IBaseGame](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/IBaseGame.sol): Developers need to inherit this interface when writing their own game contracts.
 
 
 # IShuffleStateManager
 
 ### createShuffleGame
 
-```function createShuffleGame(uint8 numPlayers) external returns (uint256)```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L161-L163)
+```function createShuffleGame(uint8 numPlayers) external returns (uint256)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L161-L163)
 
 Creates a new game and returns the game ID of the newly created game.
 This could only be called by game contract.
@@ -46,7 +46,7 @@ contract Game is IBaseGame {
 
 ### register
 
-```function register(uint256 gameId, bytes calldata next) external```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L210-L217)
+```function register(uint256 gameId, bytes calldata next) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L210-L217)
 
 Enters the register state, which can only be called by the game owner.
 
@@ -60,7 +60,7 @@ Enters the register state, which can only be called by the game owner.
 
 ### playerRegister
 
-```function playerRegister(uint256 gameId, address signingAddr, uint256 pkX, uint256 pkY) external returns (uint256)```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L228-L233)
+```function playerRegister(uint256 gameId, address signingAddr, uint256 pkX, uint256 pkY) external returns (uint256)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L228-L233)
 
 Performs the registration for a certain player, which can be called by game contract or directly called by user.
 
@@ -111,7 +111,7 @@ contract Game is IBaseGame {
 
 ### shuffle
 
-```function shuffle(uint256 gameId, bytes calldata next) external```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L280-L283)
+```function shuffle(uint256 gameId, bytes calldata next) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L280-L283)
 
 Initiates the shuffle phase, which can only be called by game contract.
 
@@ -123,7 +123,7 @@ Initiates the shuffle phase, which can only be called by game contract.
 
 ### dealCardsTo
 
-```function shuffle(uint256 gameId, BitMaps.BitMap256 memory cards, uint256 playerId, bytes calldata next) external```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L332-L337)
+```function shuffle(uint256 gameId, BitMaps.BitMap256 memory cards, uint256 playerId, bytes calldata next) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L332-L337)
 
 Specifies a set of cards to be dealed to a players, which can only be called by game contract.
 
@@ -139,7 +139,7 @@ Specifies a set of cards to be dealed to a players, which can only be called by 
 
 ### openCards
 
-```function openCards(uint256 gameId, uint256 playerId, uint8 openningNum, bytes calldata next) external```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L477-L482)
+```function openCards(uint256 gameId, uint256 playerId, uint8 openningNum, bytes calldata next) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L477-L482)
 
 Specifies a player to open a number of cards, which can only be called by game contract.
 
@@ -159,7 +159,7 @@ Specifies a player to open a number of cards, which can only be called by game c
 
 ### endGame
 
-```function openCards(uint256 gameId) external```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L547-L548)
+```function openCards(uint256 gameId) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L547-L548)
 
 Ends the game, which can only be called by game contract.
 
@@ -168,7 +168,7 @@ Ends the game, which can only be called by game contract.
 
 ### curPlayerIndex
 
-```function curPlayerIndex(uint256 gameId) external returns(uint256)```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L78-L80)
+```function curPlayerIndex(uint256 gameId) external returns(uint256)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L78-L80)
 
 Gets the player index of which player needs to take action.
 
@@ -180,7 +180,7 @@ Gets the player index of which player needs to take action.
 
 ### getPlayerIdx
 
-```function getPlayerIdx(uint256 gameId, address player) external returns(uint256)```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L140-L143)
+```function getPlayerIdx(uint256 gameId, address player) external returns(uint256)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L140-L143)
 
 Gets the player index of `player` in `gameId` game.
 
@@ -214,7 +214,7 @@ contract Game is IBaseGame {
 
 ### getNumCards
 
-```function getNumCards(uint256 gameId) external returns(uint256)```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L64-L66)
+```function getNumCards(uint256 gameId) external returns(uint256)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L64-L66)
 
 Gets the number of cards.
 
@@ -226,7 +226,7 @@ Gets the number of cards.
 
 ### queryCardValue
 
-```function queryCardValue(uint256 gameId, uint256 cardIndex) external returns(uint256)```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L580-L583)
+```function queryCardValue(uint256 gameId, uint256 cardIndex) external returns(uint256)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L580-L583)
 
 Queries the card value of `cardIndex`-th card in `gameId`.
 
@@ -239,7 +239,7 @@ Queries the card value of `cardIndex`-th card in `gameId`.
 
 ### getDecryptRecord
 
-```function getDecryptRecord(uint256 gameId, uint256 cardIdx) external returns(BitMaps.BitMap256 memory)```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L86-L89)
+```function getDecryptRecord(uint256 gameId, uint256 cardIdx) external returns(BitMaps.BitMap256 memory)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L86-L89)
 
 Gets the decryption record (i.e., which players have decrypted this card).
 
@@ -252,7 +252,7 @@ Gets the decryption record (i.e., which players have decrypted this card).
 
 ### queryAggregatedPk
 
-```function queryAggregatedPk(uint256 gameId) external returns(uint px, uint py)```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L96-L98)
+```function queryAggregatedPk(uint256 gameId) external returns(uint px, uint py)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L96-L98)
 
 Queries the aggregated public key for card shuffling/dealing in `gameId`-th game. The public key is a elliptic curve point on BN254 G1 curve.
 

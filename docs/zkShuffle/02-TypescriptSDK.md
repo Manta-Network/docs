@@ -5,14 +5,14 @@ description: 'zkShuffle SDK Overview'
 
 # Overview
 
-zkShuffles SDK provides [IZKShuffle](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L47-L58) as a standard interface to interact with shuffle manager contract.
+zkShuffles SDK provides [IZKShuffle](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L47-L58) as a standard interface to interact with shuffle manager contract.
 The goal is to simplify zk proof generation and key management.
 With IZKShuffle interface, game developer can build zk game without any experience on cryptography including zero knowledge proof, and thus can focus on the game logic.
 
 # IZKShuffle
 
 ### joinGame
-```async joinGame(gameId: number): Promise<number>```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L128)
+```async joinGame(gameId: number): Promise<number>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L128)
 
 Joins the game specified by `gameId`, and returns the player ID per game.
 
@@ -23,7 +23,7 @@ Joins the game specified by `gameId`, and returns the player ID per game.
   - `playerId` : number
 
 ### checkTurn
-```async checkTurn(gameId: number, startBlock: any = 0): Promise<GameTurn>```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#LL140C3-L140C74)
+```async checkTurn(gameId: number, startBlock: any = 0): Promise<GameTurn>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#LL140C3-L140C74)
 
 Queries a player's current turn in game `gameId`, specified by `GameTurn:`
 
@@ -46,7 +46,7 @@ Queries a player's current turn in game `gameId`, specified by `GameTurn:`
 
 
 ### shuffle
-```async shuffle(gameId: number): Promise<boolean>```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#LL240C3-L240C50)
+```async shuffle(gameId: number): Promise<boolean>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#LL240C3-L240C50)
 
 Shuffles the deck in game `gameId` and submits a proof on-chain.
 
@@ -57,7 +57,7 @@ Shuffles the deck in game `gameId` and submits a proof on-chain.
 - `result` : boolean. `True` is shuffle successs, otherwise `False`.
 
 ### draw
-```async draw(gameId: number): Promise<boolean>```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L280)
+```async draw(gameId: number): Promise<boolean>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L280)
 
 Draws a card in game `gameId`, and submits a proof on-chain.
 
@@ -68,7 +68,7 @@ Draws a card in game `gameId`, and submits a proof on-chain.
 - `result` : boolean. `True` is draw successs, otherwise `False`
 
 ### open
-```async open(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L361)
+```async open(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L361)
 
 Opens cards specified by `cardIds` and submits a proof on-chain.
 > `open` automatically sends data to blockchain, such that it is not suitable for opening cards that are only visible to players. Use `openOffchain` instead in this case.
@@ -81,7 +81,7 @@ Opens cards specified by `cardIds` and submits a proof on-chain.
 - `cards` : the index of decrypted cards if open successfully; otherwise -1
 
 ### openOffchain
-```async openOffchain(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L342)
+```async openOffchain(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L342)
 
 Opens cards specified by `cardIds`. Returns card's original value if open successs, otherwise returns -1 for the card.
 > Different from `open` that sends the decryption onchain, `openOffchain` only shows decrypted card on user machine and does not send to blockchain.
@@ -94,7 +94,7 @@ Opens cards specified by `cardIds`. Returns card's original value if open succes
 - `cards` : number[]
 
 ### getPlayerId
-```async getPlayerId(gameId: number): Promise<number>```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L135)
+```async getPlayerId(gameId: number): Promise<number>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L135)
 
 Gets player's id from onchain game `gameId`.
 
@@ -105,7 +105,7 @@ Gets player's id from onchain game `gameId`.
 - `playerId` : number
 
 ### queryCards
-```async queryCards(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L352)
+```async queryCards(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L352)
 
 Gets the card value specified by `cardIds` from on-chain game `gameId`.
 

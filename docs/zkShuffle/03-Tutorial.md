@@ -98,7 +98,7 @@ contract Hilo is IBaseGame {
 }
 ```
 
-For the complete contract code, please see [[hilo]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/contracts/games/hilo/Hilo.sol).
+For the complete contract code, please see [[hilo]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/games/hilo/Hilo.sol).
 
 # Front end with SDK
 
@@ -179,4 +179,4 @@ We provide an end-to-end front-end code as follows:
   }
   ```
 
-For the complete end-to-end test, please see [[e2e]](https://github.com/Poseidon-ZKP/zkShuffle/blob/main/packages/contracts/tests/e2e.ts).
+For the complete end-to-end test, please see [[e2e]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/tests/e2e.ts).
