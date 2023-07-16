@@ -17,7 +17,7 @@ This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/c
 
 ### Solidity Contracts
 
-This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/contracts/contracts/shuffle) contains contracts that manages shuffled deck and verifies proofs on-chain. It comprises the manager contract, ShuffleManager.sol, as well as supplementary contracts tasked with operations such as encryption and decryption. The manager contract is responsible for creating new games, registering players, checking game states, and performing various operations required for game management. This frees developers from considering technical details such as card shuffling and dealing, such that developers could focuses on game logic contracts. **[Read more](https://docs.manta.network/docs/zkShuffle/ContractInterface)
+This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/contracts/contracts/shuffle) contains contracts that manages shuffled deck and verifies proofs on-chain. It comprises the manager contract, ShuffleManager.sol, as well as supplementary contracts tasked with operations such as encryption and decryption. The manager contract is responsible for creating new games, registering players, checking game states, and performing various operations required for game management. This frees developers from considering technical details such as card shuffling and dealing, such that developers could focuses on game logic contracts. [Read more](https://docs.manta.network/docs/zkShuffle/ContractInterface)
 
 ### Typescript SDK (Alpha)
 
