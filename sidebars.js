@@ -181,9 +181,35 @@ module.exports = {
             collapsible: false,
             items: [
                 {
-                    type: "doc",
-                    label: "Testnet Quickstart",
-                    id: "zkShuffle/Testnet-Quickstart",
+                    type: "category",
+                    label: "Testnet",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "EVM Compatibility",
+                            id: "manta-pacific/EVM Compatible",
+                        },
+                        {
+                            type: "doc",
+                            label: "Testnet Info",
+                            id: "manta-pacific/Testnet Info",
+                        },
+                        {
+                            type: "doc",
+                            label: "Block Explorer",
+                            id: "manta-pacific/Block Explorer",
+                        },
+                        {
+                            type: "doc",
+                            label: "Faucet",
+                            id: "manta-pacific/Faucet",
+                        },
+                        {
+                            type: "doc",
+                            label: "JSON-RPC Nodes",
+                            id: "manta-pacific/JSON-RPC Nodes",
+                        },
+                    ],
                 },
                 {
                     type: "category",
