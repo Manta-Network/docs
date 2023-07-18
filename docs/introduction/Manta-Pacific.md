@@ -12,7 +12,7 @@ Manta Pacific takes all of the work that the Manta team has already built on ZK,
 
 # How Does Manta Pacific Work?
 
-Manta Pacific is launched in the joint vision with Celestia and Optimism. By leveraging the data-availability layer provided by Celestia, the first modular consensus and data network, harnessing the advanced technology developed by p0x labs, and partnering with leading RaaS company Caldera, Manta Pacific build out an accessible ZK development environment in a modular, scalable manner with multiple groundbreaking advantages:
+Manta Pacific is launched in the joint vision with Celestia and Optimism. By leveraging the data-availability layer provided by Celestia, the first modular consensus and data network, harnessing the advanced technology developed by p0x labs, and partnering with leading RaaS company Manta Pacific, Manta Pacific build out an accessible ZK development environment in a modular, scalable manner with multiple groundbreaking advantages:
 
 ## 1. Significantly lower gas fee than any other ZK layer
 
@@ -20,7 +20,7 @@ Manta Pacific’s modular stack provides unparalleled scalability for future zkA
 
 Manta Pacific uses Celestia as the data availability (DA) layer. Celestia uses the state of art data availability sampling - a 2-D Reed-Solomon encoding and Namespaced Merkle Tree (NMTs) - to solve the data availability problem of L2s in a trust-minimized way. Manta Pacific, which uses Celestia as the DA layer, can dramatically reduce the data portion of transaction costs on the network for the end users.
 
-Manta Pacific uses Caldera’s customized OP Stack Rollup solution as the execution layer. OP Stack has already been adopted by top projects for rollup solutions including Coinbase, a16z and Worldcoin. As the de-facto standard of L2 scaling, especially with the recent launch of Bedrock, OP Stack offers the best interoperability, engineering maturity, and long-term ecosystem outlook. In addition to scaling the computation using OP Stack, we leverage Caldera’s stateful precompiles to further reduce the computation cost of zero-knowledge proof verification-related costs.
+Manta Pacific uses Manta Pacific’s customized OP Stack Rollup solution as the execution layer. OP Stack has already been adopted by top projects for rollup solutions including Coinbase, a16z and Worldcoin. As the de-facto standard of L2 scaling, especially with the recent launch of Bedrock, OP Stack offers the best interoperability, engineering maturity, and long-term ecosystem outlook. In addition to scaling the computation using OP Stack, we leverage Caldera’s stateful precompiles to further reduce the computation cost of zero-knowledge proof verification-related costs.
 
 ## 2. EVM + Manta’s universal circuit rather than new language for wide ZK applications adoption
 Manta Atlantic deployed the first generation of Universal Circuits for the web3 industry, which offered support for various zkAssets including both fungible tokens and NFTs. Through Universal Circuits on Manta Atlantic, developers only need to use high level APIs to access programmable zkAsset.
