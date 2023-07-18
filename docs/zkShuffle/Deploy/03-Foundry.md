@@ -4,7 +4,7 @@ Deploying Smart Contracts using Forge in Foundry
 
 ## What is Foundry?
 
-Foundry is a toolset for Ethereum development written in Rust that assists developers in managing dependencies, compiling projects, running tests, deploying contracts, and interacting with blockchains through the command line interface. Additionally, Foundry can directly communicate with Caldera's Ethereum API, enabling the use of Foundry to deploy smart contracts into the Caldera network.
+Foundry is a toolset for Ethereum development written in Rust that assists developers in managing dependencies, compiling projects, running tests, deploying contracts, and interacting with blockchains through the command line interface. Additionally, Foundry can directly communicate with Manta Pacific's Ethereum API, enabling the use of Foundry to deploy smart contracts into the Manta Pacific network.
 
 ## Getting Started with Foundry
 
@@ -60,7 +60,7 @@ Deploying a contract with Forge is a simple process that can be done with a sing
 
 For example, the MyToken.sol contract requires an initial supply of tokens to be specified in its constructor, so the command to deploy it on a network will include the argument of 100.
 
-To deploy the MyToken.sol contract, use the command that corresponds to the Caldera chain's RPC URL while running the forge create command:
+To deploy the MyToken.sol contract, use the command that corresponds to the Manta Pacific chain's RPC URL while running the forge create command:
 
 ``` bash
     forge create --rpc-url "RPC URL" //Insert your RPC URL here

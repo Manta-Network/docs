@@ -1,6 +1,6 @@
 # Deploy on Manta Pacific
 
-You can deploy your application onto a Manta Pacific Chain via the same means as any Ethereum-compatible blockchain. For the purpose of example, we'll use the Caldera testnet chain RPC URL, but these examples should work for any Manta Pacific chain.
+You can deploy your application onto a Manta Pacific Chain via the same means as any Ethereum-compatible blockchain. For the purpose of example, we'll use the Manta Pacific testnet chain RPC URL, but these examples should work for any Manta Pacific chain.
 
 This section is non-exhaustive and serves to give a high-level overview of configuring a project to use a Manta Pacific chain. The exact process to deploy your smart contracts varies depending on the development tooling you're using. As a general rule, the process for deploying on and interacting with a Manta Pacific chain is the same as any EVM-compatible chain (including Ethereum, Polygon, Binance Smart Chain, etc.).
 

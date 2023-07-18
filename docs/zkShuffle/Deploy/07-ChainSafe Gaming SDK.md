@@ -6,10 +6,10 @@ The Chain Gaming SDK is a software development kit that enables game developers 
 
 ## Quickstart
 
-Connect to Caldera Chains by providing the Caldera Chain RPC. All ChainSafe Gaming methods have an optional field to add an RPC URL. This returns the native token's balance for the chain.
+Connect to Manta Pacific Chains by providing the Manta Pacific Chain RPC. All ChainSafe Gaming methods have an optional field to add an RPC URL. This returns the native token's balance for the chain.
 
 ``` js
-    string chain = "caldera";
+    string chain = "Manta Pacific";
     string network = "testnet";
     string account = "token_account_here";
     string rpc = "RPC URL"; //Insert RPC URL here
@@ -18,6 +18,6 @@ Connect to Caldera Chains by providing the Caldera Chain RPC. All ChainSafe Gami
     print(balance);
 ```
 
-### More Information: [Custom Interactions | ChainSafe Gaming SDK](https://docs.gaming.chainsafe.io/custom-interactions)
+### More Information: [Custom Interactions | ChainSafe Gaming SDK](https://docs.gaming.chainsafe.io/current/installation/#downloading-the-sdk)
 
-### [ChainSafe Gaming: Documentation](https://docs.gaming.chainsafe.io/how-tos/)
+### [ChainSafe Gaming: Documentation]( https://docs.gaming.chainsafe.io/current/project-id-registration)

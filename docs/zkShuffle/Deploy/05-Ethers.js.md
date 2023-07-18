@@ -2,7 +2,7 @@
 
 ## What is Ethers.js?
 
-The Ethers.js library offers a collection of tools to interact with Ethereum nodes using JavaScript, similar to Web3.js. Caldera also has a similar API that is fully compatible with Ethereum's JSON RPC invocations. This means that developers can take advantage of this compatibility and use the Ethers.js library to interact with a Caldera node as if it were an Ethereum node.
+The Ethers.js library offers a collection of tools to interact with Ethereum nodes using JavaScript, similar to Web3.js. Manta Pacific also has a similar API that is fully compatible with Ethereum's JSON RPC invocations. This means that developers can take advantage of this compatibility and use the Ethers.js library to interact with a Manta Pacific node as if it were an Ethereum node.
 
 ## Getting Started with Ethers.js
 
@@ -39,6 +39,6 @@ The Ethers.js library offers a collection of tools to interact with Ethereum nod
     );
     ```
 
-Note: Ensure that all of your smart contracts are deployed on the Caldera chain and that you have updated contract addresses on the front-end.
+Note: Ensure that all of your smart contracts are deployed on the Manta Pacific chain and that you have updated contract addresses on the front-end.
 
 ## [Ethers.js Documentation](https://docs.ethers.org/v5/)

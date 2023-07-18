@@ -4,4 +4,4 @@ You can deploy your application onto a Manta Pacific Chain via the same means as
 - Websocket URL : wss://manta-testnet.calderachain.xyz/ws
 - Chain ID : 3441005
 
-[More Testnet Information](https://manta-testnet.caldera.dev/)
+[More Testnet Information](https://pacific.manta.network/)

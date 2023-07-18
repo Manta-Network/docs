@@ -2,7 +2,7 @@
 Deploying Smart Contracts using Hardhat
 
 ## What is Hardhat?
-Hardhat is a development environment for Ethereum that helps developers manage and automate the common tasks involved in building smart contracts and decentralized applications. It can directly interact with Caldera's Ethereum API, allowing for the deployment of smart contracts into the Caldera network. Additionally, Hardhat is a comprehensive set of tools for creating Ethereum-based software, which includes various components that aid in editing, compiling, debugging, and deploying smart contracts and decentralized applications. All of these components work together to create a complete development environment.
+Hardhat is a development environment for Ethereum that helps developers manage and automate the common tasks involved in building smart contracts and decentralized applications. It can directly interact with Manta Pacific's Ethereum API, allowing for the deployment of smart contracts into the Manta Pacific network. Additionally, Hardhat is a comprehensive set of tools for creating Ethereum-based software, which includes various components that aid in editing, compiling, debugging, and deploying smart contracts and decentralized applications. All of these components work together to create a complete development environment.
 
 ## Creating a Hardhat Project
 1. Create a directory for your project
@@ -52,7 +52,7 @@ touch secrets.json
 4. Modify the hardhat.config.js file
 - Import the Ethers plugin
 - Import the secrets.json file
-- Inside the module.exportsadd the Caldera network configuration
+- Inside the module.exports add the Manta Pacific network configuration
 
 ``` js
 //hardhat.config.js
