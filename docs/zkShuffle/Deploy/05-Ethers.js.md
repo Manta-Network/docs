@@ -23,10 +23,10 @@ The Ethers.js library offers a collection of tools to interact with Ethereum nod
 
     // 2. Define network configurations
     const providerRPC = {
-    caldera: {
-        name: 'Caldera',
-        rpc: 'RPC URL', // Insert your RPC URL here
-        chainId: CHAINID, //Insert your ChainID Here
+    manta: {
+        name: 'Manta',
+        rpc: 'https://manta-testnet.calderachain.xyz/http', // Insert your RPC URL here
+        chainId: 3441005, //Insert your ChainID Here
     },
     };
     // 3. Create ethers provider

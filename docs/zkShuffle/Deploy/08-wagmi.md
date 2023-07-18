@@ -13,7 +13,7 @@ The `jsonRpcProvider` configures the chains with the RPC URLs that you specify a
     import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 
     const { chains, provider } = configureChains(
-    [chain.testnet, chain.caldera],
+    [chain.testnet, chain.manta],
     [
         jsonRpcProvider({
             rpc: (chain) => ({

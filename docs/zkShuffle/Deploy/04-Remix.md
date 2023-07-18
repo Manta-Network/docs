@@ -33,6 +33,6 @@ Once you have written your Smart Contract in Remix, you can navigate to the side
 3. Use the following information to add Manta Pacific Testnet network to Metamask
   - Network: Caldera
   - New RPC URL: [https://manta-testnet.calderachain.xyz/http](https://manta-testnet.calderachain.xyz/http)
-  - Chain ID: 202550
-  - Currency Symbol: cETH
-  - Block Explorer URL: [https://manta-testnet.calderachain.xyz/](https://manta-testnet.calderachain.xyz/)
+  - Chain ID: 3441005
+  - Currency Symbol: manta
+  - Block Explorer URL: [https://manta-testnet.calderaexplorer.xyz/](https://manta-testnet.calderaexplorer.xyz/)

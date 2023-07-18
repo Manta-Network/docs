@@ -68,7 +68,7 @@ module.exports = {
       url: "https://eth-rinkeby.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
       accounts: [privateKey]
     },
-    caldera: {
+    manta: {
       url: "RPC URL",  // Insert your RPC URL Here
       chainId: CHAINID, //Insert your ChainID Here
     }
@@ -114,5 +114,5 @@ main()
 
 4. Deploy your_contract.sol using the command below
 ``` bash
-npx hardhat run scripts/deploy.js --network caldera
+npx hardhat run scripts/deploy.js --network manta
 ```
