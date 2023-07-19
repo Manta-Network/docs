@@ -5,7 +5,7 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 ## Adding Manta Testnet to MetaMask
 | Category         | Information                                 |
 | ---------------- | ------------------------------------------- |
-| Network Name     | manta-testnet                               |
+| Network Name     | Manta Testnet L2 Rollup                               |
 | Network URL      | https://manta-testnet.calderachain.xyz/http |
 | Chain ID         |3441005                                      |
 | Currency Symbol  | ETH                                         |
@@ -17,6 +17,6 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 | Websocket URL | wss://manta-testnet.calderachain.xyz/ws     |
 
 ### Obtaining Testnet Assets
-Manta Pacific uses ETH as the underlying asset for transaction fees. Request faucet funds for both [Manta and Goerli here](https://manta-testnet.caldera.dev/).
+Manta Pacific uses ETH as the underlying asset for transaction fees. Request faucet funds for both [Manta and Goerli here](https://pacific-info.manta.network/).
 
-You can also [bridge your assets from Goerli to Manta Pacific](https://manta-testnet.calderabridge-test.xyz/).
+You can also [bridge your assets from Goerli to Manta Pacific](https://pacific-bridge.manta.network/).
