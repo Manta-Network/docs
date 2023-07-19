@@ -35,4 +35,4 @@ Once you have written your Smart Contract in Remix, you can navigate to the side
   - New RPC URL: [https://manta-testnet.calderachain.xyz/http](https://manta-testnet.calderachain.xyz/http)
   - Chain ID: 3441005
   - Currency Symbol: manta
-  - Block Explorer URL: [https://manta-testnet.calderaexplorer.xyz/](https://manta-testnet.calderaexplorer.xyz/)
+  - Block Explorer URL: [https://pacific-explorer.manta.network/](https://pacific-explorer.manta.network/)
