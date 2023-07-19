@@ -186,6 +186,11 @@
                     items: [
                         {
                             type: "doc",
+                            label: "Quickstart",
+                            id: "manta-pacific/Quickstart",
+                        },
+                        {
+                            type: "doc",
                             label: "EVM Compatibility",
                             id: "manta-pacific/EVM Compatible",
                         },
