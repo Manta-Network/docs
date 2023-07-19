@@ -31,8 +31,8 @@ Once you have written your Smart Contract in Remix, you can navigate to the side
 1. Change the top ENVIRONMENT dropdown from "Javascript" to "Injected Web3"
 2. This will take you MetaMask - Press connect in Metamask to allow Remix access.
 3. Use the following information to add Manta Pacific Testnet network to Metamask
-  - Network: Caldera
+  - Network: Manta
   - New RPC URL: [https://manta-testnet.calderachain.xyz/http](https://manta-testnet.calderachain.xyz/http)
   - Chain ID: 3441005
   - Currency Symbol: manta
-  - Block Explorer URL: [https://manta-testnet.calderaexplorer.xyz/](https://manta-testnet.calderaexplorer.xyz/)
+  - Block Explorer URL: [https://pacific-explorer.manta.network/](https://pacific-explorer.manta.network/)
