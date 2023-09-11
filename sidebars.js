@@ -177,12 +177,12 @@
         },
         {
             type: "category",
-            label: "Manta Pacific Testnet",
+            label: "Manta Pacific Network",
             collapsible: false,
             items: [
                 {
                     type: "category",
-                    label: "Testnet",
+                    label: "Network Info",
                     items: [
                         {
                             type: "doc",
@@ -193,11 +193,6 @@
                             type: "doc",
                             label: "EVM Compatibility",
                             id: "manta-pacific/EVM Compatible",
-                        },
-                        {
-                            type: "doc",
-                            label: "Testnet Info",
-                            id: "manta-pacific/Testnet Info",
                         },
                         {
                             type: "doc",
@@ -213,6 +208,11 @@
                             type: "doc",
                             label: "JSON-RPC Nodes",
                             id: "manta-pacific/JSON-RPC Nodes",
+                        },
+                        {
+                            type: "doc",
+                            label: "Testnet Info",
+                            id: "manta-pacific/Testnet Info",
                         },
                     ],
                 },
