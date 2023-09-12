@@ -8,15 +8,11 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 | Category         | Information                                 |
 | ---------------- | ------------------------------------------- |
 | Network Name     | Manta Testnet L2 Rollup                               |
-| Network URL      | https://manta-testnet.calderachain.xyz/http |
+| Network URL      | https://pacific-info.testnet.manta.network/ |
+| RPC URL       | https://pacific-rpc.testnet.manta.network/http |
+| Websocket URL | wss://pacific-rpc.testnet.manta.network/ws     |
 | Chain ID         |3441005                                      |
 | Currency Symbol  | ETH                                         |
-
-## Other Key Information
-| Category      | Information                                 |
-| ------------- | ------------------------------------------- |
-| RPC URL       | https://manta-testnet.calderachain.xyz/http |
-| Websocket URL | wss://manta-testnet.calderachain.xyz/ws     |
 
 ### Obtaining Testnet Assets
 Manta Pacific uses ETH as the underlying asset for transaction fees. Request faucet funds for both [Manta and Goerli here](https://pacific-info.manta.network/).
