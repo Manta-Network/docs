@@ -2,19 +2,13 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 
 # Key Tools
 
-## Adding Manta Testnet to MetaMask
+## Adding Manta Pacific to MetaMask
 | Category         | Information                                 |
 | ---------------- | ------------------------------------------- |
 | Network Name     | Manta Pacific L2 Rollup                               |
-| Network URL      | https://manta-testnet.calderachain.xyz/http |
+| Network URL      | https://pacific-rpc.manta.network/http |
 | Chain ID         | 169                                      |
 | Currency Symbol  | ETH                                         |
-
-## Other Key Information
-| Category      | Information                                 |
-| ------------- | ------------------------------------------- |
-| RPC URL       | https://pacific-rpc.manta.network/http      |
-| Websocket URL | wss://pacific-rpc.manta.network/ws          |
 
 ### Bridge Assets
 
