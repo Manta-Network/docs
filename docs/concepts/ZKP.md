@@ -43,12 +43,12 @@ Let us check that the above protocol satisfies the desired properties:
 2. Soundness: A dishonest prover might try to trick the verifier by sending a $y$ in step 1 which is not a square. In that case the verifier would reject the proof in half the cases, when they choose $b = 0$. If $y$ is a square but $x$ is not, the verifier would reject the proof when $b = 1$. A dishonest prover has a $1/2$ probability to trick the protocol on each iteration, so this probability can be made negligible by iterating enough times. 
 3. Zero-knowledge: If $b = 0$, the prover does not use $w$ at any point in the proof, it cannot be leaked. If $b=1$, the only place where the prover uses $w$ is in $\pi = w a$, from which the verifier cannot extract $w$ without the knowledge of $a$. As long as the prover does not repeat the above protocol with the same $a$ for different $b$'s, the protocol remains zero-knowledge.
 
-## Succint Non-Interactive Arguments of Knowledge (SNARKs)
+## Succinct Non-Interactive Arguments of Knowledge (SNARKs)
 A particularly important type of ZKP systems are SNARKs. They are zero-knowledge proof systems which satisfy the following extra properties:
 
 * **Argument of knowledge**: The prover wants to prove knowledge of the witness itself. In the example above, the statement would be "*I know a square root of $2$ in $\mathbb{F}_7$*". One can show the protocol above also proves this stronger statement, thus making it an argument of knowledge.
 
-* **Succinctness**: The proof size is constant or logarithmic compared with the circuit size (i.e. the amount of computations) of the statement. The protocol above is also succint, since the proof is just a number in $\mathbb{F}_7$.
+* **Succinctness**: The proof size is constant or logarithmic compared with the circuit size (i.e. the amount of computations) of the statement. The protocol above is also succinct, since the proof is just a number in $\mathbb{F}_7$.
 
 * **Non-Interactive**: Proof generation and proof verification happen in two consecutive rounds: first the prover runs a function $\textsf{prove}$ to generate a proof and then the verifier runs a function $\textsf{verify}$ to verify it. The protocol above is interactive, i.e., it does not satisfy this property because of the continuous communication between prover and verifier. 
 
