@@ -201,11 +201,6 @@
                         },
                         {
                             type: "doc",
-                            label: "Faucet",
-                            id: "manta-pacific/Faucet",
-                        },
-                        {
-                            type: "doc",
                             label: "JSON-RPC Nodes",
                             id: "manta-pacific/JSON-RPC Nodes",
                         },
