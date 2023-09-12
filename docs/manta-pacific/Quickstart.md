@@ -6,7 +6,9 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 | Category         | Information                                 |
 | ---------------- | ------------------------------------------- |
 | Network Name     | Manta Pacific L2 Rollup                               |
-| Network URL      | https://pacific-rpc.manta.network/http |
+| Network URL      | https://pacific-info.manta.network/ |
+| RPC URL       | https://pacific-rpc.manta.network/http |
+| Websocket URL | wss://pacific-rpc.manta.network/ws     |
 | Chain ID         | 169                                      |
 | Currency Symbol  | ETH                                         |
 
