@@ -4,8 +4,6 @@ Manta Atlantic is the fastest and most decentralized ZK Layer1 supporting modula
 
 Compared with those zk privacy layers 1 to build a zk smart contract language, Manta Atlantic is focusing more on the ZK compliance credential layer with real adoption and interoperability to make other projects have interoperable identities without dealing with any cryptography work.
 
-Manta Atlantic uses ZKPs to ensure that transfers are executed according to a structured protocol (circuits) while keeping sensitive information (for example, how much money you send or who you send it to) private. Instead of directly publishing those details on-chain, which would ensure that the protocol has been properly executed but leak all private data, the sensitive bits of information act as witnesses in a ZKP system, namely the SNARK Groth16. Then the Ledger runs the verify function on the resulting ZKP against the public inputs and, if it passes, posts the transaction.
-
 The Manta’s zk circuit and infrastructure has been developed by two years, it has a public account based address system and an UTXO based private address system, we call it zkAddress. The zkAddress shielded information including SBT minting, onchain credentials, offchain identities. It is the first private address system that is reusable, independent and auditable. Also the first one supports multiple NFTs, which has its own seed phase and can sync on different devices. With Prove Key, users are able to share the certain credential of the zkAddress without leaking privacy.
 
 
