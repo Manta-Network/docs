@@ -160,23 +160,19 @@ If all these checks pass and you still can't send transactions, please let us kn
 
   If your transaction is taking a long time, make sure Manta Wallet and your browser wallet aren't awaiting approvals; you might not have sent actually the transaction. Otherwise, if your transaction keeps you waiting for more than a few minutes, please [file a bug report.](https://discord.gg/c72QMWEVyY)
 
-5. How does private payment work?
-
-   [Find out more here.](../learn/PrivatePayment)
-
-6. How do I find my Calamari address on polkadot.js?
+5. How do I find my Calamari address on polkadot.js?
 
    Click on polkadot.js extension, then click on three vertical dots next to your address, and then select "Calamari Parachain." If you don't see the "Calamari Parachain" option, update your extensions metadata [here](https://polkadot.js.org/apps/#/settings/metadata).
 
-7. How can I delete my Manta Wallet Account?
+6. How can I delete my Manta Wallet Account?
 
    See our [guide to Manta Wallet](/docs/guides/MantaWallet.md) for more details.
 
-8. Why is my transaction activity not showing up on my zkAddress account?
+7. Why is my transaction activity not showing up on my zkAddress account?
 When you click on your zkAddress, you can view your local activity. This activity is stored locally and viewable based on your browser account. If you switch browser accounts, you will not be able to view the transaction history from the account you originally conducted the transaction. To see that information, you can switch back to your original account.
 
-10. I just received some zkAssets but I don't see it in my assets on the dapp.
+8. I just received some zkAssets but I don't see it in my assets on the dapp.
 Simply refresh the page, and you should see the zkAsset. If you still do not see it, double check with the sender to make sure that they sent to the correct zkAddress. zkAddress transactions cannot be reversed or refunded as they are immutable on-chain like any on-chain transaction, so please make sure you are sending to the correct address.
 
-11. Can I use MantaPay from anywhere?
+9. Can I use MantaPay from anywhere?
 MantaPay aims to be compliant with existing regulations and so accessing it from the United States, China, Iran, Cuba, North Korea, Syria, Myanmar (Burma), the regions of Crimea, Donetsk or Luhansk is prohibited.

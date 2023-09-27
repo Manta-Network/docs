@@ -42,7 +42,6 @@
                     label: "Core Concepts",
                     items: [
                         "concepts/ZKP",
-                        "concepts/zkAsset",
                         "concepts/zkAddress",
                         "concepts/TrustedSetup",
                         "concepts/proofkey",
@@ -53,13 +52,9 @@
                     label: "Research",
                     items: [
                         "learn/Talks",
-                        "learn/PrivatePayment",
-                        "learn/Spec",
-                        "learn/Papers",
                     ],
                 },
                 "manta/Token",
-                "manta/Ecosystem",
             ],
         },
         {
