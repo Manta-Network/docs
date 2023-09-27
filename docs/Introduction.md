@@ -1,13 +1,13 @@
 # What is Manta?
 
-Manta Network is the multi-modular ecosystem for zero-knowledge (ZK) applications. Manta Atlantic, the fastest ZK L1 chain, brings programmable privacy to web3 through compliant on-chain privacy and identity. Manta Pacific, the unique L2 ecosystem for EVM-native ZK applications, provides a scalable and inexpensive gas-fee environment for ZK applications to deploy simply using Solidity. Together, Manta Atlantic and Manta Pacific deliver an unparalleled experience for the next generation of web3 application development and adoption with the applied usage of zero-knowledge cryptography.
+Manta Network is the multi-modular ecosystem for zero-knowledge (ZK) applications. Manta Atlantic, the fastest ZK L1 chain, brings programmable identities and credentials to web3 through zkSBTs. Manta Pacific, the unique L2 ecosystem for EVM-native ZK applications, provides a scalable and inexpensive gas-fee environment for ZK applications to deploy simply using Solidity. Together, Manta Atlantic and Manta Pacific deliver an unparalleled experience for the next generation of web3 application development and adoption with the applied usage of zero-knowledge cryptography.
 
-Manta Network is created by a team of experienced founders from prestigious institutions, including Harvard, MIT, and Algorand. The team began its research on Zero Knowledge Proof in 2019 during a cross-border payment research project under the MIT Digital Currency Initiative with the Monetary Authority of Singapore. Manta Network has received investments from many of the top web3 investment funds, including Binance Labs and Polychain Capital. It has grown through participation in the best web3 accelerators, including Alliance DAO and Berkeley Blockchain Xcelerator. Manta Network is poised to bring the next generation of web3 users and usher in a new chapter of privacy-focused web3 applications.
+Manta Network is created by a team of experienced founders from prestigious institutions, including Harvard, MIT, and Algorand. The team began its research on Zero Knowledge Proof in 2019 during a cross-border payment research project under the MIT Digital Currency Initiative with the Monetary Authority of Singapore. Manta Network has received investments from many of the top web3 investment funds, including Binance Labs and Polychain Capital. It has grown through participation in the best web3 accelerators, including Alliance DAO and Berkeley Blockchain Xcelerator. Manta Network is poised to bring the next generation of web3 users and usher in a new chapter of zero-knowledge applications.
 
 Manta offers three networks:
 
 -   Manta Pacific (Layer2), the first EVM-native modular execution layer for wide ZK applications adoption
--   Manta Atlantic (Layer1): Manta Atlantic is the fastest and most decentralized ZK Layer1 supporting on-chain compliance privacy
+-   Manta Atlantic (Layer1): Manta Atlantic is the fastest and most decentralized ZK Layer1 supporting on-chain compliance identities and credentials
 -   [Calamari Network](https://calamari.network/): Manta Atlantic’s canary network, which runs as a separate, independent layer one network.
 
 <div style={{textAlign: 'center',marginBottom: '24px'}}>
