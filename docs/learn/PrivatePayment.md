@@ -1,6 +1,6 @@
 # How Does Private Payment Work?
 
-Manta is all about bringing privacy to the wider blockchain space, and an important part of making privacy practical to use is the construction of simple and powerful privacy primitives. The first and most powerful primitive we are building is _Private Payment_, more specifcally, a _multi-asset decentralized anonymous payment protocol_.
+Manta is all about bringing privacy to the wider blockchain space, and an important part of making privacy practical to use is the construction of simple and powerful privacy primitives. The first and most powerful primitive we are building is _Private Payment_, more specifically, a _multi-asset decentralized anonymous payment protocol_.
 
 ## How Does It Work?
 
@@ -14,7 +14,7 @@ Currently, the formal specification for _Private Payment_ is still closed source
 
 ## Public Ledgers
 
-Most decentralized systems of digital money use what are called _public ledgers_ to keep track of the flow of money. Public ledgers store the current state of every participant's balances, and whenever someone tries to spend from their account, the blockchain will come to consensus on whether this transaction is valid and updates the state. However, to validate a transaction the public ledger needs to know which sender and receiver are participating, and what amount is being transfered. We would like to find a way to avoid this and preserve the privacy of all parties involved in transactions and keep amounts private as well.
+Most decentralized systems of digital money use what are called _public ledgers_ to keep track of the flow of money. Public ledgers store the current state of every participant's balances, and whenever someone tries to spend from their account, the blockchain will come to consensus on whether this transaction is valid and updates the state. However, to validate a transaction the public ledger needs to know which sender and receiver are participating, and what amount is being transferred. We would like to find a way to avoid this and preserve the privacy of all parties involved in transactions and keep amounts private as well.
 
 ## Properties of a Decentralized Anonymous Payment Protocol
 
@@ -41,7 +41,7 @@ This discussion is not entirely self-contained but we will attempt to explain cr
 
 ### Participants (in detail)
 
-- `Alice` (_sender_): a participant that already has access to some assets and is guaranteed by the `Ledger` the ability to spen them.
+- `Alice` (_sender_): a participant that already has access to some assets and is guaranteed by the `Ledger` the ability to spend them.
 - `Bob` (_receiver_): a participant that can be uniquely identified by other _senders_ and will be guaranteed the ability to spend received assets in the future.
 - `Ledger`: represents all public information (the _state_) and the network of validators (_blockchain_) which come to consensus on the private transfer of ownership of assets between _senders_ and _receivers_.
 
@@ -51,7 +51,7 @@ For `Alice` to send her assets to `Bob`, she communicates with the `Ledger` as a
 
 ### Send
 
-`Alice` begins by constructing a special number called $\textsf{SK}_\textsf{E}$, the _ephemeral secret key_, which she will use to represent this unique transfer. She constructs it by taking `Bob`'s _pubic key_, $\textsf{PK}_\textsf{B}$, some public data from the `Ledger`, and some randomness:
+`Alice` begins by constructing a special number called $\textsf{SK}_\textsf{E}$, the _ephemeral secret key_, which she will use to represent this unique transfer. She constructs it by taking `Bob`'s _public key_, $\textsf{PK}_\textsf{B}$, some public data from the `Ledger`, and some randomness:
 
 ![Send Protocol](./resources/send-protocol.png)
 
@@ -77,7 +77,7 @@ The secret key that `Bob` is using for this scanning process must be the one tha
 
 ## Shared Secrets
 
-But how will `Bob` be able to claim is new assets? How will he be able to spend them in the future?
+But how will `Bob` be able to claim his new assets? How will he be able to spend them in the future?
 
 One of the most important cryptographic tools that we can take advantage of here is the _shared secret_. Essentially, we want to find a way to take some information and wrap it up so that only two people have access to it. Getting someone to share a secret with themselves is easy, they just don't tell anyone. But how do we tell someone else our secrets so that only the two of you ever know what it is?
 
@@ -123,7 +123,7 @@ Now we know how `Alice` can communicate to `Bob` the amount of value she has sen
 
 To satisfy this constraint, `Alice` will generate two kinds of certificates, _UTXOs_ and _void numbers_.
 
-A _UTXO_ or _Unspent Transation Output_, is a certificate for the future spending of one of the receivers of a transaction. It is used in some public ledger protocols in the following way:
+A _UTXO_ or _Unspent Transaction Output_, is a certificate for the future spending of one of the receivers of a transaction. It is used in some public ledger protocols in the following way:
 
 1. Prove that `Alice` owns one of the current UTXOs
 2. Drop `Alice`'s UTXO from the `Ledger`
