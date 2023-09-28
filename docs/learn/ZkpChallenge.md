@@ -61,15 +61,15 @@ We support two ways of submitting proof hashes:
    * put the hash to the remark field (need to add `0x`)
    * submit the extrinsic to Polkadot blockchain, remember the extrinsic id 
    
-2. Submit an transaction with data field in Ethereum
-   * choose a wallet that support data field, for example, MyCrypto
+2. Submit a transaction with data field in Ethereum
+   * choose a wallet that supports data field, for example, MyCrypto
    * send an ethereum transaction with the hash as the data field, for example, in MyCrypto, click advanced options 
      ![my crypto](./resources/my-crypto-1.png)
     and add the hash of the zero-knowledge-proof in the data field.
      ![my crypto data](./resources/my-crypto-2.png)
    * send the transaction on chain 
 
-Next, submit this [form](https://forms.gle/ZpGua9DUmwmYgiGdA) with your addess to receive the award and ZKP.
+Next, submit this [form](https://forms.gle/ZpGua9DUmwmYgiGdA) with your address to receive the award and ZKP.
 
 ## Got Questions?
 
