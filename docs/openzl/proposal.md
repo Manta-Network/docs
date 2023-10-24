@@ -4,7 +4,7 @@
 
 ## Overview
 
-OpenZL is an open-source library that helps practioners (especially in Web3 space) to develop and deploy secure, high performance zero-knowledge proof code in production. It tries to bridge the gap between low level cryptographic primitives and devlopers' need to build scalable protocols using zero-knowlege proof cryptography securely and quickly. More specifically, many developers today want to leverage zero-knowledge proof systems to build powerful protocols like ZCash/Manta/ZKSync. However, they are facing two less than ideal choices; first, building a protocol using high-level languages like [Circom](https://docs.circom.io) or [Cairo](https://www.cairo-lang.org) loses many performance optimization opportunities, and second, building the protocol directly using libraries like [`arkworks/groth16`](https://github.com/arkworks-rs/groth16), [`zk-garage/plonk`](https://github.com/zk-garage/plonk), or [`microsoft/nova`](https://github.com/microsoft/Nova) requires expertise in cryptography and can be very error-prone. Also, zero-knowledge proof systems are a moving target. There have been many new, and "better", proof systems coming out every 2-3 years ([BCTV](https://eprint.iacr.org/2013/879.pdf) -> [Groth16](https://eprint.iacr.org/2016/260.pdf) -> [Plonk](https://eprint.iacr.org/2019/953) -> [Nova](https://eprint.iacr.org/2021/370)). OpenZL tries to solve this problem by building flexible, proof-system agnostic, and extensible libraries for Web3 practitioners.  
+OpenZL is an open-source library that helps practitioners (especially in Web3 space) to develop and deploy secure, high performance zero-knowledge proof code in production. It tries to bridge the gap between low level cryptographic primitives and devlopers' need to build scalable protocols using zero-knowledge proof cryptography securely and quickly. More specifically, many developers today want to leverage zero-knowledge proof systems to build powerful protocols like ZCash/Manta/ZKSync. However, they are facing two less than ideal choices; first, building a protocol using high-level languages like [Circom](https://docs.circom.io) or [Cairo](https://www.cairo-lang.org) loses many performance optimization opportunities, and second, building the protocol directly using libraries like [`arkworks/groth16`](https://github.com/arkworks-rs/groth16), [`zk-garage/plonk`](https://github.com/zk-garage/plonk), or [`microsoft/nova`](https://github.com/microsoft/Nova) requires expertise in cryptography and can be very error-prone. Also, zero-knowledge proof systems are a moving target. There have been many new, and "better", proof systems coming out every 2-3 years ([BCTV](https://eprint.iacr.org/2013/879.pdf) -> [Groth16](https://eprint.iacr.org/2016/260.pdf) -> [Plonk](https://eprint.iacr.org/2019/953) -> [Nova](https://eprint.iacr.org/2021/370)). OpenZL tries to solve this problem by building flexible, proof-system agnostic, and extensible libraries for Web3 practitioners.
 
 OpenZL consists of 3 parts:
 * *Gadget libraries*: a library of gadgets that developers can use as building blocks for their protocols. The initial range of the gadgets includes accumulators (merkle tree with zero-knowledge membership proof), zk-friendly hash functions (poseidon hash), and commitment schemes. The gadget libraries are programmed in `eclair`.
@@ -34,7 +34,7 @@ OpenZL consists of 3 parts:
 OpenZL provides list of cryptographic primitives with *optimized* zero-knowledge proof implementations in `eclair`. 
 These gadgets are composable and can be combined to build more powerful protocols such as anonymous payment (ZCash/Manta) or zk-rollups. The gadget library that OpenZL provides on its initial release includes:
 * *hashing gadget*: an optimized implementation of the Poseidon Hash Function [1], with parameterized arity (2, 4, 8)
-* *accumulator gadget*: Merkle tree gadget that supports zero-knowlegde membership proofs. The Merkle tree gadget supports incremental updates as well.
+* *accumulator gadget*: Merkle tree gadget that supports zero-knowledge membership proofs. The Merkle tree gadget supports incremental updates as well.
 * *commitment gadget*: A commitment scheme that is both *binding* and *hiding*. This commitment scheme is built on top of the *hashing gadget*.
 
 ### Embedded Circuit Language And Intermediate Representation (`eclair`)
@@ -161,7 +161,7 @@ Totol budget: 1,010,500 USD (will be converted to DOT using the exchange rate on
 
 ### Oversight Committee
 
-Oversight commitee will manage the overall execution and the financial budget of OpenZL:
+Oversight committee will manage the overall execution and the financial budget of OpenZL:
 * **Shumo Chu** (Co-founder, Manta Network)
 * **Luke Pearson** (Research Partner, Polychain Capital)
 * **Bryan Chen** (CTO, Acala Network)
