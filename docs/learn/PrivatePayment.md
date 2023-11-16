@@ -77,7 +77,7 @@ The secret key that `Bob` is using for this scanning process must be the one tha
 
 ## Shared Secrets
 
-But how will `Bob` be able to claim is new assets? How will he be able to spend them in the future?
+But how will `Bob` be able to claim his new assets? How will he be able to spend them in the future?
 
 One of the most important cryptographic tools that we can take advantage of here is the _shared secret_. Essentially, we want to find a way to take some information and wrap it up so that only two people have access to it. Getting someone to share a secret with themselves is easy, they just don't tell anyone. But how do we tell someone else our secrets so that only the two of you ever know what it is?
 
