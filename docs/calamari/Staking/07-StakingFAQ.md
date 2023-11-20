@@ -18,5 +18,5 @@ No, Calamari staking rewards are not compounded automatically.
 ### Q: What is the Calamari inflation rate?
 Any inflation from rewards is compensated by burning an equivalent amount of tokens from treasury over the next three years, later will be determined by governance.
 
-### Q: Is there a slashing risk for Calamari validators?
+### Q: Is there a slashing risk for Calamari collators?
 There is no slashing risk for delegators. Collators that do not produce blocks will not earn rewards for themselves **and their delegators**.
