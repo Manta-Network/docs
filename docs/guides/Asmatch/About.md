@@ -1,7 +1,3 @@
-   <div style={{textAlign: 'center'}}>
-    <img alt="/img/guides/Asmatch/1.webp" src="/img/guides/AsMatch/1.webp" width="70%"/>
-   </div>
-
 # Introduction to AsMatch
 
 [AsMatch](https://www.asmatch.app/) is the world’s first Web3 SocialFi matching app built for mobile. AsMatch is an innovative Web3 mobile app that combines AI-generated content (AIGC), zero-knowledge proofs (ZKPs) and zkSBTs powered by [Manta Network](https://manta.network/), and a match-to-earn model with token incentives. The app’s matching engine connects users in Web3 for dating, social networking, professional connections, and making new friends. Dive into the future of online connections with AsMatch — your secure, engaging, and rewarding Web3 matching app.
