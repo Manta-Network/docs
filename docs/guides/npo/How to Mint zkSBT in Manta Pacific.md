@@ -1,4 +1,4 @@
-# How to mint ZKSBT
+# How to Mint zkSBT in Manta Pacific
 
 1.  install zksbt JS SDK
 

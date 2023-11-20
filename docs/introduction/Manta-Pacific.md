@@ -1,4 +1,4 @@
-# What is Manta Pacific (Layer 2)
+# What is Manta Pacific (Layer 2)?
 
 ## **Why do we need another L2?**
 

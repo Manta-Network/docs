@@ -1,11 +1,5 @@
 # Introducing Proof of My Possessions (POMP): Your Trustless Private Asset Verification Tool
 
-<div style={{textAlign: 'center',marginBottom: '24px'}}>
-    <img alt="pomp" src="/img/guides/pomp/pomp.webp" width="70%"/>
-</div>
-
-## Introduction:
-
 Proof of My Possessions (POMP) is a platform that lets you verify your on-chain activity, assets (including cryptocurrencies, NFTs, and SBTs), and other attributes of your web3 identity in a privacy-enhanced manner. You can also use it to verify others’ on-chain information.
 
 Current methods of on-chain verification require users to reveal their wallet addresses, therefore exposing all of their activities, assets, and other miscellaneous information that they would want to keep private. The existing solution for this is to fragment on-chain identity through complicated methods like managing multiple different wallet addresses.

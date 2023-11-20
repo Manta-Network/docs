@@ -43,7 +43,7 @@ module.exports = {
                     items: [
                         {
                             type: "doc",
-                            label: "Zero-Knowledge",
+                            label: "Zero-Knowledge Proofs",
                             id: "concepts/ZKP",
                         },
                         {
@@ -76,11 +76,11 @@ module.exports = {
                             label: "OP Stack",
                             id: "concepts/OPStack",
                         },
-                        {
-                            type: "doc",
-                            label: "Manta Technical Talks",
-                            id: "learn/Talks",
-                        },
+                        // {
+                        //     type: "doc",
+                        //     label: "Manta Technical Talks",
+                        //     id: "learn/Talks",
+                        // },
                         // {
                         //     type: "category",
                         //     label: "Core Concepts",
@@ -158,7 +158,7 @@ module.exports = {
                 },
                 {
                     type: "doc",
-                    label: "The Manta Pacific Roadmap",
+                    label: "Manta Pacific Roadmap",
                     id: "concepts/Roadmap",
                 },
                 {
@@ -199,8 +199,8 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "How to Mint zkSBT in Manta Specific?",
-                            id: "guides/npo/How to Mint zkSBT in Manta Specific",
+                            label: "How to Mint zkSBT in Manta Pacific?",
+                            id: "guides/npo/How to Mint zkSBT in Manta Pacific",
                         },
                         // {
                         //     type: "doc",
