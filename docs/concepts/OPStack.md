@@ -1,6 +1,6 @@
 # What is OP Stack?
 
-According to the official explanation from [OP Stack Docs](https://stack.optimism.io/#the-op-stack-powers-optimism), t**he OP Stack is the standardized, shared, and open-source development stack that powers Optimism, maintained by the Optimism Collective.**
+According to the official explanation from [OP Stack Docs](https://stack.optimism.io/#the-op-stack-powers-optimism), **the OP Stack is the standardized, shared, and open-source development stack that powers Optimism, maintained by the Optimism Collective.**
 
 The OP Stack is the set of software that powers Optimism — currently in the form of the software behind Optimism Mainnet and eventually in the form of the Optimism Superchain and its governance.
 
@@ -27,9 +27,9 @@ Manta Pacific uses Caldera’s customized OP Stack Rollup solution as the execut
 Manta Pacific is currently launching Chapter 1: Manta Pacific Alpha, which is an Ethereum-based Layer 2 solution built using OP Stack.
 
 In the upcoming chapters, following the roadmap of Manta Pacific:
-- [Chapter 2: Manta Pacific Alpha II (+Celestia DA).](https://www.notion.so/Celestia-26a8ee0bf06e4081b9868b26c45c2cae?pvs=21)
-- [Chapter 3: Manta Pacific Beta (+Transition to zkEVM).](https://www.notion.so/zkEVM-de331a5f1773405cbebb76b196b53626?pvs=21)
-- [Chapter 4: Manta Pacific Mainnet Production I (+Universal Circuits 2.0).](<https://docs.manta.network/docs/zkShuffle/Overview#:~:text=Network%20Info-,Universal%20Circuits%20(Alpha)%3A%20zkShuffle,-Deploy%20Your%20App>)
+- [Chapter 2: Manta Pacific Alpha II (+Celestia DA).](/docs/concepts/Celestia)
+- [Chapter 3: Manta Pacific Beta (+Transition to zkEVM).](/docs/concepts/ZKEVM)
+- [Chapter 4: Manta Pacific Mainnet Production I (+Universal Circuits 2.0).](/docs/zkShuffle/Overview)
 
 <div style={{textAlign: 'center',marginBottom: '24px'}}>
     <img alt="pacific-roadmap" src="/img/guides/pacific-roadmap.png" width="70%"/>

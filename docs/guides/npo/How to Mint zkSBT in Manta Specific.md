@@ -75,7 +75,3 @@
         throw new Error("pomp mint fail , res ", res);
     }
     ```
-
-```
-
-```
