@@ -9,7 +9,7 @@
  Create as many sidebars as you want.
  */
 
- module.exports = {
+module.exports = {
     docs: [
         {
             type: "category",
@@ -39,135 +39,59 @@
                 },
                 {
                     type: "category",
-                    label: "Core Concepts",
-                    items: [
-                        "concepts/ZKP",
-                        "concepts/zkAddress",
-                        "concepts/TrustedSetup",
-                        "concepts/proofkey",
-                    ],
-                },
-                {
-                    type: "category",
                     label: "Research",
                     items: [
-                        "learn/Talks",
-                    ],
-                },
-                "manta/Token",
-            ],
-        },
-        {
-            type: "category",
-            label: "Product Guides",
-            collapsible: false,
-            items: [
-                {
-                    type: "category",
-                    label: "NPO",
-                    items: [
                         {
                             type: "doc",
-                            label: "About NPO -zkSBT ",
-                            id: "guides/npo/About",
+                            label: "Zero-Knowledge",
+                            id: "concepts/ZKP",
                         },
                         {
                             type: "doc",
-                            label: "Benefits",
-                            id: "guides/npo/Benefits",
+                            label: "Celestia",
+                            id: "concepts/Celestia",
                         },
                         {
                             type: "doc",
-                            label: "For Users",
-                            id: "guides/npo/ForUsers",
+                            label: "ZKEVM",
+                            id: "concepts/ZKEVM",
                         },
-                        {
-                            type: "doc",
-                            label: "For Developers",
-                            id: "guides/npo/ForDeveloper",
-                        },
-                    ],
-                },
-                {
-                    type: "category",
-                    label: "Manta Wallet",
-                    items: [
-                        {
-                            type: "doc",
-                            label: "Get Started",
-                            id: "guides/MantaWallet",
-                        },
-                        {
-                            type: "doc",
-                            label: "Migration",
-                            id: "guides/MantaWalletMigration",
-                        },
-                        {
-                            type: "doc",
-                            label: "Update",
-                            id: "guides/MantaWalletUpdate",
-                        },
-                        {
-                            type: "doc",
-                            label: "Consolidate UTXOs",
-                            id: "guides/ConsolidateUTXOs",
-                        },
-                    ],
-                },
-                {
-                    type: "category",
-                    label: "Manta Pay",
-                    items: [
-                        {
-                            type: "doc",
-                            label: "Manta Wallet User (New)",
-                            id: "guides/MantaPay-Wallet",
-                        },
-                        {
-                            type: "doc",
-                            label: "Manta Signer User",
-                            id: "guides/MantaPay-Signer",
-                        },
-                    ],
-                },
-                {
-                    type: "doc",
-                    label: "Bridge",
-                    id: "guides/Bridge",
-                },
-                {
-                    type: "category",
-                    label: "Staking",
-                    items: [
                         {
                             type: "category",
-                            label: "KMA Staking",
+                            label: "Universal Circuits (Alpha): zkShuffle",
                             items: [
-                                "calamari/Staking/Overview",
-                                "calamari/Staking/Rewards",
-                                "calamari/Staking/Rules",
                                 {
-                                    type: "category",
-                                    label: "Delegation",
-                                    items: [
-                                        "calamari/Staking/Delegation/dApp Overview",
-                                        "calamari/Staking/Delegation/HowTo Delegate",
-                                    ],
+                                    type: "doc",
+                                    label: "Overview",
+                                    id: "zkShuffle/Overview",
                                 },
-                                "calamari/Staking/StakingFAQ",
+                                {
+                                    type: "autogenerated",
+                                    dirName: "zkShuffle/Circuits",
+                                },
                             ],
                         },
-                        // NOTE: To be created later
+                        {
+                            type: "doc",
+                            label: "OP Stack",
+                            id: "concepts/OPStack",
+                        },
+                        {
+                            type: "doc",
+                            label: "Manta Technical Talks",
+                            id: "learn/Talks",
+                        },
                         // {
-                        //   type: 'category',
-                        //   label: 'MANTA Staking',
-                        //   items: [
-                        //     'guides/staking/MANTA/Overview',
-                        //   ],
-                        // }
+                        //     type: "category",
+                        //     label: "Core Concepts",
+                        //     items: [
+                        //         "concepts/zkAddress",
+                        //         "concepts/TrustedSetup",
+                        //         "concepts/proofkey",
+                        //     ],
+                        // },
                     ],
                 },
-                "guides/MantaSigner",
             ],
         },
         {
@@ -232,8 +156,191 @@
                         },
                     ],
                 },
+                {
+                    type: "doc",
+                    label: "The Manta Pacific Roadmap",
+                    id: "concepts/Roadmap",
+                },
+                {
+                    type: "category",
+                    label: "Bridge to Manta Pacific ",
+                    items: [
+                        {
+                            type: "autogenerated",
+                            dirName: "bridge-to-pacific",
+                        },
+                    ],
+                },
+                {
+                    type: "doc",
+                    label: "Manta Pacific Ecosystem",
+                    id: "concepts/Manta Pacific Ecosystem",
+                },
             ],
         },
+        {
+            type: "category",
+            label: "Ecosystem Products",
+            collapsible: false,
+            items: [
+                {
+                    type: "category",
+                    label: "NPO - zkSBT",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About NPO -zkSBT ",
+                            id: "guides/npo/About",
+                        },
+                        {
+                            type: "doc",
+                            label: "Benefits",
+                            id: "guides/npo/Benefits",
+                        },
+                        {
+                            type: "doc",
+                            label: "How to Mint zkSBT in Manta Specific?",
+                            id: "guides/npo/How to Mint zkSBT in Manta Specific",
+                        },
+                        // {
+                        //     type: "doc",
+                        //     label: "For Users",
+                        //     id: "guides/npo/ForUsers",
+                        // },
+                        // {
+                        //     type: "doc",
+                        //     label: "For Developers",
+                        //     id: "guides/npo/ForDeveloper",
+                        // },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "POMP",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About POMP ",
+                            id: "guides/pomp/About",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "zkHoldem",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About zkHoldem ",
+                            id: "guides/zkHoldem/About",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Aperture",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About Aperture",
+                            id: "guides/Aperture/About",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Asmatch",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About Asmatch",
+                            id: "guides/Asmatch/About",
+                        },
+                    ],
+                },
+                // {
+                //     type: "category",
+                //     label: "Manta Wallet",
+                //     items: [
+                //         {
+                //             type: "doc",
+                //             label: "Get Started",
+                //             id: "guides/MantaWallet",
+                //         },
+                //         {
+                //             type: "doc",
+                //             label: "Migration",
+                //             id: "guides/MantaWalletMigration",
+                //         },
+                //         {
+                //             type: "doc",
+                //             label: "Update",
+                //             id: "guides/MantaWalletUpdate",
+                //         },
+                //         {
+                //             type: "doc",
+                //             label: "Consolidate UTXOs",
+                //             id: "guides/ConsolidateUTXOs",
+                //         },
+                //     ],
+                // },
+                // {
+                //     type: "category",
+                //     label: "Manta Pay",
+                //     items: [
+                //         {
+                //             type: "doc",
+                //             label: "Manta Wallet User (New)",
+                //             id: "guides/MantaPay-Wallet",
+                //         },
+                //         {
+                //             type: "doc",
+                //             label: "Manta Signer User",
+                //             id: "guides/MantaPay-Signer",
+                //         },
+                //     ],
+                // },
+                // {
+                //     type: "doc",
+                //     label: "Bridge",
+                //     id: "guides/Bridge",
+                // },
+                // {
+                //     type: "category",
+                //     label: "Staking",
+                //     items: [
+                //         {
+                //             type: "category",
+                //             label: "KMA Staking",
+                //             items: [
+                //                 "calamari/Staking/Overview",
+                //                 "calamari/Staking/Rewards",
+                //                 "calamari/Staking/Rules",
+                //                 {
+                //                     type: "category",
+                //                     label: "Delegation",
+                //                     items: [
+                //                         "calamari/Staking/Delegation/dApp Overview",
+                //                         "calamari/Staking/Delegation/HowTo Delegate",
+                //                     ],
+                //                 },
+                //                 "calamari/Staking/StakingFAQ",
+                //             ],
+                //         },
+                //         // NOTE: To be created later
+                //         // {
+                //         //   type: 'category',
+                //         //   label: 'MANTA Staking',
+                //         //   items: [
+                //         //     'guides/staking/MANTA/Overview',
+                //         //   ],
+                //         // }
+                //     ],
+                // },
+                // "guides/MantaSigner",
+            ],
+        },
+
         {
             type: "category",
             label: "Calamari Network",
@@ -326,22 +433,22 @@
                 "calamari/Partnership",
             ],
         },
-        {
-            type: "category",
-            label: "Previous Events",
-            collapsible: false,
-            items: [
-                {
-                    type: "link",
-                    label: "Squad Game",
-                    href: "https://squadgame.manta.network/",
-                },
-                {
-                    type: "link",
-                    label: "Manta Network Crowdloan", // string - the label that should be displayed.
-                    href: "https://crowdloanstrategy.manta.network/", // string - the target URL.
-                },
-            ],
-        },
+        // {
+        //     type: "category",
+        //     label: "Previous Events",
+        //     collapsible: false,
+        //     items: [
+        //         {
+        //             type: "link",
+        //             label: "Squad Game",
+        //             href: "https://squadgame.manta.network/",
+        //         },
+        //         {
+        //             type: "link",
+        //             label: "Manta Network Crowdloan", // string - the label that should be displayed.
+        //             href: "https://crowdloanstrategy.manta.network/", // string - the target URL.
+        //         },
+        //     ],
+        // },
     ],
 };
