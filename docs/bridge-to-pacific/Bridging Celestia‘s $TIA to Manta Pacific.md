@@ -82,7 +82,7 @@ Open https://www.usenexus.org/ and select "Cross-Chain to Manta from Neutron," e
 
 ## Manta Pacific Incentives for TIA
 
-Currently, You can transfer $TIA tokens from Celestia to Manta Pacific via [Hyperlane](https://www.usenexus.org/) Warp Routes, which enables $TIA access to DeFi liquidity in Manta Pacific’s 6 Defi projects ([ApertureSwap](https://app.aperture.finance/), [iZUMi](https://izumi.finance/), [PacificSwap](https://pacificswap.xyz/), [KiloEx](https://www.kiloex.io/), [Goku.money](https://twitter.com/goku_stable), and [LayerBank](https://layerbank.finance/)).
+Currently, You can transfer $TIA tokens from Celestia to Manta Pacific via [Hyperlane](https://www.usenexus.org/) Warp Routes, which enables $TIA access to DeFi liquidity on Manta Pacific’s 6 Defi projects ([ApertureSwap](https://app.aperture.finance/), [iZUMi](https://izumi.finance/), [PacificSwap](https://pacificswap.xyz/), [KiloEx](https://www.kiloex.io/), [Goku.money](https://twitter.com/goku_stable), and [LayerBank](https://layerbank.finance/)).
 
 Meanwhile, Manta Pacific offers an incentives program to reward users for participating in cross-chaining and trading $TIA tokens, including swapping, and liquidity provision (LP) through the 7 ecosystem partnership projects mentioned above.
 

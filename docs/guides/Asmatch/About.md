@@ -1,5 +1,5 @@
    <div style={{textAlign: 'center'}}>
-    <img alt="/img/guides/Asmatch/1.webp" src="/img/guides/Asmatch/1.webp" width="70%"/>
+    <img alt="/img/guides/Asmatch/1.webp" src="/img/guides/AsMatch/1.webp" width="70%"/>
    </div>
 
 # Introduction to AsMatch
@@ -31,7 +31,7 @@ _AI-generated PFPs, Minted on zkSBT_
 [AsMatch’s](https://asmatch.medium.com/asmatch.app) zkPortrait is an AI profile picture (PRP) that can be minted on [Manta Network](https://manta.network/)’s zkAddress. You can upload more than three of your PFPs and choose different themes. We are using 6pen.art to generate AI PFPs. The AI PFP data is included inside the metadata of the zkSBT you minted. 6pen.art’s algorithm identifies human faces to generate PFPs, and does not generate faceless PFPs.
 
    <div style={{textAlign: 'center'}}>
-    <img alt="/img/guides/Asmatch/2.webp" src="/img/guides/Asmatch/2.webp" width="70%"/>
+    <img alt="/img/guides/Asmatch/2.webp" src="/img/guides/AsMatch/2.webp" width="70%"/>
    </div>
 
 _Privacy-enhanced Decentralized IDs (DIDs)_
@@ -39,7 +39,7 @@ _Privacy-enhanced Decentralized IDs (DIDs)_
 Besides the AI PFP, the zkPortrait can be used as a privacy-enhanced DID as it is soul-bound and cannot be traded amongst other users.
 
    <div style={{textAlign: 'center'}}>
-    <img alt="/img/guides/Asmatch/3.webp" src="/img/guides/Asmatch/3.webp" width="70%"/>
+    <img alt="/img/guides/Asmatch/3.webp" src="/img/guides/AsMatch/3.webp" width="70%"/>
    </div>
 
 Besides crypto assets, AsMatch also plans to partner with other third parties to include more social media and verified bios on the zkSBT in the future. All of this information is private but will verify user identity to reduce lies, catfishing and romance scams.
@@ -49,13 +49,13 @@ Besides crypto assets, AsMatch also plans to partner with other third parties to
 _Easy User Onboarding: Proof Keys for Walletless User Experience_
 
    <div style={{textAlign: 'center'}}>
-    <img alt="/img/guides/Asmatch/4.webp" src="/img/guides/Asmatch/4.webp" width="70%"/>
+    <img alt="/img/guides/Asmatch/4.webp" src="/img/guides/AsMatch/4.webp" width="70%"/>
    </div>
 
 AsMatch is a free-to-play mobile app, where users can connect zkSBTs to enhance the experience. For example, by connecting your AsMatch zkSBT to the app, you are able to earn mystery boxes with token incentives and also provide a private, verifiable identity. Through Manta Network’s ZK technology, users can use a Proof Key to verify zkSBT ownership safely and privately in AsMatch App without connecting any wallets. During the process of using the Proof Key, AsMatch will not touch the user’s assets in any form, which maximizes the protection of user privacy while ensuring the security, correctness, and user trust of the platform.
 
    <div style={{textAlign: 'center'}}>
-    <img alt="/img/guides/Asmatch/5.webp" src="/img/guides/Asmatch/5.webp" width="70%"/>
+    <img alt="/img/guides/Asmatch/5.webp" src="/img/guides/AsMatch/5.webp" width="70%"/>
    </div>
 
 _Gamification to Encourage Gender Balance_

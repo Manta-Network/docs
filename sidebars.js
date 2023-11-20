@@ -199,8 +199,8 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "How to Mint zkSBT in Manta Pacific?",
-                            id: "guides/npo/How to Mint zkSBT in Manta Pacific",
+                            label: "How to Mint zkSBT on Manta Pacific?",
+                            id: "guides/npo/How to Mint zkSBT on Manta Pacific",
                         },
                         // {
                         //     type: "doc",
