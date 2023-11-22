@@ -56,10 +56,6 @@ module.exports = {
               label: 'Introduction',
               to: '/docs/Introduction',
             },
-            {
-              label: 'Calamari',
-              to: '/docs/calamari/Overview',
-            },
           ],
         },
         {
