@@ -56,10 +56,6 @@ module.exports = {
               label: 'Introduction',
               to: '/docs/Introduction',
             },
-            {
-              label: 'Calamari',
-              to: '/docs/calamari/Overview',
-            },
           ],
         },
         {
@@ -132,17 +128,6 @@ module.exports = {
         indexPages: false,
         language: ["en", "zh"],
         maxSearchResults: 10,
-      },
-    ],
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            from: '/docs/calamari/Staking/Collation/SetupAndRun',
-            to: '/docs/calamari/Staking/Collation/SetupAndRun/installation',
-          },
-        ],
       },
     ],
   ],
