@@ -31,11 +31,6 @@ module.exports = {
 				position: "right",
 			},
 			{
-				href: "http://calamari.network/",
-				label: "Calamari Network",
-				position: "right",
-			},
-			{
 				href: "https://github.com/Manta-Network",
 				label: "GitHub",
 				position: "right",
