@@ -166,6 +166,91 @@ module.exports = {
         },
         {
             type: "category",
+            label: "OpenZL",
+            collapsible: false,
+            items: [
+                {
+                    type: "doc",
+                    label: "Introduction",
+                    id: "openzl/introduction",
+                },
+                {
+                    type: "category",
+                    label: "ECLAIR Basics",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Native vs Non-Native Computation",
+                            id: "openzl/native_nonnative",
+                        },
+                        {
+                            type: "category",
+                            label: "ECLAIR Standard Library",
+                            items: [
+                                {
+                                    type: "doc",
+                                    label: "Introduction",
+                                    id: "openzl/std/eclair_std_lib",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "Bool",
+                                    id: "openzl/std/bool",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "Cmp",
+                                    id: "openzl/std/cmp",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "Num",
+                                    id: "openzl/std/num",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "Ops",
+                                    id: "openzl/std/ops",
+                                },
+                            ],
+                        },
+                        {
+                            type: "doc",
+                            label: "Allocation",
+                            id: "openzl/alloc",
+                        },
+                    ],
+                },
+                {
+                    type: "doc",
+                    label: "Tutorial: Poseidon Permutation",
+                    id: "openzl/poseidon_permutation_tutorial",
+                },
+                {
+                    type: "category",
+                    label: "Proof System Plugins",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Introduction",
+                            id: "openzl/proof_systems",
+                        },
+                        {
+                            type: "doc",
+                            label: "ArkGroth16",
+                            id: "openzl/ark_groth16",
+                        },
+                        {
+                            type: "doc",
+                            label: "Plonky2",
+                            id: "openzl/plonky2",
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            type: "category",
             label: "Ecosystem Products",
             collapsible: false,
             items: [
