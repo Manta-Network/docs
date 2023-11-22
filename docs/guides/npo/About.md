@@ -1,6 +1,6 @@
 # About NPO -zkSBT
 
-Manta Network's [NPO platform](https://npo.manta.network/calamari/sbt) (NFT private offering platform) is set to revolutionize how users generate and mint zkNFTs/zkSBTs. NPO is an NFT/SBT launchpad that leverages Manta Network's zkAddress tooling and MantaPay ZK circuits to privately mint NFTs/SBTs on zkAddress, while using public tokens to pay for minting fees. With Manta's zkNFTs/zkSBTs, developers can build web3 or web2 applications without in-depth knowledge of cryptography or ZKP. The plug-and-play connection with zkNFTs/zkSBTs enables applications to be quickly developed on mobile, opening up new opportunities for developers to create zkNFT/zkSBT projects, including mobile applications, DApps, and projects based on NPO.
+Manta Network's [NPO platform](https://npo-evm.manta.network) (NFT private offering platform) is set to revolutionize how users generate and mint zkNFTs/zkSBTs. NPO is an NFT/SBT launchpad that leverages Manta Network's zkAddress tooling and MantaPay ZK circuits to privately mint NFTs/SBTs on zkAddress, while using public tokens to pay for minting fees. With Manta's zkNFTs/zkSBTs, developers can build web3 or web2 applications without in-depth knowledge of cryptography or ZKP. The plug-and-play connection with zkNFTs/zkSBTs enables applications to be quickly developed on mobile, opening up new opportunities for developers to create zkNFT/zkSBT projects, including mobile applications, DApps, and projects based on NPO.
 
 ## General use cases of zkSBTs:
 

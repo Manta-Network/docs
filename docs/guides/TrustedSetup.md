@@ -13,7 +13,7 @@ We also have a [video tutorial](https://www.youtube.com/watch?v=libknEDADHY&ab_c
 
 ## Installing the Client
 > Quick installation is currently available for the following OS: macOS, Windows, recent Ubuntu, and Fedora 36.
-> 
+>
 > All other users please follow [these instructions](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup) to build from source code.
 
 ### Mac, Linux Installation
@@ -25,7 +25,7 @@ followed by
 ```sh
 source ~/.profile
 ```
-To confirm that the installation worked, enter the command 
+To confirm that the installation worked, enter the command
 ```sh
 manta-trusted-setup register
 ```
