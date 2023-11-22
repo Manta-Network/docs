@@ -235,16 +235,6 @@ module.exports = {
                             label: "Introduction",
                             id: "openzl/proof_systems",
                         },
-                        {
-                            type: "doc",
-                            label: "ArkGroth16",
-                            id: "openzl/ark_groth16",
-                        },
-                        {
-                            type: "doc",
-                            label: "Plonky2",
-                            id: "openzl/plonky2",
-                        },
                     ],
                 },
             ],
