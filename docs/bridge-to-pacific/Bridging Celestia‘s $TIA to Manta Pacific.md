@@ -1,11 +1,3 @@
-# Bridging $TIA to Manta Pacific
-
-   <div style={{textAlign: 'center'}}>
-    <img alt="1" src="/img/bridge-to-pacific/tia/1.jpeg" width="40%"/>
-   </div>
-
-## Various activities and DeFi products to utilize TIA (lending, swaps, perps, etc.)!
-
 With the launch of Celestia Mainnet, TIA token is now available. Manta Pacific allows users to access TIA on an EVM environment, which means you can have TIA directly on your favorite wallets such as MetaMask. Furthermore, Manta Pacific’s ecosystem offers various products and tools that can utilize TIA, including DeFi products such as lending, swaps, perps, and more. To celebrate, Manta Pacific is also launching a limited-time campaign for TIA activities on the network. This document guides you through everything from bridging TIA assets to details about the campaign.
 
 ## Bridging TIA from Celestia to Manta Pacific
