@@ -1,1 +1,0 @@
-# MantaPay on Calamari

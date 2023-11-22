@@ -76,20 +76,6 @@ module.exports = {
                             label: "OP Stack",
                             id: "concepts/OPStack",
                         },
-                        // {
-                        //     type: "doc",
-                        //     label: "Manta Technical Talks",
-                        //     id: "learn/Talks",
-                        // },
-                        // {
-                        //     type: "category",
-                        //     label: "Core Concepts",
-                        //     items: [
-                        //         "concepts/zkAddress",
-                        //         "concepts/TrustedSetup",
-                        //         "concepts/proofkey",
-                        //     ],
-                        // },
                     ],
                 },
             ],
@@ -202,16 +188,6 @@ module.exports = {
                             label: "How to Mint zkSBT on Manta Pacific?",
                             id: "guides/npo/How to Mint zkSBT on Manta Pacific",
                         },
-                        // {
-                        //     type: "doc",
-                        //     label: "For Users",
-                        //     id: "guides/npo/ForUsers",
-                        // },
-                        // {
-                        //     type: "doc",
-                        //     label: "For Developers",
-                        //     id: "guides/npo/ForDeveloper",
-                        // },
                     ],
                 },
                 {
@@ -258,105 +234,7 @@ module.exports = {
                         },
                     ],
                 },
-                // {
-                //     type: "category",
-                //     label: "Manta Wallet",
-                //     items: [
-                //         {
-                //             type: "doc",
-                //             label: "Get Started",
-                //             id: "guides/MantaWallet",
-                //         },
-                //         {
-                //             type: "doc",
-                //             label: "Migration",
-                //             id: "guides/MantaWalletMigration",
-                //         },
-                //         {
-                //             type: "doc",
-                //             label: "Update",
-                //             id: "guides/MantaWalletUpdate",
-                //         },
-                //         {
-                //             type: "doc",
-                //             label: "Consolidate UTXOs",
-                //             id: "guides/ConsolidateUTXOs",
-                //         },
-                //     ],
-                // },
-                // {
-                //     type: "category",
-                //     label: "Manta Pay",
-                //     items: [
-                //         {
-                //             type: "doc",
-                //             label: "Manta Wallet User (New)",
-                //             id: "guides/MantaPay-Wallet",
-                //         },
-                //         {
-                //             type: "doc",
-                //             label: "Manta Signer User",
-                //             id: "guides/MantaPay-Signer",
-                //         },
-                //     ],
-                // },
-                // {
-                //     type: "doc",
-                //     label: "Bridge",
-                //     id: "guides/Bridge",
-                // },
-                // {
-                //     type: "category",
-                //     label: "Staking",
-                //     items: [
-                //         {
-                //             type: "category",
-                //             label: "KMA Staking",
-                //             items: [
-                //                 "calamari/Staking/Overview",
-                //                 "calamari/Staking/Rewards",
-                //                 "calamari/Staking/Rules",
-                //                 {
-                //                     type: "category",
-                //                     label: "Delegation",
-                //                     items: [
-                //                         "calamari/Staking/Delegation/dApp Overview",
-                //                         "calamari/Staking/Delegation/HowTo Delegate",
-                //                     ],
-                //                 },
-                //                 "calamari/Staking/StakingFAQ",
-                //             ],
-                //         },
-                //         // NOTE: To be created later
-                //         // {
-                //         //   type: 'category',
-                //         //   label: 'MANTA Staking',
-                //         //   items: [
-                //         //     'guides/staking/MANTA/Overview',
-                //         //   ],
-                //         // }
-                //     ],
-                // },
-                // "guides/MantaSigner",
             ],
         },
-
-        // {
-        //     type: "category",
-        //     label: "Previous Events",
-        //     collapsible: false,
-        //     items: [
-        //         {
-        //             type: "link",
-        //             label: "Squad Game",
-        //             href: "https://squadgame.manta.network/",
-        //         },
-        //         {
-        //             type: "link",
-        //             label: "Manta Network Crowdloan", // string - the label that should be displayed.
-        //             href: "https://crowdloanstrategy.manta.network/", // string - the target URL.
-        //         },
-        //     ],
-        // },
     ],
 };
