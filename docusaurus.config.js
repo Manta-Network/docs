@@ -134,17 +134,6 @@ module.exports = {
         maxSearchResults: 10,
       },
     ],
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            from: '/docs/calamari/Staking/Collation/SetupAndRun',
-            to: '/docs/calamari/Staking/Collation/SetupAndRun/installation',
-          },
-        ],
-      },
-    ],
   ],
   i18n: {
     defaultLocale: 'en',
