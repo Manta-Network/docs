@@ -19,10 +19,6 @@
     "message": "Manta 概览",
     "description": "The label of footer link with label=Manta Overview linking to /docs/manta/Overview"
   },
-  "link.item.label.Calamari Overview": {
-    "message": "Calamari 概览",
-    "description": "The label of footer link with label=Calamari Overview linking to /docs/calamari/Overview"
-  },
   "link.item.label.Twitter": {
     "message": "Twitter",
     "description": "The label of footer link with label=Twitter linking to https://twitter.com/mantanetwork"
