@@ -45,4 +45,6 @@ particle.setERC4337({
 await particle.auth.login() // Initiates social login to Manta
 ```
 
-### [Particle Network Documentation](https://docs.particle.network/)
+### [Particle Network Documentation](https://docs.particle.network)
+### [Particle Network Blog](https://blog.particle.network)
+### [Particle Network Website](https://particle.network)
