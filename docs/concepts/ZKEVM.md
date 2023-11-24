@@ -30,7 +30,7 @@ Finally, Manta Pacific plans to tap into the interoperable blockspace and liquid
 
 # **Next Steps**
 
-The migration to a ZK L2 with Polygon CDK will unlock Manta Pacific’s ultimate vision: to be a robust ZK dApp ecosystem, powered by its Universal Circuits SDK. It should be easy to develop ZK dApps without first understanding the intricacies of cryptography. [Universal Circuits](https://docs.manta.network/docs/Introduction) and its libraries abstract away the complexity of writing custom ZK circuits, allowing Solidity devs to build things like compliant private payments for DeFi or privacy-preserving identity verification for Web3 social.
+The migration to a ZK L2 with Polygon CDK will unlock Manta Pacific’s ultimate vision: to be a robust ZK dApp ecosystem, powered by its Universal Circuits SDK. It should be easy to develop ZK dApps without first understanding the intricacies of cryptography. [Universal Circuits](/docs/zkShuffle/Overview) and its libraries abstract away the complexity of writing custom ZK circuits, allowing Solidity devs to build things like compliant private payments for DeFi or privacy-preserving identity verification for Web3 social.
 
 As core devs building ZK tech, it is important to align Manta Pacific’s best-in-class ZK ecosystem with all the upsides of ZK infrastructure–and to do so in the EVM-equivalent environment of Polygon CDK, which means existing dev tooling works out-of-the-box.
 

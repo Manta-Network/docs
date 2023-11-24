@@ -58,7 +58,7 @@ SNARKs need an extra element to be properly defined
 
 * **Setup**: A set of proving and verifying keys necessary to execute the $\textsf{prove}$ and $\textsf{verify}$ functions, respectively.
 
-In pairing-based proving systems such as Groth16, the setup consists of a set of elliptic curve points, generated from a randomly sampled seed, more commonly known as the **toxic waste**. Knowledge of this seed allow an attacker to fabricate valid ZKPs for false statements, so it is of paramount importance that the generation of the keys is safely executed, i.e., that nobody knows the toxic waste employed to generate them. This is usually done in a multi-party computation known as [**Trusted Setup**](./TrustedSetup.md).
+In pairing-based proving systems such as Groth16, the setup consists of a set of elliptic curve points, generated from a randomly sampled seed, more commonly known as the **toxic waste**. Knowledge of this seed allow an attacker to fabricate valid ZKPs for false statements, so it is of paramount importance that the generation of the keys is safely executed, i.e., that nobody knows the toxic waste employed to generate them. This is usually done in a multi-party computation known as **Trusted Setup**.
 
 ### The simple definition of a SNARK
 
