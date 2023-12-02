@@ -77,7 +77,7 @@ For Powershell modify this to
 ./manta-trusted-setup-x86_64-pc-windows-msvc register
 ```
 
-That's all, you have installed the client and can move to the the next step: Registration.
+That's all, you have installed the client and can move to the next step: Registration.
 
 ### Source Code Installation
 If you prefer to build the client yourself from source code, follow the instructions [here](https://github.com/Manta-Network/manta-rs/tree/main/manta-trusted-setup).
@@ -91,7 +91,7 @@ manta-trusted-setup register
 ```
 (or the appropriate variant if you used the Windows or alternative Linux installation above).
 
-You will be asked for an email address and twitter account.  After providing them you will see output that looks something like this:
+You will be asked for an email address and twitter account.  After providing them you will see an output that looks something like this:
 ![registration prompt](./resources/ts_guide_register.png)
 
 
