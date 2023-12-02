@@ -1,6 +1,6 @@
 # Celestia
 
-Leveraging Celestia‘s [data availability (DA)](https://blockworks.co/news/data-availability-ethereum), Manta Pacific delivers a blazing-fast infrastructure at a fraction of the cost of monolothic L2s. Celestia employs cutting-edge data availability sampling techniques—two-dimensional Reed-Solomon coding and Namespaced Merkle Trees (NMTs)—to address L2 data availability concerns in a trust-minimized manner. By using Celestia as the DA (Data Availability) layer, Manta Pacific can significantly reduce transaction costs for users.
+Leveraging Celestia‘s [data availability (DA)](https://blockworks.co/news/data-availability-ethereum), Manta Pacific delivers a blazing-fast infrastructure at a fraction of the cost of monolithic L2s. Celestia employs cutting-edge data availability sampling techniques—two-dimensional Reed-Solomon coding and Namespaced Merkle Trees (NMTs)—to address L2 data availability concerns in a trust-minimized manner. By using Celestia as the DA (Data Availability) layer, Manta Pacific can significantly reduce transaction costs for users.
 
 ## What is Celestia?
 

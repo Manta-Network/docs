@@ -46,7 +46,7 @@ pub trait Variable<M, COM = ()> {
     fn new_unknown(compiler: &mut COM) -> Self;
 
     /// Allocates a new known value from `this` into the `compiler`. The terminology 
-    /// "known" refers to the fact that we have access to the underyling value during 
+    /// "known" refers to the fact that we have access to the underlying value during 
     /// execution time where we are able to use its concrete value for execution.
     fn new_known(this: &Self::Type, compiler: &mut COM) -> Self;
 }
