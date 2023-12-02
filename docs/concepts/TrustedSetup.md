@@ -37,7 +37,7 @@ In this way the MPC forms a chain of participants who each contribute their own 
 
 > It's worth emphasizing: *if at least one single participant in the ceremony is honest then the resulting keys are secure.*
 
-This is where the term "trusted setup ceremony" comes from. *Setup* because it generates necessary infrastructure (prover/verifier keys) for ZKPs. *Ceremony* because it requires many participants to coordinate with each other to carry out the MPC. *Trusted* because the design of this MPC allows us to trust its output as long as we believe that at least one honest person participated.
+This is where the term "trusted setup ceremony" comes from. *Setup* because it generates the necessary infrastructure (prover/verifier keys) for ZKPs. *Ceremony* because it requires many participants to coordinate with each other to carry out the MPC. *Trusted* because the design of this MPC allows us to trust its output as long as we believe that at least one honest person participated.
 
 ## What attacks are possible?
 
