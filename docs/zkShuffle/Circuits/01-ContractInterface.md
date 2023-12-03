@@ -6,7 +6,7 @@ description: 'zkShuffle Contract desc'
 
 # Overview
 
-zkShuffle Contracts provide two contract interfaces to help developers build their own card games:
+zkShuffle Contracts provides two contract interfaces to help developers build their own card games:
 - [IShuffleStateManager](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/IShuffleStateManager.sol): The manager of shuffle state machine, which creates and registers shuffle state, deals and opens cards.
 - [IBaseGame](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/IBaseGame.sol): Developers need to inherit this interface when writing their own game contracts.
 
@@ -56,13 +56,13 @@ Enters the register state, which can only be called by the game owner.
 
 > **Note:** The ```gameId``` parameter in all the interfaces corresponds to the return value of the ```createShuffleGame``` function.
 
-> **Note:** ```register``` only initiate the registration phase so that players can register, it doesn't actually perform the registration.
+> **Note:** ```register``` only initiates the registration phase so that players can register, it doesn't actually perform the registration.
 
 ### playerRegister
 
 ```function playerRegister(uint256 gameId, address signingAddr, uint256 pkX, uint256 pkY) external returns (uint256)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L228-L233)
 
-Performs the registration for a certain player, which can be called by game contract or directly called by user.
+Performs the registration for a certain player, which can be called by game contract or directly called by the user.
 
 **Parameters:**
 - ```gameId```: The created shuffle game ID.
@@ -119,13 +119,13 @@ Initiates the shuffle phase, which can only be called by game contract.
 - ```gameId```: The created shuffle game ID.
 - ```next```: The calldata that will be executed in the next invocation.
 
-> **Note:** ```shuffle``` only initiate the shuffle phase so that players can shuffle, it doesn't actually perform the shuffle.
+> **Note:** ```shuffle``` only initiates the shuffle phase so that players can shuffle, it doesn't actually perform the shuffle.
 
 ### dealCardsTo
 
 ```function shuffle(uint256 gameId, BitMaps.BitMap256 memory cards, uint256 playerId, bytes calldata next) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L332-L337)
 
-Specifies a set of cards to be dealed to a players, which can only be called by game contract.
+Specifies a set of cards to be dealt to a player, which can only be called by game contract.
 
 **Parameters:**
 - ```gameId```: The created shuffle game ID.
@@ -254,7 +254,7 @@ Gets the decryption record (i.e., which players have decrypted this card).
 
 ```function queryAggregatedPk(uint256 gameId) external returns(uint px, uint py)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L96-L98)
 
-Queries the aggregated public key for card shuffling/dealing in `gameId`-th game. The public key is a elliptic curve point on BN254 G1 curve.
+Queries the aggregated public key for card shuffling/dealing in `gameId`-th game. The public key is an elliptic curve point on BN254 G1 curve.
 
 **Parameters:**
 - ```gameId```: The created shuffle game ID.
