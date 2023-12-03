@@ -3,7 +3,7 @@
 The `alloc` module defines ECLAIR's interface for allocating values in a compiler. We use the term "allocation" here to refer to the process of declaring a variable in a ZK proof system and (maybe) assigning it a value. Note that we are *not* referring to memory-related abstractions like heap allocation.
 
 Variables in a ZK proof system can be private witnesses, public inputs, constants, or some mixture of these. For example, in a merkle tree membership proof we would have variables representing the values stored:
-- in some leaf of the tree 
+- in some leaves of the tree 
 - along the path from that leaf to the root
 - in the root of the tree.
 
@@ -46,7 +46,7 @@ pub trait Variable<M, COM = ()> {
     fn new_unknown(compiler: &mut COM) -> Self;
 
     /// Allocates a new known value from `this` into the `compiler`. The terminology 
-    /// "known" refers to the fact that we have access to the underyling value during 
+    /// "known" refers to the fact that we have access to the underlying value during 
     /// execution time where we are able to use its concrete value for execution.
     fn new_known(this: &Self::Type, compiler: &mut COM) -> Self;
 }
