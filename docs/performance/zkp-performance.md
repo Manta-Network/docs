@@ -8,8 +8,8 @@
 | Exchange | 11                      | 110           |
 | Reclaim  | 8.3                     | 89            | 
 
-Note: All verifier time are obtained from `frame-benchmark`. 
-The WASM time is substrate flavored WASM time using compiled setting. 
+Note: All verifier times are obtained from `frame-benchmark`. 
+The WASM time is substrate flavored WASM time using a compiled setting. 
 
 ## Prover Time
 
