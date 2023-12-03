@@ -7,7 +7,7 @@ description: 'zkShuffle SDK Overview'
 
 zkShuffles SDK provides [IZKShuffle](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L47-L58) as a standard interface to interact with shuffle manager contract.
 The goal is to simplify zk proof generation and key management.
-With IZKShuffle interface, game developer can build zk game without any experience on cryptography including zero knowledge proof, and thus can focus on the game logic.
+With IZKShuffle interface, game developer can build zk game without any experience in cryptography including zero knowledge proof, and thus can focus on the game logic.
 
 # IZKShuffle
 
@@ -54,7 +54,7 @@ Shuffles the deck in game `gameId` and submits a proof on-chain.
 - `gameId` : number
 
 **Return:**
-- `result` : boolean. `True` is shuffle successs, otherwise `False`.
+- `result` : boolean. `True` is shuffle success, otherwise `False`.
 
 ### draw
 ```async draw(gameId: number): Promise<boolean>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L280)
@@ -65,7 +65,7 @@ Draws a card in game `gameId`, and submits a proof on-chain.
 - `gameId` : number
 
 **Return:**
-- `result` : boolean. `True` is draw successs, otherwise `False`
+- `result` : boolean. `True` is draw success, otherwise `False`
 
 ### open
 ```async open(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L361)
@@ -83,8 +83,8 @@ Opens cards specified by `cardIds` and submits a proof on-chain.
 ### openOffchain
 ```async openOffchain(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L342)
 
-Opens cards specified by `cardIds`. Returns card's original value if open successs, otherwise returns -1 for the card.
-> Different from `open` that sends the decryption onchain, `openOffchain` only shows decrypted card on user machine and does not send to blockchain.
+Opens cards specified by `cardIds`. Returns card's original value if open success, otherwise returns -1 for the card.
+> Different from `open` that sends the decryption onchain, `openOffchain` only shows decrypted card on user's machine and does not send it to blockchain.
 
 **Parameters:**
 - `gameId` : number
