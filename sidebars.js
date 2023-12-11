@@ -57,15 +57,9 @@ module.exports = {
                             id: "concepts/ZKEVM",
                         },
                         {
-                            type: "category",
+                            type: "doc",
                             label: "Universal Circuits (Alpha): zkShuffle",
-                            items: [
-                                {
-                                    type: "doc",
-                                    label: "Overview",
-                                    id: "zkShuffle/Overview",
-                                },
-                            ],
+                            id: "zkShuffle/Overview",
                         },
                         {
                             type: "doc",
