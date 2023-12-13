@@ -156,6 +156,19 @@ module.exports = {
         },
         {
             type: "category",
+            label: "Manta Atlantic Network",
+            collapsible: false,
+            items: [
+                {
+                    type: "doc",
+                    label: "Collator",
+                    id: "manta-atlantic/Collator",
+                },
+
+            ],
+        },
+        {
+            type: "category",
             label: "OpenZL",
             collapsible: false,
             items: [
