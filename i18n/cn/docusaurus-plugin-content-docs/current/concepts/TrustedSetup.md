@@ -1,5 +1,7 @@
 # 可信设置
 
+请参阅 [这里](../guides/TrustedSetup.md)了解如何参与贡献。继续阅读了解什么是可信设置以及它们在Manta 网络上将发挥怎样的作用。
+
 ## 什么是可信设置
 
 Manta Network 使用零知识证明 (ZKP) 来保护隐私。 MantaPay 所使用的 ZKP 是一种名为 "Groth16 "的 ZK-SNARK，它需要两个公共基础设施：证明者密钥和验证者密钥。 可信设置就是用于安全生成这些密钥的过程。
@@ -89,3 +91,7 @@ Manta 为组织这个仪式并确保它的安全性付出了很多努力，但�
 
 - [ZCash Sapling 仪式](https://github.com/ebfull/powersoftau):ZCash 的密码学团队是完成了第一个 Groth16 可信设置的开拓者。 在编写我们的贡献客户端时，我们从他们的工作中获得了很多灵感。 （虽然要明确一点，我们没有使用 Sapling 仪式的实际参数；我们使用的是 PPoT。）
 - Kobi Gurkan 的[代码仓库](https://github.com/kobigurk/phase2-bn254/tree/master/powersoftau/src) 给我们提供了不少灵感 (一个重要区别是我们使用了 Arkworks 库)。
+
+## 如何参与
+
+如果您也想帮助确保 Manta Network 的安全，请查阅 [这些指引](../guides/TrustedSetup.md).

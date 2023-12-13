@@ -164,6 +164,7 @@ module.exports = {
                     label: "Collator",
                     id: "manta-atlantic/Collator",
                 },
+
             ],
         },
         {
@@ -236,6 +237,78 @@ module.exports = {
                             type: "doc",
                             label: "Introduction",
                             id: "openzl/proof_systems",
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            type: "category",
+            label: "Ecosystem Products",
+            collapsible: false,
+            items: [
+                {
+                    type: "category",
+                    label: "NPO - zkSBT",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About NPO -zkSBT ",
+                            id: "guides/npo/About",
+                        },
+                        {
+                            type: "doc",
+                            label: "Benefits",
+                            id: "guides/npo/Benefits",
+                        },
+                        {
+                            type: "doc",
+                            label: "How to Mint zkSBT on Manta Pacific?",
+                            id: "guides/npo/How to Mint zkSBT on Manta Pacific",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "POMP",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About POMP ",
+                            id: "guides/pomp/About",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "zkHoldem",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About zkHoldem ",
+                            id: "guides/zkHoldem/About",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Aperture",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About Aperture",
+                            id: "guides/Aperture/About",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Asmatch",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "About Asmatch",
+                            id: "guides/Asmatch/About",
                         },
                     ],
                 },
