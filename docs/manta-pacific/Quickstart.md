@@ -28,10 +28,11 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 | iZi    | [0x91647632245caBf3d66121F86C387aE0ad295F9A](https://pacific-explorer.manta.network/address/0x91647632245caBf3d66121F86C387aE0ad295F9A) | [0x9ad37205d608b8b219e6a2573f922094cec5c200](https://etherscan.io/address/0x9ad37205d608b8b219e6a2573f922094cec5c200) |
 | iUSD   | [0x078f712f038A95BeEA94F036cADB49188a90604b](https://pacific-explorer.manta.network/address/0x078f712f038A95BeEA94F036cADB49188a90604b) | [0x0A3BB08b3a15A19b4De82F8AcFc862606FB69A2D](https://etherscan.io/address/0x0A3BB08b3a15A19b4De82F8AcFc862606FB69A2D) |
 | TRB    | [0x8D7090DdDa057f48FdBbb2ABCeA22D1113AB566a](https://pacific-explorer.manta.network/address/0x8D7090DdDa057f48FdBbb2ABCeA22D1113AB566a) | [0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0](https://etherscan.io/address/0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0) |
-| wUSDM  | [0x0917459e8CA2C01E49b1A83Ae8ACC6bd6f627442](https://pacific-explorer.manta.network/address/0x0917459e8CA2C01E49b1A83Ae8ACC6bd6f627442) | [0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812](https://etherscan.io/address/0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812) |
+| wUSDM  | [0xbdAd407F77f44F7Da6684B416b1951ECa461FB07](https://pacific-explorer.manta.network/address/0xbdAd407F77f44F7Da6684B416b1951ECa461FB07) | [0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812](https://etherscan.io/address/0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812) |
 | QUICK  | [0xE22E3D44Ea9Fb0A87Ea3F7a8f41D869C677f0020](https://pacific-explorer.manta.network/address/0xE22E3D44Ea9Fb0A87Ea3F7a8f41D869C677f0020) | [0xd2ba23de8a19316a638dc1e7a9adda1d74233368](https://etherscan.io/address/0xd2ba23de8a19316a638dc1e7a9adda1d74233368) |
 | MaticX | [0x01D27580C464d5B3B26F78Bee12E684901dbC02a](https://pacific-explorer.manta.network/address/0x01D27580C464d5B3B26F78Bee12E684901dbC02a) | [0xf03A7Eb46d01d9EcAA104558C732Cf82f6B6B645](https://etherscan.io/address/0xf03A7Eb46d01d9EcAA104558C732Cf82f6B6B645) |
 | TIA    | [0x6Fae4D9935E2fcb11fC79a64e917fb2BF14DaFaa](https://pacific-explorer.manta.network/address/0x6Fae4D9935E2fcb11fC79a64e917fb2BF14DaFaa) |                                                                                                                       |
+| STONE  | [0xEc901DA9c68E90798BbBb74c11406A32A70652C3](https://pacific-explorer.manta.network/address/0xEc901DA9c68E90798BbBb74c11406A32A70652C3) | [0x7122985656e38BDC0302Db86685bb972b145bD3C](https://etherscan.io/address/0x7122985656e38BDC0302Db86685bb972b145bD3C) |
 
 ### Bridge Assets
 
