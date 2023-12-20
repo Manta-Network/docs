@@ -163,15 +163,19 @@ module.exports = {
                     type: "category",
                     label: "Collator",
                     items: [
+                        "manta-atlantic/Collation/Overview",
+                        "manta-atlantic/Collation/Requirements",
                         {
-                            type: "doc",
-                            label: "Overview",
-                            id: "manta-atlantic/Collator Overview",
-                        },
-                        {
-                            type: "doc",
-                            label: "Requirement",
-                            id: "manta-atlantic/Collator Requirement",
+                            type: "category",
+                            label: "SetupAndRun",
+                            items: [
+                                "manta-atlantic/Collation/SetupAndRun/installation",
+                                "manta-atlantic/Collation/SetupAndRun/configuration",
+                                "manta-atlantic/Collation/SetupAndRun/running",
+                                "manta-atlantic/Collation/SetupAndRun/sync",
+                                "manta-atlantic/Collation/SetupAndRun/keys",
+                                "manta-atlantic/Collation/SetupAndRun/bond",
+                            ],
                         },
                     ],
                 },
