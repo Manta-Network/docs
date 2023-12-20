@@ -2,7 +2,7 @@
 
 zkShuffle provides an easy access for Ethereum developers to create "mental poker" games utilizing zero-knowledge proofs. The concept of "mental poker" refers to the implementation of a fair gaming protocol over a communication system that doesn't involve any trusted third-party. The term was initially proposed in 1979 by Adi Shamir, Ron Rivest, and Leonard Adleman in a paper where they discussed the idea of creating a fair poker game in which players could not see each other's cards or shuffle and deal the cards themselves. The challenge of building a “mental poker” game is to ensure that no one can cheat while maintaining the communications reliable, efficient and low-cost.
 
-zkShuffle is an efficient mental poker emphasizing the reduction of gas cost on Ethereum. zkShuffle can be applied beyond poker to many different types of card or board games where secure and fair card shuffle and deal is required without a trusted third party.
+zkShuffle is an efficient mental poker emphasizing the reduction of gas costs on Ethereum. zkShuffle can be applied beyond poker to many different types of card or board games where secure and fair card shuffle and deal are required without a trusted third party.
 
 ## State Diagram
 
@@ -17,7 +17,7 @@ This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/c
 
 ### Solidity Contracts
 
-This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/contracts/contracts/shuffle) contains contracts that manages shuffled deck and verifies proofs on-chain. It comprises the manager contract, ShuffleManager.sol, as well as supplementary contracts tasked with operations such as encryption and decryption. The manager contract is responsible for creating new games, registering players, checking game states, and performing various operations required for game management. This frees developers from considering technical details such as card shuffling and dealing, such that developers could focuses on game logic contracts. [Read more](/docs/zkShuffle/Circuits/ContractInterface)
+This [directory](https://github.com/manta-network/zkShuffle/tree/main/packages/contracts/contracts/shuffle) contains contracts that manage shuffled deck and verify proofs on-chain. It comprises the manager contract, ShuffleManager.sol, as well as supplementary contracts tasked with operations such as encryption and decryption. The manager contract is responsible for creating new games, registering players, checking game states, and performing various operations required for game management. This frees developers from considering technical details such as card shuffling and dealing, such that developers can focus on game logic contracts. [Read more](/docs/zkShuffle/Circuits/ContractInterface)
 
 ### Typescript SDK (Alpha)
 

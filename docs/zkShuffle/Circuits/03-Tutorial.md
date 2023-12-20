@@ -6,7 +6,7 @@ description: 'zkShuffle SDK Tutorial Step-by-Step'
 
 # Overview
 
-This tutorial shows a simple game zkHilo. In particular, each of two players draw 1 card and bet, where the player with larger card value wins. The complete logic is:
+This tutorial shows a simple game zkHilo. In particular, each of the two players draw 1 card and bet, where the player with a larger card value wins. The complete logic is:
 
 ```ts
     zkHiLo Game Logic :
@@ -90,7 +90,7 @@ contract Hilo is IBaseGame {
         );
         shuffle.openCards(shuffleId, 1, 1, next);
     }
-    // will be called after player 1 opened card, and end the game.
+    // will be called after player 1 opened card, and ends the game.
     function endGame() onlyShuffleManager {
         shuffle.endGame(shuffleId);
     }
