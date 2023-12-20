@@ -160,9 +160,20 @@ module.exports = {
             collapsible: false,
             items: [
                 {
-                    type: "doc",
+                    type: "category",
                     label: "Collator",
-                    id: "manta-atlantic/Collator",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Overview",
+                            id: "manta-atlantic/Collator Overview",
+                        },
+                        {
+                            type: "doc",
+                            label: "Requirement",
+                            id: "manta-atlantic/Collator Requirement",
+                        },
+                    ],
                 },
             ],
         },
