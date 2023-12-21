@@ -154,33 +154,33 @@ module.exports = {
                 },
             ],
         },
-        // {
-        //     type: "category",
-        //     label: "Manta Atlantic Network",
-        //     collapsible: false,
-        //     items: [
-        //         {
-        //             type: "category",
-        //             label: "Collator",
-        //             items: [
-        //                 "manta-atlantic/Collation/Overview",
-        //                 "manta-atlantic/Collation/Requirements",
-        //                 {
-        //                     type: "category",
-        //                     label: "SetupAndRun",
-        //                     items: [
-        //                         "manta-atlantic/Collation/SetupAndRun/installation",
-        //                         "manta-atlantic/Collation/SetupAndRun/configuration",
-        //                         "manta-atlantic/Collation/SetupAndRun/running",
-        //                         "manta-atlantic/Collation/SetupAndRun/sync",
-        //                         "manta-atlantic/Collation/SetupAndRun/keys",
-        //                         "manta-atlantic/Collation/SetupAndRun/bond",
-        //                     ],
-        //                 },
-        //             ],
-        //         },
-        //     ],
-        // },
+        {
+            type: "category",
+            label: "Manta Atlantic Network",
+            collapsible: false,
+            items: [
+                {
+                    type: "category",
+                    label: "Collator",
+                    items: [
+                        "manta-atlantic/Collation/Overview",
+                        "manta-atlantic/Collation/Requirements",
+                        {
+                            type: "category",
+                            label: "SetupAndRun",
+                            items: [
+                                "manta-atlantic/Collation/SetupAndRun/installation",
+                                "manta-atlantic/Collation/SetupAndRun/configuration",
+                                "manta-atlantic/Collation/SetupAndRun/running",
+                                "manta-atlantic/Collation/SetupAndRun/sync",
+                                "manta-atlantic/Collation/SetupAndRun/keys",
+                                "manta-atlantic/Collation/SetupAndRun/bond",
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
         {
             type: "category",
             label: "OpenZL",
