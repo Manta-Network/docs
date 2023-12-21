@@ -35,7 +35,7 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-		--bootnodes \
+    --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
       /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
@@ -78,7 +78,7 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-		--bootnodes \
+    --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
       /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
@@ -121,7 +121,7 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-		--bootnodes \
+    --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
       /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
