@@ -162,9 +162,8 @@ Output from this RPC call should look like the following and is a concatenation 
 Strip the leading `0x` and then split this number after every 64 characters to recover the three constituent public keys.
 Prepend each of them individually with a `0x` and note them for further use. It should look like
 ```
-aura => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb50e6aeb15951288c562f69
-nimbus => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb50e6aeb15951288c562f61
-VRF => 0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb40e6aeb15911288c562f63
+nimbus => 0x8a8af929d1219802dc8155d0b5381c41d49a185aae2c8bf3537d5c124a63a63e
+VRF => 0x48c832d59679790f579d6009f5bb56ef0b52da49d7e4c504fe50847d04b12474
 ```
 </TabItem>
 </Tabs>
@@ -182,23 +181,20 @@ If your collator node logs do not contain both `[Relaychain] 💤 Idle` and `[Pa
 
 Account binding is done on-chain. The simplest way to do this is using polkadot.js.
 - Load [manta/developer/extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/extrinsics) in a browser:
-  ![session.setkeys()](/img/collator-program/session.setkeys.png)
+  ![session.setkeys()](/img/collator-program/session.setkeys-manta.png)
 :::note
 Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 :::
    - In the first box, labelled "using the selected account", select the collator account holding the [collator MANTA bond](../Requirements#manta-bond).
    - In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
    - In the third (dropdown) box, select `setKeys(keys, proof)`
-   - In the fourth box labelled `aura: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the Aura session key you generated earlier or a dummy value, e.g. `0x0000000000000000000000000000000000000000000000000000000000000000`
-:::note
-`aura` is an inactive key from pre-v3.3.0 versions of the node. The value you provide here will not be used
 :::
    - In the fifth box, labelled `nimbus: NimbusPrimitivesNimbusCryptoPublic`, enter the hex public key of the Nimbus session key you generated earlier.
    - In the sixth box, labelled `vrf: SessionKeyPrimitivesVrfVrfCryptoPublic`, enter the hex public key of the VRF session key you generated earlier.
    - In the seventh box labelled `proof: Bytes`, enter the hex public key of the Nimbus session key *again*.
    - Click on the `Submit Transaction` button and wait for confirmation (a green tick), to appear in the upper right corner of the browser window.
 - Verfy that the collator account and the Session keys are *bound* by loading [manta/developer/chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/chainstate) in a browser:
-  ![session.nextkeys()](/img/collator-program/session.nextkeys.png)
+  ![session.nextkeys()](/img/collator-program/session.nextkeys-manta.png)
 :::note
 Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 :::
@@ -208,4 +204,4 @@ Although the screenshot shows a connected dolphin node, the procedure is identic
    - Leave the `include option` checkbox selected.
    - Leave the `blockhash to query at` box set to the default `0x` value.
    - Click on the small plus (`+`) icon to the right of the second dropdown box.
-   - Verify that a new box labelled `session.nextKeys(AccountId32): Option<MantaRuntimeOpaqueSessionKeys>` appears and contains a json object whose `aura`,`nimbus` and `vrf` values are set to the hex public keys generated earlier.
+   - Verify that a new box labelled `session.nextKeys(AccountId32): Option<MantaRuntimeOpaqueSessionKeys>` appears and contains a json object whose,`nimbus` and `vrf` values are set to the hex public keys generated earlier.

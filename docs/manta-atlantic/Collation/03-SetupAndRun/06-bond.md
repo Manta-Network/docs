@@ -27,7 +27,7 @@ Unlocking these tokens is possible through [unbonding](../Unbond) and takes a mi
 
 Run the `joinCandidates` [extrinsic](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/extrinsics) from the account you set [your session keys](keys) to in a browser.
 
-![parachainStaking.joinCandidates()](/img/collator-program/parachainStaking.joinCandidates.png)
+![parachainStaking.joinCandidates()](/img/collator-program/parachainStaking.joinCandidates-manta.png)
 :::note
 **bond** is 400_000_000_000_000_000_000_000 MANTA ( 400 THOUSANDS MANTA with 12 decimals )<br/>
 **candidateCount** is a hint for transaction weight ( i.e. gas fee ) that should be larger than the current number of registered collators ( or the transaction will fail ).
