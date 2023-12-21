@@ -12,9 +12,9 @@ import TabItem from '@theme/TabItem';
 
 ## 🔑 Collator session keys
 
-To collate on the Calamari chain, two accounts/keys are required at any given time:
+To collate on the Manta chain, two accounts/keys are required at any given time:
 - **Collator Account**: This is the account that holds the collator bond. it is also the account that the collator's share of transaction fees will be deposited into. the bond cannot be spent while the account is collating. the keys for this account should be protected carefully and should never exist on the filesystem of the collator node.
-- **Nimbus Session Key**: This is a disposable account used to identify your individual node and blocks it has produced with other nodes on the network.  Substrate stores this key in the parachain keystore on the filesystem of the collator node (`/var/lib/substrate/chains/calamari/keystore`) when either of the author_insertKey or author_rotateKeys RPC methods are called. As this is a hot-wallet key that can be abused to impersonate your node if leaked (potentially leading to slashing of deposited funds in the future) it is good practice to infrequently rotate the session key - typically every half year, once per session at most.
+- **Nimbus Session Key**: This is a disposable account used to identify your individual node and blocks it has produced with other nodes on the network.  Substrate stores this key in the parachain keystore on the filesystem of the collator node (`/var/lib/substrate/chains/manta/keystore`) when either of the author_insertKey or author_rotateKeys RPC methods are called. As this is a hot-wallet key that can be abused to impersonate your node if leaked (potentially leading to slashing of deposited funds in the future) it is good practice to infrequently rotate the session key - typically every half year, once per session at most.
 
 Both keys are associated with one another to create a bond-node pair for transaction fee reward payouts and (in the future) slashing.
 
@@ -31,16 +31,16 @@ This mode of operation is **unsafe** when exposed to the public internet, restar
 <Tabs groupId="keys">
 <TabItem value="insert" label="insertKey">
 
-This command demonstrates a session key insertion using a key created with 
+This command demonstrates a session key insertion using a key created with
 
-- Build/Install [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) for your platform 
-- Install the [jq utility](https://stedolan.github.io/jq/download/) for your platform 
+- Build/Install [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) for your platform
+- Install the [jq utility](https://stedolan.github.io/jq/download/) for your platform
 - Generate a Nimbus (nmbs) key and insert/check payloads with subkey/jq
   ```bash
   #!/bin/bash
   subkey generate \
     --scheme sr25519 \
-    --network calamari \
+    --network manta \
     --output-type json \
     --words 12 \
     > ./nmbs.json
@@ -74,7 +74,7 @@ This command demonstrates a session key insertion using a key created with
   #!/bin/bash
   subkey generate \
     --scheme sr25519 \
-    --network calamari \
+    --network manta \
     --output-type json \
     --words 12 \
     > ./rand.json
@@ -128,7 +128,7 @@ This command demonstrates a session key insertion using a key created with
 - **Validation**: Check that node logs show your node is running with role: `AUTHORITY` (check the timestamps)
   ```bash
   #!/bin/bash
-  journalctl -u calamari.service -g AUTHORITY
+  journalctl -u manta.service -g AUTHORITY
   ```
 - Note down the `publicKey` fields from `nmbs.json` and `rand.json` and/or back-up these key files to a **secure**, offline location
 - **Cleanup**: Remove secrets from the filesystem that were created in earlier steps
@@ -181,12 +181,12 @@ If your collator node logs do not contain both `[Relaychain] 💤 Idle` and `[Pa
 :::
 
 Account binding is done on-chain. The simplest way to do this is using polkadot.js.
-- Load [calamari/developer/extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/extrinsics) in a browser:
+- Load [manta/developer/extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/extrinsics) in a browser:
   ![session.setkeys()](/img/collator-program/session.setkeys.png)
 :::note
-Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Calamari Network
+Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 :::
-   - In the first box, labelled "using the selected account", select the collator account holding the [collator KMA bond](../Requirements#kma-bond).
+   - In the first box, labelled "using the selected account", select the collator account holding the [collator MANTA bond](../Requirements#manta-bond).
    - In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
    - In the third (dropdown) box, select `setKeys(keys, proof)`
    - In the fourth box labelled `aura: SpConsensusAuraSr25519AppSr25519Public`, enter the hex public key of the Aura session key you generated earlier or a dummy value, e.g. `0x0000000000000000000000000000000000000000000000000000000000000000`
@@ -197,15 +197,15 @@ Although the screenshot shows a connected dolphin node, the procedure is identic
    - In the sixth box, labelled `vrf: SessionKeyPrimitivesVrfVrfCryptoPublic`, enter the hex public key of the VRF session key you generated earlier.
    - In the seventh box labelled `proof: Bytes`, enter the hex public key of the Nimbus session key *again*.
    - Click on the `Submit Transaction` button and wait for confirmation (a green tick), to appear in the upper right corner of the browser window.
-- Verfy that the collator account and the Session keys are *bound* by loading [calamari/developer/chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.calamari.systems%2F#/chainstate) in a browser:
+- Verfy that the collator account and the Session keys are *bound* by loading [manta/developer/chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/chainstate) in a browser:
   ![session.nextkeys()](/img/collator-program/session.nextkeys.png)
 :::note
-Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Calamari Network
+Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 :::
    - In the first (dropdown) box, labelled "selected state query", select `session`.
-   - In the second (dropdown) box, select `nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>`.
-   - In the third (dropdown) box, select the collator account holding the KMA collator bond.
+   - In the second (dropdown) box, select `nextKeys(AccountId32): Option<MantaRuntimeOpaqueSessionKeys>`.
+   - In the third (dropdown) box, select the collator account holding the MANTA collator bond.
    - Leave the `include option` checkbox selected.
    - Leave the `blockhash to query at` box set to the default `0x` value.
    - Click on the small plus (`+`) icon to the right of the second dropdown box.
-   - Verify that a new box labelled `session.nextKeys(AccountId32): Option<CalamariRuntimeOpaqueSessionKeys>` appears and contains a json object whose `aura`,`nimbus` and `vrf` values are set to the hex public keys generated earlier.
+   - Verify that a new box labelled `session.nextKeys(AccountId32): Option<MantaRuntimeOpaqueSessionKeys>` appears and contains a json object whose `aura`,`nimbus` and `vrf` values are set to the hex public keys generated earlier.

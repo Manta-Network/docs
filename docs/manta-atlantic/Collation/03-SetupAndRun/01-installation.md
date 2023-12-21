@@ -14,7 +14,7 @@ Installation > [Configuration](configuration) > [Running](running) > [Sync](sync
 
 <Tabs groupId="os">
 <TabItem value="docker" label="docker">
-- pull the latest calamari container
+- pull the latest manta container
 
   ```bash
   #!/bin/bash
@@ -30,16 +30,16 @@ Installation > [Configuration](configuration) > [Running](running) > [Sync](sync
   # Add current user to docker
   sudo usermod -aG docker $USER
 
-  # Pull the calamari image
-  docker pull mantanetwork/calamari:latest
+  # Pull the manta image
+  docker pull mantanetwork/manta:latest
   ```
 </TabItem>
 <TabItem value="fedora" label="fedora">
 
 the manta .rpm package contains:
-- the manta binary (which is also used to run calamari)
-- manta and calamari systemd services
-- manta, calamari, polkadot and kusama chain specifications
+- the manta binary (which is also used to run manta)
+- manta and manta systemd services
+- manta, manta, polkadot and kusama chain specifications
 - a script which runs after installation and creates the manta system account which the systemd service runs under
 
 get started (see also: [rpm.manta.systems](https://rpm.manta.systems/)):
@@ -67,9 +67,9 @@ get started (see also: [rpm.manta.systems](https://rpm.manta.systems/)):
 <TabItem value="ubuntu" label="ubuntu">
 
 the manta .deb package contains:
-- the manta binary (which is also used to run calamari)
-- manta and calamari systemd services
-- manta, calamari, polkadot and kusama chain specifications
+- the manta binary (which is also used to run manta)
+- manta and manta systemd services
+- manta, manta, polkadot and kusama chain specifications
 - a script which runs after installation and creates the manta system account which the systemd service runs under
 
 get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
@@ -111,15 +111,15 @@ get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
 
   # binary
   sudo curl -Lo /usr/local/bin/manta https://github.com/Manta-Network/Manta/releases/download/v${manta_version}/manta
-  sudo ln -srf /usr/local/bin/manta /usr/local/bin/calamari
+  sudo ln -srf /usr/local/bin/manta /usr/local/bin/manta
 
   # chainspecs
   sudo mkdir -p /usr/share/substrate
-  sudo curl -Lo /usr/share/substrate/calamari.json https://raw.githubusercontent.com/Manta-Network/Manta/v3.0.9/genesis/calamari-genesis.json
-  sudo curl -Lo /usr/share/substrate/kusama.json https://raw.githubusercontent.com/paritytech/polkadot/master/node/service/res/kusama.json
+  sudo curl -Lo /usr/share/substrate/manta.json https://raw.githubusercontent.com/Manta-Network/Manta/v3.0.9/genesis/manta-genesis.json
+  sudo curl -Lo /usr/share/substrate/kusama.json https://raw.githubusercontent.com/paritytech/polkadot/master/node/service/chain-specs/manta.json
 
   # systemd unit file
-  sudo curl -Lo /etc/systemd/system/calamari.service https://raw.githubusercontent.com/Manta-Network/Manta/deb-rpm/scripts/package/calamari.service
+  sudo curl -Lo /etc/systemd/system/manta.service https://raw.githubusercontent.com/Manta-Network/Manta/deb-rpm/scripts/package/manta.service
   ```
 
 - create the manta system account which the systemd service runs under

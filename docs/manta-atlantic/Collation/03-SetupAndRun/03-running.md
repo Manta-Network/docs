@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
     -p 9516:9516 \
     -v host_path:/container_path \
     --name your_container_name \
-    mantanetwork/calamari:latest \
+    mantanetwork/manta:latest \
     --base-path /container_path/data \
     --keystore-path /container_path/keystore \
     --name your_collator_name \
@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
     -v host_path:/container_path \
     --restart=unless-stopped \
     --name your_container_name \
-    mantanetwork/calamari:latest \
+    mantanetwork/manta:latest \
     --base-path /container_path/data \
     --keystore-path /container_path/keystore \
     --name your_collator_name \
@@ -59,7 +59,7 @@ import TabItem from '@theme/TabItem';
 
   Examples of these name and paths:
 
-  `host_path:/container_path` => `~/my-calamari-db:/calamari`
+  `host_path:/container_path` => `~/my-manta-db:/manta`
 
   `your_collator_name` => `Community-Collator-1`
 
@@ -83,154 +83,154 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 <TabItem value="fedora" label="fedora">
 
-- check the status of the calamari service:
+- check the status of the manta service:
 
   ```bash
   #!/bin/bash
 
-  systemctl status calamari.service
+  systemctl status manta.service
   ```
 
-- enable calamari service (the service will start automatically on system boot):
+- enable manta service (the service will start automatically on system boot):
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl enable calamari.service
+  sudo systemctl enable manta.service
   ```
 
-- start calamari service:
+- start manta service:
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl start calamari.service
+  sudo systemctl start manta.service
   ```
 
-- stop calamari service:
+- stop manta service:
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl stop calamari.service
+  sudo systemctl stop manta.service
   ```
 
-- tail the calamari service logs:
+- tail the manta service logs:
 
   ```bash
   #!/bin/bash
 
-  journalctl -u calamari.service -f
+  journalctl -u manta.service -f
   ```
 
-- debug calamari service configuration (run calamari as the manta user, to quickly check for runtime errors):
+- debug manta service configuration (run manta as the manta user, to quickly check for runtime errors):
 
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/bin/calamari --chain /usr/share/substrate/calamari.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
   ```
 
 </TabItem>
 <TabItem value="ubuntu" label="ubuntu">
 
-- check the status of the calamari service:
+- check the status of the manta service:
 
   ```bash
   #!/bin/bash
 
-  systemctl status calamari.service
+  systemctl status manta.service
   ```
 
-- enable calamari service (the service will start automatically on system boot):
+- enable manta service (the service will start automatically on system boot):
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl enable calamari.service
+  sudo systemctl enable manta.service
   ```
 
-- start calamari service:
+- start manta service:
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl start calamari.service
+  sudo systemctl start manta.service
   ```
 
-- stop calamari service:
+- stop manta service:
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl stop calamari.service
+  sudo systemctl stop manta.service
   ```
 
-- tail the calamari service logs:
+- tail the manta service logs:
 
   ```bash
   #!/bin/bash
 
-  journalctl -u calamari.service -f
+  journalctl -u manta.service -f
   ```
 
-- debug calamari service configuration (run calamari as the manta user, to quickly check for runtime errors):
+- debug manta service configuration (run manta as the manta user, to quickly check for runtime errors):
 
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/bin/calamari --chain /usr/share/substrate/calamari.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
   ```
 
 </TabItem>
 <TabItem value="linux" label="other linux">
 
-- check the status of the calamari service:
+- check the status of the manta service:
 
   ```bash
   #!/bin/bash
 
-  systemctl status calamari.service
+  systemctl status manta.service
   ```
 
-- enable calamari service (the service will start automatically on system boot):
+- enable manta service (the service will start automatically on system boot):
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl enable calamari.service
+  sudo systemctl enable manta.service
   ```
 
-- start calamari service:
+- start manta service:
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl start calamari.service
+  sudo systemctl start manta.service
   ```
 
-- stop calamari service:
+- stop manta service:
 
   ```bash
   #!/bin/bash
 
-  sudo systemctl stop calamari.service
+  sudo systemctl stop manta.service
   ```
 
-- tail the calamari service logs:
+- tail the manta service logs:
 
   ```bash
   #!/bin/bash
 
-  journalctl -u calamari.service -f
+  journalctl -u manta.service -f
   ```
 
-- debug calamari service configuration (run calamari as the manta user, to quickly check for runtime errors):
+- debug manta service configuration (run manta as the manta user, to quickly check for runtime errors):
 
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/local/bin/calamari --chain /usr/share/substrate/calamari.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
+  sudo -H -u manta bash -c '/usr/local/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/crispy.calamari.systems/tcp/30333/p2p/12D3KooWNE4LBfkYB2B7D4r9vL54YMMGsfAsXdkhWfBw8VHJSEQc /dns/crunchy.calamari.systems/tcp/30333/p2p/12D3KooWL3ELxcoMGA6han3wPQoym5DKbYHqkWkCuqyjaCXpyJTt /dns/hotdog.calamari.systems/tcp/30333/p2p/12D3KooWBdto53HnArmLdtf2RXzNWti7hD5mML7DWGZPD8q4cywv /dns/tasty.calamari.systems/tcp/30333/p2p/12D3KooWGs2hfnRQ3Y2eAoUyWKUL3g7Jmcsf8FpyhVYeNpXeBMSu /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci -- --chain /usr/share/substrate/kusama.json'
   ```
 
 </TabItem>

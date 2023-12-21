@@ -16,15 +16,15 @@ some extra command line parameters are required or helpful for collating.
 <Tabs groupId="os">
 <TabItem value="fedora" label="fedora">
 
-edit the calamari service unit file to include collation parameters in the `ExecStart` command.
+edit the manta service unit file to include collation parameters in the `ExecStart` command.
 
-`/usr/lib/systemd/system/calamari.service`
+`/usr/lib/systemd/system/manta.service`
 
 ```ini
-ExecStart=/usr/bin/calamari \
+ExecStart=/usr/bin/manta \
     --collator \
     --name 'my parachain collator node name' \
-    --chain /usr/share/substrate/calamari.json \
+    --chain /usr/share/substrate/manta.json \
     --base-path /var/lib/substrate \
     --port 31333 \
     --ws-port 9144 \
@@ -55,15 +55,15 @@ ExecStart=/usr/bin/calamari \
 </TabItem>
 <TabItem value="ubuntu" label="ubuntu">
 
-edit the calamari service unit file to include collation parameters in the `ExecStart` command.
+edit the manta service unit file to include collation parameters in the `ExecStart` command.
 
-`/usr/lib/systemd/system/calamari.service`
+`/usr/lib/systemd/system/manta.service`
 
 ```ini
-ExecStart=/usr/bin/calamari \
+ExecStart=/usr/bin/manta \
     --collator \
     --name 'my parachain collator node name' \
-    --chain /usr/share/substrate/calamari.json \
+    --chain /usr/share/substrate/manta.json \
     --base-path /var/lib/substrate \
     --port 31333 \
     --ws-port 9144 \
@@ -94,15 +94,15 @@ ExecStart=/usr/bin/calamari \
 </TabItem>
 <TabItem value="linux" label="other linux">
 
-edit the calamari service unit file to include collation parameters in the `ExecStart` command.
+edit the manta service unit file to include collation parameters in the `ExecStart` command.
 
-`/etc/systemd/system/calamari.service`
+`/etc/systemd/system/manta.service`
 
 ```ini
-ExecStart=/usr/local/bin/calamari \
+ExecStart=/usr/local/bin/manta \
     --collator \
     --name 'my parachain collator node name' \
-    --chain /usr/share/substrate/calamari.json \
+    --chain /usr/share/substrate/manta.json \
     --base-path /var/lib/substrate \
     --port 31333 \
     --ws-port 9144 \
@@ -134,17 +134,17 @@ ExecStart=/usr/local/bin/calamari \
 </Tabs>
 
 ### parameters with special significance for collator maintainers
-two sets of parameters are supplied to the substrate node binary (calamari), separated by a double-dash (`--`). the first set controls the behavior of the parachain node. the second set controls the behaviour of the embedded relay-chain node.
+two sets of parameters are supplied to the substrate node binary (manta), separated by a double-dash (`--`). the first set controls the behavior of the parachain node. the second set controls the behaviour of the embedded relay-chain node.
 - significant **parachain** parameters
   - `--collator`: run in collator mode. behaves the same as `--validator` on relay chains. setting this also causes pruning mode to be set to `archive` (like `--pruning archive`).
-  - `--name`: parachain node name, displayed on [calamari telemetry](https://telemetry.manta.systems/#list/0x4ac80c99289841dd946ef92765bf659a307d39189b3ce374a92b5f0415ee17a1).
-  - `--port`: parachain peer-to-peer port. calamari default is 31333. this port must be accessible over the internet to other calamari nodes.
-  - `--prometheus-port`: parachain metrics port. calamari default is 9615. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
+  - `--name`: parachain node name, displayed on [manta telemetry](https://telemetry.manta.systems/#list/0xf3c7ad88f6a80f366c4be216691411ef0622e8b809b1046ea297ef106058d4eb).
+  - `--port`: parachain peer-to-peer port. manta default is 31333. this port must be accessible over the internet to other manta nodes.
+  - `--prometheus-port`: parachain metrics port. manta default is 9615. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
   - `--prometheus-external`: if you are not reverse proxying metrics over ssl, you may need to set this parameter to tell the embedded metrics server to listen on the *all ips* socket (`0.0.0.0:9615`) rather than *localhost only* (`127.0.0.1:9615`)
 - significant **relay-chain** parameters
   - `--name`: relay-chain node name, displayed on [kusama telemetry](https://telemetry.manta.systems/#list/0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe).
-  - `--port`: relay-chain peer-to-peer port. calamari-embedded-kusama default is 31334. this port must be accessible over the internet to other kusama nodes.
-  - `--prometheus-port`: relay-chain metrics port. calamari-embedded-kusama default is 9616. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
+  - `--port`: relay-chain peer-to-peer port. manta-embedded-kusama default is 31334. this port must be accessible over the internet to other kusama nodes.
+  - `--prometheus-port`: relay-chain metrics port. manta-embedded-kusama default is 9616. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
   - `--prometheus-external`: if you are not reverse proxying metrics over ssl, you may need to set this parameter to tell the embedded metrics server to listen on the *all ips* socket (`0.0.0.0:9616`) rather than *localhost only* (`127.0.0.1:9616`)
 
 ### expose node metrics for monitoring
@@ -157,9 +157,9 @@ several ports are required to be accessible from outside of the node host in ord
 <TabItem value="docker" label="docker">
 
 ```
-30333: default calamari peer-to-peer port
+30333: default manta peer-to-peer port
 30334: default (embedded-relay) kusama peer-to-peer port
-9615: default calamari metrics port
+9615: default manta metrics port
 9616: default (embedded-relay) kusama metrics port
 ```
 
@@ -167,9 +167,9 @@ several ports are required to be accessible from outside of the node host in ord
 <TabItem value="linux" label="linux">
 
 ```
-31333: default calamari peer-to-peer port
+31333: default manta peer-to-peer port
 31334: default (embedded-relay) kusama peer-to-peer port
-9615: default calamari metrics port
+9615: default manta metrics port
 9616: default (embedded-relay) kusama metrics port
 ```
 
@@ -182,7 +182,7 @@ it is good practice to serve your metrics over:
 - **ssl**, so that their authenticity and provenance can be verified
 - **dns**, so that changes to your ip address don't require a pulse server update
 
-it also makes it much easier for an alert observer to work out which collators are performing well (or poorly) when they are looking at domain names like `calamari.awesome-host.awesome-collators.com` versus ip addresses and port combinations like `123.123.123.123:987` which may not make it obvious wich collator is being observed and wether the metric in question refers to the relay-chain or parachain.
+it also makes it much easier for an alert observer to work out which collators are performing well (or poorly) when they are looking at domain names like `manta.awesome-host.awesome-collators.com` versus ip addresses and port combinations like `123.123.123.123:987` which may not make it obvious wich collator is being observed and wether the metric in question refers to the relay-chain or parachain.
 
 an easy way to accomplish this is to install certbot and nginx and configure a reverse proxy listening on port 443 and which proxies ssl requests to the local metrics ports.
 
@@ -190,7 +190,7 @@ the example below assumes:
 - you administer the domain **example.com**
 - its dns is managed by cloudflare or route53
 - your nodes hostname is **bob**
-- your calamari node uses default ports
+- your manta node uses default ports
 - your internet gateway (router) port forwards 443/ssl traffic arriving on the routers wan interface to your collator node
 - you have certbot installed
 
@@ -239,7 +239,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
       --dns-cloudflare \
       --dns-cloudflare-credentials .cloudflare-credentials \
       -d bob.example.com \
-      -d calamari.metrics.bob.example.com \
+      -d manta.metrics.bob.example.com \
       -d kusama.metrics.bob.example.com
     ```
 
@@ -253,7 +253,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
       --dns-route53 \
       --dns-route53-propagation-seconds 30 \
       -d bob.example.com \
-      -d calamari.metrics.bob.example.com \
+      -d manta.metrics.bob.example.com \
       -d kusama.metrics.bob.example.com
     ```
 
@@ -263,7 +263,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
 - configure nginx `/etc/nginx/sites-enabled/example.com.conf` to reverse proxy dns subdomains to local metrics ports.
   ```
   server {
-    server_name calamari.metrics.bob.example.com;
+    server_name manta.metrics.bob.example.com;
     listen 443 ssl;
     gzip off;
     location / {
@@ -309,7 +309,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
 
 default_zone=$(sudo firewall-cmd --get-default-zone)
 
-# calamari p2p
+# manta p2p
 sudo firewall-cmd \
   --zone=${default_zone} \
   --add-port=31333/tcp \
@@ -321,7 +321,7 @@ sudo firewall-cmd \
   --add-port=31334/tcp \
   --permanent
 
-# calamari metrics
+# manta metrics
 sudo firewall-cmd \
   --zone=${default_zone} \
   --add-port=9615/tcp \

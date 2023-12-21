@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 if you have no peers on the relaychain or your node is failing to verify new blocks, ensure your node’s clock is accurate, ie. by syncing with an ntp timeserver.
 
-you must sync both the calamari parachain and kusama relay-chain before the motion to include your collator is passed. completely synced substrate blockchain nodes will show an idle state in their logs for both `[Relaychain]` and `[Parachain]` and looks like so:
+you must sync both the manta parachain and kusama relay-chain before the motion to include your collator is passed. completely synced substrate blockchain nodes will show an idle state in their logs for both `[Relaychain]` and `[Parachain]` and looks like so:
 
 ```shell=
 2022-03-01 17:18:58 [Parachain] 💤 Idle (49 peers), best: #1037783 (0xa0c5…04a8), finalized #1037781 (0xabd5…1c05), ⬇ 16.7kiB/s ⬆ 14.5kiB/s
@@ -25,12 +25,12 @@ if your collator node logs do not contain both `[Relaychain] 💤 Idle` and `[Pa
 
 the best way to sync is to just run your node until the idle messages show up in your logs. doing so may take up to 2 weeks, however it will also give you a perfect, cryptographically validated and complete history of the blockchains you are syncing.
 
-if you cannot wait for the recommended sync mechanism to complete, you may obtain a fast-sync copy of the calamari and kusama blockchains taken from manta's backup nodes. to do so:
-- stop your calamari service
-- delete your calamari and kusama databases from the basepath (taking care not to delete your keystores which are also under the basepath)
+if you cannot wait for the recommended sync mechanism to complete, you may obtain a fast-sync copy of the manta and kusama blockchains taken from manta's backup nodes. to do so:
+- stop your manta service
+- delete your manta and kusama databases from the basepath (taking care not to delete your keystores which are also under the basepath)
 - fetch a copy of the blockchains, extracting if required
 - ensure that the entire basepath and all of its contents are owned by the user your node runs under (change ownership recursively if required)
-- start your calamari service
+- start your manta service
 - verify that the node is syncing correctly
 - wait for both parachain and relay-chain idle messages to appear in the logs
 
@@ -38,10 +38,10 @@ fast-sync commands (requires [aws cli](https://docs.aws.amazon.com/cli/latest/us
 ```bash
 #!/bin/bash
 
-# stop calamari service
-sudo systemctl stop calamari.service
+# stop manta service
+sudo systemctl stop manta.service
 
-# sync calamari blockchain database
+# sync manta blockchain database
 sudo -H -u manta aws s3 sync --region eu-central-1 --no-sign-request --delete s3://calamari-kusama/var/lib/substrate/chains/calamari/db/full /var/lib/substrate/chains/calamari/db/full
 
 # sync kusama blockchain database

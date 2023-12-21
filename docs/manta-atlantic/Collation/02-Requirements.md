@@ -1,6 +1,6 @@
-## KMA Bond
+## MANTA Bond
 
-4_000_000 KMA must be available to post as collator bond
+400_000 MANTA must be available to post as collator bond
 
 ## Hardware and Infrastructure
 
@@ -13,9 +13,9 @@ a. Running on your own hardware and within you own premises (recommended):
 - infrastructure and environment
   - network bandwidth: 100 mbps+
   - internet-accessible ports:
-    - **31333**: default calamari peer-to-peer port
+    - **31333**: default manta peer-to-peer port
     - **31334**: default (embedded-relay) kusama peer-to-peer port
-    - **9615**: default calamari metrics port
+    - **9615**: default manta metrics port
     - **9616**: default (embedded-relay) kusama metrics port
 
     you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports 9615 and 9616 facilitate this, so these ports should be accessible both from your own prometheus/alertmanager server (which should be configured to alert you) and manta devops' [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (monitored by manta devops).

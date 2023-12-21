@@ -2,7 +2,7 @@
 See the [collator setup guide](SetupAndRun/installation)
 
 ### Q: Where can I find the current collators?
-https://sparta.calamari.systems/
+https://manta.subscan.io/account_list?role=validator
 
 ### Q: Where can I get help?
 A: Come join us on the Manta & Calamari Network Discord Community in the #collator-candidates channel and you’ll find both community members who’ve had similar questions before and team members to help out.
@@ -27,4 +27,4 @@ Compare the block number reported in the [Parachain] line to other nodes on the 
 See the docs for more on this
 
 ### Q: How much is the bond to become a collator?
-The bond to join the collators pool: 4_000_000 KMA
+The bond to join the collators pool: 400_000 MANTA
