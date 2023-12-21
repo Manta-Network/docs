@@ -14,9 +14,9 @@ a. Running on your own hardware and within you own premises (recommended):
   - network bandwidth: 100 mbps+
   - internet-accessible ports:
     - **31333**: default manta peer-to-peer port
-    - **31334**: default (embedded-relay) kusama peer-to-peer port
+    - **31334**: default (embedded-relay) polkadot peer-to-peer port
     - **9615**: default manta metrics port
-    - **9616**: default (embedded-relay) kusama metrics port
+    - **9616**: default (embedded-relay) polkadot metrics port
 
     you should monitor your own collator using the techniques described on the [polkadot wiki](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node). the metrics exposed on ports 9615 and 9616 facilitate this, so these ports should be accessible both from your own prometheus/alertmanager server (which should be configured to alert you) and manta devops' [pulse server](https://pulse.pelagos.systems) at `18.156.192.254` (monitored by manta devops).
   - an uninterrupted power supply to both the collator node and the network switches and routers that provide its connectivity must be capable of keeping the system online during provider power outages

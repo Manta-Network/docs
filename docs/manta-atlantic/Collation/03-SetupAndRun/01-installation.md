@@ -116,7 +116,7 @@ get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
   # chainspecs
   sudo mkdir -p /usr/share/substrate
   sudo curl -Lo /usr/share/substrate/manta.json https://raw.githubusercontent.com/Manta-Network/Manta/v3.0.9/genesis/manta-genesis.json
-  sudo curl -Lo /usr/share/substrate/kusama.json https://raw.githubusercontent.com/paritytech/polkadot/master/node/service/chain-specs/manta.json
+  sudo curl -Lo /usr/share/substrate/polkadot.json https://raw.githubusercontent.com/paritytech/polkadot/master/node/service/chain-specs/polkadot.json
 
   # systemd unit file
   sudo curl -Lo /etc/systemd/system/manta.service https://raw.githubusercontent.com/Manta-Network/Manta/deb-rpm/scripts/package/manta.service

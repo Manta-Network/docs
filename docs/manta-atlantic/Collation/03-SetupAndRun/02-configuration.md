@@ -43,7 +43,7 @@ ExecStart=/usr/bin/manta \
         /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci \
     -- \
     --name 'my embedded relay node name' \
-    --chain /usr/share/substrate/kusama.json \
+    --chain /usr/share/substrate/polkadot.json \
     --port 31334 \
     --ws-port 9145 \
     --rpc-port 9134 \
@@ -82,7 +82,7 @@ ExecStart=/usr/bin/manta \
         /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci \
     -- \
     --name 'my embedded relay node name' \
-    --chain /usr/share/substrate/kusama.json \
+    --chain /usr/share/substrate/polkadot.json \
     --port 31334 \
     --ws-port 9145 \
     --rpc-port 9134 \
@@ -121,7 +121,7 @@ ExecStart=/usr/local/bin/manta \
         /dns/tender.calamari.systems/tcp/30333/p2p/12D3KooWNXZeUSEKRPsp1yiDH99qSVawQSWHqG4umPjgHsn1joci \
     -- \
     --name 'my embedded relay node name' \
-    --chain /usr/share/substrate/kusama.json \
+    --chain /usr/share/substrate/polkadot.json \
     --port 31334 \
     --ws-port 9145 \
     --rpc-port 9134 \
@@ -142,9 +142,9 @@ two sets of parameters are supplied to the substrate node binary (manta), separa
   - `--prometheus-port`: parachain metrics port. manta default is 9615. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
   - `--prometheus-external`: if you are not reverse proxying metrics over ssl, you may need to set this parameter to tell the embedded metrics server to listen on the *all ips* socket (`0.0.0.0:9615`) rather than *localhost only* (`127.0.0.1:9615`)
 - significant **relay-chain** parameters
-  - `--name`: relay-chain node name, displayed on [kusama telemetry](https://telemetry.manta.systems/#list/0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe).
-  - `--port`: relay-chain peer-to-peer port. manta-embedded-kusama default is 31334. this port must be accessible over the internet to other kusama nodes.
-  - `--prometheus-port`: relay-chain metrics port. manta-embedded-kusama default is 9616. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
+  - `--name`: relay-chain node name, displayed on [polkadot telemetry](https://telemetry.manta.systems/#list/0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3).
+  - `--port`: relay-chain peer-to-peer port. manta-embedded-polkadot default is 31334. this port must be accessible over the internet to other polkadot nodes.
+  - `--prometheus-port`: relay-chain metrics port. manta-embedded-polkadot default is 9616. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
   - `--prometheus-external`: if you are not reverse proxying metrics over ssl, you may need to set this parameter to tell the embedded metrics server to listen on the *all ips* socket (`0.0.0.0:9616`) rather than *localhost only* (`127.0.0.1:9616`)
 
 ### expose node metrics for monitoring
@@ -158,9 +158,9 @@ several ports are required to be accessible from outside of the node host in ord
 
 ```
 30333: default manta peer-to-peer port
-30334: default (embedded-relay) kusama peer-to-peer port
+30334: default (embedded-relay) polkadot peer-to-peer port
 9615: default manta metrics port
-9616: default (embedded-relay) kusama metrics port
+9616: default (embedded-relay) polkadot metrics port
 ```
 
 </TabItem>
@@ -168,9 +168,9 @@ several ports are required to be accessible from outside of the node host in ord
 
 ```
 31333: default manta peer-to-peer port
-31334: default (embedded-relay) kusama peer-to-peer port
+31334: default (embedded-relay) polkadot peer-to-peer port
 9615: default manta metrics port
-9616: default (embedded-relay) kusama metrics port
+9616: default (embedded-relay) polkadot metrics port
 ```
 
 </TabItem>
@@ -240,7 +240,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
       --dns-cloudflare-credentials .cloudflare-credentials \
       -d bob.example.com \
       -d manta.metrics.bob.example.com \
-      -d kusama.metrics.bob.example.com
+      -d polkadot.metrics.bob.example.com
     ```
 
   </TabItem>
@@ -254,7 +254,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
       --dns-route53-propagation-seconds 30 \
       -d bob.example.com \
       -d manta.metrics.bob.example.com \
-      -d kusama.metrics.bob.example.com
+      -d polkadot.metrics.bob.example.com
     ```
 
   </TabItem>
@@ -282,7 +282,7 @@ cloudflare and route53 examples follow. google `python3-certbot-dns-${your_dns_p
   }
 
   server {
-    server_name kusama.metrics.bob.example.com;
+    server_name polkadot.metrics.bob.example.com;
     listen 443 ssl;
     gzip off;
     location / {
@@ -315,7 +315,7 @@ sudo firewall-cmd \
   --add-port=31333/tcp \
   --permanent
 
-# kusama p2p
+# polkadot p2p
 sudo firewall-cmd \
   --zone=${default_zone} \
   --add-port=31334/tcp \
@@ -327,7 +327,7 @@ sudo firewall-cmd \
   --add-port=9615/tcp \
   --permanent
 
-# kusama metrics
+# polkadot metrics
 sudo firewall-cmd \
   --zone=${default_zone} \
   --add-port=9616/tcp \
