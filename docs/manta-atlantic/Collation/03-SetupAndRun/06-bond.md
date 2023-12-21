@@ -29,7 +29,7 @@ Run the `joinCandidates` [extrinsic](https://polkadot.js.org/apps/?rpc=wss%3A%2F
 
 ![parachainStaking.joinCandidates()](/img/collator-program/parachainStaking.joinCandidates-manta.png)
 :::note
-**bond** is 400_000_000_000_000_000_000_000 MANTA ( 400 THOUSANDS MANTA with 12 decimals )<br/>
+**bond** is 400_000_000_000_000_000_000_000 MANTA ( 4 HUNDRED THOUSANDS MANTA with 18 decimals )<br/>
 **candidateCount** is a hint for transaction weight ( i.e. gas fee ) that should be larger than the current number of registered collators ( or the transaction will fail ).
 The current number can be found by counting the entries on the [manta chain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems#/chainstate/constants) &gt; parachainStaking &gt; candidatePool(): u128.
 It is safe to just set a high number, but reducing it as much as possible reduces the estimated gas fees that must be available in your account in addition to the bond amount for the transaction to succeed.
