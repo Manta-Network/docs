@@ -138,7 +138,7 @@ $$
 
 为了满足这个约束， `Alice` 会生成两种证书，*UTXOs* 和 *void numbers*
 
-*UTXO*或 *Unspent Transation Output* 是接收者未来可以花费的证书。 它以下列方式在公共账本协议中使用：
+*UTXO*或 *Unspent Transaction Output* 是接收者未来可以花费的证书。 它以下列方式在公共账本协议中使用：
 
 1. 证明`Alice` 拥有当前UTXO
 
