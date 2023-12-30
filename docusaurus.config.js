@@ -6,7 +6,7 @@ const katex = require('rehype-katex');
 module.exports = {
   title: 'Manta Network Technical Resources',
   tagline:
-    'For the first zk identity-preserving protocol built for scalability, privacy and interoperability.',
+    'For the first zk identity-preserving protocol built for scalability, identity and interoperability.',
   url: 'https://docs.manta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
