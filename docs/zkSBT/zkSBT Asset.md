@@ -26,7 +26,7 @@ The deisgn could be simpler in Semaphore version :
 
 ## Semaphore
 
-&emsp;&emsp;[Semaphore Protocol](<(https://semaphore.appliedzkp.org/)>) allows to prove group membership in merkle tree without revealing identity.
+&emsp;&emsp;[Semaphore Protocol](https://semaphore.appliedzkp.org/) allows to prove group membership in merkle tree without revealing identity.
 
 &emsp;&emsp;We have previously undertaken development based on the Semaphore protocol and attempted to optimize it.
 
