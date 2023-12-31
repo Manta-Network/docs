@@ -2,7 +2,7 @@
 
 1. install zksbt JS SDK
 ```shell
-    npm install @zksbt/jssdk 
+    npm install @zksbt/jssdk
 ```
 2. initialize zksbt JS SDK
 ```typescript=

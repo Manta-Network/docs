@@ -1,5 +1,4 @@
-# Benefits of Manta's NPO
-
+# Benefits
 
 ## Reduced User Friction:
 By utilizing Manta's NPO platform, onboarding users will be simpler, smoother, and less complicated. This means that there will be a lower level of user friction, allowing for an increased user base and improved user experience.
