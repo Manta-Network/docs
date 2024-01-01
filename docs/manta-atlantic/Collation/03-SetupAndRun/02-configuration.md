@@ -20,6 +20,38 @@ edit the manta service unit file to include collation parameters in the `ExecSta
 
 `/usr/lib/systemd/system/manta.service`
 
+for version `>= v4.6.0` (inclusive)
+```ini
+ExecStart=/usr/bin/manta \
+    --collator \
+    --name 'my parachain collator node name' \
+    --chain /usr/share/substrate/manta.json \
+    --base-path /var/lib/substrate \
+    --port 31333 \
+    --rpc-max-connections 100 \
+    --rpc-port 9144 \
+    --rpc-cors all \
+    --rpc-methods auto \
+    --prometheus-port 9615 \
+    --prometheus-external \
+    --state-cache-size 0 \
+    --bootnodes \
+      /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
+      /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
+      /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
+      /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP \
+      /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 \
+    -- \
+    --name 'my embedded relay node name' \
+    --chain /usr/share/substrate/polkadot.json \
+    --port 31334 \
+    --rpc-port 9145 \
+    --prometheus-port 9616 \
+    --prometheus-external \
+    --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'
+```
+
+for version `< v4.6.0` (exclusive)
 ```ini
 ExecStart=/usr/bin/manta \
     --collator \
@@ -59,6 +91,42 @@ edit the manta service unit file to include collation parameters in the `ExecSta
 
 `/usr/lib/systemd/system/manta.service`
 
+for version `>= v4.6.0` (inclusive)
+```ini
+ExecStart=/usr/bin/manta \
+    --collator \
+    --name 'my parachain collator node name' \
+    --chain /usr/share/substrate/manta.json \
+    --base-path /var/lib/substrate \
+    --port 31333 \
+    --rpc-max-connections 100 \
+    --rpc-port 9144 \
+    --rpc-cors all \
+    --rpc-methods auto \
+    --prometheus-port 9615 \
+    --prometheus-external \
+    --state-cache-size 0 \
+    --bootnodes \
+      /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
+      /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
+      /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
+      /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP \
+      /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 \
+      /dns/c2.manta.systems/tcp/30333/p2p/12D3KooWSyPTkVytQwurRBt73wPQDTgypw88bdhsE4Rb6RnQvCJ9 \
+      /dns/c3.manta.systems/tcp/30333/p2p/12D3KooWJwHqCEjTF46eAUDspKKwxa15TMfs7x8DNr3Gs71Qr64j \
+      /dns/c4.manta.systems/tcp/30333/p2p/12D3KooWAgZYhwfUo7brgZK2TvArK6XNUtZnzk1cSNfyD9kX1rDE \
+      /dns/c5.manta.systems/tcp/30333/p2p/12D3KooWNHVexSGRVeLb7rt7tYS5Y3k5Up9amQn1GyTDCi7L9LLf \
+    -- \
+    --name 'my embedded relay node name' \
+    --chain /usr/share/substrate/polkadot.json \
+    --port 31334 \
+    --rpc-port 9145 \
+    --prometheus-port 9616 \
+    --prometheus-external \
+    --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'
+```
+
+for version `< v4.6.0` (exclusive)
 ```ini
 ExecStart=/usr/bin/manta \
     --collator \
@@ -80,6 +148,10 @@ ExecStart=/usr/bin/manta \
       /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
       /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP \
       /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 \
+      /dns/c2.manta.systems/tcp/30333/p2p/12D3KooWSyPTkVytQwurRBt73wPQDTgypw88bdhsE4Rb6RnQvCJ9 \
+      /dns/c3.manta.systems/tcp/30333/p2p/12D3KooWJwHqCEjTF46eAUDspKKwxa15TMfs7x8DNr3Gs71Qr64j \
+      /dns/c4.manta.systems/tcp/30333/p2p/12D3KooWAgZYhwfUo7brgZK2TvArK6XNUtZnzk1cSNfyD9kX1rDE \
+      /dns/c5.manta.systems/tcp/30333/p2p/12D3KooWNHVexSGRVeLb7rt7tYS5Y3k5Up9amQn1GyTDCi7L9LLf \
     -- \
     --name 'my embedded relay node name' \
     --chain /usr/share/substrate/polkadot.json \
@@ -98,6 +170,38 @@ edit the manta service unit file to include collation parameters in the `ExecSta
 
 `/etc/systemd/system/manta.service`
 
+for version `>= v4.6.0` (inclusive)
+```ini
+ExecStart=/usr/bin/manta \
+    --collator \
+    --name 'my parachain collator node name' \
+    --chain /usr/share/substrate/manta.json \
+    --base-path /var/lib/substrate \
+    --port 31333 \
+    --rpc-max-connections 100 \
+    --rpc-port 9144 \
+    --rpc-cors all \
+    --rpc-methods auto \
+    --prometheus-port 9615 \
+    --prometheus-external \
+    --state-cache-size 0 \
+    --bootnodes \
+      /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
+      /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
+      /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
+      /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP \
+      /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 \
+    -- \
+    --name 'my embedded relay node name' \
+    --chain /usr/share/substrate/polkadot.json \
+    --port 31334 \
+    --rpc-port 9145 \
+    --prometheus-port 9616 \
+    --prometheus-external \
+    --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'
+```
+
+for version `< v4.6.0` (exclusive)
 ```ini
 ExecStart=/usr/bin/manta \
     --collator \
