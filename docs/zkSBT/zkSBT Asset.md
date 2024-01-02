@@ -2,7 +2,7 @@
 
 ## Overview
 
-&emsp;&emsp;[POMP](https://twitter.com/AppPOMP)(Proof Of My Possessions) or [NPO](https://npo-evm.manta.network/evm/sbt)(NFT Private Offering) are based on zkSBT(<span style={{color:'red'}}>online</span> <span style={{color:'blue'}}>private</span> asset verifier) : Prove your assets/nfts without revealing addresses, ensuring privacy and data protection.
+&emsp;&emsp;[POMP](https://twitter.com/AppPOMP)(Proof Of My Possessions) or [NPO](https://npo-evm.manta.network/evm/sbt)(NFT Private Offering) are based on zkSBT: Prove your assets/nfts without revealing addresses, ensuring privacy and data protection.
 
 &emsp;&emsp;Suppose Alice has an ethereum account with balance more than 100, and she want to prove the position, probably many times.
 
