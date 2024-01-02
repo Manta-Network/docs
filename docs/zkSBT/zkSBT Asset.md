@@ -1,10 +1,8 @@
-import Mermaid from '@theme/Mermaid';
-
-# zkSBT Asset
+# zkSBT : Asset Possession Privacy prove with Semaphore-based protocol
 
 ## Overview
 
-&emsp;&emsp;[POMP](https://twitter.com/AppPOMP)(Proof Of My Possessions) is an <span style={{color:'red'}}>online</span> <span style={{color:'blue'}}>private</span> asset verifier : Prove your assets without revealing addresses, ensuring privacy and data protection.
+&emsp;&emsp;[POMP](https://twitter.com/AppPOMP)(Proof Of My Possessions) or [NPO](https://npo-evm.manta.network/evm/sbt)(NFT Private Offering) are based on zkSBT(<span style={{color:'red'}}>online</span> <span style={{color:'blue'}}>private</span> asset verifier) : Prove your assets/nfts without revealing addresses, ensuring privacy and data protection.
 
 &emsp;&emsp;Suppose Alice has an ethereum account with balance more than 100, and she want to prove the position, probably many times.
 
@@ -55,9 +53,9 @@ Thus, we will make minor changes on semaphore protocol, the change is aim to res
     -   privat verify_time >= given public begin_verify_time
     -   privat verify_time <= given public end_verify_time,
 
-    <div style={{textAlign: 'center'}}>
-      <img alt="binding" src="/img/guides/npo/bindingSbtTimestamp.jpg" width="90%"/>
-    </div>
+      <div style={{textAlign: 'center'}}>
+        <img alt="binding" src="/img/guides/npo/bindingSbtTimestamp.jpg" width="90%"/>
+      </div>
 
 ## identity derive
 
