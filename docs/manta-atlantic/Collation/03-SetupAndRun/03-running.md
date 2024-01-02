@@ -125,6 +125,14 @@ import TabItem from '@theme/TabItem';
 
 - debug manta service configuration (run manta as the manta user, to quickly check for runtime errors):
 
+  for version `>= v4.6.0` (inclusive)
+  ```bash
+  #!/bin/bash
+
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  ```
+
+  for version `< v4.6.0` (exclusive)
   ```bash
   #!/bin/bash
 
@@ -176,6 +184,14 @@ import TabItem from '@theme/TabItem';
 
 - debug manta service configuration (run manta as the manta user, to quickly check for runtime errors):
 
+  for version `>= v4.6.0` (inclusive)
+  ```bash
+  #!/bin/bash
+
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  ```
+
+  for version `< v4.6.0` (exclusive)
   ```bash
   #!/bin/bash
 
@@ -227,6 +243,14 @@ import TabItem from '@theme/TabItem';
 
 - debug manta service configuration (run manta as the manta user, to quickly check for runtime errors):
 
+  for version `>= v4.6.0` (inclusive)
+  ```bash
+  #!/bin/bash
+
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  ```
+
+  for version `< v4.6.0` (exclusive)
   ```bash
   #!/bin/bash
 
