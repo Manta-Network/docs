@@ -29,4 +29,8 @@ Here are the 4 Explorers currently supporting Manta Pacific:
 
 - Link: [GeckoTerminal for Manta Pacific](https://www.geckoterminal.com/manta-pacific/pools)
 
+**Dune Analytics:**
+
+- Link: [Dune Analytics for Manta Pacific](https://dune.com/hashed_official/manta-pacific)
+
 It provides a valuable tool for anyone looking to better understand and interact with a blockchain, it provides transparency and accessibility to the inner workings of a blockchain, and it can be used for a variety of purposes such as tracking transactions, monitoring smart contract execution, and analyzing network activity.
