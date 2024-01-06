@@ -139,7 +139,7 @@ will be approved or denied by the council.
 
 The funds in the treasury are collected through:
 
-1. **Transaction fees**: `40%` of on-chain transaction fees are transferred to the Treasury.
+1. **Transaction fees**: `90%` of on-chain transaction fees are transferred to the Treasury.
 2. **Treasury slashing**: when a treasury spend proposal doesn't pass, the 
 deposit amount (`1%` of the total proposed amount) is "slashed", which means
 that it is transferred to the Treasury. 

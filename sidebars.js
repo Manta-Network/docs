@@ -194,6 +194,14 @@ module.exports = {
                         },
                     ],
                 },
+                {
+                    type: "category",
+                    label: "Governance",
+                    items: [
+                        "manta-atlantic/Governance",
+                        "manta-atlantic/GovernanceDeepdive",
+                    ]
+                }
             ],
         },
         {
