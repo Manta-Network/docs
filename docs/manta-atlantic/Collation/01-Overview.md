@@ -13,4 +13,4 @@ Free-Market competition between high-performing collators for delegations will e
 
 ## Join the collator maintainer community discussion
 
--   Telegram: [Collator Program](https://t.me/+C6zfp5cRG-A3ZDQ1)
+- Discord: [Collator Program](https://discord.com/channels/795390654628102165/936300292536942592)
