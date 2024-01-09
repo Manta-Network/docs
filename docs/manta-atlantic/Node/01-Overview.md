@@ -4,12 +4,12 @@ Node maintainers are encouraged and welcome to run Manta Node. Varies types of n
 
 ## Benefits of Running a Node
 
-- The ability to deploy, manage, and update nodes as needed, including performance monitoring.
-- Enterprise-grade connectivity to support the creation and management of smart contracts, processing transactions, and accessing blockchain data via protocols like JSON-RPC, REST, and WebSockets.
-- Real-time access to blockchain data and analytics.
+- The capability to deploy, oversee, and upgrade nodes as required, along with continuous monitoring of their performance.
+- Establishment of high-quality connectivity suitable for creating and administering smart contracts, handling transactions, and retrieving blockchain data through protocols such as JSON-RPC, REST, and WebSockets.
+- Access to real-time blockchain data and analytics.
 - Simplified integration of blockchain technology into applications, avoiding the need for complex configurations.
-- Consistent, reliable connectivity backed by professional support.
-- Customizable Service Level Agreements (SLAs) to meet specific business requirements, ensuring high-quality service.
+- Consistent, reliable connectivity
+- Service Level Agreements (SLAs) to align with specific business needs, ensuring the delivery of services.
 
 ## Join the node maintainer community discussion
 
