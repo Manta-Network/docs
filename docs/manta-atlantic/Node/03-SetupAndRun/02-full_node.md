@@ -3,7 +3,7 @@ sidebar_position: 2
 sidebar_label: 🦾 Full Node
 title: 🚄 Setup and run a Full Node
 hide_title: false
---
+---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
