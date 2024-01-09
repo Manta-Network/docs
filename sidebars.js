@@ -194,6 +194,26 @@ module.exports = {
                         },
                     ],
                 },
+                {
+                    type: "category",
+                    label: "Node",
+                    items: [
+                        "manta-atlantic/Node/Overview",
+                        "manta-atlantic/Node/Requirements",
+                        // {
+                        //     type: "category",
+                        //     label: "SetupAndRun",
+                        //     items: [
+                        //         "manta-atlantic/Collation/SetupAndRun/installation",
+                        //         "manta-atlantic/Collation/SetupAndRun/configuration",
+                        //         "manta-atlantic/Collation/SetupAndRun/running",
+                        //         "manta-atlantic/Collation/SetupAndRun/sync",
+                        //         "manta-atlantic/Collation/SetupAndRun/keys",
+                        //         "manta-atlantic/Collation/SetupAndRun/bond",
+                        //     ],
+                        // },
+                    ],
+                },
             ],
         },
         {
