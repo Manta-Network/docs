@@ -21,11 +21,11 @@ for version `>= v4.6.0` (inclusive)
 
 for version `< v4.6.0` (exclusive)
 
-- --ws-port \<PORT\> (e.g `9944`)
-- --ws-max-connections \<COUNT\> (default: `100`)
-- --rpc-port \<PORT\> (e.g `9933`)
-- --rpc-cors \<ORIGINS\> (e.g. `all`)
-- --rpc-methods \<METHOD\> (e.g `safe`)
+- --ws-port <PORT\> (e.g `9944`)
+- --ws-max-connections <COUNT\> (default: `100`)
+- --rpc-port <PORT\> (e.g `9933`)
+- --rpc-cors <ORIGINS\> (e.g. `all`)
+- --rpc-methods <METHOD\> (e.g `safe`)
 
 ### Example Command
 
