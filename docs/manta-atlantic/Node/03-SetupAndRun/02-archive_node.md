@@ -16,11 +16,35 @@ Similar to full node rpc parameters can also be specified serve the archive node
 ### Configuration
 
 - --pruning archive
+- --base-path <PATH\> (e.g `/opt/manta/lib`)
+- --chain manta
+
+for version `>= v4.6.0` (inclusive)
+
+- --rpc-port <PORT\> (e.g `9944`)
+- --rpc-cors <ORIGINS\> (e.g `all`)
+- --rpc-max-connections <COUNT\> (default: `100`)
+- --rpc-methods <METHOD\> (e.g `safe`)
+
+for version `< v4.6.0` (exclusive)
+
+- --ws-port <PORT\> (e.g `9944`)
+- --ws-max-connections <COUNT\> (default: `100`)
+- --rpc-port <PORT\> (e.g `9933`)
+- --rpc-cors <ORIGINS\> (e.g. `all`)
 
 ### Example Command
 
+for version `>= v4.6.0` (inclusive)
+
 ```bash
-./manta --base-path /opt/manta/lib --chain manta --pruning archive
+./manta --base-path /opt/manta/lib --chain manta --pruning archive --rpc-port 9944 --rpc-cors all --rpc-max-connections 100 --rpc-methods safe
+```
+
+for version `< v4.6.0` (exclusive)
+
+```bash
+./manta --base-path /opt/manta/lib --chain manta --pruning archive --rpc-port 9933 --rpc-cors all --ws-max-connections 100 --ws-port 9944
 ```
 
 ### Check Archive Node Logs
