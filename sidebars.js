@@ -204,8 +204,8 @@ module.exports = {
                             type: "category",
                             label: "SetupAndRun",
                             items: [
-                                "manta-atlantic/Node/SetupAndRun/archive_node",
                                 "manta-atlantic/Node/SetupAndRun/full_node",
+                                "manta-atlantic/Node/SetupAndRun/archive_node",
                                 "manta-atlantic/Node/SetupAndRun/rpc_node",
                             ],
                         },
