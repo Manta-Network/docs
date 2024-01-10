@@ -11,6 +11,7 @@ import TabItem from '@theme/TabItem';
 ## 🥡 Archive Node
 An archive node keeps all the past blocks and their states. An archive node makes it convenient to query the past state of the chain at any point in time. Finding out what an account's balance at a particular block was or which extrinsics resulted in a specific state change are fast operations when using an archive node. However, an archive node takes up a lot of disk space - around Kusama's 12 millionth block, this was around 660 GB.
 
+Similar to full node rpc parameters can also be specified serve the archive node as rpc node
 
 ### Configuration
 
@@ -22,7 +23,7 @@ An archive node keeps all the past blocks and their states. An archive node make
 ./manta --base-path /opt/manta/lib --chain manta --pruning archive
 ```
 
-### Check Archive Node
+### Check Archive Node Logs
 
 check for `👤 Role: FULL` line in logs
 
