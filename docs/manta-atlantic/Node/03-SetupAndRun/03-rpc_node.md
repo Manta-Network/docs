@@ -10,6 +10,8 @@ import TabItem from '@theme/TabItem';
 
 ## 🥡 Rpc Node
 
+The RPC node can be accessed over the WebSocket protocol, which can be used to access the underlying network and/or validator node. By default, you can access your node's RPC server from localhost (for example, to rotate keys or do other maintenance).
+
 ### Configuration
 
 for version `>= v4.6.0` (inclusive)
