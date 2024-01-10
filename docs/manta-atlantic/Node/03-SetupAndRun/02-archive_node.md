@@ -59,3 +59,9 @@ Jan 10 00:06:40 a7.manta.systems manta[2795938]: 2024-01-10 00:06:40 👤 Role: 
 Jan 10 00:06:40 a7.manta.systems manta[2795938]: 2024-01-10 00:06:40 💾 Database: RocksDb at /var/lib/substrate/chains/manta/db/full
 Jan 10 00:06:40 a7.manta.systems manta[2795938]: 2024-01-10 00:06:40 ⛓  Native runtime: manta-4600 (manta-1.tx7.au1)
 ```
+
+### Test RPC Node
+
+```bash
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "rpc_methods"}' http://127.0.0.1:9944/
+```
