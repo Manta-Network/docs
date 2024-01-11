@@ -42,7 +42,7 @@ the manta .rpm package contains:
 
 -   the manta binary (which is also used to run manta)
 -   manta and manta systemd services
--   manta, manta, polkadot and kusama chain specifications
+-   manta, polkadot and kusama chain specifications
 -   a script which runs after installation and creates the manta system account which the systemd service runs under
 
 get started (see also: [rpm.manta.systems](https://rpm.manta.systems/)):
@@ -73,7 +73,7 @@ the manta .deb package contains:
 
 -   the manta binary (which is also used to run manta)
 -   manta and manta systemd services
--   manta, manta, polkadot and kusama chain specifications
+-   manta, polkadot and kusama chain specifications
 -   a script which runs after installation and creates the manta system account which the systemd service runs under
 
 get started (see also: [deb.manta.systems](https://deb.manta.systems/)):

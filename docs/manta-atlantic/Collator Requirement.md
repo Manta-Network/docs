@@ -796,9 +796,10 @@ sudo firewall-cmd --reload
 
     ### Q: What are the different networks?[](https://docs.calamari.network/docs/calamari/Staking/Collation/CollatorFAQ#q-what-are-the-different-networks)
 
-    A: There are three networks, each will require dedicated hardware. The Dolphin Testnet is free and should be used to familiarize yourself with the setup.
+    A: There are two networks, each will require dedicated hardware.
 
-    Manta Network - production network on Polkadot (Not yet live) MantaNetwork - canary network on Polkadot Dolphin Testnet - development network
+    - Manta Network - production network on Polkadot (Not yet live)
+    - Calamari Network - canary network on Kusama
 
     ### Q: What are Nimbus keys?[](https://docs.calamari.network/docs/calamari/Staking/Collation/CollatorFAQ#q-what-are-nimbus-keys)
 
