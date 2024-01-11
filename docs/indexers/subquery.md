@@ -12,6 +12,7 @@ Other advantages include superior performance with multiple RPC endpoint configu
 - SubQuery Docs: [SubQuery Academy (Documentation)](https://academy.subquery.network/)
 - Intro Quick Start Guide: [1. Create a New Project](https://academy.subquery.network/quickstart/quickstart.html)
 - [Manta (Calamari) Starter Project](https://github.com/subquery/subql-starter/tree/main/Calamari/calamari-starter)
+- For technical questions and support reach out to us start@subquery.network
 
 ## Running and Hosting your Manta (Calamari) SubQuery APIs
 
