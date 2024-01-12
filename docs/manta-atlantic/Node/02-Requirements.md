@@ -1,5 +1,3 @@
-## MANTA Bond
-
 ## Hardware and Infrastructure
 
 a. Running on your own hardware and within you own premises (recommended):
