@@ -182,8 +182,6 @@ If your collator node logs do not contain both `[Relaychain] 💤 Idle` and `[Pa
 Account binding is done on-chain. The simplest way to do this is using polkadot.js.
 - Load [manta/developer/extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/extrinsics) in a browser:
   ![session.setkeys()](/img/collator-program/session.setkeys-manta.png)
-:::note
-Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 :::
    - In the first box, labelled "using the selected account", select the collator account holding the [collator MANTA bond](../Requirements#manta-bond).
    - In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
@@ -195,8 +193,6 @@ Although the screenshot shows a connected dolphin node, the procedure is identic
    - Click on the `Submit Transaction` button and wait for confirmation (a green tick), to appear in the upper right corner of the browser window.
 - Verfy that the collator account and the Session keys are *bound* by loading [manta/developer/chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/chainstate) in a browser:
   ![session.nextkeys()](/img/collator-program/session.nextkeys-manta.png)
-:::note
-Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 :::
    - In the first (dropdown) box, labelled "selected state query", select `session`.
    - In the second (dropdown) box, select `nextKeys(AccountId32): Option<MantaRuntimeOpaqueSessionKeys>`.
