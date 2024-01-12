@@ -648,8 +648,6 @@ sudo firewall-cmd --reload
 
     -   NOTE
 
-        Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
-
         -   In the first box, labelled "using the selected account", select the collator account holding the [collator MANTA bond](https://docs.calamari.network/docs/calamari/Staking/Collation/Requirements#kma-bond).
         -   In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
         -   In the third (dropdown) box, select `setKeys(keys, proof)`
@@ -671,8 +669,6 @@ sudo firewall-cmd --reload
     </div>
 
     NOTE
-
-    Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 
     -   In the first (dropdown) box, labelled "selected state query", select `session`.
     -   In the second (dropdown) box, select `nextKeys(AccountId32): Option<MantaRuntimeOpaqueSessionKeys>`.
@@ -796,9 +792,9 @@ sudo firewall-cmd --reload
 
     ### Q: What are the different networks?[](https://docs.calamari.network/docs/calamari/Staking/Collation/CollatorFAQ#q-what-are-the-different-networks)
 
-    A: There are three networks, each will require dedicated hardware. The Dolphin Testnet is free and should be used to familiarize yourself with the setup.
+    A: There are two networks, each will require dedicated hardware.
 
-    Manta Network - production network on Polkadot (Not yet live) MantaNetwork - canary network on Polkadot Dolphin Testnet - development network
+    Manta Network - production network on Polkadot (live) MantaNetwork - canary network on Polkadot - development network
 
     ### Q: What are Nimbus keys?[](https://docs.calamari.network/docs/calamari/Staking/Collation/CollatorFAQ#q-what-are-nimbus-keys)
 
