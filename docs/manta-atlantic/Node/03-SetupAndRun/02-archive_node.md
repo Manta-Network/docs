@@ -9,29 +9,30 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## 🥡 Archive Node
-An archive node keeps all the past blocks and their states. An archive node makes it convenient to query the past state of the chain at any point in time. Finding out what an account's balance at a particular block was or which extrinsics resulted in a specific state change are fast operations when using an archive node. However, an archive node takes up a lot of disk space - around Kusama's 12 millionth block, this was around 660 GB.
+
+An archive node keeps all the past blocks and their states. An archive node makes it convenient to query the past state of the chain at any point in time. Finding out what an account's balance at a particular block was or which extrinsics resulted in a specific state change are fast operations when using an archive node. However, an archive node takes up a lot of disk space.(For Kusama's 12 millionth block, it took up around 660 GB.)
 
 Similar to full node rpc parameters can also be specified serve the archive node as rpc node
 
 ### Configuration
 
-- --pruning archive
-- --base-path <PATH\> (e.g `/opt/manta/lib`)
-- --chain manta
+-   --pruning archive
+-   --base-path <PATH\> (e.g `/opt/manta/lib`)
+-   --chain manta
 
 for version `>= v4.6.0` (inclusive)
 
-- --rpc-port <PORT\> (e.g `9944`)
-- --rpc-cors <ORIGINS\> (e.g `all`)
-- --rpc-max-connections <COUNT\> (default: `100`)
-- --rpc-methods <METHOD\> (e.g `safe`)
+-   --rpc-port <PORT\> (e.g `9944`)
+-   --rpc-cors <ORIGINS\> (e.g `all`)
+-   --rpc-max-connections <COUNT\> (default: `100`)
+-   --rpc-methods <METHOD\> (e.g `safe`)
 
 for version `< v4.6.0` (exclusive)
 
-- --ws-port <PORT\> (e.g `9944`)
-- --ws-max-connections <COUNT\> (default: `100`)
-- --rpc-port <PORT\> (e.g `9933`)
-- --rpc-cors <ORIGINS\> (e.g. `all`)
+-   --ws-port <PORT\> (e.g `9944`)
+-   --ws-max-connections <COUNT\> (default: `100`)
+-   --rpc-port <PORT\> (e.g `9933`)
+-   --rpc-cors <ORIGINS\> (e.g. `all`)
 
 ### Example Command
 

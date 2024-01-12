@@ -794,7 +794,8 @@ sudo firewall-cmd --reload
 
     A: There are two networks, each will require dedicated hardware.
 
-    Manta Network - production network on Polkadot (live) MantaNetwork - canary network on Polkadot - development network
+    - Manta Network - production network on Polkadot (Not yet live)
+    - Calamari Network - canary network on Kusama
 
     ### Q: What are Nimbus keys?[](https://docs.calamari.network/docs/calamari/Staking/Collation/CollatorFAQ#q-what-are-nimbus-keys)
 
