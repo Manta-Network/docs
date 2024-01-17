@@ -153,7 +153,7 @@ The private keys are not displayed by the node, if you wish to back them up in o
 Run
 ```bash
 #!/bin/bash
-curl -H 'Content-Type: application/json' --data '{ "jsonrpc":"2.0", "method":"author_rotateKeys", "id":1 }' http://localhost:9933
+curl -H 'Content-Type: application/json' --data '{ "jsonrpc":"2.0", "method":"author_rotateKeys", "id":1 }' http://localhost:9133
 ```
 Output from this RPC call should look like the following and is a concatenation of three 32-byte *public* keys in one long hex number.
 ```json
