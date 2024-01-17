@@ -12,7 +12,7 @@ In order to be prepared, please upgrade your op-node image to [public.ecr.aws/i6
 
 A set of scripts that will start a Manta node from scratch. **If you have an existing Manta node running, then you should copy the datadir over and resume from that.**
 
-[manta-replica-main.zip](Manta%20Pacific%20Replica%20Node%2012f254999dcb41b383cd3a8b29371c1b/manta-replica-main.zip)
+[manta-replica-main.zip](./assets/manta-replica-main.zip)
 
 A version of the scripts that include a snapshot data directory
 
