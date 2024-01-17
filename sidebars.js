@@ -167,6 +167,11 @@ module.exports = {
                     label: "Manta Pacific Ecosystem",
                     id: "concepts/Manta Pacific Ecosystem",
                 },
+                {
+                    type: "doc",
+                    label: "Manta Pacific Replica Node",
+                    id: "manta-pacific/Replica Node",
+                },
             ],
         },
         {
