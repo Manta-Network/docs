@@ -8,7 +8,7 @@ The switch to Celestia on Manta Pacific is happening on 12pm PT, December 15th, 
 
 Now that Manta Pacific is posting data to Celestia, users running replica nodes should also run a Celestia light node alongside op-node and op-geth. The updated replica scripts will help users provision this Celestia light node and connect to it in the same way Manta Pacific will.
 
-In order to be prepared, please upgrade your op-node image to [public.ecr.aws/i6b2w2n6/op-node:celestia-3.0.0](http://public.ecr.aws/i6b2w2n6/op-node:celestia-3.0.0) and set the necessary env variables. Note that the [manta-up.sh](http://manta-up.sh) script helps to generate the auth token for the celestia light node.
+In order to be prepared, please upgrade your op-node image to `public.ecr.aws/i6b2w2n6/op-node:celestia-3.0.0` and set the necessary env variables. Note that the `manta-up.sh` script helps to generate the auth token for the celestia light node.
 
 A set of scripts that will start a Manta node from scratch. **If you have an existing Manta node running, then you should copy the datadir over and resume from that.**
 
