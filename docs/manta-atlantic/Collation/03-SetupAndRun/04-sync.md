@@ -60,7 +60,7 @@ echo "${identity_relay}" | sudo -H -u manta tee "${lib_path}"/polkadot/chains/po
 echo "${identity_para}" | sudo -H -u manta tee "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/IDENTITY
 
 # update database `current` manifests
-sudo -H -u manta bash -c 'basename $(ls "${lib_path}"/chains/manta/db/full/MANIFEST-*) > "${lib_path}"/chains/manta/db/full/CURRENT'
-sudo -H -u manta bash -c 'basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/MANIFEST-*) > "${lib_path}"/polkadot/chains/polkadot/db/full/CURRENT'
-sudo -H -u manta bash -c 'basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/MANIFEST-*) > "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/CURRENT'
+sudo -H -u manta bash -c "basename $(ls "${lib_path}"/chains/manta/db/full/MANIFEST-*) > \"${lib_path}\"/chains/manta/db/full/CURRENT"
+sudo -H -u manta bash -c "basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/MANIFEST-*) > \"${lib_path}\"/polkadot/chains/polkadot/db/full/CURRENT"
+sudo -H -u manta bash -c "basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/MANIFEST-*) > \"${lib_path}\"/polkadot/chains/polkadot/db/full/parachains/db/CURRENT"
 ```
