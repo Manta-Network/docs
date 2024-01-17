@@ -26,7 +26,7 @@ Update: here’s a variant that includes a datadir snapshot taken on November 6t
 
 [https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific.tar](https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific.tar)
 
-[manta-replica.zip](Manta%20Pacific%20Replica%20Node%2012f254999dcb41b383cd3a8b29371c1b/manta-replica.zip)
+[manta-replica.zip](./assets/manta-replica-main.zip)
 
 # Building a new OP-geth image
 
