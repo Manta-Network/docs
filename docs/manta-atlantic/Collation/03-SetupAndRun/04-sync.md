@@ -47,6 +47,7 @@ sudo systemctl stop manta.service
 # sync manta blockchain database
 lib_path="/var/lib/substrate" # change this accordingly
 identity="$(sudo -H -u manta cat "${lib_path}"/chains/manta/db/full/IDENTITY)"
+echo "identity: ${identity}"
 sudo -H -u manta rm -r "${lib_path}"/chains/manta/db/full
 curl -L https://manta-polkadot.s3.amazonaws.com/backup/2023-12-05UTC/manta.tar.zst | sudo -H -u manta tar --zstd -C "${lib_path}"/chains/manta -xv
 echo "${identity}" | sudo -H -u manta tee "${lib_path}"/chains/manta/db/full/IDENTITY
@@ -54,13 +55,15 @@ echo "${identity}" | sudo -H -u manta tee "${lib_path}"/chains/manta/db/full/IDE
 # sync polkadot blockchain database
 identity_relay="$(sudo -H -u manta cat "${lib_path}"/polkadot/chains/polkadot/db/full/IDENTITY)"
 identity_para="$(sudo -H -u manta cat "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/IDENTITY)"
+echo "identity_relay: ${identity_relay}"
+echo "identity_para: ${identity_para}"
 sudo -H -u manta rm -r "${lib_path}"/polkadot/chains/polkadot/db/full
 curl -L https://manta-polkadot.s3.amazonaws.com/backup/2023-12-05UTC/manta-polkadot.tar.zst | sudo -H -u manta tar --zstd -C "${lib_path}"/polkadot/chains/polkadot -xv
 echo "${identity_relay}" | sudo -H -u manta tee "${lib_path}"/polkadot/chains/polkadot/db/full/IDENTITY
 echo "${identity_para}" | sudo -H -u manta tee "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/IDENTITY
 
 # update database `current` manifests
-sudo -H -u manta bash -c 'basename $(ls "${lib_path}"/chains/manta/db/full/MANIFEST-*) > "${lib_path}"/chains/manta/db/full/CURRENT'
-sudo -H -u manta bash -c 'basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/MANIFEST-*) > "${lib_path}"/polkadot/chains/polkadot/db/full/CURRENT'
-sudo -H -u manta bash -c 'basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/MANIFEST-*) > "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/CURRENT'
+sudo -H -u manta bash -c "basename $(ls "${lib_path}"/chains/manta/db/full/MANIFEST-*) > \"${lib_path}\"/chains/manta/db/full/CURRENT"
+sudo -H -u manta bash -c "basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/MANIFEST-*) > \"${lib_path}\"/polkadot/chains/polkadot/db/full/CURRENT"
+sudo -H -u manta bash -c "basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/MANIFEST-*) > \"${lib_path}\"/polkadot/chains/polkadot/db/full/parachains/db/CURRENT"
 ```
