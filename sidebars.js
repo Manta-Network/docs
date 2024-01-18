@@ -215,6 +215,16 @@ module.exports = {
                         },
                     ],
                 },
+                {
+                    type: "doc",
+                    label: "Bridge",
+                    id: "manta-atlantic/Bridge",
+                },
+                {
+                  type: "doc",
+                  label: "Stake",
+                  id: "manta-atlantic/Stake",
+              },
             ],
         },
         {
