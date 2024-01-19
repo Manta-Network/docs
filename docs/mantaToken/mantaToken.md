@@ -4,8 +4,8 @@
 
 Manta Network is the modular ecosystem built for scalable, next-generation dApps. It currently offers two networks:
 
-- **Manta Pacific**, the modular L2 ecosystem on Ethereum for next-generation dApps, provides a scalable and inexpensive gas-fee environment for applications to grow beyond the limits of traditional EVM environments.
-- **Manta Atlantic**, the fastest ZK L1 chain on Polkadot, brings programmable ZK-powered confidential on-chain identities and credentials to web3 through zkSBTs.
+-   **Manta Pacific**, the modular L2 ecosystem on Ethereum for next-generation dApps, provides a scalable and inexpensive gas-fee environment for applications to grow beyond the limits of traditional EVM environments.
+-   **Manta Atlantic**, the fastest ZK L1 chain on Polkadot, brings programmable ZK-powered confidential on-chain identities and credentials to web3 through zkSBTs.
 
 Manta Network offers an unrivaled environment to deliver on the scalability demands of dApps. The ecosystem takes a modular approach to meet the changing market needs for dApps now and in the future.
 
@@ -13,24 +13,25 @@ Manta Network offers an unrivaled environment to deliver on the scalability dema
 
 # **Overview of $MANTA**
 
-| Property	 | Details |
-| --- | --- |
-| Abbreviation | MANTA |
-| Token Type | ERC-20, Native |
-| Total supply | 1,000,000,000 MANTA |
-| Inflation schedule | 2% yearly minting rate from Jan 30th, 2024. |
-| Decimals | 18 |
-| MANTA (Manta Pacific) | 0x95CeF13441Be50d20cA4558CC0a27B601aC544E5 |
-| MANTA (BSC) | 0x8581cc815e40615998f4561f3e24e68066293595 |
-| MANTA (MoonBeam) | 0xfFFffFFf7D3875460d4509eb8d0362c611B4E841 |
-| Chain | Manta Pacific |
-- The total supply of $MANTA at Genesis: 1,000,000,000.
-- 2% yearly minting rate starting from Token Genesis.
-- Governance: $MANTA token holders can vote on network governance decisions on Manta Pacific and Manta Atlantic.
-- Staking: Staking $MANTA contributes to the overall security of Manta Atlantic.
-- Collator Delegation: $MANTA holders have the option to delegate their holdings with collators or stake $MANTA to run their collators to secure the network.
-- Network Fees: Manta Atlantic uses $MANTA to pay transaction fees.
-- Native Liquidity & Collateral: $MANTA token can be used in Manta ecosystem to serve as native liquidity and collateral.
+| Property              | Details                                     |
+| --------------------- | ------------------------------------------- |
+| Abbreviation          | MANTA                                       |
+| Token Type            | ERC-20, Native                              |
+| Total supply          | 1,000,000,000 MANTA                         |
+| Inflation schedule    | 2% yearly minting rate from Jan 30th, 2024. |
+| Decimals              | 18                                          |
+| MANTA (Manta Pacific) | 0x95CeF13441Be50d20cA4558CC0a27B601aC544E5  |
+| MANTA (BSC)           | 0x8581cc815e40615998f4561f3e24e68066293595  |
+| MANTA (MoonBeam)      | 0xfFFffFFf7D3875460d4509eb8d0362c611B4E841  |
+| Chain                 | Manta Pacific                               |
+
+-   The total supply of $MANTA at Genesis: 1,000,000,000.
+-   2% yearly minting rate starting from Token Genesis.
+-   Governance: $MANTA token holders can vote on network governance decisions on Manta Pacific and Manta Atlantic.
+-   Staking: Staking $MANTA contributes to the overall security of Manta Atlantic.
+-   Collator Delegation: $MANTA holders have the option to delegate their holdings with collators or stake $MANTA to run their collators to secure the network.
+-   Network Fees: Manta Atlantic uses $MANTA to pay transaction fees.
+-   Native Liquidity & Collateral: $MANTA token can be used in Manta ecosystem to serve as native liquidity and collateral.
 
 ## **$MANTA Utility on Manta Pacific**
 
@@ -38,25 +39,25 @@ Manta Pacific is designed to thrive on on-chain activities, generating value for
 
 **Value Accrual for Token Holders:**
 
-- Token holders benefit from the productive re-deployment of sequencer revenue and gas savings from modular DA.
-- Sequencer revenue and DA gas fee savings primarily fund on-chain activities and zk applications, driving demand for blockspace.
+-   Token holders benefit from the productive re-deployment of sequencer revenue and gas savings from modular DA.
+-   Sequencer revenue and DA gas fee savings primarily fund on-chain activities and zk applications, driving demand for blockspace.
 
 **Builders and Contributors:**
 
-- Builders and contributors receive direct benefits from retroactive on-chain activities funding and the markets it enables.
-- A symbiotic relationship emerges as a well-funded ecosystem attracts builders, fostering the growth of tools, education, apps, and infrastructure.
-- Revenue is distributed to ecosystem projects and public goods funding, continually incentivizing, fostering innovation, supporting early-stage projects, and driving the adoption of cutting-edge technologies in the Manta ecosystem.
+-   Builders and contributors receive direct benefits from retroactive on-chain activities funding and the markets it enables.
+-   A symbiotic relationship emerges as a well-funded ecosystem attracts builders, fostering the growth of tools, education, apps, and infrastructure.
+-   Revenue is distributed to ecosystem projects and public goods funding, continually incentivizing, fostering innovation, supporting early-stage projects, and driving the adoption of cutting-edge technologies in the Manta ecosystem.
 
 **Users and Community Members:**
 
-- Ongoing ecosystem and community incentives and project incentives funded by $MANTA benefit users and community members.
-- The value extends from the advantages provided by on-chain activities and zk applications.
+-   Ongoing ecosystem and community incentives and project incentives funded by $MANTA benefit users and community members.
+-   The value extends from the advantages provided by on-chain activities and zk applications.
 
 **Revenue Generation:**
 
-- Demand for $MANTA blockspace generates revenue.
-- Initial funding from the sequencer accrues to the Manta Foundation for redistribution.
-- Future funding may accrue directly to the protocol through the sale of participation rights in Manta’s decentralized sequencing network.
+-   Demand for $MANTA blockspace generates revenue.
+-   Initial funding from the sequencer accrues to the Manta Foundation for redistribution.
+-   Future funding may accrue directly to the protocol through the sale of participation rights in Manta’s decentralized sequencing network.
 
 ## **$MANTA Utility on Manta Atlantic**
 
@@ -64,26 +65,26 @@ $MANTA serves various functions within the Manta Atlantic ecosystem:
 
 **Network Usage Fee:**
 
-- Transactions and contract/pallet executions incur a usage fee.
-- 72% of network usage fees are allocated to ecosystem projects, enhancing incentives for apps built on Manta.
-- 18% goes to the treasury, governed to incentivize network development and future parachain auctions.
-- 10% is distributed to collators producing blocks containing transactions.
+-   Transactions and contract/pallet executions incur a usage fee.
+-   72% of network usage fees are allocated to ecosystem projects, enhancing incentives for apps built on Manta.
+-   18% goes to the treasury, governed to incentivize network development and future parachain auctions.
+-   10% is distributed to collators producing blocks containing transactions.
 
 **Medium of Exchange:**
 
-- $MANTA acts as the native currency for Manta Network, facilitating peer-to-peer transfers and transactions with contracts/pallets.
-- $MANTA can purchase credentials like zkSBTs and zkKYCs within the network.
+-   $MANTA acts as the native currency for Manta Network, facilitating peer-to-peer transfers and transactions with contracts/pallets.
+-   $MANTA can purchase credentials like zkSBTs and zkKYCs within the network.
 
 **Governance Rights:**
 
-- $MANTA serves as the voting weight for on-chain governance decisions.
-- It is utilized for proposing referenda, electing council members, and shaping the future of the Manta network.
+-   $MANTA serves as the voting weight for on-chain governance decisions.
+-   It is utilized for proposing referenda, electing council members, and shaping the future of the Manta network.
 
 **Network Security:**
 
-- Collators play a crucial role in bundling transactions and supporting block liveness.
-- $MANTA tokens incentivize collators, ensuring a robust and decentralized network.
-- The network allocates an annual 2% of total issuance to stakers for maintaining network security.
+-   Collators play a crucial role in bundling transactions and supporting block liveness.
+-   $MANTA tokens incentivize collators, ensuring a robust and decentralized network.
+-   The network allocates an annual 2% of total issuance to stakers for maintaining network security.
 
 A portion of the $MANTA supply is allocated to airdrops to reward the real, active, and pioneering users who participate in and support the Manta ecosystem.
 
@@ -125,9 +126,9 @@ Read the [Airdrop announcement](https://mantanetwork.medium.com/into-the-blue-t
 
 _Release Schedule:_
 
-- _50,000,000 $MANTA of “Into the Blue” event token airdrop will unlock during TGE._
-- _6,000,000 $MANTA will unlock during TGE and be distributed to users participating in the Binance Parachain auction._
-- _For any unclaimed rewards after the claim period, the unclaimed rewards will be distributed back into the ecosystem funds, where community governance will determine how to reappropriate._
+-   _50,000,000 $MANTA of “Into the Blue” event token airdrop will unlock during TGE._
+-   _6,000,000 $MANTA will unlock during TGE and be distributed to users participating in the Binance Parachain auction._
+-   _For any unclaimed rewards after the claim period, the unclaimed rewards will be distributed back into the ecosystem funds, where community governance will determine how to reappropriate._
 
 ## **New Paradigm (Airdrop 2) — 6.5%**
 
@@ -135,15 +136,15 @@ To position Manta as a leading Layer 2 solution in the Layer 2 landscape, we hav
 
 Read the details about [the New Paradigm](https://mantanetwork.medium.com/new-paradigm-the-real-l2-that-helps-you-earn-more-yield-than-a-multisig-2f445ab4dc47).
 
-- **Base Reward:** 3% of total supply
-- **Special Rewards:** 2% of total supply
-- **Ecosystem incentives:** 1.5% of total supply
+-   **Base Reward:** 3% of total supply
+-   **Special Rewards:** 2% of total supply
+-   **Ecosystem incentives:** 1.5% of total supply
 
 _Release Schedule:_
 
-- _50,000,000 $MANTA NFT reward will be released at TGE_
-- _15,000,000 $MANTA ecosystem incentives will be released 3 months after TGE._
-- _For any unclaimed rewards after the claim period, the unclaimed rewards will be distributed back into the ecosystem funds, where community governance will determine how to reappropriate._
+-   _50,000,000 $MANTA NFT reward will be released at TGE_
+-   _15,000,000 $MANTA ecosystem incentives will be released 3 months after TGE._
+-   _For any unclaimed rewards after the claim period, the unclaimed rewards will be distributed back into the ecosystem funds, where community governance will determine how to reappropriate._
 
 ## **Binance Launchpool — 3.00%**
 
@@ -151,7 +152,7 @@ For participants in the Binance Launchpool for $MANTA token.
 
 _Release Schedule:_
 
-- _100% release at TGE_
+-   _100% release at TGE_
 
 ## **Public Sale — 8.00%**
 
@@ -159,7 +160,7 @@ _Release Schedule:_
 
 _Release Schedule:_
 
-- _40,000,000 $MANTA at TGE; the remainder is released monthly (at the end of each month) over 6 months._
+-   _40,000,000 $MANTA at TGE; the remainder is released monthly (at the end of each month) over 6 months._
 
 ## **Private Round — 12.94%**
 
@@ -167,7 +168,7 @@ _Release Schedule:_
 
 _Release Schedule:_
 
-- _12 months cliff and linear release over 36 months._
+-   _12 months cliff and linear release over 36 months._
 
 ## **Strategic Investors — 6.17%**
 
@@ -175,7 +176,7 @@ _Release Schedule:_
 
 _Release Schedule:_
 
-- _12 months cliff and linear release over 36 months._
+-   _12 months cliff and linear release over 36 months._
 
 ## **Institution Investors — 5.00%**
 
@@ -183,7 +184,7 @@ _Release Schedule:_
 
 _Release Schedule:_
 
-- _12 months cliff and linear release over 36 months._
+-   _12 months cliff and linear release over 36 months._
 
 ## **Ecosystem / Community — 21.19%**
 
@@ -191,7 +192,7 @@ $MANTA tokens will be distributed via grants and incentives to contributors, bui
 
 _Release Schedule:_
 
-- _50,000,000 $MANTA at TGE; the remainder is released linearly over 48 months. The tokens will be distributed through governance._
+-   _50,000,000 $MANTA at TGE; the remainder is released linearly over 48 months. The tokens will be distributed through governance._
 
 ## **Foundation Treasury- 13.50%**
 
@@ -199,7 +200,7 @@ Manta Foundation Treasury is established to guide the Manta ecosystem and uphold
 
 _Release Schedule:_
 
-- _Linear release over 72 months._
+-   _Linear release over 72 months._
 
 ## **Team — 10.00%**
 
@@ -207,7 +208,7 @@ For current and future core team members contributing to the growth and success 
 
 _Release Schedule:_
 
-- _18 months cliff and 48 months linear release._
+-   _18 months cliff and 48 months linear release._
 
 ## **Advisors — 8.10%**
 
@@ -215,7 +216,7 @@ All of the hard work and success would not have been achieved without the advice
 
 _Release Schedule:_
 
-- _25,000,000 $MANTA at TGE; the remainder is released monthly (at the end of each month) over 30 months._
+-   _25,000,000 $MANTA at TGE; the remainder is released monthly (at the end of each month) over 30 months._
 
 ## **Estimated Validator / Emission Rewards — 2% per year**
 
@@ -223,4 +224,4 @@ Starting from TGE, the network allocates an annual 2% of total issuance to stake
 
 _Release Schedule:_
 
-- _The total supply of $MANTA at Genesis is 1,000,000,000._
+-   _The total supply of $MANTA at Genesis is 1,000,000,000._
