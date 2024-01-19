@@ -13,16 +13,17 @@ Manta Network offers an unrivaled environment to deliver on the scalability dema
 
 # **Overview of $MANTA**
 
-| Property           | Details                                     |
-| ------------------ | ------------------------------------------- |
-| Abbreviation       | MANTA                                       |
-| Token Type         | ERC-20, Native                              |
-| Total supply       | 1,000,000,000 MANTA                         |
+| Property	 | Details |
+| --- | --- |
+| Abbreviation | MANTA |
+| Token Type | ERC-20, Native |
+| Total supply | 1,000,000,000 MANTA |
 | Inflation schedule | 2% yearly minting rate from Jan 30th, 2024. |
-| Decimals           | 18                                          |
-| Token contract     | 0x95CeF13441Be50d20cA4558CC0a27B601aC544E5  |
-| Chain              | Manta Pacific                               |
-
+| Decimals | 18 |
+| MANTA (Manta Pacific) | 0x95CeF13441Be50d20cA4558CC0a27B601aC544E5 |
+| MANTA (BSC) | 0x8581cc815e40615998f4561f3e24e68066293595 |
+| MANTA (MoonBeam) | 0xfFFffFFf7D3875460d4509eb8d0362c611B4E841 |
+| Chain | Manta Pacific |
 - The total supply of $MANTA at Genesis: 1,000,000,000.
 - 2% yearly minting rate starting from Token Genesis.
 - Governance: $MANTA token holders can vote on network governance decisions on Manta Pacific and Manta Atlantic.
