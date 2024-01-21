@@ -16,6 +16,7 @@ Here are the 4 Explorers currently supporting Manta Pacific:
 - Link: [Manta Pacific L2SCAN Block Explorer](https://manta-pacific.l2scan.co/)
 
 - Link: [Manta Pacific Block Explorer](https://pacific-explorer.manta.network/)
+- Link: [DexGuru Block Explorer](https://manta.dex.guru/)
 
 **Socialscan:**
 
