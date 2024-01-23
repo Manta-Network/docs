@@ -18,29 +18,32 @@ module.exports = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-	navbar: {
-		title: "Manta Network Docs",
-		logo: {
-			alt: "Manta Network Logo",
-			src: "img/manta2.png",
-		},
-		items: [
-			{
-				href: "https://manta.network",
-				label: "Manta Network",
-				position: "right",
-			},
-			{
-				href: "https://github.com/Manta-Network",
-				label: "GitHub",
-				position: "right",
-			},
-			{
-				type: "localeDropdown",
-				position: "right",
-			},
-		],
-	},
+    navbar: {
+      title: "Manta Network Docs",
+      logo: {
+        alt: "Manta Network Logo",
+        src: "img/manta2.png",
+      },
+      items: [
+        {
+          href: "https://manta.network",
+          label: "Manta Network",
+          position: "right",
+        },
+        {
+          href: "https://github.com/Manta-Network",
+          label: "GitHub",
+          position: "right",
+        },
+        {
+          type: "localeDropdown",
+          position: "right",
+        },
+      ],
+    },
+    prism: {
+      additionalLanguages: ["solidity"],
+    },
     footer: {
       style: 'dark',
       links: [
@@ -86,6 +89,53 @@ module.exports = {
       ],
       copyright: `Copyright © 2019-${new Date().getFullYear()} Manta Network.`,
     },
+    /** @type {import('./src/theme/ChefGPT/types').CookbookDocsBotConfig} */
+    cookbookDocsBot: {
+      features: {
+        enableExplainSnippet: true,
+      },
+      dataSources: [
+        {
+          name: "Linea",
+          hostname: "https://docs.linea.build",
+        },
+        {
+          name: "Infura",
+          hostname: "https://docs.infura.io",
+        },
+        {
+          name: "Metamask",
+          hostname: "https://docs.metamask.io",
+        },
+      ],
+      greetingMessage:
+        "Hi! I'm ChefGPT, ask me anything about the Metamask, Linea, or Infura!",
+      explainPromptTemplate: "Could you please elaborate on the content within the specified section from the Metamask Docs? The section I'm referring to is:\n```\n$1\n```\n\nI'm seeking a comprehensive explanation to better understand the nuances, procedures, or concepts outlined in this particular segment. Your clarification will greatly assist in grasping the intricacies of the topic at hand.",
+      dialogTitle: "ChefGPT",
+      suggestions: [
+        "What's Metamask?",
+        "How do I install MetaMask?",
+        "How do I use MetaMask?",
+        "What's Linea?",
+        "How to bridge assets to Linea?",
+      ],
+      messageInputPlaceholder:
+        "Ask anything about the Metamask, Linea, or Infura",
+      ui: {
+        modalContainer: {
+          width: "1000px",
+          height: "800px",
+          shadow: "inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309",
+          background: "var(--ifm-background-surface-color)",
+          className: "chefgpt-modal-container",
+        },
+      },
+      avatars: {
+        ChefGPT: "/img/manta2.png",
+        User: "https://cookbook.dev/img/Richard.png",
+      },
+      apiBaseUrl: "http://localhost:5001",
+    },
   },
   presets: [
     [
@@ -96,14 +146,14 @@ module.exports = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           editUrl: 'https://github.com/Manta-Network/docs/edit/main/',
-		  showLastUpdateTime: true,
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-		gtag: {
-			trackingID: "G-J7YDH8B96W",
-		},
+        gtag: {
+          trackingID: "G-J7YDH8B96W",
+        },
       },
     ],
   ],
@@ -125,6 +175,8 @@ module.exports = {
         maxSearchResults: 10,
       },
     ],
+    "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin",
+    require.resolve('./webpackPlugin.js'),
   ],
   i18n: {
     defaultLocale: 'en',

@@ -1,0 +1,11 @@
+.markdown-body code {
+  max-width: 100%;
+}
+
+.markdown-body code > div {
+  margin-bottom: 0 !important; /* Removing extra margin-bottom from the code blocks */
+}
+
+.markdown-body {
+  max-width: 100%;
+}

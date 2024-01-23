@@ -1,0 +1,82 @@
+.messageContainer {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-content);
+  padding: 10px 20px;
+  font-size: inherit;
+  line-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.messageContainer > * {
+  max-width: 100%;
+}
+
+.messsageText {
+  overflow-wrap: wrap;
+
+  max-width: 100% !important;
+}
+.messsageText a {
+  color: var(--ifm-link-hover-color);
+  text-decoration: var(--ifm-link-hover-decoration);
+  transition: color var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+.messsageText li {
+  margin-bottom: var(--ifm-leading);
+}
+.messsageText p {
+  margin: var(--ifm-leading) 0;
+}
+
+.markdownBody {
+  max-width: 100%;
+  overflow: scroll;
+}
+
+.typingAnimationContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 4px;
+}
+
+@keyframes typingAnimation {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-6px);
+  }
+}
+
+.typingDot {
+  display: inline-block;
+  font-size: calc(0.875rem * var(--ifm-button-size-multiplier));
+  line-height: 1.5;
+  animation: typingAnimation 1s infinite;
+}
+
+.typingDot:nth-child(1) {
+  animation-delay: 0s;
+}
+.typingDot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typingDot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.flex {
+  display: flex;
+}

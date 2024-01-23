@@ -1,0 +1,24 @@
+.openModalButton {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: calc(var(--ifm-z-index-fixed, 100) + 5);
+  width: 120px;
+
+  will-change: transform;
+  transform: scale(1) translateY(0px);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: bottom center;
+}
+
+.openModalButtonActive {
+  /* Subtle pop effect */
+  transform: scale(1.1) translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .openModalButton {
+    bottom: 10px;
+    right: 10px;
+  }
+}

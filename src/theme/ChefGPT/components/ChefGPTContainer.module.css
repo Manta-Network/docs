@@ -1,0 +1,252 @@
+.suggestedQuestionContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  gap: 8px;
+}
+
+.openModalButton {
+  background-color: #1098fc;
+}
+
+.suggestedQuestionBox {
+  height: max-content;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.maximizeButton {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.readSection {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: var(--padding-bottom);
+  padding-top: var(--padding-top);
+  overflow-y: scroll;
+  gap: 20px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 1) var(--padding-top),
+    rgba(0, 0, 0, 1) calc(100% - var(--padding-bottom)),
+    transparent 100%
+  );
+}
+.readSection::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.writeSection {
+  align-items: center;
+  background: transparent;
+  border-radius: 4px;
+  /* box-shadow: var(--cookbook-searchbox-shadow); */
+  margin: 0;
+  /* padding: 0 var(--cookbook-spacing); */
+  position: relative;
+
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: #646464;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 0;
+
+  background: var(--cookbook-modal-background);
+  border-radius: 6px;
+  box-shadow: var(--cookbook-modal-shadow);
+  flex-direction: column;
+  margin: auto auto;
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  max-width: var(--cookbook-modal-width);
+  max-height: var(--cookbook-modal-height);
+}
+
+.container__expanded {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  color: var(--ifm-button-color);
+}
+
+.inputField {
+  appearance: none;
+  background: var(
+    --cookbook-searchbox-background,
+    var(--ifm-color-emphasis-100)
+  );
+  border: 0;
+  border-radius: var(--ifm-button-border-radius);
+  color: var(--cookbook-text-color);
+  flex: 1;
+  font-size: 0.9rem;
+  height: 100%;
+  outline: 0;
+  width: 80%;
+
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.suggestionsContainer {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px);
+  min-height: calc(
+    0.875rem * var(--ifm-button-size-multiplier) * 1.5 +
+      var(--ifm-button-padding-vertical) * 2 * var(--ifm-button-size-multiplier)
+  );
+  height: max-content;
+}
+.suggestionsContainer > * {
+  height: max-content;
+}
+
+.tags {
+  --padding-left: 20px;
+  --padding-right: 20px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  row-gap: 8px;
+  column-gap: 4px;
+
+  overflow-x: scroll;
+  padding-left: var(--padding-left);
+  padding-right: var(--padding-right);
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 1) var(--padding-left),
+    rgba(0, 0, 0, 1) calc(100% - var(--padding-right)),
+    transparent 100%
+  );
+}
+.tags::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.modalOuterContainer {
+  --cookbook-text-color: var(--ifm-font-color-base);
+  --cookbook-muted-color: var(--ifm-color-secondary-darkest);
+  --cookbook-container-background: rgba(47, 55, 69, 0.7);
+  --cookbook-modal-background: var(--ifm-background-color);
+  --cookbook-searchbox-background: var(--ifm-color-emphasis-100);
+  --cookbook-searchbox-focus-background: var(--ifm-color-black);
+  --cookbook-hit-background: var(--ifm-color-emphasis-100);
+  --cookbook-footer-background: var(--ifm-background-surface-color);
+  --cookbook-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
+
+  --cookbook-modal-width: 1000px;
+  --cookbook-modal-height: 800px;
+  --cookbook-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
+
+  background: var(--cookbook-container-background);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: calc(var(--ifm-z-index-fixed) + 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: calc(env(safe-area-inset-bottom) + 90px);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.poweredByContainer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.poweredByContainer > * {
+  color: var(--ifm-font-color-base);
+}
+
+.poweredByCookbook {
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+}
+
+.poweredByCookbookLogo {
+  width: calc(1rem * var(--ifm-breadcrumb-size-multiplier) * 1.5);
+  height: calc(1rem * var(--ifm-breadcrumb-size-multiplier) * 1.5);
+  margin-right: 6px;
+  margin-bottom: 3px;
+}
+
+.notActive {
+  pointer-events: none;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--ifm-color-content);
+  transition: opacity 0.2s ease-in-out;
+}
+.closeBtn:hover {
+  opacity: 0.75;
+}
