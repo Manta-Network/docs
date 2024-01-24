@@ -32,7 +32,7 @@ export const ChefGPT = () => {
     setTextSelected(selection);
   }, []);
   useEventListener(window?.document, "selectionchange", handleSelectionChange);
-  const isAnalyzeMode = !!textSelected && !!config.features?.enableExplainSnippet;
+  const isAnalyzeMode =  !!config.features?.enableExplainSnippet && !!textSelected && !modalOpen;
 
   const handleAnalyzeSnippet = (snippet: string) => {
     if (!askQuestion) return;
@@ -50,6 +50,7 @@ export const ChefGPT = () => {
 
   const handleClose = () => {
     setModalOpen(false);
+    setTextSelected(null);
   };
 
   return (

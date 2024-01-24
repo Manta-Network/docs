@@ -1,20 +1,27 @@
 import React from "react";
 import { useEffect, useState, forwardRef, useRef } from "react";
 import { Message, TypingDots } from "./Message";
-import { Cross1Icon } from "./icons/Cross1Icon";
 import styles from "./ChefGPTContainer.module.css";
 import clsx from "clsx";
 import { useLockBodyScroll } from "../hooks/useLockBodyScroll";
 import { useChefGPTConsumer } from "../context/index";
+import { TextArea } from "../components/TextArea";
+
+import { Cross1Icon } from "./icons/Cross1Icon";
+import { Pencil2Icon } from "./icons/Pencil2Icon";
+import { TrashIcon } from "./icons/TrashIcon";
 
 export const ChefGPTContainer = forwardRef(
-  ({
-    expanded = false,
-    onClose,
-  }: {
-    expanded?: boolean;
-    onClose: () => void;
-  }, ref) => {
+  (
+    {
+      expanded = false,
+      onClose,
+    }: {
+      expanded?: boolean;
+      onClose: () => void;
+    },
+    ref
+  ) => {
     const {
       suggestions: premadeQuestions,
       messageInputPlaceholder,
@@ -26,7 +33,9 @@ export const ChefGPTContainer = forwardRef(
     const { askQuestion, messages, pendingMessage } = useChefGPTConsumer();
     const isTyping = !!pendingMessage?.typing;
 
-    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (
+      event
+    ) => {
       setInput(event.target.value);
     };
 
@@ -37,7 +46,9 @@ export const ChefGPTContainer = forwardRef(
       await askQuestion?.(question);
     };
 
-    const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
+    const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
+      event
+    ) => {
       event.preventDefault();
       if (input === "") {
         return alert("Please enter your question"); // TODO: replace with toast component
@@ -63,6 +74,10 @@ export const ChefGPTContainer = forwardRef(
       scrollToBottom();
     }, [pendingMessage?.content, messages.map((message) => message.content)]);
 
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [lastMouseDownElement, setLastMouseDownElement] =
+      useState<HTMLElement | null>(null);
+
     return (
       <div
         ref={ref}
@@ -73,16 +88,33 @@ export const ChefGPTContainer = forwardRef(
         tabIndex={0}
         className={clsx(
           styles.modalOuterContainer,
-          ui?.outerContainer?.className,
+          ui?.outerContainer?.className
         )}
-        onClick={onClose}
+        onMouseDown={(e) => {
+          console.log(e.target);
+          setLastMouseDownElement(e.target as HTMLElement);
+        }}
+        onClick={(e) => {
+          if (e.target !== lastMouseDownElement || e.target !== e.currentTarget)
+            return;
+          onClose();
+        }}
       >
         <div
-          onClick={(e) => e.stopPropagation()}
+          // onClick={(e) => e.stopPropagation()}
+          // onMouseDownCapture={(e) => {
+          //   console.log(e);
+          //   e.stopPropagation();
+          //   e.preventDefault();
+          // }}
+          // onMouseOut={(e) => {
+          //   console.log('mouseOut');
+          //   e.preventDefault();
+          // }}
           className={clsx(
             styles.container,
             expanded ? styles.container__expanded : "",
-            ui?.modalContainer?.className,
+            ui?.modalContainer?.className
           )}
           style={
             ui?.modalContainer &&
@@ -94,29 +126,18 @@ export const ChefGPTContainer = forwardRef(
             } as any)
           }
         >
-          <button
-            onClick={onClose}
-            className={clsx("clean-btn", styles.closeBtn)}
-          >
-            <Cross1Icon width={18} height={18} />
-          </button>
-          {/* {expand && (
-            <div className={styles.maximizeButton} onClick={expand}>
-              <EnterFullScreenIcon className={styles.buttonIcon} />
-            </div>
-          )} */}
           <div
             className={clsx(
-              styles.poweredByContainer,
+              styles.header,
               "padding-top--sm",
-              "padding-bottom--sm",
+              "padding-bottom--sm"
             )}
           >
             <a
               className={clsx(
                 "breadcrumbs__link",
                 styles.notActive,
-                styles.poweredByCookbook,
+                styles.poweredByCookbook
               )}
             >
               <img
@@ -140,100 +161,178 @@ export const ChefGPTContainer = forwardRef(
               Cookbook.dev
             </a> */}
           </div>
-          <div
-            ref={messagesRef}
-            className={clsx(
-              styles.readSection,
-              ui?.messagesContainer?.className,
-            )}
+
+          <button
+            onClick={onClose}
+            className={clsx("clean-btn", styles.closeBtn)}
           >
-            {" "}
-            {/* css={[tw`gradient-mask-t-90`]} */}
-            {isTyping && (
-              <Message
-                key={pendingMessage.uuid}
-                text={
-                  pendingMessage.content !== ""
-                    ? pendingMessage.content
-                    : undefined
-                }
-                typing={true}
-                isUser={false}
-              />
-            )}
-            {messages.map((message) => (
-              <Message
-                key={message.uuid}
-                text={message.content}
-                isUser={message.role === "user"}
-                typing={false}
-              />
-            ))}
-          </div>
-          <div
-            className={clsx(
-              styles.suggestionsContainer,
-              "margin-bottom--sm",
-              ui?.suggestionsContainer?.className,
-            )}
-          >
-            <div className={styles.tags}>
-              {premadeQuestions
-                .filter(
-                  (question: string) =>
-                    !input // if input is empty, show all premade questions
-                      ? true
-                      : question.toLowerCase().includes(input.toLowerCase()), // else, show only premade questions that match the input
-                )
-                .map((question: string) => (
-                  <button
-                    className="button button--secondary button--block"
-                    onClick={() => handleSubmitPremade(question)}
-                    key={question}
-                  >
-                    {question}
-                  </button>
-                ))}
-            </div>
-          </div>
-          <div className={styles.column}>
-            <form
-              className={clsx(
-                styles.writeSection,
-                ui?.messageInputContainer?.className,
-              )}
-              onSubmit={handleSubmit}
+            <Cross1Icon width={18} height={18} />
+          </button>
+
+          <div className={styles.row}>
+            <div
+              className={clsx([
+                styles.sidebarWrapper,
+                sidebarOpen && styles.sidebarWrapper__open,
+              ])}
             >
-              <input
-                aria-autocomplete="both"
-                autoComplete="off"
-                autoCorrect="off"
-                autoCapitalize="off"
-                enterKeyHint="search"
-                spellCheck="false"
-                maxLength={64}
-                type="search"
+              <div className={styles.sidebarContent}>
+                <h5
+                  className={styles.option}
+                  style={{
+                    color: "var(--ifm-font-color-base)",
+                    fontSize: "var(--ifm-h4-font-size)",
+                    pointerEvents: "none",
+                    marginBottom: 0,
+                    paddingLeft: 12,
+                  }}
+                >
+                  History
+                </h5>
+                <div className={styles.option}>
+                  <div className={styles.optionLabel}>
+                    How can I deploy this contract to the Eth
+                  </div>
+                  <div className={styles.optionIcons}>
+                    <div className={styles.buttonIcon}>
+                      <Pencil2Icon />
+                    </div>
+                    <div className={styles.buttonIcon}>
+                      <TrashIcon />
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.sidebarBottomContainer}>
+                  <button
+                    style={{
+                      width: "100%",
+                    }}
+                    className="clean-btn button button--primary"
+                  >
+                    Start new chat
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className={styles.mainContentContainer}>
+              {/* Sidebar Toggle Button */}
+              <div className={styles.sidebarToggleContainer}>
+                <button
+                  style={{
+                    width: "max-content",
+                    padding: "0 10px",
+                  }}
+                  onClick={() => setSidebarOpen(!sidebarOpen)}
+                  className={clsx("clean-btn button button--secondary", [
+                    styles.sidebarToggleButton,
+                    sidebarOpen && styles.sidebarToggleButton__open,
+                  ])}
+                />
+              </div>
+
+              <div
+                ref={messagesRef}
                 className={clsx(
-                  styles.inputField,
-                  ui?.messageInputField?.className,
+                  styles.readSection,
+                  ui?.messagesContainer?.className
                 )}
-                value={input}
-                placeholder={messageInputPlaceholder}
-                onChange={handleChange}
-              />
-              <button
-                type="submit"
-                disabled={isTyping}
-                className="clean-btn button button--primary"
-                style={{ minWidth: 85 }}
               >
-                {isTyping ? <TypingDots /> : "Send"}
-              </button>
-            </form>
+                {isTyping && (
+                  <Message
+                    key={pendingMessage.uuid}
+                    text={
+                      pendingMessage.content !== ""
+                        ? pendingMessage.content
+                        : undefined
+                    }
+                    typing={true}
+                    isUser={false}
+                  />
+                )}
+                {messages.map((message) => (
+                  <Message
+                    key={message.uuid}
+                    text={message.content}
+                    isUser={message.role === "user"}
+                    typing={false}
+                  />
+                ))}
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  bottom: 20,
+                  left: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <div
+                  className={clsx(
+                    styles.suggestionsContainer,
+                    "margin-bottom--sm",
+                    ui?.suggestionsContainer?.className
+                  )}
+                >
+                  <div className={styles.tags}>
+                    {premadeQuestions
+                      .filter(
+                        (question: string) =>
+                          !input // if input is empty, show all premade questions
+                            ? true
+                            : question
+                                .toLowerCase()
+                                .includes(input.toLowerCase()) // else, show only premade questions that match the input
+                      )
+                      .map((question: string) => (
+                        <button
+                          className="button button--secondary button--block"
+                          onClick={() => handleSubmitPremade(question)}
+                          key={question}
+                        >
+                          {question}
+                        </button>
+                      ))}
+                  </div>
+                </div>
+                <div className={styles.column}>
+                  <form
+                    className={clsx(
+                      styles.writeSection,
+                      ui?.messageInputContainer?.className
+                    )}
+                    onSubmit={handleSubmit}
+                  >
+                    <TextArea
+                      $size={2}
+                      type="text"
+                      $variant="surface"
+                      placeholder={messageInputPlaceholder}
+                      value={input}
+                      onChange={handleChange}
+                      $withButton
+                      dynamicHeight
+                    />
+                    <button
+                      type="submit"
+                      disabled={isTyping}
+                      className={clsx(
+                        "clean-btn button button--primary",
+                        styles.sendButton
+                      )}
+                      style={{ minWidth: 85 }}
+                    >
+                      {isTyping ? <TypingDots /> : "Send"}
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     );
-  },
+  }
 );
 ChefGPTContainer.displayName = "ChefGPTContainer";

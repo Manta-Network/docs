@@ -2,9 +2,8 @@
   width: 100%;
   box-sizing: border-box;
   overflow-wrap: break-word;
-  border-bottom: 1px solid var(--ifm-color-emphasis-300);
   color: var(--ifm-color-content);
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: inherit;
   line-height: inherit;
   display: flex;
