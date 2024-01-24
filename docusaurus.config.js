@@ -96,31 +96,21 @@ module.exports = {
       },
       dataSources: [
         {
-          name: "Linea",
-          hostname: "https://docs.linea.build",
-        },
-        {
-          name: "Infura",
-          hostname: "https://docs.infura.io",
-        },
-        {
-          name: "Metamask",
-          hostname: "https://docs.metamask.io",
-        },
+          name: "Manta",
+          hostname: "https://docs.manta.network",
+        }
       ],
       greetingMessage:
-        "Hi! I'm ChefGPT, ask me anything about the Metamask, Linea, or Infura!",
-      explainPromptTemplate: "Could you please elaborate on the content within the specified section from the Metamask Docs? The section I'm referring to is:\n```\n$1\n```\n\nI'm seeking a comprehensive explanation to better understand the nuances, procedures, or concepts outlined in this particular segment. Your clarification will greatly assist in grasping the intricacies of the topic at hand.",
+        "Hi! I'm ChefGPT, ask me anything about Manta",
+      explainPromptTemplate: "Could you please elaborate on the content within the specified section from the Manta Docs? The section I'm referring to is:\n```\n$1\n```\n\nI'm seeking a comprehensive explanation to better understand the nuances, procedures, or concepts outlined in this particular segment. Your clarification will greatly assist in grasping the intricacies of the topic at hand.",
       dialogTitle: "ChefGPT",
       suggestions: [
-        "What's Metamask?",
-        "How do I install MetaMask?",
-        "How do I use MetaMask?",
-        "What's Linea?",
-        "How to bridge assets to Linea?",
+        "What's Manta",
+        "How do Manta Pacific and Atlantic Differ?",
+        "How do I deploy to Manta Atlantic?",
       ],
       messageInputPlaceholder:
-        "Ask anything about the Metamask, Linea, or Infura",
+        "Ask anything about Manta",
       ui: {
         modalContainer: {
           width: "1000px",
