@@ -244,7 +244,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 60%;
+  width: 100%;
   row-gap: 8px;
   column-gap: 4px;
 
