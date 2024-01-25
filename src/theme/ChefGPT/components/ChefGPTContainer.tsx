@@ -10,6 +10,7 @@ import { TextArea } from "../components/TextArea";
 import { Cross1Icon } from "./icons/Cross1Icon";
 import { Pencil2Icon } from "./icons/Pencil2Icon";
 import { TrashIcon } from "./icons/TrashIcon";
+import { GoIcon } from './icons/GoIcon'
 
 export const ChefGPTContainer = forwardRef(
   (
@@ -217,7 +218,7 @@ export const ChefGPTContainer = forwardRef(
                     style={{
                       width: "100%",
                     }}
-                    className="clean-btn button button--primary"
+                    className="clean-btn button button--secondary"
                   >
                     Start new chat
                   </button>
@@ -247,6 +248,28 @@ export const ChefGPTContainer = forwardRef(
                   ui?.messagesContainer?.className
                 )}
               >
+                {!isTyping &&
+                  <div
+                    className={clsx(
+                      styles.suggestionsContainer,
+                      "margin-bottom--sm",
+                      ui?.suggestionsContainer?.className
+                    )}
+                  >
+                    <div className={styles.tags}>
+                      {premadeQuestions
+                        .map((question: string) => (
+                          <button
+                            className="button button--secondary button--block"
+                            onClick={() => handleSubmitPremade(question)}
+                            key={question}
+                          >
+                            {question}
+                          </button>
+                        ))}
+                    </div>
+                  </div>
+                }
                 {isTyping && (
                   <Message
                     key={pendingMessage.uuid}
@@ -278,34 +301,6 @@ export const ChefGPTContainer = forwardRef(
                   flexDirection: "column",
                 }}
               >
-                <div
-                  className={clsx(
-                    styles.suggestionsContainer,
-                    "margin-bottom--sm",
-                    ui?.suggestionsContainer?.className
-                  )}
-                >
-                  <div className={styles.tags}>
-                    {premadeQuestions
-                      .filter(
-                        (question: string) =>
-                          !input // if input is empty, show all premade questions
-                            ? true
-                            : question
-                                .toLowerCase()
-                                .includes(input.toLowerCase()) // else, show only premade questions that match the input
-                      )
-                      .map((question: string) => (
-                        <button
-                          className="button button--secondary button--block"
-                          onClick={() => handleSubmitPremade(question)}
-                          key={question}
-                        >
-                          {question}
-                        </button>
-                      ))}
-                  </div>
-                </div>
                 <div className={styles.column}>
                   <form
                     className={clsx(
@@ -328,12 +323,17 @@ export const ChefGPTContainer = forwardRef(
                       type="submit"
                       disabled={isTyping}
                       className={clsx(
-                        "clean-btn button button--primary",
+                        "clean-btn button",
                         styles.sendButton
                       )}
-                      style={{ minWidth: 85 }}
                     >
-                      {isTyping ? <TypingDots /> : "Send"}
+                      {isTyping ?
+                        <TypingDots />
+                        :
+                        <div>
+                          <GoIcon style={{marginTop: "4px"}}/>
+                        </div>
+                      }
                     </button>
                   </form>
                 </div>

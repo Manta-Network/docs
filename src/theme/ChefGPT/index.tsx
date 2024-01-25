@@ -12,7 +12,7 @@ import styles from "./index.module.css";
 import { CookbookDocsBotConfig } from "./types";
 
 export const ChefGPT = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(true);
   const [textSelected, setTextSelected] = useState<string | null>(null);
 
   const { siteConfig } = useDocusaurusContext();
