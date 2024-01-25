@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import track from "../track";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import type { CookbookDocsBotConfig } from "../types";
-import { IDBPDatabase, openDB } from "idb";
+import { openDB } from "idb";
 
 /**
  *
@@ -124,15 +124,13 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     getThread({ _id: threadId, uuid: currentThreadUUID }).then(
       async (thread) => {
         const messages =
-          thread?.messages
-            ?.map((message) => ({
-              uuid: message._id,
-              ...message,
-            }))
-            .reverse() ?? [];
+          thread?.messages?.map((message) => ({
+            uuid: message._id,
+            ...message,
+          })) ?? [];
         setCurrentThreadId(threadId);
         setPendingMessage(setDefaultPendingMessage);
-        setMessages(() => [...messages, ...setDefaultMessages()]);
+        setMessages(() => [...setDefaultMessages(), ...messages]);
         await updateThread(thread);
         await updateThreads();
       }
@@ -197,7 +195,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
   const finishedTyping = useCallback(() => {
     // Set typing to false which will trigger the useEffect above
     // to add the pending message to the messages array
-    setPendingMessage((prevMessage) => ({ ...prevMessage, typing: false }));
+    setTimeout(() => setPendingMessage((prevMessage) => ({ ...prevMessage, typing: false })));
   }, []);
 
   /**
@@ -206,8 +204,8 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
    * @returns uuid of message
    */
   const addMessage = (_message: Omit<Message, "uuid">) => {
-    const message = { ..._message, uuid: uuidv4() }; // Add uuid to message
-    setMessages((prevMessages) => [message, ...prevMessages]);
+    const message = { uuid: uuidv4(), ..._message }; // Add uuid to message if it doesn't exist
+    setMessages((prevMessages) => [...prevMessages, message]);
     return message.uuid;
   };
 
@@ -292,14 +290,20 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         const newValue = decoder.decode(value).split("\n\n").filter(Boolean);
 
         newValue.forEach((newVal) => {
-          const serverMessage = JSON.parse(newVal.replace("data: ", ""));
-          requestAnimationFrame(() => {
-            setPendingMessage(({ content: prevContent, ...prevMessage }) => ({
-              ...prevMessage,
-              content: prevContent + serverMessage, // Concatenate new message content received from server to previous message content
-              typing: true,
-            }));
-          });
+          let serverMessage;
+          try {
+            setTimeout(() => {
+              serverMessage = JSON.parse(newVal.replace("data: ", ""));
+              setPendingMessage(({ content: prevContent, ...prevMessage }) => ({
+                ...prevMessage,
+                content: prevContent + serverMessage, // Concatenate new message content received from server to previous message content
+                typing: true,
+              }));
+            });
+          } catch (err) {
+            console.error("Error parsing server message", newVal);
+            return;
+          }
         });
       }
       /* Processing stream end */
