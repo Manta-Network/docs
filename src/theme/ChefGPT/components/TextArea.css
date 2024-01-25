@@ -12,6 +12,7 @@ grammarly-extension {
   flex-direction: column;
   box-sizing: border-box;
   position: relative;
+  border-radius: 10px;
 }
 .rt-TextAreaInput {
   appearance: none;
@@ -63,6 +64,9 @@ grammarly-extension {
   -webkit-text-fill-color: #edeef0;
 }
 .rt-TextAreaChrome {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   position: absolute;
   border-radius: inherit;
   z-index: 0;
@@ -70,8 +74,12 @@ grammarly-extension {
   pointer-events: none;
 }
 .rt-TextAreaRoot {
+  --color-autofill-root: #ddeaf814;
+  --color-focus-root: #5a6169;
+  --color-selection-root: #d9edfe25;
+  width: 100%;
   --height: 64px;
-  border-radius: 4px;
+  border-radius: 10px;
   --text-font-size: 16px;
   --text-line-height: 24px;
   --text-letter-spacing: 0em;
