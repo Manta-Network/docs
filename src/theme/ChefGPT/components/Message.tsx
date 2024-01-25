@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { useChefGPTConsumer } from "../context/index";
 
 export const TypingDots = () => (
-  <div className="flex">
+  <div className="flex" >
     <span className={styles.typingDot}>.</span>
     <span className={styles.typingDot}>.</span>
     <span className={styles.typingDot}>.</span>
