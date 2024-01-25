@@ -35,12 +35,12 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
   const [messages, setMessages] = useState<Message[]>(setDefaultMessages);
 
   const setDefaultPendingMessage = () =>
-    ({
-      role: "assistant",
-      typing: false,
-      content: "",
-      uuid: uuidv4(),
-    } as const);
+  ({
+    role: "assistant",
+    typing: false,
+    content: "",
+    uuid: uuidv4(),
+  } as const);
 
   const [pendingMessage, setPendingMessage] = useState<Message>(
     setDefaultPendingMessage
@@ -262,7 +262,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         ...(thread.uuid && { threadUUID: thread.uuid }), // uuid is added to threads created by anonymous users
       });
       fetchSignals.current.push(signal);
-
+      getRecommendations(question, body, signal)
       const response = await fetch(`${apiBaseUrl}/chefgpt/new-message`, {
         method: "POST",
         headers: {
@@ -329,6 +329,22 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       finishedTyping();
     }
   };
+
+  const getRecommendations = async (body, signal) => {
+    const response = await fetch(`${apiBaseUrl}/chefgpt/get-recommendations`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      priority: "high",
+      credentials: "include",
+      body,
+      signal: signal.signal,
+    });
+    console.log(response)
+  }
 
   const clearMessages = () => {
     setMessages(setDefaultMessages);
