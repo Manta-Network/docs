@@ -1,0 +1,142 @@
+.rt-TextAreaRoot {
+  --color-autofill-root: #ddeaf814;
+  --color-focus-root: #5a6169;
+  --color-selection-root: #d9edfe25;
+  width: 100%;
+}
+grammarly-extension {
+  display: none !important;
+}
+.rt-TextAreaRoot {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+.rt-TextAreaInput {
+  appearance: none;
+  padding: 0;
+  border-radius: inherit;
+  background-color: transparent;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  resize: none;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 100%;
+  flex-grow: 1;
+  z-index: 1;
+  border: var(--text-area-border-width) solid transparent;
+  padding: var(--text-area-padding-y) var(--text-area-padding-x);
+}
+.rt-TextAreaInput:where(:focus) {
+  outline: 2px solid #696e77 !important;
+  outline-offset: -1px !important;
+}
+.rt-TextAreaInput {
+  cursor: auto;
+  scrollbar-width: thin;
+}
+.rt-TextAreaInput::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.rt-TextAreaInput::-webkit-scrollbar-track, .rt-TextAreaInput::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  border: 4px solid transparent;
+  border-radius: 12px;
+}
+.rt-TextAreaInput::-webkit-scrollbar-track {
+  background-color: #ddeaf814;
+}
+.rt-TextAreaInput::-webkit-scrollbar-thumb {
+  background-color: #d9edff5d;
+}
+@media (hover: hover) {
+  :where(.rt-TextAreaInput:not(:disabled))::-webkit-scrollbar-thumb:hover {
+    background-color: #dfebfd6d;
+  }
+}
+.rt-TextAreaInput:where(:autofill, [data-com-onepassword-filled]) {
+  background-clip: text;
+  -webkit-text-fill-color: #edeef0;
+}
+.rt-TextAreaChrome {
+  position: absolute;
+  border-radius: inherit;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+}
+.rt-TextAreaRoot {
+  --height: 64px;
+  border-radius: 4px;
+  --text-font-size: 16px;
+  --text-line-height: 24px;
+  --text-letter-spacing: 0em;
+  --text-area-padding-y: 14px;
+  --text-area-padding-x: 16px;
+}
+.rt-TextAreaRoot {
+  --max-lines: 3;
+  --min-height: calc(var(--text-area-padding-y) * 2 + var(--text-line-height) + var(--text-area-border-width) * 2);
+  min-height: var(--min-height);
+  max-height: calc(var(--text-area-padding-y) * 2 + var(--text-line-height) * var(--max-lines) + var(--text-area-border-width) * 2);
+}
+.rt-TextAreaRoot .rt-TextAreaInput {
+  font-size: var(--text-font-size);
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+}
+.rt-TextAreaRoot .rt-TextAreaInput {
+  height: var(--min-height);
+}
+@media (max-width: 768px) {
+  .rt-TextAreaRoot .rt-TextAreaInput {
+    height: unset;
+  }
+}
+.rt-TextAreaRoot {
+  --text-area-border-width: 1px;
+}
+.rt-TextAreaInput {
+  color: #edeef0;
+}
+.rt-TextAreaInput ~ :where(.rt-TextAreaChrome) {
+  box-shadow: inset 0 0 0 1px #d9edff40;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 1px;
+  background-clip: content-box;
+}
+.rt-TextAreaInput::placeholder {
+  color: #e5edfd7b;
+  opacity: 1;
+}
+.rt-TextAreaInput:where(:autofill, [data-com-onepassword-filled]):where(:not(:disabled, :read-only)) ~ :where(.rt-TextAreaChrome) {
+  background-color: var(--color-autofill-root);
+  box-shadow: inset 0 0 0 1px var(--color-autofill-root), inset 0 0 0 1px #d6ebfd30;
+}
+.rt-TextAreaInput:where(:disabled, :read-only) ~ :where(.rt-TextAreaChrome) {
+  background-image: linear-gradient(#ddeaf814, #ddeaf814);
+}
+.rt-TextAreaInput {
+  padding-right: calc(14px + 85px + 8px);
+}
+.rt-TextAreaInput:where(:disabled, :read-only) {
+  cursor: text;
+  color: #f0f5feb5;
+  -webkit-text-fill-color: #f0f5feb5;
+}
+.rt-TextAreaInput:where(:disabled, :read-only):where(:focus) {
+  outline: 2px solid #5a6169;
+}
+.rt-TextAreaInput:where(:disabled, :read-only)::placeholder {
+  opacity: 0.5;
+}
+.rt-TextAreaInput:where(:disabled, :read-only):where(:placeholder-shown) {
+  cursor: default;
+}
+.rt-TextAreaInput:where(:disabled, :read-only)::selection {
+  background-color: #d9edfe25;
+}
