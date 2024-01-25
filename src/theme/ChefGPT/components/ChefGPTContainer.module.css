@@ -494,6 +494,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   transition: all ease-out 150ms;
   --tw-text-opacity: 1;
   color: rgb(175 179 186 / var(--tw-text-opacity));
+  width: 100%;
 
   height: 22px;
   line-height: 1.25;
@@ -510,7 +511,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
 }
 @media (hover: hover) and (pointer: fine) {
   .option:hover > * {
-    opacity: 1 !important;
+    opacity: 1;
   }
   .option:hover .optionLabel {
     mask-size: 100% 100%;
@@ -519,6 +520,16 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
     --tw-bg-opacity: 1;
     background-color: rgb(54 58 63 / var(--tw-bg-opacity));
   }
+}
+.option__active > * {
+  opacity: 1;
+}
+.option__active .optionLabel {
+  mask-size: 100% 100%;
+}
+.option__active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(54 58 63 / var(--tw-bg-opacity));
 }
 
 .optionIcons {

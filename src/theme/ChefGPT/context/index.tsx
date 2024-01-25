@@ -2,12 +2,14 @@ import { createContext, useContext } from "react";
 import { type Message, type askQuestionFn } from "./types";
 import type { CookbookDocsBotConfig } from "../types";
 import { CookbookDocsDefaultConfig } from "../defaultConfig";
+import { useChefGPT } from "../hooks/useChefGPT";
 
 export type ChefGPTContextType = {
   messages: Message[];
   pendingMessage: Message | null;
   askQuestion: askQuestionFn | null;
   config: CookbookDocsBotConfig;
+  helpers: ReturnType<typeof useChefGPT>[3] | null;
 };
 
 const defaultValue: ChefGPTContextType = {
@@ -15,6 +17,7 @@ const defaultValue: ChefGPTContextType = {
   pendingMessage: null,
   askQuestion: null,
   config: CookbookDocsDefaultConfig,
+  helpers: null,
 };
 export const ChefGPTContext = createContext<ChefGPTContextType>(defaultValue);
 export const ChefGPTProvider = ChefGPTContext.Provider;
