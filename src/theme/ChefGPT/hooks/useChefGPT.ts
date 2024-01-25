@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import track from "../track";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import type { CookbookDocsBotConfig } from "../types";
+import { IDBPDatabase, openDB } from "idb";
 
 /**
  *
@@ -39,15 +40,10 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       typing: false,
       content: "",
       uuid: uuidv4(),
-    }) as const;
+    } as const);
 
   const [pendingMessage, setPendingMessage] = useState<Message>(
-    setDefaultPendingMessage,
-  );
-
-  const [currentThreadId, setCurrentThreadId] = useState<string | null>(null);
-  const [currentThreadUUID, setCurrentThreadUUID] = useState<string | null>(
-    null,
+    setDefaultPendingMessage
   );
   // Once the pending message is typed out, add it to the messages array and reset the pending message to default
   useEffect(() => {
@@ -56,6 +52,93 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       setPendingMessage(setDefaultPendingMessage);
     }
   }, [pendingMessage.typing]);
+
+  const [threads, setThreads] = useState<Thread[]>([]);
+  const fetchSignals = useRef<AbortController[]>([]);
+
+  const getDb = async () => {
+    return await openDB("chefgpt", 1, {
+      upgrade(db) {
+        db.createObjectStore("threads", {
+          keyPath: "_id",
+        });
+      },
+    });
+  };
+  const saveThread = async (thread: Thread) => {
+    const db = await getDb();
+    db.add("threads", thread);
+    await updateThreads();
+  };
+  const getThreads = async () => {
+    const db = await getDb();
+    return await db.getAll("threads");
+  };
+  const updateThreads = async () => {
+    return getThreads().then((threads) => {
+      setThreads(threads);
+    });
+  };
+  const updateThread = async (thread: Thread) => {
+    const db = await getDb();
+    db.put("threads", thread);
+    await updateThreads();
+  };
+  const deleteThread = async (thread: Thread) => {
+    const db = await getDb();
+    db.delete("threads", thread._id);
+    await updateThreads();
+  };
+
+  useEffect(() => {
+    updateThreads();
+  }, []);
+
+  const [currentThreadId, setCurrentThreadId] = useState<string | null>(null);
+  const [currentThreadUUID, setCurrentThreadUUID] = useState<string | null>(
+    null
+  );
+
+  useEffect(() => {
+    return () => {
+      fetchSignals.current.forEach((signal) => signal.abort());
+    };
+  }, [currentThreadId]);
+
+  const handleChangeThread = (threadId: string | null) => {
+    if (threadId === null) {
+      setCurrentThreadId(null);
+      setCurrentThreadUUID(null);
+      setMessages(setDefaultMessages());
+      setPendingMessage(setDefaultPendingMessage);
+      return;
+    }
+
+    const currentThread = threads?.find((thread) => thread._id === threadId);
+    if (!currentThread) {
+      throw new Error("Thread not found");
+    }
+    const currentThreadUUID = currentThread?.uuid ?? null;
+    setCurrentThreadUUID(currentThreadUUID);
+
+    getThread({ _id: threadId, uuid: currentThreadUUID }).then(
+      async (thread) => {
+        const messages =
+          thread?.messages
+            ?.map((message) => ({
+              uuid: message._id,
+              ...message,
+            }))
+            .reverse() ?? [];
+        setCurrentThreadId(threadId);
+        setPendingMessage(setDefaultPendingMessage);
+        setMessages(() => [...messages, ...setDefaultMessages()]);
+        await updateThread(thread);
+        await updateThreads();
+      }
+    );
+    setCurrentThreadUUID(currentThread?.uuid ?? null);
+  };
 
   const createNewThread = async (): Promise<Thread> => {
     return await fetch(`${apiBaseUrl}/chefgpt/thread/new`, {
@@ -69,7 +152,31 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       }),
     })
       .then((res) => res.json())
-      .then((data) => data.thread);
+      .then((data) => data.thread)
+      .then((thread) => {
+        return thread;
+      });
+  };
+
+  const getThread = async ({
+    _id,
+    uuid,
+  }: {
+    _id: string;
+    uuid: string;
+  }): Promise<Thread> => {
+    return await fetch(`${apiBaseUrl}/chefgpt/thread/${_id}?uuid=${uuid}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    })
+      .then((res) => res.json())
+      .then((data) => data.thread)
+      .then((thread) => {
+        return thread;
+      });
   };
 
   const getOrCreateThread = async (): Promise<Thread> => {
@@ -108,7 +215,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     if (pendingMessage.typing) {
       alert(
         // TODO: convert to toast
-        "Please wait for Chef GPT to finish typing before asking another question.",
+        "Please wait for Chef GPT to finish typing before asking another question."
       );
       return;
     }
@@ -142,7 +249,13 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         })),
       };
       const thread = await getOrCreateThread();
+      saveThread({
+        ...thread,
+        firstQuestion: question,
+        messages: [],
+      });
 
+      const signal = new AbortController();
       const body = JSON.stringify({
         type: "docsbot",
         question,
@@ -150,6 +263,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         threadId: thread._id,
         ...(thread.uuid && { threadUUID: thread.uuid }), // uuid is added to threads created by anonymous users
       });
+      fetchSignals.current.push(signal);
 
       const response = await fetch(`${apiBaseUrl}/chefgpt/new-message`, {
         method: "POST",
@@ -161,8 +275,9 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         priority: "high",
         credentials: "include",
         body,
+        signal: signal.signal,
       });
-      console.log("response", response);
+
       if (!response.ok) {
         throw new Error(response.statusText);
       }
@@ -178,21 +293,33 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
 
         newValue.forEach((newVal) => {
           const serverMessage = JSON.parse(newVal.replace("data: ", ""));
-          setPendingMessage(({ content: prevContent, ...prevMessage }) => ({
-            ...prevMessage,
-            content: prevContent + serverMessage, // Concatenate new message content received from server to previous message content
-            typing: true,
-          }));
+          requestAnimationFrame(() => {
+            setPendingMessage(({ content: prevContent, ...prevMessage }) => ({
+              ...prevMessage,
+              content: prevContent + serverMessage, // Concatenate new message content received from server to previous message content
+              typing: true,
+            }));
+          });
         });
       }
       /* Processing stream end */
+      fetchSignals.current = fetchSignals.current.filter(
+        (signal) => signal !== signal
+      );
+      getThread(thread).then(async (thread) => {
+        await updateThread(thread);
+      });
     } catch (err) {
-      console.error("Error while asking question", err);
-      alert("Something went wrong while asking question. Please try again.");
       // Because we optimistaclly added the message to the messages array before, we need to remove it if the request fails
       setMessages((prevMessages) =>
-        prevMessages.filter((message) => message.uuid !== messageUUID),
+        prevMessages.filter((message) => message.uuid !== messageUUID)
       );
+      if (err.name === "AbortError") {
+        // Do nothing
+      } else {
+        console.error("Error while asking question", err);
+        alert("Something went wrong while asking question. Please try again.");
+      }
     } finally {
       // stream ended
       finishedTyping();
@@ -210,7 +337,11 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     askQuestion,
     {
       clearMessages,
-      setCurrentThreadId,
+      currentThreadId,
+      setCurrentThreadId: handleChangeThread,
+      threads,
+      deleteThread,
+      updateThread,
     },
   ] as const;
 };
@@ -223,6 +354,8 @@ export type Message = {
 };
 export type Thread = {
   _id: string;
-  uuid: string;
+  uuid?: string;
+  messages: Message[];
+  firstQuestion?: string;
 };
 export type AskQuestionFn = (question: string) => Promise<void>;

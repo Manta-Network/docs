@@ -30,8 +30,10 @@ export const ChefGPTContainer = forwardRef(
     } = useChefGPTConsumer().config;
     useLockBodyScroll();
     const [input, setInput] = useState("");
-    const { askQuestion, messages, pendingMessage } = useChefGPTConsumer();
+    const { askQuestion, messages, pendingMessage, helpers } =
+      useChefGPTConsumer();
     const isTyping = !!pendingMessage?.typing;
+    const { threads, setCurrentThreadId, currentThreadId } = helpers || {};
 
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (
       event
@@ -189,21 +191,29 @@ export const ChefGPTContainer = forwardRef(
                 >
                   History
                 </h5>
-                <div className={styles.option}>
-                  <div className={styles.optionLabel}>
-                    How can I deploy this contract to the Eth
-                  </div>
-                  <div className={styles.optionIcons}>
-                    <div className={styles.buttonIcon}>
-                      <Pencil2Icon />
+                {threads?.map((thread) => (
+                  <div className={clsx([styles.option, currentThreadId === thread._id && styles.option__active])} key={thread._id} onClick={() => {
+                    setCurrentThreadId?.(thread._id);
+                  }}>
+                    <span className={styles.optionLabel}>
+                      {thread.firstQuestion || thread.messages?.[0]?.content || "Thread"}
+                    </span>
+                    <div className={styles.optionIcons}>
+                      <div role="button" onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        if (confirm("Are you sure you want to delete this thread? This action cannot be undone.")) {
+                          helpers?.deleteThread(thread);
+                        }
+                      }} className={styles.buttonIcon}>
+                        <TrashIcon />
+                      </div>
                     </div>
-                    <div className={styles.buttonIcon}>
-                      <TrashIcon />
-                    </div>
                   </div>
-                </div>
+                ))}
                 <div className={styles.sidebarBottomContainer}>
                   <button
+                    onClick={() => setCurrentThreadId?.(null)}
                     style={{
                       width: "100%",
                     }}
