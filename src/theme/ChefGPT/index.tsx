@@ -58,11 +58,11 @@ export const ChefGPT = () => {
       <button
         onClick={handleOpen}
         className={clsx(
-          "clean-btn button",
+          "clean-btn button button--secondary",
           styles.openModalButton,
           config.ui?.openModalButton?.className,
           {
-            "button--primary": !isAnalyzeMode,
+            "button--secondary": !isAnalyzeMode,
             [clsx("button--success", styles.openModalButtonActive)]:
               isAnalyzeMode,
           },
