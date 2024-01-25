@@ -107,7 +107,7 @@ module.exports = {
       suggestions: [
         "What's Manta",
         "How do Manta Pacific and Atlantic Differ?",
-        "How do I deploy to Manta Atlantic?",
+        "How do I deploy to Manta Pacific?",
       ],
       messageInputPlaceholder:
         "Ask anything about Manta",

@@ -139,6 +139,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   border-radius: 6px;
   box-shadow: var(--cookbook-modal-shadow);
   margin: auto;
+  margin-top: 30px;
   position: relative;
 
   width: 100%;
@@ -183,6 +184,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
 .container__expanded {
   height: 100%;
   box-sizing: border-box;
+  margin-top: -300px;
 }
 
 .inputField {
@@ -257,6 +259,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
 }
 
 .modalOuterContainer {
+    animation: 0.2s fadeinrise;
   --cookbook-text-color: var(--ifm-font-color-base);
   --cookbook-muted-color: var(--ifm-color-secondary-darkest);
   --cookbook-container-background: rgba(47, 55, 69, 0.7);
@@ -274,7 +277,6 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   --cookbook-modal-width: 1000px;
   --cookbook-modal-height: 800px;
   --cookbook-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
-
   background: var(--cookbook-container-background);
   left: 0;
   position: fixed;
@@ -288,6 +290,17 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+@keyframes fadeinrise {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .modalOuterContainer {
@@ -361,7 +374,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
 .sidebarToggleContainer {
   position: absolute;
   width: 32px;
-  height: 100%;
+  height: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -369,7 +382,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
 
   z-index: 10;
   left: -18px;
-  top: 0;
+  top: 0px;
 }
 
 .sidebarToggleButton {

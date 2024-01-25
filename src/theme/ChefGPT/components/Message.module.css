@@ -61,7 +61,7 @@
 
 .typingDot {
   display: inline-block;
-  font-size: calc(0.875rem * var(--ifm-button-size-multiplier));
+  font-size: calc(1.5rem * var(--ifm-button-size-multiplier));
   line-height: 1.5;
   animation: typingAnimation 1s infinite;
 }

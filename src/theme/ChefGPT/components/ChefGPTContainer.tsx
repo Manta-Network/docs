@@ -76,7 +76,7 @@ export const ChefGPTContainer = forwardRef(
       scrollToBottom();
     }, [pendingMessage?.content, messages.map((message) => message.content)]);
 
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(true);
     const [lastMouseDownElement, setLastMouseDownElement] =
       useState<HTMLElement | null>(null);
 
