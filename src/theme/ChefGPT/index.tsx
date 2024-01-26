@@ -82,6 +82,12 @@ export const ChefGPT = () => {
           }
         )}
       >
+        <img
+          width="22px"
+          src="https://cookbook.dev/img/logo.svg"
+          alt="Cookbook.dev"
+          style={{marginTop: "2px"}}
+        />
         {textSelected ? "Explain" : "ChefGPT"}
       </button>
 

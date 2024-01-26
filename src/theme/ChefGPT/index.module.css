@@ -4,7 +4,9 @@
   right: 40px;
   z-index: calc(var(--ifm-z-index-fixed, 100) + 5);
   width: 120px;
-
+  display: flex;
+  justify-content: center;
+  gap: 5px;
   will-change: transform;
   transform: scale(1) translateY(0px);
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
