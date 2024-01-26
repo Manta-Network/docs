@@ -108,6 +108,10 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
   }, [currentThreadId]);
 
   const handleChangeThread = (threadId: string | null) => {
+    if (typing) {
+      return alert('Please wait for Chef GPT to finish typing before switching threads.');
+    };
+
     if (threadId === null) {
       setCurrentThreadId(null);
       setCurrentThreadUUID(null);
@@ -191,17 +195,6 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         ...(currentThreadUUID && { uuid: currentThreadUUID }), // uuid is added to threads created by anonymous users
       };
     }
-  };
-
-  /**
-   *
-   * @param _message - Message to be added to messages array
-   * @returns uuid of message
-   */
-  const addMessage = (_message: Omit<Message, "uuid">) => {
-    const message = { uuid: uuidv4(), ..._message }; // Add uuid to message if it doesn't exist
-    setMessages((prevMessages) => [...prevMessages, message]);
-    return message.uuid;
   };
 
   const askQuestion: AskQuestionFn = async (question) => {
