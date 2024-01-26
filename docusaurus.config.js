@@ -123,7 +123,7 @@ module.exports = {
         ChefGPT: "https://docs.manta.network/img/manta2.png",
         User: "https://cookbook.dev/img/Richard.png",
       },
-      apiBaseUrl: "http://localhost:5001",
+      apiBaseUrl: "https://simple-web3-api-staging.herokuapp.com",
     },
   },
   presets: [
