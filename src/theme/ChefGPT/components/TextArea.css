@@ -28,7 +28,7 @@ grammarly-extension {
   width: 100%;
   flex-grow: 1;
   z-index: 1;
-  border: var(--text-area-border-width) solid transparent;
+  border: var(--text-area-border-width) solid var(--ifm-color-emphasis-200);
   padding: var(--text-area-padding-y) var(--text-area-padding-x);
 }
 .rt-TextAreaInput:where(:focus) {
@@ -109,16 +109,15 @@ grammarly-extension {
   --text-area-border-width: 1px;
 }
 .rt-TextAreaInput {
-  color: #edeef0;
+  color: var(--ifm-color-content);
 }
 .rt-TextAreaInput ~ :where(.rt-TextAreaChrome) {
   box-shadow: inset 0 0 0 1px #d9edff40;
-  background-color: rgba(0, 0, 0, 0.25);
   padding: 1px;
   background-clip: content-box;
 }
 .rt-TextAreaInput::placeholder {
-  color: #e5edfd7b;
+  color: var(--ifm-color-content);
   opacity: 1;
 }
 .rt-TextAreaInput:where(:autofill, [data-com-onepassword-filled]):where(:not(:disabled, :read-only)) ~ :where(.rt-TextAreaChrome) {
@@ -133,7 +132,7 @@ grammarly-extension {
 }
 .rt-TextAreaInput:where(:disabled, :read-only) {
   cursor: text;
-  color: #f0f5feb5;
+  color: var(--ifm-color-content);
   -webkit-text-fill-color: #f0f5feb5;
 }
 .rt-TextAreaInput:where(:disabled, :read-only):where(:focus) {

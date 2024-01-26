@@ -155,7 +155,7 @@ export const ChefGPTContainer = forwardRef(
             onClick={onClose}
             className={clsx("clean-btn", styles.closeBtn)}
           >
-            <Cross1Icon width={18} height={18} />
+            <Cross1Icon width={13} height={13} />
           </button>
 
           <div className={styles.row}>
@@ -280,7 +280,7 @@ export const ChefGPTContainer = forwardRef(
                     <div className={styles.tags}>
                       {suggestedQuestions.map((question: string) => (
                         <button
-                          className="button button--secondary button--block"
+                          className="clean-btn button button--secondary"
                           onClick={() => handleSubmitPremade(question)}
                           key={question}
                         >

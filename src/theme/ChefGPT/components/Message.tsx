@@ -32,7 +32,6 @@ export const Message = ({
         height={40}
         style={{ borderRadius: "10px" }}
         src={isUser ? config.avatars.User : config.avatars.ChefGPT}
-        alt="NFT icon"
       />
       {isUser ? (
         <div className={clsx(styles.messsageText, messageTextClassName)}>

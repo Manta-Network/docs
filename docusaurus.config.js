@@ -110,12 +110,11 @@ module.exports = {
         "How do I deploy to Manta Pacific?",
       ],
       messageInputPlaceholder:
-        "Ask anything about Manta",
+        "Ask anything about Manta!",
       ui: {
         modalContainer: {
           width: "1000px",
           height: "800px",
-          shadow: "inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309",
           background: "var(--ifm-background-surface-color)",
           className: "chefgpt-modal-container",
         },
