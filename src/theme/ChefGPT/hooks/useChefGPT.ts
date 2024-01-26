@@ -4,7 +4,9 @@ import track from "../track";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import type { CookbookDocsBotConfig } from "../types";
 import { openDB } from "idb";
-
+import { createChunkDecoder } from "../utils/createChunkDecoder";
+import { useChat } from "../components/ai/hooks/useChat";
+import { nanoid } from "../components/ai/shared/utils";
 /**
  *
  * @param props -
@@ -23,39 +25,43 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     dataSources,
     extraTrackingData,
   } = config;
+  const defaultMessage = useRef({
+    role: "assistant" as const,
+    content: initialMessage,
+    id: nanoid(),
+  }).current;
 
-  const setDefaultMessages = (): [Message] => [
-    {
-      uuid: uuidv4(),
-      role: "assistant",
-      content: initialMessage,
-      typing: false,
-    },
-  ];
-  const [messages, setMessages] = useState<Message[]>(setDefaultMessages);
-
-  const setDefaultPendingMessage = () =>
-    ({
-      role: "assistant",
-      typing: false,
-      content: "",
-      uuid: uuidv4(),
-    } as const);
-
-  const [pendingMessage, setPendingMessage] = useState<Message>(
-    setDefaultPendingMessage
+  const [currentId, setCurrentId] = useState<string>(nanoid);
+  const [currentThreadId, setCurrentThreadId] = useState<string | null>(null);
+  const [currentThreadUUID, setCurrentThreadUUID] = useState<string | null>(
+    null
   );
+
+  const {
+    append,
+    messages,
+    setMessages,
+    isLoading: typing,
+    stop: stopMessageStreaming,
+  } = useChat({
+    api: `${apiBaseUrl}/chefgpt/new-message`,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+    id: currentId,
+    initialMessages: [
+      {
+        id: uuidv4(),
+        role: "assistant",
+        content: initialMessage,
+      },
+    ],
+  });
+
   const [recommendations, setRecommendations] = useState([]);
-  // Once the pending message is typed out, add it to the messages array and reset the pending message to default
-  useEffect(() => {
-    if (!pendingMessage.typing && pendingMessage.content.length > 0) {
-      addMessage(pendingMessage);
-      setPendingMessage(setDefaultPendingMessage);
-    }
-  }, [pendingMessage.typing]);
 
   const [threads, setThreads] = useState<Thread[]>([]);
-  const fetchSignals = useRef<AbortController[]>([]);
 
   const getDb = async () => {
     return await openDB("chefgpt", 1, {
@@ -95,14 +101,9 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     updateThreads();
   }, []);
 
-  const [currentThreadId, setCurrentThreadId] = useState<string | null>(null);
-  const [currentThreadUUID, setCurrentThreadUUID] = useState<string | null>(
-    null
-  );
-
   useEffect(() => {
     return () => {
-      fetchSignals.current.forEach((signal) => signal.abort());
+      stopMessageStreaming();
     };
   }, [currentThreadId]);
 
@@ -110,8 +111,8 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     if (threadId === null) {
       setCurrentThreadId(null);
       setCurrentThreadUUID(null);
-      setMessages(setDefaultMessages());
-      setPendingMessage(setDefaultPendingMessage);
+      setCurrentId(nanoid());
+      setMessages([defaultMessage]);
       return;
     }
 
@@ -126,12 +127,11 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       async (thread) => {
         const messages =
           thread?.messages?.map((message) => ({
-            uuid: message._id,
+            id: message._id,
             ...message,
           })) ?? [];
         setCurrentThreadId(threadId);
-        setPendingMessage(setDefaultPendingMessage);
-        setMessages(() => [...setDefaultMessages(), ...messages]);
+        setMessages([defaultMessage, ...messages]);
         await updateThread(thread);
         await updateThreads();
       }
@@ -193,14 +193,6 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     }
   };
 
-  const finishedTyping = useCallback(() => {
-    // Set typing to false which will trigger the useEffect above
-    // to add the pending message to the messages array
-    setTimeout(() =>
-      setPendingMessage((prevMessage) => ({ ...prevMessage, typing: false }))
-    );
-  }, []);
-
   /**
    *
    * @param _message - Message to be added to messages array
@@ -213,7 +205,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
   };
 
   const askQuestion: AskQuestionFn = async (question) => {
-    if (pendingMessage.typing) {
+    if (typing) {
       alert(
         // TODO: convert to toast
         "Please wait for Chef GPT to finish typing before asking another question."
@@ -229,17 +221,12 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       siteMetadata,
     });
 
-    setPendingMessage((prev) => ({
-      ...prev,
-      typing: true,
-    }));
-
-    // Add user message to messages array
-    const messageUUID = addMessage({
-      role: "user" as const,
-      content: question,
-      typing: false,
-    });
+    // // Add user message to messages array
+    // const messageUUID = addMessage({
+    //   role: "user" as const,
+    //   content: question,
+    //   typing: false,
+    // });
 
     try {
       const payload = {
@@ -256,79 +243,84 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         messages: [],
       });
 
-      const signal = new AbortController();
-      const body = JSON.stringify({
+      const body = {
         type: "docsbot",
         question,
         data: payload,
         threadId: thread._id,
         ...(thread.uuid && { threadUUID: thread.uuid }), // uuid is added to threads created by anonymous users
-      });
-      fetchSignals.current.push(signal);
-      const newMessagePromise = fetch(`${apiBaseUrl}/chefgpt/new-message`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      };
+      append(
+        {
+          role: "user",
+          content: question,
         },
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        priority: "high",
-        credentials: "include",
-        body,
-        signal: signal.signal,
-      });
-      const recommendationsPromise = getRecommendations(body).catch((err) => {
+        {
+          options: {
+            body,
+          },
+        }
+      );
+      const finalizedRecommendations = await getRecommendations(body).catch((err) => {
         console.error("Error getting recommendations", err);
         return [];
       });
-      const [response, finalizedRecommendations] = await Promise.all([
-        newMessagePromise,
-        recommendationsPromise,
-      ]);
-
-      if (!response.ok) {
-        throw new Error(response.statusText);
-      }
-
-      /* Processing stream start */
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let done = false;
-      while (!done) {
-        const { value, done: doneReading } = await reader.read();
-        done = doneReading;
-        const newValue = decoder.decode(value).split("\n\n").filter(Boolean);
-
-        newValue.forEach((newVal) => {
-          let serverMessage;
-          try {
-            setTimeout(() => {
-              serverMessage = JSON.parse(newVal.replace("data: ", ""));
-              setPendingMessage(({ content: prevContent, ...prevMessage }) => ({
-                ...prevMessage,
-                content: prevContent + serverMessage, // Concatenate new message content received from server to previous message content
-                typing: true,
-              }));
-            });
-          } catch (err) {
-            console.error("Error parsing server message", newVal);
-            return;
-          }
-        });
-      }
-      /* Processing stream end */
-      fetchSignals.current = fetchSignals.current.filter(
-        (signal) => signal !== signal
-      );
-      getThread(thread).then(async (thread) => {
-        await updateThread(thread);
-      });
       setRecommendations(finalizedRecommendations);
+      return;
+      // const newMessagePromise = fetch(`${apiBaseUrl}/chefgpt/new-message`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //   // @ts-ignore
+      //   priority: "high",
+      //   credentials: "include",
+      //   body,
+      //   signal: signal.signal,
+      // });
+
+      // if (!response.ok) {
+      //   throw new Error(response.statusText);
+      // }
+
+      // /* Processing stream start */
+      // const reader = (response.body as any).getReader();
+      // const decode = createChunkDecoder();
+      // let content = "";
+      // const uuid = pendingMessage.uuid;
+      // async function readChunk() {
+      //   const { done, value } = await reader.read();
+      //   if (!done) {
+      //     content += decode(value);
+      //   }
+      //   setPendingMessage({
+      //     role: "assistant",
+      //     content, // Concatenate new message content received from server to previous message content
+      //     typing: true,
+      //     uuid,
+      //   });
+      //   if (done) {
+      //     reader.releaseLock();
+      //     return;
+      //   }
+
+      //   if (done) {
+      //     return;
+      //   }
+      //   await readChunk();
+      // }
+
+      // await readChunk();
+      // /* Processing stream end */
+      // fetchSignals.current = fetchSignals.current.filter(
+      //   (signal) => signal !== signal
+      // );
+      // getThread(thread).then(async (thread) => {
+      //   await updateThread(thread);
+      // });
+      // setRecommendations(finalizedRecommendations);
     } catch (err) {
-      // Because we optimistaclly added the message to the messages array before, we need to remove it if the request fails
-      setMessages((prevMessages) =>
-        prevMessages.filter((message) => message.uuid !== messageUUID)
-      );
       if (err.name === "AbortError") {
         // Do nothing
       } else {
@@ -337,7 +329,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       }
     } finally {
       // stream ended
-      finishedTyping();
+      // finishedTyping();
     }
   };
 
@@ -361,33 +353,28 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     }
   };
 
-  const clearMessages = () => {
-    setMessages(setDefaultMessages);
-    setPendingMessage(setDefaultPendingMessage);
-  };
-
   return [
     messages,
     recommendations,
-    pendingMessage,
     askQuestion,
     {
-      clearMessages,
       currentThreadId,
       setCurrentThreadId: handleChangeThread,
       threads,
       deleteThread,
       updateThread,
+      typing,
     },
   ] as const;
 };
 
-export type Message = {
-  uuid: string; // Unique identifier for each message, to be used in the key prop
-  role: "user" | "assistant";
-  content: string;
-  typing: boolean;
-};
+// export type Message = {
+//   uuid: string; // Unique identifier for each message, to be used in the key prop
+//   role: "user" | "assistant";
+//   content: string;
+//   typing: boolean;
+// };
+export type Message = ReturnType<typeof useChat>["messages"][number];
 export type Thread = {
   _id: string;
   uuid?: string;

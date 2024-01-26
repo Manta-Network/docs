@@ -8,11 +8,10 @@ import { TextArea } from "../components/TextArea";
 
 import { Cross1Icon } from "./icons/Cross1Icon";
 import { TrashIcon } from "./icons/TrashIcon";
-import { GoIcon } from './icons/GoIcon';
+import { GoIcon } from "./icons/GoIcon";
 import ReactScrollToBottom from "./react-scroll-to-bottom/src/index";
 import styles from "./ChefGPTContainer.module.css";
 import "./react-scroll-to-bottom/src/styles.css";
-import { type Message as TMessage } from "../context/types";
 
 export const ChefGPTContainer = forwardRef(
   (
@@ -33,12 +32,12 @@ export const ChefGPTContainer = forwardRef(
     } = useChefGPTConsumer().config;
     useLockBodyScroll();
     const [input, setInput] = useState("");
-    const { askQuestion, messages, recommendations, pendingMessage, helpers } =
+    const { askQuestion, messages, typing, recommendations, helpers } =
       useChefGPTConsumer();
-    const isTyping = !!pendingMessage?.typing;
     const { threads, setCurrentThreadId, currentThreadId } = helpers || {};
-    const suggestedQuestions = recommendations.length ? recommendations : premadeQuestions
-    console.log(suggestedQuestions)
+    const suggestedQuestions = recommendations.length
+      ? recommendations
+      : premadeQuestions;
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (
       event
     ) => {
@@ -46,9 +45,6 @@ export const ChefGPTContainer = forwardRef(
     };
 
     const handleSubmitPremade = async (question: string) => {
-      setTimeout(() => {
-        scrollToBottom(false);
-      }, 100);
       await askQuestion?.(question);
     };
 
@@ -60,31 +56,16 @@ export const ChefGPTContainer = forwardRef(
         return alert("Please enter your question"); // TODO: replace with toast component
       }
       setInput("");
-      setTimeout(() => {
-        scrollToBottom(false);
-      }, 100);
       await askQuestion?.(input);
     };
-
-    const messagesRef = useRef<HTMLDivElement>(null);
-    const scrollToBottom = (checkIfAtBottom = true) => {
-      if (!messagesRef.current) return;
-
-      const { scrollHeight, scrollTop } = messagesRef.current as HTMLDivElement;
-      if (!checkIfAtBottom || scrollTop >= -50) {
-        messagesRef.current?.scrollTo(0, scrollHeight);
-      }
-    };
-
-    useEffect(() => {
-      scrollToBottom();
-    }, [pendingMessage?.content, messages.map((message) => message.content)]);
 
     const [sidebarOpen, setSidebarOpen] = useState(true);
     const [lastMouseDownElement, setLastMouseDownElement] =
       useState<HTMLElement | null>(null);
 
-    const messagesToRender = [...messages, isTyping && pendingMessage].filter(Boolean);
+    const lastMessageFromAssistant = useMemo(() => {
+      return messages[messages.length - 1]?.role === "assistant";
+    }, [messages.length, currentThreadId]);
 
     return (
       <div
@@ -278,14 +259,17 @@ export const ChefGPTContainer = forwardRef(
                 )}
                 initialScrollBehavior="smooth"
               >
-                {messagesToRender.map((message) => ((
+                {messages.map((message, i) => (
                   <Message
-                    key={message.uuid}
+                    key={message.id}
                     text={message.content !== "" ? message.content : undefined}
                     isUser={message.role === "user"}
                   />
-                )))}
-                {!isTyping &&
+                ))}
+                {typing && !lastMessageFromAssistant && (
+                  <Message key={"typing"} text="" isUser={false} />
+                )}
+                {!typing && (
                   <div
                     className={clsx(
                       styles.suggestionsContainer,
@@ -294,19 +278,18 @@ export const ChefGPTContainer = forwardRef(
                     )}
                   >
                     <div className={styles.tags}>
-                      {suggestedQuestions
-                        .map((question: string) => (
-                          <button
-                            className="button button--secondary button--block"
-                            onClick={() => handleSubmitPremade(question)}
-                            key={question}
-                          >
-                            {question}
-                          </button>
-                        ))}
+                      {suggestedQuestions.map((question: string) => (
+                        <button
+                          className="button button--secondary button--block"
+                          onClick={() => handleSubmitPremade(question)}
+                          key={question}
+                        >
+                          {question}
+                        </button>
+                      ))}
                     </div>
                   </div>
-                }
+                )}
               </ReactScrollToBottom>
               <div
                 style={{
@@ -338,19 +321,16 @@ export const ChefGPTContainer = forwardRef(
                     />
                     <button
                       type="submit"
-                      disabled={isTyping}
-                      className={clsx(
-                        "clean-btn button",
-                        styles.sendButton
-                      )}
+                      disabled={typing}
+                      className={clsx("clean-btn button", styles.sendButton)}
                     >
-                      {isTyping ?
+                      {typing ? (
                         <TypingDots />
-                        :
+                      ) : (
                         <div>
-                          <GoIcon style={{marginTop: "4px"}}/>
+                          <GoIcon style={{ marginTop: "4px" }} />
                         </div>
-                      }
+                      )}
                     </button>
                   </form>
                 </div>

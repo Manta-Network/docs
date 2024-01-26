@@ -11,6 +11,7 @@ export type ChefGPTContextType = {
   askQuestion: askQuestionFn | null;
   config: CookbookDocsBotConfig;
   helpers: ReturnType<typeof useChefGPT>[3] | null;
+  typing: boolean;
 };
 
 const defaultValue: ChefGPTContextType = {
@@ -20,6 +21,7 @@ const defaultValue: ChefGPTContextType = {
   askQuestion: null,
   config: CookbookDocsDefaultConfig,
   helpers: null,
+  typing: false,
 };
 export const ChefGPTContext = createContext<ChefGPTContextType>(defaultValue);
 export const ChefGPTProvider = ChefGPTContext.Provider;
