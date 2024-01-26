@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useMemo } from "react";
 import MDParser from "./MDParser";
 import styles from "./Message.module.css";
 import clsx from "clsx";
 import { useChefGPTConsumer } from "../context/index";
 
 export const TypingDots = () => (
-  <div className="flex" >
+  <div className="flex">
     <span className={styles.typingDot}>.</span>
     <span className={styles.typingDot}>.</span>
     <span className={styles.typingDot}>.</span>
@@ -14,13 +14,11 @@ export const TypingDots = () => (
 
 export const Message = ({
   text,
-  typing = false,
   isUser,
   className,
   messageTextClassName,
 }: {
   text: string | undefined;
-  typing?: boolean;
   isUser: boolean;
   className?: string;
   messageTextClassName?: string;
@@ -33,14 +31,12 @@ export const Message = ({
         width={40}
         height={40}
         style={{ borderRadius: "10px" }}
-        src={
-          isUser ? config.avatars.User : config.avatars.ChefGPT
-        }
+        src={isUser ? config.avatars.User : config.avatars.ChefGPT}
         alt="NFT icon"
       />
       {isUser ? (
         <div className={clsx(styles.messsageText, messageTextClassName)}>
-          <MDParser typing={typing} content={text} />
+          <MDParser content={text} />
         </div>
       ) : !text ? (
         <div className={clsx(styles.messsageText, messageTextClassName)}>
@@ -51,7 +47,7 @@ export const Message = ({
         </div>
       ) : (
         <div className={clsx(styles.messsageText, messageTextClassName)}>
-          <MDParser typing={typing} content={text} />
+          <MDParser content={text} />
         </div>
       )}
     </div>

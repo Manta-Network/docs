@@ -31,22 +31,23 @@
   flex-direction: column;
 }
 
-.readSection {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  
+.readSection__container {
+  height: calc(100% - 100px);
+  overflow: scroll;
+}
+
+.readSection {  
   --padding-top: 20px;
   --padding-bottom: 70px;
 
   flex-grow: 1;
   display: flex;
-  flex-direction: column-reverse;
-  max-width: 100%;
+  flex-direction: column;
   padding-bottom: var(--padding-bottom);
   padding-top: var(--padding-top);
   overflow-y: scroll;
   gap: 10px;
+  height: 100%;
   mask-image: linear-gradient(
     to bottom,
     transparent,
@@ -200,6 +201,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   border-right-style: solid;
   --tw-border-opacity: 1;
   border-right-color: var(--ifm-color-emphasis-200);
+  overflow: hidden;
 }
 
 .container__expanded {
@@ -232,7 +234,9 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   z-index: 10;
   width: 100%;
   height: max-content;
-  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-left: 20px;
+  padding-right: 20px;
+  /* border-top: 1px solid var(--ifm-color-emphasis-200); */
 }
 
 .suggestionsContainer>* {
@@ -242,11 +246,11 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
 .tags {
   --padding-left: 20px;
   --padding-right: 20px;
-  margin-top: 20px;
   position: relative;
+  flex-direction: column;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   width: 100%;
   row-gap: 8px;
   column-gap: 4px;
@@ -597,7 +601,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
 }
 
 .sidebarBottomContainer {
-  position: absolute;
+  margin-top: auto;
   bottom: 0px;
   box-sizing: border-box;
   width: 100%;
@@ -610,6 +614,7 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   padding-right: 14px;
   padding-top: 20px;
   padding-bottom: 20px;
+  background: var(--cookbook-modal-background);
 }
 
 .mainContentContainer {
