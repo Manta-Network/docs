@@ -35,17 +35,17 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
   const [messages, setMessages] = useState<Message[]>(setDefaultMessages);
 
   const setDefaultPendingMessage = () =>
-  ({
-    role: "assistant",
-    typing: false,
-    content: "",
-    uuid: uuidv4(),
-  } as const);
+    ({
+      role: "assistant",
+      typing: false,
+      content: "",
+      uuid: uuidv4(),
+    } as const);
 
   const [pendingMessage, setPendingMessage] = useState<Message>(
     setDefaultPendingMessage
   );
-  const [recommendations, setRecommendations] = useState([])
+  const [recommendations, setRecommendations] = useState([]);
   // Once the pending message is typed out, add it to the messages array and reset the pending message to default
   useEffect(() => {
     if (!pendingMessage.typing && pendingMessage.content.length > 0) {
@@ -196,7 +196,9 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
   const finishedTyping = useCallback(() => {
     // Set typing to false which will trigger the useEffect above
     // to add the pending message to the messages array
-    setTimeout(() => setPendingMessage((prevMessage) => ({ ...prevMessage, typing: false })));
+    setTimeout(() =>
+      setPendingMessage((prevMessage) => ({ ...prevMessage, typing: false }))
+    );
   }, []);
 
   /**
@@ -263,11 +265,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         ...(thread.uuid && { threadUUID: thread.uuid }), // uuid is added to threads created by anonymous users
       });
       fetchSignals.current.push(signal);
-      let recommendations = getRecommendations(body).catch((err) => {
-        console.error("Error getting recommendations", err);
-        return [];
-      });
-      const response = await fetch(`${apiBaseUrl}/chefgpt/new-message`, {
+      const newMessagePromise = fetch(`${apiBaseUrl}/chefgpt/new-message`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -279,7 +277,14 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         body,
         signal: signal.signal,
       });
-      let [finalizedRecommendations] = await Promise.all([recommendations])
+      const recommendationsPromise = getRecommendations(body).catch((err) => {
+        console.error("Error getting recommendations", err);
+        return [];
+      });
+      const [response, finalizedRecommendations] = await Promise.all([
+        newMessagePromise,
+        recommendationsPromise,
+      ]);
 
       if (!response.ok) {
         throw new Error(response.statusText);
@@ -318,7 +323,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       getThread(thread).then(async (thread) => {
         await updateThread(thread);
       });
-      setRecommendations(finalizedRecommendations)
+      setRecommendations(finalizedRecommendations);
     } catch (err) {
       // Because we optimistaclly added the message to the messages array before, we need to remove it if the request fails
       setMessages((prevMessages) =>
@@ -347,9 +352,14 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       priority: "high",
       credentials: "include",
       body,
-    }).then((res) => res.json())
-    return response.response;
-  }
+    }).then((res) => res.json());
+    const data = response.response;
+    if (typeof data === "string") {
+      return JSON.parse(data);
+    } else {
+      return data;
+    }
+  };
 
   const clearMessages = () => {
     setMessages(setDefaultMessages);

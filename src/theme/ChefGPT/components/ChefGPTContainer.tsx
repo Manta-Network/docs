@@ -277,7 +277,6 @@ export const ChefGPTContainer = forwardRef(
                   ui?.messagesContainer?.className
                 )}
                 initialScrollBehavior="smooth"
-                debug={true}
               >
                 {messagesToRender.map((message) => ((
                   <Message
