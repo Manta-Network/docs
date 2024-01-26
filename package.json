@@ -21,7 +21,6 @@
     "@docusaurus/plugin-client-redirects": "^2.3.1",
     "@docusaurus/preset-classic": "^2.3.1",
     "@mdx-js/react": "^1.6.21",
-    "ai": "^2.2.31",
     "clsx": "^1.1.1",
     "device-uuid": "^1.0.4",
     "docusaurus": "^1.14.7",
