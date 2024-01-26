@@ -263,7 +263,10 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         ...(thread.uuid && { threadUUID: thread.uuid }), // uuid is added to threads created by anonymous users
       });
       fetchSignals.current.push(signal);
-      let recommendations = getRecommendations(body)
+      let recommendations = getRecommendations(body).catch((err) => {
+        console.error("Error getting recommendations", err);
+        return [];
+      });
       const response = await fetch(`${apiBaseUrl}/chefgpt/new-message`, {
         method: "POST",
         headers: {
@@ -345,7 +348,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       credentials: "include",
       body,
     }).then((res) => res.json())
-    return JSON.parse(response.response) // error handling
+    return response.response;
   }
 
   const clearMessages = () => {
