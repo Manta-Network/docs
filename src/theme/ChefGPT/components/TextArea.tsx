@@ -55,6 +55,9 @@ export const TextArea = forwardRef(
       ) {
         e.preventDefault();
         (e.target as HTMLInputElement).form?.requestSubmit();
+        const el = ref.current;
+        if (!el) return;
+        el.style.height = "";
       }
     };
     // @ts-ignore
