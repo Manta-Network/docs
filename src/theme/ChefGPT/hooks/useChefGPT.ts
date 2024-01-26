@@ -83,7 +83,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
   };
   const updateThreads = async () => {
     return getThreads().then((threads) => {
-      setThreads(threads);
+      setThreads(threads.reverse());
     });
   };
   const updateThread = async (thread: Thread) => {

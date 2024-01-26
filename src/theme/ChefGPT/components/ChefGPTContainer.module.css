@@ -37,8 +37,8 @@
 }
 
 .readSection {  
-  --padding-top: 20px;
-  --padding-bottom: 70px;
+  --padding-top: 40px;
+  --padding-bottom: 100px;
 
   flex-grow: 1;
   display: flex;
@@ -159,7 +159,6 @@ console.log(["tw", css(tw`p-4.5 pl-0 pt-0 flex flex-col grow overflow-hidden`).j
   box-shadow: var(--cookbook-modal-shadow);
   margin: auto;
   margin-top: 30px;
-  position: relative;
 
   width: 100%;
   height: 100%;
