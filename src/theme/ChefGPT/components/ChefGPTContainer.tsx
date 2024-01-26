@@ -60,12 +60,20 @@ export const ChefGPTContainer = forwardRef(
     };
 
     const [sidebarOpen, setSidebarOpen] = useState(true);
+    const [textAreaHeight, setTextAreaHeight] = useState<number|null>(75);
     const [lastMouseDownElement, setLastMouseDownElement] =
       useState<HTMLElement | null>(null);
 
     const lastMessageFromAssistant = useMemo(() => {
       return messages[messages.length - 1]?.role === "assistant";
     }, [messages.length, currentThreadId]);
+
+    const writeSectionRef = useRef<HTMLFormElement>(null);
+    const handleTextAreaHeightChange = (newHeight: number) => {
+      if (!writeSectionRef.current) return;
+      setTextAreaHeight(writeSectionRef.current.clientHeight + 21); // 75 (default height) - 54 (height of textarea with 1 line) = 21
+    }
+    
 
     return (
       <div
@@ -257,6 +265,7 @@ export const ChefGPTContainer = forwardRef(
                   styles.readSection,
                   ui?.messagesContainer?.className
                 )}
+                style={textAreaHeight ? { "--padding-bottom": `${textAreaHeight}px` } : {}}
                 initialScrollBehavior="smooth"
               >
                 {messages.map((message, i) => (
@@ -299,6 +308,7 @@ export const ChefGPTContainer = forwardRef(
                   left: 0,
                   display: "flex",
                   flexDirection: "column",
+                  background: "var(--ifm-background-surface-color)"
                 }}
               >
                 <div className={styles.column}>
@@ -307,6 +317,7 @@ export const ChefGPTContainer = forwardRef(
                       styles.writeSection,
                       ui?.messageInputContainer?.className
                     )}
+                    ref={writeSectionRef}
                     onSubmit={handleSubmit}
                   >
                     <TextArea
@@ -316,6 +327,7 @@ export const ChefGPTContainer = forwardRef(
                       placeholder={messageInputPlaceholder}
                       value={input}
                       onChange={handleChange}
+                      onHeightChange={handleTextAreaHeightChange}
                       $withButton
                       dynamicHeight
                     />

@@ -6,9 +6,9 @@ import AutoHideFollowButton from './ScrollToBottom/AutoHideFollowButton';
 import Composer from './ScrollToBottom/Composer';
 import Panel from './ScrollToBottom/Panel';
 
-const BasicScrollToBottomCore = ({ children, className, followButtonClassName, scrollViewClassName }) => {
+const BasicScrollToBottomCore = ({ children, className, followButtonClassName, scrollViewClassName, style }) => {
   return (
-    <div className={classNames("react-scroll-to-bottom__BasicScrollToBottom", className)}>
+    <div className={classNames("react-scroll-to-bottom__BasicScrollToBottom", className)} style={style}>
       <Panel className={scrollViewClassName}>{children}</Panel>
       <AutoHideFollowButton className={followButtonClassName} />
     </div>
@@ -40,7 +40,8 @@ const BasicScrollToBottom = ({
   mode,
   nonce,
   scroller,
-  scrollViewClassName
+  scrollViewClassName,
+  style,
 }) => (
   <Composer
     checkInterval={checkInterval}
@@ -53,6 +54,7 @@ const BasicScrollToBottom = ({
   >
     <BasicScrollToBottomCore
       className={className}
+      style={style}
       followButtonClassName={followButtonClassName}
       scrollViewClassName={scrollViewClassName}
     >

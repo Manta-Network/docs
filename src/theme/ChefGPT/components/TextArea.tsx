@@ -9,11 +9,13 @@ export const TextArea = forwardRef(
     className,
     onKeyPress,
     onChange: _onChange,
+    onHeightChange,
     dynamicHeight = false,
     ...props
   }: {
     className?: string;
     dynamicHeight?: boolean;
+    onHeightChange?: (height: number) => void;
     onKeyPress?: (e: KeyboardEvent<HTMLAreaElement>) => void;
   } & React.ComponentProps<typeof RadixUITextArea>) => {
     const ref = useRef<HTMLTextAreaElement>(null);
@@ -23,11 +25,12 @@ export const TextArea = forwardRef(
     const updateHeight = () => {
       const el = ref.current;
       if (!el) return;
-      console.log("updateHeight", el.style.height, el.scrollHeight);
       el.style.height = "";
-      console.log("updateHeight2", el.style.height, el.scrollHeight);
-      el.style.height = el.scrollHeight + 2 + "px";
-      console.log("updateHeight3", el.style.height, el.scrollHeight);
+      const newHeight = el.scrollHeight + 2;
+      el.style.height = newHeight + "px";
+      if (onHeightChange) {
+        onHeightChange(newHeight);
+      }
     };
     const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       if (_onChange) {
