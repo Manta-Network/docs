@@ -18,21 +18,26 @@ export const ChefGPT = () => {
   const { siteConfig } = useDocusaurusContext();
   if (!(CookbookDocsConfigKey in siteConfig.themeConfig)) {
     throw new Error(
-      `Please add the ${CookbookDocsConfigKey} key to the "themeConfig" in docusaurus.config.js`,
+      `Please add the ${CookbookDocsConfigKey} key to the "themeConfig" in docusaurus.config.js`
     );
   }
-  const config = mergeConfig(siteConfig.themeConfig[CookbookDocsConfigKey] as CookbookDocsBotConfig) as CookbookDocsBotConfig;
+  const config = mergeConfig(
+    siteConfig.themeConfig[CookbookDocsConfigKey] as CookbookDocsBotConfig
+  ) as CookbookDocsBotConfig;
 
   const [messages, recommendations, askQuestion, helpers] = useChefGPT(config);
 
   const handleSelectionChange = useCallback(() => {
     if (!config.features?.enableExplainSnippet) return;
-    
-    const selection = window?.getSelection()?.toString() || null;
+
+    const selection =
+      (typeof window !== "undefined" && window?.getSelection()?.toString()) ||
+      null;
     setTextSelected(selection);
   }, []);
-  useEventListener(window?.document, "selectionchange", handleSelectionChange);
-  const isAnalyzeMode =  !!config.features?.enableExplainSnippet && !!textSelected && !modalOpen;
+  useEventListener(typeof window !== "undefined" && window?.document, "selectionchange", handleSelectionChange);
+  const isAnalyzeMode =
+    !!config.features?.enableExplainSnippet && !!textSelected && !modalOpen;
 
   const handleAnalyzeSnippet = (snippet: string) => {
     if (!askQuestion) return;
@@ -54,7 +59,16 @@ export const ChefGPT = () => {
   };
 
   return (
-    <ChefGPTProvider value={{ askQuestion, messages, recommendations, config, helpers, typing: helpers?.typing }}>
+    <ChefGPTProvider
+      value={{
+        askQuestion,
+        messages,
+        recommendations,
+        config,
+        helpers,
+        typing: helpers?.typing,
+      }}
+    >
       <button
         onClick={handleOpen}
         className={clsx(
@@ -65,15 +79,13 @@ export const ChefGPT = () => {
             "button--secondary": !isAnalyzeMode,
             [clsx("button--success", styles.openModalButtonActive)]:
               isAnalyzeMode,
-          },
+          }
         )}
       >
         {textSelected ? "Explain" : "ChefGPT"}
       </button>
 
-      {modalOpen && (
-        <ChefGPTContainer onClose={handleClose} />
-      )}
+      {modalOpen && <ChefGPTContainer onClose={handleClose} />}
     </ChefGPTProvider>
   );
 };
