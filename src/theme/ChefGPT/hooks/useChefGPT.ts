@@ -261,7 +261,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
           },
         }
       );
-      const finalizedRecommendations = await getRecommendations(body).catch((err) => {
+      const finalizedRecommendations = await getRecommendations(JSON.stringify(body)).catch((err) => {
         console.error("Error getting recommendations", err);
         return [];
       });
