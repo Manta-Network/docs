@@ -45,6 +45,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
   const [pendingMessage, setPendingMessage] = useState<Message>(
     setDefaultPendingMessage
   );
+  const [recommendations, setRecommendations] = useState([])
   // Once the pending message is typed out, add it to the messages array and reset the pending message to default
   useEffect(() => {
     if (!pendingMessage.typing && pendingMessage.content.length > 0) {
@@ -264,7 +265,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         ...(thread.uuid && { threadUUID: thread.uuid }), // uuid is added to threads created by anonymous users
       });
       fetchSignals.current.push(signal);
-      getRecommendations(question, body, signal)
+      let recommendations = getRecommendations(body)
       const response = await fetch(`${apiBaseUrl}/chefgpt/new-message`, {
         method: "POST",
         headers: {
@@ -277,6 +278,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
         body,
         signal: signal.signal,
       });
+      let [finalizedRecommendations] = await Promise.all([recommendations])
 
       if (!response.ok) {
         throw new Error(response.statusText);
@@ -309,6 +311,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       getThread(thread).then(async (thread) => {
         await updateThread(thread);
       });
+      setRecommendations(finalizedRecommendations)
     } catch (err) {
       // Because we optimistaclly added the message to the messages array before, we need to remove it if the request fails
       setMessages((prevMessages) =>
@@ -326,7 +329,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
     }
   };
 
-  const getRecommendations = async (body, signal) => {
+  const getRecommendations = async (body) => {
     const response = await fetch(`${apiBaseUrl}/chefgpt/get-recommendations`, {
       method: "POST",
       headers: {
@@ -337,9 +340,8 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
       priority: "high",
       credentials: "include",
       body,
-      signal: signal.signal,
-    });
-    console.log(response)
+    }).then((res) => res.json())
+    return JSON.parse(response.response) // error handling
   }
 
   const clearMessages = () => {
@@ -349,6 +351,7 @@ export const useChefGPT = (config: CookbookDocsBotConfig) => {
 
   return [
     messages,
+    recommendations,
     pendingMessage,
     askQuestion,
     {

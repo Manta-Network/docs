@@ -6,6 +6,7 @@ import { useChefGPT } from "../hooks/useChefGPT";
 
 export type ChefGPTContextType = {
   messages: Message[];
+  recommendations: string[];
   pendingMessage: Message | null;
   askQuestion: askQuestionFn | null;
   config: CookbookDocsBotConfig;
@@ -14,6 +15,7 @@ export type ChefGPTContextType = {
 
 const defaultValue: ChefGPTContextType = {
   messages: [],
+  recommendations: [],
   pendingMessage: null,
   askQuestion: null,
   config: CookbookDocsDefaultConfig,

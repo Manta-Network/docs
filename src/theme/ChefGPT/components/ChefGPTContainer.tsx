@@ -31,11 +31,12 @@ export const ChefGPTContainer = forwardRef(
     } = useChefGPTConsumer().config;
     useLockBodyScroll();
     const [input, setInput] = useState("");
-    const { askQuestion, messages, pendingMessage, helpers } =
+    const { askQuestion, messages, recommendations, pendingMessage, helpers } =
       useChefGPTConsumer();
     const isTyping = !!pendingMessage?.typing;
     const { threads, setCurrentThreadId, currentThreadId } = helpers || {};
-
+    const suggestedQuestions = recommendations.length ? recommendations : premadeQuestions
+    console.log(suggestedQuestions)
     const handleChange: React.ChangeEventHandler<HTMLInputElement> = (
       event
     ) => {
@@ -257,7 +258,7 @@ export const ChefGPTContainer = forwardRef(
                     )}
                   >
                     <div className={styles.tags}>
-                      {premadeQuestions
+                      {suggestedQuestions
                         .map((question: string) => (
                           <button
                             className="button button--secondary button--block"

@@ -23,7 +23,7 @@ export const ChefGPT = () => {
   }
   const config = mergeConfig(siteConfig.themeConfig[CookbookDocsConfigKey] as CookbookDocsBotConfig) as CookbookDocsBotConfig;
 
-  const [messages, pendingMessage, askQuestion, helpers] = useChefGPT(config);
+  const [messages, recommendations, pendingMessage, askQuestion, helpers] = useChefGPT(config);
 
   const handleSelectionChange = useCallback(() => {
     if (!config.features?.enableExplainSnippet) return;
@@ -54,7 +54,7 @@ export const ChefGPT = () => {
   };
 
   return (
-    <ChefGPTProvider value={{ askQuestion, messages, pendingMessage, config, helpers }}>
+    <ChefGPTProvider value={{ askQuestion, messages, recommendations, pendingMessage, config, helpers }}>
       <button
         onClick={handleOpen}
         className={clsx(
