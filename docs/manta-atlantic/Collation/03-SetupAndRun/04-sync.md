@@ -34,7 +34,10 @@ if you cannot wait for the recommended sync mechanism to complete, you may obtai
 - verify that the node is syncing correctly
 - wait for both parachain and relay-chain idle messages to appear in the logs
 
-fast-sync commands (requires [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)):
+list available snapshot date are
+* `2024-01-28UTC` (latest)
+* `2023-12-05UTC`
+
 ```bash
 #!/bin/bash
 
@@ -68,7 +71,3 @@ sudo -H -u manta bash -c "basename $(ls "${lib_path}"/chains/manta/db/full/MANIF
 sudo -H -u manta bash -c "basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/MANIFEST-*) > \"${lib_path}\"/polkadot/chains/polkadot/db/full/CURRENT"
 sudo -H -u manta bash -c "basename $(ls "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/MANIFEST-*) > \"${lib_path}\"/polkadot/chains/polkadot/db/full/parachains/db/CURRENT"
 ```
-
-list available snapshot date are
-* `2024-01-28UTC` (latest)
-* `2023-12-05UTC`
