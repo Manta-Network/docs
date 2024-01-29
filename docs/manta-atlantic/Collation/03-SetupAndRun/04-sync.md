@@ -34,7 +34,11 @@ if you cannot wait for the recommended sync mechanism to complete, you may obtai
 - verify that the node is syncing correctly
 - wait for both parachain and relay-chain idle messages to appear in the logs
 
-fast-sync commands (requires [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)):
+list available snapshot date are
+* `2024-01-28UTC` (latest)
+* `2023-12-05UTC`
+
+fast-sync commands (requires [zstd](https://github.com/facebook/zstd)):
 ```bash
 #!/bin/bash
 
@@ -46,10 +50,11 @@ sudo systemctl stop manta.service
 
 # sync manta blockchain database
 lib_path="/var/lib/substrate" # change this accordingly
+snapshot_date="2024-01-28UTC" # change this accordingly
 identity="$(sudo -H -u manta cat "${lib_path}"/chains/manta/db/full/IDENTITY)"
 echo "identity: ${identity}"
 sudo -H -u manta rm -r "${lib_path}"/chains/manta/db/full
-curl -L https://manta-polkadot.s3.amazonaws.com/backup/2023-12-05UTC/manta.tar.zst | sudo -H -u manta tar --zstd -C "${lib_path}"/chains/manta -xv
+curl -L https://manta-polkadot.s3.amazonaws.com/backup/"${snapshot_date}"/manta.tar.zst | sudo -H -u manta tar --zstd -C "${lib_path}"/chains/manta -xv
 echo "${identity}" | sudo -H -u manta tee "${lib_path}"/chains/manta/db/full/IDENTITY
 
 # sync polkadot blockchain database
@@ -58,7 +63,7 @@ identity_para="$(sudo -H -u manta cat "${lib_path}"/polkadot/chains/polkadot/db/
 echo "identity_relay: ${identity_relay}"
 echo "identity_para: ${identity_para}"
 sudo -H -u manta rm -r "${lib_path}"/polkadot/chains/polkadot/db/full
-curl -L https://manta-polkadot.s3.amazonaws.com/backup/2023-12-05UTC/manta-polkadot.tar.zst | sudo -H -u manta tar --zstd -C "${lib_path}"/polkadot/chains/polkadot -xv
+curl -L https://manta-polkadot.s3.amazonaws.com/backup/"${snapshot_date}"/manta-polkadot.tar.zst | sudo -H -u manta tar --zstd -C "${lib_path}"/polkadot/chains/polkadot -xv
 echo "${identity_relay}" | sudo -H -u manta tee "${lib_path}"/polkadot/chains/polkadot/db/full/IDENTITY
 echo "${identity_para}" | sudo -H -u manta tee "${lib_path}"/polkadot/chains/polkadot/db/full/parachains/db/IDENTITY
 

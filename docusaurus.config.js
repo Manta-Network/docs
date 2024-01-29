@@ -15,6 +15,41 @@ module.exports = {
   organizationName: 'Manta-Network', // github org name.
   projectName: 'docs', // repo name.
   themeConfig: {
+    cookbookDocsBot: {
+      features: {
+        enableExplainSnippet: true,
+      },
+      dataSources: [
+        {
+          name: "Manta",
+          hostname: "https://docs.manta.network",
+        }
+      ],
+      greetingMessage:
+        "Hi! Ask me anything about Manta. Here are some questions to get started.",
+      explainPromptTemplate: "Could you please elaborate on the content within the specified section from the Manta Docs? The section I'm referring to is:\n```\n$1\n```\n\nI'm seeking a comprehensive explanation to better understand the nuances, procedures, or concepts outlined in this particular segment. Your clarification will greatly assist in grasping the intricacies of the topic at hand.",
+      dialogTitle: "Ask Cookbook",
+      suggestions: [
+        "What's Manta?",
+        "How do Manta Pacific and Atlantic Differ?",
+        "How do I deploy to Manta Pacific?",
+      ],
+      messageInputPlaceholder:
+        "Ask anything about Manta!",
+      ui: {
+        modalContainer: {
+          width: "1000px",
+          height: "800px",
+          background: "var(--ifm-background-surface-color)",
+          className: "chefgpt-modal-container",
+        },
+      },
+      avatars: {
+        ChefGPT: "https://docs.manta.network/img/manta2.png",
+        User: "https://cookbook.dev/img/Richard.png",
+      },
+      apiBaseUrl: "http://localhost:5001",
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -165,7 +200,6 @@ module.exports = {
       },
     ],
     "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin",
-    require.resolve('./webpackPlugin.js'),
   ],
   i18n: {
     defaultLocale: 'en',
