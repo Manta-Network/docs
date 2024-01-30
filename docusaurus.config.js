@@ -27,7 +27,7 @@ module.exports = {
       ],
       greetingMessage:
         "Hi! Ask me anything about Manta. Here are some questions to get started.",
-      explainPromptTemplate: "Could you please elaborate on the content within the specified section from the Manta Docs? The section I'm referring to is:\n```\n$1\n```\n\nI'm seeking a comprehensive explanation to better understand the nuances, procedures, or concepts outlined in this particular segment. Your clarification will greatly assist in grasping the intricacies of the topic at hand.",
+      explainPromptTemplate: "Could you please elaborate on the content within the specified section? The section I'm referring to is:\n```\n$1\n```\n\nI'm seeking a comprehensive explanation to better understand the nuances, procedures, or concepts outlined in this particular segment. Your clarification will greatly assist in grasping the intricacies of the topic at hand.",
       dialogTitle: "Ask Cookbook",
       suggestions: [
         "What's Manta?",
