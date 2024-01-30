@@ -31,7 +31,7 @@ module.exports = {
       dialogTitle: "Ask Cookbook",
       suggestions: [
         "What's Manta?",
-        "How do Manta Pacific and Atlantic Differ?",
+        "How are Manta Pacific and Atlantic Different?",
         "How do I deploy to Manta Pacific?",
       ],
       messageInputPlaceholder:
