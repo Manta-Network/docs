@@ -53,7 +53,7 @@ const web3Name = createWeb3Name();
 You can get address from domain name with a single request:
 
 ```javascript
-const address = await web3name.getAddress("spaceid.manta");
+const address = await web3name.getAddress("manta.manta");
 // expect: '0xb5932a6b7d50a966aec6c74c97385412fb497540'
 
 const address = await web3name.getAddress("bts_official.lens");
@@ -106,11 +106,11 @@ const name = await web3name.getDomainName({
 
 ## 4. Record
 
-Domain text records can be fetched by providing domain name and the key. For example, the avatar record of spaceid.manta is returned from this method given key name avatar:
+Domain text records can be fetched by providing domain name and the key. For example, the avatar record of manta.manta is returned from this method given key name avatar:
 
 ```javascript
 const record = await sid.getDomainRecord({
-    name: "spaceid.manta",
+    name: "manta.manta",
     key: "avatar",
 });
 ```
