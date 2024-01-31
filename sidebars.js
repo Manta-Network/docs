@@ -184,7 +184,7 @@ module.exports = {
                 },
                 {
                     type: "doc",
-                    label: "Space ID Name Service",
+                    label: "SPACE ID Name Service and SPACE ID",
                     id: "manta-pacific/Space ID",
                 },
             ],
