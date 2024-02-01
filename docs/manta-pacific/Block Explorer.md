@@ -17,6 +17,8 @@ Here are the 4 Explorers currently supporting Manta Pacific:
 
 - Link: [Manta Pacific Block Explorer](https://pacific-explorer.manta.network/)
 
+- Link: [Manta Pacific OKLINK Block Explorer](https://www.oklink.com/manta)
+
 **Socialscan:**
 
 - Link: [Manta Socialscan](https://manta.socialscan.io/)
