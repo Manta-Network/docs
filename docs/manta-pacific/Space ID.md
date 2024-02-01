@@ -62,17 +62,6 @@ const address = await web3name.getAddress("beresnev.crypto");
 const address = await web3name.getAddress("registry.manta");
 ```
 
-### Multichain address resolution
-
-Domain resolution for other chains can be provided by adding coinType param to getAddress().
-
-```javascript
-import { convertEVMChainIdToCoinType } from "@ensdomains/address-encoder";
-const address = await web3name.getAddress("gnome.manta", {
-    coinType: convertEVMChainIdToCoinType(1),
-});
-```
-
 ## 3. Resolve an address
 
 There are optional parameters in the method to select your target chain or TLD (top-level Domain).
