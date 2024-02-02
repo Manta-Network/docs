@@ -1,4 +1,4 @@
-One account on Calamari Network can be
+One account on Manta Network can be
 - A delegator
 - A collator candidate
 - Not participating in staking

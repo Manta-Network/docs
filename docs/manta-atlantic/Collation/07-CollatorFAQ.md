@@ -11,7 +11,7 @@ A: Come join us on the Manta & Calamari Network Discord Community in the #collat
 A: There are two networks, each will require dedicated hardware.
 
 - Manta Network - production network on Polkadot (live)
-- Calamari Network - canary network on Kusama
+- Calamari Network - canary network on Kusama (live)
 
 ### Q: What are Nimbus keys?
 A: A Nimbus key is a type of session key. It is your node’s identification to the block production/verification method on the network, which is called Nimbus. It does NOT store or access funds. The node must always have access to this key in order to collate, so it is a hot key stored on the filesystem. You should keep a backup of this key in a safe - offline - location to be able to transfer your node’s identity to another device should you need to. Find more about nimbus session keys in the docs.
