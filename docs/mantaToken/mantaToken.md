@@ -22,7 +22,7 @@ Manta Network offers an unrivaled environment to deliver on the scalability dema
 | Decimals              | 18                                          |
 | MANTA (Manta Pacific) | 0x95CeF13441Be50d20cA4558CC0a27B601aC544E5  |
 | MANTA (BSC)           | 0x8581cc815e40615998f4561f3e24e68066293595  |
-| MANTA (MoonBeam)      | 0xfFFffFFf7D3875460d4509eb8d0362c611B4E841  |
+| xcMANTA (MoonBeam)      | 0xfFFffFFf7D3875460d4509eb8d0362c611B4E841  |
 | Chain                 | Manta Pacific                               |
 
 -   The total supply of $MANTA at Genesis: 1,000,000,000.
