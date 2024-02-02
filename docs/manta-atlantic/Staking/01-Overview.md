@@ -21,7 +21,7 @@ All you need is some MANTA and [our delegation dApp](Delegation/dApp%20Overview)
 2. Become a `Collator Runner`
 
 This path needs technical experience and dedicated computer hardware to run a Manta blockchain node on in addition to a larger amount of MANTA than 1. and can bring higher rewards.
-You can find more info about this path [in the collator section](Collation/Overview)
+You can find more info about this path [in the collator section](../Collation/Overview)
 
 ## What is DPoS?
 ### In contrast to other PoS Networks

@@ -1,4 +1,4 @@
-You can find the dApp at [app.manta.network/#/calamari/stake](https://app.manta.network/#/calamari/stake)
+You can find the dApp at [app.manta.network/manta/stake](https://app.manta.network/manta/stake)
 
 You'll notice it has the following elements:
 ## Header
@@ -15,7 +15,7 @@ You'll notice it has the following elements:
 
 ## Staking Section
 
-![alt_text](images/staking.png)
+![alt_text](images/active_collator.png)
 
 1. Collator name and address information
 2. Amount of bonded MANTA to this collator
@@ -28,7 +28,7 @@ You'll notice it has the following elements:
 7. Unstake from this collator (if applicable)
 
 ## Collator section
-![alt_text](images/collator.png)
+![alt_text](images/select_collator.png)
 
 1. Find a collator
 2. Filter out collators by Active vs Inactive

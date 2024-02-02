@@ -6,7 +6,7 @@ When visiting the Staking page for the first time, you will see a pop up appear.
 
 Now that you’re connected to the staking dapp, click on the **Start Staking** button
 
-![](images/start_staking.png)
+![](images/head.png)
 
 Choose your collator and click Stake
 
