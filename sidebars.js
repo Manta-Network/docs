@@ -182,6 +182,11 @@ module.exports = {
                     label: "RedStone Oracles",
                     id: "manta-pacific/RedStone Oracles",
                 },
+                {
+                    type: "doc",
+                    label: "SPACE ID Name Service and SPACE ID",
+                    id: "manta-pacific/Space ID",
+                },
             ],
         },
         {
