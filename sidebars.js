@@ -153,6 +153,22 @@ module.exports = {
                     ],
                 },
                 {
+                    type: "category",
+                    label: "Indexers",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Overview",
+                            id: "indexers/overview",
+                        },
+                        {
+                            type: "doc",
+                            label: "SubQuery",
+                            id: "indexers/subquery",
+                        },
+                    ],
+                },
+                {
                     type: "doc",
                     label: "Manta Pacific Roadmap",
                     id: "concepts/Roadmap",
