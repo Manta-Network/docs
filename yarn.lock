@@ -2589,10 +2589,10 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
-"@cookbookdev/docusaurus-chefgpt@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@cookbookdev/docusaurus-chefgpt/-/docusaurus-chefgpt-1.0.11.tgz#37d05fb0dfbb30d54ad2754d9949f757160ab2c6"
-  integrity sha512-vw+iNGBSnVRBq+/8pTW6XM+PR508YArVAWdoCPBc1QcfIuh5o6GYDi5LmuaCM2y+mkOFfGay0avHjZF3UxXxuw==
+"@cookbookdev/docusaurus-chefgpt@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@cookbookdev/docusaurus-chefgpt/-/docusaurus-chefgpt-1.1.0.tgz#23a5de20882b07e64895e77187d9fafc274bdbeb"
+  integrity sha512-u92oL8Y8M9pegc2NWwjxPqZGJxr8aobXBnLSgURzFSSG33wwx+Y1Zaj5U6a6Lgh0iyCfPuoXkWS2ayAVgvI+RA==
   dependencies:
     "@docusaurus/theme-classic" "2.4.3"
     "@docusaurus/theme-common" "2.4.3"

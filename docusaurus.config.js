@@ -159,6 +159,8 @@ module.exports = {
         User: "https://cookbook.dev/img/Richard.png",
       },
       apiBaseUrl: "https://simple-web3-api-staging.herokuapp.com",
+      // It's a public api key, it's safe to commit it
+      apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWMxOGM1MzA1MjA1MDZmZmEwMDhjMmUiLCJpYXQiOjE3MDcxODMxODcsImV4cCI6MjAyMjc1OTE4N30.diwQUey2v9RLd7MWuzI4Uw4ayhLKaditIfa062Sc2YQ"
     },
   },
   presets: [
