@@ -184,6 +184,11 @@ module.exports = {
                 },
                 {
                     type: "doc",
+                    label: "Supra Oracles",
+                    id: "manta-pacific/Supra Oracles",
+                },
+                {
+                    type: "doc",
                     label: "SPACE ID Name Service and SPACE ID",
                     id: "manta-pacific/Space ID",
                 },
