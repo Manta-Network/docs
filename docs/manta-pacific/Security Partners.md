@@ -23,7 +23,7 @@ Offerings:
 
 ## Salus Security
 
-Website:https://salusec.io
+Website: https://salusec.io
 
 Mail: support@salusec.io
 
@@ -53,14 +53,14 @@ Offerings:
 
 -   Up to 20% discount on all auditing services.
 -   1 month access to QuillAI (AI-powered auditing tool).
-    -   Free integration of QuillCheck (token due diligence tool).
-    -   Priority audit service (within a week).
+-   Free integration of QuillCheck (token due diligence tool).
+-   Priority audit service (within a week).
 
 ## AuditOne
 
 Website: https://www.auditone.io
 
-Mail:helen@auditone.io
+Mail: helen@auditone.io
 
 Offerings:
 
@@ -90,9 +90,9 @@ Offerings:
 
 ## Scalebit
 
-Website:contact@scalebit.xyz
+Website: contact@scalebit.xyz
 
-Mail:contact@scalebit.xyz
+Mail: contact@scalebit.xyz
 
 Offerings:
 
@@ -100,9 +100,9 @@ Offerings:
 
 ## Oxorio
 
-Website:https://oxor.io
+Website: https://oxor.io
 
-Mail:wei@oxor.io
+Mail: wei@oxor.io
 
 Offerings:
 
@@ -111,7 +111,7 @@ Offerings:
 ## Secure3
 
 Website: https://secure3.io
-Mail:audit@secure3.io
+Mail: audit@secure3.io
 
 Offerings:
 
@@ -119,9 +119,9 @@ Offerings:
 
 ## Sherlock
 
-Website:https://www.sherlock.xyz
+Website: https://www.sherlock.xyz
 
-Mail:dan@sherlock.xyz
+Mail: dan@sherlock.xyz
 
 Offerings:
 
