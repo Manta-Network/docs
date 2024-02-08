@@ -192,6 +192,11 @@ module.exports = {
                     label: "SPACE ID Name Service and SPACE ID",
                     id: "manta-pacific/Space ID",
                 },
+                {
+                    type: "doc",
+                    label: "Security Partners",
+                    id: "manta-pacific/Security Partners",
+                },
             ],
         },
         {
