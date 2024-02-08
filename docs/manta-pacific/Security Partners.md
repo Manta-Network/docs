@@ -111,6 +111,7 @@ Offerings:
 ## Secure3
 
 Website: https://secure3.io
+
 Mail: audit@secure3.io
 
 Offerings:
