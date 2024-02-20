@@ -1,129 +1,372 @@
 # Security Partners
 
-## Veridise
+Meet with our official security partners and reach out to them for benefiting their special offers to our ecosystem.
 
-Website: https://veridise.com
+<div style={{'display':'flex','width':'100%','color':'balck','font-size':'16px','font-weight': '600'
+  ,'border-bottom':'1px solid rgba(0, 0, 0, 0.20)','padding-top':'12px','padding-bottom':'16px'}}>
+  <div style={{'margin-right':'58px'}}>
+    Service Provider
+  </div>
+  <div>Offerings</div>
+</div>
 
-Mail: auditing@veridise.com
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Veridise" src="/img/manta-pacific/Veridise.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Veridise</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://veridise.com" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:auditing@veridise.com' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-Offerings:
+  <div style={{'display':'flex','font-size':'14px'}}>
+    <strong>10%</strong>&nbsp;
+    discount on all auditing services.
+  </div>
+</div>
 
--   10% discount on all auditing services.
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Hacken" src="/img/manta-pacific/Hacken.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Hacken</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://hacken.io" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:v.herashchenko@hacken.io' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-## Hacken
+   <div style={{'display':'flex','flex-direction':'column','font-size':'14px'}}>
+   <span>
+  Up to &nbsp;<strong>30%</strong>&nbsp; discount on all auditing services.
+   </span>
+    <span>
+    Priority line: start within &nbsp;<strong>5-15</strong>&nbsp; business days.
+   </span>
+  </div>
+</div>
 
-Website: https://hacken.io
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Salus Security" src="/img/manta-pacific/Salus Security.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Salus Security</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://salusec.io" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:support@salusec.io' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-Mail: v.herashchenko@hacken.io
+   <div style={{'display':'flex','flex-direction':'column','font-size':'14px'}}>
+   <span>
+   Solidity Audit Discount Credit of &nbsp;<strong>$10,000</strong>. (T&C* Redeemable up to 10%)
+   </span>
+    <span>
+    Web3 Pentest Discount Credit of &nbsp;<strong>$3000</strong>. (T&C* Redeemable up to 10%)
+   </span>
+   <span>
+   <strong>Free</strong>&nbsp; one-time zkAPP Implementation Advisory.
+   </span>
+  </div>
+</div>
 
-Offerings:
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Certik" src="/img/manta-pacific/Certik.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Certik</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://www.certik.com" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:nurtilek.taalaibekov@certik.com' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
--   Up to 30% discount on all auditing services.
--   Priority line: start within 5-15 business days.
+   <div style={{'display':'flex','font-size':'14px'}}>
+  Up to &nbsp;<strong>20%</strong>&nbsp; discount on all auditing services.
+  </div>
+</div>
 
-## Salus Security
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="QuillAudits" src="/img/manta-pacific/QuillAudits.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>QuillAudits</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://www.quillaudits.com/smart-contract-audit" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:audits@quillhash.com' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-Website: https://salusec.io
+   <div style={{'display':'flex','flex-direction':'column','font-size':'14px'}}>
+   <span>
+   Up to <strong>20%</strong>&nbsp; discount on all auditing services.
+   </span>
+  <span>
+  <strong>1 month</strong>&nbsp; access to QuillAI (AI-powered auditing tool).
+  </span>
+  <span>
+  <strong>Free</strong>&nbsp; integration of QuillCheck (token due diligence tool).
+  </span>
+  <span>
+  <strong>Priority</strong>&nbsp; audit service (within a week).
+  </span>
+  </div>
+</div>
 
-Mail: support@salusec.io
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="AuditOne" src="/img/manta-pacific/AuditOne.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>AuditOne</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://www.auditone.io" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:helen@auditone.io' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-Offerings:
+  <div style={{'display':'flex','font-size':'14px'}}>
+  Up to &nbsp;<strong>30%</strong>&nbsp; discount on all auditing services.
+  </div>
+</div>
 
--   Solidity Audit Discount Credit of $10,000. (T&C\* Redeemable up to 10%)
--   Web3 Pentest Discount Credit of $3000. (T&C\* Redeemable up to 10%)
--   Free one-time zkAPP Implementation Advisory.
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="HackenProof" src="/img/manta-pacific/HackenProof.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>HackenProof</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://hackenproof.com" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:e.fedotova@hackenproof.com' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-## Certik
+   <div style={{'display':'flex','flex-direction':'column','font-size':'14px'}}>
+  <span>
+  <strong>Free</strong>&nbsp; hosting and up to &nbsp;<strong>30%</strong>&nbsp; discount on bug bounty services.
+  </span>
+  <span>
+  Up to &nbsp;<strong>30%</strong>&nbsp; discount hosting fee on crowdsourced auditing services.
+  </span>
+  </div>
+</div>
 
-Website: https://www.certik.com
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Blaize Security" src="/img/manta-pacific/Blaize Security.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Blaize Security</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://blaize.tech" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:pavel.g@blaize.tech' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-Mail: nurtilek.taalaibekov@certik.com
+  <div style={{'display':'flex','flex-direction':'column','font-size':'14px'}}>
+  <span>
+  Up to &nbsp;<strong>30%</strong>&nbsp; discount on all auditing services.
+  </span>
+  <span>
+  <strong>Priority</strong>&nbsp; queue for the start scheduling.
+  </span>
+  </div>
+</div>
 
-Offerings:
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Scalebit" src="/img/manta-pacific/Scalebit.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Scalebit</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://scalebit.xyz/" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:contact@scalebit.xyz' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
--   Up to 20% discount on all auditing services.
+  <div style={{'display':'flex','font-size':'14px'}}>
+  Up to &nbsp;<strong>30%</strong>&nbsp; discount on all auditing services.
+  </div>
+</div>
 
-## QuillAudits
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Oxorio" src="/img/manta-pacific/Oxorio.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Oxorio</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://oxor.io" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:wei@oxor.io' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-Website: https://www.quillaudits.com/smart-contract-audit
+  <div style={{'display':'flex','font-size':'14px'}}>
+    <strong>10%</strong>&nbsp;
+    discount on all auditing services.
+  </div>
+</div>
 
-Mail: audits@quillhash.com
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px','border-bottom':'1px solid rgba(0, 0, 0, 0.10)'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Secure3" src="/img/manta-pacific/Secure3.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Secure3</div>
+        <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://secure3.io" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:audit@secure3.io' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-Offerings:
+  <div style={{'display':'flex','font-size':'14px'}}>
+    <strong>10%</strong>&nbsp;
+    discount on all auditing services.
+  </div>
+</div>
 
--   Up to 20% discount on all auditing services.
--   1 month access to QuillAI (AI-powered auditing tool).
--   Free integration of QuillCheck (token due diligence tool).
--   Priority audit service (within a week).
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px'}}>
+  <div style={{'display':'flex','margin-right':'58px'}}>
+    <img alt="Sherlock" src="/img/manta-pacific/Sherlock.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>Sherlock</div>
+      <div style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://www.sherlock.xyz" style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','cursor':'pointer'}}>
+          <span>
+            Website
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+        <a href='mailto:dan@sherlock.xyz' style={{'font-family':'Red Hat Text','color':'black','display':'flex','align-items':'center','margin-left':'16px','cursor':'pointer'}}>
+          <span>
+            Mail
+          </span>
+          <img src="/img/manta-pacific/arrow.svg" style={{'margin-left':'8px','padding-top':'2px'}} />
+        </a>
+      </div>
+    </div>
+  </div>
 
-## AuditOne
-
-Website: https://www.auditone.io
-
-Mail: helen@auditone.io
-
-Offerings:
-
--   Up to 30% discount on all auditing services.
-
-## HackenProof
-
-Website: https://hackenproof.com
-
-Mail: e.fedotova@hackenproof.com
-
-Offerings:
-
--   Free hosting and up to 30% discount on bug bounty services.
--   Up to 30% discount hosting fee on crowdsourced auditing services.
-
-## Blaize Security
-
-Website: https://blaize.tech
-
-Mail: pavel.g@blaize.tech
-
-Offerings:
-
--   Up to 25% discount on all auditing services.
--   Priority queue for the start scheduling.
-
-## Scalebit
-
-Website: contact@scalebit.xyz
-
-Mail: contact@scalebit.xyz
-
-Offerings:
-
--   Up to 30% discount on all auditing services.
-
-## Oxorio
-
-Website: https://oxor.io
-
-Mail: wei@oxor.io
-
-Offerings:
-
--   10% discount on all auditing services.
-
-## Secure3
-
-Website: https://secure3.io
-
-Mail: audit@secure3.io
-
-Offerings:
-
--   10% discount on all auditing services.
-
-## Sherlock
-
-Website: https://www.sherlock.xyz
-
-Mail: dan@sherlock.xyz
-
-Offerings:
-
--   Up to 30% discount on all auditing services.
+  <div style={{'display':'flex','font-size':'14px'}}>
+  Up to &nbsp;<strong>30%</strong>&nbsp; discount on all auditing services.
+  </div>
+</div>
