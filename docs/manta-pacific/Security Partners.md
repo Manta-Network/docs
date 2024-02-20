@@ -4,7 +4,7 @@ Meet with our official security partners and reach out to them for benefiting th
 
 <div style={{'display':'flex','width':'100%','color':'balck','font-size':'16px','font-weight': '600'
   ,'border-bottom':'1px solid rgba(0, 0, 0, 0.20)','padding-top':'12px','padding-bottom':'16px'}}>
-  <div style={{'margin-right':'58px'}}>
+  <div style={{'margin-right':'108px'}}>
     Service Provider
   </div>
   <div>Offerings</div>
