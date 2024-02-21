@@ -178,6 +178,35 @@ html[data-theme='dark'] .dropdown > .navbar__link:after {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.normal_text:hover {
+  text-decoration:none;
+}
+
+html[data-theme='light'] .normal_text {
+  color:black;
+}
+
+html[data-theme='dark'] .normal_text {
+  color:white;
+}
+
+
+html[data-theme='light'] .border_bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme='dark'] .border_bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme='light'] .title_border_bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .title_border_bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .menu__link--active{
   color: var(--ifm-link-color);
 }

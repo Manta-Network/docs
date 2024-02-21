@@ -1,0 +1,30 @@
+.row_left {
+    display: flex;
+    margin-right: 58px;
+}
+
+.direction {
+    flex-direction: row;
+    text-wrap: nowrap;
+}
+
+.second_link {
+    margin-left: 16px;
+}
+
+@media (max-width: 996px) {
+    .row_left {
+        margin-right: 0px;
+        width: 40%;
+    }
+    .row_right {
+        width: 60%;
+    }
+    .direction {
+        flex-direction: column;
+        text-wrap: nowrap;
+    }
+    .second_link {
+        margin-left: unset;
+    }
+}
