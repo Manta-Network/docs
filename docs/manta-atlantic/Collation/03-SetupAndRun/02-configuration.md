@@ -35,6 +35,8 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
+    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
+    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -67,6 +69,8 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
+    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
+    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -106,6 +110,8 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
+    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
+    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -138,6 +144,8 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
+    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
+    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -177,6 +185,8 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
+    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
+    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -209,6 +219,8 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
+    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
+    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
