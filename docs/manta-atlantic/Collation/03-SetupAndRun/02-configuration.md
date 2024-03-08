@@ -238,13 +238,7 @@ ExecStart=/usr/bin/manta \
     --chain /usr/share/substrate/manta.json \
     --base-path /var/lib/substrate \
     --port 31333 \
-    --ws-port 9144 \
-    --ws-max-connections 100 \
-    --rpc-port 9133 \
-    --rpc-cors all \
-    --rpc-methods auto \
-    --prometheus-port 9615 \
-    --prometheus-external \
+...
     --state-cache-size 0 \
     --relay-chain-rpc-urls "wss://1rpc.io/dot" \
     --relay-chain-rpc-urls "wss://polkadot-public-rpc.blockops.network/ws" \
@@ -260,18 +254,12 @@ ExecStart=/usr/bin/manta \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
-      /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
-      /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP \
-      /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 \
+...
     -- \
     --name 'my embedded relay node name' \
     --chain /usr/share/substrate/polkadot.json \
     --port 31334 \
-    --ws-port 9145 \
-    --rpc-port 9134 \
-    --prometheus-port 9616 \
-    --prometheus-external \
-    --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'
+...
 ```
 
 ### parameters with special significance for collator maintainers
