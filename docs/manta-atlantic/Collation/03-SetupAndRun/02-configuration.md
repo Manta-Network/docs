@@ -35,8 +35,6 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
-    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -69,8 +67,6 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
-    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -110,8 +106,6 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
-    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -144,8 +138,6 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
-    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -185,8 +177,6 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
-    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -219,8 +209,6 @@ ExecStart=/usr/bin/manta \
     --prometheus-port 9615 \
     --prometheus-external \
     --state-cache-size 0 \
-    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
-    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     --bootnodes \
       /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
       /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
@@ -240,6 +228,53 @@ ExecStart=/usr/bin/manta \
 
 </TabItem>
 </Tabs>
+
+**note passing `--relay-chain-rpc-urls <rpc_ur>` to the startup is an option to delegate relay chain data to remote relaychain rpc, it's recommanded to not do this, however this can be handy at times when local relay chain data fails to sync (related artcle https://mantanetwork.notion.site/Manta-Atlantic-Block-Production-Accident-Report-9a3742c6e0844d78a32e76fc47cf0cc0), below is an example**
+
+```bash
+ExecStart=/usr/bin/manta \
+    --collator \
+    --name 'my parachain collator node name' \
+    --chain /usr/share/substrate/manta.json \
+    --base-path /var/lib/substrate \
+    --port 31333 \
+    --ws-port 9144 \
+    --ws-max-connections 100 \
+    --rpc-port 9133 \
+    --rpc-cors all \
+    --rpc-methods auto \
+    --prometheus-port 9615 \
+    --prometheus-external \
+    --state-cache-size 0 \
+    --relay-chain-rpc-urls "wss://1rpc.io/dot" \
+    --relay-chain-rpc-urls "wss://polkadot-public-rpc.blockops.network/ws" \
+    --relay-chain-rpc-urls "wss://polkadot.api.onfinality.io/public-ws" \
+    --relay-chain-rpc-urls "wss://rpc.ibp.network/polkadot" \
+    --relay-chain-rpc-urls "wss://polkadot-rpc.dwellir.com" \
+    --relay-chain-rpc-urls "wss://polkadot-rpc-tn.dwellir.com" \
+    --relay-chain-rpc-urls "wss://rpc.dotters.network/polkadot" \
+    --relay-chain-rpc-urls "wss://rpc-polkadot.luckyfriday.io" \
+    --relay-chain-rpc-urls "wss://polkadot.public.curie.radiumblock.co/ws" \
+    --relay-chain-rpc-urls "wss://rockx-dot.w3node.com/polka-public-dot/ws" \
+    --relay-chain-rpc-urls "wss://dot-rpc.stakeworld.io" \
+    --bootnodes \
+      /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
+      /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
+      /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k \
+      /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP \
+      /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 \
+    -- \
+    --name 'my embedded relay node name' \
+    --chain /usr/share/substrate/polkadot.json \
+    --port 31334 \
+    --ws-port 9145 \
+    --rpc-port 9134 \
+    --prometheus-port 9616 \
+    --prometheus-external \
+    --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'
+```
+
+list of official polkadot relay chain rpc endpoints can be found on https://wiki.polkadot.network/docs/maintain-endpoints
 
 ### parameters with special significance for collator maintainers
 two sets of parameters are supplied to the substrate node binary (manta), separated by a double-dash (`--`). the first set controls the behavior of the parachain node. the second set controls the behaviour of the embedded relay-chain node.

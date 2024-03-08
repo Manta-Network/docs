@@ -36,8 +36,6 @@ import TabItem from '@theme/TabItem';
     --collator \
     --rpc-methods=unsafe \
     --unsafe-rpc-external \
-    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
-    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot'
 
   #Production sample
   docker run \
@@ -55,8 +53,6 @@ import TabItem from '@theme/TabItem';
     --rpc-cors all \
     --collator \
     --rpc-methods=safe \
-    --relay-chain-rpc-urls 'wss://polkadot.api.onfinality.io/public-ws' \
-    --relay-chain-rpc-urls 'wss://rpc.ibp.network/polkadot' \
     -- \
     --telemetry-url 'wss://api.telemetry.manta.systems/submit/ 0'
   ```
@@ -133,14 +129,14 @@ import TabItem from '@theme/TabItem';
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --relay-chain-rpc-urls \'wss://polkadot.api.onfinality.io/public-ws\' --relay-chain-rpc-urls \'wss://rpc.ibp.network/polkadot\' --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
   ```
 
   for version `< v4.6.0` (exclusive)
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --relay-chain-rpc-urls \'wss://polkadot.api.onfinality.io/public-ws\' --relay-chain-rpc-urls \'wss://rpc.ibp.network/polkadot\' --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
   ```
 
 </TabItem>
@@ -192,14 +188,14 @@ import TabItem from '@theme/TabItem';
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --relay-chain-rpc-urls \'wss://polkadot.api.onfinality.io/public-ws\' --relay-chain-rpc-urls \'wss://rpc.ibp.network/polkadot\' --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
   ```
 
   for version `< v4.6.0` (exclusive)
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --relay-chain-rpc-urls \'wss://polkadot.api.onfinality.io/public-ws\' --relay-chain-rpc-urls \'wss://rpc.ibp.network/polkadot\' --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
   ```
 
 </TabItem>
@@ -251,14 +247,14 @@ import TabItem from '@theme/TabItem';
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --relay-chain-rpc-urls \'wss://polkadot.api.onfinality.io/public-ws\' --relay-chain-rpc-urls \'wss://rpc.ibp.network/polkadot\' --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --rpc-max-connections 100 --rpc-port 9144 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
   ```
 
   for version `< v4.6.0` (exclusive)
   ```bash
   #!/bin/bash
 
-  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --relay-chain-rpc-urls \'wss://polkadot.api.onfinality.io/public-ws\' --relay-chain-rpc-urls \'wss://rpc.ibp.network/polkadot\' --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
+  sudo -H -u manta bash -c '/usr/bin/manta --chain /usr/share/substrate/manta.json --base-path /var/lib/substrate --port 31333 --ws-port 9144 --ws-max-connections 100 --rpc-port 9133 --rpc-cors all --rpc-methods safe --state-cache-size 0 --bootnodes /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb /dns/a5.manta.systems/tcp/30333/p2p/12D3KooWM6Txo8orkxGsSTPByzzWhtTSfdFi2u9KJtd9eWCkry3k /dns/a7.manta.systems/tcp/30333/p2p/12D3KooWFKMcE12XRLZfktX3crfkZyyBetpHsffDjPopYVhQLXwP /dns/c1.manta.systems/tcp/30333/p2p/12D3KooWSNwD7tJkqKGdMfCVTJbbzrGFTGbXoeMFZCTwEytpFCM4 -- --chain /usr/share/substrate/polkadot.json'
   ```
 
 </TabItem>
