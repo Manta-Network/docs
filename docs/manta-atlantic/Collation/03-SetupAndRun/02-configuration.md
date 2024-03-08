@@ -229,7 +229,7 @@ ExecStart=/usr/bin/manta \
 </TabItem>
 </Tabs>
 
-**note** passing `--relay-chain-rpc-urls <rpc_ur>` to the parachain parameter section in the startup command will delegate relay chain data to remote relaychain rpc, it's recommanded to not do this, however this can be handy at times when local relay chain data fails to sync (related artcle https://mantanetwork.notion.site/Manta-Atlantic-Block-Production-Accident-Report-9a3742c6e0844d78a32e76fc47cf0cc0), **below is an example**
+**note** passing `--relay-chain-rpc-urls <rpc_url>` to the parachain parameter section in the startup command will delegate relay chain data to remote relaychain rpc, it's recommanded to not do this, however this can be handy at times when local relay chain data fails to sync (related artcle https://mantanetwork.notion.site/Manta-Atlantic-Block-Production-Accident-Report-9a3742c6e0844d78a32e76fc47cf0cc0), **below is an example**
 
 ```bash
 ExecStart=/usr/bin/manta \
