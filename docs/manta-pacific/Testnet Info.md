@@ -9,7 +9,8 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 | Category        | Information                                            |
 | --------------- | ------------------------------------------------------ |
 | Network Name    | Manta Pacific Sepolia Testnet                          |
-| Network URL     | https://pacific-explorer.sepolia-testnet.manta.network |
+| Network URL     | https://pacific-info.sepolia-testnet.manta.network/    |
+| Explorer URL    | https://pacific-explorer.sepolia-testnet.manta.network |
 | RPC URL         | https://pacific-rpc.sepolia-testnet.manta.network/http |
 | Websocket URL   | wss://pacific-rpc.sepolia-testnet.manta.network/ws     |
 | Chain ID        | 3441006                                                |
@@ -17,14 +18,15 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 
 ## Adding Manta Testnet Goerli Testnet to MetaMask (Deprecated)
 
-| Category        | Information                                    |
-| --------------- | ---------------------------------------------- |
-| Network Name    | Manta Testnet Goerli Testnet(Deprecated)       |
-| Network URL     | https://pacific-info.testnet.manta.network/    |
-| RPC URL         | https://pacific-rpc.testnet.manta.network/http |
-| Websocket URL   | wss://pacific-rpc.testnet.manta.network/ws     |
-| Chain ID        | 3441005                                        |
-| Currency Symbol | ETH                                            |
+| Category        | Information                                     |
+| --------------- | ----------------------------------------------- |
+| Network Name    | Manta Testnet Goerli Testnet(Deprecated)        |
+| Network URL     | https://pacific-info.testnet.manta.network/     |
+| Explorer URL    | https://pacific-explorer.testnet.manta.network/ |
+| RPC URL         | https://pacific-rpc.testnet.manta.network/http  |
+| Websocket URL   | wss://pacific-rpc.testnet.manta.network/ws      |
+| Chain ID        | 3441005                                         |
+| Currency Symbol | ETH                                             |
 
 ### Obtaining Testnet Assets
 
