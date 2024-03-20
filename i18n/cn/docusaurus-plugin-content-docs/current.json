@@ -1,0 +1,67 @@
+{
+    "version.label": {
+        "message": "Next",
+        "description": "The label for version current"
+    },
+    "sidebar.docs.category.Manta": {
+        "message": "Manta",
+        "description": "The label for category Manta in sidebar docs"
+    },
+    "sidebar.docs.doc.What is Manta?": {
+        "message": "Manta 是什么?"
+    },
+    "sidebar.docs.doc.What is Manta Pacific (Layer 2)": {
+        "message": "什么是 Manta Pacific (2层网络)?"
+    },
+    "sidebar.docs.doc.What is Manta Atlantic (Layer1)": {
+        "message": "什么是 Manta Atlantic (1层网络)?"
+    },
+    "sidebar.docs.category.Research": {
+        "message": "学术"
+    },
+    "sidebar.docs.doc.Zero-Knowledge Proofs": {
+        "message": "零知识证明"
+    },
+    "sidebar.docs.category.Manta Pacific Network": {
+        "message": "Manta Pacific 网络"
+    },
+    "sidebar.docs.category.Network Info": {
+        "message": "网络信息"
+    },
+    "sidebar.docs.doc.Quickstart": {
+        "message": "快速起步"
+    },
+    "sidebar.docs.doc.EVM Compatibility": {
+        "message": "EVM兼容性"
+    },
+    "sidebar.docs.doc.Block Explorer": {
+        "message": "区块浏览器"
+    },
+    "sidebar.docs.doc.JSON-RPC Nodes": {
+        "message": "JSON-RPC节点"
+    },
+    "sidebar.docs.doc.Testnet Info": {
+        "message": "测试网信息"
+    },
+    "sidebar.docs.doc.Manta Token": {
+        "message": "Manta 代币"
+    },
+    "sidebar.docs.doc.Manta Pacific Roadmap": {
+        "message": "Manta Pacific 路线图"
+    },
+    "sidebar.docs.doc.Manta Pacific Ecosystem": {
+        "message": "Manta Pacific 生态"
+    },
+    "sidebar.docs.category.Concepts": {
+        "message": "概念",
+        "description": "The label for category Concepts in sidebar docs"
+    },
+    "sidebar.docs.category.Guides": {
+        "message": "指南",
+        "description": "The label for category Signer in sidebar docs"
+    },
+    "sidebar.docs.category.Learn More About Manta": {
+        "message": "更多关于 Manta",
+        "description": "The label for category Signer in sidebar docs"
+    }
+}
