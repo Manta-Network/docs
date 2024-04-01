@@ -16,7 +16,7 @@
   "dependencies": {
     "@aldridged/docusaurus-plugin-lunr": "^1.0.0-alpha.10",
     "@cmfcmf/docusaurus-search-local": "^0.11.0",
-    "@cookbookdev/docusaurus-chefgpt": "^1.1.12",
+    "@cookbookdev/docsbot": "^4.5.0",
     "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin": "^1.0.1",
     "@docusaurus/core": "^2.3.1",
     "@docusaurus/plugin-client-redirects": "^2.3.1",
