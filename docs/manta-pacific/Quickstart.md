@@ -10,7 +10,6 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 | Network URL        | https://pacific-info.manta.network/                 |
 | RPC URL            | https://pacific-rpc.manta.network/http              |
 | Additional RPC URL | https://manta-pacific.drpc.org                      |
-|                    | https://manta-pacific-gascap.calderachain.xyz/http  |
 |                    | https://www.tencentcloud-rpc.com/v2/manta/manta-rpc |
 |                    | https://r1.pacific.manta.systems/http               |
 |                    | https://manta.nirvanalabs.xyz/mantapublic           |
