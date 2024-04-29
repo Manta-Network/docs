@@ -113,8 +113,141 @@ module.exports = {
                 },
                 {
                     type: "category",
+                    label: "Build on Manta",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Network Information",
+                            id: "manta-pacific/Build on Manta/Network Information",
+                        },
+                        {
+                            type: "doc",
+                            label: "Manta Contract Addresses",
+                            id: "manta-pacific/Build on Manta/Network Information",
+                        },
+                        {
+                            type: "doc",
+                            label: "Fees",
+                            id: "manta-pacific/Build on Manta/Fees",
+                        },
+                        {
+                            type: "doc",
+                            label: "Differences between Ethereum and Manta",
+                            id: "manta-pacific/Build on Manta/Differences between Ethereum and MantaNetwork",
+                        },
+                        {
+                            type: "doc",
+                            label: "Contracts",
+                            id: "manta-pacific/Build on Manta/Contracts",
+                        },
+                        {
+                            type: "doc",
+                            label: "Tokens",
+                            id: "manta-pacific/Build on Manta/Tokens",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Tools",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Node Providers",
+                            id: "manta-pacific/Tools/Node Providers",
+                        },
+                        {
+                            type: "doc",
+                            label: "Block Explorers",
+                            id: "manta-pacific/Tools/Block Explorers",
+                        },
+                        {
+                            type: "doc",
+                            label: "Network Faucets",
+                            id: "manta-pacific/Tools/Network Faucets",
+                        },
+                        {
+                            type: "doc",
+                            label: "Oracles",
+                            id: "manta-pacific/Tools/Oracles",
+                        },
+                        {
+                            type: "doc",
+                            label: "Data Indexers",
+                            id: "manta-pacific/Tools/Data Indexers",
+                        },
+                        {
+                            type: "category",
+                            label: "Native Bridge",
+                            items: [
+                                {
+                                    type: "doc",
+                                    label: "How to Use Native Bridge",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/How to Use Native Bridge",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "How to deploy Ethereum token on Manta",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/How to deploy Ethereum token on Manta",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "How to list token on Native Bridge",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/How to list token on Native Bridge",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "How to use JS SDK bridge token between Ethereum and Manta",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/How to use JS SDK bridge token between Ethereum and Manta",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "FAQ",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/FAQ",
+                                },
+                            ],
+                        },
+                        {
+                            type: "doc",
+                            label: "Third party Bridge",
+                            id: "manta-pacific/Tools/Bridge/Third party Bridge",
+                        },
+                        {
+                            type: "doc",
+                            label: "Onramps",
+                            id: "manta-pacific/Tools/Onramps",
+                        },
+                        {
+                            type: "doc",
+                            label: "Security Partners",
+                            id: "manta-pacific/Security Partners",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Manta Pacific Node",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Hardware conditions",
+                            id: "manta-pacific/Manta Pacific Node/Hardware conditions",
+                        },
+                        {
+                            type: "doc",
+                            label: "How to run Replica Node",
+                            id: "manta-pacific/Manta Pacific Node/How to run Replica Node",
+                        },
+                        {
+                            type: "doc",
+                            label: "Join Telegram to get node updates",
+                            id: "manta-pacific/Manta Pacific Node/Join Telegram to get node updates",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
                     label: "Universal Circuits (Alpha): zkShuffle",
-
                     items: [
                         {
                             type: "doc",
