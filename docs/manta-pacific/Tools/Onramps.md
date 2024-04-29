@@ -1,4 +1,4 @@
-## 
+##
 
 ## Binance Withdraw (ETH/MANTA)
 
@@ -10,8 +10,8 @@ Manta token is listed on Binance. You may directly trade and withdraw $MANTA fro
 
 ## Alchemy Pay
 
-[Alchemy Pay Ramp](https://ramp.alchemypay.org/#/index) is the site who offer the service to buy crypto and sell crypto by fiat currency and Alchemy Pay does not support to save assets. 
+[Alchemy Pay Ramp](https://ramp.alchemypay.org/#/index) is the site who offer the service to buy crypto and sell crypto by fiat currency and Alchemy Pay does not support to save assets.
 
 ## OpenCrypto
 
-[OpenCrypto](%5Bopenc.pro/widget-page/?widgetId=c0JsNEZ2RUU%5D(https://openc.pro/widget-page/?widgetId=c0JsNEZ2RUU)) is an onramp and offramp that empowers users to buy & sell crypto inside your app.
+[OpenCrypto](https://openc.pro/widget-page/?widgetId=c0JsNEZ2RUU) is an onramp and offramp that empowers users to buy & sell crypto inside your app.

@@ -1,6 +1,6 @@
 # How to use Native Bridge
 
-### Manta Pacific MainNet Bridging with Manta Bridge[​](https://docs.manta.network/docs/manta-atlantic/Bridge#bridging-with-manta-bridge "Direct link to Bridging with Manta Bridge")
+### [Manta Pacific MainNet Bridging with Manta Bridge​](https://docs.manta.network/docs/manta-atlantic/Bridge#bridging-with-manta-bridge "Direct link to Bridging with Manta Bridge")
 
 ![1](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*AGkx1AbxMzhe7McGqHNICw.png)
 
@@ -17,12 +17,12 @@ Visit the [Manta Pacific Bridge](https://pacific-bridge.manta.network/) and co
 
 Choose the type of ERC20 asset you want to transfer and click **Deposit**, then sign the MetaMask transaction.
 
-Once the process is finished, you will find the bridged ETH in your MetaMask wallet, ready for use on Manta Pacific. 
+Once the process is finished, you will find the bridged ETH in your MetaMask wallet, ready for use on Manta Pacific.
 
 ### Bridge Testnet
 
-Visit the [Testnet]([https://pacific-bridge.sepolia-testnet.manta.network/](https://pacific-bridge.sepolia-testnet.manta.network/)) and connect your wallet.
+Visit the [Testnet](https://pacific-bridge.sepolia-testnet.manta.network/) and connect your wallet.
 
 Choose the type of ERC20 asset you want to transfer and click **Deposit**, then sign the transaction.
 
-## 
+##
