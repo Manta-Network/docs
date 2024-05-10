@@ -2,7 +2,7 @@
 
 ### What is Manta Native Bridge?
 
-[Manta Native Bridge]([Bridge - Manta Pacific](https://pacific-bridge.manta.network/)) enables usres to transfer their tokens between the layer-1 and layer-2 chains.
+[Manta Native Bridge](https://pacific-bridge.manta.network/) enables usres to transfer their tokens between the layer-1 and layer-2 chains.
 
 ### Which wallets are compatible with Manta Native Bridge?
 

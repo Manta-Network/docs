@@ -6,7 +6,7 @@ Manta token is listed on Binance. You may directly trade and withdraw $MANTA fro
 
 ## Onramp Money
 
-[Onramp Money]([Manta Network (onramp.money)](https://onramp.money/partners/manta/)) is a fiat-to-crypto payment gateway, which helps users seamlessly convert fiat currency to the desired cryptocurrency. Manta Network serves as the gateway for ZK applications, utilizing a modular blockchain and zkEVM to establish a new paradigm for an L2 smart contract platform. Onramp currently supports 300+ cryptocurrencies and 20+ blockchain networks, including MANTA.
+[Onramp Money](https://onramp.money/partners/manta/) is a fiat-to-crypto payment gateway, which helps users seamlessly convert fiat currency to the desired cryptocurrency. Manta Network serves as the gateway for ZK applications, utilizing a modular blockchain and zkEVM to establish a new paradigm for an L2 smart contract platform. Onramp currently supports 300+ cryptocurrencies and 20+ blockchain networks, including MANTA.
 
 ## Alchemy Pay
 

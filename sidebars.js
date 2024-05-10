@@ -113,7 +113,7 @@ module.exports = {
                 },
                 {
                     type: "category",
-                    label: "Build on Manta",
+                    label: "Building on Manta",
                     items: [
                         {
                             type: "doc",
@@ -122,8 +122,13 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "Manta Contract Addresses",
-                            id: "manta-pacific/Build on Manta/Network Information",
+                            label: "Manta Contracts",
+                            id: "manta-pacific/Build on Manta/Contracts",
+                        },
+                        {
+                            type: "doc",
+                            label: "Tokens",
+                            id: "manta-pacific/Build on Manta/Tokens",
                         },
                         {
                             type: "doc",
@@ -135,16 +140,8 @@ module.exports = {
                             label: "Differences between Ethereum and Manta",
                             id: "manta-pacific/Build on Manta/Differences between Ethereum and MantaNetwork",
                         },
-                        {
-                            type: "doc",
-                            label: "Contracts",
-                            id: "manta-pacific/Build on Manta/Contracts",
-                        },
-                        {
-                            type: "doc",
-                            label: "Tokens",
-                            id: "manta-pacific/Build on Manta/Tokens",
-                        },
+
+
                     ],
                 },
                 {
@@ -228,21 +225,21 @@ module.exports = {
                     type: "category",
                     label: "Manta Pacific Node",
                     items: [
-                        {
-                            type: "doc",
-                            label: "Hardware conditions",
-                            id: "manta-pacific/Manta Pacific Node/Hardware conditions",
-                        },
+                        // {
+                        //     type: "doc",
+                        //     label: "Hardware conditions",
+                        //     id: "manta-pacific/Manta Pacific Node/Hardware conditions",
+                        // },
                         {
                             type: "doc",
                             label: "How to run Replica Node",
                             id: "manta-pacific/Manta Pacific Node/How to run Replica Node",
                         },
-                        {
-                            type: "doc",
-                            label: "Join Telegram to get node updates",
-                            id: "manta-pacific/Manta Pacific Node/Join Telegram to get node updates",
-                        },
+                        // {
+                        //     type: "doc",
+                        //     label: "Join Telegram to get node updates",
+                        //     id: "manta-pacific/Manta Pacific Node/Join Telegram to get node updates",
+                        // },
                     ],
                 },
                 {
@@ -299,26 +296,6 @@ module.exports = {
                             dirName: "bridge-to-pacific",
                         },
                     ],
-                },
-                {
-                    type: "doc",
-                    label: "Manta Pacific Ecosystem",
-                    id: "concepts/Manta Pacific Ecosystem",
-                },
-                {
-                    type: "doc",
-                    label: "Manta Pacific Replica Node",
-                    id: "manta-pacific/Replica Node",
-                },
-                {
-                    type: "doc",
-                    label: "RedStone Oracles",
-                    id: "manta-pacific/RedStone Oracles",
-                },
-                {
-                    type: "doc",
-                    label: "Supra Oracles",
-                    id: "manta-pacific/Supra Oracles",
                 },
                 {
                     type: "doc",

@@ -10,10 +10,10 @@ Manta Pacific provide a JSON-RPC interface that allows developers and users to i
 
 ## Tencentcloud
 
-[Tencentcloud ]([Tencent Cloud Blockchain RPC](https://www.tencentcloud.com/products/rpc) )offers a reliable and affordable read/write service for on-chain transactions, leveraging Tencent Cloud's infrastructure. It supports popular global public blockchains and offers advanced APIs. Users can opt for a free tier allowing unlimited requests via public nodes or a paid tier granting access to all providers along with extra features.
+[Tencent Cloud Blockchain RPC](https://www.tencentcloud.com/products/rpc) offers a reliable and affordable read/write service for on-chain transactions, leveraging Tencent Cloud's infrastructure. It supports popular global public blockchains and offers advanced APIs. Users can opt for a free tier allowing unlimited requests via public nodes or a paid tier granting access to all providers along with extra features.
 
 ## 1RPC
 
 [1RPC](https://1rpc.io/) is the first and only on-chain attested privacy preserving RPC that eradicates metadata exposure and leakage when interacting with blockchains. 1RPC offers free and [paid plans](https://www.1rpc.io/#pricing) with additional features and increased request limits.
 
-To check the operational status of all Node Providers on Manta Network, please visit: [Manta Pacific Mainnet RPC and Chain settings | ChainList](https://chainlist.org/chain/169) 
+To check the operational status of all Node Providers on Manta Network, please visit: [Manta Pacific Mainnet RPC and Chain settings | ChainList](https://chainlist.org/chain/169)
