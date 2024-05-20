@@ -111,7 +111,7 @@ Certain contracts are mandatory according to the [OP Stack SDK](https://stack.op
 | System config owner    | [0x6A42a60E14EeEE588AD622159971963560D7F570](https://sepolia.etherscan.io/address/0x6A42a60E14EeEE588AD622159971963560D7F570)                           | EOA managed by Manta Technologies |
 | Guardian               | [0x6A42a60E14EeEE588AD622159971963560D7F570](https://sepolia.etherscan.io/address/0x6A42a60E14EeEE588AD622159971963560D7F570)                           | EOA managed by Manta Technologies |
 
-# Tool Contract Addresses
+## Tool Contract Addresses
 
 ## Manta Pacific Mainnet
 
