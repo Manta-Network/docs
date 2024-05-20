@@ -12,7 +12,7 @@ In order to be prepared, please upgrade your op-node image to `public.ecr.aws/i6
 
 A set of scripts that will start a Manta node from scratch. **If you have an existing Manta node running, then you should copy the datadir over and resume from that.**
 
-[manta-replica-main.zip](./assets/manta-replica-main.zip)
+[manta-replica-main.zip](../assets/manta-replica-main.zip)
 
 A version of the scripts that include a snapshot data directory
 
@@ -26,7 +26,7 @@ Update: here’s a variant that includes a datadir snapshot taken on November 6t
 
 [https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific.tar](https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific.tar)
 
-[manta-replica.zip](./assets/manta-replica-main.zip)
+[manta-replica.zip](../assets/manta-replica-main.zip)
 
 # Building a new OP-geth image
 
