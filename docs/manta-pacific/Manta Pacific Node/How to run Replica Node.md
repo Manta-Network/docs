@@ -8,7 +8,7 @@ In order to be prepared, please upgrade your op-node image to [public.ecr.aws/i6
 
 Scripts to run a replica node on the latest version:
 
-[manta-pacific-replica.zip](Manta%20Pacific%20Replica%20Node%2006c677c1d378474aa0e598ae34895538/manta-pacific-replica.zip)
+[manta-pacific-replica.zip](../assets/manta-pacific-replica.zip)
 
 Here’s the latest snapshot: [https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific-snapshot-011824.tar](https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific-snapshot-011824.tar)
 
