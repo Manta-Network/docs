@@ -1,32 +1,36 @@
 # Manta Pacific Replica Node
 
-# Update for Celestia enablement on mainnet
+# Update Log
 
-The switch to Celestia on Manta Pacific is happening on 12pm PT, December 15th, 2023
+## March 12th Dencun Upgrade
 
-**Note: if you’re running a node on the old setup, it should still sync fine from the S3 we’ve provided. An upgrade is optional but recommended**
+In order to be prepared, please upgrade your op-node image to [public.ecr.aws/i6b2w2n6/op-node:celestia-3.0.0-dencun](http://public.ecr.aws/i6b2w2n6/op-node:celestia-3.0.0) and set the necessary env variables. Note that the [manta-up.sh](http://manta-up.sh) script helps to generate the auth token for the celestia light node.
 
-Now that Manta Pacific is posting data to Celestia, users running replica nodes should also run a Celestia light node alongside op-node and op-geth. The updated replica scripts will help users provision this Celestia light node and connect to it in the same way Manta Pacific will.
+Scripts to run a replica node on the latest version:
 
-In order to be prepared, please upgrade your op-node image to `public.ecr.aws/i6b2w2n6/op-node:celestia-3.0.0-dencun` and set the necessary env variables. Note that the `manta-up.sh` script helps to generate the auth token for the celestia light node.
+[manta-pacific-replica.zip](Manta%20Pacific%20Replica%20Node%2006c677c1d378474aa0e598ae34895538/manta-pacific-replica.zip)
+
+Here’s the latest snapshot: [https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific-snapshot-011824.tar](https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific-snapshot-011824.tar)
+
+# General Instructions
 
 A set of scripts that will start a Manta node from scratch. **If you have an existing Manta node running, then you should copy the datadir over and resume from that.**
 
-[manta-replica-main.zip](../assets/manta-replica-main.zip)
+Users running replica nodes can optionally run a Celestia light node alongside op-node and op-geth. The updated replica scripts will help users provision this Celestia light node and connect to it in the same way Manta Pacific will.
 
-A version of the scripts that include a snapshot data directory
+A version of the scripts that include a snapshot data directory:
+
+[manta-pacific-replica.zip](../assets/manta-pacific-replica.zip)
+
+The latest snapshot: [https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific-snapshot-011824.tar](https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific-snapshot-011824.tar)
+
+Older snapshot:
 
 [https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific-celestia-update.tar](https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific-celestia-update.tar)
 
 # Docker-compose
 
 See the README in each folder for instructions on how to run a replica node for both Manta Testnet and Manta Pacific via a docker-compose setup.
-
-Update: here’s a variant that includes a datadir snapshot taken on November 6th, 2023
-
-[https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific.tar](https://constellationlabs-dashboard-beta.s3.us-west-2.amazonaws.com/manta-pacific.tar)
-
-[manta-replica.zip](../assets/manta-replica-main.zip)
 
 # Building a new OP-geth image
 
