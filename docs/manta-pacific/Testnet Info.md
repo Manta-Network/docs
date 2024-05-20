@@ -16,18 +16,6 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 | Chain ID        | 3441006                                                |
 | Currency Symbol | ETH                                                    |
 
-## Adding Manta Testnet Goerli Testnet to MetaMask (Deprecated)
-
-| Category        | Information                                     |
-| --------------- | ----------------------------------------------- |
-| Network Name    | Manta Testnet Goerli Testnet(Deprecated)        |
-| Network URL     | https://pacific-info.testnet.manta.network/     |
-| Explorer URL    | https://pacific-explorer.testnet.manta.network/ |
-| RPC URL         | https://pacific-rpc.testnet.manta.network/http  |
-| Websocket URL   | wss://pacific-rpc.testnet.manta.network/ws      |
-| Chain ID        | 3441005                                         |
-| Currency Symbol | ETH                                             |
-
 ### Obtaining Testnet Assets
 
 Manta Pacific uses ETH as the underlying asset for transaction fees. Request faucet funds for both [Manta and Goerli here](https://pacific-info.manta.network/).
