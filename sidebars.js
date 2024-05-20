@@ -38,6 +38,11 @@ module.exports = {
                     ],
                 },
                 {
+                    type: "doc",
+                    label: "Manta Token",
+                    id: "mantaToken/mantaToken",
+                },
+                {
                     type: "category",
                     label: "Research",
                     items: [
@@ -76,49 +81,45 @@ module.exports = {
             collapsible: false,
             items: [
                 {
-                    type: "category",
-                    label: "Network Info",
-                    items: [
-                        {
-                            type: "doc",
-                            label: "Quickstart",
-                            id: "manta-pacific/Quickstart",
-                        },
-                        {
-                            type: "doc",
-                            label: "EVM Compatibility",
-                            id: "manta-pacific/EVM Compatible",
-                        },
-                        {
-                            type: "doc",
-                            label: "Block Explorer",
-                            id: "manta-pacific/Block Explorer",
-                        },
-                        {
-                            type: "doc",
-                            label: "JSON-RPC Nodes",
-                            id: "manta-pacific/JSON-RPC Nodes",
-                        },
-                        {
-                            type: "doc",
-                            label: "Testnet Info",
-                            id: "manta-pacific/Testnet Info",
-                        },
-                    ],
-                },
-                {
                     type: "doc",
-                    label: "Manta Token",
-                    id: "mantaToken/mantaToken",
+                    label: "Network Information",
+                    id: "manta-pacific/Build on Manta/Network Information",
                 },
+                // {
+                //     type: "category",
+                //     label: "Network Info",
+                //     items: [
+                //         {
+                //             type: "doc",
+                //             label: "Quickstart",
+                //             id: "manta-pacific/Quickstart",
+                //         },
+
+                //         {
+                //             type: "doc",
+                //             label: "Block Explorer",
+                //             id: "manta-pacific/Block Explorer",
+                //         },
+                //         {
+                //             type: "doc",
+                //             label: "JSON-RPC Nodes",
+                //             id: "manta-pacific/JSON-RPC Nodes",
+                //         },
+                //         {
+                //             type: "doc",
+                //             label: "Testnet Info",
+                //             id: "manta-pacific/Testnet Info",
+                //         },
+                //     ],
+                // },
                 {
                     type: "category",
                     label: "Building on Manta",
                     items: [
                         {
                             type: "doc",
-                            label: "Network Information",
-                            id: "manta-pacific/Build on Manta/Network Information",
+                            label: "EVM Compatibility",
+                            id: "manta-pacific/EVM Compatible",
                         },
                         {
                             type: "doc",
@@ -140,8 +141,6 @@ module.exports = {
                             label: "Differences between Ethereum and Manta",
                             id: "manta-pacific/Build on Manta/Differences between Ethereum and MantaNetwork",
                         },
-
-
                     ],
                 },
                 {
@@ -172,6 +171,27 @@ module.exports = {
                             type: "doc",
                             label: "Data Indexers",
                             id: "manta-pacific/Tools/Data Indexers",
+                        },
+                        {
+                            type: "doc",
+                            label: "Onramps",
+                            id: "manta-pacific/Tools/Onramps",
+                        },
+                        {
+                            type: "doc",
+                            label: "Security Partners",
+                            id: "manta-pacific/Tools/Security Partners",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Bridges",
+                    items: [
+                        {
+                            type: "doc",
+                            label: " Bridge $MANTA Token Between Manta Pacific and Manta Atlantic",
+                            id: "manta-pacific/Tools/Bridge/Bridge $MANTA Token Between Manta Pacific and Manta Atlantic",
                         },
                         {
                             type: "category",
@@ -211,13 +231,8 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "Onramps",
-                            id: "manta-pacific/Tools/Onramps",
-                        },
-                        {
-                            type: "doc",
-                            label: "Security Partners",
-                            id: "manta-pacific/Tools/Security Partners",
+                            label: "Bridging Celestia‘s $TIA to Manta Pacific",
+                            id: "manta-pacific/Tools/Bridge/Bridging Celestia‘s $TIA to Manta Pacific",
                         },
                     ],
                 },

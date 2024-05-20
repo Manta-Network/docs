@@ -4,9 +4,18 @@ Since the launch of the Manta Pacific mainnet, multiple bridging protocols have 
 
 ## [LayerZero](https://docs.layerzero.network/v2/developers/evm/technical-reference/endpoints#manta "Direct link to Manta")
 
+-   Manta Pacific Mainnet
+
 ```
 endpointId: 30217
 endpoint: 0x1a44076050125825900e736c501f859c50fe728c
+```
+
+-   Manta Sepolia Testnet
+
+```
+endpointId: 40272
+endpoint: 0x6EDCE65403992e310A62460808c4b910D972f10f
 ```
 
 ## [Hyperlane](https://docs.hyperlane.xyz/docs/reference/contract-addresses)
