@@ -1,5 +1,7 @@
 # Manta Pacific Replica Node
 
+**Note for latest up to date docs** refer to https://constellationlabs.notion.site/Manta-Pacific-Replica-Node-64219c65097940489d8277f454153193
+
 # Update Log
 
 ## March 12th Dencun Upgrade
