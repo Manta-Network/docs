@@ -325,6 +325,11 @@ module.exports = {
             collapsible: false,
             items: [
                 {
+                    type: "doc",
+                    label: "Network Information",
+                    id: "manta-atlantic/Network Information",
+                },
+                {
                     type: "category",
                     label: "Collator",
                     items: [
