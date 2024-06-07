@@ -707,7 +707,7 @@ sudo firewall-cmd --reload
 
     **candidateCount** is a hint for transaction weight ( i.e. gas fee ) that should be larger than the current number of registered collators ( or the transaction will fail ). The current number can be found by counting the entries on the [manta chain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems#/chainstate/constants) > parachainStaking > candidatePool(): u128. It is safe to just set a high number, but reducing it as much as possible reduces the estimated gas fees that must be available in your account in addition to the bond amount for the transaction to succeed.
 
-    Your collator will join the set of block producers and become eligible for rewards at the beginning of the next *round* ( i.e. after a maximum of 6 hours ) **if it is in the top 63 of registered node candidates by total stake** ( i.e. your collator bond + sum of all delegations on your node )
+    Your collator will join the set of block producers and become eligible for rewards at the beginning of the next *round* ( i.e. after a maximum of 6 hours ) **if it is in the top 70 of registered node candidates by total stake** ( i.e. your collator bond + sum of all delegations on your node )
 
     # Maintenance
 

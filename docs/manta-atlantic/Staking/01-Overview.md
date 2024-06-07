@@ -25,7 +25,7 @@ You can find more info about this path [in the collator section](../Collation/Ov
 
 ## What is DPoS?
 ### In contrast to other PoS Networks
-In contrast to other networks like Ethereum, where no on-chain mechanism exists for multiple token holders to collaborate (staking pools are used as an off-chain crutch here), our DPoS solution allows for people who can't or won't run their own collator node to `delegate` their token to one or multiple specific `collators`, thus voting that they do a good job with producing blocks, helping ensure its position in the set of at most 63 active collators and in return share in the [block rewards](Rewards) the backed collator obtains.
+In contrast to other networks like Ethereum, where no on-chain mechanism exists for multiple token holders to collaborate (staking pools are used as an off-chain crutch here), our DPoS solution allows for people who can't or won't run their own collator node to `delegate` their token to one or multiple specific `collators`, thus voting that they do a good job with producing blocks, helping ensure its position in the set of at most 70 active collators and in return share in the [block rewards](Rewards) the backed collator obtains.
 In order create a semi-stable set of collators, these locked tokens are subject to a 7 day waiting period if a user wishes to recover his tokens from a staking lock or change the target collator they're delegating to.
 
 ### In contrast to Polkadot/Kusama’s NPoS (nominated proof of stake)
