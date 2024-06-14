@@ -48,7 +48,7 @@ Can't find what you're looking for? Reach out to us at [support@goldsky.com](ma
 
 ### Overview
 
-Envio is a modern, multi-chain EVM blockchain indexing framework speed-optimized for querying real-time and historical data.
+Envio is a modern, multi-chain EVM blockchain indexing framework speed-optimized for querying real-time and historical data on Manta. 
 
 ### Scope
 
