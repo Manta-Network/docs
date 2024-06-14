@@ -52,15 +52,15 @@ Envio is a modern, multi-chain EVM blockchain indexing framework speed-optimized
 
 ### Scope
 
-#### Envio HyperIndex
+**Envio HyperIndex**
 
-Envio [HyperIndex](https://docs.envio.dev/docs/overview) is a feature-rich indexing solution that provides Manta developers with a seamless and efficient way to index and aggregate real-time or historical blockchain data. The indexed data is easily accessible through custom GraphQL queries, giving developers the flexibility and power to retrieve specific information.
+Envio [HyperIndex](https://docs.envio.dev/docs/overview) is a feature-rich indexing solution that provides Manta projects with a seamless and efficient way to index and aggregate real-time or historical blockchain data. The indexed data is easily accessible through custom GraphQL queries, giving developers the flexibility and power to retrieve specific information for their blockchain application.
 
 Envio offers native support for Manta Pacific testnet and mainnet and has been designed to support high-throughput blockchain applications that rely on real-time data for their business requirements.
 
 Designed to optimize the developer experience, Envio offers automatic code generation, flexible language support, quickstart templates, and a reliable cost-effective [hosted service](https://docs.envio.dev/docs/hosted-service). Indexers on Envio can be written in JavaScript, TypeScript, or ReScript.
 
-#### Envio HyperSync
+**Envio HyperSync**
 
 Envio [HyperSync](https://docs.envio.dev/docs/hypersync) is supported on Manta Pacific mainnet. 
 
@@ -72,7 +72,7 @@ HyperSync is also available as a standalone API for data analytic use cases. Dat
 
 ## Getting Started
 
-Developers can choose to start from a template (e.g. Blank, ERC-20, etc.), or use the Contract Import feature when running the `envio init` command. 
+Developers can choose to start from a template (e.g. Blank, ERC-20, etc.), or use the Contract Import feature when running the `envio init` command. Make sure you have installed the Envio CLI following the [installation guide](https://docs.envio.dev/docs/getting-started). 
 
 The [Contract Import](https://docs.envio.dev/docs/contract-import) feature is a quickstart that allows Manta developers to quickly autogenerate the key boilerplate for an entire indexer project off single or multiple smart contracts, and easily start up a basic indexer and a custom GraphQL API for their blockchain application within a few minutes.
 
