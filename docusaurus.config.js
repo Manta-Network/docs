@@ -15,6 +15,9 @@ module.exports = {
   organizationName: 'Manta-Network', // github org name.
   projectName: 'docs', // repo name.
   themeConfig: {
+    prism: {
+      additionalLanguages: ['solidity'],
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -33,10 +36,6 @@ module.exports = {
 			{
 				href: "https://github.com/Manta-Network",
 				label: "GitHub",
-				position: "right",
-			},
-			{
-				type: "localeDropdown",
 				position: "right",
 			},
 		],
@@ -116,6 +115,7 @@ module.exports = {
     },
   ],
   plugins: [
+    "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin",
     [
       require.resolve('@cmfcmf/docusaurus-search-local'),
       {

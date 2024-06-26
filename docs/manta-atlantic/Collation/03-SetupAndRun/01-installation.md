@@ -42,7 +42,7 @@ the manta .rpm package contains:
 
 -   the manta binary (which is also used to run manta)
 -   manta and manta systemd services
--   manta, manta, polkadot and kusama chain specifications
+-   manta, polkadot and kusama chain specifications
 -   a script which runs after installation and creates the manta system account which the systemd service runs under
 
 get started (see also: [rpm.manta.systems](https://rpm.manta.systems/)):
@@ -73,7 +73,7 @@ the manta .deb package contains:
 
 -   the manta binary (which is also used to run manta)
 -   manta and manta systemd services
--   manta, manta, polkadot and kusama chain specifications
+-   manta, polkadot and kusama chain specifications
 -   a script which runs after installation and creates the manta system account which the systemd service runs under
 
 get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
@@ -119,7 +119,7 @@ get started (see also: [deb.manta.systems](https://deb.manta.systems/)):
 
     # chainspecs
     sudo mkdir -p /usr/share/substrate
-    sudo curl -Lo /usr/share/substrate/manta.json https://raw.githubusercontent.com/Manta-Network/Manta/v3.0.9/genesis/manta-genesis.json
+    sudo curl -Lo /usr/share/substrate/manta.json https://raw.githubusercontent.com/Manta-Network/Manta/v${manta_version}/genesis/manta-genesis.json
     sudo curl -Lo /usr/share/substrate/polkadot.json https://raw.githubusercontent.com/paritytech/polkadot/master/node/service/chain-specs/polkadot.json
 
     # systemd unit file

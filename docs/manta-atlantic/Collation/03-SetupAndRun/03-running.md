@@ -35,7 +35,7 @@ import TabItem from '@theme/TabItem';
     --rpc-cors all \
     --collator \
     --rpc-methods=unsafe \
-    --unsafe-rpc-external
+    --unsafe-rpc-external \
 
   #Production sample
   docker run \

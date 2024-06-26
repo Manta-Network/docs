@@ -648,8 +648,6 @@ sudo firewall-cmd --reload
 
     -   NOTE
 
-        Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
-
         -   In the first box, labelled "using the selected account", select the collator account holding the [collator MANTA bond](https://docs.calamari.network/docs/calamari/Staking/Collation/Requirements#kma-bond).
         -   In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
         -   In the third (dropdown) box, select `setKeys(keys, proof)`
@@ -671,8 +669,6 @@ sudo firewall-cmd --reload
     </div>
 
     NOTE
-
-    Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 
     -   In the first (dropdown) box, labelled "selected state query", select `session`.
     -   In the second (dropdown) box, select `nextKeys(AccountId32): Option<MantaRuntimeOpaqueSessionKeys>`.
@@ -711,7 +707,7 @@ sudo firewall-cmd --reload
 
     **candidateCount** is a hint for transaction weight ( i.e. gas fee ) that should be larger than the current number of registered collators ( or the transaction will fail ). The current number can be found by counting the entries on the [manta chain](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems#/chainstate/constants) > parachainStaking > candidatePool(): u128. It is safe to just set a high number, but reducing it as much as possible reduces the estimated gas fees that must be available in your account in addition to the bond amount for the transaction to succeed.
 
-    Your collator will join the set of block producers and become eligible for rewards at the beginning of the next *round* ( i.e. after a maximum of 6 hours ) **if it is in the top 63 of registered node candidates by total stake** ( i.e. your collator bond + sum of all delegations on your node )
+    Your collator will join the set of block producers and become eligible for rewards at the beginning of the next *round* ( i.e. after a maximum of 6 hours ) **if it is in the top 70 of registered node candidates by total stake** ( i.e. your collator bond + sum of all delegations on your node )
 
     # Maintenance
 
@@ -796,9 +792,10 @@ sudo firewall-cmd --reload
 
     ### Q: What are the different networks?[](https://docs.calamari.network/docs/calamari/Staking/Collation/CollatorFAQ#q-what-are-the-different-networks)
 
-    A: There are three networks, each will require dedicated hardware. The Dolphin Testnet is free and should be used to familiarize yourself with the setup.
+    A: There are two networks, each will require dedicated hardware.
 
-    Manta Network - production network on Polkadot (Not yet live) MantaNetwork - canary network on Polkadot Dolphin Testnet - development network
+    - Manta Network - production network on Polkadot (Not yet live)
+    - Calamari Network - canary network on Kusama
 
     ### Q: What are Nimbus keys?[](https://docs.calamari.network/docs/calamari/Staking/Collation/CollatorFAQ#q-what-are-nimbus-keys)
 

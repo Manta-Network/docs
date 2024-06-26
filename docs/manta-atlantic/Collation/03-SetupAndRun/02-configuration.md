@@ -229,6 +229,39 @@ ExecStart=/usr/bin/manta \
 </TabItem>
 </Tabs>
 
+**note** passing `--relay-chain-rpc-urls <rpc_url>` to the parachain parameter section in the startup command will delegate relay chain data to remote relaychain rpc, it's recommanded to not do this, however this can be handy at times when local relay chain data fails to sync (related artcle https://mantanetwork.notion.site/Manta-Atlantic-Block-Production-Accident-Report-9a3742c6e0844d78a32e76fc47cf0cc0), **below is an example**
+
+```bash
+ExecStart=/usr/bin/manta \
+    --collator \
+    --name 'my parachain collator node name' \
+    --chain /usr/share/substrate/manta.json \
+    --base-path /var/lib/substrate \
+    --port 31333 \
+...
+    --state-cache-size 0 \
+    --relay-chain-rpc-urls "wss://1rpc.io/dot" \
+    --relay-chain-rpc-urls "wss://polkadot-public-rpc.blockops.network/ws" \
+    --relay-chain-rpc-urls "wss://polkadot.api.onfinality.io/public-ws" \
+    --relay-chain-rpc-urls "wss://rpc.ibp.network/polkadot" \
+    --relay-chain-rpc-urls "wss://polkadot-rpc.dwellir.com" \
+    --relay-chain-rpc-urls "wss://polkadot-rpc-tn.dwellir.com" \
+    --relay-chain-rpc-urls "wss://rpc.dotters.network/polkadot" \
+    --relay-chain-rpc-urls "wss://rpc-polkadot.luckyfriday.io" \
+    --relay-chain-rpc-urls "wss://polkadot.public.curie.radiumblock.co/ws" \
+    --relay-chain-rpc-urls "wss://rockx-dot.w3node.com/polka-public-dot/ws" \
+    --relay-chain-rpc-urls "wss://dot-rpc.stakeworld.io" \
+    --bootnodes \
+      /dns/a1.manta.systems/tcp/30333/p2p/12D3KooWCpnkG834s9ETesFTWtGqRDjs6Te1UCXHib3iD8GEmXLU \
+      /dns/a4.manta.systems/tcp/30333/p2p/12D3KooWN9Zud842idiiUypJF9nzQfNrSsuWQRdtRA8D6sqsPXMb \
+...
+    -- \
+    --name 'my embedded relay node name' \
+    --chain /usr/share/substrate/polkadot.json \
+    --port 31334 \
+...
+```
+
 ### parameters with special significance for collator maintainers
 two sets of parameters are supplied to the substrate node binary (manta), separated by a double-dash (`--`). the first set controls the behavior of the parachain node. the second set controls the behaviour of the embedded relay-chain node.
 - significant **parachain** parameters
@@ -237,6 +270,7 @@ two sets of parameters are supplied to the substrate node binary (manta), separa
   - `--port`: parachain peer-to-peer port. manta default is 31333. this port must be accessible over the internet to other manta nodes.
   - `--prometheus-port`: parachain metrics port. manta default is 9615. this port must be accessible to the manta metrics monitor at: `18.156.192.254` (`18.156.192.254/32` if you are specifying by subnet)
   - `--prometheus-external`: if you are not reverse proxying metrics over ssl, you may need to set this parameter to tell the embedded metrics server to listen on the *all ips* socket (`0.0.0.0:9615`) rather than *localhost only* (`127.0.0.1:9615`)
+  - `--relay-chain-rpc-urls`: list of relay chain full node to communicate with, if this parameter is specified, the node will delegate relay chain data to the relay chain rpc endpoints, local relay chain data won't be used/synced. This parameter is **not** recommanded, however this can be handy at times when local relay chain data can't sync. (list of official polkadot relay chain rpc endpoints can be found on [polkadot rpc endpoints](https://wiki.polkadot.network/docs/maintain-endpoints))
 - significant **relay-chain** parameters
   - `--name`: relay-chain node name, displayed on [polkadot telemetry](https://telemetry.manta.systems/#list/0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3).
   - `--port`: relay-chain peer-to-peer port. manta-embedded-polkadot default is 31334. this port must be accessible over the internet to other polkadot nodes.

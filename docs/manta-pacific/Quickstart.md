@@ -4,14 +4,18 @@ Get started with exploring the Manta Pacific ecosystem and developing/deploying 
 
 ## Adding Manta Pacific to MetaMask
 
-| Category        | Information                            |
-| --------------- | -------------------------------------- |
-| Network Name    | Manta Pacific L2 Rollup                |
-| Network URL     | https://pacific-info.manta.network/    |
-| RPC URL         | https://pacific-rpc.manta.network/http |
-| Websocket URL   | wss://pacific-rpc.manta.network/ws     |
-| Chain ID        | 169                                    |
-| Currency Symbol | ETH                                    |
+| Category           | Information                                         |
+| ------------------ | --------------------------------------------------- |
+| Network Name       | Manta Pacific L2 Rollup                             |
+| Network URL        | https://pacific-info.manta.network/                 |
+| RPC URL            | https://pacific-rpc.manta.network/http              |
+| Additional RPC URL | https://manta-pacific.drpc.org                      |
+|                    | https://www.tencentcloud-rpc.com/v2/manta/manta-rpc |
+|                    | https://r1.pacific.manta.systems/http               |
+|                    | https://manta.nirvanalabs.xyz/mantapublic           |
+| Websocket URL      | wss://pacific-rpc.manta.network/ws                  |
+| Chain ID           | 169                                                 |
+| Currency Symbol    | ETH                                                 |
 
 ## Token List
 

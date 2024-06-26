@@ -153,8 +153,10 @@ The private keys are not displayed by the node, if you wish to back them up in o
 Run
 ```bash
 #!/bin/bash
-curl -H 'Content-Type: application/json' --data '{ "jsonrpc":"2.0", "method":"author_rotateKeys", "id":1 }' http://localhost:9933
+curl -H 'Content-Type: application/json' --data '{ "jsonrpc":"2.0", "method":"author_rotateKeys", "id":1 }' http://localhost:9133
 ```
+**note** the `9133` port is the value passed to `--rpc-port` change this accordingly
+
 Output from this RPC call should look like the following and is a concatenation of three 32-byte *public* keys in one long hex number.
 ```json
 {"jsonrpc":"2.0","result":"0x06736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb50e6aeb15951288c562f6906736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb50e6aeb15951288c562f6106736e65ab33fd1e4e3e434a1fa2c5425f0e263ddb40e6aeb15911288c562f63","id":1}
@@ -182,8 +184,6 @@ If your collator node logs do not contain both `[Relaychain] 💤 Idle` and `[Pa
 Account binding is done on-chain. The simplest way to do this is using polkadot.js.
 - Load [manta/developer/extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/extrinsics) in a browser:
   ![session.setkeys()](/img/collator-program/session.setkeys-manta.png)
-:::note
-Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 :::
    - In the first box, labelled "using the selected account", select the collator account holding the [collator MANTA bond](../Requirements#manta-bond).
    - In the second (dropdown) box labelled "submit the following extrinsic", select `session`.
@@ -195,8 +195,6 @@ Although the screenshot shows a connected dolphin node, the procedure is identic
    - Click on the `Submit Transaction` button and wait for confirmation (a green tick), to appear in the upper right corner of the browser window.
 - Verfy that the collator account and the Session keys are *bound* by loading [manta/developer/chain state](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.manta.systems%2F#/chainstate) in a browser:
   ![session.nextkeys()](/img/collator-program/session.nextkeys-manta.png)
-:::note
-Although the screenshot shows a connected dolphin node, the procedure is identical when connected to the Manta Network
 :::
    - In the first (dropdown) box, labelled "selected state query", select `session`.
    - In the second (dropdown) box, select `nextKeys(AccountId32): Option<MantaRuntimeOpaqueSessionKeys>`.
