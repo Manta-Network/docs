@@ -7,6 +7,8 @@
 | Network Name       | Manta Pacific L2 Rollup                             |
 | Description        | The public mainnet for Manta Pacific.               |
 | Network URL        | https://pacific-info.manta.network/                 |
+| Explorer URL       | https://pacific-explorer.manta.network/             |
+|                    | https://manta.socialscan.io/                        |
 | RPC URL            | https://pacific-rpc.manta.network/http              |
 | Additional RPC URL | https://manta-pacific.drpc.org                      |
 |                    | https://www.tencentcloud-rpc.com/v2/manta/manta-rpc |
