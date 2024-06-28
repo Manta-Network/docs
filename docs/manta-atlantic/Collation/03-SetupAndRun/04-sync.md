@@ -35,7 +35,8 @@ if you cannot wait for the recommended sync mechanism to complete, you may obtai
 - wait for both parachain and relay-chain idle messages to appear in the logs
 
 list available snapshot date are
-* `2024-05-07UTC` (latest)
+* `2024-06-28UTC` (latest)
+* `2024-05-07UTC`
 * `2024-03-07UTC`
 * `2024-02-12UTC`
 * `2024-01-29UTC`
@@ -54,7 +55,7 @@ sudo systemctl stop manta.service
 
 # sync manta blockchain database
 lib_path="/var/lib/substrate" # change this accordingly
-snapshot_date="2024-05-07UTC" # change this accordingly
+snapshot_date="2024-06-28UTC" # change this accordingly
 identity="$(sudo -H -u manta cat "${lib_path}"/chains/manta/db/full/IDENTITY)"
 echo "identity: ${identity}"
 sudo -H -u manta rm -r "${lib_path}"/chains/manta/db/full
