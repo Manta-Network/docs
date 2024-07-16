@@ -34,7 +34,7 @@ OpenZL consists of 3 parts:
 OpenZL provides list of cryptographic primitives with *optimized* zero-knowledge proof implementations in `eclair`.
 These gadgets are composable and can be combined to build more powerful protocols such as anonymous payment (ZCash/Manta) or zk-rollups. The gadget library that OpenZL provides on its initial release includes:
 * *hashing gadget*: an optimized implementation of the Poseidon Hash Function [1], with parameterized arity (2, 4, 8)
-* *accumulator gadget*: Merkle tree gadget that supports zero-knowlegde membership proofs. The Merkle tree gadget supports incremental updates as well.
+* *accumulator gadget*: Merkle tree gadget that supports zero-knowledge membership proofs. The Merkle tree gadget supports incremental updates as well.
 * *commitment gadget*: A commitment scheme that is both *binding* and *hiding*. This commitment scheme is built on top of the *hashing gadget*.
 
 ### Embedded Circuit Language And Intermediate Representation (`eclair`)
@@ -161,7 +161,7 @@ Totol budget: 1,010,500 USD (will be converted to DOT using the exchange rate on
 
 ### Oversight Committee
 
-Oversight commitee will manage the overall execution and the financial budget of OpenZL:
+Oversight committee will manage the overall execution and the financial budget of OpenZL:
 * **Shumo Chu** (Co-founder, Manta Network)
 * **Luke Pearson** (Research Partner, Polychain Capital)
 * **Bryan Chen** (CTO, Acala Network)

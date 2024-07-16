@@ -3,11 +3,11 @@
 The `alloc` module defines ECLAIR's interface for allocating values in a compiler. We use the term "allocation" here to refer to the process of declaring a variable in a ZK proof system and (maybe) assigning it a value. Note that we are *not* referring to memory-related abstractions like heap allocation.
 
 Variables in a ZK proof system can be private witnesses, public inputs, constants, or some mixture of these. For example, in a merkle tree membership proof we would have variables representing the values stored:
-- in some leaf of the tree 
+- in some leaf of the tree
 - along the path from that leaf to the root
 - in the root of the tree.
 
-In the simplest case, all those values have the same type -- perhaps a finite field element. But in a ZKP, all those values should be private except the root, which would be public. So the description of this circuit must distinguish between public and private variables. 
+In the simplest case, all those values have the same type -- perhaps a finite field element. But in a ZKP, all those values should be private except the root, which would be public. So the description of this circuit must distinguish between public and private variables.
 
 ECLAIR calls this distinction the "allocation mode." There are four allocation modes:
 1. **Constant**: values that are proper to the circuit description and never change. These are public quantities known at compilation time.
@@ -40,13 +40,13 @@ pub trait Variable<M, COM = ()> {
     /// Underlying Type
     type Type;
 
-    /// Allocates a new unknown value into the `compiler`. The terminology "unknown" 
-    /// refers to the fact that we need to allocate a slot for this variable during 
+    /// Allocates a new unknown value into the `compiler`. The terminology "unknown"
+    /// refers to the fact that we need to allocate a slot for this variable during
     /// compilation time, but do not yet know its underlying value.
     fn new_unknown(compiler: &mut COM) -> Self;
 
-    /// Allocates a new known value from `this` into the `compiler`. The terminology 
-    /// "known" refers to the fact that we have access to the underyling value during 
+    /// Allocates a new known value from `this` into the `compiler`. The terminology
+    /// "known" refers to the fact that we have access to the underlying value during
     /// execution time where we are able to use its concrete value for execution.
     fn new_known(this: &Self::Type, compiler: &mut COM) -> Self;
 }
@@ -56,7 +56,7 @@ As with constants, variables have an underlying `Type` that they represent withi
 As with the `Constant` allocation mode, ECLAIR makes no assumptions about what it means to be `Public`, `Private` or `Derived` in a given `COM` context. ECLAIR assumes only that a variable's value is not yet known at compilation time.
 
 ### Known *vs* Unknown Allocation
-Unlike constants, there are two ways of allocating variables: as known and unknown. Allocation using `fn new_known` requires the variable's concrete value `this`. Allocation using `fn new_unknown` merely tells the `compiler` that *when execution occurs*, a value of this `Type` will go here. 
+Unlike constants, there are two ways of allocating variables: as known and unknown. Allocation using `fn new_known` requires the variable's concrete value `this`. Allocation using `fn new_unknown` merely tells the `compiler` that *when execution occurs*, a value of this `Type` will go here.
 
 Of course execution cannot actually occur until all variables have been provided a value. Allocating variables before their values are known using `fn new_unknown` allows us to perform certain useful operations from the circuit description before execution time, akin to performing algebraic manipulations on physical formulae before substituting in concrete values for the variables.
 
@@ -64,8 +64,8 @@ For example, some proving systems require pre-computed prover and verifier keys.
 
 This suggests an important principle of circuit-writing in ECLAIR: it is generally useful to separate variable *allocation* from variable *manipulation*. That is, one should identify the variables whose values are provided as inputs, either public or private, by the prover. Then, taking those as inputs, one writes a function to describe how they are manipulated according to the circuit logic.
 
-### Example: Merkle Tree Membership 
-To illustrate this we return to the merkle tree membership example we started with above. The relevant input values are: 
+### Example: Merkle Tree Membership
+To illustrate this we return to the merkle tree membership example we started with above. The relevant input values are:
 - a leaf value: `leaf: L`
 - the values of all sibling nodes on a path from that leaf to the root: `path: P`
 - a root value: `root: R`
@@ -111,8 +111,8 @@ membership_check(leaf, path, root, &mut compiler);
 // Compute proof
 let proof = compiler.prove();
 ```
-This time the compiler was able to compute a ZKP because the variables were allocated with known values. 
+This time the compiler was able to compute a ZKP because the variables were allocated with known values.
 
-As mentioned above, it was useful in this example to separate allocation and manipulation. All manipulation occurs within `fn membership_check`, which takes arguments that are assumed to be already allocated in the `compiler`. This ensured that the same manipulations would be performed on the symbolic and concrete forms of these variables. 
+As mentioned above, it was useful in this example to separate allocation and manipulation. All manipulation occurs within `fn membership_check`, which takes arguments that are assumed to be already allocated in the `compiler`. This ensured that the same manipulations would be performed on the symbolic and concrete forms of these variables.
 
 (Of course many new variables are allocated as `fn membership_check` performs its computation, but their values are not provided directly by the prover. Perhaps it is more correct to say that one should separate variable *input* from variable manipulation.)
