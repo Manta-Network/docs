@@ -9,7 +9,7 @@ The Poseidon permutation, defined in [GKRRS '19](https://eprint.iacr.org/2019/45
 This tutorial will walk through building the Poseidon permutation in ECLAIR. All OpenZL tutorials are accompanied by code examples, see [here](https://github.com/openzklib/openzl/tree/main/openzl-tutorials). Note that this code differs somewhat from our [optimized Poseidon implementation](https://github.com/openzklib/openzl/tree/main/openzl-crypto/src/poseidon).
 
 ### trait `Specification`
-The Poseidon permutation requires a choice of finite field. We will keep this example generic by using a Rust trait `Specification` to specify our assumptions on the field and defining the Poseidon permutation relative to any type that implements `Specification`.
+The Poseidon permutation requires a choice of finite field. We will keep this example generic by using a Rust trait `Specification` to specify our assumptions on the field and define the Poseidon permutation relative to any type that implements `Specification`.
 ```rust
 /// Poseidon Specification
 ///
@@ -254,7 +254,7 @@ where
 ```
 Note that `fn full_round` and `fn partial_round` take the round number as an input; this is so that they will take correct constants for the given round. Note that they also take the `compiler` as an input. As we explained above, this enables these functions to generate constraints within the ZK proof system specified by the type `COM`. For example, when adding round constants the `add_const_assign` method will add a constraint to `compiler` that enforces the addition of a public constant to the secret witness. Similarly, `fn mds_matrix_multiply` generates constraints within `compiler` to enforce that `state` was multiplied by the MDS Matrix.
 
-Again, when no `COM` type is specified the default `COM = ()` simply performs native computation without any constraint generation. The advantage of ECLAIR's `COM` abstraction is the certainty that `add_const_assign` or `mds_matrix_multiply` always conform to the same definition whether they are being used in native or non-native computation. 
+Again, when no `COM` type is specified the default `COM = ()` simply performs native computation without any constraint generation. The advantage of ECLAIR's `COM` abstraction is the certainty that `add_const_assign` or `mds_matrix_multiply` always conform to the same definition whether they are being used in native or non-native computation.
 
 ### Putting it all Together: `fn permute`
 Finally we combine the pieces to define the full permutation:

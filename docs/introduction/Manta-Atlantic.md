@@ -4,7 +4,7 @@ Manta Atlantic is the fastest and most decentralized ZK Layer1 supporting modula
 
 Compared with those zk identity layers 1 to build a zk smart contract language, Manta Atlantic is focusing more on the ZK compliance credential layer with real adoption and interoperability to make other projects have interoperable identities without dealing with any cryptography work.
 
-The Manta’s zk circuit and infrastructure has been developed by two years, it has a public account based address system and an UTXO based private address system, we call it zkAddress. The zkAddress shielded information including SBT minting, onchain credentials, offchain identities. It is the first private address system that is reusable, independent and auditable. Also the first one supports multiple NFTs, which has its own seed phase and can sync on different devices. With Prove Key, users are able to share the certain credential of the zkAddress without leaking zk identity.
+The Manta’s zk circuit and infrastructure have been developed for two years, it has a public account based address system and an UTXO based private address system, we call it zkAddress. The zkAddress shielded information including SBT minting, onchain credentials, offchain identities. It is the first private address system that is reusable, independent and auditable. Also the first one supports multiple NFTs, which has its own seed phase and can sync on different devices. With Prove Key, users are able to share the certain credential of the zkAddress without leaking zk identity.
 
 
 [Manta Network Extends zkSBT Features to Over 1.5m Web3 Users](https://mantanetwork.medium.com/manta-network-extends-zksbt-features-to-over-1-5m-web3-users-81cadd7ebdbf)
