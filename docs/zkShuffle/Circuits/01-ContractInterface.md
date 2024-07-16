@@ -254,7 +254,7 @@ Gets the decryption record (i.e., which players have decrypted this card).
 
 ```function queryAggregatedPk(uint256 gameId) external returns(uint px, uint py)```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L96-L98)
 
-Queries the aggregated public key for card shuffling/dealing in `gameId`-th game. The public key is a elliptic curve point on BN254 G1 curve.
+Queries the aggregated public key for card shuffling/dealing in `gameId`-th game. The public key is an elliptic curve point on BN254 G1 curve.
 
 **Parameters:**
 - ```gameId```: The created shuffle game ID.
