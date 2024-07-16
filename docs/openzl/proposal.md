@@ -31,7 +31,7 @@ OpenZL consists of 3 parts:
 
 ### Gadget Library
 
-OpenZL provides list of cryptographic primitives with *optimized* zero-knowledge proof implementations in `eclair`.
+OpenZL provides a list of cryptographic primitives with *optimized* zero-knowledge proof implementations in `eclair`.
 These gadgets are composable and can be combined to build more powerful protocols such as anonymous payment (ZCash/Manta) or zk-rollups. The gadget library that OpenZL provides on its initial release includes:
 * *hashing gadget*: an optimized implementation of the Poseidon Hash Function [1], with parameterized arity (2, 4, 8)
 * *accumulator gadget*: Merkle tree gadget that supports zero-knowledge membership proofs. The Merkle tree gadget supports incremental updates as well.
@@ -41,7 +41,7 @@ These gadgets are composable and can be combined to build more powerful protocol
 
 Embedded Circuit Language And Intermediate Representation (`eclair`) is a shallow embedded DSL within Rust that serves the circuit description language in the OpenZL stack. It has the following design considerations:
 * *Proof system agnostic*: `eclair` is an IR that describes the circuit logic instead of lower-level proof-systems-specific semantics and optimizations.
-* *Unifying native and constraint code*: Writing zero-knowledge proof code in common framework like `arkworks`, it requires programmers to write the same logic twice -- one for constraints generation, one for native execution. This creates a huge burden on developers and is also error-prone. `eclair` solves this problem elegantly (see later an example) by introducing the concept of a "compiler". Developers only need to write the circuit logic in `eclair` once, and it compiles to both native code and constraints. Developers not only write circuit logic once, they also don't have to worry about the disparity between the native code and the constraint generating code (which could certainly be an existing bug in current applications). In addition, `eclair` automatically generates sanity check code for both native execution and constraints generation.
+* *Unifying native and constraint code*: Writing zero-knowledge proof code in a common framework like `arkworks`, it requires programmers to write the same logic twice -- one for constraints generation, one for native execution. This creates a huge burden on developers and is also error-prone. `eclair` solves this problem elegantly (see later an example) by introducing the concept of a "compiler". Developers only need to write the circuit logic in `eclair` once, and it compiles to both native code and constraints. Developers not only write circuit logic once, they also don't have to worry about the disparity between the native code and the constraint generating code (which could certainly be an existing bug in current applications). In addition, `eclair` automatically generates sanity check code for both native execution and constraints generation.
 * *ruling out common errors*: At *compile time*, `eclair` checks that private witnesses stay private and the public inputs stay public. For example, if a circuit implementer that is not using `eclair` misuses private witness allocation, this could cause a leakage of sercret key in the protocol implementation.
 
 Below is an example of a sub-circuit defined in `eclair` (this is Manta Atlantic Testnet V2 code in [manta-rs](https://github.com/Manta-Network/manta-rs)):
@@ -103,7 +103,7 @@ One observation here is that the code passed in `compiler` as an argument. When 
 
 ### Adaptors to Proof Systems
 
-OpenZL implements adaptors to different constraint systems used in different underlying proof systems. The current supported underlying constaint systems include:
+OpenZL implements adaptors to different constraint systems used in different underlying proof systems. The currently supported underlying constraint systems include:
 * R1CS in [`arkworks/groth16`](https://github.com/arkworks-rs/groth16) (support level: production)
 * Plonk constraints in [`zk-garage/plonk`](https://github.com/zk-garage/plonk) (support level: experimental)
 * Relaxed R1CS in [`microsoft/nova`](https://github.com/microsoft/Nova) (support level: experimental)
@@ -155,7 +155,7 @@ We will provide `substrate`-specific tutorials to show case how to code an end-t
 | CI/CD      |  5,000  |  CI/CD for OpenZL |
 | Misc.   | 500 | DNS, Website Hosting, etc |
 
-Totol budget: 1,010,500 USD (will be converted to DOT using the exchange rate on application)
+Total budget: 1,010,500 USD (will be converted to DOT using the exchange rate on application)
 
 ## OpenZL team
 
@@ -166,11 +166,11 @@ Oversight committee will manage the overall execution and the financial budget o
 * **Luke Pearson** (Research Partner, Polychain Capital)
 * **Bryan Chen** (CTO, Acala Network)
 
-Funding and spendings will be managed in a 2/3 multisig.
+Funding and spending will be managed in a 2/3 multisig.
 
 ### Development Team (Alphabetical)
 
-* **Boyuan Feng**: Cryptogrpahic Engineer at Manta, PhD Computer Science from UCSB, extensive zero-knowledge proof compiler experiences (e.g. first author of [ZEN](https://eprint.iacr.org/2021/087)).
+* **Boyuan Feng**: Cryptographic Engineer at Manta, PhD Computer Science from UCSB, extensive zero-knowledge proof compiler experiences (e.g. first author of [ZEN](https://eprint.iacr.org/2021/087)).
 * **Brandon H. Gomes**: Cryptographic Engineer at Manta, BS Math from Rutgers, main author of [manta-rs](https://github.com/Manta-Network/manta-rs).
 * **Todd Norton**: Cryptographic Engineer at Manta, PhD Physics from Caltech.
 * **Tom Shen**: Cryptographic Engineer at Manta, BS Computer Science from UC Berkeley, [arkworks](https://github.com/arkworks-rs) core contributor.

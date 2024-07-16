@@ -6,7 +6,7 @@ description: 'zkShuffle Contract desc'
 
 # Overview
 
-zkShuffle Contracts provide two contract interfaces to help developers build their own card games:
+zkShuffle Contracts provides two contract interfaces to help developers build their own card games:
 - [IShuffleStateManager](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/IShuffleStateManager.sol): The manager of shuffle state machine, which creates and registers shuffle state, deals and opens cards.
 - [IBaseGame](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/IBaseGame.sol): Developers need to inherit this interface when writing their own game contracts.
 
@@ -56,7 +56,7 @@ Enters the register state, which can only be called by the game owner.
 
 > **Note:** The ```gameId``` parameter in all the interfaces corresponds to the return value of the ```createShuffleGame``` function.
 
-> **Note:** ```register``` only initiate the registration phase so that players can register, it doesn't actually perform the registration.
+> **Note:** ```register``` only initiates the registration phase so that players can register, it doesn't actually perform the registration.
 
 ### playerRegister
 
@@ -119,13 +119,13 @@ Initiates the shuffle phase, which can only be called by game contract.
 - ```gameId```: The created shuffle game ID.
 - ```next```: The calldata that will be executed in the next invocation.
 
-> **Note:** ```shuffle``` only initiate the shuffle phase so that players can shuffle, it doesn't actually perform the shuffle.
+> **Note:** ```shuffle``` only initiates the shuffle phase so that players can shuffle, it doesn't actually perform the shuffle.
 
 ### dealCardsTo
 
 ```function shuffle(uint256 gameId, BitMaps.BitMap256 memory cards, uint256 playerId, bytes calldata next) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L332-L337)
 
-Specifies a set of cards to be dealed to a players, which can only be called by game contract.
+Specifies a set of cards to be dealt to a player, which can only be called by game contract.
 
 **Parameters:**
 - ```gameId```: The created shuffle game ID.
@@ -133,7 +133,7 @@ Specifies a set of cards to be dealed to a players, which can only be called by 
 - ```playerId```: The player index in the shuffle game.
 - ```next```: The calldata that will be executed in the next invocation.
 
-> **Note:** ```dealCardsTo``` only initiate the dealing phase so that players can deal, it doesn't actually perform the dealing.
+> **Note:** ```dealCardsTo``` only initiates the dealing phase so that players can deal, it doesn't actually perform the dealing.
 
 > **Note:** ```cards``` is represented in bitMap. For example: if the data of ```cards``` is 28, it corresponds to the binary representation 11100. This means that the cards with indexes [2, 3, 4] need to be dealt.
 

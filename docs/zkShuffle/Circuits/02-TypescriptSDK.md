@@ -7,7 +7,7 @@ description: 'zkShuffle SDK Overview'
 
 zkShuffles SDK provides [IZKShuffle](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L47-L58) as a standard interface to interact with shuffle manager contract.
 The goal is to simplify zk proof generation and key management.
-With IZKShuffle interface, game developer can build zk game without any experience on cryptography including zero knowledge proof, and thus can focus on the game logic.
+With IZKShuffle interface, game developer can build zk game without any experience in cryptography including zero knowledge proof, and thus can focus on the game logic.
 
 # IZKShuffle
 
@@ -84,7 +84,7 @@ Opens cards specified by `cardIds` and submits a proof on-chain.
 ```async openOffchain(gameId: number, cardIds: number[]): Promise<number[]>```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/jssdk/src/shuffle/zkShuffle.ts#L342)
 
 Opens cards specified by `cardIds`. Returns card's original value if open success, otherwise returns -1 for the card.
-> Different from `open` that sends the decryption onchain, `openOffchain` only shows decrypted card on user machine and does not send to blockchain.
+> Different from `open` that sends the decryption onchain, `openOffchain` only shows decrypted card on user's machine and does not send it to blockchain.
 
 **Parameters:**
 - `gameId` : number

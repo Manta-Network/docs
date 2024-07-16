@@ -3,7 +3,7 @@
 The `alloc` module defines ECLAIR's interface for allocating values in a compiler. We use the term "allocation" here to refer to the process of declaring a variable in a ZK proof system and (maybe) assigning it a value. Note that we are *not* referring to memory-related abstractions like heap allocation.
 
 Variables in a ZK proof system can be private witnesses, public inputs, constants, or some mixture of these. For example, in a merkle tree membership proof we would have variables representing the values stored:
-- in some leaf of the tree
+- in some leaves of the tree
 - along the path from that leaf to the root
 - in the root of the tree.
 
