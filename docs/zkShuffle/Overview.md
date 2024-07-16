@@ -31,6 +31,6 @@ Developers need to implement game contracts for a complete game, which contains 
 
 zkHoldem is one unique use case where zkShuffle helps to fundamentally eliminate the trust issue existing in the traditional online poker industry.
 
-Through the utilization of zkShuffle, zkHoldem is able to provide a card shuffling & dealing mechanism that is 100% decentralized, where all players on the table will contribute a piece of randomness to the card deck they are using, effectively guaranteeing the fairness of card distribution in a privacy-preserving way.
+Through the utilization of zkShuffle, zkHoldem is able to provide a card shuffling & dealing mechanism that is 100% decentralized, where all players on the table will contribute a piece of randomness to the card deck they are using, effectively guaranteeing the fairness of card distribution in a zk identity-preserving way.
 
 Website: [www.zkholdem.xyz](https://www.zkholdem.xyz/)

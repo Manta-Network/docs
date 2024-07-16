@@ -1,3 +1,0 @@
-# MantaPay Wallet Protocol
-
-TBC

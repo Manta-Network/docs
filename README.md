@@ -1,6 +1,6 @@
 # Manta Network Documentations
 
-Content in [docs.manta.network](https://docs.manta.network). This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Manta Network is the multi-modular ecosystem for zero-knowledge (ZK) applications.Content in [docs.manta.network](https://docs.manta.network). This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ## Installation
 

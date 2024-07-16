@@ -9,7 +9,7 @@
  Create as many sidebars as you want.
  */
 
- module.exports = {
+module.exports = {
     docs: [
         {
             type: "category",
@@ -38,136 +38,41 @@
                     ],
                 },
                 {
-                    type: "category",
-                    label: "Core Concepts",
-                    items: [
-                        "concepts/ZKP",
-                        "concepts/zkAddress",
-                        "concepts/TrustedSetup",
-                        "concepts/proofkey",
-                    ],
+                    type: "doc",
+                    label: "Manta Token",
+                    id: "mantaToken/mantaToken",
                 },
                 {
                     type: "category",
                     label: "Research",
                     items: [
-                        "learn/Talks",
-                    ],
-                },
-                "manta/Token",
-            ],
-        },
-        {
-            type: "category",
-            label: "Product Guides",
-            collapsible: false,
-            items: [
-                {
-                    type: "category",
-                    label: "NPO",
-                    items: [
                         {
                             type: "doc",
-                            label: "About NPO -zkSBT ",
-                            id: "guides/npo/About",
+                            label: "Zero-Knowledge Proofs",
+                            id: "concepts/ZKP",
                         },
                         {
                             type: "doc",
-                            label: "Benefits",
-                            id: "guides/npo/Benefits",
+                            label: "Celestia",
+                            id: "concepts/Celestia",
                         },
                         {
                             type: "doc",
-                            label: "For Users",
-                            id: "guides/npo/ForUsers",
+                            label: "ZKEVM",
+                            id: "concepts/ZKEVM",
                         },
                         {
                             type: "doc",
-                            label: "For Developers",
-                            id: "guides/npo/ForDeveloper",
+                            label: "Universal Circuits (Alpha): zkShuffle",
+                            id: "zkShuffle/Overview",
+                        },
+                        {
+                            type: "doc",
+                            label: "OP Stack",
+                            id: "concepts/OPStack",
                         },
                     ],
                 },
-                {
-                    type: "category",
-                    label: "Manta Wallet",
-                    items: [
-                        {
-                            type: "doc",
-                            label: "Get Started",
-                            id: "guides/MantaWallet",
-                        },
-                        {
-                            type: "doc",
-                            label: "Migration",
-                            id: "guides/MantaWalletMigration",
-                        },
-                        {
-                            type: "doc",
-                            label: "Update",
-                            id: "guides/MantaWalletUpdate",
-                        },
-                        {
-                            type: "doc",
-                            label: "Consolidate UTXOs",
-                            id: "guides/ConsolidateUTXOs",
-                        },
-                    ],
-                },
-                {
-                    type: "category",
-                    label: "Manta Pay",
-                    items: [
-                        {
-                            type: "doc",
-                            label: "Manta Wallet User (New)",
-                            id: "guides/MantaPay-Wallet",
-                        },
-                        {
-                            type: "doc",
-                            label: "Manta Signer User",
-                            id: "guides/MantaPay-Signer",
-                        },
-                    ],
-                },
-                {
-                    type: "doc",
-                    label: "Bridge",
-                    id: "guides/Bridge",
-                },
-                {
-                    type: "category",
-                    label: "Staking",
-                    items: [
-                        {
-                            type: "category",
-                            label: "KMA Staking",
-                            items: [
-                                "calamari/Staking/Overview",
-                                "calamari/Staking/Rewards",
-                                "calamari/Staking/Rules",
-                                {
-                                    type: "category",
-                                    label: "Delegation",
-                                    items: [
-                                        "calamari/Staking/Delegation/dApp Overview",
-                                        "calamari/Staking/Delegation/HowTo Delegate",
-                                    ],
-                                },
-                                "calamari/Staking/StakingFAQ",
-                            ],
-                        },
-                        // NOTE: To be created later
-                        // {
-                        //   type: 'category',
-                        //   label: 'MANTA Staking',
-                        //   items: [
-                        //     'guides/staking/MANTA/Overview',
-                        //   ],
-                        // }
-                    ],
-                },
-                "guides/MantaSigner",
             ],
         },
         {
@@ -176,14 +81,41 @@
             collapsible: false,
             items: [
                 {
+                    type: "doc",
+                    label: "Network Information",
+                    id: "manta-pacific/Build on Manta/Network Information",
+                },
+                // {
+                //     type: "category",
+                //     label: "Network Info",
+                //     items: [
+                //         {
+                //             type: "doc",
+                //             label: "Quickstart",
+                //             id: "manta-pacific/Quickstart",
+                //         },
+
+                //         {
+                //             type: "doc",
+                //             label: "Block Explorer",
+                //             id: "manta-pacific/Block Explorer",
+                //         },
+                //         {
+                //             type: "doc",
+                //             label: "JSON-RPC Nodes",
+                //             id: "manta-pacific/JSON-RPC Nodes",
+                //         },
+                //         {
+                //             type: "doc",
+                //             label: "Testnet Info",
+                //             id: "manta-pacific/Testnet Info",
+                //         },
+                //     ],
+                // },
+                {
                     type: "category",
-                    label: "Network Info",
+                    label: "Building on Manta",
                     items: [
-                        {
-                            type: "doc",
-                            label: "Quickstart",
-                            id: "manta-pacific/Quickstart",
-                        },
                         {
                             type: "doc",
                             label: "EVM Compatibility",
@@ -191,25 +123,143 @@
                         },
                         {
                             type: "doc",
-                            label: "Block Explorer",
-                            id: "manta-pacific/Block Explorer",
+                            label: "Manta Contracts",
+                            id: "manta-pacific/Build on Manta/Contracts",
                         },
                         {
                             type: "doc",
-                            label: "JSON-RPC Nodes",
-                            id: "manta-pacific/JSON-RPC Nodes",
+                            label: "Tokens",
+                            id: "manta-pacific/Build on Manta/Tokens",
                         },
                         {
                             type: "doc",
-                            label: "Testnet Info",
-                            id: "manta-pacific/Testnet Info",
+                            label: "Fees",
+                            id: "manta-pacific/Build on Manta/Fees",
+                        },
+                        {
+                            type: "doc",
+                            label: "Differences between Ethereum and Manta",
+                            id: "manta-pacific/Build on Manta/Differences between Ethereum and MantaNetwork",
                         },
                     ],
                 },
                 {
                     type: "category",
+                    label: "Tools",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Node Providers",
+                            id: "manta-pacific/Tools/Node Providers",
+                        },
+                        {
+                            type: "doc",
+                            label: "Block Explorers",
+                            id: "manta-pacific/Tools/Block Explorers",
+                        },
+                        {
+                            type: "doc",
+                            label: "Network Faucets",
+                            id: "manta-pacific/Tools/Network Faucets",
+                        },
+                        {
+                            type: "doc",
+                            label: "Oracles",
+                            id: "manta-pacific/Tools/Oracles",
+                        },
+                        {
+                            type: "doc",
+                            label: "Data Indexers",
+                            id: "manta-pacific/Tools/Data Indexers",
+                        },
+                        {
+                            type: "doc",
+                            label: "Onramps",
+                            id: "manta-pacific/Tools/Onramps",
+                        },
+                        {
+                            type: "doc",
+                            label: "Security Partners",
+                            id: "manta-pacific/Tools/Security Partners",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Bridges",
+                    items: [
+                        {
+                            type: "doc",
+                            label: " Bridge $MANTA Token Between Manta Pacific and Manta Atlantic",
+                            id: "manta-pacific/Tools/Bridge/Bridge $MANTA Token Between Manta Pacific and Manta Atlantic",
+                        },
+                        {
+                            type: "category",
+                            label: "Native Bridge",
+                            items: [
+                                {
+                                    type: "doc",
+                                    label: "How to Use Native Bridge",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/How to Use Native Bridge",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "How to deploy Ethereum token on Manta",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/How to deploy Ethereum token on Manta",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "How to list token on Native Bridge",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/How to list token on Native Bridge",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "How to use JS SDK bridge token between Ethereum and Manta",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/How to use JS SDK bridge token between Ethereum and Manta",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "FAQ",
+                                    id: "manta-pacific/Tools/Bridge/Native Bridge/FAQ",
+                                },
+                            ],
+                        },
+                        {
+                            type: "doc",
+                            label: "Third party Bridge",
+                            id: "manta-pacific/Tools/Bridge/Third party Bridge",
+                        },
+                        {
+                            type: "doc",
+                            label: "Bridging Celestia‘s $TIA to Manta Pacific",
+                            id: "manta-pacific/Tools/Bridge/Bridging Celestia‘s $TIA to Manta Pacific",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
+                    label: "Manta Pacific Node",
+                    items: [
+                        // {
+                        //     type: "doc",
+                        //     label: "Hardware conditions",
+                        //     id: "manta-pacific/Manta Pacific Node/Hardware conditions",
+                        // },
+                        {
+                            type: "doc",
+                            label: "How to run Replica Node",
+                            id: "manta-pacific/Manta Pacific Node/How to run Replica Node",
+                        },
+                        // {
+                        //     type: "doc",
+                        //     label: "Join Telegram to get node updates",
+                        //     id: "manta-pacific/Manta Pacific Node/Join Telegram to get node updates",
+                        // },
+                    ],
+                },
+                {
+                    type: "category",
                     label: "Universal Circuits (Alpha): zkShuffle",
-
                     items: [
                         {
                             type: "doc",
@@ -224,6 +274,21 @@
                 },
                 {
                     type: "category",
+                    label: "NPO-zkSBT",
+                    items: [
+                        {
+                            type: "autogenerated",
+                            dirName: "zkSBT/auto",
+                        },
+                        {
+                            type: "doc",
+                            label: "Design",
+                            id: "zkSBT/zkSBT Asset",
+                        },
+                    ],
+                },
+                {
+                    type: "category",
                     label: "Deploy Your App",
                     items: [
                         {
@@ -232,114 +297,161 @@
                         },
                     ],
                 },
+                {
+                    type: "doc",
+                    label: "Manta Pacific Roadmap",
+                    id: "concepts/Roadmap",
+                },
+                // {
+                //     type: "category",
+                //     label: "Bridge to Manta Pacific ",
+                //     items: [
+                //         {
+                //             type: "autogenerated",
+                //             dirName: "bridge-to-pacific",
+                //         },
+                //     ],
+                // },
+                {
+                    type: "doc",
+                    label: "SPACE ID Name Service and SPACE ID",
+                    id: "manta-pacific/Space ID",
+                },
             ],
         },
         {
             type: "category",
-            label: "Calamari Network",
+            label: "Manta Atlantic Network",
             collapsible: false,
             items: [
                 {
                     type: "doc",
-                    label: "What is Calamari?",
-                    id: "calamari/Overview",
+                    label: "Network Information",
+                    id: "manta-atlantic/Network Information",
                 },
                 {
                     type: "category",
-                    label: "Develop on Calamari Testnet",
-                    items: [
-                        {
-                            type: "doc",
-                            label: "How to use Manta Wallet in dApp",
-                            id: "developers/manta.js/how-to-use-manta-private-wallet-in-dapp",
-                        },
-                        {
-                            type: "doc",
-                            label: "How to use Manta.js SDK",
-                            id: "developers/manta.js/how-to-use-manta-js-sdk",
-                        },
-                        {
-                            type: "doc",
-                            label: "How to Mint zkSBT",
-                            id: "developers/manta.js/how-to-mint-zk-sbt",
-                        },
-                        {
-                            type: "category",
-                            label: "Integration with Calamari",
-                            items: [
-                                {
-                                    type: "doc",
-                                    label: "Get Started",
-                                    id: "calamari/DevelopOnCalamari",
-                                },
-                                {
-                                    type: "category",
-                                    label: "Cross-Chain Interactions (XCM)",
-                                    items: [
-                                        "guides/XcmOverview",
-                                        "guides/XcmTransfers",
-                                        "guides/XcmOnboarding",
-                                    ],
-                                },
-                            ],
-                        },
-                        {
-                            type: "category",
-                            label: "Collation",
-                            items: [
-                                "calamari/Staking/Collation/Overview",
-                                "calamari/Staking/Collation/Requirements",
-                                {
-                                    type: "category",
-                                    label: "SetupAndRun",
-                                    items: [
-                                        "calamari/Staking/Collation/SetupAndRun/installation",
-                                        "calamari/Staking/Collation/SetupAndRun/configuration",
-                                        "calamari/Staking/Collation/SetupAndRun/running",
-                                        "calamari/Staking/Collation/SetupAndRun/sync",
-                                        "calamari/Staking/Collation/SetupAndRun/keys",
-                                        "calamari/Staking/Collation/SetupAndRun/bond",
-                                    ],
-                                },
-                                "calamari/Staking/Collation/Maintenance",
-                                "calamari/Staking/Collation/Reduce Bond",
-                                "calamari/Staking/Collation/Unbond",
-                                "calamari/Staking/Collation/CollatorFAQ",
-                                "calamari/Staking/Early Collator Program",
-                            ],
-                        },
-                    ],
-                },
-                "Codebase",
-                {
-                    type: "category",
-                    label: "🐙 Calamari Token (KMA)",
+                    label: "Collator",
                     items: [
                         {
                             type: "autogenerated",
-                            dirName: "calamari/KMA",
+                            dirName: "manta-atlantic/Collation",
                         },
-                        "calamari/CrowdloanClaim",
                     ],
                 },
-                "calamari/Governance",
-                "calamari/Partnership",
+                {
+                    type: "category",
+                    label: "Node",
+                    items: [
+                        "manta-atlantic/Node/Overview",
+                        "manta-atlantic/Node/Requirements",
+                        {
+                            type: "category",
+                            label: "SetupAndRun",
+                            items: [
+                                "manta-atlantic/Node/SetupAndRun/full_node",
+                                "manta-atlantic/Node/SetupAndRun/archive_node",
+                            ],
+                        },
+                    ],
+                },
+                {
+                    type: "doc",
+                    label: "Bridge",
+                    id: "manta-atlantic/Bridge",
+                },
+                {
+                    type: "category",
+                    label: "Staking",
+                    items: [
+                        "manta-atlantic/Staking/Overview",
+                        "manta-atlantic/Staking/Rewards",
+                        "manta-atlantic/Staking/Rules",
+                        {
+                            type: "category",
+                            label: "Delegation",
+                            items: [
+                                "manta-atlantic/Staking/Delegation/dApp Overview",
+                                "manta-atlantic/Staking/Delegation/HowTo Delegate",
+                            ],
+                        },
+                        "manta-atlantic/Staking/StakingFAQ",
+                    ],
+                },
             ],
         },
         {
             type: "category",
-            label: "Previous Events",
+            label: "OpenZL",
             collapsible: false,
             items: [
                 {
-                    type: "link",
-                    label: "Squad Game",
-                    href: "https://squadgame.manta.network/",
+                    type: "doc",
+                    label: "Introduction",
+                    id: "openzl/introduction",
                 },
                 {
-                    type: "link",
-                    label: "Manta Network Crowdloan", // string - the label that should be displayed.
-                    href: "https://crowdloanstrategy.manta.network/", // string - the target URL.
+                    type: "category",
+                    label: "ECLAIR Basics",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Native vs Non-Native Computation",
+                            id: "openzl/native_nonnative",
+                        },
+                        {
+                            type: "category",
+                            label: "ECLAIR Standard Library",
+                            items: [
+                                {
+                                    type: "doc",
+                                    label: "Introduction",
+                                    id: "openzl/std/eclair_std_lib",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "Bool",
+                                    id: "openzl/std/bool",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "Cmp",
+                                    id: "openzl/std/cmp",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "Num",
+                                    id: "openzl/std/num",
+                                },
+                                {
+                                    type: "doc",
+                                    label: "Ops",
+                                    id: "openzl/std/ops",
+                                },
+                            ],
+                        },
+                        {
+                            type: "doc",
+                            label: "Allocation",
+                            id: "openzl/alloc",
+                        },
+                    ],
+                },
+                {
+                    type: "doc",
+                    label: "Tutorial: Poseidon Permutation",
+                    id: "openzl/poseidon_permutation_tutorial",
+                },
+                {
+                    type: "category",
+                    label: "Proof System Plugins",
+                    items: [
+                        {
+                            type: "doc",
+                            label: "Introduction",
+                            id: "openzl/proof_systems",
+                        },
+                    ],
                 },
             ],
         },

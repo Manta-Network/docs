@@ -6,7 +6,7 @@ const katex = require('rehype-katex');
 module.exports = {
   title: 'Manta Network Technical Resources',
   tagline:
-    'For the first privacy-preserving protocol built for scalability, privacy and interoperability.',
+    'For the first zk identity-preserving protocol built for scalability, identity and interoperability.',
   url: 'https://docs.manta.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -15,6 +15,9 @@ module.exports = {
   organizationName: 'Manta-Network', // github org name.
   projectName: 'docs', // repo name.
   themeConfig: {
+    prism: {
+      additionalLanguages: ['solidity'],
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -31,17 +34,8 @@ module.exports = {
 				position: "right",
 			},
 			{
-				href: "http://calamari.network/",
-				label: "Calamari Network",
-				position: "right",
-			},
-			{
 				href: "https://github.com/Manta-Network",
 				label: "GitHub",
-				position: "right",
-			},
-			{
-				type: "localeDropdown",
 				position: "right",
 			},
 		],
@@ -55,10 +49,6 @@ module.exports = {
             {
               label: 'Introduction',
               to: '/docs/Introduction',
-            },
-            {
-              label: 'Calamari',
-              to: '/docs/calamari/Overview',
             },
           ],
         },
@@ -75,7 +65,7 @@ module.exports = {
             },
             {
               label: 'Discord',
-              href: 'https://discord.gg/MnaM4mqq',
+              href: 'https://discord.gg/mantanetwork',
             },
           ],
         },
@@ -125,6 +115,7 @@ module.exports = {
     },
   ],
   plugins: [
+    "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin",
     [
       require.resolve('@cmfcmf/docusaurus-search-local'),
       {
@@ -132,17 +123,6 @@ module.exports = {
         indexPages: false,
         language: ["en", "zh"],
         maxSearchResults: 10,
-      },
-    ],
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            from: '/docs/calamari/Staking/Collation/SetupAndRun',
-            to: '/docs/calamari/Staking/Collation/SetupAndRun/installation',
-          },
-        ],
       },
     ],
   ],
