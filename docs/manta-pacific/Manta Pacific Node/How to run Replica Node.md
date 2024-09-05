@@ -36,7 +36,7 @@ See the README in each folder for instructions on how to run a replica node for 
 
 # Building a new OP-geth image
 
-Manta Pacific is running this commit of op-geth: [https://github.com/ethereum-optimism/op-geth/tree/39d121af21bc4cb45c46edf2dc1bf33daa28c54d](https://github.com/ethereum-optimism/op-geth/tree/39d121af21bc4cb45c46edf2dc1bf33daa28c54d)
+Manta Pacific is running this commit of op-geth: [https://github.com/ethereum-optimism/op-geth/commit/8e15470125ba3689dd7288e2aa7bbdca8730701b](https://github.com/ethereum-optimism/op-geth/commit/8e15470125ba3689dd7288e2aa7bbdca8730701b)
 
 See: `manta-replica/manta-pacific/Dockerfile.l2`
 
