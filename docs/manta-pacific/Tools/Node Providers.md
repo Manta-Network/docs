@@ -7,9 +7,9 @@ Manta Pacific provide a JSON-RPC interface that allows developers and users to i
 - RPC URL: [https://pacific-rpc.manta.network/http](https://pacific-rpc.manta.network/http)
 - Websocket URL: [wss://pacific-rpc.manta.network/ws](wss://pacific-rpc.manta.network/ws)
 
-## DRPC
+## dRPC
 
-[DRPC](https://drpc.org/) offers access to a distributed network of independent third-party partners and public nodes for Manta Pacific. They provide a free tier that allows for an unlimited amount of requests over public nodes, or a paid tier which provides access to all providers, as well as other additional features.
+[dRPC](https://drpc.org/) offers access to a distributed network of independent third-party partners and public nodes for Manta Pacific. They provide a free tier that allows for an unlimited amount of requests over public nodes, or a paid tier which provides access to all providers, as well as other additional features.
 
 - RPC URL: [https://manta-pacific.drpc.org](https://manta-pacific.drpc.org)
 
