@@ -30,7 +30,7 @@ Meet with our official security partners and reach out to them for benefiting th
   </div>
 
 <div className={styles.row_right} style={{'font-size':'14px'}}>
-    <strong>10%</strong> 
+    <strong>10%</strong>
     discount on all auditing services.
   </div>
 </div>
@@ -254,7 +254,7 @@ Meet with our official security partners and reach out to them for benefiting th
   </div>
 
 <div className={styles.row_right} style={{'font-size':'14px'}}>
-    <strong>10%</strong> 
+    <strong>10%</strong>
     discount on all auditing services.
   </div>
 </div>
@@ -276,7 +276,7 @@ Meet with our official security partners and reach out to them for benefiting th
   </div>
 
 <div className={styles.row_right} style={{'font-size':'14px'}}>
-    <strong>10%</strong> 
+    <strong>10%</strong>
     discount on all auditing services.
   </div>
 </div>
@@ -299,5 +299,34 @@ Meet with our official security partners and reach out to them for benefiting th
 
 <div className={styles.row_right} style={{'font-size':'14px'}}>
   Up to  <strong>30%</strong>  discount on all auditing services.
+  </div>
+</div>
+
+<div style={{'display':'flex','align-items':'center','padding-top':'16px','padding-bottom':'16px'}}>
+  <div className={styles.row_left}>
+    <img alt="0xcommit" src="/img/manta-pacific/0xCommit.svg" width="44px" height='44px' />
+    <div style={{'margin-left':'8px'}}>
+      <div style={{'font-size':'16px','font-weight':'600'}}>0xcommit</div>
+      <div className={styles.direction} style={{'display':'flex','font-size':'14px'}}>
+        <a href="https://www.0xcommit.com" className={'normal_text'} style={{'font-family':'Red Hat Text','display':'flex','align-items':'center','cursor':'pointer'}}>
+            Website >
+        </a>
+        <a href='mailto:shivansh@0xcommit.com' className={clsx('normal_text',styles.second_link)} style={{'font-family':'Red Hat Text','display':'flex','align-items':'center','cursor':'pointer'}}>
+            Mail >
+        </a>
+      </div>
+    </div>
+  </div>
+
+<div className={styles.row_right} style={{'display':'flex','flex-direction':'column','font-size':'14px'}}>
+  <span>
+   <strong>$0</strong> base cost Audits (No Bugs No Bills) for first 7 audits
+  </span>
+  <span>
+  20 free scans for Manta ecosystem.
+  </span>
+  <span>
+  <strong>Priority</strong>  audit service.
+  </span>
   </div>
 </div>
