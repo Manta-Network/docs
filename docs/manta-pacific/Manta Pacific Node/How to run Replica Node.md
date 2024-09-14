@@ -4,6 +4,27 @@
 
 # Update Log
 
+## September 19 Ecotone Upgrade
+
+In order to be prepared, please upgrade your op-node image to [public.ecr.aws/i6b2w2n6/op-node:5.2.0](http://public.ecr.aws/i6b2w2n6/op-node:5.2.0) and op-geth image to [public.ecr.aws/i6b2w2n6/op-geth:5.2.0](http://public.ecr.aws/i6b2w2n6/op-geth:5.2.0) and set the following new environment variables:
+
+op-node:
+
+CELESTIA_LEGACY_MODE: "true"
+OP_NODE_OVERRIDE_CANYON: "1726783200"
+OP_NODE_OVERRIDE_DELTA: "1726783200"
+OP_NODE_OVERRIDE_ECOTONE: "1726783200"
+OP_NODE_L1_BEACON_IGNORE: "true"
+
+op-geth:
+
+GETH_OVERRIDE_CANYON: "1726783200"
+GETH_OVERRIDE_ECOTONE: "1726783200"
+
+Scripts to run a replica node on the latest version:
+
+[manta-pacific-updated.zip](https://prod-files-secure.s3.us-west-2.amazonaws.com/0f5a214e-93fb-4c1a-891b-2f2b3596ae8e/9223d6e1-4f57-4924-8ea9-60e40c4b99f8/manta-pacific-updated.zip)
+
 ## March 12th Dencun Upgrade
 
 In order to be prepared, please upgrade your op-node image to [public.ecr.aws/i6b2w2n6/op-node:celestia-3.0.0-dencun](http://public.ecr.aws/i6b2w2n6/op-node:celestia-3.0.0) and set the necessary env variables. Note that the [manta-up.sh](http://manta-up.sh) script helps to generate the auth token for the celestia light node.
