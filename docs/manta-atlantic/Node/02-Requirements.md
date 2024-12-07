@@ -5,7 +5,7 @@ a. Running on your own hardware and within you own premises (recommended):
 - node system host
   - cpu: 8 cores
   - memory: 32 gb of ram (more is better)
-  - disk space: 700 gb of disk space dedicated to the blockchain basepath (as of date 2024 Dec 7th, more is better, growing at 200G~300G anually)
+  - disk space: 700 gb of disk space dedicated to the blockchain basepath (as of date 2024 Dec 7th, more is better, growing at 200G~300G annually)
 - infrastructure and environment
   - network bandwidth: 100 mbps+
   - internet-accessible ports:
