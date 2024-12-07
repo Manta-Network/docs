@@ -11,7 +11,7 @@ a. Running on your own hardware and within you own premises (recommended):
 -   collator system host (note that a substrate collator will utilize all available system ram and all available cpu cores unless specifically configured not to do so)
     -   cpu: 8 cores
     -   memory: 32 gb of ram (more is better)
-    -   disk space: 500 gb of disk space dedicated to the blockchain basepath (more is better)
+    -   disk space: 700 gb of disk space dedicated to the blockchain basepath (as of date 2024 Dec 7th, more is better, growing at 200G~300G anually)
 -   infrastructure and environment
 
     -   network bandwidth: 100 mbps+
