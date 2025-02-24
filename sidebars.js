@@ -71,6 +71,11 @@ module.exports = {
                             label: "OP Stack",
                             id: "concepts/OPStack",
                         },
+                        {
+                            type: "doc",
+                            label: "Fast Finality",
+                            id: "concepts/fast-finality",
+                        },
                     ],
                 },
             ],
