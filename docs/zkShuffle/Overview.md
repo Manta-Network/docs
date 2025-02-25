@@ -7,7 +7,12 @@ zkShuffle is an efficient mental poker emphasizing the reduction of gas costs on
 ## State Diagram
 
 The following state diagram provides an overview of the game process managed by the ShuffleManager contract. To initiate a new game, it must first be created. Upon creation, the manager contract assigns a unique ID to this game and players can join the game with that ID. Once the final player has registered, the game starts. Players can check the current turn within the game. If it's their turn to perform an action (shuffle, deal or open), they carry out the action accordingly.
-![](https://hackmd.io/_uploads/By8S6Xg92.png)
+
+<div align="center">
+    <img alt="State diagram" src={require("/static/img/zkshuffle-state-diagram.png").default} width="90%" />
+</div>
+
+<p align="center"><em>Fig: State diagram</em></p>
 
 ## Main Components
 
