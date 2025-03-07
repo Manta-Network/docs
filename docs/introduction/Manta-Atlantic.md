@@ -1,4 +1,4 @@
-# What is Manta Atlantic (Layer1)?
+# Manta Atlantic (Polkadot Layer 1)?
 
 Manta Atlantic is the fastest and most decentralized ZK Layer1 supporting modular on-chain compliance identities. Its suite of core products and technologies, including zkNFTs, staking and ecosystem projects, offers user-friendly access to powerful ZK-enabled use cases.
 

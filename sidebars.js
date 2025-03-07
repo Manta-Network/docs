@@ -27,12 +27,12 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "What is Manta Pacific (Layer 2)",
+                            label: "Manta Pacific (Ethereum Layer 2)",
                             id: "introduction/Manta-Pacific",
                         },
                         {
                             type: "doc",
-                            label: "What is Manta Atlantic (Layer1)",
+                            label: "Manta Atlantic (Layer 1)",
                             id: "introduction/Manta-Atlantic",
                         },
                     ],
