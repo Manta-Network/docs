@@ -1,4 +1,4 @@
-# What is Manta Pacific (Layer 2)?
+# Manta Pacific (Ethreum Layer 2)?
 
 ## Why another L2
 
@@ -14,13 +14,21 @@ Manta Pacific combines:
 
 Here's an overview of the core technical capabilities that enable Manta Pacific to deliver unparalleled security and performance.
 
-1. **Modular tech stack for scalability**
+1. Modular tech stack for scalability
 
-    - Cost Efficiency: Leverages Celestia’s modular Data Availability (DA) layer to reduce transaction fees by 90%+ compared to monolithic L2s.
+    - **Cost Efficiency:** Leverages Celestia’s modular Data Availability (DA) layer to reduce transaction fees by 90%+ compared to monolithic L2s.
 
-    - High Throughput: Processes thousands of transactions per second (TPS) with parallelized execution.
+    - **High Throughput:** Processes thousands of transactions per second (TPS) with parallelized execution.
 
-2. 
+    - **Fast Finality:** Uses a [dual-chain solution](../concepts/fast-finality.md) to deliver blazing fast finality times in the order of minutes.
+
+2. Developer friendly architecture
+
+    - **EVM-native Environment:** Deploy Solidity smart contracts in a familiar but faster EVM environment and benefit from Ethereum's robust security features.
+    
+    - **Universal Circuits 2.0:** A library of pre-built cryptographic tools (e.g., privacy-preserving identity verification and compliant KYC modules) that developers can integrate into existing Solidity smart contracts.
+
+    - **App-agnostic design:** Support for diverse use cases such as gaming, fintech, and other enterprise-grade solutions.
 
 ## How Does Manta Pacific Work?
 
@@ -41,12 +49,6 @@ Manta Pacific unveils Universal Circuits 2.0, which elevates the developer exper
 Universal Circuits offer ZK-as-a-Service, allowing any Solidity developer to call Manta Pacific contracts through APIs to enable ZK features (such as compliant private identities for DeFi, identity verification for Web3 Social, and zk identity-preserving shuffling for on-chain gaming) with just a few lines of code. Manta Pacific’s core circuit designs for its Universal Circuits include zkContracts such as zkShuffle for on-chain gaming, and additional circuits based on Semaphore, by the Identity Scaling and Exploration (PSE) Labs from Ethereum Foundation.
 
 A multi-modular approach provides developers the flexibility to leverage Manta’s private identity tools across chains and in web2 environments including mobile apps. Manta’s SDKs and proof keys offer developer-friendly solutions for integrating on-chain identity with just a few lines of code.
-
-### New ZK Use Cases and Real Users
-
-Manta Pacific offers Universal Circuits, a ZK library for developers to easily call ZK-enabled contracts for their existing Solidity smart contracts and dApps. Manta Pacific’s core circuit designs for its Universal Circuits include zkContracts such as zkShuffle for on-chain gaming.
-
-”Individually, Manta’s ZK, Celestia’s modular DA, and the zkEVM offer compelling technologies with proven adoption. By combining these three together, we are creating the best-in-class ecosystem for developers and users when it comes to ZK use cases—something that is very much needed in the space.” —Victor Ji, Founder of Manta
 
 ### Non-Invasive Compliance
 
