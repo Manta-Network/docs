@@ -1,3 +1,6 @@
+
+**PAGE NEEDS TO BE UPDATED AS PER THE LATEST STAKING FLOW - TBD**
+
 Before we begin, please make sure you are familiar with the [Staking Rules for Delegators](../Rules#for-delegators)
 
 When visiting the Staking page for the first time, you will see a pop up appear. Allow polkadot.js access to the dApp
