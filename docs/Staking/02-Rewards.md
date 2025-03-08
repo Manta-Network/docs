@@ -2,7 +2,7 @@
 
 \* -> **NEEDS TO BE CONFIRMED**
 
-MANTA staking rewards are managed and distributed by an audited* [staking manager contract (ADD LINK)](TBD) on Ethereum.
+MANTA staking rewards are managed and distributed by an audited* [staking manager contract (ADD LINK)](Rewards) on Ethereum.
 
 Let's look at the specifics of how token rewards get distributed among node operators and token holders.
 

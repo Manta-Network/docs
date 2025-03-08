@@ -33,7 +33,7 @@ To become a node operator, you'll need:
 
 Node operators can potentially earn higher rewards, but the role they play requires keeping a close eye on network updates, along with other actions that increase the threshold for this network role.
 
-If you're interested, you can find more information about this path [in the node operator section](../Collation/Overview).
+If you're interested, you can find more information about this path [in the node operator section - TBD](Overview)*.
 
 ## Permission Participation for Node Operators
 

@@ -38,7 +38,7 @@ If a node operator has more than 100 delegators, the minimum delegation to earn 
 - Minimum MANTA bond to join the node operator candidate set: 400,000 MANTA
 - Maximum number of active node operators eligible for rewards: 70
 - The node operator rank is calculated as the total sum of MANTA staked on the node operator (i.e., the node operator's self-bond and all delegations)
-- Maximum number of active delegations (contributing to total stake) on each node operator - 100
+- Maximum number of active delegations (contributing to total stake) on each node operator: 100
 - \*Rewards are calculated in 6 hour intervals called *rounds*
 - \*Rewards are automatically paid to the node operator account as per the settlement schedule
 - Rewards are not automatically compounded.
