@@ -1,4 +1,5 @@
-# FAQ
+**ALL DETAILS NEED TO BE VERIFIED**
+
 ### Q: What is the Manta staking APR?
 2% of the initial supply is awarded to Manta stakers for the first year.
 APR is varies depending on your percentage stake on a collator and whether it producing a block on its turn each time or if it's missing some

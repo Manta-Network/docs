@@ -78,6 +78,24 @@ module.exports = {
                         },
                     ],
                 },
+                {
+                    type: "category",
+                    label: "Staking",
+                    items: [
+                        "Staking/Overview",
+                        "Staking/Rewards",
+                        "Staking/Rules",
+                        {
+                            type: "category",
+                            label: "Delegation",
+                            items: [
+                                "Staking/Delegation/dApp Overview",
+                                "Staking/Delegation/HowTo Delegate",
+                            ],
+                        },
+                        "Staking/Staking FAQs",
+                    ],
+                },
             ],
         },
         {
@@ -364,24 +382,6 @@ module.exports = {
                     type: "doc",
                     label: "Bridge",
                     id: "manta-atlantic/Bridge",
-                },
-                {
-                    type: "category",
-                    label: "Staking",
-                    items: [
-                        "manta-atlantic/Staking/Overview",
-                        "manta-atlantic/Staking/Rewards",
-                        "manta-atlantic/Staking/Rules",
-                        {
-                            type: "category",
-                            label: "Delegation",
-                            items: [
-                                "manta-atlantic/Staking/Delegation/dApp Overview",
-                                "manta-atlantic/Staking/Delegation/HowTo Delegate",
-                            ],
-                        },
-                        "manta-atlantic/Staking/StakingFAQ",
-                    ],
                 },
             ],
         },
