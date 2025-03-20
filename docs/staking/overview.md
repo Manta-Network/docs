@@ -8,7 +8,7 @@ Symbiotic is a decentralized security protocol that enables blockchain networks 
 
 :::
 
-We're leveraging Symbiotic's restaking infrastructure to combine Ethereum's security with Manta Pacific's high-performance execution. This increases asset efficiency for MANTA token holders and helps enable [fast finality](../concepts/fast-finality.md) on Manta Pacific.
+We're leveraging Symbiotic's restaking infrastructure to combine Ethereum's security with Manta Pacific's high-performance execution. This increases asset efficiency for MANTA token holders and helps enable [fast finality](../concepts/fast-finality) on Manta Pacific.
 
 ## How It Works
 
