@@ -2,7 +2,7 @@
 
 ## How do I stake my MANTA tokens?
 
-Start by navigating to the [staking dashboard](#placeholder), and then choose an active operator of your choice. Follow our [step-by-step guide](./delegate-manta).
+Start by navigating to the [staking dashboard](#placeholder), and then choose an active operator of your choice. Follow our [step-by-step guide](./staking-howtos.md).
 
 ## How are staking rewards calculated?
 
