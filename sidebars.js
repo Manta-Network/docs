@@ -78,6 +78,28 @@ module.exports = {
                         },
                     ],
                 },
+                {
+                    type: "category",
+                    label: "Staking",
+                    items: [
+
+                        {
+                            type: "doc",
+                            label: "Overview",
+                            id: "staking/overview",
+                        },
+                        {
+                            type: "doc",
+                            label: "How-to Guides",
+                            id: "staking/staking-howtos",
+                        },
+                        {
+                            type: "doc",
+                            label: "FAQs",
+                            id: "staking/staking-faqs",
+                        },
+                    ],
+                },
             ],
         },
         {
