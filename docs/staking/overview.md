@@ -18,15 +18,22 @@ Simply put, Manta Pacific nodes have the option to become operators on the Symbi
 
 If you're keen to learn more, we recommend checking out the following docs:
 
-- [Understanding restaking](https://docs.symbiotic.fi/intro/stake)
-- [System architecture on Manta Network](../concepts/fast-finality#our-two-layer-solution)
-- [Reward mechanism - TBD](https://docs.symbiotic.fi)
+- [Symbiotic - What's restaking?](https://docs.symbiotic.fi/intro/stake)
+- [Babylon - Bitcoin staking](https://docs.babylonlabs.io/guides/overview/bitcoin_staking/)
+- [Fast finality architecture on Manta Network](../concepts/fast-finality#our-two-layer-solution)
 
 ## Key Benefits of this Architecture
 
 - Added Security for Manta Pacific: The delegated MANTA and BTC incentivize operators to honestly verify the state transitions on Manta Pacific, and the validation results are relayed to Ethereum to be settled there.
 - Token Rewards: Token delegators and node operators earn MANTA rewards.
 - Decentralization: Both fast finality and native MANTA staking are enabled using decentralized infrastructure.
+
+## Reward Mechanism
+
+Staking rewards are calculated differently for operators and token delegators.
+
+- **Operators** earn rewards based on their contribution to the network through the submission of fast finality proofs. A fixed amount of $172,600$ MANTA is distributed every $3$ days, and the distribution is proportional to the number of proof submissions made by the operator during this period. Additionally, operators can choose set a commission rate, which denotes the portion of the rewards they will retain before distributing the remaining rewards to their respective delegators.
+- **Delegators** receive rewards proportional to their staked amount in their chosen operator's vault. After the operator's commission is deducted, the remaining rewards are distributed among delegators based on their share of the total stake in that vault.
 
 ## Get Started
 
