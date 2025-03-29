@@ -8,7 +8,7 @@ By delegating your tokens to a validator, you contribute to the security and sta
 Follow the links below to take another look at how the native staking mechanism works and the rules for token delegators and node operators:
 
 - [Rules and roles - TBD](#placeholder)
-- [Reward mechanism - TBD](#placeholder)
+- [Reward mechanism](./overview#reward-mechanism)
 :::
 
 ### Step 1: Access the staking dashboard
