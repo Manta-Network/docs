@@ -40,7 +40,7 @@ An unique Position, who also bind to a certain sbt, is defined by several parame
 -   asset attribute : pomp range(100~1000, >10000, 1% whale).
 -   position timestamp : "Before Jun-21-2023 03:58:11, After Jun-20-2023 03:58:11"
 
-It would be more efficient and flexalbe to make the merkle tree per asset type/range, while postion timestamp and sbt id shoule be bind to semaphore identity.
+It would be more efficient and flexalbe to make the merkle tree per asset type/range, while position timestamp and sbt id shoule be bind to semaphore identity.
 
 Thus, we will make minor changes on semaphore protocol, the change is aim to resue semaphore libaries as much as possible.
 
