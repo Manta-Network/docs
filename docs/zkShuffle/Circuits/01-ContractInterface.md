@@ -139,14 +139,14 @@ Specifies a set of cards to be dealt to a player, which can only be called by ga
 
 ### openCards
 
-```function openCards(uint256 gameId, uint256 playerId, uint8 openningNum, bytes calldata next) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L477-L482)
+```function openCards(uint256 gameId, uint256 playerId, uint8 openingNum, bytes calldata next) external```[[src]](https://github.com/manta-network/zkShuffle/blob/main/packages/contracts/contracts/shuffle/ShuffleManager.sol#L477-L482)
 
 Specifies a player to open a number of cards, which can only be called by game contract.
 
 **Parameters:**
 - ```gameId```: The created shuffle game ID.
 - ```playerId```: The player index in the shuffle game.
-- ```openningNum```: The number of cards that the player wants to open.
+- ```openingNum```: The number of cards that the player wants to open.
 - ```next```: The calldata that will be executed in the next invocation.
 
 ```register``` ```shuffle``` ```dealCardsTo``` ```openCards```, these four functions all specify ```next``` as the next operation to be executed, but their execution timing is different.

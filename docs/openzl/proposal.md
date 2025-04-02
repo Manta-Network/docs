@@ -139,7 +139,7 @@ We will provide `substrate`-specific tutorials to show case how to code an end-t
    * End-to-end example and test using `groth16` backend
 * Milestone 2 (Feature Complete): Sep, 2022
    * Code complete (experimental) for `plonk` backend
-   * Code complete (experiemental) for `nova` backend
+   * Code complete (experimental) for `nova` backend
    * Spec complete for security audit
 * Milestone 3 (Audit): Nov. 2022
   Potential auditors: ABDK, Least Authority, Trail of Bits
