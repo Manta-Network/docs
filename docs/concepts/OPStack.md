@@ -28,8 +28,7 @@ Manta Pacific is currently launching Chapter 1: Manta Pacific Alpha, which is an
 
 In the upcoming chapters, following the roadmap of Manta Pacific:
 - [Chapter 2: Manta Pacific Alpha II (+Celestia DA).](/docs/concepts/Celestia)
-- [Chapter 3: Manta Pacific Beta (+Transition to zkEVM).](/docs/concepts/ZKEVM)
-- [Chapter 4: Manta Pacific Mainnet Production I (+Universal Circuits 2.0).](/docs/zkShuffle/Overview)
+- [Chapter 3: Manta Pacific Mainnet Production I (+Universal Circuits 2.0).](/docs/zkShuffle/Overview)
 
 <div style={{textAlign: 'center',marginBottom: '24px'}}>
     <img alt="pacific-roadmap" src="/img/guides/pacific-roadmap.png" width="70%"/>
