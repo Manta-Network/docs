@@ -1,6 +1,6 @@
-# Manta Pacific (Ethreum Layer 2)?
+# Manta Pacific
 
-## Why another L2
+## Why create another L2
 
 Today’s blockchain ecosystems struggle to balance scalability, cost efficiency, and advanced functionality for developers. Existing L2 solutions often force developers to compromise: monolithic architectures limit flexibility and performance, while fragmented tooling stifles innovation. Manta Pacific addresses this by offering a modular L2 ecosystem on Ethereum optimized for high-throughput, low-cost decentralized applications.
 
@@ -20,7 +20,7 @@ Here's an overview of the core technical capabilities that enable Manta Pacific 
 
     - **High Throughput:** Processes thousands of transactions per second (TPS) with parallelized execution.
 
-    - **Fast Finality:** Uses a [dual-chain solution](../concepts/fast-finality.md) to deliver blazing fast finality times in the order of minutes.
+    - **Fast Finality:** Uses a [dual-chain finality solution](../concepts/fast-finality.md) to deliver blazing fast finality times in the order of minutes.
 
 2. Developer friendly architecture
 

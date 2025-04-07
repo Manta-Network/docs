@@ -27,12 +27,12 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "Manta Pacific (Ethereum Layer 2)",
+                            label: "Manta Pacific",
                             id: "introduction/Manta-Pacific",
                         },
                         {
                             type: "doc",
-                            label: "Manta Atlantic (Layer 1)",
+                            label: "Manta Atlantic",
                             id: "introduction/Manta-Atlantic",
                         },
                     ],
@@ -48,23 +48,8 @@ module.exports = {
                     items: [
                         {
                             type: "doc",
-                            label: "Zero-Knowledge Proofs",
-                            id: "concepts/ZKP",
-                        },
-                        {
-                            type: "doc",
-                            label: "Celestia",
-                            id: "concepts/Celestia",
-                        },
-                        {
-                            type: "doc",
-                            label: "ZKEVM",
-                            id: "concepts/ZKEVM",
-                        },
-                        {
-                            type: "doc",
-                            label: "Universal Circuits (Alpha): zkShuffle",
-                            id: "zkShuffle/Overview",
+                            label: "Fast Finality",
+                            id: "concepts/fast-finality",
                         },
                         {
                             type: "doc",
@@ -73,8 +58,18 @@ module.exports = {
                         },
                         {
                             type: "doc",
-                            label: "Fast Finality",
-                            id: "concepts/fast-finality",
+                            label: "Celestia",
+                            id: "concepts/Celestia",
+                        },
+                        {
+                            type: "doc",
+                            label: "Universal Circuits (Alpha): zkShuffle",
+                            id: "zkShuffle/Overview",
+                        },
+                        {
+                            type: "doc",
+                            label: "Zero-Knowledge Proofs",
+                            id: "concepts/ZKP",
                         },
                     ],
                 },
