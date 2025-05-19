@@ -18,11 +18,10 @@ Manta Pacific uses Caldera’s customized OP Stack Rollup solution as the execut
 
 # The Next Step
 
-Manta Pacific is currently launching Chapter 1: Manta Pacific Alpha, which is an Ethereum-based Layer 2 solution built using OP Stack.
+Manta is currently launching Manta Pacific, which is an Ethereum-based Layer 2 solution built using OP Stack.
 
 In the upcoming chapters, following the roadmap of Manta Pacific:
-- [Chapter 2: Manta Pacific Alpha II (+Celestia DA).](/docs/concepts/Celestia)
-- [Chapter 3: Manta Pacific Mainnet Production I (+Universal Circuits 2.0).](/docs/zkShuffle/Overview)
+- [Manta Pacific Alpha II (+Celestia DA).](/docs/concepts/Celestia)
 
 <div style={{textAlign: 'center',marginBottom: '24px'}}>
     <img alt="pacific-roadmap" src="/img/guides/pacific-roadmap.png" width="70%"/>
