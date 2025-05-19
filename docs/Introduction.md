@@ -2,7 +2,7 @@
 
 Manta Network is the multi-modular ecosystem designed for building high-performance decentralized applications. The Manta stack delivers a seamless user experience with features such as fast finality and scalable execution.
 
-By combining modular architecture with advanced cryptography, Manta empowers developers to build applications optimized for use cases such as Decentralized Finance (DeFi), gaming, privacy-preserving transactions, and other enterprise-grade solutions.
+By combining modular architecture with advanced cryptography, Manta empowers developers to build applications optimized for use cases such as Decentralized Finance (DeFi), AI and enterprise-grade solutions for real-world assets and applications.
 
 **Manta offers two specialized networks**:
 
