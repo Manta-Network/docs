@@ -14,12 +14,6 @@ Layers are generally more tightly defined towards the bottom of the stack (like 
 
 # **Manta Pacific Alpha and** OP Stack
 
-In its current availability, Manta Pacific is an Optimistic Rollup on Ethereum using Ethereum DA. It leverages Manta Network’s Universal Circuits for developers to quickly build, test, and deploy ZK-enabled applications with just solidity and the Universal Circuits SDK. The goal is to build the dApp ecosystem based on Manta zkSBT and Universal Circuits such as [zkShuffle](https://docs.manta.network/docs/zkShuffle/Overview).
-
-On Manta Pacific, developers reap the benefits from Manta’s Universal Circuits and OP Stack’s low gas fee and scalability to build unique ZK-enabled dApps, which is unprecedented in existing Layer 2s. In particular, Manta Pacific provides Universal Circuits for popular use cases (e.g., [card shuffling/dealing](https://github.com/Manta-Network/zkShuffle) and private on-chain voting), solidity smart contracts for on-chain ZK logic, and a typescript SDK for front-end integration.
-
-Based on Manta’s Universal Circuits, developers without a ZK background can easily develop dApps with built-in ZK features from Manta Pacific such that they do not need to spend years of engineering efforts on customizing ZK circuits. Significantly different from Starkware and Aztec which re-design domain-specific language (DSL) for ZK such as Cario and Noir, Manta Pacific achieves EVM equivalence through adopting OP Stack Bedrock’s codebase. Thus, all existing smart contracts on Ethereum can be seamlessly adopted to Manta Pacific while enabling ZK-based features to unveil new application scenarios such as [verifiable private DID/KYC](https://www.binance.com/en/feed/post/458948), ZK-based fully-onchain games, and synergy between DeFi and decentralized private identity including zkSBT-based whitelist and off-ramp.
-
 Manta Pacific uses Caldera’s customized OP Stack Rollup solution as the execution layer. OP Stack has already been adopted by top projects for rollup solutions including Coinbase, a16z and Worldcoin. As the de-facto standard of L2 scaling, especially with the recent launch of Bedrock, OP Stack offers the best interoperability, engineering maturity, and long-term ecosystem outlook. In addition to scaling the computation using OP Stack, we leverage Caldera’s stateful precompiles to further reduce the computation cost of zero-knowledge proof verification-related costs.
 
 # The Next Step
