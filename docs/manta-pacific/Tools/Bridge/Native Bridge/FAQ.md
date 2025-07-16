@@ -8,9 +8,9 @@
 
 You can use 410+ popular Ethereum wallets such as Binance Web3 Wallet, OKX Web3 Wallet, MetaMask, etc.
 
-### How can I seek assistance
+<!-- ### How can I seek assistance
 
-Our [Discord](https://discord.com/invite/mantanetwork) community is available around the clock for general questions, assistance and support! You can create a support ticket in the related channels.
+Our [Discord](https://discord.com/invite/mantanetwork) community is available around the clock for general questions, assistance and support! You can create a support ticket in the related channels. -->
 
 ### Can I withdraw my assets back to Ethereum from Manta?
 

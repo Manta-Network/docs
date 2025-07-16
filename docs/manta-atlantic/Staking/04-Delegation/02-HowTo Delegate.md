@@ -17,10 +17,10 @@ Afterwards, you will be presented with a small pop up that prompts you to enter 
 ![](images/choose_stake.png)
 
 Success!
-Once the transaction goes through, wait a few moments and you will see that you are now staking your MANTA tokens. 
+Once the transaction goes through, wait a few moments and you will see that you are now staking your MANTA tokens.
 
 Rewards are distributed every 6 hours, and you will see the rewards automatically update in the dashboard.
 
 ![](images/active_collator.png)
 
-That’s all there is to start staking! Feel free to reach out to us on [our Discord](https://discord.gg/mantanetwork) if you have any questions.
+<!-- That’s all there is to start staking! Feel free to reach out to us on [our Discord](https://discord.gg/mantanetwork) if you have any questions. -->

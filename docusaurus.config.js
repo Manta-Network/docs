@@ -63,10 +63,10 @@ module.exports = {
               label: 'Telegram',
               href: 'https://t.me/mantanetworkofficial',
             },
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/mantanetwork',
-            },
+            // {
+            //   label: 'Discord',
+            //   href: 'https://discord.gg/mantanetwork',
+            // },
           ],
         },
         {
