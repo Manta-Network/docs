@@ -115,7 +115,7 @@ module.exports = {
     },
   ],
   plugins: [
-    "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin",
+    // "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin",
     [
       require.resolve('@cmfcmf/docusaurus-search-local'),
       {
