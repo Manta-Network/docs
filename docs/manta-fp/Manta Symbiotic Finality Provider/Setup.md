@@ -9,6 +9,13 @@ Repo Link: [manta-fp](https://github.com/Manta-Network/manta-fp)
 
 :::
 
+#### Hardware Recommendations
+
+The hardware recommendations below are provided as a guide. Operators are encouraged to do their own performance testing.
+CPU: 1core
+Memory: 2G
+Disk: 100G
+
 #### Steps to Deploy a SFP operator
 
 1. install go via [go doc](https://go.dev/doc/install)
