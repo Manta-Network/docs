@@ -85,6 +85,11 @@ module.exports = {
                         },
                         {
                             type: "doc",
+                            label: "Become an Operator",
+                            id: "staking/become-symbiotic-fp",
+                        },
+                        {
+                            type: "doc",
                             label: "FAQs",
                             id: "staking/staking-faqs",
                         },
