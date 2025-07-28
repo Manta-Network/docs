@@ -25,7 +25,7 @@ Repo Link: [manta-fp](https://github.com/Manta-Network/manta-fp)
 
 3. Adjust `sfpd.conf` for testnet:
    `OperatorName` should be unique
-   `RewardAddress` is your address to receive fp rewards
+   `RewardAddress` is your address to receive fp rewards, it's recommended to set a different address with your operator address for security reasons
    `EnableKms` can be enabled to use kms to sign
    `ChainId = 11155111` is the eth testnet ChainId
    `StartHeight` The latest height from which we start polling the chain of eth testnet
@@ -172,3 +172,81 @@ Repo Link: [manta-fp](https://github.com/Manta-Network/manta-fp)
 6. Health check api: `http://localhost:8080/ping`
 
 7. Metrics: `http://localhost:2113/metrics`
+
+#### Rewards
+
+There is no available UI (Coming soon!) for operators to check and claim their rewards. You can get the accumulated rewards operators through our API service:
+
+Base URL: `https://main.reward-api.pacific-staking.manta.network`
+
+- Check the **accumulated** claimable rewards amount:
+
+Path: `/reward/all-amount`
+
+Method: `POST`
+
+Parameters:
+
+| Parameter | Type | Example Value | Description |
+|-----------|------|---------------|-------------|
+| address | string | "0x9e22e7f3ad7a800c6a4cd42f9f3bc3b36fe11ec3" | The operator's address |
+| protocolType | string | "symbiotic" | The protocol type, should be "symbiotic" for Manta FP |
+| isOperator | boolean | true | `true` for operator |
+| isPending | boolean | false | (Optional) `true`: pending rewards, `false`: claimable rewards |
+
+Example response:
+```
+{
+    "success": true,
+    "data": [
+        {
+            "amount": "1677619047619047618631", // with 18 decimals
+            "rewardAddress": "0x9e22e7f3ad7a800c6a4cd42f9f3bc3b36fe11ec3",
+            "ownerAddress": "0x9e22e7f3ad7a800c6a4cd42f9f3bc3b36fe11ec3",
+            "lastUpdated": 1753370401000
+        }
+    ]
+}
+```
+
+- Claim rewards
+
+In order to claim rewards operators must get the signature from our service and call the token distribution contract to perform the token claiming.
+
+1. Get signature
+
+Path: `/reward/claim-all-data`
+
+Method: `POST`
+
+Parameters:
+
+| Parameter | Type | Example Value | Description |
+|-----------|------|---------------|-------------|
+| address | string | "0x9e22e7f3ad7a800c6a4cd42f9f3bc3b36fe11ec3" | The operator's address |
+| protocolType | string | "symbiotic" | The protocol type, should be "symbiotic" for Manta FP |
+| isOperator | boolean | true | `true` for operator |
+
+
+Example response:
+```
+{
+    "success": true,
+    "data": [
+        {
+            "calldata": "0x514302ca0000000000000000000000009e22e7f3ad7a800c6a4cd42f9f3bc3b36fe11ec374be214f4c1988163ca53f8d0b53c59e4d74a4c549975d6887444fdb8b8837f6000000000000000000000000000000000000000000000000bed1d0263d9f0000000000000000000000000000000000000000000000000000000000000000001cd704ba26bc476806be3381c49887bd28f1f5360ac195887dc7c245319efa740369db40b4520070f76e6b7a47cf69b04a27aac6a5fb4e3c4039835e3b27c354a2"
+        }
+    ]
+}
+```
+
+2. Call token distribution contract with signature
+
+The following command use foundry [cast](https://foundry-book.zksync.io/cast/) tool to interact with our [token distribution contract](todo).
+
+```
+cast send 0xtodo {CALLDATA_FROM_LAST_STEP}
+```
+
+After transaction is confirmed the rewards will be transferred to reward address set when registered.
+
