@@ -242,7 +242,7 @@ Example response:
 
 2. Call token distribution contract with signature
 
-The following command use foundry [cast](https://foundry-book.zksync.io/cast/) tool to interact with our [token distribution contract](todo).
+The following command use foundry [cast](https://foundry-book.zksync.io/cast/) tool to interact with our [token distribution contract](#).
 
 ```
 cast send 0xtodo {CALLDATA_FROM_LAST_STEP}
