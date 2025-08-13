@@ -32,7 +32,7 @@ If you're keen to learn more, we recommend checking out the following docs:
 
 Staking rewards are calculated differently for operators and token delegators.
 
-- **Operators** earn rewards based on their contribution to the network through the submission of fast finality proofs. A fixed amount of $54,794$ $MANTA is distributed every $3$ days for the first half year, and $109,588$ $MANTA every $3$ days for the time afterwards, and the distribution is proportional to the number of proof submissions made by the operator during this period. Additionally, operators can choose set a commission rate, which denotes the portion of the rewards they will retain before distributing the remaining rewards to their respective delegators.
+- **Operators** earn rewards for submitting fast finality proofs to the network. Reward distribution occurs every $3$ days: $54,794$ \$MANTA for the first six months, then $109,588$ \$MANTA thereafter, allocated proportionally based on each operator's proof submissions during the period. Operators can set a commission rate to retain a portion of rewards before distributing the remainder to their delegators.
 - **Delegators** receive rewards proportional to their staked amount in their chosen operator's vault. After the operator's commission is deducted, the remaining rewards are distributed among delegators based on their share of the total stake in that vault.
 
 ## Get Started
@@ -41,7 +41,7 @@ Staking rewards are calculated differently for operators and token delegators.
 
 If you run a Manta Pacific node and want to join as an operator, refer to the guides below.
 
-[TBD - Link to Manta Symbiotic FP docs]
+- [Become an operator](./become-symbiotic-fp)
 
 ### Delegate your MANTA Tokens
 

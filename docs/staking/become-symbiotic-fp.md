@@ -2,9 +2,6 @@
 
 **GitHub repo**: [manta-fp](https://github.com/Manta-Network/manta-fp)
 
-## System Requirements
-TBD
-
 :::info Important Note
 - **Minimum Stake**: 400,000 MANTA tokens required to receive rewards
 - **Operator Registration**: Once deregistered, the operator name, address, and reward address cannot be reused
@@ -202,7 +199,7 @@ A web-based UI for rewards management is coming soon. Currently, operators must 
 
 Check your total claimable rewards amount.
 
-- **Endpoint:** `/reward/all-amount`
+- **Path:** `/reward/all-amount`
 - **Method:** `POST`
 - **Content-Type:** `application/json`
 
@@ -256,7 +253,7 @@ const amountInManta = amountInWei / 1e18; // 1677.619 MANTA
 
 Fetch the signature required to claim your rewards.
 
-- **Endpoint:** `/reward/claim-all-data`  
+- **Path:** `/reward/claim-all-data`  
 - **Method:** `POST`
 - **Content-Type:** `application/json`
 
