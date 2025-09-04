@@ -93,6 +93,11 @@ module.exports = {
                             label: "FAQs",
                             id: "staking/staking-faqs",
                         },
+                        {
+                            type: "doc",
+                            label: "Fast Finality Audit Report",
+                            id: "staking/fast-finality-audit",
+                        },
                     ],
                 },
             ],
