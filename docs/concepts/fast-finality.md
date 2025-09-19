@@ -1,4 +1,4 @@
-# Fast Finality Solution on Manta Pacific
+# Fast Finality on Manta Pacific
 
 Layer 2 networks have faced a frustrating problem: it takes way too long for transactions to settle onchain. Most current solutions make users wait up to a week before they can be completely sure their transaction is final and their assets are safe. This delay creates significant UX friction and capital inefficiency. Our solution minimizes finality time while preserving security and decentralization guarantees.
 
