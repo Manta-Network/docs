@@ -214,7 +214,7 @@ Check your total claimable rewards amount.
 
 **Example Request**:
 ```bash
-curl -X POST https://main.reward-api.pacific-staking.manta.network/reward/all-amount \
+curl -X POST https://prod.reward-api.pacific-staking.manta.network/reward/all-amount \
   -H "Content-Type: application/json" \
   -d '{
     "address": "0x9e22e7f3ad7a800c6a4cd42f9f3bc3b36fe11ec3",
@@ -267,7 +267,7 @@ Fetch the signature required to claim your rewards.
 
 **Example Request**:
 ```bash
-curl -X POST https://main.reward-api.pacific-staking.manta.network/reward/claim-all-data \
+curl -X POST https://prod.reward-api.pacific-staking.manta.network/reward/claim-all-data \
   -H "Content-Type: application/json" \
   -d '{
     "address": "0x9e22e7f3ad7a800c6a4cd42f9f3bc3b36fe11ec3",
