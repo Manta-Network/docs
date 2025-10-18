@@ -144,15 +144,6 @@ Port = 8080
 - Link to the Helm chart: https://github.com/celestiaorg/helm-charts 
 :::
 
-#### Mainnet Configuration
-
-:::info Coming Soon
-Mainnet configuration will be available upon mainnet launch. Key differences will include:
-- Production Ethereum mainnet RPC
-- Mainnet contract addresses
-- Production Celestia namespace
-:::
-
 ### 4. Start the SFP Operator
 
 #### Option A: If `EnableKms = false`
@@ -189,11 +180,7 @@ export KMS_ID="your-kms-key-id"
 
 Operator rewards accumulate over time and can be claimed through the reward API and token distribution contract.
 
-:::info
-A web-based UI for rewards management is coming soon. Currently, operators must use the API to check and claim rewards.
-:::
-
-**Base URL:** `https://main.reward-api.pacific-staking.manta.network`
+**Base URL:** `https://prod.reward-api.pacific-staking.manta.network`
 
 ### 1. Fetch Accumulated Reward Amount
 
@@ -312,5 +299,5 @@ Once the transaction is confirmed, rewards will be automatically transferred to 
 
 ## Support and Resources
 
-- **Technical Support**: [Manta Network Discord](https://discord.gg/)
+- **Technical Support**: [Manta Network Discord](https://discord.gg/ktZWgwSu93)
 - **GitHub Issues**: [manta-fp repository](https://github.com/Manta-Network/manta-fp/issues)
