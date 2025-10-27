@@ -3,7 +3,7 @@
 **GitHub repo**: [manta-fp](https://github.com/Manta-Network/manta-fp)
 
 :::info Important Note
-- **Minimum Stake**: 400,000 MANTA tokens required to receive rewards
+- **Minimum Stake**: 100,000 MANTA tokens required to receive rewards
 - **Operator Registration**: Once deregistered, the operator name, address, and reward address cannot be reused
 :::
 
