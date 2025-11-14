@@ -3,7 +3,6 @@
 **GitHub repo**: [manta-fp](https://github.com/Manta-Network/manta-fp)
 
 :::info Important Note
-
 - **Minimum Stake**: 100,000 MANTA tokens required to receive rewards
 - **Operator Registration**: Once deregistered, the operator name, address, and reward address cannot be reused
 :::
@@ -67,18 +66,6 @@ __(Scroll right to view complete table on smaller screens)__
 
 <details><summary> Click me to view! </summary>
 <p>
-   `OperatorName` should be unique
-   `RewardAddress` is your address to receive fp rewards, it's recommended to set a different address with your operator address for security reasons
-   `EnableKms` can be enabled to use kms to sign
-   `ChainId = 11155111` is the ETH Testnet ChainId
-   `StartHeight` The latest block height from which we start polling the chain of ETH Testnet
-   `EthRpc` The rpc url of ETH Testnet
-   `L2OutputOracleAddr = 0x2dd44d1b04170C5623cCc55DD5ed43FAB08b0B46` The Testnet L2OutputOracleAddr
-   `MantaStakingMiddlewareAddress = 0x63e3e4542315512d717cc0997b518ab00aa496f0` The Testnet MantaStakingMiddlewareAddress
-   `SymbioticOperatorRegisterAddress = 0x6F75a4ffF97326A00e52662d82EA4FdE86a2C548` The Testnet SymbioticOperatorRegisterAddress
-   `DBPath` The db path, need to be persistent
-   `Namespace = 00006d742d66702d746e` The Celestia Mocha Testnet namespace
-   `DaRpc` The Celestia Mocha Testnet rpc url. You can deploy a [celestia light node](https://docs.celestia.org/how-to-guides/light-node) of Mocha Testnet. It also has a [helm chart](https://github.com/celestiaorg/helm-charts).
 
 ```toml
 [Application Options]
@@ -195,7 +182,6 @@ console.log("Private Key:", wallet.privateKey);
 console.log("Mnemonic:", wallet.mnemonic.phrase);
 ```
 :::caution Private Key Security
-
 Store your private keys and mnemonics securely. Make sure to use a secure `.env` file when handling private keys and never share or commit them to version control.
 :::
 
