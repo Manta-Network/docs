@@ -52,7 +52,7 @@ Edit the generated `sfpd.conf` file in `/data/manta-fp-sfpd-1/home/`:
    `SymbioticOperatorRegisterAddress = 0x6F75a4ffF97326A00e52662d82EA4FdE86a2C548` The Testnet SymbioticOperatorRegisterAddress
    `DBPath` The db path, need to be persistent
    `Namespace = 00006d742d66702d746e` The Celestia Mocha Testnet namespace
-   `DaRpc` The Celestia Testnet rpc url. You can deploy a [celestia light node](https://docs.celestia.org/how-to-guides/light-node) of Mocha Testnet. It also has a [helm chart](https://github.com/celestiaorg/helm-charts).
+   `DaRpc` The Celestia Mocha Testnet rpc url. You can deploy a [celestia light node](https://docs.celestia.org/how-to-guides/light-node) of Mocha Testnet. It also has a [helm chart](https://github.com/celestiaorg/helm-charts).
 
 ```toml
 [Application Options]
