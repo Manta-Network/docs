@@ -139,6 +139,9 @@ UpdateInterval = 100ms
 Host = 0.0.0.0
 Port = 8080
 ```
+
+#### Testnet Configuration
+
 :::info Celestia Light Node
 - Quick setup for Celestia light node if you choose to deploy your own: https://docs.celestia.org/how-to-guides/light-node
 - Link to the Helm chart: https://github.com/celestiaorg/helm-charts 
