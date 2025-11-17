@@ -32,7 +32,7 @@ If you're keen to learn more, we recommend checking out the following docs:
 
 Staking rewards are calculated differently for operators and token delegators.
 
-- **Operators** earn rewards for submitting fast finality proofs to the network. Reward distribution occurs every $3$ days: $54,794$ \$MANTA for the first six months, then $109,588$ \$MANTA thereafter, allocated proportionally based on each operator's proof submissions during the period. Operators can set a commission rate to retain a portion of rewards before distributing the remainder to their delegators.
+- **Operators** earn rewards for submitting fast finality proofs to the network. Reward distribution occurs every $3$ days with $18,264$ \$MANTA in total, allocated proportionally based on each operator's proof submissions during the period. Operators can set a commission rate to retain a portion of rewards before distributing the remainder to their delegators.
 - **Delegators** receive rewards proportional to their staked amount in their chosen operator's vault. After the operator's commission is deducted, the remaining rewards are distributed among delegators based on their share of the total stake in that vault.
 
 ## Get Started
