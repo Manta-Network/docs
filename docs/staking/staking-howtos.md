@@ -71,7 +71,7 @@ Locate the operator you wish to unstake your tokens from and select the correspo
 ### Step 3: Enter unstaking amount
 
 :::caution
-Note that you will not be able to cancel the unstaking action once confirmed and you'll have to wait out the 7-day waiting period before your MANTA tokens arrive in your wallet.
+Note that you will not be able to cancel the unstaking action once confirmed and you'll have to wait out the 3-day waiting period before your MANTA tokens arrive in your wallet.
 :::
 
 ![unstake-in-progres](../../static/img/staking-guide/unstake-in-progress.png)
@@ -82,4 +82,4 @@ Enter the token amount you're looking to unstake in the empty field in the pop-u
 
 ![claimable-rewards](../../static/img/staking-guide/claimable-rewards.png)
 
-Once the 7-day waiting period ends, the tokens will be available to claim on the **My Stake** page. Simply select the **Claim** button to claim your unstaked tokens and confirm the action.
+Once the 3-day waiting period ends, the tokens will be available to claim on the **My Stake** page. Simply select the **Claim** button to claim your unstaked tokens and confirm the action.

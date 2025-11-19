@@ -14,7 +14,7 @@ There is no lower limit on the token amount you can delegate to an operator.
 
 ## Is there an unbonding period for the staked tokens?
 
-Yes. There is a *3 day waiting period* after you unstake your tokens before you can claim them on the [**My Stake**](https://staking.manta.network/my-stake) page.
+Yes. There is a *3-day waiting period* after you unstake your tokens before you can claim them on the [**My Stake**](https://staking.manta.network/my-stake) page.
 
 ## Is slashing currently active on the staking layer?
 
