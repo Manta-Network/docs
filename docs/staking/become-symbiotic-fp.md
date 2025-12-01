@@ -303,11 +303,11 @@ Fetch the signature required to claim your rewards.
 ```bash
 curl -X POST https://prod.reward-api.pacific-staking.manta.network/reward/claim-all-data \
   -H "Content-Type: application/json" \
-  -d '{
+  -d '[{
     "address": "0x9e22e7f3ad7a800c6a4cd42f9f3bc3b36fe11ec3",
     "protocolType": "symbiotic",
     "isOperator": true
-  }'
+  }]'
 ```
 
 **Example Response**:
