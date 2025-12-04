@@ -7,10 +7,14 @@
 - **Operator Registration**: Once deregistered, the operator name, address, and reward address cannot be reused
 :::
 
-## Installation Steps
+## Hardware Requirements
 
-## Hardware requirements
-SFP Operator doesn’t require high hardware specifications — 1 vCPU, 1 GB RAM, and a 20 GB disk are already sufficient. However, the disk must be able to support future expansion.
+SFP Operator nodes can run efficiently on minimal hardware. Minimum requirements:
+- CPU: Single core (or 1 vCPU)
+- RAM: 1 GB
+- Storage: 20GB SSD (NVMe recommended), **MUST** support future expansion
+
+## Installation Steps
 
 ### 1. Install Go
 
