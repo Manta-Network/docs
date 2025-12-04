@@ -9,6 +9,9 @@
 
 ## Installation Steps
 
+## Hardware requirements
+SFP Operator doesn’t require high hardware specifications — 1 vCPU, 1 GB RAM, and a 20 GB disk are already sufficient. However, the disk must be able to support future expansion.
+
 ### 1. Install Go
 
 Follow the official [Go installation guide](https://go.dev/doc/install) for your system.
