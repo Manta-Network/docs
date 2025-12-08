@@ -334,7 +334,8 @@ Use the calldata from [Step 1](#step-1-get-claim-signature) to call the token di
 export PRIVATE_KEY="your-private-key"
 
 # Claim rewards
-cast send TODO_CONTRACT_ADDRESS \
+# CLAIM_CONTRACT on mainnet: 0x04c74e8a11c669acfb7ee01012bbf5cf1e57a10d
+cast send CLAIM_CONTRACT \
   "${CALLDATA_FROM_STEP_1}" \
   --private-key $PRIVATE_KEY
 ```
