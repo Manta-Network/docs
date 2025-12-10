@@ -90,6 +90,11 @@ module.exports = {
                         },
                         {
                             type: "doc",
+                            label: "Contract Integration",
+                            id: "staking/contract-integration",
+                        },
+                        {
+                            type: "doc",
                             label: "FAQs",
                             id: "staking/staking-faqs",
                         },
