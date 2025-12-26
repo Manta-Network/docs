@@ -42,3 +42,10 @@ Support for Goldsky Mirror for Manta is currently in progress. If you’d like t
 **Getting support**
 
 Can't find what you're looking for? Reach out to us at [support@goldsky.com](mailto:support@goldsky.com) for help.
+
+##[Traceye](https://www.traceye.io/)
+
+Traceye is a next-gen, powerful data indexing solution for Web3 and blockchain. Diverse range L1/L2 blockchains, rollups, appchains, Dapps and Crypto Apps can leverage Traceye to build and deploy their custom data indexers optimized for ultrafast indexing, 50% reduced data lag,99.99% uptime, automated sync, and 24/7 monitoring. 
+Apart from supporting multiple indexing protocols like 'The Graph' and 'Subquery Network', Traceye also offers value-added features like webhooks, BI analytics tool, custom entities, community subgraphs, and more suit the needs of developers.
+
+
