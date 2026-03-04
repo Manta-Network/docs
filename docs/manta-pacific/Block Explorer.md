@@ -33,6 +33,10 @@ Here are the 4 Explorers currently supporting Manta Pacific:
 
 -   Link: [GeckoTerminal for Manta Pacific](https://www.geckoterminal.com/manta-pacific/pools)
 
+**Defined:**
+
+-   Link: [Manta on Defined](https://www.defined.fi/tokens/discover?network=manta)
+
 **Dune Analytics:**
 
 - Link: [Dune Analytics for Manta Pacific](https://dune.com/hashed_official/manta-pacific)
