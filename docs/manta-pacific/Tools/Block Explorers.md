@@ -36,8 +36,15 @@ It provides a valuable tool for anyone looking to better understand and interact
 
 -   Mainnet: [https://www.geckoterminal.com/manta-pacific/pools](https://www.geckoterminal.com/manta-pacific/pools)
 
+### Defined
+
+Defined is a token aggregator and trading terminal for 100+ networks and 70+ million tokens. 
+
+-   Mainnet: [https://www.defined.fi/tokens/discover?network=manta](https://www.defined.fi/tokens/discover?network=manta)
+
 ### L2scan Explorer
 
 L2scan Explorer is a web-based tool that allows users to analyze and other layer 2 networks. It provides a user-friendly interface for viewing transaction history, checking account balances, and tracking the status of network activity.
 
 -   Mainnet: [https://manta-pacific.l2scan.com](https://manta-pacific.l2scan.com)
+
