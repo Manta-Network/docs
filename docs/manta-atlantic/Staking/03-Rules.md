@@ -1,3 +1,9 @@
+:::caution Atlantic deprecation
+
+Manta Atlantic is winding down with a fixed parachain slot end (~**late July–early August 2026**). **New staking** may be disabled and **rewards / inflation** may be reduced or stopped on dates published in the **Manta Atlantic Deprecation FAQ** (e.g. summary milestone **March 18, 2026**; phased staking wind-down including **May 1, 2026** for reward cessation and forced unstaking). On-chain behavior during wind-down follows network parameters and announcements—treat the rules below as the **nominal** design, not a guarantee of availability through slot expiry.
+
+:::
+
 One account on Manta Network can be
 - A delegator
 - A collator candidate

@@ -1,3 +1,9 @@
+:::note Atlantic deprecation
+
+Reward emissions and inflation are subject to the **Atlantic deprecation schedule** (see [Staking overview](01-Overview) and the **Manta Atlantic Deprecation FAQ**). After the published cutoffs, rewards may stop and inflation may be set to **0** for collators.
+
+:::
+
 Staking rewards work the following way:
 
 1. On every produced block, ~7.6 MANTA are created (equivalent to 2% of total issuance per year)
