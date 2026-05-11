@@ -3,7 +3,7 @@ The staking dApp is no longer active. **New staking closed on March 18, 2026**, 
 
 If you still have staked MANTA, please use the **[Migration DApp](https://app.manta.network/manta/migrate)** to unstake and migrate your assets to Manta Pacific. The Migration DApp will automatically detect your staking status and guide you through the unstaking and migration process.
 
-See the [Migration FAQ](/migration-faq) for the full timeline and detailed instructions.
+See the [Migration FAQ](/docs/manta-atlantic/migration-faq) for the full timeline and detailed instructions.
 :::
 
 :::note Historical Reference

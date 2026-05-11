@@ -1,7 +1,7 @@
 :::danger Manta Atlantic Deprecation Notice
 Manta Atlantic is being deprecated. **Staking rewards stopped on May 1, 2026**, and all remaining staked positions are being forcibly unbonded. The parachain slot will expire in late July 2026.
 
-**Action Required:** Please unstake your MANTA and migrate your assets to Manta Pacific using the [Migration DApp](https://app.manta.network/manta/migrate). See the [Migration FAQ](/migration-faq) for full details.
+**Action Required:** Please unstake your MANTA and migrate your assets to Manta Pacific using the [Migration DApp](https://app.manta.network/manta/migrate). See the [Migration FAQ](/docs/manta-atlantic/migration-faq) for full details.
 :::
 
 :::note Historical Reference

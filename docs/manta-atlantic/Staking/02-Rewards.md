@@ -1,7 +1,7 @@
 :::danger Staking Rewards Have Ended
 **Manta Atlantic staking rewards stopped on May 1, 2026.** No further rewards are being distributed. All staked positions are being forcibly unbonded.
 
-Please unstake and migrate your MANTA to Manta Pacific using the [Migration DApp](https://app.manta.network/manta/migrate). See the [Migration FAQ](/migration-faq) for full details.
+Please unstake and migrate your MANTA to Manta Pacific using the [Migration DApp](https://app.manta.network/manta/migrate). See the [Migration FAQ](/docs/manta-atlantic/migration-faq) for full details.
 :::
 
 :::note Historical Reference

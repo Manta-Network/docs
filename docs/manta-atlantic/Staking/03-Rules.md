@@ -5,7 +5,7 @@
 - After unbonding, please use the [Migration DApp](https://app.manta.network/manta/migrate) to migrate your MANTA to Manta Pacific.
 - The parachain slot expires in **late July 2026** — do not wait until the last moment.
 
-See the [Migration FAQ](/migration-faq) for the full timeline and migration instructions.
+See the [Migration FAQ](/docs/manta-atlantic/migration-faq) for the full timeline and migration instructions.
 :::
 
 :::note Historical Reference

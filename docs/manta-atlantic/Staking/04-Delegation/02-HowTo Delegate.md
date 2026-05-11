@@ -30,7 +30,7 @@ Confirm the transaction and wait a few minutes for it to arrive at your destinat
 Atlantic uses Substrate address format (SS58), while Manta Pacific uses Ethereum address format (starting with 0x). The Migration DApp will guide you to connect your Ethereum wallet address to receive your assets. Make sure you control the private key / seed phrase for that Ethereum address.
 :::
 
-For the complete timeline and more details, see the [Migration FAQ](/migration-faq).
+For the complete timeline and more details, see the [Migration FAQ](/docs/manta-atlantic/migration-faq).
 
 ---
 
