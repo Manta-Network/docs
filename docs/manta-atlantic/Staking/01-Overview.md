@@ -1,6 +1,41 @@
 :::note
 Staking is active on Manta Network starting with v4.6.1
 :::
+
+:::caution Manta Atlantic deprecation (parachain wind-down)
+
+Manta Atlantic’s Polkadot parachain slot is expected to expire around **late July to early August 2026** (exact timing depends on block production). Manta is consolidating on **Manta Pacific** (Ethereum L2). If you hold or stake MANTA on Atlantic, **unstake and migrate as early as possible**—do not rely on operating staking as if the chain were long-lived.
+
+The following aligns with the **Manta Atlantic Deprecation FAQ** (announcement March 11, 2026; FAQ last updated March 10, 2026). Always confirm the latest dates in community channels.
+
+**Roadmap milestones (general)**
+
+| Date | Event |
+| --- | --- |
+| March 11, 2026 | Deprecation announcement published |
+| March 18, 2026 | Staking rewards stopped; new staking no longer accepted (FAQ summary table) |
+| March 20, 2026 | Cross-chain bridge inbound transfers closed (outbound only) |
+| March 25, 2026 | Migration DApp goes live (URL announced with launch) |
+| June 2026 | Chain enters read-only mode; migration-related transfers and withdrawing unbonded funds remain available |
+| July 2026 | Slot expires; chain stops producing blocks |
+
+**Staking-specific schedule (FAQ “I’m currently staking” section)**
+
+- **Through March 17, 2026:** You can still earn staking rewards and initiate unstaking at any time.
+- **March 17, 2026:** New staking is no longer accepted; existing stakers can still earn rewards and unstake.
+- **May 1, 2026:** Staking rewards stop; forced unstaking begins.
+- **After May 1, 2026:** All remaining staked positions will be forcibly unbonded.
+
+**Unbonding:** The standard Atlantic **~7 day** unbonding period still applies after you unbond—start early to avoid queues near deadlines.
+
+**Migration:** A dedicated **Migration DApp** detects assets and staking on Atlantic and can guide **unstake** before you choose a destination (e.g. **Manta Pacific** via Manta Bridge, or **Polkadot / other parachains** via XCM). Staked MANTA counts toward assets you should migrate. If you miss deadlines, the project plans a **1:1 MANTA airdrop** on Pacific from a chain snapshot; **non-MANTA assets (DOT, GLMR, USDt, etc.) are not covered** by that airdrop and must be migrated by you.
+
+**Collators:** Unstake and exit in line with FAQ guidance—after **May 1, 2026**, inflation is set to **0** and collators **no longer receive block production rewards**; the goal is for all collators to exit safely before the slot expires. Follow collator community updates (e.g. Telegram) for reminders and guides.
+
+**Where to get updates:** Discord [`#atlantic-migration`](https://discord.gg/PbaJZGPQ), X [@MantaNetwork](https://twitter.com/MantaNetwork), [Telegram — Manta official group](https://t.me/mantanetworkofficial).
+
+:::
+
 Manta Network runs a delegated proof-of-stake (DPoS) consensus mechanism.
 
 Similar to other Layer 1 blockchains, block producers are selected out of a set of candidates based on the total MANTA stake backing each specific block producer candidate - in our case called a `collator`. In addition, users who don't wish to run their own `collator` can instead `delegate` their MANTA token to an existing collator and gain a share of its rewards.

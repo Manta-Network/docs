@@ -1,5 +1,7 @@
 You can find the dApp at [app.manta.network/manta/stake](https://app.manta.network/manta/stake)
 
+During **Atlantic deprecation**, also use the **Migration DApp** when it is live (URL announced with the **March 25, 2026** milestone in the Manta Atlantic Deprecation FAQ) to review all Atlantic assets and staking, **unstake** if needed, and route funds to **Manta Pacific** or other supported destinations. From **June 2026** the chain may be in **read-only** mode for most activity while migration-related transfers remain available until the slot expires.
+
 You'll notice it has the following elements:
 ## Header
 ![alt_text](images/head.png)
