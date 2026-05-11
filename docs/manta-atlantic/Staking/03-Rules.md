@@ -1,4 +1,18 @@
-One account on Manta Network can be
+:::danger Staking Has Ended — Forced Unstaking in Progress
+**As of May 1, 2026, staking on Manta Atlantic has fully ended.** New staking was closed on March 18, 2026. All remaining staked positions are now being forcibly unbonded.
+
+- The standard **7-day unbonding period** still applies before funds can be withdrawn.
+- After unbonding, please use the [Migration DApp](https://app.manta.network/manta/migrate) to migrate your MANTA to Manta Pacific.
+- The parachain slot expires in **late July 2026** — do not wait until the last moment.
+
+See the [Migration FAQ](/migration-faq) for the full timeline and migration instructions.
+:::
+
+:::note Historical Reference
+The rules below describe how staking participation worked before staking was discontinued.
+:::
+
+One account on Manta Network could be
 - A delegator
 - A collator candidate
 - Not participating in staking
