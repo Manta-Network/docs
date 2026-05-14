@@ -1,5 +1,13 @@
 # FAQs
 
+:::danger Manta Staking Sunsetting Notice
+The Manta Staking program is being sunset. **Staking rewards will officially stop on May 20, 2026.** After this date, no further network rewards will be generated. Delegators can unstake at any time through the [staking dashboard](https://staking.manta.network/).
+:::
+
+## Is Manta Staking still active?
+
+No. The Manta Staking program is being sunset. Staking rewards will officially stop on **May 20, 2026**. New staking is not recommended. If you have staked MANTA tokens, please unstake them through the [staking dashboard](https://staking.manta.network/) — your funds remain fully safe and under your control at all times.
+
 ## How do I stake my MANTA tokens?
 
 Start by navigating to the [staking dashboard](https://staking.manta.network/), and then choose an active operator of your choice. Follow our [step-by-step guide](./staking-howtos.md).

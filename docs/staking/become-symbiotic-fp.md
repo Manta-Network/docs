@@ -2,6 +2,10 @@
 
 **GitHub repo**: [manta-fp](https://github.com/Manta-Network/manta-fp)
 
+:::danger Manta Staking Sunsetting Notice
+The Manta Staking program is being sunset. **Staking rewards will officially stop on May 20, 2026.** Operators can terminate their nodes at any time.
+:::
+
 :::info Important Note
 - **Minimum Stake**: 100,000 MANTA tokens required to receive rewards
 - **Operator Registration**: Once deregistered, the operator name, address, and reward address cannot be reused

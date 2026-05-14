@@ -1,5 +1,9 @@
 # How-to Guides for Manta Staking
 
+:::danger Manta Staking Sunsetting Notice
+The Manta Staking program is being sunset. **Staking rewards will officially stop on May 20, 2026.** New staking is not recommended. If you have staked MANTA tokens, please refer to the **[Unstake MANTA Tokens](#unstake-manta-tokens)** section below to withdraw your funds.
+:::
+
 By delegating your tokens to a validator, you contribute to the security and stability of Manta Pacific. In this guide, we'll walk you through the steps required to delegate your MANTA tokens to an active operator on the staking layer.
 
 ## Delegate MANTA Tokens
