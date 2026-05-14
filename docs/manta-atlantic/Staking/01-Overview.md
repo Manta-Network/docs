@@ -1,6 +1,13 @@
-:::note
-Staking is active on Manta Network starting with v4.6.1
+:::danger Manta Atlantic Deprecation Notice
+Manta Atlantic is being deprecated. **Staking rewards stopped on May 1, 2026**, and all remaining staked positions are being forcibly unbonded. The parachain slot will expire in late July 2026.
+
+**Action Required:** Please unstake your MANTA and migrate your assets to Manta Pacific using the [Migration DApp](https://app.manta.network/manta/migrate). See the [Migration FAQ](/docs/manta-atlantic/migration-faq) for full details.
 :::
+
+:::note Historical Reference
+The content below describes how Manta Atlantic staking worked. Staking is no longer active. New staking has not been accepted since March 18, 2026.
+:::
+
 Manta Network runs a delegated proof-of-stake (DPoS) consensus mechanism.
 
 Similar to other Layer 1 blockchains, block producers are selected out of a set of candidates based on the total MANTA stake backing each specific block producer candidate - in our case called a `collator`. In addition, users who don't wish to run their own `collator` can instead `delegate` their MANTA token to an existing collator and gain a share of its rewards.
@@ -10,18 +17,26 @@ Similar to other Layer 1 blockchains, block producers are selected out of a set 
 2. Many independent collators => high censorship resistance
 3. You can generate yield on your MANTA by participating in staking rewards
 
-### Okay, so how do I start staking?
+### I have staked MANTA — what should I do now?
 
-You have two routes to stake your MANTA:
+Since staking has ended, your immediate next steps are:
 
-1. Become a `Delegator`
+1. **Unstake your MANTA** — If your position has not yet been forcibly unbonded, initiate unstaking via the [Migration DApp](https://app.manta.network/manta/migrate). The standard 7-day unbonding period applies.
+2. **Migrate to Manta Pacific** — Once unbonded, use the Migration DApp to bridge your MANTA to Manta Pacific (or to Polkadot / other parachains via XCM).
+3. **Missed the deadline?** — Don't worry. A chain state snapshot will be taken before the slot expires. All unmigrated MANTA will be airdropped 1:1 to your corresponding address on Manta Pacific.
 
-All you need is some MANTA and [our delegation dApp](Delegation/dApp%20Overview)
+:::note
+The automatic 1:1 airdrop applies only to MANTA tokens. Non-MANTA assets (DOT, GLMR, USDt, etc.) must be migrated manually before the chain stops producing blocks.
+:::
 
-2. Become a `Collator Runner`
+---
 
-This path needs technical experience and dedicated computer hardware to run a Manta blockchain node on in addition to a larger amount of MANTA than 1. and can bring higher rewards.
-You can find more info about this path [in the collator section](../Collation/Overview)
+### Historical: How staking worked (for reference)
+
+#### Routes to participate (historical)
+
+1. Become a `Delegator` — All you needed was some MANTA and [the delegation dApp](Delegation/dApp%20Overview)
+2. Become a `Collator Runner` — Required technical experience, dedicated hardware, and a larger MANTA bond. See [the collator section](../Collation/Overview)
 
 ## What is DPoS?
 ### In contrast to other PoS Networks

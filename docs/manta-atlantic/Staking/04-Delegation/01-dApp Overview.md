@@ -1,4 +1,16 @@
-You can find the dApp at [app.manta.network/manta/stake](https://app.manta.network/manta/stake)
+:::danger Staking dApp Has Been Replaced by the Migration DApp
+The staking dApp is no longer active. **New staking closed on March 18, 2026**, and staking rewards ended on May 1, 2026.
+
+If you still have staked MANTA, please use the **[Migration DApp](https://app.manta.network/manta/migrate)** to unstake and migrate your assets to Manta Pacific. The Migration DApp will automatically detect your staking status and guide you through the unstaking and migration process.
+
+See the [Migration FAQ](/docs/manta-atlantic/migration-faq) for the full timeline and detailed instructions.
+:::
+
+:::note Historical Reference
+The content below describes the staking dApp interface as it existed before deprecation.
+:::
+
+The staking dApp was available at [app.manta.network/manta/stake](https://app.manta.network/manta/stake)
 
 You'll notice it has the following elements:
 ## Header

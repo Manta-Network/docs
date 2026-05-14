@@ -1,5 +1,12 @@
 # Overview
 
+:::danger Manta Staking Sunsetting Notice
+The Manta Staking program is being sunset. **Staking rewards will officially stop on May 20, 2026.** After this date, no further network rewards will be generated.
+
+- **Operators:** You can terminate your nodes at any time.
+- **Delegators:** Your funds remain fully safe and under your control. You can unstake at any time through the [staking dashboard](https://staking.manta.network/).
+:::
+
 We're working with folks at [Symbiotic](https://symbiotic.fi/) and [Babylon](https://babylonlabs.io/) on a new secure, decentralized staking solution that enables MANTA token holders to participate in Manta Pacific's network security and earn rewards at the same time. Node runners can opt in as operators on the Symbiotic or Babylon layer and contribute to the network's fast finality architecture by generating proofs that will vastly increase the reliability of state transitions on Manta Pacific and bring down the finality times from days to mere minutes. Learn more about the dual-layer fast finality architecture here: [Fast Finality on Manta Pacific](../concepts/fast-finality)
 
 :::info About Symbiotic and Babylon
