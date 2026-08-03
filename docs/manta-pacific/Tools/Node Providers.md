@@ -9,7 +9,7 @@ Manta Pacific provide a JSON-RPC interface that allows developers and users to i
 
 ## dRPC
 
-[dRPC](https://drpc.org/) offers access to a distributed network of independent third-party partners and public nodes for Manta Pacific. They provide a free tier that allows for an unlimited amount of requests over public nodes, or a paid tier which provides access to all providers, as well as other additional features.
+[dRPC](https://drpc.org/) offers access to a distributed network of independent third-party partners and public nodes for Manta Pacific. They provide a free tier that allows for an unlimited amount of requests over public nodes, or a paid tier which provides access to all providers, as well as other additional features.
 
 - RPC URL: [https://manta-pacific.drpc.org](https://manta-pacific.drpc.org)
 
@@ -21,8 +21,42 @@ Manta Pacific provide a JSON-RPC interface that allows developers and users to i
 
 ## 1RPC
 
-[1RPC](https://1rpc.io/) is the first and only on-chain attested privacy preserving RPC that eradicates metadata exposure and leakage when interacting with blockchains. 1RPC offers free and [paid plans](https://www.1rpc.io/#pricing) with additional features and increased request limits.
+[1RPC](https://1rpc.io/) is the first and only on-chain attested privacy preserving RPC that eradicates metadata exposure and leakage when interacting with blockchains. 1RPC offers free and [paid plans](https://www.1rpc.io/#pricing) with additional features and increased request limits.
 
 - RPC URL: [https://1rpc.io/manta](https://1rpc.io/manta)
 
 To check the operational status of all Node Providers on Manta Network, please visit: [Manta Pacific Mainnet RPC and Chain settings | ChainList](https://chainlist.org/chain/169)
+
+For live latency comparisons across these providers, see [OpenChainBench](https://openchainbench.com/benchmarks/manta-rpc) — an open benchmark that continuously measures free public RPC endpoints for Manta Pacific.
+
+# Network Information
+
+## Manta Pacific Mainnet
+
+| Name               | Value                                               |
+| ------------------ | --------------------------------------------------- |
+| Network Name       | Manta Pacific L2 Rollup                             |
+| Description        | The public mainnet for Manta Pacific.               |
+| Network URL        | https://pacific-info.manta.network/                 |
+| Explorer URL       | https://pacific-explorer.manta.network/             |
+|                    | https://manta.socialscan.io/                        |
+| RPC URL            | https://pacific-rpc.manta.network/http              |
+| Additional RPC URL | https://manta-pacific.drpc.org                      |
+|                    | https://www.tencentcloud-rpc.com/v2/manta/manta-rpc |
+|                    | https://r1.pacific.manta.systems/http               |
+|                    | https://manta.nirvanalabs.xyz/mantapublic           |
+| Chain ID           | 169                                                 |
+| Currency Symbol    | ETH                                                 |
+| Websocket URL      | wss://pacific-rpc.manta.network/ws                  |
+
+## Manta Pacific Sepolia Testnet
+
+| Category        | Information                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Network Name    | Manta Pacific Sepolia Testnet                                                                                     |
+| Network URL     | [https://pacific-info.sepolia-testnet.manta.network/](https://pacific-info.sepolia-testnet.manta.network/)        |
+| Explorer URL    | [https://pacific-explorer.sepolia-testnet.manta.network](https://pacific-explorer.sepolia-testnet.manta.network/) |
+| RPC URL         | https://pacific-rpc.sepolia-testnet.manta.network/http                                                            |
+| Websocket URL   | wss://pacific-rpc.sepolia-testnet.manta.network/ws                                                                |
+| Chain ID        | 3441006                                                                                                           |
+| Currency Symbol | ETH                                                                                                               |
