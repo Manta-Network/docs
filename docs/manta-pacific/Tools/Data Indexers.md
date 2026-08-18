@@ -1,5 +1,25 @@
 # Data Indexers
 
+## Envio
+
+[Index Manta Pacific with Envio](https://envio.dev/?utm_source=manta&utm_medium=partner-docs)
+
+### Overview
+
+Envio is the data layer for blockchain apps. It gives Manta Pacific developers the fastest, most flexible way to get real-time and historical onchain data, from a single GraphQL API to raw high-speed access, with managed hosting on Envio Cloud. On Manta Pacific, HyperIndex is powered by HyperSync for historical syncs up to 2000x faster than traditional RPC. HyperIndex supports real-time and historical data with reorg support, event handlers in TypeScript, JavaScript, or ReScript, and multichain data aggregation across EVM and non-EVM networks.
+
+### Getting started
+
+To get started, auto-generate an indexer from any verified contract:
+
+```bash
+pnpx envio init
+```
+
+Write your event handlers, then run locally or deploy to [Envio Cloud](https://docs.envio.dev/docs/HyperIndex/hosted-service?utm_source=manta&utm_medium=partner-docs) for fully managed hosting. Manta Pacific is available on HyperSync at `https://manta.hypersync.xyz`. Follow the [quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart?utm_source=manta&utm_medium=partner-docs) for full setup instructions.
+
+See Envio's [performance benchmarks](https://docs.envio.dev/docs/HyperIndex/benchmarking?utm_source=manta&utm_medium=partner-docs).
+
 ## Goldsky
 
 [​Index Manta Pacific with Goldsky](https://docs.goldsky.com/chains/manta#overview)
