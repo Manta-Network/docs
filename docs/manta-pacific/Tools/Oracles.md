@@ -1,5 +1,19 @@
 # Oracles
 
+## ORA
+
+[ORA](https://ora.io) is Ethereum's Trustless AI. 
+
+As a verifiable oracle protocol, ORA brings AI and complex compute onchain. Its main product, **Onchain AI Oracle (OAO)**, integrates AI capabilities directly onchain.
+
+Some useful links to build with OAO on Manta:
+
+- [ORA Doc](https://docs.ora.io)
+- [Quickstart guide](https://docs.ora.io/doc/oao-onchain-ai-oracle/develop-guide/tutorials/interaction-with-oao-tutorial)
+- The best way to contact our team, ORA [Discord](https://discord.gg/ora-io)
+
+You can also find a [Quickstart guide designed for Manta Pacific here](https://docs.manta.network/docs/manta-pacific/ORA%20Oracles)!
+
 ## Pyth
 
 [Pyth](http://pyth.network/) offers 250+ [price feeds](https://pyth.network/price-feeds) for Manta Pacific.
