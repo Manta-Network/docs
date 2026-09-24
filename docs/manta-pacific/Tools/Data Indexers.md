@@ -1,5 +1,24 @@
 # Data Indexers
 
+## GoldRush (powered by Covalent)
+
+GoldRush offers the most comprehensive Blockchain Data API suite for developers, analysts, and enterprises. Whether you are building a DeFi dashboard, a wallet, a trading bot, an AI agent or a compliance platform, the Data APIs provide fast, accurate, and developer-friendly access to the essential on-chain data you need. 
+
+GoldRush consists of the following self-serve products that can be used independently or together to power your application:
+
+| **Product Name** | **Description** | **Key Data Feeds** | **Use Cases** |
+| --- | --- | --- | --- |
+| **Foundational API** | Access structured historical blockchain data across 100+ chains via REST APIs | <ul><li>Token balances (spot & historical)</li><li>Token transfers</li><li>Token holders (spot & historical)</li><li>Token prices (onchain)</li><li>Wallet transactions</li><li>Get logs</li></ul> |<ul><li>Wallets</li><li>Portfolio trackers</li><li>Crypto accounting & tax tools</li><li>DeFi dashboards</li><li>Activity feeds</li></ul> |
+| **Streaming API** | Subscribe to real-time blockchain events with sub-second latency using GraphQL over WebSockets | <ul><li>OHLCV tokens & pairs</li><li>New & updated DEX pairs</li><li>Wallet activity</li><li>Token balances</li></ul> | <ul><li>Trading dashboards</li><li>Sniper bots</li><li>Gaming</li><li>Agentic workflows</li></ul> |
+
+
+The **[GoldRush TypeScript SDK](https://www.npmjs.com/package/@covalenthq/client-sdk)** is the fastest way to integrate the GoldRush APIs. Install with:
+
+```bash
+npm install @covalenthq/client-sdk
+```
+Learn more about GoldRush's integration with Manta Pacific [here](https://goldrush.dev/docs/chains/manta-pacific?utm_source=manta-pacific&utm_medium=partner-docs) .
+
 ## Goldsky
 
 [​Index Manta Pacific with Goldsky](https://docs.goldsky.com/chains/manta#overview)
@@ -42,3 +61,4 @@ Support for Goldsky Mirror for Manta is currently in progress. If you’d like t
 **Getting support**
 
 Can't find what you're looking for? Reach out to us at [support@goldsky.com](mailto:support@goldsky.com) for help.
+
