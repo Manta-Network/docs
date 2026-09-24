@@ -42,3 +42,41 @@ Support for Goldsky Mirror for Manta is currently in progress. If you’d like t
 **Getting support**
 
 Can't find what you're looking for? Reach out to us at [support@goldsky.com](mailto:support@goldsky.com) for help.
+
+## Codex
+
+### Overview
+
+Codex is a blockchain data API providing real-time and historical DeFi data across 100+ networks via GraphQL, including Manta Pacific (chain ID `169`). With access to over 70 million tokens and 700 million wallets, Codex delivers sub-second data for building token explorers, trading bots, portfolio trackers, and DeFi dashboards.
+
+Codex offers:
+
+- **GraphQL API** — A single endpoint with 73 query operations covering token prices, OHLCV charts, DEX trades, liquidity pools, wallet activity, and aggregated analytics
+- **Real-time subscriptions** — 25 WebSocket data streams for live token prices, trade events, new pairs, and wallet activity
+- **Webhooks** — Push-based notifications for on-chain events without persistent connections
+- **TypeScript/JavaScript SDK** — A thin wrapper around the GraphQL API with built-in subscription handling
+
+### Getting Started
+
+1. Sign up at [dashboard.codex.io](https://dashboard.codex.io/signup)
+2. Copy your API key from the dashboard
+3. Visit the [Docs](https://docs.codex.io) for a full API Reference
+4. Make your first request — for example, fetch trending tokens on Manta Pacific:
+
+```bash
+curl -X POST https://graph.codex.io/graphql \
+  -H "Content-Type: application/json" \
+  -H "Authorization: YOUR_API_KEY" \
+  -d '{"query": "{ filterTokens(filters: { network: [169] }) { results { token { name symbol address } } } }"}'
+```
+
+Explore the API interactively with the [GraphQL Explorer](https://docs.codex.io/explore).
+
+### Resources
+
+- [Codex Documentation](https://docs.codex.io/)
+- [Supported Networks](https://docs.codex.io/chains)
+- [GraphQL API Reference](https://docs.codex.io/api-reference)
+- [SDK](https://github.com/Codex-Data/sdk)
+- [Discord](https://discord.com/invite/mFpUhT3vAq)
+
