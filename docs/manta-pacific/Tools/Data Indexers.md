@@ -42,3 +42,7 @@ Support for Goldsky Mirror for Manta is currently in progress. If you’d like t
 **Getting support**
 
 Can't find what you're looking for? Reach out to us at [support@goldsky.com](mailto:support@goldsky.com) for help.
+
+### [Tracehawk](https://(https://www.tracehawk.io)]
+
+TraceHawk is a white-labeled blockchain explorer designed based on requirements of EVM chains, Appchains, and L2/L3 rollups. With TraceHawk, projects can have their custom block explorer with preferred features, capabilities, and intuitive design. Also, TraceHawk comes with managed and hosted services to streamline explorer maintenance and scaling to ensure performance, security, and compliance to avoid heavy lifting on your end. 
