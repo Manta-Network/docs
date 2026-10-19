@@ -25,4 +25,10 @@ Manta Pacific provide a JSON-RPC interface that allows developers and users to i
 
 - RPC URL: [https://1rpc.io/manta](https://1rpc.io/manta)
 
+## Dwellir
+
+[Dwellir](https://www.dwellir.com/networks/manta-pacific) provides RPC endpoints for Manta Pacific. Dwellir offers a free plan and [paid plans](https://www.dwellir.com/pricing). Each response counts as one API credit, with no compute units.
+
+- RPC URL: `https://api-manta-pacific-archive.n.dwellir.com/<API_KEY>`
+
 To check the operational status of all Node Providers on Manta Network, please visit: [Manta Pacific Mainnet RPC and Chain settings | ChainList](https://chainlist.org/chain/169)
