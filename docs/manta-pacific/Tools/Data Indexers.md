@@ -1,5 +1,25 @@
 # Data Indexers
 
+## Envio
+
+[Index Manta Pacific with Envio](https://envio.dev/?utm_source=manta&utm_medium=partner-docs)
+
+### Overview
+
+Envio builds custom blockchain APIs and analytics. Manta Pacific developers can use HyperIndex to choose the contracts and events to track, write TypeScript handlers and query the result through a GraphQL API, then run it themselves or deploy to Envio Cloud. HyperSync serves Manta Pacific logs, transactions and blocks, filtered on the server. HyperIndex handles reorgs and can aggregate data across EVM and non-EVM networks.
+
+### Getting started
+
+To get started, auto-generate an indexer from any verified contract:
+
+```bash
+pnpx envio init
+```
+
+Write your event handlers, then run locally or deploy to [Envio Cloud](https://docs.envio.dev/docs/HyperIndex/hosted-service?utm_source=manta&utm_medium=partner-docs) for fully managed hosting. Manta Pacific is available on HyperSync at `https://manta.hypersync.xyz`. Follow the [quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart?utm_source=manta&utm_medium=partner-docs) for full setup instructions.
+
+See Envio's [performance benchmarks](https://docs.envio.dev/docs/HyperIndex/benchmarking?utm_source=manta&utm_medium=partner-docs).
+
 ## Goldsky
 
 [​Index Manta Pacific with Goldsky](https://docs.goldsky.com/chains/manta#overview)
